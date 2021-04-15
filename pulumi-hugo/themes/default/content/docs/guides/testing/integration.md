@@ -21,6 +21,7 @@ By running a program through integration tests, you can ensure:
 - Your project can be successfully destroyed and removed from your cloud provider.
 
 In principle, integration tests can be written in any general-purpose programming language. Tests do not interact with the program-under-test directly: instead, they utilize Pulumi to create, update, and delete cloud infrastructure.
+
 ## Pulumi's Integration Test Framework
 
 At Pulumi, we maintain an extensive suite of integration tests to validate the functionality of the core CLI and providers. To facilitate this testing, Pulumi has an integration test framework written in Go.
@@ -31,9 +32,7 @@ Below, we provide walk through leveraging the Pulumi integration test framework.
 
 ### A Basic Integration Test
 
-The following program is a simplified test of our example that provisions an [S3 bucket and objects in Pulumi](https://github.com/pulumi/examples/tree/master/aws-js-s3-folder):
-
-**example_test.go:**
+The following program is a simplified test of our example that provisions an [S3 bucket and objects in Pulumi](https://github.com/pulumi/examples/tree/master/aws-go-s3-folder):
 
 ```go
 package test
@@ -64,7 +63,7 @@ func TestExamples(t *testing.T) {
 ```
 
 This test runs through a basic lifecycle of stack creation, updating,
-and destruction, for the `aws-js-s3-folder` example. It takes about a
+and destruction, for the `aws-go-s3-folder` example. It takes about a
 minute or so to report success:
 
 ```
@@ -154,11 +153,10 @@ At a high level, you will want to create a stack, setup stack config, deploy the
 
 In order to perform resource validation, you can export the stack and examine the resulting resources. For example:
 
-**automation.ts**
 ```typescript
 export async function getDeployment(): Promise<Deployment> {
   const stack = await LocalWorkspace.createOrSelectStack(args);
-  
+
   return stack.exportStack();
 }
 ```
@@ -173,7 +171,7 @@ Our own [integration test suite](https://github.com/pulumi/examples/blob/05ae8e1
 
 We even write tests inside Pulumi using Automation API and language-specific test frameworks like `mocha`. Take a look at the source for yourself:
 
-* [NodeJS tests](https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/automation/localWorkspace.spec.ts)
-* [Go tests](https://github.com/pulumi/pulumi/blob/master/sdk/go/auto/local_workspace_test.go)
-* [Python tests](https://github.com/pulumi/pulumi/blob/master/sdk/python/lib/test/automation/test_local_workspace.py)
-* [C# tests](https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation.Tests/LocalWorkspaceTests.cs)
+- [NodeJS tests](https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/automation/localWorkspace.spec.ts)
+- [Go tests](https://github.com/pulumi/pulumi/blob/master/sdk/go/auto/local_workspace_test.go)
+- [Python tests](https://github.com/pulumi/pulumi/blob/master/sdk/python/lib/test/automation/test_local_workspace.py)
+- [C# tests](https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation.Tests/LocalWorkspaceTests.cs)
