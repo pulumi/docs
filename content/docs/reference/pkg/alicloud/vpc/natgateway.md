@@ -30,7 +30,7 @@ Nat gateway can be imported using the id, e.g.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">NatGateway</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bandwidth_packages</span><span class="p">:</span> <span class="nx">Optional[Sequence[NatGatewayBandwidthPackageArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nat_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">specification</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">NatGateway</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dry_run</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">force</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">internet_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nat_gateway_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nat_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">payment_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">specification</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -181,15 +181,6 @@ The NatGateway resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}The VPC ID.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="bandwidthpackages_csharp">
-<a href="#bandwidthpackages_csharp" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>Packages</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#natgatewaybandwidthpackage">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Vpc.<wbr>Inputs.<wbr>Nat<wbr>Gateway<wbr>Bandwidth<wbr>Package<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}A list of bandwidth packages for the nat gatway. Only support nat gateway created before 00:00 on November 4, 2017. Available in v1.13.0+ and v1.7.1-.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -199,17 +190,51 @@ The NatGateway resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}Description of the nat gateway, This description can have a string of 2 to 256 characters, It cannot begin with http:// or https://. Defaults to null.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dryrun_csharp">
+<a href="#dryrun_csharp" style="color: inherit; text-decoration: inherit;">Dry<wbr>Run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="force_csharp">
+<a href="#force_csharp" style="color: inherit; text-decoration: inherit;">Force</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="instancechargetype_csharp">
 <a href="#instancechargetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The billing method of the nat gateway. Valid values are "PrePaid" and "PostPaid". Default to "PostPaid".
+    <dd>{{% md %}}Field `instance_charge_type` has been deprecated from provider version 1.121.0. New field `payment_type` instead.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="internetchargetype_csharp">
+<a href="#internetchargetype_csharp" style="color: inherit; text-decoration: inherit;">Internet<wbr>Charge<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The internet charge type. Valid values `PayByLcu` and `PayBySpec`, default value is `PayBySpec`. The `PayByLcu` is only support enhanced NAT.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Field `name` has been deprecated from provider version 1.121.0. New field `nat_gateway_name` instead.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="natgatewayname_csharp">
+<a href="#natgatewayname_csharp" style="color: inherit; text-decoration: inherit;">Nat<wbr>Gateway<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -223,7 +248,16 @@ The NatGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of nat gateway. Default to `Normal`. Valid values: [`Normal`, `Enhanced`].
+    <dd>{{% md %}}The type of NAT gateway. Default to `Normal`. Valid values: [`Normal`, `Enhanced`].
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="paymenttype_csharp">
+<a href="#paymenttype_csharp" style="color: inherit; text-decoration: inherit;">Payment<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The billing method of the NAT gateway. Valid values are `PayAsYouGo` and `Subscription`. Default to `PayAsYouGo`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_csharp">
@@ -232,17 +266,8 @@ The NatGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration that you will buy the resource, in month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid values: [1-9, 12, 24, 36]. At present, the provider does not support modify "period" and you can do that via web console.
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="spec_csharp">
-<a href="#spec_csharp" style="color: inherit; text-decoration: inherit;">Spec</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}It has been deprecated from provider version 1.7.1, and new field 'specification' can replace it.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;spec&#39; has been deprecated from provider version 1.7.1, and new field &#39;specification&#39; can replace it.{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}The duration that you will buy the resource, in month. It is valid when `payment_type` is `Subscription`. Default to 1. Valid values: [1-9, 12, 24, 36]. At present, the provider does not support modify "period" and you can do that via web console.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="specification_csharp">
 <a href="#specification_csharp" style="color: inherit; text-decoration: inherit;">Specification</a>
@@ -250,7 +275,16 @@ The NatGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The specification of the nat gateway. Valid values are `Small`, `Middle` and `Large`. Default to `Small`. Details refer to [Nat Gateway Specification](https://www.alibabacloud.com/help/doc-detail/42757.htm).
+    <dd>{{% md %}}The specification of the nat gateway. Valid values are `Small`, `Middle` and `Large`. Default to `Small`. Effective when `internet_charge_type` is `PayBySpec`. Details refer to [Nat Gateway Specification](https://www.alibabacloud.com/help/doc-detail/42757.htm).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}The tags of NAT gateway.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vswitchid_csharp">
@@ -275,15 +309,6 @@ The NatGateway resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}The VPC ID.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="bandwidthpackages_go">
-<a href="#bandwidthpackages_go" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>Packages</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#natgatewaybandwidthpackage">[]Nat<wbr>Gateway<wbr>Bandwidth<wbr>Package</a></span>
-    </dt>
-    <dd>{{% md %}}A list of bandwidth packages for the nat gatway. Only support nat gateway created before 00:00 on November 4, 2017. Available in v1.13.0+ and v1.7.1-.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -293,17 +318,51 @@ The NatGateway resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}Description of the nat gateway, This description can have a string of 2 to 256 characters, It cannot begin with http:// or https://. Defaults to null.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dryrun_go">
+<a href="#dryrun_go" style="color: inherit; text-decoration: inherit;">Dry<wbr>Run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="force_go">
+<a href="#force_go" style="color: inherit; text-decoration: inherit;">Force</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="instancechargetype_go">
 <a href="#instancechargetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The billing method of the nat gateway. Valid values are "PrePaid" and "PostPaid". Default to "PostPaid".
+    <dd>{{% md %}}Field `instance_charge_type` has been deprecated from provider version 1.121.0. New field `payment_type` instead.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="internetchargetype_go">
+<a href="#internetchargetype_go" style="color: inherit; text-decoration: inherit;">Internet<wbr>Charge<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The internet charge type. Valid values `PayByLcu` and `PayBySpec`, default value is `PayBySpec`. The `PayByLcu` is only support enhanced NAT.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Field `name` has been deprecated from provider version 1.121.0. New field `nat_gateway_name` instead.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="natgatewayname_go">
+<a href="#natgatewayname_go" style="color: inherit; text-decoration: inherit;">Nat<wbr>Gateway<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -317,7 +376,16 @@ The NatGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of nat gateway. Default to `Normal`. Valid values: [`Normal`, `Enhanced`].
+    <dd>{{% md %}}The type of NAT gateway. Default to `Normal`. Valid values: [`Normal`, `Enhanced`].
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="paymenttype_go">
+<a href="#paymenttype_go" style="color: inherit; text-decoration: inherit;">Payment<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The billing method of the NAT gateway. Valid values are `PayAsYouGo` and `Subscription`. Default to `PayAsYouGo`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_go">
@@ -326,17 +394,8 @@ The NatGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration that you will buy the resource, in month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid values: [1-9, 12, 24, 36]. At present, the provider does not support modify "period" and you can do that via web console.
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="spec_go">
-<a href="#spec_go" style="color: inherit; text-decoration: inherit;">Spec</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}It has been deprecated from provider version 1.7.1, and new field 'specification' can replace it.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;spec&#39; has been deprecated from provider version 1.7.1, and new field &#39;specification&#39; can replace it.{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}The duration that you will buy the resource, in month. It is valid when `payment_type` is `Subscription`. Default to 1. Valid values: [1-9, 12, 24, 36]. At present, the provider does not support modify "period" and you can do that via web console.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="specification_go">
 <a href="#specification_go" style="color: inherit; text-decoration: inherit;">Specification</a>
@@ -344,7 +403,16 @@ The NatGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The specification of the nat gateway. Valid values are `Small`, `Middle` and `Large`. Default to `Small`. Details refer to [Nat Gateway Specification](https://www.alibabacloud.com/help/doc-detail/42757.htm).
+    <dd>{{% md %}}The specification of the nat gateway. Valid values are `Small`, `Middle` and `Large`. Default to `Small`. Effective when `internet_charge_type` is `PayBySpec`. Details refer to [Nat Gateway Specification](https://www.alibabacloud.com/help/doc-detail/42757.htm).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}The tags of NAT gateway.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vswitchid_go">
@@ -369,15 +437,6 @@ The NatGateway resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}The VPC ID.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="bandwidthpackages_nodejs">
-<a href="#bandwidthpackages_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth<wbr>Packages</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#natgatewaybandwidthpackage">Nat<wbr>Gateway<wbr>Bandwidth<wbr>Package[]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of bandwidth packages for the nat gatway. Only support nat gateway created before 00:00 on November 4, 2017. Available in v1.13.0+ and v1.7.1-.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -387,17 +446,51 @@ The NatGateway resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}Description of the nat gateway, This description can have a string of 2 to 256 characters, It cannot begin with http:// or https://. Defaults to null.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dryrun_nodejs">
+<a href="#dryrun_nodejs" style="color: inherit; text-decoration: inherit;">dry<wbr>Run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="force_nodejs">
+<a href="#force_nodejs" style="color: inherit; text-decoration: inherit;">force</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="instancechargetype_nodejs">
 <a href="#instancechargetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Charge<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The billing method of the nat gateway. Valid values are "PrePaid" and "PostPaid". Default to "PostPaid".
+    <dd>{{% md %}}Field `instance_charge_type` has been deprecated from provider version 1.121.0. New field `payment_type` instead.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="internetchargetype_nodejs">
+<a href="#internetchargetype_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Charge<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The internet charge type. Valid values `PayByLcu` and `PayBySpec`, default value is `PayBySpec`. The `PayByLcu` is only support enhanced NAT.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Field `name` has been deprecated from provider version 1.121.0. New field `nat_gateway_name` instead.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="natgatewayname_nodejs">
+<a href="#natgatewayname_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>Gateway<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -411,7 +504,16 @@ The NatGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of nat gateway. Default to `Normal`. Valid values: [`Normal`, `Enhanced`].
+    <dd>{{% md %}}The type of NAT gateway. Default to `Normal`. Valid values: [`Normal`, `Enhanced`].
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="paymenttype_nodejs">
+<a href="#paymenttype_nodejs" style="color: inherit; text-decoration: inherit;">payment<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The billing method of the NAT gateway. Valid values are `PayAsYouGo` and `Subscription`. Default to `PayAsYouGo`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_nodejs">
@@ -420,17 +522,8 @@ The NatGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The duration that you will buy the resource, in month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid values: [1-9, 12, 24, 36]. At present, the provider does not support modify "period" and you can do that via web console.
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="spec_nodejs">
-<a href="#spec_nodejs" style="color: inherit; text-decoration: inherit;">spec</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}It has been deprecated from provider version 1.7.1, and new field 'specification' can replace it.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;spec&#39; has been deprecated from provider version 1.7.1, and new field &#39;specification&#39; can replace it.{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}The duration that you will buy the resource, in month. It is valid when `payment_type` is `Subscription`. Default to 1. Valid values: [1-9, 12, 24, 36]. At present, the provider does not support modify "period" and you can do that via web console.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="specification_nodejs">
 <a href="#specification_nodejs" style="color: inherit; text-decoration: inherit;">specification</a>
@@ -438,7 +531,16 @@ The NatGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The specification of the nat gateway. Valid values are `Small`, `Middle` and `Large`. Default to `Small`. Details refer to [Nat Gateway Specification](https://www.alibabacloud.com/help/doc-detail/42757.htm).
+    <dd>{{% md %}}The specification of the nat gateway. Valid values are `Small`, `Middle` and `Large`. Default to `Small`. Effective when `internet_charge_type` is `PayBySpec`. Details refer to [Nat Gateway Specification](https://www.alibabacloud.com/help/doc-detail/42757.htm).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}The tags of NAT gateway.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vswitchid_nodejs">
@@ -463,15 +565,6 @@ The NatGateway resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}The VPC ID.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="bandwidth_packages_python">
-<a href="#bandwidth_packages_python" style="color: inherit; text-decoration: inherit;">bandwidth_<wbr>packages</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#natgatewaybandwidthpackage">Sequence[Nat<wbr>Gateway<wbr>Bandwidth<wbr>Package<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of bandwidth packages for the nat gatway. Only support nat gateway created before 00:00 on November 4, 2017. Available in v1.13.0+ and v1.7.1-.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -481,17 +574,51 @@ The NatGateway resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}Description of the nat gateway, This description can have a string of 2 to 256 characters, It cannot begin with http:// or https://. Defaults to null.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dry_run_python">
+<a href="#dry_run_python" style="color: inherit; text-decoration: inherit;">dry_<wbr>run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="force_python">
+<a href="#force_python" style="color: inherit; text-decoration: inherit;">force</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="instance_charge_type_python">
 <a href="#instance_charge_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>charge_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The billing method of the nat gateway. Valid values are "PrePaid" and "PostPaid". Default to "PostPaid".
+    <dd>{{% md %}}Field `instance_charge_type` has been deprecated from provider version 1.121.0. New field `payment_type` instead.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="internet_charge_type_python">
+<a href="#internet_charge_type_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>charge_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The internet charge type. Valid values `PayByLcu` and `PayBySpec`, default value is `PayBySpec`. The `PayByLcu` is only support enhanced NAT.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Field `name` has been deprecated from provider version 1.121.0. New field `nat_gateway_name` instead.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nat_gateway_name_python">
+<a href="#nat_gateway_name_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>gateway_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -505,7 +632,16 @@ The NatGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of nat gateway. Default to `Normal`. Valid values: [`Normal`, `Enhanced`].
+    <dd>{{% md %}}The type of NAT gateway. Default to `Normal`. Valid values: [`Normal`, `Enhanced`].
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="payment_type_python">
+<a href="#payment_type_python" style="color: inherit; text-decoration: inherit;">payment_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The billing method of the NAT gateway. Valid values are `PayAsYouGo` and `Subscription`. Default to `PayAsYouGo`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_python">
@@ -514,17 +650,8 @@ The NatGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration that you will buy the resource, in month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid values: [1-9, 12, 24, 36]. At present, the provider does not support modify "period" and you can do that via web console.
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="spec_python">
-<a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}It has been deprecated from provider version 1.7.1, and new field 'specification' can replace it.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;spec&#39; has been deprecated from provider version 1.7.1, and new field &#39;specification&#39; can replace it.{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}The duration that you will buy the resource, in month. It is valid when `payment_type` is `Subscription`. Default to 1. Valid values: [1-9, 12, 24, 36]. At present, the provider does not support modify "period" and you can do that via web console.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="specification_python">
 <a href="#specification_python" style="color: inherit; text-decoration: inherit;">specification</a>
@@ -532,7 +659,16 @@ The NatGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The specification of the nat gateway. Valid values are `Small`, `Middle` and `Large`. Default to `Small`. Details refer to [Nat Gateway Specification](https://www.alibabacloud.com/help/doc-detail/42757.htm).
+    <dd>{{% md %}}The specification of the nat gateway. Valid values are `Small`, `Middle` and `Large`. Default to `Small`. Effective when `internet_charge_type` is `PayBySpec`. Details refer to [Nat Gateway Specification](https://www.alibabacloud.com/help/doc-detail/42757.htm).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}The tags of NAT gateway.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vswitch_id_python">
@@ -555,22 +691,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
-        <span id="bandwidthpackageids_csharp">
-<a href="#bandwidthpackageids_csharp" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>Package<wbr>Ids</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A list ID of the bandwidth packages, and split them with commas.
-{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="forwardtableids_csharp">
 <a href="#forwardtableids_csharp" style="color: inherit; text-decoration: inherit;">Forward<wbr>Table<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The nat gateway will auto create a snap and forward item, the `forward_table_ids` is the created one.
+    <dd>{{% md %}}The nat gateway will auto create a forward item.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
@@ -587,21 +714,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The nat gateway will auto create a snap and forward item, the `snat_table_ids` is the created one.
+    <dd>{{% md %}}The nat gateway will auto create a snat item.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.121.0+) The status of NAT gateway.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
-            title="">
-        <span id="bandwidthpackageids_go">
-<a href="#bandwidthpackageids_go" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>Package<wbr>Ids</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A list ID of the bandwidth packages, and split them with commas.
-{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="forwardtableids_go">
 <a href="#forwardtableids_go" style="color: inherit; text-decoration: inherit;">Forward<wbr>Table<wbr>Ids</a>
@@ -609,7 +736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The nat gateway will auto create a snap and forward item, the `forward_table_ids` is the created one.
+    <dd>{{% md %}}The nat gateway will auto create a forward item.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
@@ -626,21 +753,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The nat gateway will auto create a snap and forward item, the `snat_table_ids` is the created one.
+    <dd>{{% md %}}The nat gateway will auto create a snat item.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.121.0+) The status of NAT gateway.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
-            title="">
-        <span id="bandwidthpackageids_nodejs">
-<a href="#bandwidthpackageids_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth<wbr>Package<wbr>Ids</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A list ID of the bandwidth packages, and split them with commas.
-{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="forwardtableids_nodejs">
 <a href="#forwardtableids_nodejs" style="color: inherit; text-decoration: inherit;">forward<wbr>Table<wbr>Ids</a>
@@ -648,7 +775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The nat gateway will auto create a snap and forward item, the `forward_table_ids` is the created one.
+    <dd>{{% md %}}The nat gateway will auto create a forward item.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -665,21 +792,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The nat gateway will auto create a snap and forward item, the `snat_table_ids` is the created one.
+    <dd>{{% md %}}The nat gateway will auto create a snat item.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.121.0+) The status of NAT gateway.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
-            title="">
-        <span id="bandwidth_package_ids_python">
-<a href="#bandwidth_package_ids_python" style="color: inherit; text-decoration: inherit;">bandwidth_<wbr>package_<wbr>ids</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A list ID of the bandwidth packages, and split them with commas.
-{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="forward_table_ids_python">
 <a href="#forward_table_ids_python" style="color: inherit; text-decoration: inherit;">forward_<wbr>table_<wbr>ids</a>
@@ -687,7 +814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The nat gateway will auto create a snap and forward item, the `forward_table_ids` is the created one.
+    <dd>{{% md %}}The nat gateway will auto create a forward item.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
@@ -704,7 +831,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The nat gateway will auto create a snap and forward item, the `snat_table_ids` is the created one.
+    <dd>{{% md %}}The nat gateway will auto create a snat item.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.121.0+) The status of NAT gateway.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -721,7 +857,7 @@ Get an existing NatGateway resource's state with the given name, ID, and optiona
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bandwidth_package_ids</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bandwidth_packages</span><span class="p">:</span> <span class="nx">Optional[Sequence[NatGatewayBandwidthPackageArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">forward_table_ids</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nat_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">snat_table_ids</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">specification</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> NatGateway</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dry_run</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">force</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">forward_table_ids</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">internet_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nat_gateway_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nat_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">payment_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">snat_table_ids</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">specification</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> NatGateway</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -834,24 +970,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="state_bandwidthpackageids_csharp">
-<a href="#state_bandwidthpackageids_csharp" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>Package<wbr>Ids</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A list ID of the bandwidth packages, and split them with commas.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_bandwidthpackages_csharp">
-<a href="#state_bandwidthpackages_csharp" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>Packages</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#natgatewaybandwidthpackage">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Vpc.<wbr>Inputs.<wbr>Nat<wbr>Gateway<wbr>Bandwidth<wbr>Package<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}A list of bandwidth packages for the nat gatway. Only support nat gateway created before 00:00 on November 4, 2017. Available in v1.13.0+ and v1.7.1-.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -861,13 +979,29 @@ The following state arguments are supported:
     <dd>{{% md %}}Description of the nat gateway, This description can have a string of 2 to 256 characters, It cannot begin with http:// or https://. Defaults to null.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_dryrun_csharp">
+<a href="#state_dryrun_csharp" style="color: inherit; text-decoration: inherit;">Dry<wbr>Run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_force_csharp">
+<a href="#state_force_csharp" style="color: inherit; text-decoration: inherit;">Force</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_forwardtableids_csharp">
 <a href="#state_forwardtableids_csharp" style="color: inherit; text-decoration: inherit;">Forward<wbr>Table<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The nat gateway will auto create a snap and forward item, the `forward_table_ids` is the created one.
+    <dd>{{% md %}}The nat gateway will auto create a forward item.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancechargetype_csharp">
@@ -876,11 +1010,29 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The billing method of the nat gateway. Valid values are "PrePaid" and "PostPaid". Default to "PostPaid".
+    <dd>{{% md %}}Field `instance_charge_type` has been deprecated from provider version 1.121.0. New field `payment_type` instead.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_internetchargetype_csharp">
+<a href="#state_internetchargetype_csharp" style="color: inherit; text-decoration: inherit;">Internet<wbr>Charge<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The internet charge type. Valid values `PayByLcu` and `PayBySpec`, default value is `PayBySpec`. The `PayByLcu` is only support enhanced NAT.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Field `name` has been deprecated from provider version 1.121.0. New field `nat_gateway_name` instead.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_natgatewayname_csharp">
+<a href="#state_natgatewayname_csharp" style="color: inherit; text-decoration: inherit;">Nat<wbr>Gateway<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -894,7 +1046,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of nat gateway. Default to `Normal`. Valid values: [`Normal`, `Enhanced`].
+    <dd>{{% md %}}The type of NAT gateway. Default to `Normal`. Valid values: [`Normal`, `Enhanced`].
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_paymenttype_csharp">
+<a href="#state_paymenttype_csharp" style="color: inherit; text-decoration: inherit;">Payment<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The billing method of the NAT gateway. Valid values are `PayAsYouGo` and `Subscription`. Default to `PayAsYouGo`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_period_csharp">
@@ -903,7 +1064,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration that you will buy the resource, in month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid values: [1-9, 12, 24, 36]. At present, the provider does not support modify "period" and you can do that via web console.
+    <dd>{{% md %}}The duration that you will buy the resource, in month. It is valid when `payment_type` is `Subscription`. Default to 1. Valid values: [1-9, 12, 24, 36]. At present, the provider does not support modify "period" and you can do that via web console.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snattableids_csharp">
@@ -912,17 +1073,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The nat gateway will auto create a snap and forward item, the `snat_table_ids` is the created one.
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_spec_csharp">
-<a href="#state_spec_csharp" style="color: inherit; text-decoration: inherit;">Spec</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}It has been deprecated from provider version 1.7.1, and new field 'specification' can replace it.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;spec&#39; has been deprecated from provider version 1.7.1, and new field &#39;specification&#39; can replace it.{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}The nat gateway will auto create a snat item.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_specification_csharp">
 <a href="#state_specification_csharp" style="color: inherit; text-decoration: inherit;">Specification</a>
@@ -930,7 +1082,25 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The specification of the nat gateway. Valid values are `Small`, `Middle` and `Large`. Default to `Small`. Details refer to [Nat Gateway Specification](https://www.alibabacloud.com/help/doc-detail/42757.htm).
+    <dd>{{% md %}}The specification of the nat gateway. Valid values are `Small`, `Middle` and `Large`. Default to `Small`. Effective when `internet_charge_type` is `PayBySpec`. Details refer to [Nat Gateway Specification](https://www.alibabacloud.com/help/doc-detail/42757.htm).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_status_csharp">
+<a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.121.0+) The status of NAT gateway.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}The tags of NAT gateway.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcid_csharp">
@@ -955,24 +1125,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="state_bandwidthpackageids_go">
-<a href="#state_bandwidthpackageids_go" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>Package<wbr>Ids</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A list ID of the bandwidth packages, and split them with commas.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_bandwidthpackages_go">
-<a href="#state_bandwidthpackages_go" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>Packages</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#natgatewaybandwidthpackage">[]Nat<wbr>Gateway<wbr>Bandwidth<wbr>Package</a></span>
-    </dt>
-    <dd>{{% md %}}A list of bandwidth packages for the nat gatway. Only support nat gateway created before 00:00 on November 4, 2017. Available in v1.13.0+ and v1.7.1-.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -982,13 +1134,29 @@ The following state arguments are supported:
     <dd>{{% md %}}Description of the nat gateway, This description can have a string of 2 to 256 characters, It cannot begin with http:// or https://. Defaults to null.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_dryrun_go">
+<a href="#state_dryrun_go" style="color: inherit; text-decoration: inherit;">Dry<wbr>Run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_force_go">
+<a href="#state_force_go" style="color: inherit; text-decoration: inherit;">Force</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_forwardtableids_go">
 <a href="#state_forwardtableids_go" style="color: inherit; text-decoration: inherit;">Forward<wbr>Table<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The nat gateway will auto create a snap and forward item, the `forward_table_ids` is the created one.
+    <dd>{{% md %}}The nat gateway will auto create a forward item.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancechargetype_go">
@@ -997,11 +1165,29 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The billing method of the nat gateway. Valid values are "PrePaid" and "PostPaid". Default to "PostPaid".
+    <dd>{{% md %}}Field `instance_charge_type` has been deprecated from provider version 1.121.0. New field `payment_type` instead.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_internetchargetype_go">
+<a href="#state_internetchargetype_go" style="color: inherit; text-decoration: inherit;">Internet<wbr>Charge<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The internet charge type. Valid values `PayByLcu` and `PayBySpec`, default value is `PayBySpec`. The `PayByLcu` is only support enhanced NAT.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Field `name` has been deprecated from provider version 1.121.0. New field `nat_gateway_name` instead.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_natgatewayname_go">
+<a href="#state_natgatewayname_go" style="color: inherit; text-decoration: inherit;">Nat<wbr>Gateway<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1015,7 +1201,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of nat gateway. Default to `Normal`. Valid values: [`Normal`, `Enhanced`].
+    <dd>{{% md %}}The type of NAT gateway. Default to `Normal`. Valid values: [`Normal`, `Enhanced`].
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_paymenttype_go">
+<a href="#state_paymenttype_go" style="color: inherit; text-decoration: inherit;">Payment<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The billing method of the NAT gateway. Valid values are `PayAsYouGo` and `Subscription`. Default to `PayAsYouGo`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_period_go">
@@ -1024,7 +1219,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration that you will buy the resource, in month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid values: [1-9, 12, 24, 36]. At present, the provider does not support modify "period" and you can do that via web console.
+    <dd>{{% md %}}The duration that you will buy the resource, in month. It is valid when `payment_type` is `Subscription`. Default to 1. Valid values: [1-9, 12, 24, 36]. At present, the provider does not support modify "period" and you can do that via web console.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snattableids_go">
@@ -1033,17 +1228,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The nat gateway will auto create a snap and forward item, the `snat_table_ids` is the created one.
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_spec_go">
-<a href="#state_spec_go" style="color: inherit; text-decoration: inherit;">Spec</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}It has been deprecated from provider version 1.7.1, and new field 'specification' can replace it.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;spec&#39; has been deprecated from provider version 1.7.1, and new field &#39;specification&#39; can replace it.{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}The nat gateway will auto create a snat item.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_specification_go">
 <a href="#state_specification_go" style="color: inherit; text-decoration: inherit;">Specification</a>
@@ -1051,7 +1237,25 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The specification of the nat gateway. Valid values are `Small`, `Middle` and `Large`. Default to `Small`. Details refer to [Nat Gateway Specification](https://www.alibabacloud.com/help/doc-detail/42757.htm).
+    <dd>{{% md %}}The specification of the nat gateway. Valid values are `Small`, `Middle` and `Large`. Default to `Small`. Effective when `internet_charge_type` is `PayBySpec`. Details refer to [Nat Gateway Specification](https://www.alibabacloud.com/help/doc-detail/42757.htm).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_status_go">
+<a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.121.0+) The status of NAT gateway.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}The tags of NAT gateway.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcid_go">
@@ -1076,24 +1280,6 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="state_bandwidthpackageids_nodejs">
-<a href="#state_bandwidthpackageids_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth<wbr>Package<wbr>Ids</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A list ID of the bandwidth packages, and split them with commas.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_bandwidthpackages_nodejs">
-<a href="#state_bandwidthpackages_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth<wbr>Packages</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#natgatewaybandwidthpackage">Nat<wbr>Gateway<wbr>Bandwidth<wbr>Package[]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of bandwidth packages for the nat gatway. Only support nat gateway created before 00:00 on November 4, 2017. Available in v1.13.0+ and v1.7.1-.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -1103,13 +1289,29 @@ The following state arguments are supported:
     <dd>{{% md %}}Description of the nat gateway, This description can have a string of 2 to 256 characters, It cannot begin with http:// or https://. Defaults to null.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_dryrun_nodejs">
+<a href="#state_dryrun_nodejs" style="color: inherit; text-decoration: inherit;">dry<wbr>Run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_force_nodejs">
+<a href="#state_force_nodejs" style="color: inherit; text-decoration: inherit;">force</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_forwardtableids_nodejs">
 <a href="#state_forwardtableids_nodejs" style="color: inherit; text-decoration: inherit;">forward<wbr>Table<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The nat gateway will auto create a snap and forward item, the `forward_table_ids` is the created one.
+    <dd>{{% md %}}The nat gateway will auto create a forward item.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancechargetype_nodejs">
@@ -1118,11 +1320,29 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The billing method of the nat gateway. Valid values are "PrePaid" and "PostPaid". Default to "PostPaid".
+    <dd>{{% md %}}Field `instance_charge_type` has been deprecated from provider version 1.121.0. New field `payment_type` instead.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_internetchargetype_nodejs">
+<a href="#state_internetchargetype_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Charge<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The internet charge type. Valid values `PayByLcu` and `PayBySpec`, default value is `PayBySpec`. The `PayByLcu` is only support enhanced NAT.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Field `name` has been deprecated from provider version 1.121.0. New field `nat_gateway_name` instead.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_natgatewayname_nodejs">
+<a href="#state_natgatewayname_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>Gateway<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1136,7 +1356,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of nat gateway. Default to `Normal`. Valid values: [`Normal`, `Enhanced`].
+    <dd>{{% md %}}The type of NAT gateway. Default to `Normal`. Valid values: [`Normal`, `Enhanced`].
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_paymenttype_nodejs">
+<a href="#state_paymenttype_nodejs" style="color: inherit; text-decoration: inherit;">payment<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The billing method of the NAT gateway. Valid values are `PayAsYouGo` and `Subscription`. Default to `PayAsYouGo`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_period_nodejs">
@@ -1145,7 +1374,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The duration that you will buy the resource, in month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid values: [1-9, 12, 24, 36]. At present, the provider does not support modify "period" and you can do that via web console.
+    <dd>{{% md %}}The duration that you will buy the resource, in month. It is valid when `payment_type` is `Subscription`. Default to 1. Valid values: [1-9, 12, 24, 36]. At present, the provider does not support modify "period" and you can do that via web console.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snattableids_nodejs">
@@ -1154,17 +1383,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The nat gateway will auto create a snap and forward item, the `snat_table_ids` is the created one.
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_spec_nodejs">
-<a href="#state_spec_nodejs" style="color: inherit; text-decoration: inherit;">spec</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}It has been deprecated from provider version 1.7.1, and new field 'specification' can replace it.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;spec&#39; has been deprecated from provider version 1.7.1, and new field &#39;specification&#39; can replace it.{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}The nat gateway will auto create a snat item.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_specification_nodejs">
 <a href="#state_specification_nodejs" style="color: inherit; text-decoration: inherit;">specification</a>
@@ -1172,7 +1392,25 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The specification of the nat gateway. Valid values are `Small`, `Middle` and `Large`. Default to `Small`. Details refer to [Nat Gateway Specification](https://www.alibabacloud.com/help/doc-detail/42757.htm).
+    <dd>{{% md %}}The specification of the nat gateway. Valid values are `Small`, `Middle` and `Large`. Default to `Small`. Effective when `internet_charge_type` is `PayBySpec`. Details refer to [Nat Gateway Specification](https://www.alibabacloud.com/help/doc-detail/42757.htm).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_status_nodejs">
+<a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.121.0+) The status of NAT gateway.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}The tags of NAT gateway.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcid_nodejs">
@@ -1197,24 +1435,6 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="state_bandwidth_package_ids_python">
-<a href="#state_bandwidth_package_ids_python" style="color: inherit; text-decoration: inherit;">bandwidth_<wbr>package_<wbr>ids</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A list ID of the bandwidth packages, and split them with commas.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_bandwidth_packages_python">
-<a href="#state_bandwidth_packages_python" style="color: inherit; text-decoration: inherit;">bandwidth_<wbr>packages</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#natgatewaybandwidthpackage">Sequence[Nat<wbr>Gateway<wbr>Bandwidth<wbr>Package<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of bandwidth packages for the nat gatway. Only support nat gateway created before 00:00 on November 4, 2017. Available in v1.13.0+ and v1.7.1-.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -1224,13 +1444,29 @@ The following state arguments are supported:
     <dd>{{% md %}}Description of the nat gateway, This description can have a string of 2 to 256 characters, It cannot begin with http:// or https://. Defaults to null.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_dry_run_python">
+<a href="#state_dry_run_python" style="color: inherit; text-decoration: inherit;">dry_<wbr>run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_force_python">
+<a href="#state_force_python" style="color: inherit; text-decoration: inherit;">force</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_forward_table_ids_python">
 <a href="#state_forward_table_ids_python" style="color: inherit; text-decoration: inherit;">forward_<wbr>table_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The nat gateway will auto create a snap and forward item, the `forward_table_ids` is the created one.
+    <dd>{{% md %}}The nat gateway will auto create a forward item.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_charge_type_python">
@@ -1239,11 +1475,29 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The billing method of the nat gateway. Valid values are "PrePaid" and "PostPaid". Default to "PostPaid".
+    <dd>{{% md %}}Field `instance_charge_type` has been deprecated from provider version 1.121.0. New field `payment_type` instead.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_internet_charge_type_python">
+<a href="#state_internet_charge_type_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>charge_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The internet charge type. Valid values `PayByLcu` and `PayBySpec`, default value is `PayBySpec`. The `PayByLcu` is only support enhanced NAT.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Field `name` has been deprecated from provider version 1.121.0. New field `nat_gateway_name` instead.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_nat_gateway_name_python">
+<a href="#state_nat_gateway_name_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>gateway_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1257,7 +1511,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of nat gateway. Default to `Normal`. Valid values: [`Normal`, `Enhanced`].
+    <dd>{{% md %}}The type of NAT gateway. Default to `Normal`. Valid values: [`Normal`, `Enhanced`].
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_payment_type_python">
+<a href="#state_payment_type_python" style="color: inherit; text-decoration: inherit;">payment_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The billing method of the NAT gateway. Valid values are `PayAsYouGo` and `Subscription`. Default to `PayAsYouGo`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_period_python">
@@ -1266,7 +1529,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration that you will buy the resource, in month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid values: [1-9, 12, 24, 36]. At present, the provider does not support modify "period" and you can do that via web console.
+    <dd>{{% md %}}The duration that you will buy the resource, in month. It is valid when `payment_type` is `Subscription`. Default to 1. Valid values: [1-9, 12, 24, 36]. At present, the provider does not support modify "period" and you can do that via web console.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snat_table_ids_python">
@@ -1275,17 +1538,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The nat gateway will auto create a snap and forward item, the `snat_table_ids` is the created one.
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_spec_python">
-<a href="#state_spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}It has been deprecated from provider version 1.7.1, and new field 'specification' can replace it.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;spec&#39; has been deprecated from provider version 1.7.1, and new field &#39;specification&#39; can replace it.{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}The nat gateway will auto create a snat item.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_specification_python">
 <a href="#state_specification_python" style="color: inherit; text-decoration: inherit;">specification</a>
@@ -1293,7 +1547,25 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The specification of the nat gateway. Valid values are `Small`, `Middle` and `Large`. Default to `Small`. Details refer to [Nat Gateway Specification](https://www.alibabacloud.com/help/doc-detail/42757.htm).
+    <dd>{{% md %}}The specification of the nat gateway. Valid values are `Small`, `Middle` and `Large`. Default to `Small`. Effective when `internet_charge_type` is `PayBySpec`. Details refer to [Nat Gateway Specification](https://www.alibabacloud.com/help/doc-detail/42757.htm).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_status_python">
+<a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.121.0+) The status of NAT gateway.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}The tags of NAT gateway.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpc_id_python">
@@ -1319,156 +1591,6 @@ The following state arguments are supported:
 
 
 
-
-## Supporting Types
-
-
-
-<h4 id="natgatewaybandwidthpackage">Nat<wbr>Gateway<wbr>Bandwidth<wbr>Package</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="bandwidth_csharp">
-<a href="#bandwidth_csharp" style="color: inherit; text-decoration: inherit;">Bandwidth</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="ipcount_csharp">
-<a href="#ipcount_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Count</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="publicipaddresses_csharp">
-<a href="#publicipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Addresses</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="zone_csharp">
-<a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="bandwidth_go">
-<a href="#bandwidth_go" style="color: inherit; text-decoration: inherit;">Bandwidth</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="ipcount_go">
-<a href="#ipcount_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Count</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="publicipaddresses_go">
-<a href="#publicipaddresses_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Addresses</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="zone_go">
-<a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="bandwidth_nodejs">
-<a href="#bandwidth_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="ipcount_nodejs">
-<a href="#ipcount_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Count</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="publicipaddresses_nodejs">
-<a href="#publicipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Addresses</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="zone_nodejs">
-<a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="bandwidth_python">
-<a href="#bandwidth_python" style="color: inherit; text-decoration: inherit;">bandwidth</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="ip_count_python">
-<a href="#ip_count_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>count</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="public_ip_addresses_python">
-<a href="#public_ip_addresses_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>addresses</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="zone_python">
-<a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
 
 
 <h2 id="package-details">Package Details</h2>

@@ -595,16 +595,16 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The method of modifying the whitelist. Valid values: `0`, `1` and `2`. Default to `0`. `0` means overwrites the original whitelist. `1` means adds the IP addresses to the whitelist. `2` means deletes the IP addresses from the whitelist.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="nodetype_csharp">
 <a href="#nodetype_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Valid values: `MASTER_SLAVE`, `STAND_ALONE`, `double` and `single`. Default to `double`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}"Field 'node_type' has been deprecated from version 1.120.1". This parameter is determined by the `instance_class`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;node_type&#39; has been deprecated from version 1.120.1{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="ordertype_csharp">
 <a href="#ordertype_csharp" style="color: inherit; text-decoration: inherit;">Order<wbr>Type</a>
@@ -1057,16 +1057,16 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The method of modifying the whitelist. Valid values: `0`, `1` and `2`. Default to `0`. `0` means overwrites the original whitelist. `1` means adds the IP addresses to the whitelist. `2` means deletes the IP addresses from the whitelist.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="nodetype_go">
 <a href="#nodetype_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Valid values: `MASTER_SLAVE`, `STAND_ALONE`, `double` and `single`. Default to `double`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}"Field 'node_type' has been deprecated from version 1.120.1". This parameter is determined by the `instance_class`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;node_type&#39; has been deprecated from version 1.120.1{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="ordertype_go">
 <a href="#ordertype_go" style="color: inherit; text-decoration: inherit;">Order<wbr>Type</a>
@@ -1519,16 +1519,16 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The method of modifying the whitelist. Valid values: `0`, `1` and `2`. Default to `0`. `0` means overwrites the original whitelist. `1` means adds the IP addresses to the whitelist. `2` means deletes the IP addresses from the whitelist.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="nodetype_nodejs">
 <a href="#nodetype_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Valid values: `MASTER_SLAVE`, `STAND_ALONE`, `double` and `single`. Default to `double`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}"Field 'node_type' has been deprecated from version 1.120.1". This parameter is determined by the `instance_class`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;node_type&#39; has been deprecated from version 1.120.1{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="ordertype_nodejs">
 <a href="#ordertype_nodejs" style="color: inherit; text-decoration: inherit;">order<wbr>Type</a>
@@ -1981,16 +1981,16 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The method of modifying the whitelist. Valid values: `0`, `1` and `2`. Default to `0`. `0` means overwrites the original whitelist. `1` means adds the IP addresses to the whitelist. `2` means deletes the IP addresses from the whitelist.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="node_type_python">
 <a href="#node_type_python" style="color: inherit; text-decoration: inherit;">node_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Valid values: `MASTER_SLAVE`, `STAND_ALONE`, `double` and `single`. Default to `double`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}"Field 'node_type' has been deprecated from version 1.120.1". This parameter is determined by the `instance_class`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;node_type&#39; has been deprecated from version 1.120.1{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="order_type_python">
 <a href="#order_type_python" style="color: inherit; text-decoration: inherit;">order_<wbr>type</a>
@@ -2867,16 +2867,16 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The method of modifying the whitelist. Valid values: `0`, `1` and `2`. Default to `0`. `0` means overwrites the original whitelist. `1` means adds the IP addresses to the whitelist. `2` means deletes the IP addresses from the whitelist.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_nodetype_csharp">
 <a href="#state_nodetype_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Valid values: `MASTER_SLAVE`, `STAND_ALONE`, `double` and `single`. Default to `double`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}"Field 'node_type' has been deprecated from version 1.120.1". This parameter is determined by the `instance_class`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;node_type&#39; has been deprecated from version 1.120.1{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_ordertype_csharp">
 <a href="#state_ordertype_csharp" style="color: inherit; text-decoration: inherit;">Order<wbr>Type</a>
@@ -3382,16 +3382,16 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The method of modifying the whitelist. Valid values: `0`, `1` and `2`. Default to `0`. `0` means overwrites the original whitelist. `1` means adds the IP addresses to the whitelist. `2` means deletes the IP addresses from the whitelist.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_nodetype_go">
 <a href="#state_nodetype_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Valid values: `MASTER_SLAVE`, `STAND_ALONE`, `double` and `single`. Default to `double`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}"Field 'node_type' has been deprecated from version 1.120.1". This parameter is determined by the `instance_class`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;node_type&#39; has been deprecated from version 1.120.1{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_ordertype_go">
 <a href="#state_ordertype_go" style="color: inherit; text-decoration: inherit;">Order<wbr>Type</a>
@@ -3897,16 +3897,16 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The method of modifying the whitelist. Valid values: `0`, `1` and `2`. Default to `0`. `0` means overwrites the original whitelist. `1` means adds the IP addresses to the whitelist. `2` means deletes the IP addresses from the whitelist.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_nodetype_nodejs">
 <a href="#state_nodetype_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Valid values: `MASTER_SLAVE`, `STAND_ALONE`, `double` and `single`. Default to `double`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}"Field 'node_type' has been deprecated from version 1.120.1". This parameter is determined by the `instance_class`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;node_type&#39; has been deprecated from version 1.120.1{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_ordertype_nodejs">
 <a href="#state_ordertype_nodejs" style="color: inherit; text-decoration: inherit;">order<wbr>Type</a>
@@ -4412,16 +4412,16 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The method of modifying the whitelist. Valid values: `0`, `1` and `2`. Default to `0`. `0` means overwrites the original whitelist. `1` means adds the IP addresses to the whitelist. `2` means deletes the IP addresses from the whitelist.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_node_type_python">
 <a href="#state_node_type_python" style="color: inherit; text-decoration: inherit;">node_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Valid values: `MASTER_SLAVE`, `STAND_ALONE`, `double` and `single`. Default to `double`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}"Field 'node_type' has been deprecated from version 1.120.1". This parameter is determined by the `instance_class`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;node_type&#39; has been deprecated from version 1.120.1{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_order_type_python">
 <a href="#state_order_type_python" style="color: inherit; text-decoration: inherit;">order_<wbr>type</a>

@@ -15,11 +15,13 @@ Explore the resources and functions of the alicloud.adb module.
     <li><a href="backuppolicy" title="BackupPolicy"><span class="symbol resource"></span>BackupPolicy</a></li>
     <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
     <li><a href="connection" title="Connection"><span class="symbol resource"></span>Connection</a></li>
+    <li><a href="dbcluster" title="DBCluster"><span class="symbol resource"></span>DBCluster</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getclusters" title="GetClusters"><span class="symbol function"></span>GetClusters</a></li>
+    <li><a href="getdbclusters" title="GetDBClusters"><span class="symbol function"></span>GetDBClusters</a></li>
     <li><a href="getzones" title="GetZones"><span class="symbol function"></span>GetZones</a></li>
 </ul>
 
@@ -32,6 +34,6 @@ Explore the resources and functions of the alicloud.adb module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.39.0</dd>
+	<dd>2.39.1</dd>
 </dl>
 

@@ -18,6 +18,7 @@ Explore the resources and functions of the alicloud.log module.
     <li><a href="logtailattachment" title="LogTailAttachment"><span class="symbol resource"></span>LogTailAttachment</a></li>
     <li><a href="logtailconfig" title="LogTailConfig"><span class="symbol resource"></span>LogTailConfig</a></li>
     <li><a href="machinegroup" title="MachineGroup"><span class="symbol resource"></span>MachineGroup</a></li>
+    <li><a href="ossshipper" title="OssShipper"><span class="symbol resource"></span>OssShipper</a></li>
     <li><a href="project" title="Project"><span class="symbol resource"></span>Project</a></li>
     <li><a href="store" title="Store"><span class="symbol resource"></span>Store</a></li>
     <li><a href="storeindex" title="StoreIndex"><span class="symbol resource"></span>StoreIndex</a></li>
@@ -37,6 +38,6 @@ Explore the resources and functions of the alicloud.log module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.39.0</dd>
+	<dd>2.39.1</dd>
 </dl>
 
