@@ -33,7 +33,7 @@ From VMs to Serverless to Containers, our collection of tutorials below represen
         </p>
         <ul class="p2 ml-2">
             <li><a href="{{< relref "azure/azure-cs-appservice-docker" >}}">Azure App Service</a></li>
-            <li><a href="{{< relref "azure/azure-py-aks" >}}">Azure Kubernetes Service</a></li>
+            <li><a href="{{< relref "azure/azure-py-aks-helm" >}}">Azure Kubernetes Service</a></li>
             <li><a href="{{< relref "azure/azure-go-aci" >}}">Azure Container Instances</a></li>
             <li><a href="{{< relref "azure/azure-ts-webserver" >}}">Azure Virtual Machine</a></li>
         </ul>

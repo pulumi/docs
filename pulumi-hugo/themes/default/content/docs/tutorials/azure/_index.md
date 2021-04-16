@@ -50,7 +50,7 @@ The following tutorials highlight the Azure platform using complete end-to-end s
     <div class="w-1/2 border-solid ml-4 border-t-2 border-gray-200">
         <h3 class="no-anchor pt-4">
             <i class="fas fa-globe pr-2"></i>
-            <a href="{{< relref "azure-cs-aks" >}}" style="color: #4387c7">
+            <a href="{{< relref "azure-cs-aks-helm" >}}" style="color: #4387c7">
                 Azure Kubernetes Service
             </a>
         </h3>
@@ -58,16 +58,16 @@ The following tutorials highlight the Azure platform using complete end-to-end s
             Deploy an AKS cluster and set credentials to manage access to the cluster.
         </p>
         <p>
-            <a href="{{< relref "azure-cs-aks" >}}" style="color: #4387c7">
+            <a href="{{< relref "azure-cs-aks-helm" >}}" style="color: #4387c7">
                 C#
             </a>&bull;
-            <a href="{{< relref "azure-ts-aks" >}}" style="color: #4387c7">
+            <a href="{{< relref "azure-ts-aks-helm" >}}" style="color: #4387c7">
                 TypeScript
             </a>&bull;
-            <a href="{{< relref "azure-py-aks" >}}" style="color: #4387c7">
+            <a href="{{< relref "azure-py-aks-helm" >}}" style="color: #4387c7">
                 Python
             </a>&bull;
-            <a href="{{< relref "azure-go-aks" >}}" style="color: #4387c7">
+            <a href="{{< relref "azure-go-aks-helm" >}}" style="color: #4387c7">
                 Go
             </a>
         </p>
