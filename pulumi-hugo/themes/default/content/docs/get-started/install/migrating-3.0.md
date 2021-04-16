@@ -4,7 +4,7 @@ meta_desc: This page provides instructions for upgrading to Pulumi 3.0
 no_on_this_page: true
 ---
 
-Pulumi 3.0 is currently in beta. If you'd like to try the beta and provide feedback, it's simple to upgrade:
+Pulumi 3.0 is currently in rc. If you'd like to try the rc and provide feedback, it's simple to upgrade:
 
 1. [Install the 3.0 CLI]({{< relref "/docs/get-started/install#installing-betas-and-previous-versions" >}})
 2. Take note of the updated CLI behaviors listed below
@@ -35,7 +35,7 @@ Previously, when using the `--stack` option on CLI commands, Pulumi would incons
 ### Update to the new SDK version
 
 ```bash
-npm install @pulumi/pulumi@^3.0.0-beta
+npm install @pulumi/pulumi@^3.0.0-rc
 ```
 
 ### Changes to pulumi.runtime.Mocks
@@ -153,8 +153,8 @@ pulumi.runtime.setMocks({
 Modify your `requirements.txt` file to update the Pulumi SDK and any providers you use, like this:
 
 ```
-pulumi>=3.0.0b,<4.0.0
-pulumi-aws>=4.0.0b,<5.0.0
+pulumi>=3.0.0rc,<4.0.0
+pulumi-aws>=4.0.0rc,<5.0.0
 ```
 
 Then run `pip install`:
@@ -240,8 +240,8 @@ Modify your `go.mod` file to update the Pulumi SDK and any providers you use, li
 
 ```
 require (
-    github.com/pulumi/pulumi/sdk/v3 v3.0.0-beta.2
-    github.com/pulumi/pulumi-aws/sdk/v4 v4.0.0-beta.2
+    github.com/pulumi/pulumi/sdk/v3 v3.0.0-rc.1
+    github.com/pulumi/pulumi-aws/sdk/v4 v4.0.0-rc.1
 )
 ```
 
@@ -407,7 +407,7 @@ public Task<object> CallAsync(MockCallArgs args)
 
 ## Required updates for automation API users
 
-The Pulumi 3.0 beta includes the final preview of the Automation API, which standardizes the namespace requirements for Automation API. You need to update programs that use automation API to use the following namespaces:
+The Pulumi 3.0 rc includes the final preview of the Automation API, which standardizes the namespace requirements for Automation API. You need to update programs that use automation API to use the following namespaces:
 
 {{< chooser language "javascript,typescript,python,go,csharp" >}}
 
@@ -474,5 +474,5 @@ using Pulumi.Automation;
 
 ## When you should upgrade to Pulumi 3.0
 
-Pulumi 3.0 is currently in beta and not recommended for existing production workloads. Once it is made generally available (GA), we will recommend switching to Pulumi 3.0 in the docs and in the CLI via the normal upgrade prompts.
+Pulumi 3.0 is currently in rc and not recommended for existing production workloads. Once it is made generally available (GA), we will recommend switching to Pulumi 3.0 in the docs and in the CLI via the normal upgrade prompts.
 `pulumi new` will continue to use the stable versions of the templates. You can use the `3.x` version of the templates, which will use the 3.0 SDK, by running `pulumi new https://github.com/pulumi/templates/tree/3.x`.
