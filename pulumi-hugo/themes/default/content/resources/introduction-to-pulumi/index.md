@@ -38,7 +38,7 @@ url_slug: "introduction-to-pulumi"
 
 # Webinar pages support multiple session via the 'multiple' property.
 multiple:
-    - datetime: 2021-04-20T09:00:00-07:00
+    - datetime: 2021-04-20T14:00:00-07:00
       hubspot_form_id: d137abb5-bca8-46b2-b549-4eb89eb1fc1b
 
     - datetime: 2021-05-18T09:00:00-07:00
