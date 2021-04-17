@@ -3,6 +3,7 @@ module github.com/pulumi/pulumi-docs
 go 1.16
 
 require (
+	4d63.com/gochecknoglobals v0.0.0-20210416044342-fb0abda3d9aa // indirect
 	github.com/Djarvur/go-err113 v0.1.0 // indirect
 	github.com/cbroglie/mustache v1.2.0 // indirect
 	github.com/chavacava/garif v0.0.0-20210405164556-e8a0a408d6af // indirect
@@ -35,6 +36,7 @@ require (
 	github.com/stretchr/objx v0.3.0 // indirect
 	github.com/tetafro/godot v1.4.5 // indirect
 	github.com/tomarrell/wrapcheck v1.1.0 // indirect
+	github.com/tommy-muehle/go-mnd/v2 v2.3.2 // indirect
 	golang.org/x/mod v0.4.2 // indirect
 	golang.org/x/sys v0.0.0-20210415045647-66c3f260301c // indirect
 	golang.org/x/text v0.3.6 // indirect
