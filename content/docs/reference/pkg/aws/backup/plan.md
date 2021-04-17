@@ -70,8 +70,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/backup"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/backup"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -168,19 +168,29 @@ const example = new aws.backup.Plan("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Plan</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PlanArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Plan</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PlanArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Plan</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">advanced_backup_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[PlanAdvancedBackupSettingArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[PlanRuleArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Plan</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+         <span class="nx">advanced_backup_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[PlanAdvancedBackupSettingArgs]]]]</span> = None<span class="p">,</span>
+         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[PlanRuleArgs]]]]</span> = None<span class="p">,</span>
+         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Plan</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PlanArgs</a></span><span class="p">,</span>
+         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPlan</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PlanArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Plan</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPlan</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PlanArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Plan</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Plan</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PlanArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Plan</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">PlanArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -215,22 +225,32 @@ const example = new aws.backup.Plan("example", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">PlanArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -239,7 +259,7 @@ const example = new aws.backup.Plan("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -263,7 +283,7 @@ const example = new aws.backup.Plan("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -398,7 +418,7 @@ The Plan resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planrule">Plan<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#planrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Plan<wbr>Rule<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A rule object that specifies a scheduled task that is used to back up a selection of resources.
 {{% /md %}}</dd><dt class="property-optional"
@@ -407,7 +427,7 @@ The Plan resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#advancedbackupsettings_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Backup<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planadvancedbackupsetting">Plan<wbr>Advanced<wbr>Backup<wbr>Setting[]</a></span>
+        <span class="property-type"><a href="#planadvancedbackupsetting">pulumi.<wbr>Input<pulumi.<wbr>Input<Plan<wbr>Advanced<wbr>Backup<wbr>Setting<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}An object that specifies backup options for each resource type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -416,7 +436,7 @@ The Plan resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The display name of a backup plan.
 {{% /md %}}</dd><dt class="property-optional"
@@ -425,7 +445,7 @@ The Plan resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Metadata that you can assign to help organize the plans you create.
 {{% /md %}}</dd></dl>
@@ -438,7 +458,7 @@ The Plan resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planrule">Sequence[Plan<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#planrule">Input[Plan<wbr>Rule<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A rule object that specifies a scheduled task that is used to back up a selection of resources.
 {{% /md %}}</dd><dt class="property-optional"
@@ -447,7 +467,7 @@ The Plan resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#advanced_backup_settings_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>backup_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planadvancedbackupsetting">Sequence[Plan<wbr>Advanced<wbr>Backup<wbr>Setting<wbr>Args]</a></span>
+        <span class="property-type"><a href="#planadvancedbackupsetting">Input[Plan<wbr>Advanced<wbr>Backup<wbr>Setting<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}An object that specifies backup options for each resource type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -456,7 +476,7 @@ The Plan resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The display name of a backup plan.
 {{% /md %}}</dd><dt class="property-optional"
@@ -465,7 +485,7 @@ The Plan resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Metadata that you can assign to help organize the plans you create.
 {{% /md %}}</dd></dl>
@@ -606,20 +626,28 @@ Get an existing Plan resource's state with the given name, ID, and optional extr
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">PlanState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Plan</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">PlanState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Plan</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">advanced_backup_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[PlanAdvancedBackupSettingArgs]]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[PlanRuleArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Plan</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">advanced_backup_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[PlanAdvancedBackupSettingArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[PlanRuleArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Plan</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPlan<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">PlanState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Plan</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPlan<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">PlanState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Plan</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Plan</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">PlanState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Plan</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">PlanState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -844,7 +872,7 @@ The following state arguments are supported:
 <a href="#state_advancedbackupsettings_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Backup<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planadvancedbackupsetting">Plan<wbr>Advanced<wbr>Backup<wbr>Setting[]</a></span>
+        <span class="property-type"><a href="#planadvancedbackupsetting">pulumi.<wbr>Input<pulumi.<wbr>Input<Plan<wbr>Advanced<wbr>Backup<wbr>Setting<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}An object that specifies backup options for each resource type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -853,7 +881,7 @@ The following state arguments are supported:
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of the backup plan.
 {{% /md %}}</dd><dt class="property-optional"
@@ -862,7 +890,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The display name of a backup plan.
 {{% /md %}}</dd><dt class="property-optional"
@@ -871,7 +899,7 @@ The following state arguments are supported:
 <a href="#state_rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planrule">Plan<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#planrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Plan<wbr>Rule<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A rule object that specifies a scheduled task that is used to back up a selection of resources.
 {{% /md %}}</dd><dt class="property-optional"
@@ -880,7 +908,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Metadata that you can assign to help organize the plans you create.
 {{% /md %}}</dd><dt class="property-optional"
@@ -889,7 +917,7 @@ The following state arguments are supported:
 <a href="#state_version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique, randomly generated, Unicode, UTF-8 encoded string that serves as the version ID of the backup plan.
 {{% /md %}}</dd></dl>
@@ -902,7 +930,7 @@ The following state arguments are supported:
 <a href="#state_advanced_backup_settings_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>backup_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planadvancedbackupsetting">Sequence[Plan<wbr>Advanced<wbr>Backup<wbr>Setting<wbr>Args]</a></span>
+        <span class="property-type"><a href="#planadvancedbackupsetting">Input[Plan<wbr>Advanced<wbr>Backup<wbr>Setting<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}An object that specifies backup options for each resource type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -911,7 +939,7 @@ The following state arguments are supported:
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of the backup plan.
 {{% /md %}}</dd><dt class="property-optional"
@@ -920,7 +948,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The display name of a backup plan.
 {{% /md %}}</dd><dt class="property-optional"
@@ -929,7 +957,7 @@ The following state arguments are supported:
 <a href="#state_rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planrule">Sequence[Plan<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#planrule">Input[Plan<wbr>Rule<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A rule object that specifies a scheduled task that is used to back up a selection of resources.
 {{% /md %}}</dd><dt class="property-optional"
@@ -938,7 +966,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Metadata that you can assign to help organize the plans you create.
 {{% /md %}}</dd><dt class="property-optional"
@@ -947,7 +975,7 @@ The following state arguments are supported:
 <a href="#state_version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique, randomly generated, Unicode, UTF-8 encoded string that serves as the version ID of the backup plan.
 {{% /md %}}</dd></dl>
@@ -1015,7 +1043,7 @@ The following state arguments are supported:
 <a href="#backupoptions_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Specifies the backup option for a selected resource. This option is only available for Windows VSS backup jobs. Set to `{ WindowsVSS = "enabled" }` to enable Windows VSS backup option and create a VSS Windows backup.
 {{% /md %}}</dd><dt class="property-required"
@@ -1024,7 +1052,7 @@ The following state arguments are supported:
 <a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of AWS resource to be backed up. For VSS Windows backups, the only supported resource type is Amazon EC2. Valid values: `EC2`.
 {{% /md %}}</dd></dl>
@@ -1037,7 +1065,7 @@ The following state arguments are supported:
 <a href="#backup_options_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Specifies the backup option for a selected resource. This option is only available for Windows VSS backup jobs. Set to `{ WindowsVSS = "enabled" }` to enable Windows VSS backup option and create a VSS Windows backup.
 {{% /md %}}</dd><dt class="property-required"
@@ -1046,7 +1074,7 @@ The following state arguments are supported:
 <a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of AWS resource to be backed up. For VSS Windows backups, the only supported resource type is Amazon EC2. Valid values: `EC2`.
 {{% /md %}}</dd></dl>
@@ -1231,7 +1259,7 @@ The following state arguments are supported:
 <a href="#rulename_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An display name for a backup rule.
 {{% /md %}}</dd><dt class="property-required"
@@ -1240,7 +1268,7 @@ The following state arguments are supported:
 <a href="#targetvaultname_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Vault<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of a logical container where backups are stored.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1249,7 +1277,7 @@ The following state arguments are supported:
 <a href="#completionwindow_nodejs" style="color: inherit; text-decoration: inherit;">completion<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of time AWS Backup attempts a backup before canceling the job and returning an error.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1258,7 +1286,7 @@ The following state arguments are supported:
 <a href="#copyactions_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planrulecopyaction">Plan<wbr>Rule<wbr>Copy<wbr>Action[]</a></span>
+        <span class="property-type"><a href="#planrulecopyaction">pulumi.<wbr>Input<pulumi.<wbr>Input<Plan<wbr>Rule<wbr>Copy<wbr>Action<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with copy operation settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1267,7 +1295,7 @@ The following state arguments are supported:
 <a href="#enablecontinuousbackup_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Continuous<wbr>Backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable continuous backups for supported resources.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1276,7 +1304,7 @@ The following state arguments are supported:
 <a href="#lifecycle_nodejs" style="color: inherit; text-decoration: inherit;">lifecycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planrulelifecycle">Plan<wbr>Rule<wbr>Lifecycle</a></span>
+        <span class="property-type"><a href="#planrulelifecycle">pulumi.<wbr>Input<Plan<wbr>Rule<wbr>Lifecycle<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The lifecycle defines when a protected resource is copied over to a backup vault and when it expires.  Fields documented above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1285,7 +1313,7 @@ The following state arguments are supported:
 <a href="#recoverypointtags_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Metadata that you can assign to help organize the resources that you create.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1294,7 +1322,7 @@ The following state arguments are supported:
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A CRON expression specifying when AWS Backup initiates a backup job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1303,7 +1331,7 @@ The following state arguments are supported:
 <a href="#startwindow_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of time in minutes before beginning a backup.
 {{% /md %}}</dd></dl>
@@ -1316,7 +1344,7 @@ The following state arguments are supported:
 <a href="#rule_name_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An display name for a backup rule.
 {{% /md %}}</dd><dt class="property-required"
@@ -1325,7 +1353,7 @@ The following state arguments are supported:
 <a href="#target_vault_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>vault_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of a logical container where backups are stored.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1334,7 +1362,7 @@ The following state arguments are supported:
 <a href="#completion_window_python" style="color: inherit; text-decoration: inherit;">completion_<wbr>window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The amount of time AWS Backup attempts a backup before canceling the job and returning an error.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1343,7 +1371,7 @@ The following state arguments are supported:
 <a href="#copy_actions_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planrulecopyaction">Sequence[Plan<wbr>Rule<wbr>Copy<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#planrulecopyaction">Input[Plan<wbr>Rule<wbr>Copy<wbr>Action<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with copy operation settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1352,7 +1380,7 @@ The following state arguments are supported:
 <a href="#enable_continuous_backup_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>continuous_<wbr>backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable continuous backups for supported resources.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1361,7 +1389,7 @@ The following state arguments are supported:
 <a href="#lifecycle_python" style="color: inherit; text-decoration: inherit;">lifecycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planrulelifecycle">Plan<wbr>Rule<wbr>Lifecycle<wbr>Args</a></span>
+        <span class="property-type"><a href="#planrulelifecycle">Input[Plan<wbr>Rule<wbr>Lifecycle<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The lifecycle defines when a protected resource is copied over to a backup vault and when it expires.  Fields documented above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1370,7 +1398,7 @@ The following state arguments are supported:
 <a href="#recovery_point_tags_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Metadata that you can assign to help organize the resources that you create.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1379,7 +1407,7 @@ The following state arguments are supported:
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A CRON expression specifying when AWS Backup initiates a backup job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1388,7 +1416,7 @@ The following state arguments are supported:
 <a href="#start_window_python" style="color: inherit; text-decoration: inherit;">start_<wbr>window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The amount of time in minutes before beginning a backup.
 {{% /md %}}</dd></dl>
@@ -1447,7 +1475,7 @@ The following state arguments are supported:
 <a href="#destinationvaultarn_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Vault<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An Amazon Resource Name (ARN) that uniquely identifies the destination backup vault for the copied backup.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1456,7 +1484,7 @@ The following state arguments are supported:
 <a href="#lifecycle_nodejs" style="color: inherit; text-decoration: inherit;">lifecycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planrulecopyactionlifecycle">Plan<wbr>Rule<wbr>Copy<wbr>Action<wbr>Lifecycle</a></span>
+        <span class="property-type"><a href="#planrulecopyactionlifecycle">pulumi.<wbr>Input<Plan<wbr>Rule<wbr>Copy<wbr>Action<wbr>Lifecycle<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The lifecycle defines when a protected resource is copied over to a backup vault and when it expires.  Fields documented above.
 {{% /md %}}</dd></dl>
@@ -1469,7 +1497,7 @@ The following state arguments are supported:
 <a href="#destination_vault_arn_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>vault_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An Amazon Resource Name (ARN) that uniquely identifies the destination backup vault for the copied backup.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1478,7 +1506,7 @@ The following state arguments are supported:
 <a href="#lifecycle_python" style="color: inherit; text-decoration: inherit;">lifecycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planrulecopyactionlifecycle">Plan<wbr>Rule<wbr>Copy<wbr>Action<wbr>Lifecycle<wbr>Args</a></span>
+        <span class="property-type"><a href="#planrulecopyactionlifecycle">Input[Plan<wbr>Rule<wbr>Copy<wbr>Action<wbr>Lifecycle<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The lifecycle defines when a protected resource is copied over to a backup vault and when it expires.  Fields documented above.
 {{% /md %}}</dd></dl>
@@ -1537,7 +1565,7 @@ The following state arguments are supported:
 <a href="#coldstorageafter_nodejs" style="color: inherit; text-decoration: inherit;">cold<wbr>Storage<wbr>After</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after creation that a recovery point is moved to cold storage.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1546,7 +1574,7 @@ The following state arguments are supported:
 <a href="#deleteafter_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>After</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after creation that a recovery point is deleted. Must be 90 days greater than `cold_storage_after`.
 {{% /md %}}</dd></dl>
@@ -1559,7 +1587,7 @@ The following state arguments are supported:
 <a href="#cold_storage_after_python" style="color: inherit; text-decoration: inherit;">cold_<wbr>storage_<wbr>after</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after creation that a recovery point is moved to cold storage.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1568,7 +1596,7 @@ The following state arguments are supported:
 <a href="#delete_after_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>after</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after creation that a recovery point is deleted. Must be 90 days greater than `cold_storage_after`.
 {{% /md %}}</dd></dl>
@@ -1627,7 +1655,7 @@ The following state arguments are supported:
 <a href="#coldstorageafter_nodejs" style="color: inherit; text-decoration: inherit;">cold<wbr>Storage<wbr>After</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after creation that a recovery point is moved to cold storage.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1636,7 +1664,7 @@ The following state arguments are supported:
 <a href="#deleteafter_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>After</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after creation that a recovery point is deleted. Must be 90 days greater than `cold_storage_after`.
 {{% /md %}}</dd></dl>
@@ -1649,7 +1677,7 @@ The following state arguments are supported:
 <a href="#cold_storage_after_python" style="color: inherit; text-decoration: inherit;">cold_<wbr>storage_<wbr>after</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after creation that a recovery point is moved to cold storage.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1658,7 +1686,7 @@ The following state arguments are supported:
 <a href="#delete_after_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>after</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after creation that a recovery point is deleted. Must be 90 days greater than `cold_storage_after`.
 {{% /md %}}</dd></dl>

@@ -60,8 +60,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -139,19 +139,34 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AccountPasswordPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">AccountPasswordPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AccountPasswordPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">AccountPasswordPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AccountPasswordPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_users_to_change_password</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hard_expiry</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">max_password_age</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">minimum_password_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password_reuse_prevention</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">require_lowercase_characters</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">require_numbers</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">require_symbols</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">require_uppercase_characters</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AccountPasswordPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                          <span class="nx">allow_users_to_change_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                          <span class="nx">hard_expiry</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                          <span class="nx">max_password_age</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                          <span class="nx">minimum_password_length</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                          <span class="nx">password_reuse_prevention</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                          <span class="nx">require_lowercase_characters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                          <span class="nx">require_numbers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                          <span class="nx">require_symbols</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                          <span class="nx">require_uppercase_characters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AccountPasswordPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[AccountPasswordPolicyArgs]</a></span> = None<span class="p">,</span>
+                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccountPasswordPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">AccountPasswordPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AccountPasswordPolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccountPasswordPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">AccountPasswordPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AccountPasswordPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AccountPasswordPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AccountPasswordPolicyArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AccountPasswordPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AccountPasswordPolicyArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -186,22 +201,32 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AccountPasswordPolicyArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -210,7 +235,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -234,7 +259,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -459,7 +484,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
 <a href="#allowuserstochangepassword_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Users<wbr>To<wbr>Change<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to allow users to change their own password
 {{% /md %}}</dd><dt class="property-optional"
@@ -468,7 +493,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
 <a href="#hardexpiry_nodejs" style="color: inherit; text-decoration: inherit;">hard<wbr>Expiry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired (i.e. require administrator reset)
 {{% /md %}}</dd><dt class="property-optional"
@@ -477,7 +502,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
 <a href="#maxpasswordage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Password<wbr>Age</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of days that an user password is valid.
 {{% /md %}}</dd><dt class="property-optional"
@@ -486,7 +511,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
 <a href="#minimumpasswordlength_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Password<wbr>Length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Minimum length to require for user passwords.
 {{% /md %}}</dd><dt class="property-optional"
@@ -495,7 +520,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
 <a href="#passwordreuseprevention_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Reuse<wbr>Prevention</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of previous passwords that users are prevented from reusing.
 {{% /md %}}</dd><dt class="property-optional"
@@ -504,7 +529,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
 <a href="#requirelowercasecharacters_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Lowercase<wbr>Characters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to require lowercase characters for user passwords.
 {{% /md %}}</dd><dt class="property-optional"
@@ -513,7 +538,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
 <a href="#requirenumbers_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Numbers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to require numbers for user passwords.
 {{% /md %}}</dd><dt class="property-optional"
@@ -522,7 +547,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
 <a href="#requiresymbols_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Symbols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to require symbols for user passwords.
 {{% /md %}}</dd><dt class="property-optional"
@@ -531,7 +556,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
 <a href="#requireuppercasecharacters_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Uppercase<wbr>Characters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to require uppercase characters for user passwords.
 {{% /md %}}</dd></dl>
@@ -544,7 +569,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
 <a href="#allow_users_to_change_password_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>users_<wbr>to_<wbr>change_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to allow users to change their own password
 {{% /md %}}</dd><dt class="property-optional"
@@ -553,7 +578,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
 <a href="#hard_expiry_python" style="color: inherit; text-decoration: inherit;">hard_<wbr>expiry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired (i.e. require administrator reset)
 {{% /md %}}</dd><dt class="property-optional"
@@ -562,7 +587,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
 <a href="#max_password_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>password_<wbr>age</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of days that an user password is valid.
 {{% /md %}}</dd><dt class="property-optional"
@@ -571,7 +596,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
 <a href="#minimum_password_length_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>password_<wbr>length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Minimum length to require for user passwords.
 {{% /md %}}</dd><dt class="property-optional"
@@ -580,7 +605,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
 <a href="#password_reuse_prevention_python" style="color: inherit; text-decoration: inherit;">password_<wbr>reuse_<wbr>prevention</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of previous passwords that users are prevented from reusing.
 {{% /md %}}</dd><dt class="property-optional"
@@ -589,7 +614,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
 <a href="#require_lowercase_characters_python" style="color: inherit; text-decoration: inherit;">require_<wbr>lowercase_<wbr>characters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to require lowercase characters for user passwords.
 {{% /md %}}</dd><dt class="property-optional"
@@ -598,7 +623,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
 <a href="#require_numbers_python" style="color: inherit; text-decoration: inherit;">require_<wbr>numbers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to require numbers for user passwords.
 {{% /md %}}</dd><dt class="property-optional"
@@ -607,7 +632,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
 <a href="#require_symbols_python" style="color: inherit; text-decoration: inherit;">require_<wbr>symbols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to require symbols for user passwords.
 {{% /md %}}</dd><dt class="property-optional"
@@ -616,7 +641,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
 <a href="#require_uppercase_characters_python" style="color: inherit; text-decoration: inherit;">require_<wbr>uppercase_<wbr>characters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to require uppercase characters for user passwords.
 {{% /md %}}</dd></dl>
@@ -721,20 +746,32 @@ Get an existing AccountPasswordPolicy resource's state with the given name, ID, 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">AccountPasswordPolicyState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">AccountPasswordPolicy</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">AccountPasswordPolicyState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">AccountPasswordPolicy</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_users_to_change_password</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">expire_passwords</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hard_expiry</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">max_password_age</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">minimum_password_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password_reuse_prevention</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">require_lowercase_characters</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">require_numbers</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">require_symbols</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">require_uppercase_characters</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> AccountPasswordPolicy</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">allow_users_to_change_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">expire_passwords</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">hard_expiry</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">max_password_age</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">minimum_password_length</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">password_reuse_prevention</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">require_lowercase_characters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">require_numbers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">require_symbols</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">require_uppercase_characters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">) -&gt;</span> AccountPasswordPolicy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAccountPasswordPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">AccountPasswordPolicyState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AccountPasswordPolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAccountPasswordPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">AccountPasswordPolicyState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AccountPasswordPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">AccountPasswordPolicy</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">AccountPasswordPolicyState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">AccountPasswordPolicy</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">AccountPasswordPolicyState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1031,7 +1068,7 @@ The following state arguments are supported:
 <a href="#state_allowuserstochangepassword_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Users<wbr>To<wbr>Change<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to allow users to change their own password
 {{% /md %}}</dd><dt class="property-optional"
@@ -1040,7 +1077,7 @@ The following state arguments are supported:
 <a href="#state_expirepasswords_nodejs" style="color: inherit; text-decoration: inherit;">expire<wbr>Passwords</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether passwords in the account expire. Returns `true` if `max_password_age` contains a value greater than `0`. Returns `false` if it is `0` or _not present_.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1049,7 +1086,7 @@ The following state arguments are supported:
 <a href="#state_hardexpiry_nodejs" style="color: inherit; text-decoration: inherit;">hard<wbr>Expiry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired (i.e. require administrator reset)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1058,7 +1095,7 @@ The following state arguments are supported:
 <a href="#state_maxpasswordage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Password<wbr>Age</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of days that an user password is valid.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1067,7 +1104,7 @@ The following state arguments are supported:
 <a href="#state_minimumpasswordlength_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Password<wbr>Length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Minimum length to require for user passwords.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1076,7 +1113,7 @@ The following state arguments are supported:
 <a href="#state_passwordreuseprevention_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Reuse<wbr>Prevention</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of previous passwords that users are prevented from reusing.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1085,7 +1122,7 @@ The following state arguments are supported:
 <a href="#state_requirelowercasecharacters_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Lowercase<wbr>Characters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to require lowercase characters for user passwords.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1094,7 +1131,7 @@ The following state arguments are supported:
 <a href="#state_requirenumbers_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Numbers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to require numbers for user passwords.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1103,7 +1140,7 @@ The following state arguments are supported:
 <a href="#state_requiresymbols_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Symbols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to require symbols for user passwords.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1112,7 +1149,7 @@ The following state arguments are supported:
 <a href="#state_requireuppercasecharacters_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Uppercase<wbr>Characters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to require uppercase characters for user passwords.
 {{% /md %}}</dd></dl>
@@ -1125,7 +1162,7 @@ The following state arguments are supported:
 <a href="#state_allow_users_to_change_password_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>users_<wbr>to_<wbr>change_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to allow users to change their own password
 {{% /md %}}</dd><dt class="property-optional"
@@ -1134,7 +1171,7 @@ The following state arguments are supported:
 <a href="#state_expire_passwords_python" style="color: inherit; text-decoration: inherit;">expire_<wbr>passwords</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether passwords in the account expire. Returns `true` if `max_password_age` contains a value greater than `0`. Returns `false` if it is `0` or _not present_.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1143,7 +1180,7 @@ The following state arguments are supported:
 <a href="#state_hard_expiry_python" style="color: inherit; text-decoration: inherit;">hard_<wbr>expiry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired (i.e. require administrator reset)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1152,7 +1189,7 @@ The following state arguments are supported:
 <a href="#state_max_password_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>password_<wbr>age</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of days that an user password is valid.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1161,7 +1198,7 @@ The following state arguments are supported:
 <a href="#state_minimum_password_length_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>password_<wbr>length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Minimum length to require for user passwords.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1170,7 +1207,7 @@ The following state arguments are supported:
 <a href="#state_password_reuse_prevention_python" style="color: inherit; text-decoration: inherit;">password_<wbr>reuse_<wbr>prevention</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of previous passwords that users are prevented from reusing.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1179,7 +1216,7 @@ The following state arguments are supported:
 <a href="#state_require_lowercase_characters_python" style="color: inherit; text-decoration: inherit;">require_<wbr>lowercase_<wbr>characters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to require lowercase characters for user passwords.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1188,7 +1225,7 @@ The following state arguments are supported:
 <a href="#state_require_numbers_python" style="color: inherit; text-decoration: inherit;">require_<wbr>numbers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to require numbers for user passwords.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1197,7 +1234,7 @@ The following state arguments are supported:
 <a href="#state_require_symbols_python" style="color: inherit; text-decoration: inherit;">require_<wbr>symbols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to require symbols for user passwords.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1206,7 +1243,7 @@ The following state arguments are supported:
 <a href="#state_require_uppercase_characters_python" style="color: inherit; text-decoration: inherit;">require_<wbr>uppercase_<wbr>characters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to require uppercase characters for user passwords.
 {{% /md %}}</dd></dl>

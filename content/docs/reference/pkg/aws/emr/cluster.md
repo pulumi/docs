@@ -350,8 +350,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/emr"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -541,8 +541,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/emr"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -655,9 +655,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/emr"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -1483,10 +1483,10 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/emr"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -1802,8 +1802,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/emr"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -2115,19 +2115,51 @@ const cluster = new aws.emr.Cluster("cluster", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_info</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">applications</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">autoscaling_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bootstrap_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterBootstrapActionArgs]]</span> = None<span class="p">, </span><span class="nx">configurations</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configurations_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">core_instance_fleet</span><span class="p">:</span> <span class="nx">Optional[ClusterCoreInstanceFleetArgs]</span> = None<span class="p">, </span><span class="nx">core_instance_group</span><span class="p">:</span> <span class="nx">Optional[ClusterCoreInstanceGroupArgs]</span> = None<span class="p">, </span><span class="nx">custom_ami_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ebs_root_volume_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ec2_attributes</span><span class="p">:</span> <span class="nx">Optional[ClusterEc2AttributesArgs]</span> = None<span class="p">, </span><span class="nx">keep_job_flow_alive_when_no_steps</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kerberos_attributes</span><span class="p">:</span> <span class="nx">Optional[ClusterKerberosAttributesArgs]</span> = None<span class="p">, </span><span class="nx">log_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_instance_fleet</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterInstanceFleetArgs]</span> = None<span class="p">, </span><span class="nx">master_instance_group</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterInstanceGroupArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">release_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_down_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">step_concurrency_level</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">steps</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterStepArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">visible_to_all_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">additional_info</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">applications</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+            <span class="nx">autoscaling_role</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">bootstrap_actions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ClusterBootstrapActionArgs]]]]</span> = None<span class="p">,</span>
+            <span class="nx">configurations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">configurations_json</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">core_instance_fleet</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterCoreInstanceFleetArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">core_instance_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterCoreInstanceGroupArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">custom_ami_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">ebs_root_volume_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+            <span class="nx">ec2_attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterEc2AttributesArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">keep_job_flow_alive_when_no_steps</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+            <span class="nx">kerberos_attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterKerberosAttributesArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">log_uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">master_instance_fleet</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterMasterInstanceFleetArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">master_instance_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterMasterInstanceGroupArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">release_label</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">scale_down_behavior</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">security_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">service_role</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">step_concurrency_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+            <span class="nx">steps</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ClusterStepArgs]]]]</span> = None<span class="p">,</span>
+            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+            <span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+            <span class="nx">visible_to_all_users</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2162,22 +2194,32 @@ const cluster = new aws.emr.Cluster("cluster", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2186,7 +2228,7 @@ const cluster = new aws.emr.Cluster("cluster", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -2210,7 +2252,7 @@ const cluster = new aws.emr.Cluster("cluster", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -2741,7 +2783,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#releaselabel_nodejs" style="color: inherit; text-decoration: inherit;">release<wbr>Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The release label for the Amazon EMR release
 {{% /md %}}</dd><dt class="property-required"
@@ -2750,7 +2792,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#servicerole_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}IAM role that will be assumed by the Amazon EMR service to access AWS resources
 {{% /md %}}</dd><dt class="property-optional"
@@ -2759,7 +2801,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#additionalinfo_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A JSON string for selecting additional features such as adding proxy information. Note: Currently there is no API to retrieve the value of this argument after EMR cluster creation from provider, therefore this provider cannot detect drift from the actual EMR cluster if its value is changed outside this provider.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2768,7 +2810,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#applications_nodejs" style="color: inherit; text-decoration: inherit;">applications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of applications for the cluster. Valid values are: `Flink`, `Hadoop`, `Hive`, `Mahout`, `Pig`, `Spark`, and `JupyterHub` (as of EMR 5.14.0). Case insensitive
 {{% /md %}}</dd><dt class="property-optional"
@@ -2777,7 +2819,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#autoscalingrole_nodejs" style="color: inherit; text-decoration: inherit;">autoscaling<wbr>Role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An IAM role for automatic scaling policies. The IAM role provides permissions that the automatic scaling feature requires to launch and terminate EC2 instances in an instance group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2786,7 +2828,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#bootstrapactions_nodejs" style="color: inherit; text-decoration: inherit;">bootstrap<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterbootstrapaction">Cluster<wbr>Bootstrap<wbr>Action[]</a></span>
+        <span class="property-type"><a href="#clusterbootstrapaction">pulumi.<wbr>Input<pulumi.<wbr>Input<Cluster<wbr>Bootstrap<wbr>Action<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Ordered list of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2795,7 +2837,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#configurations_nodejs" style="color: inherit; text-decoration: inherit;">configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software that run on the cluster. List of `configuration` blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2804,7 +2846,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#configurationsjson_nodejs" style="color: inherit; text-decoration: inherit;">configurations<wbr>Json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A JSON string for supplying list of configurations for the EMR cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2813,7 +2855,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#coreinstancefleet_nodejs" style="color: inherit; text-decoration: inherit;">core<wbr>Instance<wbr>Fleet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancefleet">Cluster<wbr>Core<wbr>Instance<wbr>Fleet</a></span>
+        <span class="property-type"><a href="#clustercoreinstancefleet">pulumi.<wbr>Input<Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block to use an [Instance Fleet](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-fleet.html) for the core node type. Cannot be specified if any `core_instance_group` configuration blocks are set. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2822,7 +2864,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#coreinstancegroup_nodejs" style="color: inherit; text-decoration: inherit;">core<wbr>Instance<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancegroup">Cluster<wbr>Core<wbr>Instance<wbr>Group</a></span>
+        <span class="property-type"><a href="#clustercoreinstancegroup">pulumi.<wbr>Input<Cluster<wbr>Core<wbr>Instance<wbr>Group<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [core node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2831,7 +2873,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#customamiid_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Ami<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A custom Amazon Linux AMI for the cluster (instead of an EMR-owned AMI). Available in Amazon EMR version 5.7.0 and later.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2840,7 +2882,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#ebsrootvolumesize_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Root<wbr>Volume<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Size in GiB of the EBS root device volume of the Linux AMI that is used for each EC2 instance. Available in Amazon EMR version 4.x and later.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2849,7 +2891,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#ec2attributes_nodejs" style="color: inherit; text-decoration: inherit;">ec2Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterec2attributes">Cluster<wbr>Ec2Attributes</a></span>
+        <span class="property-type"><a href="#clusterec2attributes">pulumi.<wbr>Input<Cluster<wbr>Ec2Attributes<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Attributes for the EC2 instances running the job flow. Defined below
 {{% /md %}}</dd><dt class="property-optional"
@@ -2858,7 +2900,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#keepjobflowalivewhennosteps_nodejs" style="color: inherit; text-decoration: inherit;">keep<wbr>Job<wbr>Flow<wbr>Alive<wbr>When<wbr>No<wbr>Steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Switch on/off run cluster with no steps or when all steps are complete (default is on)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2867,7 +2909,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#kerberosattributes_nodejs" style="color: inherit; text-decoration: inherit;">kerberos<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterkerberosattributes">Cluster<wbr>Kerberos<wbr>Attributes</a></span>
+        <span class="property-type"><a href="#clusterkerberosattributes">pulumi.<wbr>Input<Cluster<wbr>Kerberos<wbr>Attributes<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Kerberos configuration for the cluster. Defined below
 {{% /md %}}</dd><dt class="property-optional"
@@ -2876,7 +2918,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#loguri_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}S3 bucket to write the log files of the job flow. If a value is not provided, logs are not created
 {{% /md %}}</dd><dt class="property-optional"
@@ -2885,7 +2927,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#masterinstancefleet_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Instance<wbr>Fleet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancefleet">Cluster<wbr>Master<wbr>Instance<wbr>Fleet</a></span>
+        <span class="property-type"><a href="#clustermasterinstancefleet">pulumi.<wbr>Input<Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block to use an [Instance Fleet](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-fleet.html) for the master node type. Cannot be specified if any `master_instance_group` configuration blocks are set. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2894,7 +2936,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#masterinstancegroup_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Instance<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancegroup">Cluster<wbr>Master<wbr>Instance<wbr>Group</a></span>
+        <span class="property-type"><a href="#clustermasterinstancegroup">pulumi.<wbr>Input<Cluster<wbr>Master<wbr>Instance<wbr>Group<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [master node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2903,7 +2945,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name given to the instance fleet.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2912,7 +2954,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#scaledownbehavior_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The way that individual Amazon EC2 instances terminate when an automatic scale-in activity occurs or an `instance group` is resized.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2921,7 +2963,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#securityconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The security configuration name to attach to the EMR cluster. Only valid for EMR clusters with `release_label` 4.8.0 or greater
 {{% /md %}}</dd><dt class="property-optional"
@@ -2930,7 +2972,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#stepconcurrencylevel_nodejs" style="color: inherit; text-decoration: inherit;">step<wbr>Concurrency<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of steps that can be executed concurrently. You can specify a maximum of 256 steps. Only valid for EMR clusters with `release_label` 5.28.0 or greater. (default is 1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2939,7 +2981,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#steps_nodejs" style="color: inherit; text-decoration: inherit;">steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterstep">Cluster<wbr>Step[]</a></span>
+        <span class="property-type"><a href="#clusterstep">pulumi.<wbr>Input<pulumi.<wbr>Input<Cluster<wbr>Step<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of steps to run when creating the cluster. Defined below. It is highly recommended to utilize [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) if other steps are being managed outside of this provider.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2948,7 +2990,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}list of tags to apply to the EMR Cluster
 {{% /md %}}</dd><dt class="property-optional"
@@ -2957,7 +2999,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#terminationprotection_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Switch on/off termination protection (default is `false`, except when using multiple master nodes). Before attempting to destroy the resource when termination protection is enabled, this configuration must be applied with its value set to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2966,7 +3008,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#visibletoallusers_nodejs" style="color: inherit; text-decoration: inherit;">visible<wbr>To<wbr>All<wbr>Users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the job flow is visible to all IAM users of the AWS account associated with the job flow. Default `true`
 {{% /md %}}</dd></dl>
@@ -2979,7 +3021,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#release_label_python" style="color: inherit; text-decoration: inherit;">release_<wbr>label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The release label for the Amazon EMR release
 {{% /md %}}</dd><dt class="property-required"
@@ -2988,7 +3030,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#service_role_python" style="color: inherit; text-decoration: inherit;">service_<wbr>role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}IAM role that will be assumed by the Amazon EMR service to access AWS resources
 {{% /md %}}</dd><dt class="property-optional"
@@ -2997,7 +3039,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#additional_info_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A JSON string for selecting additional features such as adding proxy information. Note: Currently there is no API to retrieve the value of this argument after EMR cluster creation from provider, therefore this provider cannot detect drift from the actual EMR cluster if its value is changed outside this provider.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3006,7 +3048,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#applications_python" style="color: inherit; text-decoration: inherit;">applications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of applications for the cluster. Valid values are: `Flink`, `Hadoop`, `Hive`, `Mahout`, `Pig`, `Spark`, and `JupyterHub` (as of EMR 5.14.0). Case insensitive
 {{% /md %}}</dd><dt class="property-optional"
@@ -3015,7 +3057,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#autoscaling_role_python" style="color: inherit; text-decoration: inherit;">autoscaling_<wbr>role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An IAM role for automatic scaling policies. The IAM role provides permissions that the automatic scaling feature requires to launch and terminate EC2 instances in an instance group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3024,7 +3066,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#bootstrap_actions_python" style="color: inherit; text-decoration: inherit;">bootstrap_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterbootstrapaction">Sequence[Cluster<wbr>Bootstrap<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterbootstrapaction">Input[Cluster<wbr>Bootstrap<wbr>Action<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Ordered list of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3033,7 +3075,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#configurations_python" style="color: inherit; text-decoration: inherit;">configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software that run on the cluster. List of `configuration` blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3042,7 +3084,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#configurations_json_python" style="color: inherit; text-decoration: inherit;">configurations_<wbr>json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A JSON string for supplying list of configurations for the EMR cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3051,7 +3093,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#core_instance_fleet_python" style="color: inherit; text-decoration: inherit;">core_<wbr>instance_<wbr>fleet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancefleet">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustercoreinstancefleet">Input[Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to use an [Instance Fleet](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-fleet.html) for the core node type. Cannot be specified if any `core_instance_group` configuration blocks are set. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3060,7 +3102,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#core_instance_group_python" style="color: inherit; text-decoration: inherit;">core_<wbr>instance_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancegroup">Cluster<wbr>Core<wbr>Instance<wbr>Group<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustercoreinstancegroup">Input[Cluster<wbr>Core<wbr>Instance<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [core node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3069,7 +3111,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#custom_ami_id_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>ami_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A custom Amazon Linux AMI for the cluster (instead of an EMR-owned AMI). Available in Amazon EMR version 5.7.0 and later.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3078,7 +3120,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#ebs_root_volume_size_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>root_<wbr>volume_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Size in GiB of the EBS root device volume of the Linux AMI that is used for each EC2 instance. Available in Amazon EMR version 4.x and later.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3087,7 +3129,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#ec2_attributes_python" style="color: inherit; text-decoration: inherit;">ec2_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterec2attributes">Cluster<wbr>Ec2Attributes<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterec2attributes">Input[Cluster<wbr>Ec2Attributes<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Attributes for the EC2 instances running the job flow. Defined below
 {{% /md %}}</dd><dt class="property-optional"
@@ -3096,7 +3138,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#keep_job_flow_alive_when_no_steps_python" style="color: inherit; text-decoration: inherit;">keep_<wbr>job_<wbr>flow_<wbr>alive_<wbr>when_<wbr>no_<wbr>steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Switch on/off run cluster with no steps or when all steps are complete (default is on)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3105,7 +3147,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#kerberos_attributes_python" style="color: inherit; text-decoration: inherit;">kerberos_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterkerberosattributes">Cluster<wbr>Kerberos<wbr>Attributes<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterkerberosattributes">Input[Cluster<wbr>Kerberos<wbr>Attributes<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Kerberos configuration for the cluster. Defined below
 {{% /md %}}</dd><dt class="property-optional"
@@ -3114,7 +3156,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#log_uri_python" style="color: inherit; text-decoration: inherit;">log_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}S3 bucket to write the log files of the job flow. If a value is not provided, logs are not created
 {{% /md %}}</dd><dt class="property-optional"
@@ -3123,7 +3165,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#master_instance_fleet_python" style="color: inherit; text-decoration: inherit;">master_<wbr>instance_<wbr>fleet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancefleet">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustermasterinstancefleet">Input[Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to use an [Instance Fleet](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-fleet.html) for the master node type. Cannot be specified if any `master_instance_group` configuration blocks are set. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3132,7 +3174,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#master_instance_group_python" style="color: inherit; text-decoration: inherit;">master_<wbr>instance_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancegroup">Cluster<wbr>Master<wbr>Instance<wbr>Group<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustermasterinstancegroup">Input[Cluster<wbr>Master<wbr>Instance<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [master node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3141,7 +3183,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name given to the instance fleet.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3150,7 +3192,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#scale_down_behavior_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>down_<wbr>behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The way that individual Amazon EC2 instances terminate when an automatic scale-in activity occurs or an `instance group` is resized.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3159,7 +3201,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#security_configuration_python" style="color: inherit; text-decoration: inherit;">security_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The security configuration name to attach to the EMR cluster. Only valid for EMR clusters with `release_label` 4.8.0 or greater
 {{% /md %}}</dd><dt class="property-optional"
@@ -3168,7 +3210,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#step_concurrency_level_python" style="color: inherit; text-decoration: inherit;">step_<wbr>concurrency_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of steps that can be executed concurrently. You can specify a maximum of 256 steps. Only valid for EMR clusters with `release_label` 5.28.0 or greater. (default is 1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3177,7 +3219,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#steps_python" style="color: inherit; text-decoration: inherit;">steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterstep">Sequence[Cluster<wbr>Step<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterstep">Input[Cluster<wbr>Step<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of steps to run when creating the cluster. Defined below. It is highly recommended to utilize [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) if other steps are being managed outside of this provider.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3186,7 +3228,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}list of tags to apply to the EMR Cluster
 {{% /md %}}</dd><dt class="property-optional"
@@ -3195,7 +3237,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#termination_protection_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Switch on/off termination protection (default is `false`, except when using multiple master nodes). Before attempting to destroy the resource when termination protection is enabled, this configuration must be applied with its value set to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3204,7 +3246,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#visible_to_all_users_python" style="color: inherit; text-decoration: inherit;">visible_<wbr>to_<wbr>all_<wbr>users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the job flow is visible to all IAM users of the AWS account associated with the job flow. Default `true`
 {{% /md %}}</dd></dl>
@@ -3377,20 +3419,51 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ClusterState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Cluster</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ClusterState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Cluster</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_info</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">applications</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">autoscaling_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bootstrap_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterBootstrapActionArgs]]</span> = None<span class="p">, </span><span class="nx">cluster_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configurations</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configurations_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">core_instance_fleet</span><span class="p">:</span> <span class="nx">Optional[ClusterCoreInstanceFleetArgs]</span> = None<span class="p">, </span><span class="nx">core_instance_group</span><span class="p">:</span> <span class="nx">Optional[ClusterCoreInstanceGroupArgs]</span> = None<span class="p">, </span><span class="nx">custom_ami_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ebs_root_volume_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ec2_attributes</span><span class="p">:</span> <span class="nx">Optional[ClusterEc2AttributesArgs]</span> = None<span class="p">, </span><span class="nx">keep_job_flow_alive_when_no_steps</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kerberos_attributes</span><span class="p">:</span> <span class="nx">Optional[ClusterKerberosAttributesArgs]</span> = None<span class="p">, </span><span class="nx">log_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_instance_fleet</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterInstanceFleetArgs]</span> = None<span class="p">, </span><span class="nx">master_instance_group</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterInstanceGroupArgs]</span> = None<span class="p">, </span><span class="nx">master_public_dns</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">release_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_down_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">step_concurrency_level</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">steps</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterStepArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">visible_to_all_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">additional_info</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">applications</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">autoscaling_role</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">bootstrap_actions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ClusterBootstrapActionArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">cluster_state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">configurations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">configurations_json</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">core_instance_fleet</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterCoreInstanceFleetArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">core_instance_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterCoreInstanceGroupArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">custom_ami_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">ebs_root_volume_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">ec2_attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterEc2AttributesArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">keep_job_flow_alive_when_no_steps</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">kerberos_attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterKerberosAttributesArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">log_uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">master_instance_fleet</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterMasterInstanceFleetArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">master_instance_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterMasterInstanceGroupArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">master_public_dns</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">release_label</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">scale_down_behavior</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">security_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">service_role</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">step_concurrency_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">steps</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ClusterStepArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">visible_to_all_users</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ClusterState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ClusterState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Cluster</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ClusterState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Cluster</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ClusterState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4027,7 +4100,7 @@ The following state arguments are supported:
 <a href="#state_additionalinfo_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A JSON string for selecting additional features such as adding proxy information. Note: Currently there is no API to retrieve the value of this argument after EMR cluster creation from provider, therefore this provider cannot detect drift from the actual EMR cluster if its value is changed outside this provider.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4036,7 +4109,7 @@ The following state arguments are supported:
 <a href="#state_applications_nodejs" style="color: inherit; text-decoration: inherit;">applications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of applications for the cluster. Valid values are: `Flink`, `Hadoop`, `Hive`, `Mahout`, `Pig`, `Spark`, and `JupyterHub` (as of EMR 5.14.0). Case insensitive
 {{% /md %}}</dd><dt class="property-optional"
@@ -4045,7 +4118,7 @@ The following state arguments are supported:
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4053,7 +4126,7 @@ The following state arguments are supported:
 <a href="#state_autoscalingrole_nodejs" style="color: inherit; text-decoration: inherit;">autoscaling<wbr>Role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An IAM role for automatic scaling policies. The IAM role provides permissions that the automatic scaling feature requires to launch and terminate EC2 instances in an instance group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4062,7 +4135,7 @@ The following state arguments are supported:
 <a href="#state_bootstrapactions_nodejs" style="color: inherit; text-decoration: inherit;">bootstrap<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterbootstrapaction">Cluster<wbr>Bootstrap<wbr>Action[]</a></span>
+        <span class="property-type"><a href="#clusterbootstrapaction">pulumi.<wbr>Input<pulumi.<wbr>Input<Cluster<wbr>Bootstrap<wbr>Action<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Ordered list of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4071,7 +4144,7 @@ The following state arguments are supported:
 <a href="#state_clusterstate_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4079,7 +4152,7 @@ The following state arguments are supported:
 <a href="#state_configurations_nodejs" style="color: inherit; text-decoration: inherit;">configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software that run on the cluster. List of `configuration` blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4088,7 +4161,7 @@ The following state arguments are supported:
 <a href="#state_configurationsjson_nodejs" style="color: inherit; text-decoration: inherit;">configurations<wbr>Json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A JSON string for supplying list of configurations for the EMR cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4097,7 +4170,7 @@ The following state arguments are supported:
 <a href="#state_coreinstancefleet_nodejs" style="color: inherit; text-decoration: inherit;">core<wbr>Instance<wbr>Fleet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancefleet">Cluster<wbr>Core<wbr>Instance<wbr>Fleet</a></span>
+        <span class="property-type"><a href="#clustercoreinstancefleet">pulumi.<wbr>Input<Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block to use an [Instance Fleet](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-fleet.html) for the core node type. Cannot be specified if any `core_instance_group` configuration blocks are set. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4106,7 +4179,7 @@ The following state arguments are supported:
 <a href="#state_coreinstancegroup_nodejs" style="color: inherit; text-decoration: inherit;">core<wbr>Instance<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancegroup">Cluster<wbr>Core<wbr>Instance<wbr>Group</a></span>
+        <span class="property-type"><a href="#clustercoreinstancegroup">pulumi.<wbr>Input<Cluster<wbr>Core<wbr>Instance<wbr>Group<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [core node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4115,7 +4188,7 @@ The following state arguments are supported:
 <a href="#state_customamiid_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Ami<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A custom Amazon Linux AMI for the cluster (instead of an EMR-owned AMI). Available in Amazon EMR version 5.7.0 and later.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4124,7 +4197,7 @@ The following state arguments are supported:
 <a href="#state_ebsrootvolumesize_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Root<wbr>Volume<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Size in GiB of the EBS root device volume of the Linux AMI that is used for each EC2 instance. Available in Amazon EMR version 4.x and later.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4133,7 +4206,7 @@ The following state arguments are supported:
 <a href="#state_ec2attributes_nodejs" style="color: inherit; text-decoration: inherit;">ec2Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterec2attributes">Cluster<wbr>Ec2Attributes</a></span>
+        <span class="property-type"><a href="#clusterec2attributes">pulumi.<wbr>Input<Cluster<wbr>Ec2Attributes<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Attributes for the EC2 instances running the job flow. Defined below
 {{% /md %}}</dd><dt class="property-optional"
@@ -4142,7 +4215,7 @@ The following state arguments are supported:
 <a href="#state_keepjobflowalivewhennosteps_nodejs" style="color: inherit; text-decoration: inherit;">keep<wbr>Job<wbr>Flow<wbr>Alive<wbr>When<wbr>No<wbr>Steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Switch on/off run cluster with no steps or when all steps are complete (default is on)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4151,7 +4224,7 @@ The following state arguments are supported:
 <a href="#state_kerberosattributes_nodejs" style="color: inherit; text-decoration: inherit;">kerberos<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterkerberosattributes">Cluster<wbr>Kerberos<wbr>Attributes</a></span>
+        <span class="property-type"><a href="#clusterkerberosattributes">pulumi.<wbr>Input<Cluster<wbr>Kerberos<wbr>Attributes<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Kerberos configuration for the cluster. Defined below
 {{% /md %}}</dd><dt class="property-optional"
@@ -4160,7 +4233,7 @@ The following state arguments are supported:
 <a href="#state_loguri_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}S3 bucket to write the log files of the job flow. If a value is not provided, logs are not created
 {{% /md %}}</dd><dt class="property-optional"
@@ -4169,7 +4242,7 @@ The following state arguments are supported:
 <a href="#state_masterinstancefleet_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Instance<wbr>Fleet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancefleet">Cluster<wbr>Master<wbr>Instance<wbr>Fleet</a></span>
+        <span class="property-type"><a href="#clustermasterinstancefleet">pulumi.<wbr>Input<Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block to use an [Instance Fleet](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-fleet.html) for the master node type. Cannot be specified if any `master_instance_group` configuration blocks are set. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4178,7 +4251,7 @@ The following state arguments are supported:
 <a href="#state_masterinstancegroup_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Instance<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancegroup">Cluster<wbr>Master<wbr>Instance<wbr>Group</a></span>
+        <span class="property-type"><a href="#clustermasterinstancegroup">pulumi.<wbr>Input<Cluster<wbr>Master<wbr>Instance<wbr>Group<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [master node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4187,7 +4260,7 @@ The following state arguments are supported:
 <a href="#state_masterpublicdns_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Public<wbr>Dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The public DNS name of the master EC2 instance.
 * `core_instance_group.0.id` - Core node type Instance Group ID, if using Instance Group for this node type.
@@ -4197,7 +4270,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name given to the instance fleet.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4206,7 +4279,7 @@ The following state arguments are supported:
 <a href="#state_releaselabel_nodejs" style="color: inherit; text-decoration: inherit;">release<wbr>Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The release label for the Amazon EMR release
 {{% /md %}}</dd><dt class="property-optional"
@@ -4215,7 +4288,7 @@ The following state arguments are supported:
 <a href="#state_scaledownbehavior_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The way that individual Amazon EC2 instances terminate when an automatic scale-in activity occurs or an `instance group` is resized.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4224,7 +4297,7 @@ The following state arguments are supported:
 <a href="#state_securityconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The security configuration name to attach to the EMR cluster. Only valid for EMR clusters with `release_label` 4.8.0 or greater
 {{% /md %}}</dd><dt class="property-optional"
@@ -4233,7 +4306,7 @@ The following state arguments are supported:
 <a href="#state_servicerole_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}IAM role that will be assumed by the Amazon EMR service to access AWS resources
 {{% /md %}}</dd><dt class="property-optional"
@@ -4242,7 +4315,7 @@ The following state arguments are supported:
 <a href="#state_stepconcurrencylevel_nodejs" style="color: inherit; text-decoration: inherit;">step<wbr>Concurrency<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of steps that can be executed concurrently. You can specify a maximum of 256 steps. Only valid for EMR clusters with `release_label` 5.28.0 or greater. (default is 1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4251,7 +4324,7 @@ The following state arguments are supported:
 <a href="#state_steps_nodejs" style="color: inherit; text-decoration: inherit;">steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterstep">Cluster<wbr>Step[]</a></span>
+        <span class="property-type"><a href="#clusterstep">pulumi.<wbr>Input<pulumi.<wbr>Input<Cluster<wbr>Step<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of steps to run when creating the cluster. Defined below. It is highly recommended to utilize [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) if other steps are being managed outside of this provider.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4260,7 +4333,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}list of tags to apply to the EMR Cluster
 {{% /md %}}</dd><dt class="property-optional"
@@ -4269,7 +4342,7 @@ The following state arguments are supported:
 <a href="#state_terminationprotection_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Switch on/off termination protection (default is `false`, except when using multiple master nodes). Before attempting to destroy the resource when termination protection is enabled, this configuration must be applied with its value set to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4278,7 +4351,7 @@ The following state arguments are supported:
 <a href="#state_visibletoallusers_nodejs" style="color: inherit; text-decoration: inherit;">visible<wbr>To<wbr>All<wbr>Users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the job flow is visible to all IAM users of the AWS account associated with the job flow. Default `true`
 {{% /md %}}</dd></dl>
@@ -4291,7 +4364,7 @@ The following state arguments are supported:
 <a href="#state_additional_info_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A JSON string for selecting additional features such as adding proxy information. Note: Currently there is no API to retrieve the value of this argument after EMR cluster creation from provider, therefore this provider cannot detect drift from the actual EMR cluster if its value is changed outside this provider.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4300,7 +4373,7 @@ The following state arguments are supported:
 <a href="#state_applications_python" style="color: inherit; text-decoration: inherit;">applications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of applications for the cluster. Valid values are: `Flink`, `Hadoop`, `Hive`, `Mahout`, `Pig`, `Spark`, and `JupyterHub` (as of EMR 5.14.0). Case insensitive
 {{% /md %}}</dd><dt class="property-optional"
@@ -4309,7 +4382,7 @@ The following state arguments are supported:
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4317,7 +4390,7 @@ The following state arguments are supported:
 <a href="#state_autoscaling_role_python" style="color: inherit; text-decoration: inherit;">autoscaling_<wbr>role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An IAM role for automatic scaling policies. The IAM role provides permissions that the automatic scaling feature requires to launch and terminate EC2 instances in an instance group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4326,7 +4399,7 @@ The following state arguments are supported:
 <a href="#state_bootstrap_actions_python" style="color: inherit; text-decoration: inherit;">bootstrap_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterbootstrapaction">Sequence[Cluster<wbr>Bootstrap<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterbootstrapaction">Input[Cluster<wbr>Bootstrap<wbr>Action<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Ordered list of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4335,7 +4408,7 @@ The following state arguments are supported:
 <a href="#state_cluster_state_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4343,7 +4416,7 @@ The following state arguments are supported:
 <a href="#state_configurations_python" style="color: inherit; text-decoration: inherit;">configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software that run on the cluster. List of `configuration` blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4352,7 +4425,7 @@ The following state arguments are supported:
 <a href="#state_configurations_json_python" style="color: inherit; text-decoration: inherit;">configurations_<wbr>json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A JSON string for supplying list of configurations for the EMR cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4361,7 +4434,7 @@ The following state arguments are supported:
 <a href="#state_core_instance_fleet_python" style="color: inherit; text-decoration: inherit;">core_<wbr>instance_<wbr>fleet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancefleet">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustercoreinstancefleet">Input[Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to use an [Instance Fleet](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-fleet.html) for the core node type. Cannot be specified if any `core_instance_group` configuration blocks are set. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4370,7 +4443,7 @@ The following state arguments are supported:
 <a href="#state_core_instance_group_python" style="color: inherit; text-decoration: inherit;">core_<wbr>instance_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancegroup">Cluster<wbr>Core<wbr>Instance<wbr>Group<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustercoreinstancegroup">Input[Cluster<wbr>Core<wbr>Instance<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [core node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4379,7 +4452,7 @@ The following state arguments are supported:
 <a href="#state_custom_ami_id_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>ami_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A custom Amazon Linux AMI for the cluster (instead of an EMR-owned AMI). Available in Amazon EMR version 5.7.0 and later.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4388,7 +4461,7 @@ The following state arguments are supported:
 <a href="#state_ebs_root_volume_size_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>root_<wbr>volume_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Size in GiB of the EBS root device volume of the Linux AMI that is used for each EC2 instance. Available in Amazon EMR version 4.x and later.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4397,7 +4470,7 @@ The following state arguments are supported:
 <a href="#state_ec2_attributes_python" style="color: inherit; text-decoration: inherit;">ec2_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterec2attributes">Cluster<wbr>Ec2Attributes<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterec2attributes">Input[Cluster<wbr>Ec2Attributes<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Attributes for the EC2 instances running the job flow. Defined below
 {{% /md %}}</dd><dt class="property-optional"
@@ -4406,7 +4479,7 @@ The following state arguments are supported:
 <a href="#state_keep_job_flow_alive_when_no_steps_python" style="color: inherit; text-decoration: inherit;">keep_<wbr>job_<wbr>flow_<wbr>alive_<wbr>when_<wbr>no_<wbr>steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Switch on/off run cluster with no steps or when all steps are complete (default is on)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4415,7 +4488,7 @@ The following state arguments are supported:
 <a href="#state_kerberos_attributes_python" style="color: inherit; text-decoration: inherit;">kerberos_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterkerberosattributes">Cluster<wbr>Kerberos<wbr>Attributes<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterkerberosattributes">Input[Cluster<wbr>Kerberos<wbr>Attributes<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Kerberos configuration for the cluster. Defined below
 {{% /md %}}</dd><dt class="property-optional"
@@ -4424,7 +4497,7 @@ The following state arguments are supported:
 <a href="#state_log_uri_python" style="color: inherit; text-decoration: inherit;">log_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}S3 bucket to write the log files of the job flow. If a value is not provided, logs are not created
 {{% /md %}}</dd><dt class="property-optional"
@@ -4433,7 +4506,7 @@ The following state arguments are supported:
 <a href="#state_master_instance_fleet_python" style="color: inherit; text-decoration: inherit;">master_<wbr>instance_<wbr>fleet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancefleet">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustermasterinstancefleet">Input[Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to use an [Instance Fleet](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-fleet.html) for the master node type. Cannot be specified if any `master_instance_group` configuration blocks are set. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4442,7 +4515,7 @@ The following state arguments are supported:
 <a href="#state_master_instance_group_python" style="color: inherit; text-decoration: inherit;">master_<wbr>instance_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancegroup">Cluster<wbr>Master<wbr>Instance<wbr>Group<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustermasterinstancegroup">Input[Cluster<wbr>Master<wbr>Instance<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [master node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4451,7 +4524,7 @@ The following state arguments are supported:
 <a href="#state_master_public_dns_python" style="color: inherit; text-decoration: inherit;">master_<wbr>public_<wbr>dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The public DNS name of the master EC2 instance.
 * `core_instance_group.0.id` - Core node type Instance Group ID, if using Instance Group for this node type.
@@ -4461,7 +4534,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name given to the instance fleet.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4470,7 +4543,7 @@ The following state arguments are supported:
 <a href="#state_release_label_python" style="color: inherit; text-decoration: inherit;">release_<wbr>label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The release label for the Amazon EMR release
 {{% /md %}}</dd><dt class="property-optional"
@@ -4479,7 +4552,7 @@ The following state arguments are supported:
 <a href="#state_scale_down_behavior_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>down_<wbr>behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The way that individual Amazon EC2 instances terminate when an automatic scale-in activity occurs or an `instance group` is resized.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4488,7 +4561,7 @@ The following state arguments are supported:
 <a href="#state_security_configuration_python" style="color: inherit; text-decoration: inherit;">security_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The security configuration name to attach to the EMR cluster. Only valid for EMR clusters with `release_label` 4.8.0 or greater
 {{% /md %}}</dd><dt class="property-optional"
@@ -4497,7 +4570,7 @@ The following state arguments are supported:
 <a href="#state_service_role_python" style="color: inherit; text-decoration: inherit;">service_<wbr>role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}IAM role that will be assumed by the Amazon EMR service to access AWS resources
 {{% /md %}}</dd><dt class="property-optional"
@@ -4506,7 +4579,7 @@ The following state arguments are supported:
 <a href="#state_step_concurrency_level_python" style="color: inherit; text-decoration: inherit;">step_<wbr>concurrency_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of steps that can be executed concurrently. You can specify a maximum of 256 steps. Only valid for EMR clusters with `release_label` 5.28.0 or greater. (default is 1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4515,7 +4588,7 @@ The following state arguments are supported:
 <a href="#state_steps_python" style="color: inherit; text-decoration: inherit;">steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterstep">Sequence[Cluster<wbr>Step<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterstep">Input[Cluster<wbr>Step<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of steps to run when creating the cluster. Defined below. It is highly recommended to utilize [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) if other steps are being managed outside of this provider.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4524,7 +4597,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}list of tags to apply to the EMR Cluster
 {{% /md %}}</dd><dt class="property-optional"
@@ -4533,7 +4606,7 @@ The following state arguments are supported:
 <a href="#state_termination_protection_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Switch on/off termination protection (default is `false`, except when using multiple master nodes). Before attempting to destroy the resource when termination protection is enabled, this configuration must be applied with its value set to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4542,7 +4615,7 @@ The following state arguments are supported:
 <a href="#state_visible_to_all_users_python" style="color: inherit; text-decoration: inherit;">visible_<wbr>to_<wbr>all_<wbr>users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the job flow is visible to all IAM users of the AWS account associated with the job flow. Default `true`
 {{% /md %}}</dd></dl>
@@ -4628,7 +4701,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name given to the instance fleet.
 {{% /md %}}</dd><dt class="property-required"
@@ -4637,7 +4710,7 @@ The following state arguments are supported:
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Location of the script to run during a bootstrap action. Can be either a location in Amazon S3 or on a local file system
 {{% /md %}}</dd><dt class="property-optional"
@@ -4646,7 +4719,7 @@ The following state arguments are supported:
 <a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of command line arguments passed to the JAR file's main function when executed.
 {{% /md %}}</dd></dl>
@@ -4659,7 +4732,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name given to the instance fleet.
 {{% /md %}}</dd><dt class="property-required"
@@ -4668,7 +4741,7 @@ The following state arguments are supported:
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Location of the script to run during a bootstrap action. Can be either a location in Amazon S3 or on a local file system
 {{% /md %}}</dd><dt class="property-optional"
@@ -4677,7 +4750,7 @@ The following state arguments are supported:
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of command line arguments passed to the JAR file's main function when executed.
 {{% /md %}}</dd></dl>
@@ -4840,7 +4913,7 @@ The following state arguments are supported:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the EMR Cluster
 {{% /md %}}</dd><dt class="property-optional"
@@ -4849,7 +4922,7 @@ The following state arguments are supported:
 <a href="#instancetypeconfigs_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancefleetinstancetypeconfig">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config[]</a></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetinstancetypeconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Configuration block for instance fleet
 {{% /md %}}</dd><dt class="property-optional"
@@ -4858,7 +4931,7 @@ The following state arguments are supported:
 <a href="#launchspecifications_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancefleetlaunchspecifications">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications</a></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetlaunchspecifications">pulumi.<wbr>Input<Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block for launch specification
 {{% /md %}}</dd><dt class="property-optional"
@@ -4867,7 +4940,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name given to the instance fleet.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4876,7 +4949,7 @@ The following state arguments are supported:
 <a href="#provisionedondemandcapacity_nodejs" style="color: inherit; text-decoration: inherit;">provisioned<wbr>On<wbr>Demand<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4884,7 +4957,7 @@ The following state arguments are supported:
 <a href="#provisionedspotcapacity_nodejs" style="color: inherit; text-decoration: inherit;">provisioned<wbr>Spot<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4892,7 +4965,7 @@ The following state arguments are supported:
 <a href="#targetondemandcapacity_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>On<wbr>Demand<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The target capacity of On-Demand units for the instance fleet, which determines how many On-Demand instances to provision.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4901,7 +4974,7 @@ The following state arguments are supported:
 <a href="#targetspotcapacity_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Spot<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The target capacity of Spot units for the instance fleet, which determines how many Spot instances to provision.
 {{% /md %}}</dd></dl>
@@ -4914,7 +4987,7 @@ The following state arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the EMR Cluster
 {{% /md %}}</dd><dt class="property-optional"
@@ -4923,7 +4996,7 @@ The following state arguments are supported:
 <a href="#instance_type_configs_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancefleetinstancetypeconfig">Sequence[Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetinstancetypeconfig">Input[Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for instance fleet
 {{% /md %}}</dd><dt class="property-optional"
@@ -4932,7 +5005,7 @@ The following state arguments are supported:
 <a href="#launch_specifications_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancefleetlaunchspecifications">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetlaunchspecifications">Input[Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for launch specification
 {{% /md %}}</dd><dt class="property-optional"
@@ -4941,7 +5014,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name given to the instance fleet.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4950,7 +5023,7 @@ The following state arguments are supported:
 <a href="#provisioned_on_demand_capacity_python" style="color: inherit; text-decoration: inherit;">provisioned_<wbr>on_<wbr>demand_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4958,7 +5031,7 @@ The following state arguments are supported:
 <a href="#provisioned_spot_capacity_python" style="color: inherit; text-decoration: inherit;">provisioned_<wbr>spot_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4966,7 +5039,7 @@ The following state arguments are supported:
 <a href="#target_on_demand_capacity_python" style="color: inherit; text-decoration: inherit;">target_<wbr>on_<wbr>demand_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The target capacity of On-Demand units for the instance fleet, which determines how many On-Demand instances to provision.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4975,7 +5048,7 @@ The following state arguments are supported:
 <a href="#target_spot_capacity_python" style="color: inherit; text-decoration: inherit;">target_<wbr>spot_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The target capacity of Spot units for the instance fleet, which determines how many Spot instances to provision.
 {{% /md %}}</dd></dl>
@@ -5106,7 +5179,7 @@ The following state arguments are supported:
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An EC2 instance type, such as m4.xlarge.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5115,7 +5188,7 @@ The following state arguments are supported:
 <a href="#bidprice_nodejs" style="color: inherit; text-decoration: inherit;">bid<wbr>Price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The bid price for each EC2 Spot instance type as defined by `instance_type`. Expressed in USD. If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5124,7 +5197,7 @@ The following state arguments are supported:
 <a href="#bidpriceaspercentageofondemandprice_nodejs" style="color: inherit; text-decoration: inherit;">bid<wbr>Price<wbr>As<wbr>Percentage<wbr>Of<wbr>On<wbr>Demand<wbr>Price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The bid price, as a percentage of On-Demand price, for each EC2 Spot instance as defined by `instance_type`. Expressed as a number (for example, 20 specifies 20%). If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5133,7 +5206,7 @@ The following state arguments are supported:
 <a href="#configurations_nodejs" style="color: inherit; text-decoration: inherit;">configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancefleetinstancetypeconfigconfiguration">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Configuration[]</a></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetinstancetypeconfigconfiguration">pulumi.<wbr>Input<pulumi.<wbr>Input<Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Configuration<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software that run on the cluster. List of `configuration` blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5142,7 +5215,7 @@ The following state arguments are supported:
 <a href="#ebsconfigs_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancefleetinstancetypeconfigebsconfig">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Ebs<wbr>Config[]</a></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetinstancetypeconfigebsconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Ebs<wbr>Config<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5151,7 +5224,7 @@ The following state arguments are supported:
 <a href="#weightedcapacity_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of units that a provisioned instance of this type provides toward fulfilling the target capacities defined in `aws.emr.InstanceFleet`.
 {{% /md %}}</dd></dl>
@@ -5164,7 +5237,7 @@ The following state arguments are supported:
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An EC2 instance type, such as m4.xlarge.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5173,7 +5246,7 @@ The following state arguments are supported:
 <a href="#bid_price_python" style="color: inherit; text-decoration: inherit;">bid_<wbr>price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The bid price for each EC2 Spot instance type as defined by `instance_type`. Expressed in USD. If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5182,7 +5255,7 @@ The following state arguments are supported:
 <a href="#bid_price_as_percentage_of_on_demand_price_python" style="color: inherit; text-decoration: inherit;">bid_<wbr>price_<wbr>as_<wbr>percentage_<wbr>of_<wbr>on_<wbr>demand_<wbr>price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The bid price, as a percentage of On-Demand price, for each EC2 Spot instance as defined by `instance_type`. Expressed as a number (for example, 20 specifies 20%). If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5191,7 +5264,7 @@ The following state arguments are supported:
 <a href="#configurations_python" style="color: inherit; text-decoration: inherit;">configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancefleetinstancetypeconfigconfiguration">Sequence[Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetinstancetypeconfigconfiguration">Input[Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Configuration<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software that run on the cluster. List of `configuration` blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5200,7 +5273,7 @@ The following state arguments are supported:
 <a href="#ebs_configs_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancefleetinstancetypeconfigebsconfig">Sequence[Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Ebs<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetinstancetypeconfigebsconfig">Input[Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Ebs<wbr>Config<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5209,7 +5282,7 @@ The following state arguments are supported:
 <a href="#weighted_capacity_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of units that a provisioned instance of this type provides toward fulfilling the target capacities defined in `aws.emr.InstanceFleet`.
 {{% /md %}}</dd></dl>
@@ -5268,7 +5341,7 @@ The following state arguments are supported:
 <a href="#classification_nodejs" style="color: inherit; text-decoration: inherit;">classification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The classification within a configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5277,7 +5350,7 @@ The following state arguments are supported:
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}A map of properties specified within a configuration classification
 {{% /md %}}</dd></dl>
@@ -5290,7 +5363,7 @@ The following state arguments are supported:
 <a href="#classification_python" style="color: inherit; text-decoration: inherit;">classification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The classification within a configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5299,7 +5372,7 @@ The following state arguments are supported:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}A map of properties specified within a configuration classification
 {{% /md %}}</dd></dl>
@@ -5394,7 +5467,7 @@ The following state arguments are supported:
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The volume size, in gibibytes (GiB).
 {{% /md %}}</dd><dt class="property-required"
@@ -5403,7 +5476,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The volume type. Valid options are `gp2`, `io1`, `standard` and `st1`. See [EBS Volume Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -5412,7 +5485,7 @@ The following state arguments are supported:
 <a href="#iops_nodejs" style="color: inherit; text-decoration: inherit;">iops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of I/O operations per second (IOPS) that the volume supports
 {{% /md %}}</dd><dt class="property-optional"
@@ -5421,7 +5494,7 @@ The following state arguments are supported:
 <a href="#volumesperinstance_nodejs" style="color: inherit; text-decoration: inherit;">volumes<wbr>Per<wbr>Instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of EBS volumes with this configuration to attach to each EC2 instance in the instance group (default is 1)
 {{% /md %}}</dd></dl>
@@ -5434,7 +5507,7 @@ The following state arguments are supported:
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The volume size, in gibibytes (GiB).
 {{% /md %}}</dd><dt class="property-required"
@@ -5443,7 +5516,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The volume type. Valid options are `gp2`, `io1`, `standard` and `st1`. See [EBS Volume Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -5452,7 +5525,7 @@ The following state arguments are supported:
 <a href="#iops_python" style="color: inherit; text-decoration: inherit;">iops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of I/O operations per second (IOPS) that the volume supports
 {{% /md %}}</dd><dt class="property-optional"
@@ -5461,7 +5534,7 @@ The following state arguments are supported:
 <a href="#volumes_per_instance_python" style="color: inherit; text-decoration: inherit;">volumes_<wbr>per_<wbr>instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of EBS volumes with this configuration to attach to each EC2 instance in the instance group (default is 1)
 {{% /md %}}</dd></dl>
@@ -5520,7 +5593,7 @@ The following state arguments are supported:
 <a href="#ondemandspecifications_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Demand<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancefleetlaunchspecificationsondemandspecification">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>On<wbr>Demand<wbr>Specification[]</a></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetlaunchspecificationsondemandspecification">pulumi.<wbr>Input<pulumi.<wbr>Input<Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>On<wbr>Demand<wbr>Specification<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Configuration block for on demand instances launch specifications
 {{% /md %}}</dd><dt class="property-optional"
@@ -5529,7 +5602,7 @@ The following state arguments are supported:
 <a href="#spotspecifications_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancefleetlaunchspecificationsspotspecification">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Spot<wbr>Specification[]</a></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetlaunchspecificationsspotspecification">pulumi.<wbr>Input<pulumi.<wbr>Input<Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Spot<wbr>Specification<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Configuration block for spot instances launch specifications
 {{% /md %}}</dd></dl>
@@ -5542,7 +5615,7 @@ The following state arguments are supported:
 <a href="#on_demand_specifications_python" style="color: inherit; text-decoration: inherit;">on_<wbr>demand_<wbr>specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancefleetlaunchspecificationsondemandspecification">Sequence[Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>On<wbr>Demand<wbr>Specification<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetlaunchspecificationsondemandspecification">Input[Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>On<wbr>Demand<wbr>Specification<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for on demand instances launch specifications
 {{% /md %}}</dd><dt class="property-optional"
@@ -5551,7 +5624,7 @@ The following state arguments are supported:
 <a href="#spot_specifications_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancefleetlaunchspecificationsspotspecification">Sequence[Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Spot<wbr>Specification<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetlaunchspecificationsspotspecification">Input[Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Spot<wbr>Specification<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for spot instances launch specifications
 {{% /md %}}</dd></dl>
@@ -5592,7 +5665,7 @@ The following state arguments are supported:
 <a href="#allocationstrategy_nodejs" style="color: inherit; text-decoration: inherit;">allocation<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the strategy to use in launching Spot instance fleets. Currently, the only option is `capacity-optimized` (the default), which launches instances from Spot instance pools with optimal capacity for the number of instances that are launching.
 {{% /md %}}</dd></dl>
@@ -5605,7 +5678,7 @@ The following state arguments are supported:
 <a href="#allocation_strategy_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the strategy to use in launching Spot instance fleets. Currently, the only option is `capacity-optimized` (the default), which launches instances from Spot instance pools with optimal capacity for the number of instances that are launching.
 {{% /md %}}</dd></dl>
@@ -5700,7 +5773,7 @@ The following state arguments are supported:
 <a href="#allocationstrategy_nodejs" style="color: inherit; text-decoration: inherit;">allocation<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the strategy to use in launching Spot instance fleets. Currently, the only option is `capacity-optimized` (the default), which launches instances from Spot instance pools with optimal capacity for the number of instances that are launching.
 {{% /md %}}</dd><dt class="property-required"
@@ -5709,7 +5782,7 @@ The following state arguments are supported:
 <a href="#timeoutaction_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The action to take when TargetSpotCapacity has not been fulfilled when the TimeoutDurationMinutes has expired; that is, when all Spot instances could not be provisioned within the Spot provisioning timeout. Valid values are `TERMINATE_CLUSTER` and `SWITCH_TO_ON_DEMAND`. SWITCH_TO_ON_DEMAND specifies that if no Spot instances are available, On-Demand Instances should be provisioned to fulfill any remaining Spot capacity.
 {{% /md %}}</dd><dt class="property-required"
@@ -5718,7 +5791,7 @@ The following state arguments are supported:
 <a href="#timeoutdurationminutes_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Duration<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The spot provisioning timeout period in minutes. If Spot instances are not provisioned within this time period, the TimeOutAction is taken. Minimum value is 5 and maximum value is 1440. The timeout applies only during initial provisioning, when the cluster is first created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5727,7 +5800,7 @@ The following state arguments are supported:
 <a href="#blockdurationminutes_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Duration<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The defined duration for Spot instances (also known as Spot blocks) in minutes. When specified, the Spot instance does not terminate before the defined duration expires, and defined duration pricing for Spot instances applies. Valid values are 60, 120, 180, 240, 300, or 360. The duration period starts as soon as a Spot instance receives its instance ID. At the end of the duration, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two-minute warning before it terminates.
 {{% /md %}}</dd></dl>
@@ -5740,7 +5813,7 @@ The following state arguments are supported:
 <a href="#allocation_strategy_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the strategy to use in launching Spot instance fleets. Currently, the only option is `capacity-optimized` (the default), which launches instances from Spot instance pools with optimal capacity for the number of instances that are launching.
 {{% /md %}}</dd><dt class="property-required"
@@ -5749,7 +5822,7 @@ The following state arguments are supported:
 <a href="#timeout_action_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The action to take when TargetSpotCapacity has not been fulfilled when the TimeoutDurationMinutes has expired; that is, when all Spot instances could not be provisioned within the Spot provisioning timeout. Valid values are `TERMINATE_CLUSTER` and `SWITCH_TO_ON_DEMAND`. SWITCH_TO_ON_DEMAND specifies that if no Spot instances are available, On-Demand Instances should be provisioned to fulfill any remaining Spot capacity.
 {{% /md %}}</dd><dt class="property-required"
@@ -5758,7 +5831,7 @@ The following state arguments are supported:
 <a href="#timeout_duration_minutes_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>duration_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The spot provisioning timeout period in minutes. If Spot instances are not provisioned within this time period, the TimeOutAction is taken. Minimum value is 5 and maximum value is 1440. The timeout applies only during initial provisioning, when the cluster is first created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5767,7 +5840,7 @@ The following state arguments are supported:
 <a href="#block_duration_minutes_python" style="color: inherit; text-decoration: inherit;">block_<wbr>duration_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The defined duration for Spot instances (also known as Spot blocks) in minutes. When specified, the Spot instance does not terminate before the defined duration expires, and defined duration pricing for Spot instances applies. Valid values are 60, 120, 180, 240, 300, or 360. The duration period starts as soon as a Spot instance receives its instance ID. At the end of the duration, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two-minute warning before it terminates.
 {{% /md %}}</dd></dl>
@@ -5916,7 +5989,7 @@ The following state arguments are supported:
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An EC2 instance type, such as m4.xlarge.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5925,7 +5998,7 @@ The following state arguments are supported:
 <a href="#autoscalingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">autoscaling<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String containing the [EMR Auto Scaling Policy](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-automatic-scaling.html) JSON.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5934,7 +6007,7 @@ The following state arguments are supported:
 <a href="#bidprice_nodejs" style="color: inherit; text-decoration: inherit;">bid<wbr>Price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The bid price for each EC2 Spot instance type as defined by `instance_type`. Expressed in USD. If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5943,7 +6016,7 @@ The following state arguments are supported:
 <a href="#ebsconfigs_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancegroupebsconfig">Cluster<wbr>Core<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config[]</a></span>
+        <span class="property-type"><a href="#clustercoreinstancegroupebsconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Cluster<wbr>Core<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5952,7 +6025,7 @@ The following state arguments are supported:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the EMR Cluster
 {{% /md %}}</dd><dt class="property-optional"
@@ -5961,7 +6034,7 @@ The following state arguments are supported:
 <a href="#instancecount_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Target number of instances for the instance group. Must be 1 or 3. Defaults to 1. Launching with multiple master nodes is only supported in EMR version 5.23.0+, and requires this resource's `core_instance_group` to be configured. Public (Internet accessible) instances must be created in VPC subnets that have `map public IP on launch` enabled. Termination protection is automatically enabled when launched with multiple master nodes and this provider must have the `termination_protection = false` configuration applied before destroying this resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5970,7 +6043,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name given to the instance fleet.
 {{% /md %}}</dd></dl>
@@ -5983,7 +6056,7 @@ The following state arguments are supported:
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An EC2 instance type, such as m4.xlarge.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5992,7 +6065,7 @@ The following state arguments are supported:
 <a href="#autoscaling_policy_python" style="color: inherit; text-decoration: inherit;">autoscaling_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String containing the [EMR Auto Scaling Policy](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-automatic-scaling.html) JSON.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6001,7 +6074,7 @@ The following state arguments are supported:
 <a href="#bid_price_python" style="color: inherit; text-decoration: inherit;">bid_<wbr>price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The bid price for each EC2 Spot instance type as defined by `instance_type`. Expressed in USD. If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6010,7 +6083,7 @@ The following state arguments are supported:
 <a href="#ebs_configs_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancegroupebsconfig">Sequence[Cluster<wbr>Core<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustercoreinstancegroupebsconfig">Input[Cluster<wbr>Core<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6019,7 +6092,7 @@ The following state arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the EMR Cluster
 {{% /md %}}</dd><dt class="property-optional"
@@ -6028,7 +6101,7 @@ The following state arguments are supported:
 <a href="#instance_count_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Target number of instances for the instance group. Must be 1 or 3. Defaults to 1. Launching with multiple master nodes is only supported in EMR version 5.23.0+, and requires this resource's `core_instance_group` to be configured. Public (Internet accessible) instances must be created in VPC subnets that have `map public IP on launch` enabled. Termination protection is automatically enabled when launched with multiple master nodes and this provider must have the `termination_protection = false` configuration applied before destroying this resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6037,7 +6110,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name given to the instance fleet.
 {{% /md %}}</dd></dl>
@@ -6132,7 +6205,7 @@ The following state arguments are supported:
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The volume size, in gibibytes (GiB).
 {{% /md %}}</dd><dt class="property-required"
@@ -6141,7 +6214,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The volume type. Valid options are `gp2`, `io1`, `standard` and `st1`. See [EBS Volume Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -6150,7 +6223,7 @@ The following state arguments are supported:
 <a href="#iops_nodejs" style="color: inherit; text-decoration: inherit;">iops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of I/O operations per second (IOPS) that the volume supports
 {{% /md %}}</dd><dt class="property-optional"
@@ -6159,7 +6232,7 @@ The following state arguments are supported:
 <a href="#volumesperinstance_nodejs" style="color: inherit; text-decoration: inherit;">volumes<wbr>Per<wbr>Instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of EBS volumes with this configuration to attach to each EC2 instance in the instance group (default is 1)
 {{% /md %}}</dd></dl>
@@ -6172,7 +6245,7 @@ The following state arguments are supported:
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The volume size, in gibibytes (GiB).
 {{% /md %}}</dd><dt class="property-required"
@@ -6181,7 +6254,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The volume type. Valid options are `gp2`, `io1`, `standard` and `st1`. See [EBS Volume Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -6190,7 +6263,7 @@ The following state arguments are supported:
 <a href="#iops_python" style="color: inherit; text-decoration: inherit;">iops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of I/O operations per second (IOPS) that the volume supports
 {{% /md %}}</dd><dt class="property-optional"
@@ -6199,7 +6272,7 @@ The following state arguments are supported:
 <a href="#volumes_per_instance_python" style="color: inherit; text-decoration: inherit;">volumes_<wbr>per_<wbr>instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of EBS volumes with this configuration to attach to each EC2 instance in the instance group (default is 1)
 {{% /md %}}</dd></dl>
@@ -6366,7 +6439,7 @@ The following state arguments are supported:
 <a href="#instanceprofile_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Instance Profile for EC2 instances of the cluster assume this role
 {{% /md %}}</dd><dt class="property-optional"
@@ -6375,7 +6448,7 @@ The following state arguments are supported:
 <a href="#additionalmastersecuritygroups_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Master<wbr>Security<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String containing a comma separated list of additional Amazon EC2 security group IDs for the master node
 {{% /md %}}</dd><dt class="property-optional"
@@ -6384,7 +6457,7 @@ The following state arguments are supported:
 <a href="#additionalslavesecuritygroups_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Slave<wbr>Security<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String containing a comma separated list of additional Amazon EC2 security group IDs for the slave nodes as a comma separated string
 {{% /md %}}</dd><dt class="property-optional"
@@ -6393,7 +6466,7 @@ The following state arguments are supported:
 <a href="#emrmanagedmastersecuritygroup_nodejs" style="color: inherit; text-decoration: inherit;">emr<wbr>Managed<wbr>Master<wbr>Security<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Identifier of the Amazon EC2 EMR-Managed security group for the master node
 {{% /md %}}</dd><dt class="property-optional"
@@ -6402,7 +6475,7 @@ The following state arguments are supported:
 <a href="#emrmanagedslavesecuritygroup_nodejs" style="color: inherit; text-decoration: inherit;">emr<wbr>Managed<wbr>Slave<wbr>Security<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Identifier of the Amazon EC2 EMR-Managed security group for the slave nodes
 {{% /md %}}</dd><dt class="property-optional"
@@ -6411,7 +6484,7 @@ The following state arguments are supported:
 <a href="#keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Amazon EC2 key pair that can be used to ssh to the master node as the user called `hadoop`
 {{% /md %}}</dd><dt class="property-optional"
@@ -6420,7 +6493,7 @@ The following state arguments are supported:
 <a href="#serviceaccesssecuritygroup_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Access<wbr>Security<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Identifier of the Amazon EC2 service-access security group - required when the cluster runs on a private subnet
 {{% /md %}}</dd><dt class="property-optional"
@@ -6429,7 +6502,7 @@ The following state arguments are supported:
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}VPC subnet id where you want the job flow to launch. Cannot specify the `cc1.4xlarge` instance type for nodes of a job flow launched in a Amazon VPC
 {{% /md %}}</dd></dl>
@@ -6442,7 +6515,7 @@ The following state arguments are supported:
 <a href="#instance_profile_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Instance Profile for EC2 instances of the cluster assume this role
 {{% /md %}}</dd><dt class="property-optional"
@@ -6451,7 +6524,7 @@ The following state arguments are supported:
 <a href="#additional_master_security_groups_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>master_<wbr>security_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String containing a comma separated list of additional Amazon EC2 security group IDs for the master node
 {{% /md %}}</dd><dt class="property-optional"
@@ -6460,7 +6533,7 @@ The following state arguments are supported:
 <a href="#additional_slave_security_groups_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>slave_<wbr>security_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String containing a comma separated list of additional Amazon EC2 security group IDs for the slave nodes as a comma separated string
 {{% /md %}}</dd><dt class="property-optional"
@@ -6469,7 +6542,7 @@ The following state arguments are supported:
 <a href="#emr_managed_master_security_group_python" style="color: inherit; text-decoration: inherit;">emr_<wbr>managed_<wbr>master_<wbr>security_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Identifier of the Amazon EC2 EMR-Managed security group for the master node
 {{% /md %}}</dd><dt class="property-optional"
@@ -6478,7 +6551,7 @@ The following state arguments are supported:
 <a href="#emr_managed_slave_security_group_python" style="color: inherit; text-decoration: inherit;">emr_<wbr>managed_<wbr>slave_<wbr>security_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Identifier of the Amazon EC2 EMR-Managed security group for the slave nodes
 {{% /md %}}</dd><dt class="property-optional"
@@ -6487,7 +6560,7 @@ The following state arguments are supported:
 <a href="#key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Amazon EC2 key pair that can be used to ssh to the master node as the user called `hadoop`
 {{% /md %}}</dd><dt class="property-optional"
@@ -6496,7 +6569,7 @@ The following state arguments are supported:
 <a href="#service_access_security_group_python" style="color: inherit; text-decoration: inherit;">service_<wbr>access_<wbr>security_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Identifier of the Amazon EC2 service-access security group - required when the cluster runs on a private subnet
 {{% /md %}}</dd><dt class="property-optional"
@@ -6505,7 +6578,7 @@ The following state arguments are supported:
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}VPC subnet id where you want the job flow to launch. Cannot specify the `cc1.4xlarge` instance type for nodes of a job flow launched in a Amazon VPC
 {{% /md %}}</dd></dl>
@@ -6618,7 +6691,7 @@ The following state arguments are supported:
 <a href="#kdcadminpassword_nodejs" style="color: inherit; text-decoration: inherit;">kdc<wbr>Admin<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The password used within the cluster for the kadmin service on the cluster-dedicated KDC, which maintains Kerberos principals, password policies, and keytabs for the cluster. This provider cannot perform drift detection of this configuration.
 {{% /md %}}</dd><dt class="property-required"
@@ -6627,7 +6700,7 @@ The following state arguments are supported:
 <a href="#realm_nodejs" style="color: inherit; text-decoration: inherit;">realm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Kerberos realm to which all nodes in a cluster belong. For example, `EC2.INTERNAL`
 {{% /md %}}</dd><dt class="property-optional"
@@ -6636,7 +6709,7 @@ The following state arguments are supported:
 <a href="#addomainjoinpassword_nodejs" style="color: inherit; text-decoration: inherit;">ad<wbr>Domain<wbr>Join<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Active Directory password for `ad_domain_join_user`. This provider cannot perform drift detection of this configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6645,7 +6718,7 @@ The following state arguments are supported:
 <a href="#addomainjoinuser_nodejs" style="color: inherit; text-decoration: inherit;">ad<wbr>Domain<wbr>Join<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Required only when establishing a cross-realm trust with an Active Directory domain. A user with sufficient privileges to join resources to the domain. This provider cannot perform drift detection of this configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6654,7 +6727,7 @@ The following state arguments are supported:
 <a href="#crossrealmtrustprincipalpassword_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Realm<wbr>Trust<wbr>Principal<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Required only when establishing a cross-realm trust with a KDC in a different realm. The cross-realm principal password, which must be identical across realms. This provider cannot perform drift detection of this configuration.
 {{% /md %}}</dd></dl>
@@ -6667,7 +6740,7 @@ The following state arguments are supported:
 <a href="#kdc_admin_password_python" style="color: inherit; text-decoration: inherit;">kdc_<wbr>admin_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The password used within the cluster for the kadmin service on the cluster-dedicated KDC, which maintains Kerberos principals, password policies, and keytabs for the cluster. This provider cannot perform drift detection of this configuration.
 {{% /md %}}</dd><dt class="property-required"
@@ -6676,7 +6749,7 @@ The following state arguments are supported:
 <a href="#realm_python" style="color: inherit; text-decoration: inherit;">realm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Kerberos realm to which all nodes in a cluster belong. For example, `EC2.INTERNAL`
 {{% /md %}}</dd><dt class="property-optional"
@@ -6685,7 +6758,7 @@ The following state arguments are supported:
 <a href="#ad_domain_join_password_python" style="color: inherit; text-decoration: inherit;">ad_<wbr>domain_<wbr>join_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Active Directory password for `ad_domain_join_user`. This provider cannot perform drift detection of this configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6694,7 +6767,7 @@ The following state arguments are supported:
 <a href="#ad_domain_join_user_python" style="color: inherit; text-decoration: inherit;">ad_<wbr>domain_<wbr>join_<wbr>user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Required only when establishing a cross-realm trust with an Active Directory domain. A user with sufficient privileges to join resources to the domain. This provider cannot perform drift detection of this configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6703,7 +6776,7 @@ The following state arguments are supported:
 <a href="#cross_realm_trust_principal_password_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>realm_<wbr>trust_<wbr>principal_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Required only when establishing a cross-realm trust with a KDC in a different realm. The cross-realm principal password, which must be identical across realms. This provider cannot perform drift detection of this configuration.
 {{% /md %}}</dd></dl>
@@ -6866,7 +6939,7 @@ The following state arguments are supported:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the EMR Cluster
 {{% /md %}}</dd><dt class="property-optional"
@@ -6875,7 +6948,7 @@ The following state arguments are supported:
 <a href="#instancetypeconfigs_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancefleetinstancetypeconfig">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config[]</a></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetinstancetypeconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Configuration block for instance fleet
 {{% /md %}}</dd><dt class="property-optional"
@@ -6884,7 +6957,7 @@ The following state arguments are supported:
 <a href="#launchspecifications_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancefleetlaunchspecifications">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications</a></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetlaunchspecifications">pulumi.<wbr>Input<Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block for launch specification
 {{% /md %}}</dd><dt class="property-optional"
@@ -6893,7 +6966,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name given to the instance fleet.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6902,7 +6975,7 @@ The following state arguments are supported:
 <a href="#provisionedondemandcapacity_nodejs" style="color: inherit; text-decoration: inherit;">provisioned<wbr>On<wbr>Demand<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6910,7 +6983,7 @@ The following state arguments are supported:
 <a href="#provisionedspotcapacity_nodejs" style="color: inherit; text-decoration: inherit;">provisioned<wbr>Spot<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6918,7 +6991,7 @@ The following state arguments are supported:
 <a href="#targetondemandcapacity_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>On<wbr>Demand<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The target capacity of On-Demand units for the instance fleet, which determines how many On-Demand instances to provision.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6927,7 +7000,7 @@ The following state arguments are supported:
 <a href="#targetspotcapacity_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Spot<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The target capacity of Spot units for the instance fleet, which determines how many Spot instances to provision.
 {{% /md %}}</dd></dl>
@@ -6940,7 +7013,7 @@ The following state arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the EMR Cluster
 {{% /md %}}</dd><dt class="property-optional"
@@ -6949,7 +7022,7 @@ The following state arguments are supported:
 <a href="#instance_type_configs_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancefleetinstancetypeconfig">Sequence[Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetinstancetypeconfig">Input[Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for instance fleet
 {{% /md %}}</dd><dt class="property-optional"
@@ -6958,7 +7031,7 @@ The following state arguments are supported:
 <a href="#launch_specifications_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancefleetlaunchspecifications">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetlaunchspecifications">Input[Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for launch specification
 {{% /md %}}</dd><dt class="property-optional"
@@ -6967,7 +7040,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name given to the instance fleet.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6976,7 +7049,7 @@ The following state arguments are supported:
 <a href="#provisioned_on_demand_capacity_python" style="color: inherit; text-decoration: inherit;">provisioned_<wbr>on_<wbr>demand_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6984,7 +7057,7 @@ The following state arguments are supported:
 <a href="#provisioned_spot_capacity_python" style="color: inherit; text-decoration: inherit;">provisioned_<wbr>spot_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6992,7 +7065,7 @@ The following state arguments are supported:
 <a href="#target_on_demand_capacity_python" style="color: inherit; text-decoration: inherit;">target_<wbr>on_<wbr>demand_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The target capacity of On-Demand units for the instance fleet, which determines how many On-Demand instances to provision.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7001,7 +7074,7 @@ The following state arguments are supported:
 <a href="#target_spot_capacity_python" style="color: inherit; text-decoration: inherit;">target_<wbr>spot_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The target capacity of Spot units for the instance fleet, which determines how many Spot instances to provision.
 {{% /md %}}</dd></dl>
@@ -7132,7 +7205,7 @@ The following state arguments are supported:
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An EC2 instance type, such as m4.xlarge.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7141,7 +7214,7 @@ The following state arguments are supported:
 <a href="#bidprice_nodejs" style="color: inherit; text-decoration: inherit;">bid<wbr>Price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The bid price for each EC2 Spot instance type as defined by `instance_type`. Expressed in USD. If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7150,7 +7223,7 @@ The following state arguments are supported:
 <a href="#bidpriceaspercentageofondemandprice_nodejs" style="color: inherit; text-decoration: inherit;">bid<wbr>Price<wbr>As<wbr>Percentage<wbr>Of<wbr>On<wbr>Demand<wbr>Price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The bid price, as a percentage of On-Demand price, for each EC2 Spot instance as defined by `instance_type`. Expressed as a number (for example, 20 specifies 20%). If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7159,7 +7232,7 @@ The following state arguments are supported:
 <a href="#configurations_nodejs" style="color: inherit; text-decoration: inherit;">configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancefleetinstancetypeconfigconfiguration">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Configuration[]</a></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetinstancetypeconfigconfiguration">pulumi.<wbr>Input<pulumi.<wbr>Input<Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Configuration<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software that run on the cluster. List of `configuration` blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7168,7 +7241,7 @@ The following state arguments are supported:
 <a href="#ebsconfigs_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancefleetinstancetypeconfigebsconfig">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Ebs<wbr>Config[]</a></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetinstancetypeconfigebsconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Ebs<wbr>Config<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7177,7 +7250,7 @@ The following state arguments are supported:
 <a href="#weightedcapacity_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of units that a provisioned instance of this type provides toward fulfilling the target capacities defined in `aws.emr.InstanceFleet`.
 {{% /md %}}</dd></dl>
@@ -7190,7 +7263,7 @@ The following state arguments are supported:
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An EC2 instance type, such as m4.xlarge.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7199,7 +7272,7 @@ The following state arguments are supported:
 <a href="#bid_price_python" style="color: inherit; text-decoration: inherit;">bid_<wbr>price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The bid price for each EC2 Spot instance type as defined by `instance_type`. Expressed in USD. If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7208,7 +7281,7 @@ The following state arguments are supported:
 <a href="#bid_price_as_percentage_of_on_demand_price_python" style="color: inherit; text-decoration: inherit;">bid_<wbr>price_<wbr>as_<wbr>percentage_<wbr>of_<wbr>on_<wbr>demand_<wbr>price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The bid price, as a percentage of On-Demand price, for each EC2 Spot instance as defined by `instance_type`. Expressed as a number (for example, 20 specifies 20%). If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7217,7 +7290,7 @@ The following state arguments are supported:
 <a href="#configurations_python" style="color: inherit; text-decoration: inherit;">configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancefleetinstancetypeconfigconfiguration">Sequence[Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetinstancetypeconfigconfiguration">Input[Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Configuration<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software that run on the cluster. List of `configuration` blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7226,7 +7299,7 @@ The following state arguments are supported:
 <a href="#ebs_configs_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancefleetinstancetypeconfigebsconfig">Sequence[Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Ebs<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetinstancetypeconfigebsconfig">Input[Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Ebs<wbr>Config<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7235,7 +7308,7 @@ The following state arguments are supported:
 <a href="#weighted_capacity_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of units that a provisioned instance of this type provides toward fulfilling the target capacities defined in `aws.emr.InstanceFleet`.
 {{% /md %}}</dd></dl>
@@ -7294,7 +7367,7 @@ The following state arguments are supported:
 <a href="#classification_nodejs" style="color: inherit; text-decoration: inherit;">classification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The classification within a configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7303,7 +7376,7 @@ The following state arguments are supported:
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}A map of properties specified within a configuration classification
 {{% /md %}}</dd></dl>
@@ -7316,7 +7389,7 @@ The following state arguments are supported:
 <a href="#classification_python" style="color: inherit; text-decoration: inherit;">classification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The classification within a configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7325,7 +7398,7 @@ The following state arguments are supported:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}A map of properties specified within a configuration classification
 {{% /md %}}</dd></dl>
@@ -7420,7 +7493,7 @@ The following state arguments are supported:
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The volume size, in gibibytes (GiB).
 {{% /md %}}</dd><dt class="property-required"
@@ -7429,7 +7502,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The volume type. Valid options are `gp2`, `io1`, `standard` and `st1`. See [EBS Volume Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -7438,7 +7511,7 @@ The following state arguments are supported:
 <a href="#iops_nodejs" style="color: inherit; text-decoration: inherit;">iops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of I/O operations per second (IOPS) that the volume supports
 {{% /md %}}</dd><dt class="property-optional"
@@ -7447,7 +7520,7 @@ The following state arguments are supported:
 <a href="#volumesperinstance_nodejs" style="color: inherit; text-decoration: inherit;">volumes<wbr>Per<wbr>Instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of EBS volumes with this configuration to attach to each EC2 instance in the instance group (default is 1)
 {{% /md %}}</dd></dl>
@@ -7460,7 +7533,7 @@ The following state arguments are supported:
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The volume size, in gibibytes (GiB).
 {{% /md %}}</dd><dt class="property-required"
@@ -7469,7 +7542,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The volume type. Valid options are `gp2`, `io1`, `standard` and `st1`. See [EBS Volume Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -7478,7 +7551,7 @@ The following state arguments are supported:
 <a href="#iops_python" style="color: inherit; text-decoration: inherit;">iops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of I/O operations per second (IOPS) that the volume supports
 {{% /md %}}</dd><dt class="property-optional"
@@ -7487,7 +7560,7 @@ The following state arguments are supported:
 <a href="#volumes_per_instance_python" style="color: inherit; text-decoration: inherit;">volumes_<wbr>per_<wbr>instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of EBS volumes with this configuration to attach to each EC2 instance in the instance group (default is 1)
 {{% /md %}}</dd></dl>
@@ -7546,7 +7619,7 @@ The following state arguments are supported:
 <a href="#ondemandspecifications_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Demand<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancefleetlaunchspecificationsondemandspecification">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>On<wbr>Demand<wbr>Specification[]</a></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetlaunchspecificationsondemandspecification">pulumi.<wbr>Input<pulumi.<wbr>Input<Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>On<wbr>Demand<wbr>Specification<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Configuration block for on demand instances launch specifications
 {{% /md %}}</dd><dt class="property-optional"
@@ -7555,7 +7628,7 @@ The following state arguments are supported:
 <a href="#spotspecifications_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancefleetlaunchspecificationsspotspecification">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Spot<wbr>Specification[]</a></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetlaunchspecificationsspotspecification">pulumi.<wbr>Input<pulumi.<wbr>Input<Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Spot<wbr>Specification<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Configuration block for spot instances launch specifications
 {{% /md %}}</dd></dl>
@@ -7568,7 +7641,7 @@ The following state arguments are supported:
 <a href="#on_demand_specifications_python" style="color: inherit; text-decoration: inherit;">on_<wbr>demand_<wbr>specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancefleetlaunchspecificationsondemandspecification">Sequence[Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>On<wbr>Demand<wbr>Specification<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetlaunchspecificationsondemandspecification">Input[Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>On<wbr>Demand<wbr>Specification<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for on demand instances launch specifications
 {{% /md %}}</dd><dt class="property-optional"
@@ -7577,7 +7650,7 @@ The following state arguments are supported:
 <a href="#spot_specifications_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancefleetlaunchspecificationsspotspecification">Sequence[Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Spot<wbr>Specification<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetlaunchspecificationsspotspecification">Input[Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Spot<wbr>Specification<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for spot instances launch specifications
 {{% /md %}}</dd></dl>
@@ -7618,7 +7691,7 @@ The following state arguments are supported:
 <a href="#allocationstrategy_nodejs" style="color: inherit; text-decoration: inherit;">allocation<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the strategy to use in launching Spot instance fleets. Currently, the only option is `capacity-optimized` (the default), which launches instances from Spot instance pools with optimal capacity for the number of instances that are launching.
 {{% /md %}}</dd></dl>
@@ -7631,7 +7704,7 @@ The following state arguments are supported:
 <a href="#allocation_strategy_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the strategy to use in launching Spot instance fleets. Currently, the only option is `capacity-optimized` (the default), which launches instances from Spot instance pools with optimal capacity for the number of instances that are launching.
 {{% /md %}}</dd></dl>
@@ -7726,7 +7799,7 @@ The following state arguments are supported:
 <a href="#allocationstrategy_nodejs" style="color: inherit; text-decoration: inherit;">allocation<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the strategy to use in launching Spot instance fleets. Currently, the only option is `capacity-optimized` (the default), which launches instances from Spot instance pools with optimal capacity for the number of instances that are launching.
 {{% /md %}}</dd><dt class="property-required"
@@ -7735,7 +7808,7 @@ The following state arguments are supported:
 <a href="#timeoutaction_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The action to take when TargetSpotCapacity has not been fulfilled when the TimeoutDurationMinutes has expired; that is, when all Spot instances could not be provisioned within the Spot provisioning timeout. Valid values are `TERMINATE_CLUSTER` and `SWITCH_TO_ON_DEMAND`. SWITCH_TO_ON_DEMAND specifies that if no Spot instances are available, On-Demand Instances should be provisioned to fulfill any remaining Spot capacity.
 {{% /md %}}</dd><dt class="property-required"
@@ -7744,7 +7817,7 @@ The following state arguments are supported:
 <a href="#timeoutdurationminutes_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Duration<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The spot provisioning timeout period in minutes. If Spot instances are not provisioned within this time period, the TimeOutAction is taken. Minimum value is 5 and maximum value is 1440. The timeout applies only during initial provisioning, when the cluster is first created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7753,7 +7826,7 @@ The following state arguments are supported:
 <a href="#blockdurationminutes_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Duration<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The defined duration for Spot instances (also known as Spot blocks) in minutes. When specified, the Spot instance does not terminate before the defined duration expires, and defined duration pricing for Spot instances applies. Valid values are 60, 120, 180, 240, 300, or 360. The duration period starts as soon as a Spot instance receives its instance ID. At the end of the duration, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two-minute warning before it terminates.
 {{% /md %}}</dd></dl>
@@ -7766,7 +7839,7 @@ The following state arguments are supported:
 <a href="#allocation_strategy_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the strategy to use in launching Spot instance fleets. Currently, the only option is `capacity-optimized` (the default), which launches instances from Spot instance pools with optimal capacity for the number of instances that are launching.
 {{% /md %}}</dd><dt class="property-required"
@@ -7775,7 +7848,7 @@ The following state arguments are supported:
 <a href="#timeout_action_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The action to take when TargetSpotCapacity has not been fulfilled when the TimeoutDurationMinutes has expired; that is, when all Spot instances could not be provisioned within the Spot provisioning timeout. Valid values are `TERMINATE_CLUSTER` and `SWITCH_TO_ON_DEMAND`. SWITCH_TO_ON_DEMAND specifies that if no Spot instances are available, On-Demand Instances should be provisioned to fulfill any remaining Spot capacity.
 {{% /md %}}</dd><dt class="property-required"
@@ -7784,7 +7857,7 @@ The following state arguments are supported:
 <a href="#timeout_duration_minutes_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>duration_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The spot provisioning timeout period in minutes. If Spot instances are not provisioned within this time period, the TimeOutAction is taken. Minimum value is 5 and maximum value is 1440. The timeout applies only during initial provisioning, when the cluster is first created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7793,7 +7866,7 @@ The following state arguments are supported:
 <a href="#block_duration_minutes_python" style="color: inherit; text-decoration: inherit;">block_<wbr>duration_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The defined duration for Spot instances (also known as Spot blocks) in minutes. When specified, the Spot instance does not terminate before the defined duration expires, and defined duration pricing for Spot instances applies. Valid values are 60, 120, 180, 240, 300, or 360. The duration period starts as soon as a Spot instance receives its instance ID. At the end of the duration, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two-minute warning before it terminates.
 {{% /md %}}</dd></dl>
@@ -7924,7 +7997,7 @@ The following state arguments are supported:
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An EC2 instance type, such as m4.xlarge.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7933,7 +8006,7 @@ The following state arguments are supported:
 <a href="#bidprice_nodejs" style="color: inherit; text-decoration: inherit;">bid<wbr>Price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The bid price for each EC2 Spot instance type as defined by `instance_type`. Expressed in USD. If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7942,7 +8015,7 @@ The following state arguments are supported:
 <a href="#ebsconfigs_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancegroupebsconfig">Cluster<wbr>Master<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config[]</a></span>
+        <span class="property-type"><a href="#clustermasterinstancegroupebsconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Cluster<wbr>Master<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7951,7 +8024,7 @@ The following state arguments are supported:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the EMR Cluster
 {{% /md %}}</dd><dt class="property-optional"
@@ -7960,7 +8033,7 @@ The following state arguments are supported:
 <a href="#instancecount_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Target number of instances for the instance group. Must be 1 or 3. Defaults to 1. Launching with multiple master nodes is only supported in EMR version 5.23.0+, and requires this resource's `core_instance_group` to be configured. Public (Internet accessible) instances must be created in VPC subnets that have `map public IP on launch` enabled. Termination protection is automatically enabled when launched with multiple master nodes and this provider must have the `termination_protection = false` configuration applied before destroying this resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7969,7 +8042,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name given to the instance fleet.
 {{% /md %}}</dd></dl>
@@ -7982,7 +8055,7 @@ The following state arguments are supported:
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An EC2 instance type, such as m4.xlarge.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7991,7 +8064,7 @@ The following state arguments are supported:
 <a href="#bid_price_python" style="color: inherit; text-decoration: inherit;">bid_<wbr>price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The bid price for each EC2 Spot instance type as defined by `instance_type`. Expressed in USD. If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8000,7 +8073,7 @@ The following state arguments are supported:
 <a href="#ebs_configs_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancegroupebsconfig">Sequence[Cluster<wbr>Master<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustermasterinstancegroupebsconfig">Input[Cluster<wbr>Master<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8009,7 +8082,7 @@ The following state arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the EMR Cluster
 {{% /md %}}</dd><dt class="property-optional"
@@ -8018,7 +8091,7 @@ The following state arguments are supported:
 <a href="#instance_count_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Target number of instances for the instance group. Must be 1 or 3. Defaults to 1. Launching with multiple master nodes is only supported in EMR version 5.23.0+, and requires this resource's `core_instance_group` to be configured. Public (Internet accessible) instances must be created in VPC subnets that have `map public IP on launch` enabled. Termination protection is automatically enabled when launched with multiple master nodes and this provider must have the `termination_protection = false` configuration applied before destroying this resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8027,7 +8100,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name given to the instance fleet.
 {{% /md %}}</dd></dl>
@@ -8122,7 +8195,7 @@ The following state arguments are supported:
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The volume size, in gibibytes (GiB).
 {{% /md %}}</dd><dt class="property-required"
@@ -8131,7 +8204,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The volume type. Valid options are `gp2`, `io1`, `standard` and `st1`. See [EBS Volume Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -8140,7 +8213,7 @@ The following state arguments are supported:
 <a href="#iops_nodejs" style="color: inherit; text-decoration: inherit;">iops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of I/O operations per second (IOPS) that the volume supports
 {{% /md %}}</dd><dt class="property-optional"
@@ -8149,7 +8222,7 @@ The following state arguments are supported:
 <a href="#volumesperinstance_nodejs" style="color: inherit; text-decoration: inherit;">volumes<wbr>Per<wbr>Instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of EBS volumes with this configuration to attach to each EC2 instance in the instance group (default is 1)
 {{% /md %}}</dd></dl>
@@ -8162,7 +8235,7 @@ The following state arguments are supported:
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The volume size, in gibibytes (GiB).
 {{% /md %}}</dd><dt class="property-required"
@@ -8171,7 +8244,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The volume type. Valid options are `gp2`, `io1`, `standard` and `st1`. See [EBS Volume Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -8180,7 +8253,7 @@ The following state arguments are supported:
 <a href="#iops_python" style="color: inherit; text-decoration: inherit;">iops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of I/O operations per second (IOPS) that the volume supports
 {{% /md %}}</dd><dt class="property-optional"
@@ -8189,7 +8262,7 @@ The following state arguments are supported:
 <a href="#volumes_per_instance_python" style="color: inherit; text-decoration: inherit;">volumes_<wbr>per_<wbr>instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of EBS volumes with this configuration to attach to each EC2 instance in the instance group (default is 1)
 {{% /md %}}</dd></dl>
@@ -8266,7 +8339,7 @@ The following state arguments are supported:
 <a href="#actiononfailure_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>On<wbr>Failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The action to take if the step fails. Valid values: `TERMINATE_JOB_FLOW`, `TERMINATE_CLUSTER`, `CANCEL_AND_WAIT`, and `CONTINUE`
 {{% /md %}}</dd><dt class="property-required"
@@ -8275,7 +8348,7 @@ The following state arguments are supported:
 <a href="#hadoopjarstep_nodejs" style="color: inherit; text-decoration: inherit;">hadoop<wbr>Jar<wbr>Step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterstephadoopjarstep">Cluster<wbr>Step<wbr>Hadoop<wbr>Jar<wbr>Step</a></span>
+        <span class="property-type"><a href="#clusterstephadoopjarstep">pulumi.<wbr>Input<Cluster<wbr>Step<wbr>Hadoop<wbr>Jar<wbr>Step<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The JAR file used for the step. Defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -8284,7 +8357,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name given to the instance fleet.
 {{% /md %}}</dd></dl>
@@ -8297,7 +8370,7 @@ The following state arguments are supported:
 <a href="#action_on_failure_python" style="color: inherit; text-decoration: inherit;">action_<wbr>on_<wbr>failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The action to take if the step fails. Valid values: `TERMINATE_JOB_FLOW`, `TERMINATE_CLUSTER`, `CANCEL_AND_WAIT`, and `CONTINUE`
 {{% /md %}}</dd><dt class="property-required"
@@ -8306,7 +8379,7 @@ The following state arguments are supported:
 <a href="#hadoop_jar_step_python" style="color: inherit; text-decoration: inherit;">hadoop_<wbr>jar_<wbr>step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterstephadoopjarstep">Cluster<wbr>Step<wbr>Hadoop<wbr>Jar<wbr>Step<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterstephadoopjarstep">Input[Cluster<wbr>Step<wbr>Hadoop<wbr>Jar<wbr>Step<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The JAR file used for the step. Defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -8315,7 +8388,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name given to the instance fleet.
 {{% /md %}}</dd></dl>
@@ -8410,7 +8483,7 @@ The following state arguments are supported:
 <a href="#jar_nodejs" style="color: inherit; text-decoration: inherit;">jar</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Path to a JAR file run during the step.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8419,7 +8492,7 @@ The following state arguments are supported:
 <a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of command line arguments passed to the JAR file's main function when executed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8428,7 +8501,7 @@ The following state arguments are supported:
 <a href="#mainclass_nodejs" style="color: inherit; text-decoration: inherit;">main<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the main class in the specified Java file. If not specified, the JAR file should specify a Main-Class in its manifest file.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8437,7 +8510,7 @@ The following state arguments are supported:
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A map of properties specified within a configuration classification
 {{% /md %}}</dd></dl>
@@ -8450,7 +8523,7 @@ The following state arguments are supported:
 <a href="#jar_python" style="color: inherit; text-decoration: inherit;">jar</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Path to a JAR file run during the step.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8459,7 +8532,7 @@ The following state arguments are supported:
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of command line arguments passed to the JAR file's main function when executed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8468,7 +8541,7 @@ The following state arguments are supported:
 <a href="#main_class_python" style="color: inherit; text-decoration: inherit;">main_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the main class in the specified Java file. If not specified, the JAR file should specify a Main-Class in its manifest file.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8477,7 +8550,7 @@ The following state arguments are supported:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A map of properties specified within a configuration classification
 {{% /md %}}</dd></dl>

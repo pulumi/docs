@@ -75,8 +75,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/networkfirewall"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -256,8 +256,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/networkfirewall"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -481,8 +481,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/networkfirewall"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -828,8 +828,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/networkfirewall"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -1077,19 +1077,32 @@ const example = new aws.networkfirewall.RuleGroup("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RuleGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RuleGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RuleGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RuleGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RuleGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_group</span><span class="p">:</span> <span class="nx">Optional[RuleGroupRuleGroupArgs]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">RuleGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+              <span class="nx">capacity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+              <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">rule_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[RuleGroupRuleGroupArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+              <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">RuleGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RuleGroupArgs</a></span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRuleGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RuleGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RuleGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRuleGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RuleGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RuleGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RuleGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RuleGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RuleGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">RuleGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1124,22 +1137,32 @@ const example = new aws.networkfirewall.RuleGroup("example", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">RuleGroupArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1148,7 +1171,7 @@ const example = new aws.networkfirewall.RuleGroup("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -1172,7 +1195,7 @@ const example = new aws.networkfirewall.RuleGroup("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1361,7 +1384,7 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of operating resources that this rule group can use. For a stateless rule group, the capacity required is the sum of the capacity requirements of the individual rules. For a stateful rule group, the minimum capacity required is the number of individual rules.
 {{% /md %}}</dd><dt class="property-required"
@@ -1370,7 +1393,7 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Whether the rule group is stateless (containing stateless rules) or stateful (containing stateful rules). Valid values include: `STATEFUL` or `STATELESS`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1379,7 +1402,7 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A friendly description of the rule group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1388,7 +1411,7 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A friendly name of the rule group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1397,7 +1420,7 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#rulegroup_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegroup">Rule<wbr>Group<wbr>Rule<wbr>Group</a></span>
+        <span class="property-type"><a href="#rulegrouprulegroup">pulumi.<wbr>Input<Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines the rule group rules. Required unless `rules` is specified. See Rule Group below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1406,7 +1429,7 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The stateful rule group rules specifications in Suricata file format, with one rule per line. Use this to import your existing Suricata compatible rule groups. Required unless `rule_group` is specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1415,7 +1438,7 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A map of key:value pairs to associate with the resource.
 {{% /md %}}</dd></dl>
@@ -1428,7 +1451,7 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of operating resources that this rule group can use. For a stateless rule group, the capacity required is the sum of the capacity requirements of the individual rules. For a stateful rule group, the minimum capacity required is the number of individual rules.
 {{% /md %}}</dd><dt class="property-required"
@@ -1437,7 +1460,7 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Whether the rule group is stateless (containing stateless rules) or stateful (containing stateful rules). Valid values include: `STATEFUL` or `STATELESS`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1446,7 +1469,7 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A friendly description of the rule group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1455,7 +1478,7 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A friendly name of the rule group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1464,7 +1487,7 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#rule_group_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegroup">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegrouprulegroup">Input[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines the rule group rules. Required unless `rules` is specified. See Rule Group below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1473,7 +1496,7 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The stateful rule group rules specifications in Suricata file format, with one rule per line. Use this to import your existing Suricata compatible rule groups. Required unless `rule_group` is specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1482,7 +1505,7 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A map of key:value pairs to associate with the resource.
 {{% /md %}}</dd></dl>
@@ -1623,20 +1646,31 @@ Get an existing RuleGroup resource's state with the given name, ID, and optional
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">RuleGroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">RuleGroup</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">RuleGroupState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">RuleGroup</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_group</span><span class="p">:</span> <span class="nx">Optional[RuleGroupRuleGroupArgs]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">update_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> RuleGroup</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">capacity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">rule_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[RuleGroupRuleGroupArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">update_token</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> RuleGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRuleGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">RuleGroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RuleGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRuleGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">RuleGroupState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RuleGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">RuleGroup</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">RuleGroupState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">RuleGroup</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">RuleGroupState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1915,7 +1949,7 @@ The following state arguments are supported:
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the rule group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1924,7 +1958,7 @@ The following state arguments are supported:
 <a href="#state_capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of operating resources that this rule group can use. For a stateless rule group, the capacity required is the sum of the capacity requirements of the individual rules. For a stateful rule group, the minimum capacity required is the number of individual rules.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1933,7 +1967,7 @@ The following state arguments are supported:
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A friendly description of the rule group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1942,7 +1976,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A friendly name of the rule group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1951,7 +1985,7 @@ The following state arguments are supported:
 <a href="#state_rulegroup_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegroup">Rule<wbr>Group<wbr>Rule<wbr>Group</a></span>
+        <span class="property-type"><a href="#rulegrouprulegroup">pulumi.<wbr>Input<Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines the rule group rules. Required unless `rules` is specified. See Rule Group below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1960,7 +1994,7 @@ The following state arguments are supported:
 <a href="#state_rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The stateful rule group rules specifications in Suricata file format, with one rule per line. Use this to import your existing Suricata compatible rule groups. Required unless `rule_group` is specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1969,7 +2003,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A map of key:value pairs to associate with the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1978,7 +2012,7 @@ The following state arguments are supported:
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Whether the rule group is stateless (containing stateless rules) or stateful (containing stateful rules). Valid values include: `STATEFUL` or `STATELESS`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1987,7 +2021,7 @@ The following state arguments are supported:
 <a href="#state_updatetoken_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A string token used when updating the rule group.
 {{% /md %}}</dd></dl>
@@ -2000,7 +2034,7 @@ The following state arguments are supported:
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the rule group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2009,7 +2043,7 @@ The following state arguments are supported:
 <a href="#state_capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of operating resources that this rule group can use. For a stateless rule group, the capacity required is the sum of the capacity requirements of the individual rules. For a stateful rule group, the minimum capacity required is the number of individual rules.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2018,7 +2052,7 @@ The following state arguments are supported:
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A friendly description of the rule group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2027,7 +2061,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A friendly name of the rule group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2036,7 +2070,7 @@ The following state arguments are supported:
 <a href="#state_rule_group_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegroup">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegrouprulegroup">Input[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines the rule group rules. Required unless `rules` is specified. See Rule Group below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2045,7 +2079,7 @@ The following state arguments are supported:
 <a href="#state_rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The stateful rule group rules specifications in Suricata file format, with one rule per line. Use this to import your existing Suricata compatible rule groups. Required unless `rule_group` is specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2054,7 +2088,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A map of key:value pairs to associate with the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2063,7 +2097,7 @@ The following state arguments are supported:
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Whether the rule group is stateless (containing stateless rules) or stateful (containing stateful rules). Valid values include: `STATEFUL` or `STATELESS`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2072,7 +2106,7 @@ The following state arguments are supported:
 <a href="#state_update_token_python" style="color: inherit; text-decoration: inherit;">update_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A string token used when updating the rule group.
 {{% /md %}}</dd></dl>
@@ -2140,7 +2174,7 @@ The following state arguments are supported:
 <a href="#rulessource_nodejs" style="color: inherit; text-decoration: inherit;">rules<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessource">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessource">pulumi.<wbr>Input<Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines the stateful or stateless rules for the rule group. See Rules Source below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2149,7 +2183,7 @@ The following state arguments are supported:
 <a href="#rulevariables_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulevariables">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulevariables">pulumi.<wbr>Input<Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines additional settings available to use in the rules defined in the rule group. Can only be specified for **stateful** rule groups. See Rule Variables below for details.
 {{% /md %}}</dd></dl>
@@ -2162,7 +2196,7 @@ The following state arguments are supported:
 <a href="#rules_source_python" style="color: inherit; text-decoration: inherit;">rules_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessource">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessource">Input[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines the stateful or stateless rules for the rule group. See Rules Source below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2171,7 +2205,7 @@ The following state arguments are supported:
 <a href="#rule_variables_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulevariables">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulevariables">Input[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines additional settings available to use in the rules defined in the rule group. Can only be specified for **stateful** rule groups. See Rule Variables below for details.
 {{% /md %}}</dd></dl>
@@ -2230,7 +2264,7 @@ The following state arguments are supported:
 <a href="#ipsets_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulevariablesipset">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Ip<wbr>Set[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulevariablesipset">pulumi.<wbr>Input<pulumi.<wbr>Input<Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Ip<wbr>Set<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks that define IP address information. See IP Sets below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2239,7 +2273,7 @@ The following state arguments are supported:
 <a href="#portsets_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulevariablesportset">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Port<wbr>Set[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulevariablesportset">pulumi.<wbr>Input<pulumi.<wbr>Input<Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Port<wbr>Set<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks that define port range information. See Port Sets below for details.
 {{% /md %}}</dd></dl>
@@ -2252,7 +2286,7 @@ The following state arguments are supported:
 <a href="#ip_sets_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulevariablesipset">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Ip<wbr>Set<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulevariablesipset">Input[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Ip<wbr>Set<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks that define IP address information. See IP Sets below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2261,7 +2295,7 @@ The following state arguments are supported:
 <a href="#port_sets_python" style="color: inherit; text-decoration: inherit;">port_<wbr>sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulevariablesportset">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Port<wbr>Set<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulevariablesportset">Input[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Port<wbr>Set<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks that define port range information. See Port Sets below for details.
 {{% /md %}}</dd></dl>
@@ -2320,7 +2354,7 @@ The following state arguments are supported:
 <a href="#ipset_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulevariablesipsetipset">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Ip<wbr>Set<wbr>Ip<wbr>Set</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulevariablesipsetipset">pulumi.<wbr>Input<Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Ip<wbr>Set<wbr>Ip<wbr>Set<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines a set of IP addresses. See IP Set below for details.
 {{% /md %}}</dd><dt class="property-required"
@@ -2329,7 +2363,7 @@ The following state arguments are supported:
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique alphanumeric string to identify the `ip_set`.
 {{% /md %}}</dd></dl>
@@ -2342,7 +2376,7 @@ The following state arguments are supported:
 <a href="#ip_set_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulevariablesipsetipset">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Ip<wbr>Set<wbr>Ip<wbr>Set<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulevariablesipsetipset">Input[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Ip<wbr>Set<wbr>Ip<wbr>Set<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines a set of IP addresses. See IP Set below for details.
 {{% /md %}}</dd><dt class="property-required"
@@ -2351,7 +2385,7 @@ The following state arguments are supported:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique alphanumeric string to identify the `ip_set`.
 {{% /md %}}</dd></dl>
@@ -2392,7 +2426,7 @@ The following state arguments are supported:
 <a href="#definitions_nodejs" style="color: inherit; text-decoration: inherit;">definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Set of IP addresses and address ranges, in CIDR notation.
 {{% /md %}}</dd></dl>
@@ -2405,7 +2439,7 @@ The following state arguments are supported:
 <a href="#definitions_python" style="color: inherit; text-decoration: inherit;">definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Set of IP addresses and address ranges, in CIDR notation.
 {{% /md %}}</dd></dl>
@@ -2464,7 +2498,7 @@ The following state arguments are supported:
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An unique alphanumeric string to identify the `port_set`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2473,7 +2507,7 @@ The following state arguments are supported:
 <a href="#portset_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulevariablesportsetportset">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Port<wbr>Set<wbr>Port<wbr>Set</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulevariablesportsetportset">pulumi.<wbr>Input<Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Port<wbr>Set<wbr>Port<wbr>Set<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines a set of port ranges. See Port Set below for details.
 {{% /md %}}</dd></dl>
@@ -2486,7 +2520,7 @@ The following state arguments are supported:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An unique alphanumeric string to identify the `port_set`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2495,7 +2529,7 @@ The following state arguments are supported:
 <a href="#port_set_python" style="color: inherit; text-decoration: inherit;">port_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulevariablesportsetportset">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Port<wbr>Set<wbr>Port<wbr>Set<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulevariablesportsetportset">Input[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Port<wbr>Set<wbr>Port<wbr>Set<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines a set of port ranges. See Port Set below for details.
 {{% /md %}}</dd></dl>
@@ -2536,7 +2570,7 @@ The following state arguments are supported:
 <a href="#definitions_nodejs" style="color: inherit; text-decoration: inherit;">definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Set of port ranges.
 {{% /md %}}</dd></dl>
@@ -2549,7 +2583,7 @@ The following state arguments are supported:
 <a href="#definitions_python" style="color: inherit; text-decoration: inherit;">definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Set of port ranges.
 {{% /md %}}</dd></dl>
@@ -2644,7 +2678,7 @@ The following state arguments are supported:
 <a href="#rulessourcelist_nodejs" style="color: inherit; text-decoration: inherit;">rules<wbr>Source<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcerulessourcelist">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Rules<wbr>Source<wbr>List</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcerulessourcelist">pulumi.<wbr>Input<Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Rules<wbr>Source<wbr>List<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A configuration block containing **stateful** inspection criteria for a domain list rule group. See Rules Source List below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2653,7 +2687,7 @@ The following state arguments are supported:
 <a href="#rulesstring_nodejs" style="color: inherit; text-decoration: inherit;">rules<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The fully qualified name of a file in an S3 bucket that contains Suricata compatible intrusion preventions system (IPS) rules or the Suricata rules as a string. These rules contain **stateful** inspection criteria and the action to take for traffic that matches the criteria.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2662,7 +2696,7 @@ The following state arguments are supported:
 <a href="#statefulrules_nodejs" style="color: inherit; text-decoration: inherit;">stateful<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatefulrule">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatefulrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing **stateful** inspection criteria for 5-tuple rules to be used together in a rule group. See Stateful Rule below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2671,7 +2705,7 @@ The following state arguments are supported:
 <a href="#statelessrulesandcustomactions_nodejs" style="color: inherit; text-decoration: inherit;">stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactions">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactions">pulumi.<wbr>Input<Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A configuration block containing **stateless** inspection criteria for a stateless rule group. See Stateless Rules and Custom Actions below for details.
 {{% /md %}}</dd></dl>
@@ -2684,7 +2718,7 @@ The following state arguments are supported:
 <a href="#rules_source_list_python" style="color: inherit; text-decoration: inherit;">rules_<wbr>source_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcerulessourcelist">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Rules<wbr>Source<wbr>List<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcerulessourcelist">Input[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Rules<wbr>Source<wbr>List<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A configuration block containing **stateful** inspection criteria for a domain list rule group. See Rules Source List below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2693,7 +2727,7 @@ The following state arguments are supported:
 <a href="#rules_string_python" style="color: inherit; text-decoration: inherit;">rules_<wbr>string</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The fully qualified name of a file in an S3 bucket that contains Suricata compatible intrusion preventions system (IPS) rules or the Suricata rules as a string. These rules contain **stateful** inspection criteria and the action to take for traffic that matches the criteria.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2702,7 +2736,7 @@ The following state arguments are supported:
 <a href="#stateful_rules_python" style="color: inherit; text-decoration: inherit;">stateful_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatefulrule">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatefulrule">Input[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing **stateful** inspection criteria for 5-tuple rules to be used together in a rule group. See Stateful Rule below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2711,7 +2745,7 @@ The following state arguments are supported:
 <a href="#stateless_rules_and_custom_actions_python" style="color: inherit; text-decoration: inherit;">stateless_<wbr>rules_<wbr>and_<wbr>custom_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactions">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactions">Input[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A configuration block containing **stateless** inspection criteria for a stateless rule group. See Stateless Rules and Custom Actions below for details.
 {{% /md %}}</dd></dl>
@@ -2788,7 +2822,7 @@ The following state arguments are supported:
 <a href="#generatedrulestype_nodejs" style="color: inherit; text-decoration: inherit;">generated<wbr>Rules<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String value to specify whether domains in the target list are allowed or denied access. Valid values: `ALLOWLIST`, `DENYLIST`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2797,7 +2831,7 @@ The following state arguments are supported:
 <a href="#targettypes_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Set of types of domain specifications that are provided in the `targets` argument. Valid values: `HTTP_HOST`, `TLS_SNI`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2806,7 +2840,7 @@ The following state arguments are supported:
 <a href="#targets_nodejs" style="color: inherit; text-decoration: inherit;">targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Set of domains that you want to inspect for in your traffic flows.
 {{% /md %}}</dd></dl>
@@ -2819,7 +2853,7 @@ The following state arguments are supported:
 <a href="#generated_rules_type_python" style="color: inherit; text-decoration: inherit;">generated_<wbr>rules_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String value to specify whether domains in the target list are allowed or denied access. Valid values: `ALLOWLIST`, `DENYLIST`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2828,7 +2862,7 @@ The following state arguments are supported:
 <a href="#target_types_python" style="color: inherit; text-decoration: inherit;">target_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Set of types of domain specifications that are provided in the `targets` argument. Valid values: `HTTP_HOST`, `TLS_SNI`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2837,7 +2871,7 @@ The following state arguments are supported:
 <a href="#targets_python" style="color: inherit; text-decoration: inherit;">targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Set of domains that you want to inspect for in your traffic flows.
 {{% /md %}}</dd></dl>
@@ -2914,7 +2948,7 @@ The following state arguments are supported:
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Action to take with packets in a traffic flow when the flow matches the stateful rule criteria. For all actions, AWS Network Firewall performs the specified action and discontinues stateful inspection of the traffic flow. Valid values: `ALERT`, `DROP` or `PASS`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2923,7 +2957,7 @@ The following state arguments are supported:
 <a href="#header_nodejs" style="color: inherit; text-decoration: inherit;">header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatefulruleheader">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatefulruleheader">pulumi.<wbr>Input<Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule<wbr>Header<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A configuration block containing the stateful 5-tuple inspection criteria for the rule, used to inspect traffic flows. See Header below for details.
 {{% /md %}}</dd><dt class="property-required"
@@ -2932,7 +2966,7 @@ The following state arguments are supported:
 <a href="#ruleoptions_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatefulruleruleoption">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule<wbr>Rule<wbr>Option[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatefulruleruleoption">pulumi.<wbr>Input<pulumi.<wbr>Input<Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule<wbr>Rule<wbr>Option<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing additional settings for a stateful rule. See Rule Option below for details.
 {{% /md %}}</dd></dl>
@@ -2945,7 +2979,7 @@ The following state arguments are supported:
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Action to take with packets in a traffic flow when the flow matches the stateful rule criteria. For all actions, AWS Network Firewall performs the specified action and discontinues stateful inspection of the traffic flow. Valid values: `ALERT`, `DROP` or `PASS`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2954,7 +2988,7 @@ The following state arguments are supported:
 <a href="#header_python" style="color: inherit; text-decoration: inherit;">header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatefulruleheader">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule<wbr>Header<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatefulruleheader">Input[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule<wbr>Header<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A configuration block containing the stateful 5-tuple inspection criteria for the rule, used to inspect traffic flows. See Header below for details.
 {{% /md %}}</dd><dt class="property-required"
@@ -2963,7 +2997,7 @@ The following state arguments are supported:
 <a href="#rule_options_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatefulruleruleoption">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule<wbr>Rule<wbr>Option<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatefulruleruleoption">Input[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule<wbr>Rule<wbr>Option<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing additional settings for a stateful rule. See Rule Option below for details.
 {{% /md %}}</dd></dl>
@@ -3094,7 +3128,7 @@ The following state arguments are supported:
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The destination IP address or address range to inspect for, in CIDR notation. To match with any address, specify `ANY`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3103,7 +3137,7 @@ The following state arguments are supported:
 <a href="#destinationport_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The destination port to inspect for. To match with any address, specify `ANY`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3112,7 +3146,7 @@ The following state arguments are supported:
 <a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The direction of traffic flow to inspect. Valid values: `ANY` or `FORWARD`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3121,7 +3155,7 @@ The following state arguments are supported:
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The protocol to inspect. Valid values: `IP`, `TCP`, `UDP`, `ICMP`, `HTTP`, `FTP`, `TLS`, `SMB`, `DNS`, `DCERPC`, `SSH`, `SMTP`, `IMAP`, `MSN`, `KRB5`, `IKEV2`, `TFTP`, `NTP`, `DHCP`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3130,7 +3164,7 @@ The following state arguments are supported:
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The source IP address or address range for, in CIDR notation. To match with any address, specify `ANY`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3139,7 +3173,7 @@ The following state arguments are supported:
 <a href="#sourceport_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The source port to inspect for. To match with any address, specify `ANY`.
 {{% /md %}}</dd></dl>
@@ -3152,7 +3186,7 @@ The following state arguments are supported:
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The destination IP address or address range to inspect for, in CIDR notation. To match with any address, specify `ANY`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3161,7 +3195,7 @@ The following state arguments are supported:
 <a href="#destination_port_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The destination port to inspect for. To match with any address, specify `ANY`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3170,7 +3204,7 @@ The following state arguments are supported:
 <a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The direction of traffic flow to inspect. Valid values: `ANY` or `FORWARD`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3179,7 +3213,7 @@ The following state arguments are supported:
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The protocol to inspect. Valid values: `IP`, `TCP`, `UDP`, `ICMP`, `HTTP`, `FTP`, `TLS`, `SMB`, `DNS`, `DCERPC`, `SSH`, `SMTP`, `IMAP`, `MSN`, `KRB5`, `IKEV2`, `TFTP`, `NTP`, `DHCP`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3188,7 +3222,7 @@ The following state arguments are supported:
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The source IP address or address range for, in CIDR notation. To match with any address, specify `ANY`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3197,7 +3231,7 @@ The following state arguments are supported:
 <a href="#source_port_python" style="color: inherit; text-decoration: inherit;">source_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The source port to inspect for. To match with any address, specify `ANY`.
 {{% /md %}}</dd></dl>
@@ -3258,7 +3292,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#keyword_nodejs" style="color: inherit; text-decoration: inherit;">keyword</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Keyword defined by open source detection systems like Snort or Suricata for stateful rule inspection.
 See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.amazonaws.com/node31.html) or [Suricata Rule Options](https://suricata.readthedocs.io/en/suricata-5.0.1/rules/intro.html#rule-options) for more details.
@@ -3268,7 +3302,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Set of strings for additional settings to use in stateful rule inspection.
 {{% /md %}}</dd></dl>
@@ -3281,7 +3315,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#keyword_python" style="color: inherit; text-decoration: inherit;">keyword</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Keyword defined by open source detection systems like Snort or Suricata for stateful rule inspection.
 See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.amazonaws.com/node31.html) or [Suricata Rule Options](https://suricata.readthedocs.io/en/suricata-5.0.1/rules/intro.html#rule-options) for more details.
@@ -3291,7 +3325,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Set of strings for additional settings to use in stateful rule inspection.
 {{% /md %}}</dd></dl>
@@ -3350,7 +3384,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#statelessrules_nodejs" style="color: inherit; text-decoration: inherit;">stateless<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessrule">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing the stateless rules for use in the stateless rule group. See Stateless Rule below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3359,7 +3393,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#customactions_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomaction">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomaction">pulumi.<wbr>Input<pulumi.<wbr>Input<Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing custom action definitions that are available for use by the set of `stateless rule`. See Custom Action below for details.
 {{% /md %}}</dd></dl>
@@ -3372,7 +3406,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#stateless_rules_python" style="color: inherit; text-decoration: inherit;">stateless_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessrule">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessrule">Input[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing the stateless rules for use in the stateless rule group. See Stateless Rule below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3381,7 +3415,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#custom_actions_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomaction">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomaction">Input[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing custom action definitions that are available for use by the set of `stateless rule`. See Custom Action below for details.
 {{% /md %}}</dd></dl>
@@ -3440,7 +3474,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#actiondefinition_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinition">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinition">pulumi.<wbr>Input<Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the custom action associated with the `action_name`. See Action Definition below for details.
 {{% /md %}}</dd><dt class="property-required"
@@ -3449,7 +3483,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#actionname_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A friendly name of the custom action.
 {{% /md %}}</dd></dl>
@@ -3462,7 +3496,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#action_definition_python" style="color: inherit; text-decoration: inherit;">action_<wbr>definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinition">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinition">Input[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the custom action associated with the `action_name`. See Action Definition below for details.
 {{% /md %}}</dd><dt class="property-required"
@@ -3471,7 +3505,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#action_name_python" style="color: inherit; text-decoration: inherit;">action_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A friendly name of the custom action.
 {{% /md %}}</dd></dl>
@@ -3512,7 +3546,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#publishmetricaction_nodejs" style="color: inherit; text-decoration: inherit;">publish<wbr>Metric<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinitionpublishmetricaction">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinitionpublishmetricaction">pulumi.<wbr>Input<Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the stateless inspection criteria that publishes the specified metrics to Amazon CloudWatch for the matching packet. You can pair this custom action with any of the standard stateless rule actions. See Publish Metric Action below for details.
 {{% /md %}}</dd></dl>
@@ -3525,7 +3559,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#publish_metric_action_python" style="color: inherit; text-decoration: inherit;">publish_<wbr>metric_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinitionpublishmetricaction">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinitionpublishmetricaction">Input[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the stateless inspection criteria that publishes the specified metrics to Amazon CloudWatch for the matching packet. You can pair this custom action with any of the standard stateless rule actions. See Publish Metric Action below for details.
 {{% /md %}}</dd></dl>
@@ -3566,7 +3600,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinitionpublishmetricactiondimension">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action<wbr>Dimension[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinitionpublishmetricactiondimension">pulumi.<wbr>Input<pulumi.<wbr>Input<Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action<wbr>Dimension<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing the dimension settings to use for Amazon CloudWatch custom metrics. See Dimension below for details.
 {{% /md %}}</dd></dl>
@@ -3579,7 +3613,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinitionpublishmetricactiondimension">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action<wbr>Dimension<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinitionpublishmetricactiondimension">Input[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action<wbr>Dimension<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing the dimension settings to use for Amazon CloudWatch custom metrics. See Dimension below for details.
 {{% /md %}}</dd></dl>
@@ -3620,7 +3654,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value to use in the custom metric dimension.
 {{% /md %}}</dd></dl>
@@ -3633,7 +3667,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value to use in the custom metric dimension.
 {{% /md %}}</dd></dl>
@@ -3692,7 +3726,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}A setting that indicates the order in which to run this rule relative to all of the rules that are defined for a stateless rule group. AWS Network Firewall evaluates the rules in a rule group starting with the lowest priority setting.
 {{% /md %}}</dd><dt class="property-required"
@@ -3701,7 +3735,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#ruledefinition_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinition">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinition">pulumi.<wbr>Input<Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A configuration block defining the stateless 5-tuple packet inspection criteria and the action to take on a packet that matches the criteria. See Rule Definition below for details.
 {{% /md %}}</dd></dl>
@@ -3714,7 +3748,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}A setting that indicates the order in which to run this rule relative to all of the rules that are defined for a stateless rule group. AWS Network Firewall evaluates the rules in a rule group starting with the lowest priority setting.
 {{% /md %}}</dd><dt class="property-required"
@@ -3723,7 +3757,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#rule_definition_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinition">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinition">Input[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A configuration block defining the stateless 5-tuple packet inspection criteria and the action to take on a packet that matches the criteria. See Rule Definition below for details.
 {{% /md %}}</dd></dl>
@@ -3782,7 +3816,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Set of actions to take on a packet that matches one of the stateless rule definition's `match_attributes`. For every rule you must specify 1 standard action, and you can add custom actions. Standard actions include: `aws:pass`, `aws:drop`, `aws:forward_to_sfe`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3791,7 +3825,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#matchattributes_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributes">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributes">pulumi.<wbr>Input<Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A configuration block containing criteria for AWS Network Firewall to use to inspect an individual packet in stateless rule inspection. See Match Attributes below for details.
 {{% /md %}}</dd></dl>
@@ -3804,7 +3838,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Set of actions to take on a packet that matches one of the stateless rule definition's `match_attributes`. For every rule you must specify 1 standard action, and you can add custom actions. Standard actions include: `aws:pass`, `aws:drop`, `aws:forward_to_sfe`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3813,7 +3847,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#match_attributes_python" style="color: inherit; text-decoration: inherit;">match_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributes">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributes">Input[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A configuration block containing criteria for AWS Network Firewall to use to inspect an individual packet in stateless rule inspection. See Match Attributes below for details.
 {{% /md %}}</dd></dl>
@@ -3944,7 +3978,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#destinationports_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributesdestinationport">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Destination<wbr>Port[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributesdestinationport">pulumi.<wbr>Input<pulumi.<wbr>Input<Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Destination<wbr>Port<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the destination ports to inspect for. If not specified, this matches with any destination port. See Destination Port below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3953,7 +3987,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#destinations_nodejs" style="color: inherit; text-decoration: inherit;">destinations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributesdestination">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Destination[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributesdestination">pulumi.<wbr>Input<pulumi.<wbr>Input<Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Destination<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the destination IP address and address ranges to inspect for, in CIDR notation. If not specified, this matches with any destination address. See Destination below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3962,7 +3996,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#protocols_nodejs" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
     </dt>
     <dd>{{% md %}}Set of protocols to inspect for, specified using the protocol's assigned internet protocol number (IANA). If not specified, this matches with any protocol.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3971,7 +4005,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#sourceports_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributessourceport">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Source<wbr>Port[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributessourceport">pulumi.<wbr>Input<pulumi.<wbr>Input<Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Source<wbr>Port<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the source ports to inspect for. If not specified, this matches with any source port. See Source Port below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3980,7 +4014,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#sources_nodejs" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributessource">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Source[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributessource">pulumi.<wbr>Input<pulumi.<wbr>Input<Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Source<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the source IP address and address ranges to inspect for, in CIDR notation. If not specified, this matches with any source address. See Source below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3989,7 +4023,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#tcpflags_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Flags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributestcpflag">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Tcp<wbr>Flag[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributestcpflag">pulumi.<wbr>Input<pulumi.<wbr>Input<Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Tcp<wbr>Flag<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing the TCP flags and masks to inspect for. If not specified, this matches with any settings.
 {{% /md %}}</dd></dl>
@@ -4002,7 +4036,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#destination_ports_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributesdestinationport">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Destination<wbr>Port<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributesdestinationport">Input[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Destination<wbr>Port<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the destination ports to inspect for. If not specified, this matches with any destination port. See Destination Port below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4011,7 +4045,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#destinations_python" style="color: inherit; text-decoration: inherit;">destinations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributesdestination">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Destination<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributesdestination">Input[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Destination<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the destination IP address and address ranges to inspect for, in CIDR notation. If not specified, this matches with any destination address. See Destination below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4020,7 +4054,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#protocols_python" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[int]</span>
+        <span class="property-type">Input[int]]]</span>
     </dt>
     <dd>{{% md %}}Set of protocols to inspect for, specified using the protocol's assigned internet protocol number (IANA). If not specified, this matches with any protocol.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4029,7 +4063,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#source_ports_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributessourceport">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Source<wbr>Port<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributessourceport">Input[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Source<wbr>Port<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the source ports to inspect for. If not specified, this matches with any source port. See Source Port below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4038,7 +4072,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributessource">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributessource">Input[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Source<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the source IP address and address ranges to inspect for, in CIDR notation. If not specified, this matches with any source address. See Source below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4047,7 +4081,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#tcp_flags_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>flags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributestcpflag">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Tcp<wbr>Flag<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributestcpflag">Input[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Tcp<wbr>Flag<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing the TCP flags and masks to inspect for. If not specified, this matches with any settings.
 {{% /md %}}</dd></dl>
@@ -4088,7 +4122,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#addressdefinition_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An IP address or a block of IP addresses in CIDR notation. AWS Network Firewall supports all address ranges for IPv4.
 {{% /md %}}</dd></dl>
@@ -4101,7 +4135,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#address_definition_python" style="color: inherit; text-decoration: inherit;">address_<wbr>definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An IP address or a block of IP addresses in CIDR notation. AWS Network Firewall supports all address ranges for IPv4.
 {{% /md %}}</dd></dl>
@@ -4160,7 +4194,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#fromport_nodejs" style="color: inherit; text-decoration: inherit;">from<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The lower limit of the port range. This must be less than or equal to the `to_port`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4169,7 +4203,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#toport_nodejs" style="color: inherit; text-decoration: inherit;">to<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The upper limit of the port range. This must be greater than or equal to the `from_port`.
 {{% /md %}}</dd></dl>
@@ -4182,7 +4216,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#from_port_python" style="color: inherit; text-decoration: inherit;">from_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The lower limit of the port range. This must be less than or equal to the `to_port`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4191,7 +4225,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#to_port_python" style="color: inherit; text-decoration: inherit;">to_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The upper limit of the port range. This must be greater than or equal to the `from_port`.
 {{% /md %}}</dd></dl>
@@ -4232,7 +4266,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#addressdefinition_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An IP address or a block of IP addresses in CIDR notation. AWS Network Firewall supports all address ranges for IPv4.
 {{% /md %}}</dd></dl>
@@ -4245,7 +4279,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#address_definition_python" style="color: inherit; text-decoration: inherit;">address_<wbr>definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An IP address or a block of IP addresses in CIDR notation. AWS Network Firewall supports all address ranges for IPv4.
 {{% /md %}}</dd></dl>
@@ -4304,7 +4338,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#fromport_nodejs" style="color: inherit; text-decoration: inherit;">from<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The lower limit of the port range. This must be less than or equal to the `to_port`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4313,7 +4347,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#toport_nodejs" style="color: inherit; text-decoration: inherit;">to<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The upper limit of the port range. This must be greater than or equal to the `from_port`.
 {{% /md %}}</dd></dl>
@@ -4326,7 +4360,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#from_port_python" style="color: inherit; text-decoration: inherit;">from_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The lower limit of the port range. This must be less than or equal to the `to_port`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4335,7 +4369,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#to_port_python" style="color: inherit; text-decoration: inherit;">to_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The upper limit of the port range. This must be greater than or equal to the `from_port`.
 {{% /md %}}</dd></dl>
@@ -4398,7 +4432,7 @@ Valid values: `FIN`, `SYN`, `RST`, `PSH`, `ACK`, `URG`, `ECE`, `CWR`.
 <a href="#flags_nodejs" style="color: inherit; text-decoration: inherit;">flags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Set of flags to look for in a packet. This setting can only specify values that are also specified in `masks`.
 Valid values: `FIN`, `SYN`, `RST`, `PSH`, `ACK`, `URG`, `ECE`, `CWR`.
@@ -4408,7 +4442,7 @@ Valid values: `FIN`, `SYN`, `RST`, `PSH`, `ACK`, `URG`, `ECE`, `CWR`.
 <a href="#masks_nodejs" style="color: inherit; text-decoration: inherit;">masks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Set of flags to consider in the inspection. To inspect all flags, leave this empty.
 Valid values: `FIN`, `SYN`, `RST`, `PSH`, `ACK`, `URG`, `ECE`, `CWR`.
@@ -4422,7 +4456,7 @@ Valid values: `FIN`, `SYN`, `RST`, `PSH`, `ACK`, `URG`, `ECE`, `CWR`.
 <a href="#flags_python" style="color: inherit; text-decoration: inherit;">flags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Set of flags to look for in a packet. This setting can only specify values that are also specified in `masks`.
 Valid values: `FIN`, `SYN`, `RST`, `PSH`, `ACK`, `URG`, `ECE`, `CWR`.
@@ -4432,7 +4466,7 @@ Valid values: `FIN`, `SYN`, `RST`, `PSH`, `ACK`, `URG`, `ECE`, `CWR`.
 <a href="#masks_python" style="color: inherit; text-decoration: inherit;">masks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Set of flags to consider in the inspection. To inspect all flags, leave this empty.
 Valid values: `FIN`, `SYN`, `RST`, `PSH`, `ACK`, `URG`, `ECE`, `CWR`.

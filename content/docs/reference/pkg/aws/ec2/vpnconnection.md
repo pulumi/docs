@@ -65,9 +65,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2transitgateway"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2transitgateway"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -197,8 +197,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -303,19 +303,73 @@ const main = new aws.ec2.VpnConnection("main", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VpnConnection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VpnConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VpnConnection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VpnConnectionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VpnConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">customer_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_acceleration</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">local_ipv4_network_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">local_ipv6_network_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remote_ipv4_network_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remote_ipv6_network_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">static_routes_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">transit_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel1_dpd_timeout_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel1_dpd_timeout_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel1_ike_versions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tunnel1_inside_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel1_inside_ipv6_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel1_phase1_dh_group_numbers</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">, </span><span class="nx">tunnel1_phase1_encryption_algorithms</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tunnel1_phase1_integrity_algorithms</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tunnel1_phase1_lifetime_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel1_phase2_dh_group_numbers</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">, </span><span class="nx">tunnel1_phase2_encryption_algorithms</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tunnel1_phase2_integrity_algorithms</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tunnel1_phase2_lifetime_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel1_preshared_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel1_rekey_fuzz_percentage</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel1_rekey_margin_time_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel1_replay_window_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel1_startup_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel2_dpd_timeout_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel2_dpd_timeout_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel2_ike_versions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tunnel2_inside_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel2_inside_ipv6_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel2_phase1_dh_group_numbers</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">, </span><span class="nx">tunnel2_phase1_encryption_algorithms</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tunnel2_phase1_integrity_algorithms</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tunnel2_phase1_lifetime_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel2_phase2_dh_group_numbers</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">, </span><span class="nx">tunnel2_phase2_encryption_algorithms</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tunnel2_phase2_integrity_algorithms</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tunnel2_phase2_lifetime_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel2_preshared_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel2_rekey_fuzz_percentage</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel2_rekey_margin_time_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel2_replay_window_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel2_startup_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel_inside_ip_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpn_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">VpnConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                  <span class="nx">customer_gateway_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">enable_acceleration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                  <span class="nx">local_ipv4_network_cidr</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">local_ipv6_network_cidr</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">remote_ipv4_network_cidr</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">remote_ipv6_network_cidr</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">static_routes_only</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                  <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                  <span class="nx">transit_gateway_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">tunnel1_dpd_timeout_action</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">tunnel1_dpd_timeout_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                  <span class="nx">tunnel1_ike_versions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                  <span class="nx">tunnel1_inside_cidr</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">tunnel1_inside_ipv6_cidr</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">tunnel1_phase1_dh_group_numbers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[int]]]]</span> = None<span class="p">,</span>
+                  <span class="nx">tunnel1_phase1_encryption_algorithms</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                  <span class="nx">tunnel1_phase1_integrity_algorithms</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                  <span class="nx">tunnel1_phase1_lifetime_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                  <span class="nx">tunnel1_phase2_dh_group_numbers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[int]]]]</span> = None<span class="p">,</span>
+                  <span class="nx">tunnel1_phase2_encryption_algorithms</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                  <span class="nx">tunnel1_phase2_integrity_algorithms</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                  <span class="nx">tunnel1_phase2_lifetime_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                  <span class="nx">tunnel1_preshared_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">tunnel1_rekey_fuzz_percentage</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                  <span class="nx">tunnel1_rekey_margin_time_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                  <span class="nx">tunnel1_replay_window_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                  <span class="nx">tunnel1_startup_action</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">tunnel2_dpd_timeout_action</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">tunnel2_dpd_timeout_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                  <span class="nx">tunnel2_ike_versions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                  <span class="nx">tunnel2_inside_cidr</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">tunnel2_inside_ipv6_cidr</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">tunnel2_phase1_dh_group_numbers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[int]]]]</span> = None<span class="p">,</span>
+                  <span class="nx">tunnel2_phase1_encryption_algorithms</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                  <span class="nx">tunnel2_phase1_integrity_algorithms</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                  <span class="nx">tunnel2_phase1_lifetime_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                  <span class="nx">tunnel2_phase2_dh_group_numbers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[int]]]]</span> = None<span class="p">,</span>
+                  <span class="nx">tunnel2_phase2_encryption_algorithms</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                  <span class="nx">tunnel2_phase2_integrity_algorithms</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                  <span class="nx">tunnel2_phase2_lifetime_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                  <span class="nx">tunnel2_preshared_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">tunnel2_rekey_fuzz_percentage</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                  <span class="nx">tunnel2_rekey_margin_time_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                  <span class="nx">tunnel2_replay_window_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                  <span class="nx">tunnel2_startup_action</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">tunnel_inside_ip_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">vpn_gateway_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">VpnConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VpnConnectionArgs</a></span><span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVpnConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VpnConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VpnConnection</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVpnConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VpnConnectionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VpnConnection</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VpnConnection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VpnConnectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VpnConnection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">VpnConnectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -350,22 +404,32 @@ const main = new aws.ec2.VpnConnection("main", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">VpnConnectionArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -374,7 +438,7 @@ const main = new aws.ec2.VpnConnection("main", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -398,7 +462,7 @@ const main = new aws.ec2.VpnConnection("main", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1325,7 +1389,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#customergatewayid_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Gateway<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the customer gateway.
 {{% /md %}}</dd><dt class="property-required"
@@ -1334,7 +1398,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of VPN connection. The only type AWS supports at this time is "ipsec.1".
 {{% /md %}}</dd><dt class="property-optional"
@@ -1343,7 +1407,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#enableacceleration_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Acceleration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicate whether to enable acceleration for the VPN connection. Supports only EC2 Transit Gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1352,7 +1416,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#localipv4networkcidr_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Ipv4Network<wbr>Cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IPv4 CIDR on the customer gateway (on-premises) side of the VPN connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1361,7 +1425,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#localipv6networkcidr_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Ipv6Network<wbr>Cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IPv6 CIDR on the customer gateway (on-premises) side of the VPN connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1370,7 +1434,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#remoteipv4networkcidr_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Ipv4Network<wbr>Cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IPv4 CIDR on the AWS side of the VPN connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1379,7 +1443,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#remoteipv6networkcidr_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Ipv6Network<wbr>Cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IPv6 CIDR on the customer gateway (on-premises) side of the VPN connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1388,7 +1452,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#staticroutesonly_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Routes<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the VPN connection uses static routes exclusively. Static routes must be used for devices that don't support BGP.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1397,7 +1461,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Tags to apply to the connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1406,7 +1470,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#transitgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">transit<wbr>Gateway<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the EC2 Transit Gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1415,7 +1479,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel1dpdtimeoutaction_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Dpd<wbr>Timeout<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The action to take after DPD timeout occurs for the first VPN tunnel. Specify restart to restart the IKE initiation. Specify clear to end the IKE session. Valid values are `clear | none | restart`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1424,7 +1488,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel1dpdtimeoutseconds_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Dpd<wbr>Timeout<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of seconds after which a DPD timeout occurs for the first VPN tunnel. Valid value is equal or higher than `30`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1433,7 +1497,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel1ikeversions_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Ike<wbr>Versions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The IKE versions that are permitted for the first VPN tunnel. Valid values are `ikev1 | ikev2`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1442,7 +1506,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel1insidecidr_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Inside<wbr>Cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The CIDR block of the inside IP addresses for the first VPN tunnel. Valid value is a size /30 CIDR block from the 169.254.0.0/16 range.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1451,7 +1515,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel1insideipv6cidr_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Inside<wbr>Ipv6Cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The range of inside IPv6 addresses for the first VPN tunnel. Supports only EC2 Transit Gateway. Valid value is a size /126 CIDR block from the local fd00::/8 range.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1460,7 +1524,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel1phase1dhgroupnumbers_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Phase1Dh<wbr>Group<wbr>Numbers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
     </dt>
     <dd>{{% md %}}List of one or more Diffie-Hellman group numbers that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are ` 2 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1469,7 +1533,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel1phase1encryptionalgorithms_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Phase1Encryption<wbr>Algorithms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of one or more encryption algorithms that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1478,7 +1542,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel1phase1integrityalgorithms_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Phase1Integrity<wbr>Algorithms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}One or more integrity algorithms that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1487,7 +1551,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel1phase1lifetimeseconds_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Phase1Lifetime<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The lifetime for phase 1 of the IKE negotiation for the first VPN tunnel, in seconds. Valid value is between `900` and `28800`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1496,7 +1560,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel1phase2dhgroupnumbers_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Phase2Dh<wbr>Group<wbr>Numbers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
     </dt>
     <dd>{{% md %}}List of one or more Diffie-Hellman group numbers that are permitted for the first VPN tunnel for phase 2 IKE negotiations. Valid values are `2 | 5 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1505,7 +1569,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel1phase2encryptionalgorithms_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Phase2Encryption<wbr>Algorithms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of one or more encryption algorithms that are permitted for the first VPN tunnel for phase 2 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1514,7 +1578,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel1phase2integrityalgorithms_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Phase2Integrity<wbr>Algorithms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of one or more integrity algorithms that are permitted for the first VPN tunnel for phase 2 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1523,7 +1587,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel1phase2lifetimeseconds_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Phase2Lifetime<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The lifetime for phase 2 of the IKE negotiation for the first VPN tunnel, in seconds. Valid value is between `900` and `3600`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1532,7 +1596,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel1presharedkey_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Preshared<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The preshared key of the first VPN tunnel. The preshared key must be between 8 and 64 characters in length and cannot start with zero(0). Allowed characters are alphanumeric characters, periods(.) and underscores(_).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1541,7 +1605,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel1rekeyfuzzpercentage_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Rekey<wbr>Fuzz<wbr>Percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The percentage of the rekey window for the first VPN tunnel (determined by `tunnel1_rekey_margin_time_seconds`) during which the rekey time is randomly selected. Valid value is between `0` and `100`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1550,7 +1614,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel1rekeymargintimeseconds_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Rekey<wbr>Margin<wbr>Time<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The margin time, in seconds, before the phase 2 lifetime expires, during which the AWS side of the first VPN connection performs an IKE rekey. The exact time of the rekey is randomly selected based on the value for `tunnel1_rekey_fuzz_percentage`. Valid value is between `60` and half of `tunnel1_phase2_lifetime_seconds`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1559,7 +1623,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel1replaywindowsize_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Replay<wbr>Window<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of packets in an IKE replay window for the first VPN tunnel. Valid value is between `64` and `2048`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1568,7 +1632,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel1startupaction_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Startup<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The action to take when the establishing the tunnel for the first VPN connection. By default, your customer gateway device must initiate the IKE negotiation and bring up the tunnel. Specify start for AWS to initiate the IKE negotiation. Valid values are `add | start`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1577,7 +1641,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel2dpdtimeoutaction_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Dpd<wbr>Timeout<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The action to take after DPD timeout occurs for the second VPN tunnel. Specify restart to restart the IKE initiation. Specify clear to end the IKE session. Valid values are `clear | none | restart`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1586,7 +1650,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel2dpdtimeoutseconds_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Dpd<wbr>Timeout<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of seconds after which a DPD timeout occurs for the second VPN tunnel. Valid value is equal or higher than `30`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1595,7 +1659,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel2ikeversions_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Ike<wbr>Versions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The IKE versions that are permitted for the second VPN tunnel. Valid values are `ikev1 | ikev2`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1604,7 +1668,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel2insidecidr_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Inside<wbr>Cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The CIDR block of the inside IP addresses for the second VPN tunnel. Valid value is a size /30 CIDR block from the 169.254.0.0/16 range.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1613,7 +1677,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel2insideipv6cidr_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Inside<wbr>Ipv6Cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The range of inside IPv6 addresses for the second VPN tunnel. Supports only EC2 Transit Gateway. Valid value is a size /126 CIDR block from the local fd00::/8 range.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1622,7 +1686,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel2phase1dhgroupnumbers_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Phase1Dh<wbr>Group<wbr>Numbers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
     </dt>
     <dd>{{% md %}}List of one or more Diffie-Hellman group numbers that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are ` 2 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1631,7 +1695,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel2phase1encryptionalgorithms_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Phase1Encryption<wbr>Algorithms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of one or more encryption algorithms that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1640,7 +1704,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel2phase1integrityalgorithms_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Phase1Integrity<wbr>Algorithms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}One or more integrity algorithms that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1649,7 +1713,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel2phase1lifetimeseconds_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Phase1Lifetime<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The lifetime for phase 1 of the IKE negotiation for the second VPN tunnel, in seconds. Valid value is between `900` and `28800`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1658,7 +1722,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel2phase2dhgroupnumbers_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Phase2Dh<wbr>Group<wbr>Numbers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
     </dt>
     <dd>{{% md %}}List of one or more Diffie-Hellman group numbers that are permitted for the second VPN tunnel for phase 2 IKE negotiations. Valid values are `2 | 5 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1667,7 +1731,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel2phase2encryptionalgorithms_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Phase2Encryption<wbr>Algorithms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of one or more encryption algorithms that are permitted for the second VPN tunnel for phase 2 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1676,7 +1740,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel2phase2integrityalgorithms_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Phase2Integrity<wbr>Algorithms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of one or more integrity algorithms that are permitted for the second VPN tunnel for phase 2 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1685,7 +1749,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel2phase2lifetimeseconds_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Phase2Lifetime<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The lifetime for phase 2 of the IKE negotiation for the second VPN tunnel, in seconds. Valid value is between `900` and `3600`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1694,7 +1758,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel2presharedkey_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Preshared<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The preshared key of the second VPN tunnel. The preshared key must be between 8 and 64 characters in length and cannot start with zero(0). Allowed characters are alphanumeric characters, periods(.) and underscores(_).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1703,7 +1767,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel2rekeyfuzzpercentage_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Rekey<wbr>Fuzz<wbr>Percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The percentage of the rekey window for the second VPN tunnel (determined by `tunnel2_rekey_margin_time_seconds`) during which the rekey time is randomly selected. Valid value is between `0` and `100`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1712,7 +1776,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel2rekeymargintimeseconds_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Rekey<wbr>Margin<wbr>Time<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The margin time, in seconds, before the phase 2 lifetime expires, during which the AWS side of the second VPN connection performs an IKE rekey. The exact time of the rekey is randomly selected based on the value for `tunnel2_rekey_fuzz_percentage`. Valid value is between `60` and half of `tunnel2_phase2_lifetime_seconds`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1721,7 +1785,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel2replaywindowsize_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Replay<wbr>Window<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of packets in an IKE replay window for the second VPN tunnel. Valid value is between `64` and `2048`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1730,7 +1794,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel2startupaction_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Startup<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The action to take when the establishing the tunnel for the second VPN connection. By default, your customer gateway device must initiate the IKE negotiation and bring up the tunnel. Specify start for AWS to initiate the IKE negotiation. Valid values are `add | start`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1739,7 +1803,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnelinsideipversion_nodejs" style="color: inherit; text-decoration: inherit;">tunnel<wbr>Inside<wbr>Ip<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Indicate whether the VPN tunnels process IPv4 or IPv6 traffic. Valid values are `ipv4 | ipv6`. `ipv6` Supports only EC2 Transit Gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1748,7 +1812,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#vpngatewayid_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Gateway<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Private Gateway.
 {{% /md %}}</dd></dl>
@@ -1761,7 +1825,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#customer_gateway_id_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>gateway_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the customer gateway.
 {{% /md %}}</dd><dt class="property-required"
@@ -1770,7 +1834,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of VPN connection. The only type AWS supports at this time is "ipsec.1".
 {{% /md %}}</dd><dt class="property-optional"
@@ -1779,7 +1843,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#enable_acceleration_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>acceleration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicate whether to enable acceleration for the VPN connection. Supports only EC2 Transit Gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1788,7 +1852,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#local_ipv4_network_cidr_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ipv4_<wbr>network_<wbr>cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IPv4 CIDR on the customer gateway (on-premises) side of the VPN connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1797,7 +1861,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#local_ipv6_network_cidr_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ipv6_<wbr>network_<wbr>cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IPv6 CIDR on the customer gateway (on-premises) side of the VPN connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1806,7 +1870,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#remote_ipv4_network_cidr_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>ipv4_<wbr>network_<wbr>cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IPv4 CIDR on the AWS side of the VPN connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1815,7 +1879,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#remote_ipv6_network_cidr_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>ipv6_<wbr>network_<wbr>cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IPv6 CIDR on the customer gateway (on-premises) side of the VPN connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1824,7 +1888,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#static_routes_only_python" style="color: inherit; text-decoration: inherit;">static_<wbr>routes_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the VPN connection uses static routes exclusively. Static routes must be used for devices that don't support BGP.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1833,7 +1897,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Tags to apply to the connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1842,7 +1906,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#transit_gateway_id_python" style="color: inherit; text-decoration: inherit;">transit_<wbr>gateway_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the EC2 Transit Gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1851,7 +1915,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel1_dpd_timeout_action_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>dpd_<wbr>timeout_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The action to take after DPD timeout occurs for the first VPN tunnel. Specify restart to restart the IKE initiation. Specify clear to end the IKE session. Valid values are `clear | none | restart`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1860,7 +1924,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel1_dpd_timeout_seconds_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>dpd_<wbr>timeout_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of seconds after which a DPD timeout occurs for the first VPN tunnel. Valid value is equal or higher than `30`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1869,7 +1933,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel1_ike_versions_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>ike_<wbr>versions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The IKE versions that are permitted for the first VPN tunnel. Valid values are `ikev1 | ikev2`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1878,7 +1942,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel1_inside_cidr_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>inside_<wbr>cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The CIDR block of the inside IP addresses for the first VPN tunnel. Valid value is a size /30 CIDR block from the 169.254.0.0/16 range.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1887,7 +1951,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel1_inside_ipv6_cidr_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>inside_<wbr>ipv6_<wbr>cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The range of inside IPv6 addresses for the first VPN tunnel. Supports only EC2 Transit Gateway. Valid value is a size /126 CIDR block from the local fd00::/8 range.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1896,7 +1960,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel1_phase1_dh_group_numbers_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>phase1_<wbr>dh_<wbr>group_<wbr>numbers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[int]</span>
+        <span class="property-type">Input[int]]]</span>
     </dt>
     <dd>{{% md %}}List of one or more Diffie-Hellman group numbers that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are ` 2 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1905,7 +1969,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel1_phase1_encryption_algorithms_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>phase1_<wbr>encryption_<wbr>algorithms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of one or more encryption algorithms that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1914,7 +1978,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel1_phase1_integrity_algorithms_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>phase1_<wbr>integrity_<wbr>algorithms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}One or more integrity algorithms that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1923,7 +1987,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel1_phase1_lifetime_seconds_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>phase1_<wbr>lifetime_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The lifetime for phase 1 of the IKE negotiation for the first VPN tunnel, in seconds. Valid value is between `900` and `28800`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1932,7 +1996,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel1_phase2_dh_group_numbers_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>phase2_<wbr>dh_<wbr>group_<wbr>numbers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[int]</span>
+        <span class="property-type">Input[int]]]</span>
     </dt>
     <dd>{{% md %}}List of one or more Diffie-Hellman group numbers that are permitted for the first VPN tunnel for phase 2 IKE negotiations. Valid values are `2 | 5 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1941,7 +2005,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel1_phase2_encryption_algorithms_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>phase2_<wbr>encryption_<wbr>algorithms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of one or more encryption algorithms that are permitted for the first VPN tunnel for phase 2 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1950,7 +2014,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel1_phase2_integrity_algorithms_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>phase2_<wbr>integrity_<wbr>algorithms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of one or more integrity algorithms that are permitted for the first VPN tunnel for phase 2 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1959,7 +2023,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel1_phase2_lifetime_seconds_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>phase2_<wbr>lifetime_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The lifetime for phase 2 of the IKE negotiation for the first VPN tunnel, in seconds. Valid value is between `900` and `3600`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1968,7 +2032,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel1_preshared_key_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>preshared_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The preshared key of the first VPN tunnel. The preshared key must be between 8 and 64 characters in length and cannot start with zero(0). Allowed characters are alphanumeric characters, periods(.) and underscores(_).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1977,7 +2041,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel1_rekey_fuzz_percentage_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>rekey_<wbr>fuzz_<wbr>percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The percentage of the rekey window for the first VPN tunnel (determined by `tunnel1_rekey_margin_time_seconds`) during which the rekey time is randomly selected. Valid value is between `0` and `100`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1986,7 +2050,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel1_rekey_margin_time_seconds_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>rekey_<wbr>margin_<wbr>time_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The margin time, in seconds, before the phase 2 lifetime expires, during which the AWS side of the first VPN connection performs an IKE rekey. The exact time of the rekey is randomly selected based on the value for `tunnel1_rekey_fuzz_percentage`. Valid value is between `60` and half of `tunnel1_phase2_lifetime_seconds`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1995,7 +2059,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel1_replay_window_size_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>replay_<wbr>window_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of packets in an IKE replay window for the first VPN tunnel. Valid value is between `64` and `2048`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2004,7 +2068,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel1_startup_action_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>startup_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The action to take when the establishing the tunnel for the first VPN connection. By default, your customer gateway device must initiate the IKE negotiation and bring up the tunnel. Specify start for AWS to initiate the IKE negotiation. Valid values are `add | start`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2013,7 +2077,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel2_dpd_timeout_action_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>dpd_<wbr>timeout_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The action to take after DPD timeout occurs for the second VPN tunnel. Specify restart to restart the IKE initiation. Specify clear to end the IKE session. Valid values are `clear | none | restart`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2022,7 +2086,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel2_dpd_timeout_seconds_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>dpd_<wbr>timeout_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of seconds after which a DPD timeout occurs for the second VPN tunnel. Valid value is equal or higher than `30`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2031,7 +2095,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel2_ike_versions_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>ike_<wbr>versions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The IKE versions that are permitted for the second VPN tunnel. Valid values are `ikev1 | ikev2`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2040,7 +2104,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel2_inside_cidr_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>inside_<wbr>cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The CIDR block of the inside IP addresses for the second VPN tunnel. Valid value is a size /30 CIDR block from the 169.254.0.0/16 range.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2049,7 +2113,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel2_inside_ipv6_cidr_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>inside_<wbr>ipv6_<wbr>cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The range of inside IPv6 addresses for the second VPN tunnel. Supports only EC2 Transit Gateway. Valid value is a size /126 CIDR block from the local fd00::/8 range.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2058,7 +2122,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel2_phase1_dh_group_numbers_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>phase1_<wbr>dh_<wbr>group_<wbr>numbers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[int]</span>
+        <span class="property-type">Input[int]]]</span>
     </dt>
     <dd>{{% md %}}List of one or more Diffie-Hellman group numbers that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are ` 2 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2067,7 +2131,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel2_phase1_encryption_algorithms_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>phase1_<wbr>encryption_<wbr>algorithms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of one or more encryption algorithms that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2076,7 +2140,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel2_phase1_integrity_algorithms_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>phase1_<wbr>integrity_<wbr>algorithms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}One or more integrity algorithms that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2085,7 +2149,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel2_phase1_lifetime_seconds_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>phase1_<wbr>lifetime_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The lifetime for phase 1 of the IKE negotiation for the second VPN tunnel, in seconds. Valid value is between `900` and `28800`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2094,7 +2158,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel2_phase2_dh_group_numbers_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>phase2_<wbr>dh_<wbr>group_<wbr>numbers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[int]</span>
+        <span class="property-type">Input[int]]]</span>
     </dt>
     <dd>{{% md %}}List of one or more Diffie-Hellman group numbers that are permitted for the second VPN tunnel for phase 2 IKE negotiations. Valid values are `2 | 5 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2103,7 +2167,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel2_phase2_encryption_algorithms_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>phase2_<wbr>encryption_<wbr>algorithms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of one or more encryption algorithms that are permitted for the second VPN tunnel for phase 2 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2112,7 +2176,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel2_phase2_integrity_algorithms_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>phase2_<wbr>integrity_<wbr>algorithms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of one or more integrity algorithms that are permitted for the second VPN tunnel for phase 2 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2121,7 +2185,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel2_phase2_lifetime_seconds_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>phase2_<wbr>lifetime_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The lifetime for phase 2 of the IKE negotiation for the second VPN tunnel, in seconds. Valid value is between `900` and `3600`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2130,7 +2194,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel2_preshared_key_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>preshared_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The preshared key of the second VPN tunnel. The preshared key must be between 8 and 64 characters in length and cannot start with zero(0). Allowed characters are alphanumeric characters, periods(.) and underscores(_).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2139,7 +2203,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel2_rekey_fuzz_percentage_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>rekey_<wbr>fuzz_<wbr>percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The percentage of the rekey window for the second VPN tunnel (determined by `tunnel2_rekey_margin_time_seconds`) during which the rekey time is randomly selected. Valid value is between `0` and `100`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2148,7 +2212,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel2_rekey_margin_time_seconds_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>rekey_<wbr>margin_<wbr>time_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The margin time, in seconds, before the phase 2 lifetime expires, during which the AWS side of the second VPN connection performs an IKE rekey. The exact time of the rekey is randomly selected based on the value for `tunnel2_rekey_fuzz_percentage`. Valid value is between `60` and half of `tunnel2_phase2_lifetime_seconds`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2157,7 +2221,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel2_replay_window_size_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>replay_<wbr>window_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of packets in an IKE replay window for the second VPN tunnel. Valid value is between `64` and `2048`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2166,7 +2230,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel2_startup_action_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>startup_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The action to take when the establishing the tunnel for the second VPN connection. By default, your customer gateway device must initiate the IKE negotiation and bring up the tunnel. Specify start for AWS to initiate the IKE negotiation. Valid values are `add | start`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2175,7 +2239,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tunnel_inside_ip_version_python" style="color: inherit; text-decoration: inherit;">tunnel_<wbr>inside_<wbr>ip_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Indicate whether the VPN tunnels process IPv4 or IPv6 traffic. Valid values are `ipv4 | ipv6`. `ipv6` Supports only EC2 Transit Gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2184,7 +2248,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#vpn_gateway_id_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>gateway_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Private Gateway.
 {{% /md %}}</dd></dl>
@@ -2785,20 +2849,85 @@ Get an existing VpnConnection resource's state with the given name, ID, and opti
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">VpnConnectionState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">VpnConnection</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">VpnConnectionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">VpnConnection</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">customer_gateway_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">customer_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_acceleration</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">local_ipv4_network_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">local_ipv6_network_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remote_ipv4_network_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remote_ipv6_network_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routes</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnConnectionRouteArgs]]</span> = None<span class="p">, </span><span class="nx">static_routes_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">transit_gateway_attachment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">transit_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel1_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel1_bgp_asn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel1_bgp_holdtime</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel1_cgw_inside_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel1_dpd_timeout_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel1_dpd_timeout_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel1_ike_versions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tunnel1_inside_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel1_inside_ipv6_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel1_phase1_dh_group_numbers</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">, </span><span class="nx">tunnel1_phase1_encryption_algorithms</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tunnel1_phase1_integrity_algorithms</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tunnel1_phase1_lifetime_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel1_phase2_dh_group_numbers</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">, </span><span class="nx">tunnel1_phase2_encryption_algorithms</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tunnel1_phase2_integrity_algorithms</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tunnel1_phase2_lifetime_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel1_preshared_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel1_rekey_fuzz_percentage</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel1_rekey_margin_time_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel1_replay_window_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel1_startup_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel1_vgw_inside_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel2_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel2_bgp_asn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel2_bgp_holdtime</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel2_cgw_inside_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel2_dpd_timeout_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel2_dpd_timeout_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel2_ike_versions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tunnel2_inside_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel2_inside_ipv6_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel2_phase1_dh_group_numbers</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">, </span><span class="nx">tunnel2_phase1_encryption_algorithms</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tunnel2_phase1_integrity_algorithms</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tunnel2_phase1_lifetime_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel2_phase2_dh_group_numbers</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">, </span><span class="nx">tunnel2_phase2_encryption_algorithms</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tunnel2_phase2_integrity_algorithms</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tunnel2_phase2_lifetime_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel2_preshared_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel2_rekey_fuzz_percentage</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel2_rekey_margin_time_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel2_replay_window_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel2_startup_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel2_vgw_inside_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel_inside_ip_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vgw_telemetries</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnConnectionVgwTelemetryArgs]]</span> = None<span class="p">, </span><span class="nx">vpn_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> VpnConnection</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">customer_gateway_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">customer_gateway_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">enable_acceleration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">local_ipv4_network_cidr</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">local_ipv6_network_cidr</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">remote_ipv4_network_cidr</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">remote_ipv6_network_cidr</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">routes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[VpnConnectionRouteArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">static_routes_only</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">transit_gateway_attachment_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">transit_gateway_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel1_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel1_bgp_asn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel1_bgp_holdtime</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel1_cgw_inside_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel1_dpd_timeout_action</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel1_dpd_timeout_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel1_ike_versions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel1_inside_cidr</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel1_inside_ipv6_cidr</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel1_phase1_dh_group_numbers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[int]]]]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel1_phase1_encryption_algorithms</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel1_phase1_integrity_algorithms</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel1_phase1_lifetime_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel1_phase2_dh_group_numbers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[int]]]]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel1_phase2_encryption_algorithms</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel1_phase2_integrity_algorithms</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel1_phase2_lifetime_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel1_preshared_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel1_rekey_fuzz_percentage</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel1_rekey_margin_time_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel1_replay_window_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel1_startup_action</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel1_vgw_inside_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel2_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel2_bgp_asn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel2_bgp_holdtime</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel2_cgw_inside_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel2_dpd_timeout_action</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel2_dpd_timeout_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel2_ike_versions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel2_inside_cidr</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel2_inside_ipv6_cidr</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel2_phase1_dh_group_numbers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[int]]]]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel2_phase1_encryption_algorithms</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel2_phase1_integrity_algorithms</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel2_phase1_lifetime_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel2_phase2_dh_group_numbers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[int]]]]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel2_phase2_encryption_algorithms</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel2_phase2_integrity_algorithms</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel2_phase2_lifetime_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel2_preshared_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel2_rekey_fuzz_percentage</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel2_rekey_margin_time_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel2_replay_window_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel2_startup_action</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel2_vgw_inside_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel_inside_ip_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">vgw_telemetries</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[VpnConnectionVgwTelemetryArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">vpn_gateway_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> VpnConnection</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVpnConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">VpnConnectionState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VpnConnection</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVpnConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">VpnConnectionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VpnConnection</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">VpnConnection</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">VpnConnectionState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">VpnConnection</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">VpnConnectionState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4045,7 +4174,7 @@ The following state arguments are supported:
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the VPN Connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4054,7 +4183,7 @@ The following state arguments are supported:
 <a href="#state_customergatewayconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Gateway<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The configuration information for the VPN connection's customer gateway (in the native XML format).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4063,7 +4192,7 @@ The following state arguments are supported:
 <a href="#state_customergatewayid_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Gateway<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the customer gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4072,7 +4201,7 @@ The following state arguments are supported:
 <a href="#state_enableacceleration_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Acceleration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicate whether to enable acceleration for the VPN connection. Supports only EC2 Transit Gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4081,7 +4210,7 @@ The following state arguments are supported:
 <a href="#state_localipv4networkcidr_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Ipv4Network<wbr>Cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IPv4 CIDR on the customer gateway (on-premises) side of the VPN connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4090,7 +4219,7 @@ The following state arguments are supported:
 <a href="#state_localipv6networkcidr_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Ipv6Network<wbr>Cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IPv6 CIDR on the customer gateway (on-premises) side of the VPN connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4099,7 +4228,7 @@ The following state arguments are supported:
 <a href="#state_remoteipv4networkcidr_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Ipv4Network<wbr>Cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IPv4 CIDR on the AWS side of the VPN connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4108,7 +4237,7 @@ The following state arguments are supported:
 <a href="#state_remoteipv6networkcidr_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Ipv6Network<wbr>Cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IPv6 CIDR on the customer gateway (on-premises) side of the VPN connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4117,7 +4246,7 @@ The following state arguments are supported:
 <a href="#state_routes_nodejs" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnconnectionroute">Vpn<wbr>Connection<wbr>Route[]</a></span>
+        <span class="property-type"><a href="#vpnconnectionroute">pulumi.<wbr>Input<pulumi.<wbr>Input<Vpn<wbr>Connection<wbr>Route<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4125,7 +4254,7 @@ The following state arguments are supported:
 <a href="#state_staticroutesonly_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Routes<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the VPN connection uses static routes exclusively. Static routes must be used for devices that don't support BGP.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4134,7 +4263,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Tags to apply to the connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4143,7 +4272,7 @@ The following state arguments are supported:
 <a href="#state_transitgatewayattachmentid_nodejs" style="color: inherit; text-decoration: inherit;">transit<wbr>Gateway<wbr>Attachment<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}When associated with an EC2 Transit Gateway (`transit_gateway_id` argument), the attachment ID. See also the `aws.ec2.Tag` resource for tagging the EC2 Transit Gateway VPN Attachment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4152,7 +4281,7 @@ The following state arguments are supported:
 <a href="#state_transitgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">transit<wbr>Gateway<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the EC2 Transit Gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4161,7 +4290,7 @@ The following state arguments are supported:
 <a href="#state_tunnel1address_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The public IP address of the first VPN tunnel.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4170,7 +4299,7 @@ The following state arguments are supported:
 <a href="#state_tunnel1bgpasn_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Bgp<wbr>Asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The bgp asn number of the first VPN tunnel.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4179,7 +4308,7 @@ The following state arguments are supported:
 <a href="#state_tunnel1bgpholdtime_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Bgp<wbr>Holdtime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The bgp holdtime of the first VPN tunnel.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4188,7 +4317,7 @@ The following state arguments are supported:
 <a href="#state_tunnel1cgwinsideaddress_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Cgw<wbr>Inside<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The RFC 6890 link-local address of the first VPN tunnel (Customer Gateway Side).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4197,7 +4326,7 @@ The following state arguments are supported:
 <a href="#state_tunnel1dpdtimeoutaction_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Dpd<wbr>Timeout<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The action to take after DPD timeout occurs for the first VPN tunnel. Specify restart to restart the IKE initiation. Specify clear to end the IKE session. Valid values are `clear | none | restart`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4206,7 +4335,7 @@ The following state arguments are supported:
 <a href="#state_tunnel1dpdtimeoutseconds_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Dpd<wbr>Timeout<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of seconds after which a DPD timeout occurs for the first VPN tunnel. Valid value is equal or higher than `30`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4215,7 +4344,7 @@ The following state arguments are supported:
 <a href="#state_tunnel1ikeversions_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Ike<wbr>Versions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The IKE versions that are permitted for the first VPN tunnel. Valid values are `ikev1 | ikev2`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4224,7 +4353,7 @@ The following state arguments are supported:
 <a href="#state_tunnel1insidecidr_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Inside<wbr>Cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The CIDR block of the inside IP addresses for the first VPN tunnel. Valid value is a size /30 CIDR block from the 169.254.0.0/16 range.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4233,7 +4362,7 @@ The following state arguments are supported:
 <a href="#state_tunnel1insideipv6cidr_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Inside<wbr>Ipv6Cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The range of inside IPv6 addresses for the first VPN tunnel. Supports only EC2 Transit Gateway. Valid value is a size /126 CIDR block from the local fd00::/8 range.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4242,7 +4371,7 @@ The following state arguments are supported:
 <a href="#state_tunnel1phase1dhgroupnumbers_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Phase1Dh<wbr>Group<wbr>Numbers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
     </dt>
     <dd>{{% md %}}List of one or more Diffie-Hellman group numbers that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are ` 2 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4251,7 +4380,7 @@ The following state arguments are supported:
 <a href="#state_tunnel1phase1encryptionalgorithms_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Phase1Encryption<wbr>Algorithms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of one or more encryption algorithms that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4260,7 +4389,7 @@ The following state arguments are supported:
 <a href="#state_tunnel1phase1integrityalgorithms_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Phase1Integrity<wbr>Algorithms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}One or more integrity algorithms that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4269,7 +4398,7 @@ The following state arguments are supported:
 <a href="#state_tunnel1phase1lifetimeseconds_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Phase1Lifetime<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The lifetime for phase 1 of the IKE negotiation for the first VPN tunnel, in seconds. Valid value is between `900` and `28800`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4278,7 +4407,7 @@ The following state arguments are supported:
 <a href="#state_tunnel1phase2dhgroupnumbers_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Phase2Dh<wbr>Group<wbr>Numbers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
     </dt>
     <dd>{{% md %}}List of one or more Diffie-Hellman group numbers that are permitted for the first VPN tunnel for phase 2 IKE negotiations. Valid values are `2 | 5 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4287,7 +4416,7 @@ The following state arguments are supported:
 <a href="#state_tunnel1phase2encryptionalgorithms_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Phase2Encryption<wbr>Algorithms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of one or more encryption algorithms that are permitted for the first VPN tunnel for phase 2 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4296,7 +4425,7 @@ The following state arguments are supported:
 <a href="#state_tunnel1phase2integrityalgorithms_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Phase2Integrity<wbr>Algorithms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of one or more integrity algorithms that are permitted for the first VPN tunnel for phase 2 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4305,7 +4434,7 @@ The following state arguments are supported:
 <a href="#state_tunnel1phase2lifetimeseconds_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Phase2Lifetime<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The lifetime for phase 2 of the IKE negotiation for the first VPN tunnel, in seconds. Valid value is between `900` and `3600`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4314,7 +4443,7 @@ The following state arguments are supported:
 <a href="#state_tunnel1presharedkey_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Preshared<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The preshared key of the first VPN tunnel. The preshared key must be between 8 and 64 characters in length and cannot start with zero(0). Allowed characters are alphanumeric characters, periods(.) and underscores(_).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4323,7 +4452,7 @@ The following state arguments are supported:
 <a href="#state_tunnel1rekeyfuzzpercentage_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Rekey<wbr>Fuzz<wbr>Percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The percentage of the rekey window for the first VPN tunnel (determined by `tunnel1_rekey_margin_time_seconds`) during which the rekey time is randomly selected. Valid value is between `0` and `100`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4332,7 +4461,7 @@ The following state arguments are supported:
 <a href="#state_tunnel1rekeymargintimeseconds_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Rekey<wbr>Margin<wbr>Time<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The margin time, in seconds, before the phase 2 lifetime expires, during which the AWS side of the first VPN connection performs an IKE rekey. The exact time of the rekey is randomly selected based on the value for `tunnel1_rekey_fuzz_percentage`. Valid value is between `60` and half of `tunnel1_phase2_lifetime_seconds`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4341,7 +4470,7 @@ The following state arguments are supported:
 <a href="#state_tunnel1replaywindowsize_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Replay<wbr>Window<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of packets in an IKE replay window for the first VPN tunnel. Valid value is between `64` and `2048`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4350,7 +4479,7 @@ The following state arguments are supported:
 <a href="#state_tunnel1startupaction_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Startup<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The action to take when the establishing the tunnel for the first VPN connection. By default, your customer gateway device must initiate the IKE negotiation and bring up the tunnel. Specify start for AWS to initiate the IKE negotiation. Valid values are `add | start`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4359,7 +4488,7 @@ The following state arguments are supported:
 <a href="#state_tunnel1vgwinsideaddress_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Vgw<wbr>Inside<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The RFC 6890 link-local address of the first VPN tunnel (VPN Gateway Side).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4368,7 +4497,7 @@ The following state arguments are supported:
 <a href="#state_tunnel2address_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The public IP address of the second VPN tunnel.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4377,7 +4506,7 @@ The following state arguments are supported:
 <a href="#state_tunnel2bgpasn_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Bgp<wbr>Asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The bgp asn number of the second VPN tunnel.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4386,7 +4515,7 @@ The following state arguments are supported:
 <a href="#state_tunnel2bgpholdtime_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Bgp<wbr>Holdtime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The bgp holdtime of the second VPN tunnel.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4395,7 +4524,7 @@ The following state arguments are supported:
 <a href="#state_tunnel2cgwinsideaddress_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Cgw<wbr>Inside<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The RFC 6890 link-local address of the second VPN tunnel (Customer Gateway Side).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4404,7 +4533,7 @@ The following state arguments are supported:
 <a href="#state_tunnel2dpdtimeoutaction_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Dpd<wbr>Timeout<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The action to take after DPD timeout occurs for the second VPN tunnel. Specify restart to restart the IKE initiation. Specify clear to end the IKE session. Valid values are `clear | none | restart`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4413,7 +4542,7 @@ The following state arguments are supported:
 <a href="#state_tunnel2dpdtimeoutseconds_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Dpd<wbr>Timeout<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of seconds after which a DPD timeout occurs for the second VPN tunnel. Valid value is equal or higher than `30`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4422,7 +4551,7 @@ The following state arguments are supported:
 <a href="#state_tunnel2ikeversions_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Ike<wbr>Versions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The IKE versions that are permitted for the second VPN tunnel. Valid values are `ikev1 | ikev2`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4431,7 +4560,7 @@ The following state arguments are supported:
 <a href="#state_tunnel2insidecidr_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Inside<wbr>Cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The CIDR block of the inside IP addresses for the second VPN tunnel. Valid value is a size /30 CIDR block from the 169.254.0.0/16 range.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4440,7 +4569,7 @@ The following state arguments are supported:
 <a href="#state_tunnel2insideipv6cidr_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Inside<wbr>Ipv6Cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The range of inside IPv6 addresses for the second VPN tunnel. Supports only EC2 Transit Gateway. Valid value is a size /126 CIDR block from the local fd00::/8 range.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4449,7 +4578,7 @@ The following state arguments are supported:
 <a href="#state_tunnel2phase1dhgroupnumbers_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Phase1Dh<wbr>Group<wbr>Numbers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
     </dt>
     <dd>{{% md %}}List of one or more Diffie-Hellman group numbers that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are ` 2 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4458,7 +4587,7 @@ The following state arguments are supported:
 <a href="#state_tunnel2phase1encryptionalgorithms_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Phase1Encryption<wbr>Algorithms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of one or more encryption algorithms that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4467,7 +4596,7 @@ The following state arguments are supported:
 <a href="#state_tunnel2phase1integrityalgorithms_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Phase1Integrity<wbr>Algorithms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}One or more integrity algorithms that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4476,7 +4605,7 @@ The following state arguments are supported:
 <a href="#state_tunnel2phase1lifetimeseconds_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Phase1Lifetime<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The lifetime for phase 1 of the IKE negotiation for the second VPN tunnel, in seconds. Valid value is between `900` and `28800`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4485,7 +4614,7 @@ The following state arguments are supported:
 <a href="#state_tunnel2phase2dhgroupnumbers_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Phase2Dh<wbr>Group<wbr>Numbers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
     </dt>
     <dd>{{% md %}}List of one or more Diffie-Hellman group numbers that are permitted for the second VPN tunnel for phase 2 IKE negotiations. Valid values are `2 | 5 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4494,7 +4623,7 @@ The following state arguments are supported:
 <a href="#state_tunnel2phase2encryptionalgorithms_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Phase2Encryption<wbr>Algorithms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of one or more encryption algorithms that are permitted for the second VPN tunnel for phase 2 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4503,7 +4632,7 @@ The following state arguments are supported:
 <a href="#state_tunnel2phase2integrityalgorithms_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Phase2Integrity<wbr>Algorithms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of one or more integrity algorithms that are permitted for the second VPN tunnel for phase 2 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4512,7 +4641,7 @@ The following state arguments are supported:
 <a href="#state_tunnel2phase2lifetimeseconds_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Phase2Lifetime<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The lifetime for phase 2 of the IKE negotiation for the second VPN tunnel, in seconds. Valid value is between `900` and `3600`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4521,7 +4650,7 @@ The following state arguments are supported:
 <a href="#state_tunnel2presharedkey_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Preshared<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The preshared key of the second VPN tunnel. The preshared key must be between 8 and 64 characters in length and cannot start with zero(0). Allowed characters are alphanumeric characters, periods(.) and underscores(_).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4530,7 +4659,7 @@ The following state arguments are supported:
 <a href="#state_tunnel2rekeyfuzzpercentage_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Rekey<wbr>Fuzz<wbr>Percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The percentage of the rekey window for the second VPN tunnel (determined by `tunnel2_rekey_margin_time_seconds`) during which the rekey time is randomly selected. Valid value is between `0` and `100`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4539,7 +4668,7 @@ The following state arguments are supported:
 <a href="#state_tunnel2rekeymargintimeseconds_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Rekey<wbr>Margin<wbr>Time<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The margin time, in seconds, before the phase 2 lifetime expires, during which the AWS side of the second VPN connection performs an IKE rekey. The exact time of the rekey is randomly selected based on the value for `tunnel2_rekey_fuzz_percentage`. Valid value is between `60` and half of `tunnel2_phase2_lifetime_seconds`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4548,7 +4677,7 @@ The following state arguments are supported:
 <a href="#state_tunnel2replaywindowsize_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Replay<wbr>Window<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of packets in an IKE replay window for the second VPN tunnel. Valid value is between `64` and `2048`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4557,7 +4686,7 @@ The following state arguments are supported:
 <a href="#state_tunnel2startupaction_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Startup<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The action to take when the establishing the tunnel for the second VPN connection. By default, your customer gateway device must initiate the IKE negotiation and bring up the tunnel. Specify start for AWS to initiate the IKE negotiation. Valid values are `add | start`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4566,7 +4695,7 @@ The following state arguments are supported:
 <a href="#state_tunnel2vgwinsideaddress_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Vgw<wbr>Inside<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The RFC 6890 link-local address of the second VPN tunnel (VPN Gateway Side).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4575,7 +4704,7 @@ The following state arguments are supported:
 <a href="#state_tunnelinsideipversion_nodejs" style="color: inherit; text-decoration: inherit;">tunnel<wbr>Inside<wbr>Ip<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Indicate whether the VPN tunnels process IPv4 or IPv6 traffic. Valid values are `ipv4 | ipv6`. `ipv6` Supports only EC2 Transit Gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4584,7 +4713,7 @@ The following state arguments are supported:
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of VPN connection. The only type AWS supports at this time is "ipsec.1".
 {{% /md %}}</dd><dt class="property-optional"
@@ -4593,7 +4722,7 @@ The following state arguments are supported:
 <a href="#state_vgwtelemetries_nodejs" style="color: inherit; text-decoration: inherit;">vgw<wbr>Telemetries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnconnectionvgwtelemetry">Vpn<wbr>Connection<wbr>Vgw<wbr>Telemetry[]</a></span>
+        <span class="property-type"><a href="#vpnconnectionvgwtelemetry">pulumi.<wbr>Input<pulumi.<wbr>Input<Vpn<wbr>Connection<wbr>Vgw<wbr>Telemetry<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4601,7 +4730,7 @@ The following state arguments are supported:
 <a href="#state_vpngatewayid_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Gateway<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Private Gateway.
 {{% /md %}}</dd></dl>
@@ -4614,7 +4743,7 @@ The following state arguments are supported:
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the VPN Connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4623,7 +4752,7 @@ The following state arguments are supported:
 <a href="#state_customer_gateway_configuration_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>gateway_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The configuration information for the VPN connection's customer gateway (in the native XML format).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4632,7 +4761,7 @@ The following state arguments are supported:
 <a href="#state_customer_gateway_id_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>gateway_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the customer gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4641,7 +4770,7 @@ The following state arguments are supported:
 <a href="#state_enable_acceleration_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>acceleration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicate whether to enable acceleration for the VPN connection. Supports only EC2 Transit Gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4650,7 +4779,7 @@ The following state arguments are supported:
 <a href="#state_local_ipv4_network_cidr_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ipv4_<wbr>network_<wbr>cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IPv4 CIDR on the customer gateway (on-premises) side of the VPN connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4659,7 +4788,7 @@ The following state arguments are supported:
 <a href="#state_local_ipv6_network_cidr_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ipv6_<wbr>network_<wbr>cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IPv6 CIDR on the customer gateway (on-premises) side of the VPN connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4668,7 +4797,7 @@ The following state arguments are supported:
 <a href="#state_remote_ipv4_network_cidr_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>ipv4_<wbr>network_<wbr>cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IPv4 CIDR on the AWS side of the VPN connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4677,7 +4806,7 @@ The following state arguments are supported:
 <a href="#state_remote_ipv6_network_cidr_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>ipv6_<wbr>network_<wbr>cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IPv6 CIDR on the customer gateway (on-premises) side of the VPN connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4686,7 +4815,7 @@ The following state arguments are supported:
 <a href="#state_routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnconnectionroute">Sequence[Vpn<wbr>Connection<wbr>Route<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vpnconnectionroute">Input[Vpn<wbr>Connection<wbr>Route<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4694,7 +4823,7 @@ The following state arguments are supported:
 <a href="#state_static_routes_only_python" style="color: inherit; text-decoration: inherit;">static_<wbr>routes_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the VPN connection uses static routes exclusively. Static routes must be used for devices that don't support BGP.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4703,7 +4832,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Tags to apply to the connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4712,7 +4841,7 @@ The following state arguments are supported:
 <a href="#state_transit_gateway_attachment_id_python" style="color: inherit; text-decoration: inherit;">transit_<wbr>gateway_<wbr>attachment_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}When associated with an EC2 Transit Gateway (`transit_gateway_id` argument), the attachment ID. See also the `aws.ec2.Tag` resource for tagging the EC2 Transit Gateway VPN Attachment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4721,7 +4850,7 @@ The following state arguments are supported:
 <a href="#state_transit_gateway_id_python" style="color: inherit; text-decoration: inherit;">transit_<wbr>gateway_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the EC2 Transit Gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4730,7 +4859,7 @@ The following state arguments are supported:
 <a href="#state_tunnel1_address_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The public IP address of the first VPN tunnel.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4739,7 +4868,7 @@ The following state arguments are supported:
 <a href="#state_tunnel1_bgp_asn_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>bgp_<wbr>asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The bgp asn number of the first VPN tunnel.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4748,7 +4877,7 @@ The following state arguments are supported:
 <a href="#state_tunnel1_bgp_holdtime_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>bgp_<wbr>holdtime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The bgp holdtime of the first VPN tunnel.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4757,7 +4886,7 @@ The following state arguments are supported:
 <a href="#state_tunnel1_cgw_inside_address_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>cgw_<wbr>inside_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The RFC 6890 link-local address of the first VPN tunnel (Customer Gateway Side).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4766,7 +4895,7 @@ The following state arguments are supported:
 <a href="#state_tunnel1_dpd_timeout_action_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>dpd_<wbr>timeout_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The action to take after DPD timeout occurs for the first VPN tunnel. Specify restart to restart the IKE initiation. Specify clear to end the IKE session. Valid values are `clear | none | restart`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4775,7 +4904,7 @@ The following state arguments are supported:
 <a href="#state_tunnel1_dpd_timeout_seconds_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>dpd_<wbr>timeout_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of seconds after which a DPD timeout occurs for the first VPN tunnel. Valid value is equal or higher than `30`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4784,7 +4913,7 @@ The following state arguments are supported:
 <a href="#state_tunnel1_ike_versions_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>ike_<wbr>versions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The IKE versions that are permitted for the first VPN tunnel. Valid values are `ikev1 | ikev2`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4793,7 +4922,7 @@ The following state arguments are supported:
 <a href="#state_tunnel1_inside_cidr_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>inside_<wbr>cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The CIDR block of the inside IP addresses for the first VPN tunnel. Valid value is a size /30 CIDR block from the 169.254.0.0/16 range.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4802,7 +4931,7 @@ The following state arguments are supported:
 <a href="#state_tunnel1_inside_ipv6_cidr_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>inside_<wbr>ipv6_<wbr>cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The range of inside IPv6 addresses for the first VPN tunnel. Supports only EC2 Transit Gateway. Valid value is a size /126 CIDR block from the local fd00::/8 range.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4811,7 +4940,7 @@ The following state arguments are supported:
 <a href="#state_tunnel1_phase1_dh_group_numbers_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>phase1_<wbr>dh_<wbr>group_<wbr>numbers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[int]</span>
+        <span class="property-type">Input[int]]]</span>
     </dt>
     <dd>{{% md %}}List of one or more Diffie-Hellman group numbers that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are ` 2 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4820,7 +4949,7 @@ The following state arguments are supported:
 <a href="#state_tunnel1_phase1_encryption_algorithms_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>phase1_<wbr>encryption_<wbr>algorithms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of one or more encryption algorithms that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4829,7 +4958,7 @@ The following state arguments are supported:
 <a href="#state_tunnel1_phase1_integrity_algorithms_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>phase1_<wbr>integrity_<wbr>algorithms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}One or more integrity algorithms that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4838,7 +4967,7 @@ The following state arguments are supported:
 <a href="#state_tunnel1_phase1_lifetime_seconds_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>phase1_<wbr>lifetime_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The lifetime for phase 1 of the IKE negotiation for the first VPN tunnel, in seconds. Valid value is between `900` and `28800`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4847,7 +4976,7 @@ The following state arguments are supported:
 <a href="#state_tunnel1_phase2_dh_group_numbers_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>phase2_<wbr>dh_<wbr>group_<wbr>numbers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[int]</span>
+        <span class="property-type">Input[int]]]</span>
     </dt>
     <dd>{{% md %}}List of one or more Diffie-Hellman group numbers that are permitted for the first VPN tunnel for phase 2 IKE negotiations. Valid values are `2 | 5 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4856,7 +4985,7 @@ The following state arguments are supported:
 <a href="#state_tunnel1_phase2_encryption_algorithms_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>phase2_<wbr>encryption_<wbr>algorithms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of one or more encryption algorithms that are permitted for the first VPN tunnel for phase 2 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4865,7 +4994,7 @@ The following state arguments are supported:
 <a href="#state_tunnel1_phase2_integrity_algorithms_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>phase2_<wbr>integrity_<wbr>algorithms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of one or more integrity algorithms that are permitted for the first VPN tunnel for phase 2 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4874,7 +5003,7 @@ The following state arguments are supported:
 <a href="#state_tunnel1_phase2_lifetime_seconds_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>phase2_<wbr>lifetime_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The lifetime for phase 2 of the IKE negotiation for the first VPN tunnel, in seconds. Valid value is between `900` and `3600`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4883,7 +5012,7 @@ The following state arguments are supported:
 <a href="#state_tunnel1_preshared_key_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>preshared_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The preshared key of the first VPN tunnel. The preshared key must be between 8 and 64 characters in length and cannot start with zero(0). Allowed characters are alphanumeric characters, periods(.) and underscores(_).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4892,7 +5021,7 @@ The following state arguments are supported:
 <a href="#state_tunnel1_rekey_fuzz_percentage_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>rekey_<wbr>fuzz_<wbr>percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The percentage of the rekey window for the first VPN tunnel (determined by `tunnel1_rekey_margin_time_seconds`) during which the rekey time is randomly selected. Valid value is between `0` and `100`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4901,7 +5030,7 @@ The following state arguments are supported:
 <a href="#state_tunnel1_rekey_margin_time_seconds_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>rekey_<wbr>margin_<wbr>time_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The margin time, in seconds, before the phase 2 lifetime expires, during which the AWS side of the first VPN connection performs an IKE rekey. The exact time of the rekey is randomly selected based on the value for `tunnel1_rekey_fuzz_percentage`. Valid value is between `60` and half of `tunnel1_phase2_lifetime_seconds`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4910,7 +5039,7 @@ The following state arguments are supported:
 <a href="#state_tunnel1_replay_window_size_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>replay_<wbr>window_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of packets in an IKE replay window for the first VPN tunnel. Valid value is between `64` and `2048`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4919,7 +5048,7 @@ The following state arguments are supported:
 <a href="#state_tunnel1_startup_action_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>startup_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The action to take when the establishing the tunnel for the first VPN connection. By default, your customer gateway device must initiate the IKE negotiation and bring up the tunnel. Specify start for AWS to initiate the IKE negotiation. Valid values are `add | start`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4928,7 +5057,7 @@ The following state arguments are supported:
 <a href="#state_tunnel1_vgw_inside_address_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>vgw_<wbr>inside_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The RFC 6890 link-local address of the first VPN tunnel (VPN Gateway Side).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4937,7 +5066,7 @@ The following state arguments are supported:
 <a href="#state_tunnel2_address_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The public IP address of the second VPN tunnel.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4946,7 +5075,7 @@ The following state arguments are supported:
 <a href="#state_tunnel2_bgp_asn_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>bgp_<wbr>asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The bgp asn number of the second VPN tunnel.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4955,7 +5084,7 @@ The following state arguments are supported:
 <a href="#state_tunnel2_bgp_holdtime_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>bgp_<wbr>holdtime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The bgp holdtime of the second VPN tunnel.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4964,7 +5093,7 @@ The following state arguments are supported:
 <a href="#state_tunnel2_cgw_inside_address_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>cgw_<wbr>inside_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The RFC 6890 link-local address of the second VPN tunnel (Customer Gateway Side).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4973,7 +5102,7 @@ The following state arguments are supported:
 <a href="#state_tunnel2_dpd_timeout_action_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>dpd_<wbr>timeout_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The action to take after DPD timeout occurs for the second VPN tunnel. Specify restart to restart the IKE initiation. Specify clear to end the IKE session. Valid values are `clear | none | restart`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4982,7 +5111,7 @@ The following state arguments are supported:
 <a href="#state_tunnel2_dpd_timeout_seconds_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>dpd_<wbr>timeout_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of seconds after which a DPD timeout occurs for the second VPN tunnel. Valid value is equal or higher than `30`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4991,7 +5120,7 @@ The following state arguments are supported:
 <a href="#state_tunnel2_ike_versions_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>ike_<wbr>versions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The IKE versions that are permitted for the second VPN tunnel. Valid values are `ikev1 | ikev2`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5000,7 +5129,7 @@ The following state arguments are supported:
 <a href="#state_tunnel2_inside_cidr_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>inside_<wbr>cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The CIDR block of the inside IP addresses for the second VPN tunnel. Valid value is a size /30 CIDR block from the 169.254.0.0/16 range.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5009,7 +5138,7 @@ The following state arguments are supported:
 <a href="#state_tunnel2_inside_ipv6_cidr_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>inside_<wbr>ipv6_<wbr>cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The range of inside IPv6 addresses for the second VPN tunnel. Supports only EC2 Transit Gateway. Valid value is a size /126 CIDR block from the local fd00::/8 range.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5018,7 +5147,7 @@ The following state arguments are supported:
 <a href="#state_tunnel2_phase1_dh_group_numbers_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>phase1_<wbr>dh_<wbr>group_<wbr>numbers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[int]</span>
+        <span class="property-type">Input[int]]]</span>
     </dt>
     <dd>{{% md %}}List of one or more Diffie-Hellman group numbers that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are ` 2 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5027,7 +5156,7 @@ The following state arguments are supported:
 <a href="#state_tunnel2_phase1_encryption_algorithms_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>phase1_<wbr>encryption_<wbr>algorithms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of one or more encryption algorithms that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5036,7 +5165,7 @@ The following state arguments are supported:
 <a href="#state_tunnel2_phase1_integrity_algorithms_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>phase1_<wbr>integrity_<wbr>algorithms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}One or more integrity algorithms that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5045,7 +5174,7 @@ The following state arguments are supported:
 <a href="#state_tunnel2_phase1_lifetime_seconds_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>phase1_<wbr>lifetime_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The lifetime for phase 1 of the IKE negotiation for the second VPN tunnel, in seconds. Valid value is between `900` and `28800`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5054,7 +5183,7 @@ The following state arguments are supported:
 <a href="#state_tunnel2_phase2_dh_group_numbers_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>phase2_<wbr>dh_<wbr>group_<wbr>numbers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[int]</span>
+        <span class="property-type">Input[int]]]</span>
     </dt>
     <dd>{{% md %}}List of one or more Diffie-Hellman group numbers that are permitted for the second VPN tunnel for phase 2 IKE negotiations. Valid values are `2 | 5 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5063,7 +5192,7 @@ The following state arguments are supported:
 <a href="#state_tunnel2_phase2_encryption_algorithms_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>phase2_<wbr>encryption_<wbr>algorithms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of one or more encryption algorithms that are permitted for the second VPN tunnel for phase 2 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5072,7 +5201,7 @@ The following state arguments are supported:
 <a href="#state_tunnel2_phase2_integrity_algorithms_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>phase2_<wbr>integrity_<wbr>algorithms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of one or more integrity algorithms that are permitted for the second VPN tunnel for phase 2 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5081,7 +5210,7 @@ The following state arguments are supported:
 <a href="#state_tunnel2_phase2_lifetime_seconds_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>phase2_<wbr>lifetime_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The lifetime for phase 2 of the IKE negotiation for the second VPN tunnel, in seconds. Valid value is between `900` and `3600`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5090,7 +5219,7 @@ The following state arguments are supported:
 <a href="#state_tunnel2_preshared_key_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>preshared_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The preshared key of the second VPN tunnel. The preshared key must be between 8 and 64 characters in length and cannot start with zero(0). Allowed characters are alphanumeric characters, periods(.) and underscores(_).
 {{% /md %}}</dd><dt class="property-optional"
@@ -5099,7 +5228,7 @@ The following state arguments are supported:
 <a href="#state_tunnel2_rekey_fuzz_percentage_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>rekey_<wbr>fuzz_<wbr>percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The percentage of the rekey window for the second VPN tunnel (determined by `tunnel2_rekey_margin_time_seconds`) during which the rekey time is randomly selected. Valid value is between `0` and `100`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5108,7 +5237,7 @@ The following state arguments are supported:
 <a href="#state_tunnel2_rekey_margin_time_seconds_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>rekey_<wbr>margin_<wbr>time_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The margin time, in seconds, before the phase 2 lifetime expires, during which the AWS side of the second VPN connection performs an IKE rekey. The exact time of the rekey is randomly selected based on the value for `tunnel2_rekey_fuzz_percentage`. Valid value is between `60` and half of `tunnel2_phase2_lifetime_seconds`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5117,7 +5246,7 @@ The following state arguments are supported:
 <a href="#state_tunnel2_replay_window_size_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>replay_<wbr>window_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of packets in an IKE replay window for the second VPN tunnel. Valid value is between `64` and `2048`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5126,7 +5255,7 @@ The following state arguments are supported:
 <a href="#state_tunnel2_startup_action_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>startup_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The action to take when the establishing the tunnel for the second VPN connection. By default, your customer gateway device must initiate the IKE negotiation and bring up the tunnel. Specify start for AWS to initiate the IKE negotiation. Valid values are `add | start`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5135,7 +5264,7 @@ The following state arguments are supported:
 <a href="#state_tunnel2_vgw_inside_address_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>vgw_<wbr>inside_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The RFC 6890 link-local address of the second VPN tunnel (VPN Gateway Side).
 {{% /md %}}</dd><dt class="property-optional"
@@ -5144,7 +5273,7 @@ The following state arguments are supported:
 <a href="#state_tunnel_inside_ip_version_python" style="color: inherit; text-decoration: inherit;">tunnel_<wbr>inside_<wbr>ip_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Indicate whether the VPN tunnels process IPv4 or IPv6 traffic. Valid values are `ipv4 | ipv6`. `ipv6` Supports only EC2 Transit Gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5153,7 +5282,7 @@ The following state arguments are supported:
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of VPN connection. The only type AWS supports at this time is "ipsec.1".
 {{% /md %}}</dd><dt class="property-optional"
@@ -5162,7 +5291,7 @@ The following state arguments are supported:
 <a href="#state_vgw_telemetries_python" style="color: inherit; text-decoration: inherit;">vgw_<wbr>telemetries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnconnectionvgwtelemetry">Sequence[Vpn<wbr>Connection<wbr>Vgw<wbr>Telemetry<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vpnconnectionvgwtelemetry">Input[Vpn<wbr>Connection<wbr>Vgw<wbr>Telemetry<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5170,7 +5299,7 @@ The following state arguments are supported:
 <a href="#state_vpn_gateway_id_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>gateway_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Private Gateway.
 {{% /md %}}</dd></dl>
@@ -5250,7 +5379,7 @@ The following state arguments are supported:
 <a href="#destinationcidrblock_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Cidr<wbr>Block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5258,7 +5387,7 @@ The following state arguments are supported:
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5266,7 +5395,7 @@ The following state arguments are supported:
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5278,7 +5407,7 @@ The following state arguments are supported:
 <a href="#destination_cidr_block_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>cidr_<wbr>block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5286,7 +5415,7 @@ The following state arguments are supported:
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5294,7 +5423,7 @@ The following state arguments are supported:
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5396,7 +5525,7 @@ The following state arguments are supported:
 <a href="#acceptedroutecount_nodejs" style="color: inherit; text-decoration: inherit;">accepted<wbr>Route<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5404,7 +5533,7 @@ The following state arguments are supported:
 <a href="#laststatuschange_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Status<wbr>Change</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5412,7 +5541,7 @@ The following state arguments are supported:
 <a href="#outsideipaddress_nodejs" style="color: inherit; text-decoration: inherit;">outside<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5420,7 +5549,7 @@ The following state arguments are supported:
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5428,7 +5557,7 @@ The following state arguments are supported:
 <a href="#statusmessage_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5440,7 +5569,7 @@ The following state arguments are supported:
 <a href="#accepted_route_count_python" style="color: inherit; text-decoration: inherit;">accepted_<wbr>route_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5448,7 +5577,7 @@ The following state arguments are supported:
 <a href="#last_status_change_python" style="color: inherit; text-decoration: inherit;">last_<wbr>status_<wbr>change</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5456,7 +5585,7 @@ The following state arguments are supported:
 <a href="#outside_ip_address_python" style="color: inherit; text-decoration: inherit;">outside_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5464,7 +5593,7 @@ The following state arguments are supported:
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5472,7 +5601,7 @@ The following state arguments are supported:
 <a href="#status_message_python" style="color: inherit; text-decoration: inherit;">status_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

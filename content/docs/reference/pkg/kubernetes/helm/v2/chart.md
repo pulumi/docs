@@ -725,19 +725,24 @@ const nginxIngress = new k8s.helm.v2.Chart("nginx-ingress", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Chart</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ChartOpts</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions">ComponentResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Chart</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ChartOpts</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions">ComponentResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Chart</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">config</span><span class="p">:</span> <span class="nx"></span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Chart</span><span class="p">(</span><span class="nx">config</span><span class="p">:</span> <span class="nx"></span><span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Chart</span><span class="p">(</span><span class="nx">config</span><span class="p">:</span> <span class="nx"></span><span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewChart</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ChartArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Chart</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewChart</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ChartArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Chart</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Chart</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ChartArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.ComponentResourceOptions.html">ComponentResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Chart</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ChartArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.ComponentResourceOptions.html">ComponentResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -772,22 +777,24 @@ const nginxIngress = new k8s.helm.v2.Chart("nginx-ingress", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
-        <span>resource_name</span>
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
+        <span>config</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"></span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      
+    </dd><dt
+        class="property-required" title="Required">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -796,7 +803,7 @@ const nginxIngress = new k8s.helm.v2.Chart("nginx-ingress", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -820,7 +827,7 @@ const nginxIngress = new k8s.helm.v2.Chart("nginx-ingress", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1039,7 +1046,7 @@ Used only when specifying options for a remote chart.{{% /md %}}</dd><dt class="
 <a href="#chart_nodejs" style="color: inherit; text-decoration: inherit;">chart</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the chart to deploy. If [repo] is provided, this chart name will be prefixed by the repo name. Example: repo: "stable", chart: "nginx-ingress" -> "stable/nginx-ingress" Example: chart: "stable/nginx-ingress" -> "stable/nginx-ingress"
 
@@ -1049,7 +1056,7 @@ Required if specifying `ChartOpts` for a remote chart.{{% /md %}}</dd><dt class=
 <a href="#fetchopts_nodejs" style="color: inherit; text-decoration: inherit;">fetch<wbr>Opts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fetchopts">Fetch<wbr>Opts</a></span>
+        <span class="property-type"><a href="#fetchopts">pulumi.<wbr>Input<Fetch<wbr>Opts<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Additional options to customize the fetching of the Helm chart.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1057,7 +1064,7 @@ Required if specifying `ChartOpts` for a remote chart.{{% /md %}}</dd><dt class=
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The optional namespace to install chart resources into.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1065,7 +1072,7 @@ Required if specifying `ChartOpts` for a remote chart.{{% /md %}}</dd><dt class=
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path to the chart directory which contains the `Chart.yaml` file.
 
@@ -1075,7 +1082,7 @@ Required if specifying `LocalChartOpts`.{{% /md %}}</dd><dt class="property-opti
 <a href="#repo_nodejs" style="color: inherit; text-decoration: inherit;">repo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The repository name of the chart to deploy. Example: "stable".
 
@@ -1085,7 +1092,7 @@ Used only when specifying options for a remote chart.{{% /md %}}</dd><dt class="
 <a href="#resourceprefix_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An optional prefix for the auto-generated resource names. Example: A resource created with resourcePrefix="foo" would produce a resource named "foo-resourceName".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1093,7 +1100,7 @@ Used only when specifying options for a remote chart.{{% /md %}}</dd><dt class="
 <a href="#transformations_nodejs" style="color: inherit; text-decoration: inherit;">transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">any[]</span>
+        <span class="property-type">pulumi.<wbr>Input<any[]></span>
     </dt>
     <dd>{{% md %}}Optional array of transformations to apply to resources that will be created by this chart prior to creation. Allows customization of the chart behaviour without directly modifying the chart itself.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1101,7 +1108,7 @@ Used only when specifying options for a remote chart.{{% /md %}}</dd><dt class="
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Overrides for chart values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1109,7 +1116,7 @@ Used only when specifying options for a remote chart.{{% /md %}}</dd><dt class="
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The version of the chart to deploy. If not provided, the latest version will be deployed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1121,7 +1128,7 @@ Used only when specifying options for a remote chart.{{% /md %}}</dd><dt class="
 <a href="#chart_python" style="color: inherit; text-decoration: inherit;">chart</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the chart to deploy. If [repo] is provided, this chart name will be prefixed by the repo name. Example: repo: "stable", chart: "nginx-ingress" -> "stable/nginx-ingress" Example: chart: "stable/nginx-ingress" -> "stable/nginx-ingress"
 
@@ -1131,7 +1138,7 @@ Required if specifying `ChartOpts` for a remote chart.{{% /md %}}</dd><dt class=
 <a href="#fetch_opts_python" style="color: inherit; text-decoration: inherit;">fetch_<wbr>opts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fetchopts">Fetch<wbr>Opts<wbr>Args</a></span>
+        <span class="property-type"><a href="#fetchopts">Fetch<wbr>Opts<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Additional options to customize the fetching of the Helm chart.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1139,7 +1146,7 @@ Required if specifying `ChartOpts` for a remote chart.{{% /md %}}</dd><dt class=
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The optional namespace to install chart resources into.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1147,7 +1154,7 @@ Required if specifying `ChartOpts` for a remote chart.{{% /md %}}</dd><dt class=
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path to the chart directory which contains the `Chart.yaml` file.
 
@@ -1157,7 +1164,7 @@ Required if specifying `LocalChartOpts`.{{% /md %}}</dd><dt class="property-opti
 <a href="#repo_python" style="color: inherit; text-decoration: inherit;">repo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The repository name of the chart to deploy. Example: "stable".
 
@@ -1167,7 +1174,7 @@ Used only when specifying options for a remote chart.{{% /md %}}</dd><dt class="
 <a href="#resource_prefix_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An optional prefix for the auto-generated resource names. Example: A resource created with resourcePrefix="foo" would produce a resource named "foo-resourceName".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1175,7 +1182,7 @@ Used only when specifying options for a remote chart.{{% /md %}}</dd><dt class="
 <a href="#transformations_python" style="color: inherit; text-decoration: inherit;">transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Any]</span>
+        <span class="property-type">Input[Sequence[Any]]</span>
     </dt>
     <dd>{{% md %}}Optional array of transformations to apply to resources that will be created by this chart prior to creation. Allows customization of the chart behaviour without directly modifying the chart itself.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1183,7 +1190,7 @@ Used only when specifying options for a remote chart.{{% /md %}}</dd><dt class="
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Overrides for chart values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1191,7 +1198,7 @@ Used only when specifying options for a remote chart.{{% /md %}}</dd><dt class="
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The version of the chart to deploy. If not provided, the latest version will be deployed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1582,7 +1589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cafile_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Verify certificates of HTTPS-enabled servers using this CA bundle.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1590,7 +1597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certfile_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Identify HTTPS client using this SSL certificate file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1598,7 +1605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Location to write the chart. If this and tardir are specified, tardir is appended to this (default ".").{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1606,7 +1613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#devel_nodejs" style="color: inherit; text-decoration: inherit;">devel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Use development versions, too. Equivalent to version '>0.0.0-0'. If –version is set, this is ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1614,7 +1621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#home_nodejs" style="color: inherit; text-decoration: inherit;">home</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Location of your Helm config. Overrides $HELM_HOME (default "/Users/abc/.helm").{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1622,7 +1629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyfile_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Identify HTTPS client using this SSL key file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1630,7 +1637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyring_nodejs" style="color: inherit; text-decoration: inherit;">keyring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Keyring containing public keys (default “/Users/abc/.gnupg/pubring.gpg”).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1638,7 +1645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Chart repository password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1646,7 +1653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prov_nodejs" style="color: inherit; text-decoration: inherit;">prov</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Fetch the provenance file, but don’t perform verification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1654,7 +1661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#repo_nodejs" style="color: inherit; text-decoration: inherit;">repo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Chart repository url where to locate the requested chart.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1662,7 +1669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#untar_nodejs" style="color: inherit; text-decoration: inherit;">untar</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If set to false, will leave the chart as a tarball after downloading.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1670,7 +1677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#untardir_nodejs" style="color: inherit; text-decoration: inherit;">untardir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If untar is specified, this flag specifies the name of the directory into which the chart is expanded (default ".").{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1678,7 +1685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Chart repository username.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1686,7 +1693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#verify_nodejs" style="color: inherit; text-decoration: inherit;">verify</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Verify the package against its signature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1694,7 +1701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specific version of a chart. Without this, the latest version is fetched.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1706,7 +1713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ca_file_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Verify certificates of HTTPS-enabled servers using this CA bundle.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1714,7 +1721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cert_file_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Identify HTTPS client using this SSL certificate file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1722,7 +1729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Location to write the chart. If this and tardir are specified, tardir is appended to this (default ".").{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1730,7 +1737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#devel_python" style="color: inherit; text-decoration: inherit;">devel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Use development versions, too. Equivalent to version '>0.0.0-0'. If –version is set, this is ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1738,7 +1745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#home_python" style="color: inherit; text-decoration: inherit;">home</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Location of your Helm config. Overrides $HELM_HOME (default "/Users/abc/.helm").{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1746,7 +1753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_file_python" style="color: inherit; text-decoration: inherit;">key_<wbr>file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Identify HTTPS client using this SSL key file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1754,7 +1761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyring_python" style="color: inherit; text-decoration: inherit;">keyring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Keyring containing public keys (default “/Users/abc/.gnupg/pubring.gpg”).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1762,7 +1769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Chart repository password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1770,7 +1777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prov_python" style="color: inherit; text-decoration: inherit;">prov</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Fetch the provenance file, but don’t perform verification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1778,7 +1785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#repo_python" style="color: inherit; text-decoration: inherit;">repo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Chart repository url where to locate the requested chart.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1786,7 +1793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#untar_python" style="color: inherit; text-decoration: inherit;">untar</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If set to false, will leave the chart as a tarball after downloading.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1794,7 +1801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#untardir_python" style="color: inherit; text-decoration: inherit;">untardir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If untar is specified, this flag specifies the name of the directory into which the chart is expanded (default ".").{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1802,7 +1809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Chart repository username.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1810,7 +1817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#verify_python" style="color: inherit; text-decoration: inherit;">verify</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Verify the package against its signature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1818,7 +1825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specific version of a chart. Without this, the latest version is fetched.{{% /md %}}</dd></dl>
 {{% /choosable %}}

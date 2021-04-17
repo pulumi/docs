@@ -87,8 +87,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -241,19 +241,35 @@ const rulein = new aws.ec2.TrafficMirrorFilterRule("rulein", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">TrafficMirrorFilterRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TrafficMirrorFilterRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">TrafficMirrorFilterRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TrafficMirrorFilterRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">TrafficMirrorFilterRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_port_range</span><span class="p">:</span> <span class="nx">Optional[TrafficMirrorFilterRuleDestinationPortRangeArgs]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">rule_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_number</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">source_cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_port_range</span><span class="p">:</span> <span class="nx">Optional[TrafficMirrorFilterRuleSourcePortRangeArgs]</span> = None<span class="p">, </span><span class="nx">traffic_direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">traffic_mirror_filter_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">TrafficMirrorFilterRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                            <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                            <span class="nx">destination_cidr_block</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                            <span class="nx">destination_port_range</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TrafficMirrorFilterRuleDestinationPortRangeArgs]]</span> = None<span class="p">,</span>
+                            <span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                            <span class="nx">rule_action</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                            <span class="nx">rule_number</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                            <span class="nx">source_cidr_block</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                            <span class="nx">source_port_range</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TrafficMirrorFilterRuleSourcePortRangeArgs]]</span> = None<span class="p">,</span>
+                            <span class="nx">traffic_direction</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                            <span class="nx">traffic_mirror_filter_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">TrafficMirrorFilterRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TrafficMirrorFilterRuleArgs</a></span><span class="p">,</span>
+                            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTrafficMirrorFilterRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TrafficMirrorFilterRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">TrafficMirrorFilterRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTrafficMirrorFilterRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TrafficMirrorFilterRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">TrafficMirrorFilterRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">TrafficMirrorFilterRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">TrafficMirrorFilterRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">TrafficMirrorFilterRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">TrafficMirrorFilterRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -288,22 +304,32 @@ const rulein = new aws.ec2.TrafficMirrorFilterRule("rulein", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">TrafficMirrorFilterRuleArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -312,7 +338,7 @@ const rulein = new aws.ec2.TrafficMirrorFilterRule("rulein", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -336,7 +362,7 @@ const rulein = new aws.ec2.TrafficMirrorFilterRule("rulein", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -579,7 +605,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
 <a href="#destinationcidrblock_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Cidr<wbr>Block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Destination CIDR block to assign to the Traffic Mirror rule.
 {{% /md %}}</dd><dt class="property-required"
@@ -588,7 +614,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
 <a href="#ruleaction_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Action to take (accept | reject) on the filtered traffic. Valid values are `accept` and `reject`
 {{% /md %}}</dd><dt class="property-required"
@@ -597,7 +623,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
 <a href="#rulenumber_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of the Traffic Mirror rule. This number must be unique for each Traffic Mirror rule in a given direction. The rules are processed in ascending order by rule number.
 {{% /md %}}</dd><dt class="property-required"
@@ -606,7 +632,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
 <a href="#sourcecidrblock_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Cidr<wbr>Block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Source CIDR block to assign to the Traffic Mirror rule.
 {{% /md %}}</dd><dt class="property-required"
@@ -615,7 +641,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
 <a href="#trafficdirection_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Direction of traffic to be captured. Valid values are `ingress` and `egress`
 {{% /md %}}</dd><dt class="property-required"
@@ -624,7 +650,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
 <a href="#trafficmirrorfilterid_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Mirror<wbr>Filter<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of the traffic mirror filter to which this rule should be added
 {{% /md %}}</dd><dt class="property-optional"
@@ -633,7 +659,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description of the traffic mirror filter rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -642,7 +668,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
 <a href="#destinationportrange_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Port<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trafficmirrorfilterruledestinationportrange">Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Destination<wbr>Port<wbr>Range</a></span>
+        <span class="property-type"><a href="#trafficmirrorfilterruledestinationportrange">pulumi.<wbr>Input<Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Destination<wbr>Port<wbr>Range<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Destination port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
 {{% /md %}}</dd><dt class="property-optional"
@@ -651,7 +677,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Protocol number, for example 17 (UDP), to assign to the Traffic Mirror rule. For information about the protocol value, see [Protocol Numbers](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml) on the Internet Assigned Numbers Authority (IANA) website.
 {{% /md %}}</dd><dt class="property-optional"
@@ -660,7 +686,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
 <a href="#sourceportrange_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Port<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trafficmirrorfilterrulesourceportrange">Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Source<wbr>Port<wbr>Range</a></span>
+        <span class="property-type"><a href="#trafficmirrorfilterrulesourceportrange">pulumi.<wbr>Input<Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Source<wbr>Port<wbr>Range<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Source port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
 {{% /md %}}</dd></dl>
@@ -673,7 +699,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
 <a href="#destination_cidr_block_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>cidr_<wbr>block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Destination CIDR block to assign to the Traffic Mirror rule.
 {{% /md %}}</dd><dt class="property-required"
@@ -682,7 +708,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
 <a href="#rule_action_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Action to take (accept | reject) on the filtered traffic. Valid values are `accept` and `reject`
 {{% /md %}}</dd><dt class="property-required"
@@ -691,7 +717,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
 <a href="#rule_number_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Number of the Traffic Mirror rule. This number must be unique for each Traffic Mirror rule in a given direction. The rules are processed in ascending order by rule number.
 {{% /md %}}</dd><dt class="property-required"
@@ -700,7 +726,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
 <a href="#source_cidr_block_python" style="color: inherit; text-decoration: inherit;">source_<wbr>cidr_<wbr>block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Source CIDR block to assign to the Traffic Mirror rule.
 {{% /md %}}</dd><dt class="property-required"
@@ -709,7 +735,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
 <a href="#traffic_direction_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Direction of traffic to be captured. Valid values are `ingress` and `egress`
 {{% /md %}}</dd><dt class="property-required"
@@ -718,7 +744,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
 <a href="#traffic_mirror_filter_id_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>mirror_<wbr>filter_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of the traffic mirror filter to which this rule should be added
 {{% /md %}}</dd><dt class="property-optional"
@@ -727,7 +753,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description of the traffic mirror filter rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -736,7 +762,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
 <a href="#destination_port_range_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>port_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trafficmirrorfilterruledestinationportrange">Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Destination<wbr>Port<wbr>Range<wbr>Args</a></span>
+        <span class="property-type"><a href="#trafficmirrorfilterruledestinationportrange">Input[Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Destination<wbr>Port<wbr>Range<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Destination port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
 {{% /md %}}</dd><dt class="property-optional"
@@ -745,7 +771,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Protocol number, for example 17 (UDP), to assign to the Traffic Mirror rule. For information about the protocol value, see [Protocol Numbers](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml) on the Internet Assigned Numbers Authority (IANA) website.
 {{% /md %}}</dd><dt class="property-optional"
@@ -754,7 +780,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
 <a href="#source_port_range_python" style="color: inherit; text-decoration: inherit;">source_<wbr>port_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trafficmirrorfilterrulesourceportrange">Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Source<wbr>Port<wbr>Range<wbr>Args</a></span>
+        <span class="property-type"><a href="#trafficmirrorfilterrulesourceportrange">Input[Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Source<wbr>Port<wbr>Range<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Source port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
 {{% /md %}}</dd></dl>
@@ -859,20 +885,33 @@ Get an existing TrafficMirrorFilterRule resource's state with the given name, ID
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">TrafficMirrorFilterRuleState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">TrafficMirrorFilterRule</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">TrafficMirrorFilterRuleState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">TrafficMirrorFilterRule</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_port_range</span><span class="p">:</span> <span class="nx">Optional[TrafficMirrorFilterRuleDestinationPortRangeArgs]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">rule_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_number</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">source_cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_port_range</span><span class="p">:</span> <span class="nx">Optional[TrafficMirrorFilterRuleSourcePortRangeArgs]</span> = None<span class="p">, </span><span class="nx">traffic_direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">traffic_mirror_filter_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> TrafficMirrorFilterRule</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">destination_cidr_block</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">destination_port_range</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TrafficMirrorFilterRuleDestinationPortRangeArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">rule_action</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">rule_number</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">source_cidr_block</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">source_port_range</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TrafficMirrorFilterRuleSourcePortRangeArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">traffic_direction</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">traffic_mirror_filter_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> TrafficMirrorFilterRule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTrafficMirrorFilterRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">TrafficMirrorFilterRuleState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">TrafficMirrorFilterRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTrafficMirrorFilterRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">TrafficMirrorFilterRuleState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">TrafficMirrorFilterRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">TrafficMirrorFilterRule</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">TrafficMirrorFilterRuleState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">TrafficMirrorFilterRule</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">TrafficMirrorFilterRuleState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1187,7 +1226,7 @@ The following state arguments are supported:
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARN of the traffic mirror filter rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1196,7 +1235,7 @@ The following state arguments are supported:
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description of the traffic mirror filter rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1205,7 +1244,7 @@ The following state arguments are supported:
 <a href="#state_destinationcidrblock_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Cidr<wbr>Block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Destination CIDR block to assign to the Traffic Mirror rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1214,7 +1253,7 @@ The following state arguments are supported:
 <a href="#state_destinationportrange_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Port<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trafficmirrorfilterruledestinationportrange">Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Destination<wbr>Port<wbr>Range</a></span>
+        <span class="property-type"><a href="#trafficmirrorfilterruledestinationportrange">pulumi.<wbr>Input<Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Destination<wbr>Port<wbr>Range<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Destination port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
 {{% /md %}}</dd><dt class="property-optional"
@@ -1223,7 +1262,7 @@ The following state arguments are supported:
 <a href="#state_protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Protocol number, for example 17 (UDP), to assign to the Traffic Mirror rule. For information about the protocol value, see [Protocol Numbers](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml) on the Internet Assigned Numbers Authority (IANA) website.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1232,7 +1271,7 @@ The following state arguments are supported:
 <a href="#state_ruleaction_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Action to take (accept | reject) on the filtered traffic. Valid values are `accept` and `reject`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1241,7 +1280,7 @@ The following state arguments are supported:
 <a href="#state_rulenumber_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of the Traffic Mirror rule. This number must be unique for each Traffic Mirror rule in a given direction. The rules are processed in ascending order by rule number.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1250,7 +1289,7 @@ The following state arguments are supported:
 <a href="#state_sourcecidrblock_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Cidr<wbr>Block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Source CIDR block to assign to the Traffic Mirror rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1259,7 +1298,7 @@ The following state arguments are supported:
 <a href="#state_sourceportrange_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Port<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trafficmirrorfilterrulesourceportrange">Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Source<wbr>Port<wbr>Range</a></span>
+        <span class="property-type"><a href="#trafficmirrorfilterrulesourceportrange">pulumi.<wbr>Input<Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Source<wbr>Port<wbr>Range<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Source port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
 {{% /md %}}</dd><dt class="property-optional"
@@ -1268,7 +1307,7 @@ The following state arguments are supported:
 <a href="#state_trafficdirection_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Direction of traffic to be captured. Valid values are `ingress` and `egress`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1277,7 +1316,7 @@ The following state arguments are supported:
 <a href="#state_trafficmirrorfilterid_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Mirror<wbr>Filter<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of the traffic mirror filter to which this rule should be added
 {{% /md %}}</dd></dl>
@@ -1290,7 +1329,7 @@ The following state arguments are supported:
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARN of the traffic mirror filter rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1299,7 +1338,7 @@ The following state arguments are supported:
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description of the traffic mirror filter rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1308,7 +1347,7 @@ The following state arguments are supported:
 <a href="#state_destination_cidr_block_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>cidr_<wbr>block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Destination CIDR block to assign to the Traffic Mirror rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1317,7 +1356,7 @@ The following state arguments are supported:
 <a href="#state_destination_port_range_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>port_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trafficmirrorfilterruledestinationportrange">Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Destination<wbr>Port<wbr>Range<wbr>Args</a></span>
+        <span class="property-type"><a href="#trafficmirrorfilterruledestinationportrange">Input[Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Destination<wbr>Port<wbr>Range<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Destination port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
 {{% /md %}}</dd><dt class="property-optional"
@@ -1326,7 +1365,7 @@ The following state arguments are supported:
 <a href="#state_protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Protocol number, for example 17 (UDP), to assign to the Traffic Mirror rule. For information about the protocol value, see [Protocol Numbers](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml) on the Internet Assigned Numbers Authority (IANA) website.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1335,7 +1374,7 @@ The following state arguments are supported:
 <a href="#state_rule_action_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Action to take (accept | reject) on the filtered traffic. Valid values are `accept` and `reject`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1344,7 +1383,7 @@ The following state arguments are supported:
 <a href="#state_rule_number_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Number of the Traffic Mirror rule. This number must be unique for each Traffic Mirror rule in a given direction. The rules are processed in ascending order by rule number.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1353,7 +1392,7 @@ The following state arguments are supported:
 <a href="#state_source_cidr_block_python" style="color: inherit; text-decoration: inherit;">source_<wbr>cidr_<wbr>block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Source CIDR block to assign to the Traffic Mirror rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1362,7 +1401,7 @@ The following state arguments are supported:
 <a href="#state_source_port_range_python" style="color: inherit; text-decoration: inherit;">source_<wbr>port_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trafficmirrorfilterrulesourceportrange">Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Source<wbr>Port<wbr>Range<wbr>Args</a></span>
+        <span class="property-type"><a href="#trafficmirrorfilterrulesourceportrange">Input[Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Source<wbr>Port<wbr>Range<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Source port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
 {{% /md %}}</dd><dt class="property-optional"
@@ -1371,7 +1410,7 @@ The following state arguments are supported:
 <a href="#state_traffic_direction_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Direction of traffic to be captured. Valid values are `ingress` and `egress`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1380,7 +1419,7 @@ The following state arguments are supported:
 <a href="#state_traffic_mirror_filter_id_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>mirror_<wbr>filter_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of the traffic mirror filter to which this rule should be added
 {{% /md %}}</dd></dl>
@@ -1448,7 +1487,7 @@ The following state arguments are supported:
 <a href="#fromport_nodejs" style="color: inherit; text-decoration: inherit;">from<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Starting port of the range
 {{% /md %}}</dd><dt class="property-optional"
@@ -1457,7 +1496,7 @@ The following state arguments are supported:
 <a href="#toport_nodejs" style="color: inherit; text-decoration: inherit;">to<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Ending port of the range
 {{% /md %}}</dd></dl>
@@ -1470,7 +1509,7 @@ The following state arguments are supported:
 <a href="#from_port_python" style="color: inherit; text-decoration: inherit;">from_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Starting port of the range
 {{% /md %}}</dd><dt class="property-optional"
@@ -1479,7 +1518,7 @@ The following state arguments are supported:
 <a href="#to_port_python" style="color: inherit; text-decoration: inherit;">to_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Ending port of the range
 {{% /md %}}</dd></dl>
@@ -1538,7 +1577,7 @@ The following state arguments are supported:
 <a href="#fromport_nodejs" style="color: inherit; text-decoration: inherit;">from<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Starting port of the range
 {{% /md %}}</dd><dt class="property-optional"
@@ -1547,7 +1586,7 @@ The following state arguments are supported:
 <a href="#toport_nodejs" style="color: inherit; text-decoration: inherit;">to<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Ending port of the range
 {{% /md %}}</dd></dl>
@@ -1560,7 +1599,7 @@ The following state arguments are supported:
 <a href="#from_port_python" style="color: inherit; text-decoration: inherit;">from_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Starting port of the range
 {{% /md %}}</dd><dt class="property-optional"
@@ -1569,7 +1608,7 @@ The following state arguments are supported:
 <a href="#to_port_python" style="color: inherit; text-decoration: inherit;">to_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Ending port of the range
 {{% /md %}}</dd></dl>

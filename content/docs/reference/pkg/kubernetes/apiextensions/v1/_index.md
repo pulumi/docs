@@ -22,6 +22,6 @@ Explore the resources and functions of the kubernetes.apiextensions/v1 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>2.9.1</dd>
+	<dd>3.0.0-rc.1</dd>
 </dl>
 

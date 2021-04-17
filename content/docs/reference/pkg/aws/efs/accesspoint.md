@@ -51,8 +51,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/efs"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/efs"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -112,19 +112,29 @@ const test = new aws.efs.AccessPoint("test", {fileSystemId: aws_efs_file_system.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AccessPoint</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccessPointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AccessPoint</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccessPointArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AccessPoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">file_system_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">posix_user</span><span class="p">:</span> <span class="nx">Optional[AccessPointPosixUserArgs]</span> = None<span class="p">, </span><span class="nx">root_directory</span><span class="p">:</span> <span class="nx">Optional[AccessPointRootDirectoryArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AccessPoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                <span class="nx">file_system_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">posix_user</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AccessPointPosixUserArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">root_directory</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AccessPointRootDirectoryArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AccessPoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccessPointArgs</a></span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccessPoint</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AccessPointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AccessPoint</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccessPoint</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AccessPointArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AccessPoint</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AccessPoint</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AccessPointArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AccessPoint</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AccessPointArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -159,22 +169,32 @@ const test = new aws.efs.AccessPoint("test", {fileSystemId: aws_efs_file_system.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AccessPointArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -183,7 +203,7 @@ const test = new aws.efs.AccessPoint("test", {fileSystemId: aws_efs_file_system.
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -207,7 +227,7 @@ const test = new aws.efs.AccessPoint("test", {fileSystemId: aws_efs_file_system.
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -342,7 +362,7 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#filesystemid_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the file system for which the access point is intended.
 {{% /md %}}</dd><dt class="property-optional"
@@ -351,7 +371,7 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#posixuser_nodejs" style="color: inherit; text-decoration: inherit;">posix<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspointposixuser">Access<wbr>Point<wbr>Posix<wbr>User</a></span>
+        <span class="property-type"><a href="#accesspointposixuser">pulumi.<wbr>Input<Access<wbr>Point<wbr>Posix<wbr>User<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The operating system user and group applied to all file system requests made using the access point. See Posix User below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -360,7 +380,7 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#rootdirectory_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspointrootdirectory">Access<wbr>Point<wbr>Root<wbr>Directory</a></span>
+        <span class="property-type"><a href="#accesspointrootdirectory">pulumi.<wbr>Input<Access<wbr>Point<wbr>Root<wbr>Directory<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Specifies the directory on the Amazon EFS file system that the access point provides access to. See Root Directory below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -369,7 +389,7 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags.
 {{% /md %}}</dd></dl>
@@ -382,7 +402,7 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#file_system_id_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the file system for which the access point is intended.
 {{% /md %}}</dd><dt class="property-optional"
@@ -391,7 +411,7 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#posix_user_python" style="color: inherit; text-decoration: inherit;">posix_<wbr>user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspointposixuser">Access<wbr>Point<wbr>Posix<wbr>User<wbr>Args</a></span>
+        <span class="property-type"><a href="#accesspointposixuser">Input[Access<wbr>Point<wbr>Posix<wbr>User<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The operating system user and group applied to all file system requests made using the access point. See Posix User below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -400,7 +420,7 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#root_directory_python" style="color: inherit; text-decoration: inherit;">root_<wbr>directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspointrootdirectory">Access<wbr>Point<wbr>Root<wbr>Directory<wbr>Args</a></span>
+        <span class="property-type"><a href="#accesspointrootdirectory">Input[Access<wbr>Point<wbr>Root<wbr>Directory<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the directory on the Amazon EFS file system that the access point provides access to. See Root Directory below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -409,7 +429,7 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags.
 {{% /md %}}</dd></dl>
@@ -582,20 +602,29 @@ Get an existing AccessPoint resource's state with the given name, ID, and option
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">AccessPointState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">AccessPoint</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">AccessPointState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">AccessPoint</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">file_system_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">file_system_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">posix_user</span><span class="p">:</span> <span class="nx">Optional[AccessPointPosixUserArgs]</span> = None<span class="p">, </span><span class="nx">root_directory</span><span class="p">:</span> <span class="nx">Optional[AccessPointRootDirectoryArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> AccessPoint</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">file_system_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">file_system_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">owner_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">posix_user</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AccessPointPosixUserArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">root_directory</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AccessPointRootDirectoryArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> AccessPoint</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAccessPoint<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">AccessPointState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AccessPoint</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAccessPoint<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">AccessPointState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AccessPoint</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">AccessPoint</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">AccessPointState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">AccessPoint</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">AccessPointState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -836,7 +865,7 @@ The following state arguments are supported:
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name of the access point.
 {{% /md %}}</dd><dt class="property-optional"
@@ -845,7 +874,7 @@ The following state arguments are supported:
 <a href="#state_filesystemarn_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name of the file system.
 {{% /md %}}</dd><dt class="property-optional"
@@ -854,7 +883,7 @@ The following state arguments are supported:
 <a href="#state_filesystemid_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the file system for which the access point is intended.
 {{% /md %}}</dd><dt class="property-optional"
@@ -863,7 +892,7 @@ The following state arguments are supported:
 <a href="#state_ownerid_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -871,7 +900,7 @@ The following state arguments are supported:
 <a href="#state_posixuser_nodejs" style="color: inherit; text-decoration: inherit;">posix<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspointposixuser">Access<wbr>Point<wbr>Posix<wbr>User</a></span>
+        <span class="property-type"><a href="#accesspointposixuser">pulumi.<wbr>Input<Access<wbr>Point<wbr>Posix<wbr>User<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The operating system user and group applied to all file system requests made using the access point. See Posix User below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -880,7 +909,7 @@ The following state arguments are supported:
 <a href="#state_rootdirectory_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspointrootdirectory">Access<wbr>Point<wbr>Root<wbr>Directory</a></span>
+        <span class="property-type"><a href="#accesspointrootdirectory">pulumi.<wbr>Input<Access<wbr>Point<wbr>Root<wbr>Directory<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Specifies the directory on the Amazon EFS file system that the access point provides access to. See Root Directory below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -889,7 +918,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags.
 {{% /md %}}</dd></dl>
@@ -902,7 +931,7 @@ The following state arguments are supported:
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name of the access point.
 {{% /md %}}</dd><dt class="property-optional"
@@ -911,7 +940,7 @@ The following state arguments are supported:
 <a href="#state_file_system_arn_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name of the file system.
 {{% /md %}}</dd><dt class="property-optional"
@@ -920,7 +949,7 @@ The following state arguments are supported:
 <a href="#state_file_system_id_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the file system for which the access point is intended.
 {{% /md %}}</dd><dt class="property-optional"
@@ -929,7 +958,7 @@ The following state arguments are supported:
 <a href="#state_owner_id_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -937,7 +966,7 @@ The following state arguments are supported:
 <a href="#state_posix_user_python" style="color: inherit; text-decoration: inherit;">posix_<wbr>user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspointposixuser">Access<wbr>Point<wbr>Posix<wbr>User<wbr>Args</a></span>
+        <span class="property-type"><a href="#accesspointposixuser">Input[Access<wbr>Point<wbr>Posix<wbr>User<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The operating system user and group applied to all file system requests made using the access point. See Posix User below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -946,7 +975,7 @@ The following state arguments are supported:
 <a href="#state_root_directory_python" style="color: inherit; text-decoration: inherit;">root_<wbr>directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspointrootdirectory">Access<wbr>Point<wbr>Root<wbr>Directory<wbr>Args</a></span>
+        <span class="property-type"><a href="#accesspointrootdirectory">Input[Access<wbr>Point<wbr>Root<wbr>Directory<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the directory on the Amazon EFS file system that the access point provides access to. See Root Directory below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -955,7 +984,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags.
 {{% /md %}}</dd></dl>
@@ -1041,7 +1070,7 @@ The following state arguments are supported:
 <a href="#gid_nodejs" style="color: inherit; text-decoration: inherit;">gid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The POSIX group ID used for all file system operations using this access point.
 {{% /md %}}</dd><dt class="property-required"
@@ -1050,7 +1079,7 @@ The following state arguments are supported:
 <a href="#uid_nodejs" style="color: inherit; text-decoration: inherit;">uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The POSIX user ID used for all file system operations using this access point.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1059,7 +1088,7 @@ The following state arguments are supported:
 <a href="#secondarygids_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Gids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
     </dt>
     <dd>{{% md %}}Secondary POSIX group IDs used for all file system operations using this access point.
 {{% /md %}}</dd></dl>
@@ -1072,7 +1101,7 @@ The following state arguments are supported:
 <a href="#gid_python" style="color: inherit; text-decoration: inherit;">gid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The POSIX group ID used for all file system operations using this access point.
 {{% /md %}}</dd><dt class="property-required"
@@ -1081,7 +1110,7 @@ The following state arguments are supported:
 <a href="#uid_python" style="color: inherit; text-decoration: inherit;">uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The POSIX user ID used for all file system operations using this access point.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1090,7 +1119,7 @@ The following state arguments are supported:
 <a href="#secondary_gids_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>gids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[int]</span>
+        <span class="property-type">Input[int]]]</span>
     </dt>
     <dd>{{% md %}}Secondary POSIX group IDs used for all file system operations using this access point.
 {{% /md %}}</dd></dl>
@@ -1149,7 +1178,7 @@ The following state arguments are supported:
 <a href="#creationinfo_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspointrootdirectorycreationinfo">Access<wbr>Point<wbr>Root<wbr>Directory<wbr>Creation<wbr>Info</a></span>
+        <span class="property-type"><a href="#accesspointrootdirectorycreationinfo">pulumi.<wbr>Input<Access<wbr>Point<wbr>Root<wbr>Directory<wbr>Creation<wbr>Info<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Specifies the POSIX IDs and permissions to apply to the access point's Root Directory. See Creation Info below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1158,7 +1187,7 @@ The following state arguments are supported:
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the path on the EFS file system to expose as the root directory to NFS clients using the access point to access the EFS file system. A path can have up to four subdirectories. If the specified path does not exist, you are required to provide `creation_info`.
 {{% /md %}}</dd></dl>
@@ -1171,7 +1200,7 @@ The following state arguments are supported:
 <a href="#creation_info_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspointrootdirectorycreationinfo">Access<wbr>Point<wbr>Root<wbr>Directory<wbr>Creation<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#accesspointrootdirectorycreationinfo">Input[Access<wbr>Point<wbr>Root<wbr>Directory<wbr>Creation<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the POSIX IDs and permissions to apply to the access point's Root Directory. See Creation Info below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1180,7 +1209,7 @@ The following state arguments are supported:
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the path on the EFS file system to expose as the root directory to NFS clients using the access point to access the EFS file system. A path can have up to four subdirectories. If the specified path does not exist, you are required to provide `creation_info`.
 {{% /md %}}</dd></dl>
@@ -1257,7 +1286,7 @@ The following state arguments are supported:
 <a href="#ownergid_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>Gid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Specifies the POSIX group ID to apply to the `root_directory`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1266,7 +1295,7 @@ The following state arguments are supported:
 <a href="#owneruid_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>Uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Specifies the POSIX user ID to apply to the `root_directory`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1275,7 +1304,7 @@ The following state arguments are supported:
 <a href="#permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the POSIX permissions to apply to the RootDirectory, in the format of an octal number representing the file's mode bits.
 {{% /md %}}</dd></dl>
@@ -1288,7 +1317,7 @@ The following state arguments are supported:
 <a href="#owner_gid_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>gid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Specifies the POSIX group ID to apply to the `root_directory`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1297,7 +1326,7 @@ The following state arguments are supported:
 <a href="#owner_uid_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Specifies the POSIX user ID to apply to the `root_directory`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1306,7 +1335,7 @@ The following state arguments are supported:
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the POSIX permissions to apply to the RootDirectory, in the format of an octal number representing the file's mode bits.
 {{% /md %}}</dd></dl>

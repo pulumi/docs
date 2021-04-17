@@ -61,8 +61,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigatewayv2"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/apigatewayv2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -140,19 +140,29 @@ const example = new aws.apigatewayv2.DomainName("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DomainName</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DomainNameArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DomainName</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DomainNameArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DomainName</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain_name_configuration</span><span class="p">:</span> <span class="nx">Optional[DomainNameDomainNameConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">mutual_tls_authentication</span><span class="p">:</span> <span class="nx">Optional[DomainNameMutualTlsAuthenticationArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">DomainName</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+               <span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">domain_name_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DomainNameDomainNameConfigurationArgs]]</span> = None<span class="p">,</span>
+               <span class="nx">mutual_tls_authentication</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DomainNameMutualTlsAuthenticationArgs]]</span> = None<span class="p">,</span>
+               <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">DomainName</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DomainNameArgs</a></span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDomainName</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DomainNameArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DomainName</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDomainName</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DomainNameArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DomainName</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DomainName</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DomainNameArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DomainName</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DomainNameArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -187,22 +197,32 @@ const example = new aws.apigatewayv2.DomainName("example", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">DomainNameArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -211,7 +231,7 @@ const example = new aws.apigatewayv2.DomainName("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -235,7 +255,7 @@ const example = new aws.apigatewayv2.DomainName("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -370,7 +390,7 @@ The DomainName resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The domain name. Must be between 1 and 512 characters in length.
 {{% /md %}}</dd><dt class="property-required"
@@ -379,7 +399,7 @@ The DomainName resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#domainnameconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnamedomainnameconfiguration">Domain<wbr>Name<wbr>Domain<wbr>Name<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#domainnamedomainnameconfiguration">pulumi.<wbr>Input<Domain<wbr>Name<wbr>Domain<wbr>Name<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The domain name configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -388,7 +408,7 @@ The DomainName resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#mutualtlsauthentication_nodejs" style="color: inherit; text-decoration: inherit;">mutual<wbr>Tls<wbr>Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnamemutualtlsauthentication">Domain<wbr>Name<wbr>Mutual<wbr>Tls<wbr>Authentication</a></span>
+        <span class="property-type"><a href="#domainnamemutualtlsauthentication">pulumi.<wbr>Input<Domain<wbr>Name<wbr>Mutual<wbr>Tls<wbr>Authentication<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The mutual TLS authentication configuration for the domain name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -397,7 +417,7 @@ The DomainName resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the domain name.
 {{% /md %}}</dd></dl>
@@ -410,7 +430,7 @@ The DomainName resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The domain name. Must be between 1 and 512 characters in length.
 {{% /md %}}</dd><dt class="property-required"
@@ -419,7 +439,7 @@ The DomainName resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#domain_name_configuration_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnamedomainnameconfiguration">Domain<wbr>Name<wbr>Domain<wbr>Name<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#domainnamedomainnameconfiguration">Input[Domain<wbr>Name<wbr>Domain<wbr>Name<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The domain name configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -428,7 +448,7 @@ The DomainName resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#mutual_tls_authentication_python" style="color: inherit; text-decoration: inherit;">mutual_<wbr>tls_<wbr>authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnamemutualtlsauthentication">Domain<wbr>Name<wbr>Mutual<wbr>Tls<wbr>Authentication<wbr>Args</a></span>
+        <span class="property-type"><a href="#domainnamemutualtlsauthentication">Input[Domain<wbr>Name<wbr>Mutual<wbr>Tls<wbr>Authentication<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The mutual TLS authentication configuration for the domain name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -437,7 +457,7 @@ The DomainName resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the domain name.
 {{% /md %}}</dd></dl>
@@ -578,20 +598,28 @@ Get an existing DomainName resource's state with the given name, ID, and optiona
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">DomainNameState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">DomainName</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">DomainNameState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">DomainName</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_mapping_selection_expression</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain_name_configuration</span><span class="p">:</span> <span class="nx">Optional[DomainNameDomainNameConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">mutual_tls_authentication</span><span class="p">:</span> <span class="nx">Optional[DomainNameMutualTlsAuthenticationArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> DomainName</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">api_mapping_selection_expression</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">domain_name_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DomainNameDomainNameConfigurationArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">mutual_tls_authentication</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DomainNameMutualTlsAuthenticationArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> DomainName</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDomainName<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">DomainNameState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DomainName</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDomainName<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">DomainNameState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DomainName</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">DomainName</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">DomainNameState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">DomainName</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">DomainNameState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -816,7 +844,7 @@ The following state arguments are supported:
 <a href="#state_apimappingselectionexpression_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Mapping<wbr>Selection<wbr>Expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The [API mapping selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-mapping-selection-expressions) for the domain name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -825,7 +853,7 @@ The following state arguments are supported:
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of the domain name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -834,7 +862,7 @@ The following state arguments are supported:
 <a href="#state_domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The domain name. Must be between 1 and 512 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -843,7 +871,7 @@ The following state arguments are supported:
 <a href="#state_domainnameconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnamedomainnameconfiguration">Domain<wbr>Name<wbr>Domain<wbr>Name<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#domainnamedomainnameconfiguration">pulumi.<wbr>Input<Domain<wbr>Name<wbr>Domain<wbr>Name<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The domain name configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -852,7 +880,7 @@ The following state arguments are supported:
 <a href="#state_mutualtlsauthentication_nodejs" style="color: inherit; text-decoration: inherit;">mutual<wbr>Tls<wbr>Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnamemutualtlsauthentication">Domain<wbr>Name<wbr>Mutual<wbr>Tls<wbr>Authentication</a></span>
+        <span class="property-type"><a href="#domainnamemutualtlsauthentication">pulumi.<wbr>Input<Domain<wbr>Name<wbr>Mutual<wbr>Tls<wbr>Authentication<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The mutual TLS authentication configuration for the domain name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -861,7 +889,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the domain name.
 {{% /md %}}</dd></dl>
@@ -874,7 +902,7 @@ The following state arguments are supported:
 <a href="#state_api_mapping_selection_expression_python" style="color: inherit; text-decoration: inherit;">api_<wbr>mapping_<wbr>selection_<wbr>expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The [API mapping selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-mapping-selection-expressions) for the domain name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -883,7 +911,7 @@ The following state arguments are supported:
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of the domain name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -892,7 +920,7 @@ The following state arguments are supported:
 <a href="#state_domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The domain name. Must be between 1 and 512 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -901,7 +929,7 @@ The following state arguments are supported:
 <a href="#state_domain_name_configuration_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnamedomainnameconfiguration">Domain<wbr>Name<wbr>Domain<wbr>Name<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#domainnamedomainnameconfiguration">Input[Domain<wbr>Name<wbr>Domain<wbr>Name<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The domain name configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -910,7 +938,7 @@ The following state arguments are supported:
 <a href="#state_mutual_tls_authentication_python" style="color: inherit; text-decoration: inherit;">mutual_<wbr>tls_<wbr>authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnamemutualtlsauthentication">Domain<wbr>Name<wbr>Mutual<wbr>Tls<wbr>Authentication<wbr>Args</a></span>
+        <span class="property-type"><a href="#domainnamemutualtlsauthentication">Input[Domain<wbr>Name<wbr>Mutual<wbr>Tls<wbr>Authentication<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The mutual TLS authentication configuration for the domain name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -919,7 +947,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the domain name.
 {{% /md %}}</dd></dl>
@@ -1043,7 +1071,7 @@ Use the `aws.acm.Certificate` resource to configure an ACM certificate.
 <a href="#certificatearn_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of an AWS-managed certificate that will be used by the endpoint for the domain name. AWS Certificate Manager is the only supported source.
 Use the `aws.acm.Certificate` resource to configure an ACM certificate.
@@ -1053,7 +1081,7 @@ Use the `aws.acm.Certificate` resource to configure an ACM certificate.
 <a href="#endpointtype_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The endpoint type. Valid values: `REGIONAL`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1062,7 +1090,7 @@ Use the `aws.acm.Certificate` resource to configure an ACM certificate.
 <a href="#securitypolicy_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Transport Layer Security (TLS) version of the [security policy](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-custom-domain-tls-version.html) for the domain name. Valid values: `TLS_1_2`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1071,7 +1099,7 @@ Use the `aws.acm.Certificate` resource to configure an ACM certificate.
 <a href="#hostedzoneid_nodejs" style="color: inherit; text-decoration: inherit;">hosted<wbr>Zone<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Amazon Route 53 Hosted Zone ID of the endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1080,7 +1108,7 @@ Use the `aws.acm.Certificate` resource to configure an ACM certificate.
 <a href="#targetdomainname_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Domain<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The target domain name.
 {{% /md %}}</dd></dl>
@@ -1093,7 +1121,7 @@ Use the `aws.acm.Certificate` resource to configure an ACM certificate.
 <a href="#certificate_arn_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of an AWS-managed certificate that will be used by the endpoint for the domain name. AWS Certificate Manager is the only supported source.
 Use the `aws.acm.Certificate` resource to configure an ACM certificate.
@@ -1103,7 +1131,7 @@ Use the `aws.acm.Certificate` resource to configure an ACM certificate.
 <a href="#endpoint_type_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The endpoint type. Valid values: `REGIONAL`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1112,7 +1140,7 @@ Use the `aws.acm.Certificate` resource to configure an ACM certificate.
 <a href="#security_policy_python" style="color: inherit; text-decoration: inherit;">security_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Transport Layer Security (TLS) version of the [security policy](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-custom-domain-tls-version.html) for the domain name. Valid values: `TLS_1_2`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1121,7 +1149,7 @@ Use the `aws.acm.Certificate` resource to configure an ACM certificate.
 <a href="#hosted_zone_id_python" style="color: inherit; text-decoration: inherit;">hosted_<wbr>zone_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Amazon Route 53 Hosted Zone ID of the endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1130,7 +1158,7 @@ Use the `aws.acm.Certificate` resource to configure an ACM certificate.
 <a href="#target_domain_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>domain_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The target domain name.
 {{% /md %}}</dd></dl>
@@ -1191,7 +1219,7 @@ The truststore can contain certificates from public or private certificate autho
 <a href="#truststoreuri_nodejs" style="color: inherit; text-decoration: inherit;">truststore<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An Amazon S3 URL that specifies the truststore for mutual TLS authentication, for example, `s3://bucket-name/key-name`.
 The truststore can contain certificates from public or private certificate authorities. To update the truststore, upload a new version to S3, and then update your custom domain name to use the new version.
@@ -1201,7 +1229,7 @@ The truststore can contain certificates from public or private certificate autho
 <a href="#truststoreversion_nodejs" style="color: inherit; text-decoration: inherit;">truststore<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The version of the S3 object that contains the truststore. To specify a version, you must have versioning enabled for the S3 bucket.
 {{% /md %}}</dd></dl>
@@ -1214,7 +1242,7 @@ The truststore can contain certificates from public or private certificate autho
 <a href="#truststore_uri_python" style="color: inherit; text-decoration: inherit;">truststore_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An Amazon S3 URL that specifies the truststore for mutual TLS authentication, for example, `s3://bucket-name/key-name`.
 The truststore can contain certificates from public or private certificate authorities. To update the truststore, upload a new version to S3, and then update your custom domain name to use the new version.
@@ -1224,7 +1252,7 @@ The truststore can contain certificates from public or private certificate autho
 <a href="#truststore_version_python" style="color: inherit; text-decoration: inherit;">truststore_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The version of the S3 object that contains the truststore. To specify a version, you must have versioning enabled for the S3 bucket.
 {{% /md %}}</dd></dl>

@@ -73,8 +73,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/signer"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/signer"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -187,19 +187,29 @@ const buildSigningJob = new aws.signer.SigningJob("buildSigningJob", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SigningJob</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SigningJobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SigningJob</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SigningJobArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SigningJob</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[SigningJobDestinationArgs]</span> = None<span class="p">, </span><span class="nx">ignore_signing_job_failure</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[SigningJobSourceArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SigningJob</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+               <span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SigningJobDestinationArgs]]</span> = None<span class="p">,</span>
+               <span class="nx">ignore_signing_job_failure</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+               <span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SigningJobSourceArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SigningJob</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SigningJobArgs</a></span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSigningJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SigningJobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SigningJob</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSigningJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SigningJobArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SigningJob</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SigningJob</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SigningJobArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SigningJob</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SigningJobArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -234,22 +244,32 @@ const buildSigningJob = new aws.signer.SigningJob("buildSigningJob", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">SigningJobArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -258,7 +278,7 @@ const buildSigningJob = new aws.signer.SigningJob("buildSigningJob", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -282,7 +302,7 @@ const buildSigningJob = new aws.signer.SigningJob("buildSigningJob", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -417,7 +437,7 @@ The SigningJob resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#signingjobdestination">Signing<wbr>Job<wbr>Destination</a></span>
+        <span class="property-type"><a href="#signingjobdestination">pulumi.<wbr>Input<Signing<wbr>Job<wbr>Destination<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The S3 bucket in which to save your signed object. See Destination below for details.
 {{% /md %}}</dd><dt class="property-required"
@@ -426,7 +446,7 @@ The SigningJob resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#profilename_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the profile to initiate the signing operation.
 {{% /md %}}</dd><dt class="property-required"
@@ -435,7 +455,7 @@ The SigningJob resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#signingjobsource">Signing<wbr>Job<wbr>Source</a></span>
+        <span class="property-type"><a href="#signingjobsource">pulumi.<wbr>Input<Signing<wbr>Job<wbr>Source<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The S3 bucket that contains the object to sign. See Source below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -444,7 +464,7 @@ The SigningJob resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#ignoresigningjobfailure_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Signing<wbr>Job<wbr>Failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Set this argument to `true` to ignore signing job failures and retrieve failed status and reason. Default `false`.
 {{% /md %}}</dd></dl>
@@ -457,7 +477,7 @@ The SigningJob resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#signingjobdestination">Signing<wbr>Job<wbr>Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#signingjobdestination">Input[Signing<wbr>Job<wbr>Destination<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The S3 bucket in which to save your signed object. See Destination below for details.
 {{% /md %}}</dd><dt class="property-required"
@@ -466,7 +486,7 @@ The SigningJob resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#profile_name_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the profile to initiate the signing operation.
 {{% /md %}}</dd><dt class="property-required"
@@ -475,7 +495,7 @@ The SigningJob resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#signingjobsource">Signing<wbr>Job<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#signingjobsource">Input[Signing<wbr>Job<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The S3 bucket that contains the object to sign. See Source below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -484,7 +504,7 @@ The SigningJob resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#ignore_signing_job_failure_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>signing_<wbr>job_<wbr>failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Set this argument to `true` to ignore signing job failures and retrieve failed status and reason. Default `false`.
 {{% /md %}}</dd></dl>
@@ -1057,20 +1077,40 @@ Get an existing SigningJob resource's state with the given name, ID, and optiona
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">SigningJobState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">SigningJob</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">SigningJobState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">SigningJob</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">completed_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[SigningJobDestinationArgs]</span> = None<span class="p">, </span><span class="nx">ignore_signing_job_failure</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">job_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">job_invoker</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">job_owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">platform_display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">platform_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">requested_by</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">revocation_records</span><span class="p">:</span> <span class="nx">Optional[Sequence[SigningJobRevocationRecordArgs]]</span> = None<span class="p">, </span><span class="nx">signature_expires_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">signed_objects</span><span class="p">:</span> <span class="nx">Optional[Sequence[SigningJobSignedObjectArgs]]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[SigningJobSourceArgs]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status_reason</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> SigningJob</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">completed_at</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">created_at</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SigningJobDestinationArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">ignore_signing_job_failure</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">job_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">job_invoker</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">job_owner</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">platform_display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">platform_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">profile_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">requested_by</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">revocation_records</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[SigningJobRevocationRecordArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">signature_expires_at</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">signed_objects</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[SigningJobSignedObjectArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SigningJobSourceArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">status_reason</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> SigningJob</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSigningJob<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">SigningJobState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SigningJob</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSigningJob<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">SigningJobState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SigningJob</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">SigningJob</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">SigningJobState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">SigningJob</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">SigningJobState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1511,7 +1551,7 @@ The following state arguments are supported:
 <a href="#state_completedat_nodejs" style="color: inherit; text-decoration: inherit;">completed<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the signing job was completed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1520,7 +1560,7 @@ The following state arguments are supported:
 <a href="#state_createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the signing job was created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1529,7 +1569,7 @@ The following state arguments are supported:
 <a href="#state_destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#signingjobdestination">Signing<wbr>Job<wbr>Destination</a></span>
+        <span class="property-type"><a href="#signingjobdestination">pulumi.<wbr>Input<Signing<wbr>Job<wbr>Destination<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The S3 bucket in which to save your signed object. See Destination below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1538,7 +1578,7 @@ The following state arguments are supported:
 <a href="#state_ignoresigningjobfailure_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Signing<wbr>Job<wbr>Failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Set this argument to `true` to ignore signing job failures and retrieve failed status and reason. Default `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1547,7 +1587,7 @@ The following state arguments are supported:
 <a href="#state_jobid_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the signing job on output.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1556,7 +1596,7 @@ The following state arguments are supported:
 <a href="#state_jobinvoker_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Invoker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IAM entity that initiated the signing job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1565,7 +1605,7 @@ The following state arguments are supported:
 <a href="#state_jobowner_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the job owner.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1574,7 +1614,7 @@ The following state arguments are supported:
 <a href="#state_platformdisplayname_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A human-readable name for the signing platform associated with the signing job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1583,7 +1623,7 @@ The following state arguments are supported:
 <a href="#state_platformid_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The platform to which your signed code image will be distributed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1592,7 +1632,7 @@ The following state arguments are supported:
 <a href="#state_profilename_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the profile to initiate the signing operation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1601,7 +1641,7 @@ The following state arguments are supported:
 <a href="#state_profileversion_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The version of the signing profile used to initiate the signing job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1610,7 +1650,7 @@ The following state arguments are supported:
 <a href="#state_requestedby_nodejs" style="color: inherit; text-decoration: inherit;">requested<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IAM principal that requested the signing job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1619,7 +1659,7 @@ The following state arguments are supported:
 <a href="#state_revocationrecords_nodejs" style="color: inherit; text-decoration: inherit;">revocation<wbr>Records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#signingjobrevocationrecord">Signing<wbr>Job<wbr>Revocation<wbr>Record[]</a></span>
+        <span class="property-type"><a href="#signingjobrevocationrecord">pulumi.<wbr>Input<pulumi.<wbr>Input<Signing<wbr>Job<wbr>Revocation<wbr>Record<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A revocation record if the signature generated by the signing job has been revoked. Contains a timestamp and the ID of the IAM entity that revoked the signature.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1628,7 +1668,7 @@ The following state arguments are supported:
 <a href="#state_signatureexpiresat_nodejs" style="color: inherit; text-decoration: inherit;">signature<wbr>Expires<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The time when the signature of a signing job expires.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1637,7 +1677,7 @@ The following state arguments are supported:
 <a href="#state_signedobjects_nodejs" style="color: inherit; text-decoration: inherit;">signed<wbr>Objects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#signingjobsignedobject">Signing<wbr>Job<wbr>Signed<wbr>Object[]</a></span>
+        <span class="property-type"><a href="#signingjobsignedobject">pulumi.<wbr>Input<pulumi.<wbr>Input<Signing<wbr>Job<wbr>Signed<wbr>Object<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Name of the S3 bucket where the signed code image is saved by code signing.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1646,7 +1686,7 @@ The following state arguments are supported:
 <a href="#state_source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#signingjobsource">Signing<wbr>Job<wbr>Source</a></span>
+        <span class="property-type"><a href="#signingjobsource">pulumi.<wbr>Input<Signing<wbr>Job<wbr>Source<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The S3 bucket that contains the object to sign. See Source below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1655,7 +1695,7 @@ The following state arguments are supported:
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of the signing job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1664,7 +1704,7 @@ The following state arguments are supported:
 <a href="#state_statusreason_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String value that contains the status reason.
 {{% /md %}}</dd></dl>
@@ -1677,7 +1717,7 @@ The following state arguments are supported:
 <a href="#state_completed_at_python" style="color: inherit; text-decoration: inherit;">completed_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the signing job was completed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1686,7 +1726,7 @@ The following state arguments are supported:
 <a href="#state_created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the signing job was created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1695,7 +1735,7 @@ The following state arguments are supported:
 <a href="#state_destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#signingjobdestination">Signing<wbr>Job<wbr>Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#signingjobdestination">Input[Signing<wbr>Job<wbr>Destination<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The S3 bucket in which to save your signed object. See Destination below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1704,7 +1744,7 @@ The following state arguments are supported:
 <a href="#state_ignore_signing_job_failure_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>signing_<wbr>job_<wbr>failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Set this argument to `true` to ignore signing job failures and retrieve failed status and reason. Default `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1713,7 +1753,7 @@ The following state arguments are supported:
 <a href="#state_job_id_python" style="color: inherit; text-decoration: inherit;">job_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the signing job on output.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1722,7 +1762,7 @@ The following state arguments are supported:
 <a href="#state_job_invoker_python" style="color: inherit; text-decoration: inherit;">job_<wbr>invoker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IAM entity that initiated the signing job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1731,7 +1771,7 @@ The following state arguments are supported:
 <a href="#state_job_owner_python" style="color: inherit; text-decoration: inherit;">job_<wbr>owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the job owner.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1740,7 +1780,7 @@ The following state arguments are supported:
 <a href="#state_platform_display_name_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A human-readable name for the signing platform associated with the signing job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1749,7 +1789,7 @@ The following state arguments are supported:
 <a href="#state_platform_id_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The platform to which your signed code image will be distributed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1758,7 +1798,7 @@ The following state arguments are supported:
 <a href="#state_profile_name_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the profile to initiate the signing operation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1767,7 +1807,7 @@ The following state arguments are supported:
 <a href="#state_profile_version_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The version of the signing profile used to initiate the signing job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1776,7 +1816,7 @@ The following state arguments are supported:
 <a href="#state_requested_by_python" style="color: inherit; text-decoration: inherit;">requested_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IAM principal that requested the signing job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1785,7 +1825,7 @@ The following state arguments are supported:
 <a href="#state_revocation_records_python" style="color: inherit; text-decoration: inherit;">revocation_<wbr>records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#signingjobrevocationrecord">Sequence[Signing<wbr>Job<wbr>Revocation<wbr>Record<wbr>Args]</a></span>
+        <span class="property-type"><a href="#signingjobrevocationrecord">Input[Signing<wbr>Job<wbr>Revocation<wbr>Record<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A revocation record if the signature generated by the signing job has been revoked. Contains a timestamp and the ID of the IAM entity that revoked the signature.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1794,7 +1834,7 @@ The following state arguments are supported:
 <a href="#state_signature_expires_at_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>expires_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The time when the signature of a signing job expires.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1803,7 +1843,7 @@ The following state arguments are supported:
 <a href="#state_signed_objects_python" style="color: inherit; text-decoration: inherit;">signed_<wbr>objects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#signingjobsignedobject">Sequence[Signing<wbr>Job<wbr>Signed<wbr>Object<wbr>Args]</a></span>
+        <span class="property-type"><a href="#signingjobsignedobject">Input[Signing<wbr>Job<wbr>Signed<wbr>Object<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Name of the S3 bucket where the signed code image is saved by code signing.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1812,7 +1852,7 @@ The following state arguments are supported:
 <a href="#state_source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#signingjobsource">Signing<wbr>Job<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#signingjobsource">Input[Signing<wbr>Job<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The S3 bucket that contains the object to sign. See Source below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1821,7 +1861,7 @@ The following state arguments are supported:
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of the signing job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1830,7 +1870,7 @@ The following state arguments are supported:
 <a href="#state_status_reason_python" style="color: inherit; text-decoration: inherit;">status_<wbr>reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String value that contains the status reason.
 {{% /md %}}</dd></dl>
@@ -1880,7 +1920,7 @@ The following state arguments are supported:
 <a href="#s3_nodejs" style="color: inherit; text-decoration: inherit;">s3</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#signingjobdestinations3">Signing<wbr>Job<wbr>Destination<wbr>S3</a></span>
+        <span class="property-type"><a href="#signingjobdestinations3">pulumi.<wbr>Input<Signing<wbr>Job<wbr>Destination<wbr>S3Args></a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the S3 Destination object: See S3 Destination below for details.
 {{% /md %}}</dd></dl>
@@ -1893,7 +1933,7 @@ The following state arguments are supported:
 <a href="#s3_python" style="color: inherit; text-decoration: inherit;">s3</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#signingjobdestinations3">Signing<wbr>Job<wbr>Destination<wbr>S3Args</a></span>
+        <span class="property-type"><a href="#signingjobdestinations3">Input[Signing<wbr>Job<wbr>Destination<wbr>S3Args]</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the S3 Destination object: See S3 Destination below for details.
 {{% /md %}}</dd></dl>
@@ -1952,7 +1992,7 @@ The following state arguments are supported:
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the S3 bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1961,7 +2001,7 @@ The following state arguments are supported:
 <a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An Amazon S3 object key prefix that you can use to limit signed objects keys to begin with the specified prefix.
 {{% /md %}}</dd></dl>
@@ -1974,7 +2014,7 @@ The following state arguments are supported:
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the S3 bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1983,7 +2023,7 @@ The following state arguments are supported:
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An Amazon S3 object key prefix that you can use to limit signed objects keys to begin with the specified prefix.
 {{% /md %}}</dd></dl>
@@ -2054,7 +2094,7 @@ The following state arguments are supported:
 <a href="#reason_nodejs" style="color: inherit; text-decoration: inherit;">reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2062,7 +2102,7 @@ The following state arguments are supported:
 <a href="#revokedat_nodejs" style="color: inherit; text-decoration: inherit;">revoked<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2070,7 +2110,7 @@ The following state arguments are supported:
 <a href="#revokedby_nodejs" style="color: inherit; text-decoration: inherit;">revoked<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2082,7 +2122,7 @@ The following state arguments are supported:
 <a href="#reason_python" style="color: inherit; text-decoration: inherit;">reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2090,7 +2130,7 @@ The following state arguments are supported:
 <a href="#revoked_at_python" style="color: inherit; text-decoration: inherit;">revoked_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2098,7 +2138,7 @@ The following state arguments are supported:
 <a href="#revoked_by_python" style="color: inherit; text-decoration: inherit;">revoked_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2138,7 +2178,7 @@ The following state arguments are supported:
 <a href="#s3s_nodejs" style="color: inherit; text-decoration: inherit;">s3s</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#signingjobsignedobjects3">Signing<wbr>Job<wbr>Signed<wbr>Object<wbr>S3[]</a></span>
+        <span class="property-type"><a href="#signingjobsignedobjects3">pulumi.<wbr>Input<pulumi.<wbr>Input<Signing<wbr>Job<wbr>Signed<wbr>Object<wbr>S3Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the S3 Destination object: See S3 Destination below for details.
 {{% /md %}}</dd></dl>
@@ -2151,7 +2191,7 @@ The following state arguments are supported:
 <a href="#s3s_python" style="color: inherit; text-decoration: inherit;">s3s</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#signingjobsignedobjects3">Sequence[Signing<wbr>Job<wbr>Signed<wbr>Object<wbr>S3Args]</a></span>
+        <span class="property-type"><a href="#signingjobsignedobjects3">Input[Signing<wbr>Job<wbr>Signed<wbr>Object<wbr>S3Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the S3 Destination object: See S3 Destination below for details.
 {{% /md %}}</dd></dl>
@@ -2210,7 +2250,7 @@ The following state arguments are supported:
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the S3 bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2219,7 +2259,7 @@ The following state arguments are supported:
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Key name of the bucket object that contains your unsigned code.
 {{% /md %}}</dd></dl>
@@ -2232,7 +2272,7 @@ The following state arguments are supported:
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the S3 bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2241,7 +2281,7 @@ The following state arguments are supported:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Key name of the bucket object that contains your unsigned code.
 {{% /md %}}</dd></dl>
@@ -2282,7 +2322,7 @@ The following state arguments are supported:
 <a href="#s3_nodejs" style="color: inherit; text-decoration: inherit;">s3</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#signingjobsources3">Signing<wbr>Job<wbr>Source<wbr>S3</a></span>
+        <span class="property-type"><a href="#signingjobsources3">pulumi.<wbr>Input<Signing<wbr>Job<wbr>Source<wbr>S3Args></a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the S3 Destination object: See S3 Destination below for details.
 {{% /md %}}</dd></dl>
@@ -2295,7 +2335,7 @@ The following state arguments are supported:
 <a href="#s3_python" style="color: inherit; text-decoration: inherit;">s3</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#signingjobsources3">Signing<wbr>Job<wbr>Source<wbr>S3Args</a></span>
+        <span class="property-type"><a href="#signingjobsources3">Input[Signing<wbr>Job<wbr>Source<wbr>S3Args]</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the S3 Destination object: See S3 Destination below for details.
 {{% /md %}}</dd></dl>
@@ -2372,7 +2412,7 @@ The following state arguments are supported:
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the S3 bucket.
 {{% /md %}}</dd><dt class="property-required"
@@ -2381,7 +2421,7 @@ The following state arguments are supported:
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Key name of the bucket object that contains your unsigned code.
 {{% /md %}}</dd><dt class="property-required"
@@ -2390,7 +2430,7 @@ The following state arguments are supported:
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Version of your source image in your version enabled S3 bucket.
 {{% /md %}}</dd></dl>
@@ -2403,7 +2443,7 @@ The following state arguments are supported:
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the S3 bucket.
 {{% /md %}}</dd><dt class="property-required"
@@ -2412,7 +2452,7 @@ The following state arguments are supported:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Key name of the bucket object that contains your unsigned code.
 {{% /md %}}</dd><dt class="property-required"
@@ -2421,7 +2461,7 @@ The following state arguments are supported:
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Version of your source image in your version enabled S3 bucket.
 {{% /md %}}</dd></dl>

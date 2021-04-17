@@ -176,11 +176,11 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/directoryservice"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/workspaces"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/directoryservice"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/workspaces"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -559,8 +559,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/workspaces"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/workspaces"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -634,19 +634,32 @@ const exampleDirectory = new aws.workspaces.Directory("exampleDirectory", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Directory</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DirectoryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Directory</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DirectoryArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Directory</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">directory_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">self_service_permissions</span><span class="p">:</span> <span class="nx">Optional[DirectorySelfServicePermissionsArgs]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">workspace_access_properties</span><span class="p">:</span> <span class="nx">Optional[DirectoryWorkspaceAccessPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">workspace_creation_properties</span><span class="p">:</span> <span class="nx">Optional[DirectoryWorkspaceCreationPropertiesArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Directory</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+              <span class="nx">directory_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">ip_group_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+              <span class="nx">self_service_permissions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DirectorySelfServicePermissionsArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+              <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+              <span class="nx">workspace_access_properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DirectoryWorkspaceAccessPropertiesArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">workspace_creation_properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DirectoryWorkspaceCreationPropertiesArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Directory</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DirectoryArgs</a></span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDirectory</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DirectoryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Directory</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDirectory</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DirectoryArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Directory</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Directory</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DirectoryArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Directory</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DirectoryArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -681,22 +694,32 @@ const exampleDirectory = new aws.workspaces.Directory("exampleDirectory", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">DirectoryArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -705,7 +728,7 @@ const exampleDirectory = new aws.workspaces.Directory("exampleDirectory", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -729,7 +752,7 @@ const exampleDirectory = new aws.workspaces.Directory("exampleDirectory", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -918,7 +941,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#directoryid_nodejs" style="color: inherit; text-decoration: inherit;">directory<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The directory identifier for registration in WorkSpaces service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -927,7 +950,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#ipgroupids_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Group<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The identifiers of the IP access control groups associated with the directory.
 {{% /md %}}</dd><dt class="property-optional"
@@ -936,7 +959,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#selfservicepermissions_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Service<wbr>Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryselfservicepermissions">Directory<wbr>Self<wbr>Service<wbr>Permissions</a></span>
+        <span class="property-type"><a href="#directoryselfservicepermissions">pulumi.<wbr>Input<Directory<wbr>Self<wbr>Service<wbr>Permissions<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Permissions to enable or disable self-service capabilities. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -945,7 +968,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#subnetids_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The identifiers of the subnets where the directory resides.
 {{% /md %}}</dd><dt class="property-optional"
@@ -954,7 +977,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the WorkSpaces directory.
 {{% /md %}}</dd><dt class="property-optional"
@@ -963,7 +986,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#workspaceaccessproperties_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Access<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryworkspaceaccessproperties">Directory<wbr>Workspace<wbr>Access<wbr>Properties</a></span>
+        <span class="property-type"><a href="#directoryworkspaceaccessproperties">pulumi.<wbr>Input<Directory<wbr>Workspace<wbr>Access<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Specifies which devices and operating systems users can use to access their WorkSpaces. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -972,7 +995,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#workspacecreationproperties_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Creation<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryworkspacecreationproperties">Directory<wbr>Workspace<wbr>Creation<wbr>Properties</a></span>
+        <span class="property-type"><a href="#directoryworkspacecreationproperties">pulumi.<wbr>Input<Directory<wbr>Workspace<wbr>Creation<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Default properties that are used for creating WorkSpaces. Defined below.
 {{% /md %}}</dd></dl>
@@ -985,7 +1008,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#directory_id_python" style="color: inherit; text-decoration: inherit;">directory_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The directory identifier for registration in WorkSpaces service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -994,7 +1017,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#ip_group_ids_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>group_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The identifiers of the IP access control groups associated with the directory.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1003,7 +1026,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#self_service_permissions_python" style="color: inherit; text-decoration: inherit;">self_<wbr>service_<wbr>permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryselfservicepermissions">Directory<wbr>Self<wbr>Service<wbr>Permissions<wbr>Args</a></span>
+        <span class="property-type"><a href="#directoryselfservicepermissions">Input[Directory<wbr>Self<wbr>Service<wbr>Permissions<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Permissions to enable or disable self-service capabilities. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1012,7 +1035,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#subnet_ids_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The identifiers of the subnets where the directory resides.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1021,7 +1044,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the WorkSpaces directory.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1030,7 +1053,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#workspace_access_properties_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>access_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryworkspaceaccessproperties">Directory<wbr>Workspace<wbr>Access<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#directoryworkspaceaccessproperties">Input[Directory<wbr>Workspace<wbr>Access<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies which devices and operating systems users can use to access their WorkSpaces. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1039,7 +1062,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#workspace_creation_properties_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>creation_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryworkspacecreationproperties">Directory<wbr>Workspace<wbr>Creation<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#directoryworkspacecreationproperties">Input[Directory<wbr>Workspace<wbr>Creation<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Default properties that are used for creating WorkSpaces. Defined below.
 {{% /md %}}</dd></dl>
@@ -1396,20 +1419,37 @@ Get an existing Directory resource's state with the given name, ID, and optional
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">DirectoryState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Directory</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">DirectoryState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Directory</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">customer_user_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">directory_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">directory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">directory_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">iam_role_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">registration_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_service_permissions</span><span class="p">:</span> <span class="nx">Optional[DirectorySelfServicePermissionsArgs]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">workspace_access_properties</span><span class="p">:</span> <span class="nx">Optional[DirectoryWorkspaceAccessPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">workspace_creation_properties</span><span class="p">:</span> <span class="nx">Optional[DirectoryWorkspaceCreationPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">workspace_security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Directory</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">alias</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">customer_user_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">directory_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">directory_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">directory_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">dns_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">iam_role_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">ip_group_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">registration_code</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">self_service_permissions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DirectorySelfServicePermissionsArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">workspace_access_properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DirectoryWorkspaceAccessPropertiesArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">workspace_creation_properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DirectoryWorkspaceCreationPropertiesArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">workspace_security_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Directory</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDirectory<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">DirectoryState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Directory</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDirectory<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">DirectoryState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Directory</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Directory</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">DirectoryState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Directory</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">DirectoryState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1796,7 +1836,7 @@ The following state arguments are supported:
 <a href="#state_alias_nodejs" style="color: inherit; text-decoration: inherit;">alias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The directory alias.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1805,7 +1845,7 @@ The following state arguments are supported:
 <a href="#state_customerusername_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>User<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The user name for the service account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1814,7 +1854,7 @@ The following state arguments are supported:
 <a href="#state_directoryid_nodejs" style="color: inherit; text-decoration: inherit;">directory<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The directory identifier for registration in WorkSpaces service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1823,7 +1863,7 @@ The following state arguments are supported:
 <a href="#state_directoryname_nodejs" style="color: inherit; text-decoration: inherit;">directory<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the directory.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1832,7 +1872,7 @@ The following state arguments are supported:
 <a href="#state_directorytype_nodejs" style="color: inherit; text-decoration: inherit;">directory<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The directory type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1841,7 +1881,7 @@ The following state arguments are supported:
 <a href="#state_dnsipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The IP addresses of the DNS servers for the directory.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1850,7 +1890,7 @@ The following state arguments are supported:
 <a href="#state_iamroleid_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Role<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The identifier of the IAM role. This is the role that allows Amazon WorkSpaces to make calls to other services, such as Amazon EC2, on your behalf.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1859,7 +1899,7 @@ The following state arguments are supported:
 <a href="#state_ipgroupids_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Group<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The identifiers of the IP access control groups associated with the directory.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1868,7 +1908,7 @@ The following state arguments are supported:
 <a href="#state_registrationcode_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The registration code for the directory. This is the code that users enter in their Amazon WorkSpaces client application to connect to the directory.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1877,7 +1917,7 @@ The following state arguments are supported:
 <a href="#state_selfservicepermissions_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Service<wbr>Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryselfservicepermissions">Directory<wbr>Self<wbr>Service<wbr>Permissions</a></span>
+        <span class="property-type"><a href="#directoryselfservicepermissions">pulumi.<wbr>Input<Directory<wbr>Self<wbr>Service<wbr>Permissions<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Permissions to enable or disable self-service capabilities. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1886,7 +1926,7 @@ The following state arguments are supported:
 <a href="#state_subnetids_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The identifiers of the subnets where the directory resides.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1895,7 +1935,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the WorkSpaces directory.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1904,7 +1944,7 @@ The following state arguments are supported:
 <a href="#state_workspaceaccessproperties_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Access<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryworkspaceaccessproperties">Directory<wbr>Workspace<wbr>Access<wbr>Properties</a></span>
+        <span class="property-type"><a href="#directoryworkspaceaccessproperties">pulumi.<wbr>Input<Directory<wbr>Workspace<wbr>Access<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Specifies which devices and operating systems users can use to access their WorkSpaces. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1913,7 +1953,7 @@ The following state arguments are supported:
 <a href="#state_workspacecreationproperties_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Creation<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryworkspacecreationproperties">Directory<wbr>Workspace<wbr>Creation<wbr>Properties</a></span>
+        <span class="property-type"><a href="#directoryworkspacecreationproperties">pulumi.<wbr>Input<Directory<wbr>Workspace<wbr>Creation<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Default properties that are used for creating WorkSpaces. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1922,7 +1962,7 @@ The following state arguments are supported:
 <a href="#state_workspacesecuritygroupid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Security<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The identifier of the security group that is assigned to new WorkSpaces.
 {{% /md %}}</dd></dl>
@@ -1935,7 +1975,7 @@ The following state arguments are supported:
 <a href="#state_alias_python" style="color: inherit; text-decoration: inherit;">alias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The directory alias.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1944,7 +1984,7 @@ The following state arguments are supported:
 <a href="#state_customer_user_name_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>user_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The user name for the service account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1953,7 +1993,7 @@ The following state arguments are supported:
 <a href="#state_directory_id_python" style="color: inherit; text-decoration: inherit;">directory_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The directory identifier for registration in WorkSpaces service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1962,7 +2002,7 @@ The following state arguments are supported:
 <a href="#state_directory_name_python" style="color: inherit; text-decoration: inherit;">directory_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the directory.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1971,7 +2011,7 @@ The following state arguments are supported:
 <a href="#state_directory_type_python" style="color: inherit; text-decoration: inherit;">directory_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The directory type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1980,7 +2020,7 @@ The following state arguments are supported:
 <a href="#state_dns_ip_addresses_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>ip_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The IP addresses of the DNS servers for the directory.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1989,7 +2029,7 @@ The following state arguments are supported:
 <a href="#state_iam_role_id_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>role_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The identifier of the IAM role. This is the role that allows Amazon WorkSpaces to make calls to other services, such as Amazon EC2, on your behalf.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1998,7 +2038,7 @@ The following state arguments are supported:
 <a href="#state_ip_group_ids_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>group_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The identifiers of the IP access control groups associated with the directory.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2007,7 +2047,7 @@ The following state arguments are supported:
 <a href="#state_registration_code_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The registration code for the directory. This is the code that users enter in their Amazon WorkSpaces client application to connect to the directory.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2016,7 +2056,7 @@ The following state arguments are supported:
 <a href="#state_self_service_permissions_python" style="color: inherit; text-decoration: inherit;">self_<wbr>service_<wbr>permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryselfservicepermissions">Directory<wbr>Self<wbr>Service<wbr>Permissions<wbr>Args</a></span>
+        <span class="property-type"><a href="#directoryselfservicepermissions">Input[Directory<wbr>Self<wbr>Service<wbr>Permissions<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Permissions to enable or disable self-service capabilities. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2025,7 +2065,7 @@ The following state arguments are supported:
 <a href="#state_subnet_ids_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The identifiers of the subnets where the directory resides.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2034,7 +2074,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the WorkSpaces directory.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2043,7 +2083,7 @@ The following state arguments are supported:
 <a href="#state_workspace_access_properties_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>access_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryworkspaceaccessproperties">Directory<wbr>Workspace<wbr>Access<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#directoryworkspaceaccessproperties">Input[Directory<wbr>Workspace<wbr>Access<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies which devices and operating systems users can use to access their WorkSpaces. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2052,7 +2092,7 @@ The following state arguments are supported:
 <a href="#state_workspace_creation_properties_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>creation_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryworkspacecreationproperties">Directory<wbr>Workspace<wbr>Creation<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#directoryworkspacecreationproperties">Input[Directory<wbr>Workspace<wbr>Creation<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Default properties that are used for creating WorkSpaces. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2061,7 +2101,7 @@ The following state arguments are supported:
 <a href="#state_workspace_security_group_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>security_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The identifier of the security group that is assigned to new WorkSpaces.
 {{% /md %}}</dd></dl>
@@ -2183,7 +2223,7 @@ The following state arguments are supported:
 <a href="#changecomputetype_nodejs" style="color: inherit; text-decoration: inherit;">change<wbr>Compute<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can change the compute type (bundle) for their workspace. Default `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2192,7 +2232,7 @@ The following state arguments are supported:
 <a href="#increasevolumesize_nodejs" style="color: inherit; text-decoration: inherit;">increase<wbr>Volume<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can increase the volume size of the drives on their workspace. Default `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2201,7 +2241,7 @@ The following state arguments are supported:
 <a href="#rebuildworkspace_nodejs" style="color: inherit; text-decoration: inherit;">rebuild<wbr>Workspace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can rebuild the operating system of a workspace to its original state. Default `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2210,7 +2250,7 @@ The following state arguments are supported:
 <a href="#restartworkspace_nodejs" style="color: inherit; text-decoration: inherit;">restart<wbr>Workspace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can restart their workspace. Default `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2219,7 +2259,7 @@ The following state arguments are supported:
 <a href="#switchrunningmode_nodejs" style="color: inherit; text-decoration: inherit;">switch<wbr>Running<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can switch the running mode of their workspace. Default `false`.
 {{% /md %}}</dd></dl>
@@ -2232,7 +2272,7 @@ The following state arguments are supported:
 <a href="#change_compute_type_python" style="color: inherit; text-decoration: inherit;">change_<wbr>compute_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can change the compute type (bundle) for their workspace. Default `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2241,7 +2281,7 @@ The following state arguments are supported:
 <a href="#increase_volume_size_python" style="color: inherit; text-decoration: inherit;">increase_<wbr>volume_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can increase the volume size of the drives on their workspace. Default `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2250,7 +2290,7 @@ The following state arguments are supported:
 <a href="#rebuild_workspace_python" style="color: inherit; text-decoration: inherit;">rebuild_<wbr>workspace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can rebuild the operating system of a workspace to its original state. Default `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2259,7 +2299,7 @@ The following state arguments are supported:
 <a href="#restart_workspace_python" style="color: inherit; text-decoration: inherit;">restart_<wbr>workspace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can restart their workspace. Default `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2268,7 +2308,7 @@ The following state arguments are supported:
 <a href="#switch_running_mode_python" style="color: inherit; text-decoration: inherit;">switch_<wbr>running_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can switch the running mode of their workspace. Default `false`.
 {{% /md %}}</dd></dl>
@@ -2417,7 +2457,7 @@ The following state arguments are supported:
 <a href="#devicetypeandroid_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Type<wbr>Android</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Indicates whether users can use Android devices to access their WorkSpaces.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2426,7 +2466,7 @@ The following state arguments are supported:
 <a href="#devicetypechromeos_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Type<wbr>Chromeos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Indicates whether users can use Chromebooks to access their WorkSpaces.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2435,7 +2475,7 @@ The following state arguments are supported:
 <a href="#devicetypeios_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Type<wbr>Ios</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Indicates whether users can use iOS devices to access their WorkSpaces.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2444,7 +2484,7 @@ The following state arguments are supported:
 <a href="#devicetypeosx_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Type<wbr>Osx</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Indicates whether users can use macOS clients to access their WorkSpaces.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2453,7 +2493,7 @@ The following state arguments are supported:
 <a href="#devicetypeweb_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Type<wbr>Web</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Indicates whether users can access their WorkSpaces through a web browser.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2462,7 +2502,7 @@ The following state arguments are supported:
 <a href="#devicetypewindows_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Type<wbr>Windows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Indicates whether users can use Windows clients to access their WorkSpaces.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2471,7 +2511,7 @@ The following state arguments are supported:
 <a href="#devicetypezeroclient_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Type<wbr>Zeroclient</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Indicates whether users can use zero client devices to access their WorkSpaces.
 {{% /md %}}</dd></dl>
@@ -2484,7 +2524,7 @@ The following state arguments are supported:
 <a href="#device_type_android_python" style="color: inherit; text-decoration: inherit;">device_<wbr>type_<wbr>android</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Indicates whether users can use Android devices to access their WorkSpaces.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2493,7 +2533,7 @@ The following state arguments are supported:
 <a href="#device_type_chromeos_python" style="color: inherit; text-decoration: inherit;">device_<wbr>type_<wbr>chromeos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Indicates whether users can use Chromebooks to access their WorkSpaces.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2502,7 +2542,7 @@ The following state arguments are supported:
 <a href="#device_type_ios_python" style="color: inherit; text-decoration: inherit;">device_<wbr>type_<wbr>ios</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Indicates whether users can use iOS devices to access their WorkSpaces.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2511,7 +2551,7 @@ The following state arguments are supported:
 <a href="#device_type_osx_python" style="color: inherit; text-decoration: inherit;">device_<wbr>type_<wbr>osx</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Indicates whether users can use macOS clients to access their WorkSpaces.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2520,7 +2560,7 @@ The following state arguments are supported:
 <a href="#device_type_web_python" style="color: inherit; text-decoration: inherit;">device_<wbr>type_<wbr>web</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Indicates whether users can access their WorkSpaces through a web browser.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2529,7 +2569,7 @@ The following state arguments are supported:
 <a href="#device_type_windows_python" style="color: inherit; text-decoration: inherit;">device_<wbr>type_<wbr>windows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Indicates whether users can use Windows clients to access their WorkSpaces.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2538,7 +2578,7 @@ The following state arguments are supported:
 <a href="#device_type_zeroclient_python" style="color: inherit; text-decoration: inherit;">device_<wbr>type_<wbr>zeroclient</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Indicates whether users can use zero client devices to access their WorkSpaces.
 {{% /md %}}</dd></dl>
@@ -2651,7 +2691,7 @@ The following state arguments are supported:
 <a href="#customsecuritygroupid_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Security<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The identifier of your custom security group. Should relate to the same VPC, where workspaces reside in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2660,7 +2700,7 @@ The following state arguments are supported:
 <a href="#defaultou_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ou</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The default organizational unit (OU) for your WorkSpace directories. Should conform `"OU=<value>,DC=<value>,...,DC=<value>"` pattern.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2669,7 +2709,7 @@ The following state arguments are supported:
 <a href="#enableinternetaccess_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Internet<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether internet access is enabled for your WorkSpaces.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2678,7 +2718,7 @@ The following state arguments are supported:
 <a href="#enablemaintenancemode_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Maintenance<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether maintenance mode is enabled for your WorkSpaces. For more information, see [WorkSpace Maintenance](https://docs.aws.amazon.com/workspaces/latest/adminguide/workspace-maintenance.html)..
 {{% /md %}}</dd><dt class="property-optional"
@@ -2687,7 +2727,7 @@ The following state arguments are supported:
 <a href="#userenabledaslocaladministrator_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Enabled<wbr>As<wbr>Local<wbr>Administrator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether users are local administrators of their WorkSpaces.
 {{% /md %}}</dd></dl>
@@ -2700,7 +2740,7 @@ The following state arguments are supported:
 <a href="#custom_security_group_id_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>security_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The identifier of your custom security group. Should relate to the same VPC, where workspaces reside in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2709,7 +2749,7 @@ The following state arguments are supported:
 <a href="#default_ou_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ou</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The default organizational unit (OU) for your WorkSpace directories. Should conform `"OU=<value>,DC=<value>,...,DC=<value>"` pattern.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2718,7 +2758,7 @@ The following state arguments are supported:
 <a href="#enable_internet_access_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>internet_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether internet access is enabled for your WorkSpaces.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2727,7 +2767,7 @@ The following state arguments are supported:
 <a href="#enable_maintenance_mode_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>maintenance_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether maintenance mode is enabled for your WorkSpaces. For more information, see [WorkSpace Maintenance](https://docs.aws.amazon.com/workspaces/latest/adminguide/workspace-maintenance.html)..
 {{% /md %}}</dd><dt class="property-optional"
@@ -2736,7 +2776,7 @@ The following state arguments are supported:
 <a href="#user_enabled_as_local_administrator_python" style="color: inherit; text-decoration: inherit;">user_<wbr>enabled_<wbr>as_<wbr>local_<wbr>administrator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether users are local administrators of their WorkSpaces.
 {{% /md %}}</dd></dl>

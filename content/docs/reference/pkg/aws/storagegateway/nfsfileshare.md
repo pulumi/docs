@@ -57,8 +57,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/storagegateway"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/storagegateway"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -132,19 +132,42 @@ const example = new aws.storagegateway.NfsFileShare("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NfsFileShare</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NfsFileShareArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NfsFileShare</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NfsFileShareArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">NfsFileShare</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cache_attributes</span><span class="p">:</span> <span class="nx">Optional[NfsFileShareCacheAttributesArgs]</span> = None<span class="p">, </span><span class="nx">client_lists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">default_storage_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">file_share_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">guess_mime_type_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kms_encrypted</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kms_key_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nfs_file_share_defaults</span><span class="p">:</span> <span class="nx">Optional[NfsFileShareNfsFileShareDefaultsArgs]</span> = None<span class="p">, </span><span class="nx">notification_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">object_acl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">read_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">requester_pays</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">squash</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">NfsFileShare</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                 <span class="nx">cache_attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[NfsFileShareCacheAttributesArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">client_lists</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                 <span class="nx">default_storage_class</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">file_share_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">gateway_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">guess_mime_type_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                 <span class="nx">kms_encrypted</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                 <span class="nx">kms_key_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">location_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">nfs_file_share_defaults</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[NfsFileShareNfsFileShareDefaultsArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">notification_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">object_acl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">read_only</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                 <span class="nx">requester_pays</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                 <span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">squash</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">NfsFileShare</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NfsFileShareArgs</a></span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNfsFileShare</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NfsFileShareArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NfsFileShare</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNfsFileShare</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NfsFileShareArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NfsFileShare</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NfsFileShare</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">NfsFileShareArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NfsFileShare</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">NfsFileShareArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -179,22 +202,32 @@ const example = new aws.storagegateway.NfsFileShare("example", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">NfsFileShareArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -203,7 +236,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -227,7 +260,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -596,7 +629,7 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#clientlists_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The list of clients that are allowed to access the file gateway. The list must contain either valid IP addresses or valid CIDR blocks. Set to `["0.0.0.0/0"]` to not limit access. Minimum 1 item. Maximum 100 items.
 {{% /md %}}</dd><dt class="property-required"
@@ -605,7 +638,7 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#gatewayarn_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the file gateway.
 {{% /md %}}</dd><dt class="property-required"
@@ -614,7 +647,7 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#locationarn_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of the backed storage used for storing file data.
 {{% /md %}}</dd><dt class="property-required"
@@ -623,7 +656,7 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of the AWS Identity and Access Management (IAM) role that a file gateway assumes when it accesses the underlying storage.
 {{% /md %}}</dd><dt class="property-optional"
@@ -632,7 +665,7 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#cacheattributes_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsfilesharecacheattributes">Nfs<wbr>File<wbr>Share<wbr>Cache<wbr>Attributes</a></span>
+        <span class="property-type"><a href="#nfsfilesharecacheattributes">pulumi.<wbr>Input<Nfs<wbr>File<wbr>Share<wbr>Cache<wbr>Attributes<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Refresh cache information. see Cache Attributes for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -641,7 +674,7 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#defaultstorageclass_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Storage<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The default storage class for objects put into an Amazon S3 bucket by the file gateway. Defaults to `S3_STANDARD`. Valid values: `S3_STANDARD`, `S3_STANDARD_IA`, `S3_ONEZONE_IA`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -650,7 +683,7 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#filesharename_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Share<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the file share. Must be set if an S3 prefix name is set in `location_arn`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -659,7 +692,7 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#guessmimetypeenabled_nodejs" style="color: inherit; text-decoration: inherit;">guess<wbr>Mime<wbr>Type<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean value that enables guessing of the MIME type for uploaded objects based on file extensions. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -668,7 +701,7 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#kmsencrypted_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Encrypted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean value if `true` to use Amazon S3 server side encryption with your own AWS KMS key, or `false` to use a key managed by Amazon S3. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -677,7 +710,7 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#kmskeyarn_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) for KMS key used for Amazon S3 server side encryption. This value can only be set when `kms_encrypted` is true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -686,7 +719,7 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#nfsfilesharedefaults_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>File<wbr>Share<wbr>Defaults</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsfilesharenfsfilesharedefaults">Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults</a></span>
+        <span class="property-type"><a href="#nfsfilesharenfsfilesharedefaults">pulumi.<wbr>Input<Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Nested argument with file share default values. More information below. see NFS File Share Defaults for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -695,7 +728,7 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#notificationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The notification policy of the file share. For more information see the [AWS Documentation](https://docs.aws.amazon.com/storagegateway/latest/APIReference/API_CreateNFSFileShare.html#StorageGateway-CreateNFSFileShare-request-NotificationPolicy). Default value is `{}`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -704,7 +737,7 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#objectacl_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Acl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Access Control List permission for S3 bucket objects. Defaults to `private`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -713,7 +746,7 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean to indicate write status of file share. File share does not accept writes if `true`. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -722,7 +755,7 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#requesterpays_nodejs" style="color: inherit; text-decoration: inherit;">requester<wbr>Pays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean who pays the cost of the request and the data download from the Amazon S3 bucket. Set this value to `true` if you want the requester to pay instead of the bucket owner. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -731,7 +764,7 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#squash_nodejs" style="color: inherit; text-decoration: inherit;">squash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Maps a user to anonymous user. Defaults to `RootSquash`. Valid values: `RootSquash` (only root is mapped to anonymous user), `NoSquash` (no one is mapped to anonymous user), `AllSquash` (everyone is mapped to anonymous user)
 {{% /md %}}</dd><dt class="property-optional"
@@ -740,7 +773,7 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd></dl>
@@ -753,7 +786,7 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#client_lists_python" style="color: inherit; text-decoration: inherit;">client_<wbr>lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The list of clients that are allowed to access the file gateway. The list must contain either valid IP addresses or valid CIDR blocks. Set to `["0.0.0.0/0"]` to not limit access. Minimum 1 item. Maximum 100 items.
 {{% /md %}}</dd><dt class="property-required"
@@ -762,7 +795,7 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#gateway_arn_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the file gateway.
 {{% /md %}}</dd><dt class="property-required"
@@ -771,7 +804,7 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#location_arn_python" style="color: inherit; text-decoration: inherit;">location_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of the backed storage used for storing file data.
 {{% /md %}}</dd><dt class="property-required"
@@ -780,7 +813,7 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of the AWS Identity and Access Management (IAM) role that a file gateway assumes when it accesses the underlying storage.
 {{% /md %}}</dd><dt class="property-optional"
@@ -789,7 +822,7 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#cache_attributes_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsfilesharecacheattributes">Nfs<wbr>File<wbr>Share<wbr>Cache<wbr>Attributes<wbr>Args</a></span>
+        <span class="property-type"><a href="#nfsfilesharecacheattributes">Input[Nfs<wbr>File<wbr>Share<wbr>Cache<wbr>Attributes<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Refresh cache information. see Cache Attributes for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -798,7 +831,7 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#default_storage_class_python" style="color: inherit; text-decoration: inherit;">default_<wbr>storage_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The default storage class for objects put into an Amazon S3 bucket by the file gateway. Defaults to `S3_STANDARD`. Valid values: `S3_STANDARD`, `S3_STANDARD_IA`, `S3_ONEZONE_IA`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -807,7 +840,7 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#file_share_name_python" style="color: inherit; text-decoration: inherit;">file_<wbr>share_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the file share. Must be set if an S3 prefix name is set in `location_arn`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -816,7 +849,7 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#guess_mime_type_enabled_python" style="color: inherit; text-decoration: inherit;">guess_<wbr>mime_<wbr>type_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean value that enables guessing of the MIME type for uploaded objects based on file extensions. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -825,7 +858,7 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#kms_encrypted_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>encrypted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean value if `true` to use Amazon S3 server side encryption with your own AWS KMS key, or `false` to use a key managed by Amazon S3. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -834,7 +867,7 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#kms_key_arn_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) for KMS key used for Amazon S3 server side encryption. This value can only be set when `kms_encrypted` is true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -843,7 +876,7 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#nfs_file_share_defaults_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>file_<wbr>share_<wbr>defaults</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsfilesharenfsfilesharedefaults">Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults<wbr>Args</a></span>
+        <span class="property-type"><a href="#nfsfilesharenfsfilesharedefaults">Input[Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Nested argument with file share default values. More information below. see NFS File Share Defaults for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -852,7 +885,7 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#notification_policy_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The notification policy of the file share. For more information see the [AWS Documentation](https://docs.aws.amazon.com/storagegateway/latest/APIReference/API_CreateNFSFileShare.html#StorageGateway-CreateNFSFileShare-request-NotificationPolicy). Default value is `{}`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -861,7 +894,7 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#object_acl_python" style="color: inherit; text-decoration: inherit;">object_<wbr>acl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Access Control List permission for S3 bucket objects. Defaults to `private`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -870,7 +903,7 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean to indicate write status of file share. File share does not accept writes if `true`. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -879,7 +912,7 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#requester_pays_python" style="color: inherit; text-decoration: inherit;">requester_<wbr>pays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean who pays the cost of the request and the data download from the Amazon S3 bucket. Set this value to `true` if you want the requester to pay instead of the bucket owner. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -888,7 +921,7 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#squash_python" style="color: inherit; text-decoration: inherit;">squash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Maps a user to anonymous user. Defaults to `RootSquash`. Valid values: `RootSquash` (only root is mapped to anonymous user), `NoSquash` (no one is mapped to anonymous user), `AllSquash` (everyone is mapped to anonymous user)
 {{% /md %}}</dd><dt class="property-optional"
@@ -897,7 +930,7 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd></dl>
@@ -1074,20 +1107,42 @@ Get an existing NfsFileShare resource's state with the given name, ID, and optio
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">NfsFileShareState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">NfsFileShare</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">NfsFileShareState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">NfsFileShare</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cache_attributes</span><span class="p">:</span> <span class="nx">Optional[NfsFileShareCacheAttributesArgs]</span> = None<span class="p">, </span><span class="nx">client_lists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">default_storage_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">file_share_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fileshare_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">guess_mime_type_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kms_encrypted</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kms_key_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nfs_file_share_defaults</span><span class="p">:</span> <span class="nx">Optional[NfsFileShareNfsFileShareDefaultsArgs]</span> = None<span class="p">, </span><span class="nx">notification_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">object_acl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">read_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">requester_pays</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">squash</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> NfsFileShare</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">cache_attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[NfsFileShareCacheAttributesArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">client_lists</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">default_storage_class</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">file_share_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">fileshare_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">gateway_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">guess_mime_type_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">kms_encrypted</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">kms_key_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">location_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">nfs_file_share_defaults</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[NfsFileShareNfsFileShareDefaultsArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">notification_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">object_acl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">read_only</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">requester_pays</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">squash</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> NfsFileShare</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNfsFileShare<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">NfsFileShareState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NfsFileShare</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNfsFileShare<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">NfsFileShareState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NfsFileShare</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">NfsFileShare</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">NfsFileShareState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">NfsFileShare</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">NfsFileShareState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1564,7 +1619,7 @@ The following state arguments are supported:
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the NFS File Share.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1573,7 +1628,7 @@ The following state arguments are supported:
 <a href="#state_cacheattributes_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsfilesharecacheattributes">Nfs<wbr>File<wbr>Share<wbr>Cache<wbr>Attributes</a></span>
+        <span class="property-type"><a href="#nfsfilesharecacheattributes">pulumi.<wbr>Input<Nfs<wbr>File<wbr>Share<wbr>Cache<wbr>Attributes<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Refresh cache information. see Cache Attributes for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1582,7 +1637,7 @@ The following state arguments are supported:
 <a href="#state_clientlists_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The list of clients that are allowed to access the file gateway. The list must contain either valid IP addresses or valid CIDR blocks. Set to `["0.0.0.0/0"]` to not limit access. Minimum 1 item. Maximum 100 items.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1591,7 +1646,7 @@ The following state arguments are supported:
 <a href="#state_defaultstorageclass_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Storage<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The default storage class for objects put into an Amazon S3 bucket by the file gateway. Defaults to `S3_STANDARD`. Valid values: `S3_STANDARD`, `S3_STANDARD_IA`, `S3_ONEZONE_IA`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1600,7 +1655,7 @@ The following state arguments are supported:
 <a href="#state_filesharename_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Share<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the file share. Must be set if an S3 prefix name is set in `location_arn`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1609,7 +1664,7 @@ The following state arguments are supported:
 <a href="#state_fileshareid_nodejs" style="color: inherit; text-decoration: inherit;">fileshare<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of the NFS File Share.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1618,7 +1673,7 @@ The following state arguments are supported:
 <a href="#state_gatewayarn_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the file gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1627,7 +1682,7 @@ The following state arguments are supported:
 <a href="#state_guessmimetypeenabled_nodejs" style="color: inherit; text-decoration: inherit;">guess<wbr>Mime<wbr>Type<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean value that enables guessing of the MIME type for uploaded objects based on file extensions. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1636,7 +1691,7 @@ The following state arguments are supported:
 <a href="#state_kmsencrypted_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Encrypted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean value if `true` to use Amazon S3 server side encryption with your own AWS KMS key, or `false` to use a key managed by Amazon S3. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1645,7 +1700,7 @@ The following state arguments are supported:
 <a href="#state_kmskeyarn_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) for KMS key used for Amazon S3 server side encryption. This value can only be set when `kms_encrypted` is true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1654,7 +1709,7 @@ The following state arguments are supported:
 <a href="#state_locationarn_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of the backed storage used for storing file data.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1663,7 +1718,7 @@ The following state arguments are supported:
 <a href="#state_nfsfilesharedefaults_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>File<wbr>Share<wbr>Defaults</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsfilesharenfsfilesharedefaults">Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults</a></span>
+        <span class="property-type"><a href="#nfsfilesharenfsfilesharedefaults">pulumi.<wbr>Input<Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Nested argument with file share default values. More information below. see NFS File Share Defaults for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1672,7 +1727,7 @@ The following state arguments are supported:
 <a href="#state_notificationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The notification policy of the file share. For more information see the [AWS Documentation](https://docs.aws.amazon.com/storagegateway/latest/APIReference/API_CreateNFSFileShare.html#StorageGateway-CreateNFSFileShare-request-NotificationPolicy). Default value is `{}`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1681,7 +1736,7 @@ The following state arguments are supported:
 <a href="#state_objectacl_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Acl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Access Control List permission for S3 bucket objects. Defaults to `private`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1690,7 +1745,7 @@ The following state arguments are supported:
 <a href="#state_path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}File share path used by the NFS client to identify the mount point.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1699,7 +1754,7 @@ The following state arguments are supported:
 <a href="#state_readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean to indicate write status of file share. File share does not accept writes if `true`. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1708,7 +1763,7 @@ The following state arguments are supported:
 <a href="#state_requesterpays_nodejs" style="color: inherit; text-decoration: inherit;">requester<wbr>Pays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean who pays the cost of the request and the data download from the Amazon S3 bucket. Set this value to `true` if you want the requester to pay instead of the bucket owner. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1717,7 +1772,7 @@ The following state arguments are supported:
 <a href="#state_rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of the AWS Identity and Access Management (IAM) role that a file gateway assumes when it accesses the underlying storage.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1726,7 +1781,7 @@ The following state arguments are supported:
 <a href="#state_squash_nodejs" style="color: inherit; text-decoration: inherit;">squash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Maps a user to anonymous user. Defaults to `RootSquash`. Valid values: `RootSquash` (only root is mapped to anonymous user), `NoSquash` (no one is mapped to anonymous user), `AllSquash` (everyone is mapped to anonymous user)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1735,7 +1790,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd></dl>
@@ -1748,7 +1803,7 @@ The following state arguments are supported:
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the NFS File Share.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1757,7 +1812,7 @@ The following state arguments are supported:
 <a href="#state_cache_attributes_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsfilesharecacheattributes">Nfs<wbr>File<wbr>Share<wbr>Cache<wbr>Attributes<wbr>Args</a></span>
+        <span class="property-type"><a href="#nfsfilesharecacheattributes">Input[Nfs<wbr>File<wbr>Share<wbr>Cache<wbr>Attributes<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Refresh cache information. see Cache Attributes for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1766,7 +1821,7 @@ The following state arguments are supported:
 <a href="#state_client_lists_python" style="color: inherit; text-decoration: inherit;">client_<wbr>lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The list of clients that are allowed to access the file gateway. The list must contain either valid IP addresses or valid CIDR blocks. Set to `["0.0.0.0/0"]` to not limit access. Minimum 1 item. Maximum 100 items.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1775,7 +1830,7 @@ The following state arguments are supported:
 <a href="#state_default_storage_class_python" style="color: inherit; text-decoration: inherit;">default_<wbr>storage_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The default storage class for objects put into an Amazon S3 bucket by the file gateway. Defaults to `S3_STANDARD`. Valid values: `S3_STANDARD`, `S3_STANDARD_IA`, `S3_ONEZONE_IA`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1784,7 +1839,7 @@ The following state arguments are supported:
 <a href="#state_file_share_name_python" style="color: inherit; text-decoration: inherit;">file_<wbr>share_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the file share. Must be set if an S3 prefix name is set in `location_arn`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1793,7 +1848,7 @@ The following state arguments are supported:
 <a href="#state_fileshare_id_python" style="color: inherit; text-decoration: inherit;">fileshare_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of the NFS File Share.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1802,7 +1857,7 @@ The following state arguments are supported:
 <a href="#state_gateway_arn_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the file gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1811,7 +1866,7 @@ The following state arguments are supported:
 <a href="#state_guess_mime_type_enabled_python" style="color: inherit; text-decoration: inherit;">guess_<wbr>mime_<wbr>type_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean value that enables guessing of the MIME type for uploaded objects based on file extensions. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1820,7 +1875,7 @@ The following state arguments are supported:
 <a href="#state_kms_encrypted_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>encrypted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean value if `true` to use Amazon S3 server side encryption with your own AWS KMS key, or `false` to use a key managed by Amazon S3. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1829,7 +1884,7 @@ The following state arguments are supported:
 <a href="#state_kms_key_arn_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) for KMS key used for Amazon S3 server side encryption. This value can only be set when `kms_encrypted` is true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1838,7 +1893,7 @@ The following state arguments are supported:
 <a href="#state_location_arn_python" style="color: inherit; text-decoration: inherit;">location_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of the backed storage used for storing file data.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1847,7 +1902,7 @@ The following state arguments are supported:
 <a href="#state_nfs_file_share_defaults_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>file_<wbr>share_<wbr>defaults</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsfilesharenfsfilesharedefaults">Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults<wbr>Args</a></span>
+        <span class="property-type"><a href="#nfsfilesharenfsfilesharedefaults">Input[Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Nested argument with file share default values. More information below. see NFS File Share Defaults for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1856,7 +1911,7 @@ The following state arguments are supported:
 <a href="#state_notification_policy_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The notification policy of the file share. For more information see the [AWS Documentation](https://docs.aws.amazon.com/storagegateway/latest/APIReference/API_CreateNFSFileShare.html#StorageGateway-CreateNFSFileShare-request-NotificationPolicy). Default value is `{}`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1865,7 +1920,7 @@ The following state arguments are supported:
 <a href="#state_object_acl_python" style="color: inherit; text-decoration: inherit;">object_<wbr>acl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Access Control List permission for S3 bucket objects. Defaults to `private`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1874,7 +1929,7 @@ The following state arguments are supported:
 <a href="#state_path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}File share path used by the NFS client to identify the mount point.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1883,7 +1938,7 @@ The following state arguments are supported:
 <a href="#state_read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean to indicate write status of file share. File share does not accept writes if `true`. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1892,7 +1947,7 @@ The following state arguments are supported:
 <a href="#state_requester_pays_python" style="color: inherit; text-decoration: inherit;">requester_<wbr>pays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean who pays the cost of the request and the data download from the Amazon S3 bucket. Set this value to `true` if you want the requester to pay instead of the bucket owner. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1901,7 +1956,7 @@ The following state arguments are supported:
 <a href="#state_role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of the AWS Identity and Access Management (IAM) role that a file gateway assumes when it accesses the underlying storage.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1910,7 +1965,7 @@ The following state arguments are supported:
 <a href="#state_squash_python" style="color: inherit; text-decoration: inherit;">squash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Maps a user to anonymous user. Defaults to `RootSquash`. Valid values: `RootSquash` (only root is mapped to anonymous user), `NoSquash` (no one is mapped to anonymous user), `AllSquash` (everyone is mapped to anonymous user)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1919,7 +1974,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd></dl>
@@ -1973,7 +2028,7 @@ to first refresh that directory's contents from the Amazon S3 bucket. Valid Valu
 <a href="#cachestaletimeoutinseconds_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Stale<wbr>Timeout<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Refreshes a file share's cache by using Time To Live (TTL).
 TTL is the length of time since the last refresh after which access to the directory would cause the file gateway
@@ -1988,7 +2043,7 @@ to first refresh that directory's contents from the Amazon S3 bucket. Valid Valu
 <a href="#cache_stale_timeout_in_seconds_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>stale_<wbr>timeout_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Refreshes a file share's cache by using Time To Live (TTL).
 TTL is the length of time since the last refresh after which access to the directory would cause the file gateway
@@ -2085,7 +2140,7 @@ to first refresh that directory's contents from the Amazon S3 bucket. Valid Valu
 <a href="#directorymode_nodejs" style="color: inherit; text-decoration: inherit;">directory<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Unix directory mode in the string form "nnnn". Defaults to `"0777"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2094,7 +2149,7 @@ to first refresh that directory's contents from the Amazon S3 bucket. Valid Valu
 <a href="#filemode_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Unix file mode in the string form "nnnn". Defaults to `"0666"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2103,7 +2158,7 @@ to first refresh that directory's contents from the Amazon S3 bucket. Valid Valu
 <a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The default group ID for the file share (unless the files have another group ID specified). Defaults to `65534` (`nfsnobody`). Valid values: `0` through `4294967294`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2112,7 +2167,7 @@ to first refresh that directory's contents from the Amazon S3 bucket. Valid Valu
 <a href="#ownerid_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The default owner ID for the file share (unless the files have another owner ID specified). Defaults to `65534` (`nfsnobody`). Valid values: `0` through `4294967294`.
 {{% /md %}}</dd></dl>
@@ -2125,7 +2180,7 @@ to first refresh that directory's contents from the Amazon S3 bucket. Valid Valu
 <a href="#directory_mode_python" style="color: inherit; text-decoration: inherit;">directory_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Unix directory mode in the string form "nnnn". Defaults to `"0777"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2134,7 +2189,7 @@ to first refresh that directory's contents from the Amazon S3 bucket. Valid Valu
 <a href="#file_mode_python" style="color: inherit; text-decoration: inherit;">file_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Unix file mode in the string form "nnnn". Defaults to `"0666"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2143,7 +2198,7 @@ to first refresh that directory's contents from the Amazon S3 bucket. Valid Valu
 <a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The default group ID for the file share (unless the files have another group ID specified). Defaults to `65534` (`nfsnobody`). Valid values: `0` through `4294967294`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2152,7 +2207,7 @@ to first refresh that directory's contents from the Amazon S3 bucket. Valid Valu
 <a href="#owner_id_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The default owner ID for the file share (unless the files have another owner ID specified). Defaults to `65534` (`nfsnobody`). Valid values: `0` through `4294967294`.
 {{% /md %}}</dd></dl>

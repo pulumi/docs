@@ -102,10 +102,10 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudtrail"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudtrail"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -304,9 +304,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudtrail"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudtrail"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -452,9 +452,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudtrail"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudtrail"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -603,9 +603,9 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudtrail"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudtrail"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -781,12 +781,12 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudtrail"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudtrail"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudwatch"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -956,19 +956,40 @@ const exampleTrail = new aws.cloudtrail.Trail("exampleTrail", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Trail</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TrailArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Trail</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TrailArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Trail</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloud_watch_logs_group_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cloud_watch_logs_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_log_file_validation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">event_selectors</span><span class="p">:</span> <span class="nx">Optional[Sequence[TrailEventSelectorArgs]]</span> = None<span class="p">, </span><span class="nx">include_global_service_events</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">insight_selectors</span><span class="p">:</span> <span class="nx">Optional[Sequence[TrailInsightSelectorArgs]]</span> = None<span class="p">, </span><span class="nx">is_multi_region_trail</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_organization_trail</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kms_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">s3_bucket_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">s3_key_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sns_topic_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Trail</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+          <span class="nx">cloud_watch_logs_group_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">cloud_watch_logs_role_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">enable_log_file_validation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+          <span class="nx">enable_logging</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+          <span class="nx">event_selectors</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[TrailEventSelectorArgs]]]]</span> = None<span class="p">,</span>
+          <span class="nx">include_global_service_events</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+          <span class="nx">insight_selectors</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[TrailInsightSelectorArgs]]]]</span> = None<span class="p">,</span>
+          <span class="nx">is_multi_region_trail</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+          <span class="nx">is_organization_trail</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+          <span class="nx">kms_key_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">s3_bucket_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">s3_key_prefix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">sns_topic_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Trail</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TrailArgs</a></span><span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTrail</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TrailArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Trail</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTrail</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TrailArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Trail</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Trail</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">TrailArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Trail</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">TrailArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1003,22 +1024,32 @@ const exampleTrail = new aws.cloudtrail.Trail("exampleTrail", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">TrailArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1027,7 +1058,7 @@ const exampleTrail = new aws.cloudtrail.Trail("exampleTrail", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -1051,7 +1082,7 @@ const exampleTrail = new aws.cloudtrail.Trail("exampleTrail", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1400,7 +1431,7 @@ defined for notification of log file delivery.
 <a href="#s3bucketname_nodejs" style="color: inherit; text-decoration: inherit;">s3Bucket<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the S3 bucket designated for publishing log files.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1409,7 +1440,7 @@ defined for notification of log file delivery.
 <a href="#cloudwatchlogsgrouparn_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Watch<wbr>Logs<wbr>Group<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies a log group name using an Amazon Resource Name (ARN),
 that represents the log group to which CloudTrail logs will be delivered. Note that CloudTrail requires the Log Stream wildcard.
@@ -1419,7 +1450,7 @@ that represents the log group to which CloudTrail logs will be delivered. Note t
 <a href="#cloudwatchlogsrolearn_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Watch<wbr>Logs<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the role for the CloudWatch Logs
 endpoint to assume to write to a user’s log group.
@@ -1429,7 +1460,7 @@ endpoint to assume to write to a user’s log group.
 <a href="#enablelogfilevalidation_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Log<wbr>File<wbr>Validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies whether log file integrity validation is enabled.
 Defaults to `false`.
@@ -1439,7 +1470,7 @@ Defaults to `false`.
 <a href="#enablelogging_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enables logging for the trail. Defaults to `true`.
 Setting this to `false` will pause logging.
@@ -1449,7 +1480,7 @@ Setting this to `false` will pause logging.
 <a href="#eventselectors_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#traileventselector">Trail<wbr>Event<wbr>Selector[]</a></span>
+        <span class="property-type"><a href="#traileventselector">pulumi.<wbr>Input<pulumi.<wbr>Input<Trail<wbr>Event<wbr>Selector<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Specifies an event selector for enabling data event logging. Fields documented below. Please note the [CloudTrail limits](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html) when configuring these.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1458,7 +1489,7 @@ Setting this to `false` will pause logging.
 <a href="#includeglobalserviceevents_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Global<wbr>Service<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies whether the trail is publishing events
 from global services such as IAM to the log files. Defaults to `true`.
@@ -1468,7 +1499,7 @@ from global services such as IAM to the log files. Defaults to `true`.
 <a href="#insightselectors_nodejs" style="color: inherit; text-decoration: inherit;">insight<wbr>Selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trailinsightselector">Trail<wbr>Insight<wbr>Selector[]</a></span>
+        <span class="property-type"><a href="#trailinsightselector">pulumi.<wbr>Input<pulumi.<wbr>Input<Trail<wbr>Insight<wbr>Selector<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Specifies an insight selector for identifying unusual operational activity. Fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1477,7 +1508,7 @@ from global services such as IAM to the log files. Defaults to `true`.
 <a href="#ismultiregiontrail_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Multi<wbr>Region<wbr>Trail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies whether the trail is created in the current
 region or in all regions. Defaults to `false`.
@@ -1487,7 +1518,7 @@ region or in all regions. Defaults to `false`.
 <a href="#isorganizationtrail_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Organization<wbr>Trail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies whether the trail is an AWS Organizations trail. Organization trails log events for the master account and all member accounts. Can only be created in the organization master account. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1496,7 +1527,7 @@ region or in all regions. Defaults to `false`.
 <a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the KMS key ARN to use to encrypt the logs delivered by CloudTrail.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1505,7 +1536,7 @@ region or in all regions. Defaults to `false`.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the trail.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1514,7 +1545,7 @@ region or in all regions. Defaults to `false`.
 <a href="#s3keyprefix_nodejs" style="color: inherit; text-decoration: inherit;">s3Key<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the S3 key prefix that follows
 the name of the bucket you have designated for log file delivery.
@@ -1524,7 +1555,7 @@ the name of the bucket you have designated for log file delivery.
 <a href="#snstopicname_nodejs" style="color: inherit; text-decoration: inherit;">sns<wbr>Topic<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Amazon SNS topic
 defined for notification of log file delivery.
@@ -1534,7 +1565,7 @@ defined for notification of log file delivery.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the trail
 {{% /md %}}</dd></dl>
@@ -1547,7 +1578,7 @@ defined for notification of log file delivery.
 <a href="#s3_bucket_name_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>bucket_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the S3 bucket designated for publishing log files.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1556,7 +1587,7 @@ defined for notification of log file delivery.
 <a href="#cloud_watch_logs_group_arn_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>watch_<wbr>logs_<wbr>group_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a log group name using an Amazon Resource Name (ARN),
 that represents the log group to which CloudTrail logs will be delivered. Note that CloudTrail requires the Log Stream wildcard.
@@ -1566,7 +1597,7 @@ that represents the log group to which CloudTrail logs will be delivered. Note t
 <a href="#cloud_watch_logs_role_arn_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>watch_<wbr>logs_<wbr>role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the role for the CloudWatch Logs
 endpoint to assume to write to a user’s log group.
@@ -1576,7 +1607,7 @@ endpoint to assume to write to a user’s log group.
 <a href="#enable_log_file_validation_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>log_<wbr>file_<wbr>validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies whether log file integrity validation is enabled.
 Defaults to `false`.
@@ -1586,7 +1617,7 @@ Defaults to `false`.
 <a href="#enable_logging_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enables logging for the trail. Defaults to `true`.
 Setting this to `false` will pause logging.
@@ -1596,7 +1627,7 @@ Setting this to `false` will pause logging.
 <a href="#event_selectors_python" style="color: inherit; text-decoration: inherit;">event_<wbr>selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#traileventselector">Sequence[Trail<wbr>Event<wbr>Selector<wbr>Args]</a></span>
+        <span class="property-type"><a href="#traileventselector">Input[Trail<wbr>Event<wbr>Selector<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Specifies an event selector for enabling data event logging. Fields documented below. Please note the [CloudTrail limits](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html) when configuring these.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1605,7 +1636,7 @@ Setting this to `false` will pause logging.
 <a href="#include_global_service_events_python" style="color: inherit; text-decoration: inherit;">include_<wbr>global_<wbr>service_<wbr>events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies whether the trail is publishing events
 from global services such as IAM to the log files. Defaults to `true`.
@@ -1615,7 +1646,7 @@ from global services such as IAM to the log files. Defaults to `true`.
 <a href="#insight_selectors_python" style="color: inherit; text-decoration: inherit;">insight_<wbr>selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trailinsightselector">Sequence[Trail<wbr>Insight<wbr>Selector<wbr>Args]</a></span>
+        <span class="property-type"><a href="#trailinsightselector">Input[Trail<wbr>Insight<wbr>Selector<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Specifies an insight selector for identifying unusual operational activity. Fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1624,7 +1655,7 @@ from global services such as IAM to the log files. Defaults to `true`.
 <a href="#is_multi_region_trail_python" style="color: inherit; text-decoration: inherit;">is_<wbr>multi_<wbr>region_<wbr>trail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies whether the trail is created in the current
 region or in all regions. Defaults to `false`.
@@ -1634,7 +1665,7 @@ region or in all regions. Defaults to `false`.
 <a href="#is_organization_trail_python" style="color: inherit; text-decoration: inherit;">is_<wbr>organization_<wbr>trail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies whether the trail is an AWS Organizations trail. Organization trails log events for the master account and all member accounts. Can only be created in the organization master account. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1643,7 +1674,7 @@ region or in all regions. Defaults to `false`.
 <a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the KMS key ARN to use to encrypt the logs delivered by CloudTrail.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1652,7 +1683,7 @@ region or in all regions. Defaults to `false`.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the trail.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1661,7 +1692,7 @@ region or in all regions. Defaults to `false`.
 <a href="#s3_key_prefix_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>key_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the S3 key prefix that follows
 the name of the bucket you have designated for log file delivery.
@@ -1671,7 +1702,7 @@ the name of the bucket you have designated for log file delivery.
 <a href="#sns_topic_name_python" style="color: inherit; text-decoration: inherit;">sns_<wbr>topic_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Amazon SNS topic
 defined for notification of log file delivery.
@@ -1681,7 +1712,7 @@ defined for notification of log file delivery.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the trail
 {{% /md %}}</dd></dl>
@@ -1822,20 +1853,39 @@ Get an existing Trail resource's state with the given name, ID, and optional ext
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">TrailState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Trail</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">TrailState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Trail</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cloud_watch_logs_group_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cloud_watch_logs_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_log_file_validation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">event_selectors</span><span class="p">:</span> <span class="nx">Optional[Sequence[TrailEventSelectorArgs]]</span> = None<span class="p">, </span><span class="nx">home_region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">include_global_service_events</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">insight_selectors</span><span class="p">:</span> <span class="nx">Optional[Sequence[TrailInsightSelectorArgs]]</span> = None<span class="p">, </span><span class="nx">is_multi_region_trail</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_organization_trail</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kms_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">s3_bucket_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">s3_key_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sns_topic_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Trail</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">cloud_watch_logs_group_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">cloud_watch_logs_role_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">enable_log_file_validation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">enable_logging</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">event_selectors</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[TrailEventSelectorArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">home_region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">include_global_service_events</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">insight_selectors</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[TrailInsightSelectorArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">is_multi_region_trail</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">is_organization_trail</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">kms_key_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">s3_bucket_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">s3_key_prefix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">sns_topic_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> Trail</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTrail<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">TrailState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Trail</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTrail<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">TrailState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Trail</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Trail</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">TrailState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Trail</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">TrailState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2274,7 +2324,7 @@ defined for notification of log file delivery.
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name of the trail.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2283,7 +2333,7 @@ defined for notification of log file delivery.
 <a href="#state_cloudwatchlogsgrouparn_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Watch<wbr>Logs<wbr>Group<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies a log group name using an Amazon Resource Name (ARN),
 that represents the log group to which CloudTrail logs will be delivered. Note that CloudTrail requires the Log Stream wildcard.
@@ -2293,7 +2343,7 @@ that represents the log group to which CloudTrail logs will be delivered. Note t
 <a href="#state_cloudwatchlogsrolearn_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Watch<wbr>Logs<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the role for the CloudWatch Logs
 endpoint to assume to write to a user’s log group.
@@ -2303,7 +2353,7 @@ endpoint to assume to write to a user’s log group.
 <a href="#state_enablelogfilevalidation_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Log<wbr>File<wbr>Validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies whether log file integrity validation is enabled.
 Defaults to `false`.
@@ -2313,7 +2363,7 @@ Defaults to `false`.
 <a href="#state_enablelogging_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enables logging for the trail. Defaults to `true`.
 Setting this to `false` will pause logging.
@@ -2323,7 +2373,7 @@ Setting this to `false` will pause logging.
 <a href="#state_eventselectors_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#traileventselector">Trail<wbr>Event<wbr>Selector[]</a></span>
+        <span class="property-type"><a href="#traileventselector">pulumi.<wbr>Input<pulumi.<wbr>Input<Trail<wbr>Event<wbr>Selector<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Specifies an event selector for enabling data event logging. Fields documented below. Please note the [CloudTrail limits](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html) when configuring these.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2332,7 +2382,7 @@ Setting this to `false` will pause logging.
 <a href="#state_homeregion_nodejs" style="color: inherit; text-decoration: inherit;">home<wbr>Region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The region in which the trail was created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2341,7 +2391,7 @@ Setting this to `false` will pause logging.
 <a href="#state_includeglobalserviceevents_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Global<wbr>Service<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies whether the trail is publishing events
 from global services such as IAM to the log files. Defaults to `true`.
@@ -2351,7 +2401,7 @@ from global services such as IAM to the log files. Defaults to `true`.
 <a href="#state_insightselectors_nodejs" style="color: inherit; text-decoration: inherit;">insight<wbr>Selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trailinsightselector">Trail<wbr>Insight<wbr>Selector[]</a></span>
+        <span class="property-type"><a href="#trailinsightselector">pulumi.<wbr>Input<pulumi.<wbr>Input<Trail<wbr>Insight<wbr>Selector<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Specifies an insight selector for identifying unusual operational activity. Fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2360,7 +2410,7 @@ from global services such as IAM to the log files. Defaults to `true`.
 <a href="#state_ismultiregiontrail_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Multi<wbr>Region<wbr>Trail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies whether the trail is created in the current
 region or in all regions. Defaults to `false`.
@@ -2370,7 +2420,7 @@ region or in all regions. Defaults to `false`.
 <a href="#state_isorganizationtrail_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Organization<wbr>Trail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies whether the trail is an AWS Organizations trail. Organization trails log events for the master account and all member accounts. Can only be created in the organization master account. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2379,7 +2429,7 @@ region or in all regions. Defaults to `false`.
 <a href="#state_kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the KMS key ARN to use to encrypt the logs delivered by CloudTrail.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2388,7 +2438,7 @@ region or in all regions. Defaults to `false`.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the trail.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2397,7 +2447,7 @@ region or in all regions. Defaults to `false`.
 <a href="#state_s3bucketname_nodejs" style="color: inherit; text-decoration: inherit;">s3Bucket<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the S3 bucket designated for publishing log files.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2406,7 +2456,7 @@ region or in all regions. Defaults to `false`.
 <a href="#state_s3keyprefix_nodejs" style="color: inherit; text-decoration: inherit;">s3Key<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the S3 key prefix that follows
 the name of the bucket you have designated for log file delivery.
@@ -2416,7 +2466,7 @@ the name of the bucket you have designated for log file delivery.
 <a href="#state_snstopicname_nodejs" style="color: inherit; text-decoration: inherit;">sns<wbr>Topic<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Amazon SNS topic
 defined for notification of log file delivery.
@@ -2426,7 +2476,7 @@ defined for notification of log file delivery.
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the trail
 {{% /md %}}</dd></dl>
@@ -2439,7 +2489,7 @@ defined for notification of log file delivery.
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name of the trail.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2448,7 +2498,7 @@ defined for notification of log file delivery.
 <a href="#state_cloud_watch_logs_group_arn_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>watch_<wbr>logs_<wbr>group_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a log group name using an Amazon Resource Name (ARN),
 that represents the log group to which CloudTrail logs will be delivered. Note that CloudTrail requires the Log Stream wildcard.
@@ -2458,7 +2508,7 @@ that represents the log group to which CloudTrail logs will be delivered. Note t
 <a href="#state_cloud_watch_logs_role_arn_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>watch_<wbr>logs_<wbr>role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the role for the CloudWatch Logs
 endpoint to assume to write to a user’s log group.
@@ -2468,7 +2518,7 @@ endpoint to assume to write to a user’s log group.
 <a href="#state_enable_log_file_validation_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>log_<wbr>file_<wbr>validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies whether log file integrity validation is enabled.
 Defaults to `false`.
@@ -2478,7 +2528,7 @@ Defaults to `false`.
 <a href="#state_enable_logging_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enables logging for the trail. Defaults to `true`.
 Setting this to `false` will pause logging.
@@ -2488,7 +2538,7 @@ Setting this to `false` will pause logging.
 <a href="#state_event_selectors_python" style="color: inherit; text-decoration: inherit;">event_<wbr>selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#traileventselector">Sequence[Trail<wbr>Event<wbr>Selector<wbr>Args]</a></span>
+        <span class="property-type"><a href="#traileventselector">Input[Trail<wbr>Event<wbr>Selector<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Specifies an event selector for enabling data event logging. Fields documented below. Please note the [CloudTrail limits](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html) when configuring these.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2497,7 +2547,7 @@ Setting this to `false` will pause logging.
 <a href="#state_home_region_python" style="color: inherit; text-decoration: inherit;">home_<wbr>region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The region in which the trail was created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2506,7 +2556,7 @@ Setting this to `false` will pause logging.
 <a href="#state_include_global_service_events_python" style="color: inherit; text-decoration: inherit;">include_<wbr>global_<wbr>service_<wbr>events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies whether the trail is publishing events
 from global services such as IAM to the log files. Defaults to `true`.
@@ -2516,7 +2566,7 @@ from global services such as IAM to the log files. Defaults to `true`.
 <a href="#state_insight_selectors_python" style="color: inherit; text-decoration: inherit;">insight_<wbr>selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trailinsightselector">Sequence[Trail<wbr>Insight<wbr>Selector<wbr>Args]</a></span>
+        <span class="property-type"><a href="#trailinsightselector">Input[Trail<wbr>Insight<wbr>Selector<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Specifies an insight selector for identifying unusual operational activity. Fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2525,7 +2575,7 @@ from global services such as IAM to the log files. Defaults to `true`.
 <a href="#state_is_multi_region_trail_python" style="color: inherit; text-decoration: inherit;">is_<wbr>multi_<wbr>region_<wbr>trail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies whether the trail is created in the current
 region or in all regions. Defaults to `false`.
@@ -2535,7 +2585,7 @@ region or in all regions. Defaults to `false`.
 <a href="#state_is_organization_trail_python" style="color: inherit; text-decoration: inherit;">is_<wbr>organization_<wbr>trail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies whether the trail is an AWS Organizations trail. Organization trails log events for the master account and all member accounts. Can only be created in the organization master account. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2544,7 +2594,7 @@ region or in all regions. Defaults to `false`.
 <a href="#state_kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the KMS key ARN to use to encrypt the logs delivered by CloudTrail.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2553,7 +2603,7 @@ region or in all regions. Defaults to `false`.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the trail.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2562,7 +2612,7 @@ region or in all regions. Defaults to `false`.
 <a href="#state_s3_bucket_name_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>bucket_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the S3 bucket designated for publishing log files.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2571,7 +2621,7 @@ region or in all regions. Defaults to `false`.
 <a href="#state_s3_key_prefix_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>key_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the S3 key prefix that follows
 the name of the bucket you have designated for log file delivery.
@@ -2581,7 +2631,7 @@ the name of the bucket you have designated for log file delivery.
 <a href="#state_sns_topic_name_python" style="color: inherit; text-decoration: inherit;">sns_<wbr>topic_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Amazon SNS topic
 defined for notification of log file delivery.
@@ -2591,7 +2641,7 @@ defined for notification of log file delivery.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the trail
 {{% /md %}}</dd></dl>
@@ -2677,7 +2727,7 @@ defined for notification of log file delivery.
 <a href="#dataresources_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#traileventselectordataresource">Trail<wbr>Event<wbr>Selector<wbr>Data<wbr>Resource[]</a></span>
+        <span class="property-type"><a href="#traileventselectordataresource">pulumi.<wbr>Input<pulumi.<wbr>Input<Trail<wbr>Event<wbr>Selector<wbr>Data<wbr>Resource<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Specifies logging data events. Fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2686,7 +2736,7 @@ defined for notification of log file delivery.
 <a href="#includemanagementevents_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Management<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specify if you want your event selector to include management events for your trail.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2695,7 +2745,7 @@ defined for notification of log file delivery.
 <a href="#readwritetype_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Write<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specify if you want your trail to log read-only events, write-only events, or all. By default, the value is All. You can specify only the following value: "ReadOnly", "WriteOnly", "All". Defaults to `All`.
 {{% /md %}}</dd></dl>
@@ -2708,7 +2758,7 @@ defined for notification of log file delivery.
 <a href="#data_resources_python" style="color: inherit; text-decoration: inherit;">data_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#traileventselectordataresource">Sequence[Trail<wbr>Event<wbr>Selector<wbr>Data<wbr>Resource<wbr>Args]</a></span>
+        <span class="property-type"><a href="#traileventselectordataresource">Input[Trail<wbr>Event<wbr>Selector<wbr>Data<wbr>Resource<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Specifies logging data events. Fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2717,7 +2767,7 @@ defined for notification of log file delivery.
 <a href="#include_management_events_python" style="color: inherit; text-decoration: inherit;">include_<wbr>management_<wbr>events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specify if you want your event selector to include management events for your trail.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2726,7 +2776,7 @@ defined for notification of log file delivery.
 <a href="#read_write_type_python" style="color: inherit; text-decoration: inherit;">read_<wbr>write_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specify if you want your trail to log read-only events, write-only events, or all. By default, the value is All. You can specify only the following value: "ReadOnly", "WriteOnly", "All". Defaults to `All`.
 {{% /md %}}</dd></dl>
@@ -2785,7 +2835,7 @@ defined for notification of log file delivery.
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource type in which you want to log data events. You can specify only the following value: "AWS::S3::Object", "AWS::Lambda::Function"
 {{% /md %}}</dd><dt class="property-required"
@@ -2794,7 +2844,7 @@ defined for notification of log file delivery.
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of ARN for the specified S3 buckets and object prefixes..
 {{% /md %}}</dd></dl>
@@ -2807,7 +2857,7 @@ defined for notification of log file delivery.
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource type in which you want to log data events. You can specify only the following value: "AWS::S3::Object", "AWS::Lambda::Function"
 {{% /md %}}</dd><dt class="property-required"
@@ -2816,7 +2866,7 @@ defined for notification of log file delivery.
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of ARN for the specified S3 buckets and object prefixes..
 {{% /md %}}</dd></dl>
@@ -2857,7 +2907,7 @@ defined for notification of log file delivery.
 <a href="#insighttype_nodejs" style="color: inherit; text-decoration: inherit;">insight<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of insights to log on a trail. In this release, only `ApiCallRateInsight` is supported as an insight type.
 {{% /md %}}</dd></dl>
@@ -2870,7 +2920,7 @@ defined for notification of log file delivery.
 <a href="#insight_type_python" style="color: inherit; text-decoration: inherit;">insight_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of insights to log on a trail. In this release, only `ApiCallRateInsight` is supported as an insight type.
 {{% /md %}}</dd></dl>
