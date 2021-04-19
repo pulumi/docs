@@ -57,8 +57,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-docker/sdk/v3/go/docker"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-docker/sdk/v2/go/docker"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -130,81 +130,19 @@ const ubuntuContainer = new docker.Container("ubuntuContainer", {image: ubuntuRe
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Container</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ContainerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Container</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ContainerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Container</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-              <span class="nx">attach</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-              <span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ContainerCapabilitiesArgs]]</span> = None<span class="p">,</span>
-              <span class="nx">command</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-              <span class="nx">cpu_set</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-              <span class="nx">cpu_shares</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-              <span class="nx">destroy_grace_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-              <span class="nx">devices</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ContainerDeviceArgs]]]]</span> = None<span class="p">,</span>
-              <span class="nx">dns</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-              <span class="nx">dns_opts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-              <span class="nx">dns_searches</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-              <span class="nx">domainname</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-              <span class="nx">entrypoints</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-              <span class="nx">envs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-              <span class="nx">group_adds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-              <span class="nx">healthcheck</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ContainerHealthcheckArgs]]</span> = None<span class="p">,</span>
-              <span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-              <span class="nx">hosts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ContainerHostArgs]]]]</span> = None<span class="p">,</span>
-              <span class="nx">image</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-              <span class="nx">init</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-              <span class="nx">ipc_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-              <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ContainerLabelArgs]]]]</span> = None<span class="p">,</span>
-              <span class="nx">links</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-              <span class="nx">log_driver</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-              <span class="nx">log_opts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
-              <span class="nx">logs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-              <span class="nx">max_retry_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-              <span class="nx">memory</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-              <span class="nx">memory_swap</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-              <span class="nx">mounts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ContainerMountArgs]]]]</span> = None<span class="p">,</span>
-              <span class="nx">must_run</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-              <span class="nx">network_aliases</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-              <span class="nx">network_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-              <span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-              <span class="nx">networks_advanced</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ContainerNetworksAdvancedArgs]]]]</span> = None<span class="p">,</span>
-              <span class="nx">pid_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-              <span class="nx">ports</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ContainerPortArgs]]]]</span> = None<span class="p">,</span>
-              <span class="nx">privileged</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-              <span class="nx">publish_all_ports</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-              <span class="nx">read_only</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-              <span class="nx">remove_volumes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-              <span class="nx">restart</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-              <span class="nx">rm</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-              <span class="nx">security_opts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-              <span class="nx">shm_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-              <span class="nx">start</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-              <span class="nx">stdin_open</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-              <span class="nx">sysctls</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
-              <span class="nx">tmpfs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
-              <span class="nx">tty</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-              <span class="nx">ulimits</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ContainerUlimitArgs]]]]</span> = None<span class="p">,</span>
-              <span class="nx">uploads</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ContainerUploadArgs]]]]</span> = None<span class="p">,</span>
-              <span class="nx">user</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-              <span class="nx">userns_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-              <span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ContainerVolumeArgs]]]]</span> = None<span class="p">,</span>
-              <span class="nx">working_dir</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Container</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ContainerArgs</a></span><span class="p">,</span>
-              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Container</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attach</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[ContainerCapabilitiesArgs]</span> = None<span class="p">, </span><span class="nx">command</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">cpu_set</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_shares</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">destroy_grace_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">dns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">dns_opts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">dns_searches</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">domainname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entrypoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">envs</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">group_adds</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">healthcheck</span><span class="p">:</span> <span class="nx">Optional[ContainerHealthcheckArgs]</span> = None<span class="p">, </span><span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hosts</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerHostArgs]]</span> = None<span class="p">, </span><span class="nx">image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">init</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ipc_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerLabelArgs]]</span> = None<span class="p">, </span><span class="nx">links</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">log_driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_opts</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">logs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">max_retry_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">memory</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">memory_swap</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">mounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerMountArgs]]</span> = None<span class="p">, </span><span class="nx">must_run</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_aliases</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">network_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">networks_advanced</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerNetworksAdvancedArgs]]</span> = None<span class="p">, </span><span class="nx">pid_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ports</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerPortArgs]]</span> = None<span class="p">, </span><span class="nx">privileged</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">publish_all_ports</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">read_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">remove_volumes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">restart</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rm</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">security_opts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">shm_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">start</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">stdin_open</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sysctls</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">tmpfs</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">tty</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ulimits</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerUlimitArgs]]</span> = None<span class="p">, </span><span class="nx">uploads</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerUploadArgs]]</span> = None<span class="p">, </span><span class="nx">user</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">userns_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerVolumeArgs]]</span> = None<span class="p">, </span><span class="nx">working_dir</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewContainer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ContainerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Container</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewContainer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ContainerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Container</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Container</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ContainerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Container</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ContainerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -239,32 +177,22 @@ const ubuntuContainer = new docker.Container("ubuntuContainer", {image: ubuntuRe
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ContainerArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -273,7 +201,7 @@ const ubuntuContainer = new docker.Container("ubuntuContainer", {image: ubuntuRe
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -297,7 +225,7 @@ const ubuntuContainer = new docker.Container("ubuntuContainer", {image: ubuntuRe
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1396,7 +1324,7 @@ by name.
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the image to back this container.
 The easiest way to get this value is to use the `docker.RemoteImage` resource
@@ -1407,7 +1335,7 @@ as is shown in the example above.
 <a href="#attach_nodejs" style="color: inherit; text-decoration: inherit;">attach</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true attach to the container after its creation and waits the end of his execution.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1416,7 +1344,7 @@ as is shown in the example above.
 <a href="#capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containercapabilities">pulumi<wbr>Input<Container<wbr>Capabilities<wbr>Args></a></span>
+        <span class="property-type"><a href="#containercapabilities">Container<wbr>Capabilities</a></span>
     </dt>
     <dd>{{% md %}}See Capabilities below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1425,7 +1353,7 @@ as is shown in the example above.
 <a href="#command_nodejs" style="color: inherit; text-decoration: inherit;">command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The command to use to start the
 container. For example, to run `/usr/bin/myprogram -f baz.conf` set the
@@ -1436,7 +1364,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#cpuset_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma-separated list or hyphen-separated range of CPUs a container can use, e.g. `0-1`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1445,7 +1373,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#cpushares_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Shares</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}CPU shares (relative weight) for the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1454,7 +1382,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#destroygraceseconds_nodejs" style="color: inherit; text-decoration: inherit;">destroy<wbr>Grace<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}If defined will attempt to stop the container before destroying. Container will be destroyed after `n` seconds or on successful stop.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1463,7 +1391,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#devices_nodejs" style="color: inherit; text-decoration: inherit;">devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerdevice">pulumi<wbr>Input<pulumi<wbr>Input<Container<wbr>Device<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#containerdevice">Container<wbr>Device[]</a></span>
     </dt>
     <dd>{{% md %}}See Devices below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1472,7 +1400,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#dns_nodejs" style="color: inherit; text-decoration: inherit;">dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of DNS servers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1481,7 +1409,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#dnsopts_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Opts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of DNS options used by the DNS provider(s), see `resolv.conf` documentation for valid list of options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1490,7 +1418,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#dnssearches_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Searches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of DNS search domains that are used when bare unqualified hostnames are used inside of the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1499,7 +1427,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domainname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain name of the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1508,7 +1436,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#entrypoints_nodejs" style="color: inherit; text-decoration: inherit;">entrypoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The command to use as the
 Entrypoint for the container. The Entrypoint allows you to configure a
@@ -1521,7 +1449,7 @@ when starting a container, set the entrypoint to be
 <a href="#envs_nodejs" style="color: inherit; text-decoration: inherit;">envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Environment variables to set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1530,7 +1458,7 @@ when starting a container, set the entrypoint to be
 <a href="#groupadds_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Add additional groups to run as.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1539,7 +1467,7 @@ when starting a container, set the entrypoint to be
 <a href="#healthcheck_nodejs" style="color: inherit; text-decoration: inherit;">healthcheck</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerhealthcheck">pulumi<wbr>Input<Container<wbr>Healthcheck<wbr>Args></a></span>
+        <span class="property-type"><a href="#containerhealthcheck">Container<wbr>Healthcheck</a></span>
     </dt>
     <dd>{{% md %}}See Healthcheck below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1548,7 +1476,7 @@ when starting a container, set the entrypoint to be
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname of the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1557,7 +1485,7 @@ when starting a container, set the entrypoint to be
 <a href="#hosts_nodejs" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerhost">pulumi<wbr>Input<pulumi<wbr>Input<Container<wbr>Host<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#containerhost">Container<wbr>Host[]</a></span>
     </dt>
     <dd>{{% md %}}Hostname to add.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1566,7 +1494,7 @@ when starting a container, set the entrypoint to be
 <a href="#init_nodejs" style="color: inherit; text-decoration: inherit;">init</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Configured whether an init process should be injected for this container. If unset this will default to the `dockerd` defaults.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1575,7 +1503,7 @@ when starting a container, set the entrypoint to be
 <a href="#ipcmode_nodejs" style="color: inherit; text-decoration: inherit;">ipc<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPC sharing mode for the container. Possible values are: `none`, `private`, `shareable`, `container:<name|id>` or `host`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1584,7 +1512,7 @@ when starting a container, set the entrypoint to be
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerlabel">pulumi<wbr>Input<pulumi<wbr>Input<Container<wbr>Label<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#containerlabel">Container<wbr>Label[]</a></span>
     </dt>
     <dd>{{% md %}}Adding labels.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1593,7 +1521,7 @@ when starting a container, set the entrypoint to be
 <a href="#links_nodejs" style="color: inherit; text-decoration: inherit;">links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of links for link based
 connectivity between containers that are running on the same host.
@@ -1603,7 +1531,7 @@ connectivity between containers that are running on the same host.
 <a href="#logdriver_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Driver</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The logging driver to use for the container.
 Defaults to "json-file".
@@ -1613,7 +1541,7 @@ Defaults to "json-file".
 <a href="#logopts_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Opts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Key/value pairs to use as options for
 the logging driver.
@@ -1623,7 +1551,7 @@ the logging driver.
 <a href="#logs_nodejs" style="color: inherit; text-decoration: inherit;">logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Save the container logs (`attach` must be enabled).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1632,7 +1560,7 @@ the logging driver.
 <a href="#maxretrycount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Retry<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum amount of times to an attempt
 a restart when `restart` is set to "on-failure"
@@ -1642,7 +1570,7 @@ a restart when `restart` is set to "on-failure"
 <a href="#memory_nodejs" style="color: inherit; text-decoration: inherit;">memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The memory limit for the container in MBs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1651,7 +1579,7 @@ a restart when `restart` is set to "on-failure"
 <a href="#memoryswap_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Swap</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1659,7 +1587,7 @@ a restart when `restart` is set to "on-failure"
 <a href="#mounts_nodejs" style="color: inherit; text-decoration: inherit;">mounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containermount">pulumi<wbr>Input<pulumi<wbr>Input<Container<wbr>Mount<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#containermount">Container<wbr>Mount[]</a></span>
     </dt>
     <dd>{{% md %}}See Mounts below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1668,7 +1596,7 @@ a restart when `restart` is set to "on-failure"
 <a href="#mustrun_nodejs" style="color: inherit; text-decoration: inherit;">must<wbr>Run</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1676,7 +1604,7 @@ a restart when `restart` is set to "on-failure"
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -1684,7 +1612,7 @@ a restart when `restart` is set to "on-failure"
 <a href="#networkaliases_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Aliases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Network aliases of the container for user-defined networks only. *Deprecated:* use `networks_advanced` instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use networks_advanced instead. Will be removed in v2.0.0{{% /md %}}</p></dd><dt class="property-optional"
@@ -1693,7 +1621,7 @@ a restart when `restart` is set to "on-failure"
 <a href="#networkmode_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network mode of the container.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1702,7 +1630,7 @@ a restart when `restart` is set to "on-failure"
 <a href="#networks_nodejs" style="color: inherit; text-decoration: inherit;">networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Id of the networks in which the
 container is. *Deprecated:* use `networks_advanced` instead.
@@ -1712,7 +1640,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
 <a href="#networksadvanced_nodejs" style="color: inherit; text-decoration: inherit;">networks<wbr>Advanced</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containernetworksadvanced">pulumi<wbr>Input<pulumi<wbr>Input<Container<wbr>Networks<wbr>Advanced<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#containernetworksadvanced">Container<wbr>Networks<wbr>Advanced[]</a></span>
     </dt>
     <dd>{{% md %}}See Networks Advanced below for details. If this block has priority to the deprecated `network_alias` and `network` properties.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1721,7 +1649,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
 <a href="#pidmode_nodejs" style="color: inherit; text-decoration: inherit;">pid<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PID (Process) Namespace mode for the container. Either `container:<name|id>` or `host`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1730,7 +1658,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerport">pulumi<wbr>Input<pulumi<wbr>Input<Container<wbr>Port<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#containerport">Container<wbr>Port[]</a></span>
     </dt>
     <dd>{{% md %}}See Ports below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1739,7 +1667,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
 <a href="#privileged_nodejs" style="color: inherit; text-decoration: inherit;">privileged</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Run container in privileged mode.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1748,7 +1676,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
 <a href="#publishallports_nodejs" style="color: inherit; text-decoration: inherit;">publish<wbr>All<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Publish all ports of the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1757,7 +1685,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
 <a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, this volume will be readonly.
 Defaults to false.
@@ -1767,7 +1695,7 @@ Defaults to false.
 <a href="#removevolumes_nodejs" style="color: inherit; text-decoration: inherit;">remove<wbr>Volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1775,7 +1703,7 @@ Defaults to false.
 <a href="#restart_nodejs" style="color: inherit; text-decoration: inherit;">restart</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The restart policy for the container. Must be
 one of "no", "on-failure", "always", "unless-stopped".
@@ -1785,7 +1713,7 @@ one of "no", "on-failure", "always", "unless-stopped".
 <a href="#rm_nodejs" style="color: inherit; text-decoration: inherit;">rm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1793,7 +1721,7 @@ one of "no", "on-failure", "always", "unless-stopped".
 <a href="#securityopts_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Opts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of string values to customize labels for MLS systems, such as SELinux. See https://docs.docker.com/engine/reference/run/#security-configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1802,7 +1730,7 @@ one of "no", "on-failure", "always", "unless-stopped".
 <a href="#shmsize_nodejs" style="color: inherit; text-decoration: inherit;">shm<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Size of `/dev/shm` in MBs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1811,7 +1739,7 @@ one of "no", "on-failure", "always", "unless-stopped".
 <a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, then the Docker container will be
 started after creation. If false, then the container is only created.
@@ -1821,7 +1749,7 @@ started after creation. If false, then the container is only created.
 <a href="#stdinopen_nodejs" style="color: inherit; text-decoration: inherit;">stdin<wbr>Open</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}if true, keep STDIN open even if not attached (docker run -i)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1830,7 +1758,7 @@ started after creation. If false, then the container is only created.
 <a href="#sysctls_nodejs" style="color: inherit; text-decoration: inherit;">sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of kernel parameters (sysctls) to set in the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1839,7 +1767,7 @@ started after creation. If false, then the container is only created.
 <a href="#tmpfs_nodejs" style="color: inherit; text-decoration: inherit;">tmpfs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of container directories which should be replaced by `tmpfs mounts`, and their corresponding mount options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1848,7 +1776,7 @@ started after creation. If false, then the container is only created.
 <a href="#tty_nodejs" style="color: inherit; text-decoration: inherit;">tty</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}if true, allocate a pseudo-tty (docker run -t)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1857,7 +1785,7 @@ started after creation. If false, then the container is only created.
 <a href="#ulimits_nodejs" style="color: inherit; text-decoration: inherit;">ulimits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerulimit">pulumi<wbr>Input<pulumi<wbr>Input<Container<wbr>Ulimit<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#containerulimit">Container<wbr>Ulimit[]</a></span>
     </dt>
     <dd>{{% md %}}See Ulimits below for
 details.
@@ -1867,7 +1795,7 @@ details.
 <a href="#uploads_nodejs" style="color: inherit; text-decoration: inherit;">uploads</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerupload">pulumi<wbr>Input<pulumi<wbr>Input<Container<wbr>Upload<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#containerupload">Container<wbr>Upload[]</a></span>
     </dt>
     <dd>{{% md %}}See File Upload below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1876,7 +1804,7 @@ details.
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User used for run the first process. Format is
 `user` or `user:group` which user and group can be passed literraly or
@@ -1887,7 +1815,7 @@ by name.
 <a href="#usernsmode_nodejs" style="color: inherit; text-decoration: inherit;">userns<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the usernamespace mode for the container when usernamespace remapping option is enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1896,7 +1824,7 @@ by name.
 <a href="#volumes_nodejs" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containervolume">pulumi<wbr>Input<pulumi<wbr>Input<Container<wbr>Volume<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#containervolume">Container<wbr>Volume[]</a></span>
     </dt>
     <dd>{{% md %}}See Volumes below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1905,7 +1833,7 @@ by name.
 <a href="#workingdir_nodejs" style="color: inherit; text-decoration: inherit;">working<wbr>Dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The working directory for commands to run in
 {{% /md %}}</dd></dl>
@@ -1918,7 +1846,7 @@ by name.
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the image to back this container.
 The easiest way to get this value is to use the `docker.RemoteImage` resource
@@ -1929,7 +1857,7 @@ as is shown in the example above.
 <a href="#attach_python" style="color: inherit; text-decoration: inherit;">attach</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true attach to the container after its creation and waits the end of his execution.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1938,7 +1866,7 @@ as is shown in the example above.
 <a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containercapabilities">Input[Container<wbr>Capabilities<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containercapabilities">Container<wbr>Capabilities<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Capabilities below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1947,7 +1875,7 @@ as is shown in the example above.
 <a href="#command_python" style="color: inherit; text-decoration: inherit;">command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The command to use to start the
 container. For example, to run `/usr/bin/myprogram -f baz.conf` set the
@@ -1958,7 +1886,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#cpu_set_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A comma-separated list or hyphen-separated range of CPUs a container can use, e.g. `0-1`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1967,7 +1895,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#cpu_shares_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>shares</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}CPU shares (relative weight) for the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1976,7 +1904,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#destroy_grace_seconds_python" style="color: inherit; text-decoration: inherit;">destroy_<wbr>grace_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If defined will attempt to stop the container before destroying. Container will be destroyed after `n` seconds or on successful stop.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1985,7 +1913,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#devices_python" style="color: inherit; text-decoration: inherit;">devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerdevice">Input[Container<wbr>Device<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#containerdevice">Sequence[Container<wbr>Device<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Devices below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1994,7 +1922,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#dns_python" style="color: inherit; text-decoration: inherit;">dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of DNS servers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2003,7 +1931,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#dns_opts_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>opts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of DNS options used by the DNS provider(s), see `resolv.conf` documentation for valid list of options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2012,7 +1940,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#dns_searches_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>searches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of DNS search domains that are used when bare unqualified hostnames are used inside of the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2021,7 +1949,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#domainname_python" style="color: inherit; text-decoration: inherit;">domainname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Domain name of the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2030,7 +1958,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#entrypoints_python" style="color: inherit; text-decoration: inherit;">entrypoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The command to use as the
 Entrypoint for the container. The Entrypoint allows you to configure a
@@ -2043,7 +1971,7 @@ when starting a container, set the entrypoint to be
 <a href="#envs_python" style="color: inherit; text-decoration: inherit;">envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Environment variables to set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2052,7 +1980,7 @@ when starting a container, set the entrypoint to be
 <a href="#group_adds_python" style="color: inherit; text-decoration: inherit;">group_<wbr>adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Add additional groups to run as.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2061,7 +1989,7 @@ when starting a container, set the entrypoint to be
 <a href="#healthcheck_python" style="color: inherit; text-decoration: inherit;">healthcheck</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerhealthcheck">Input[Container<wbr>Healthcheck<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containerhealthcheck">Container<wbr>Healthcheck<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Healthcheck below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2070,7 +1998,7 @@ when starting a container, set the entrypoint to be
 <a href="#hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Hostname of the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2079,7 +2007,7 @@ when starting a container, set the entrypoint to be
 <a href="#hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerhost">Input[Container<wbr>Host<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#containerhost">Sequence[Container<wbr>Host<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Hostname to add.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2088,7 +2016,7 @@ when starting a container, set the entrypoint to be
 <a href="#init_python" style="color: inherit; text-decoration: inherit;">init</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Configured whether an init process should be injected for this container. If unset this will default to the `dockerd` defaults.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2097,7 +2025,7 @@ when starting a container, set the entrypoint to be
 <a href="#ipc_mode_python" style="color: inherit; text-decoration: inherit;">ipc_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IPC sharing mode for the container. Possible values are: `none`, `private`, `shareable`, `container:<name|id>` or `host`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2106,7 +2034,7 @@ when starting a container, set the entrypoint to be
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerlabel">Input[Container<wbr>Label<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#containerlabel">Sequence[Container<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Adding labels.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -2115,7 +2043,7 @@ when starting a container, set the entrypoint to be
 <a href="#links_python" style="color: inherit; text-decoration: inherit;">links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of links for link based
 connectivity between containers that are running on the same host.
@@ -2125,7 +2053,7 @@ connectivity between containers that are running on the same host.
 <a href="#log_driver_python" style="color: inherit; text-decoration: inherit;">log_<wbr>driver</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The logging driver to use for the container.
 Defaults to "json-file".
@@ -2135,7 +2063,7 @@ Defaults to "json-file".
 <a href="#log_opts_python" style="color: inherit; text-decoration: inherit;">log_<wbr>opts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Key/value pairs to use as options for
 the logging driver.
@@ -2145,7 +2073,7 @@ the logging driver.
 <a href="#logs_python" style="color: inherit; text-decoration: inherit;">logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Save the container logs (`attach` must be enabled).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2154,7 +2082,7 @@ the logging driver.
 <a href="#max_retry_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retry_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of times to an attempt
 a restart when `restart` is set to "on-failure"
@@ -2164,7 +2092,7 @@ a restart when `restart` is set to "on-failure"
 <a href="#memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The memory limit for the container in MBs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2173,7 +2101,7 @@ a restart when `restart` is set to "on-failure"
 <a href="#memory_swap_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>swap</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2181,7 +2109,7 @@ a restart when `restart` is set to "on-failure"
 <a href="#mounts_python" style="color: inherit; text-decoration: inherit;">mounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containermount">Input[Container<wbr>Mount<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#containermount">Sequence[Container<wbr>Mount<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Mounts below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2190,7 +2118,7 @@ a restart when `restart` is set to "on-failure"
 <a href="#must_run_python" style="color: inherit; text-decoration: inherit;">must_<wbr>run</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2198,7 +2126,7 @@ a restart when `restart` is set to "on-failure"
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2206,7 +2134,7 @@ a restart when `restart` is set to "on-failure"
 <a href="#network_aliases_python" style="color: inherit; text-decoration: inherit;">network_<wbr>aliases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Network aliases of the container for user-defined networks only. *Deprecated:* use `networks_advanced` instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use networks_advanced instead. Will be removed in v2.0.0{{% /md %}}</p></dd><dt class="property-optional"
@@ -2215,7 +2143,7 @@ a restart when `restart` is set to "on-failure"
 <a href="#network_mode_python" style="color: inherit; text-decoration: inherit;">network_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Network mode of the container.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -2224,7 +2152,7 @@ a restart when `restart` is set to "on-failure"
 <a href="#networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Id of the networks in which the
 container is. *Deprecated:* use `networks_advanced` instead.
@@ -2234,7 +2162,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
 <a href="#networks_advanced_python" style="color: inherit; text-decoration: inherit;">networks_<wbr>advanced</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containernetworksadvanced">Input[Container<wbr>Networks<wbr>Advanced<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#containernetworksadvanced">Sequence[Container<wbr>Networks<wbr>Advanced<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Networks Advanced below for details. If this block has priority to the deprecated `network_alias` and `network` properties.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2243,7 +2171,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
 <a href="#pid_mode_python" style="color: inherit; text-decoration: inherit;">pid_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The PID (Process) Namespace mode for the container. Either `container:<name|id>` or `host`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2252,7 +2180,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerport">Input[Container<wbr>Port<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#containerport">Sequence[Container<wbr>Port<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Ports below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2261,7 +2189,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
 <a href="#privileged_python" style="color: inherit; text-decoration: inherit;">privileged</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Run container in privileged mode.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2270,7 +2198,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
 <a href="#publish_all_ports_python" style="color: inherit; text-decoration: inherit;">publish_<wbr>all_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Publish all ports of the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2279,7 +2207,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
 <a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, this volume will be readonly.
 Defaults to false.
@@ -2289,7 +2217,7 @@ Defaults to false.
 <a href="#remove_volumes_python" style="color: inherit; text-decoration: inherit;">remove_<wbr>volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2297,7 +2225,7 @@ Defaults to false.
 <a href="#restart_python" style="color: inherit; text-decoration: inherit;">restart</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The restart policy for the container. Must be
 one of "no", "on-failure", "always", "unless-stopped".
@@ -2307,7 +2235,7 @@ one of "no", "on-failure", "always", "unless-stopped".
 <a href="#rm_python" style="color: inherit; text-decoration: inherit;">rm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2315,7 +2243,7 @@ one of "no", "on-failure", "always", "unless-stopped".
 <a href="#security_opts_python" style="color: inherit; text-decoration: inherit;">security_<wbr>opts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of string values to customize labels for MLS systems, such as SELinux. See https://docs.docker.com/engine/reference/run/#security-configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2324,7 +2252,7 @@ one of "no", "on-failure", "always", "unless-stopped".
 <a href="#shm_size_python" style="color: inherit; text-decoration: inherit;">shm_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of `/dev/shm` in MBs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2333,7 +2261,7 @@ one of "no", "on-failure", "always", "unless-stopped".
 <a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, then the Docker container will be
 started after creation. If false, then the container is only created.
@@ -2343,7 +2271,7 @@ started after creation. If false, then the container is only created.
 <a href="#stdin_open_python" style="color: inherit; text-decoration: inherit;">stdin_<wbr>open</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}if true, keep STDIN open even if not attached (docker run -i)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2352,7 +2280,7 @@ started after creation. If false, then the container is only created.
 <a href="#sysctls_python" style="color: inherit; text-decoration: inherit;">sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of kernel parameters (sysctls) to set in the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2361,7 +2289,7 @@ started after creation. If false, then the container is only created.
 <a href="#tmpfs_python" style="color: inherit; text-decoration: inherit;">tmpfs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of container directories which should be replaced by `tmpfs mounts`, and their corresponding mount options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2370,7 +2298,7 @@ started after creation. If false, then the container is only created.
 <a href="#tty_python" style="color: inherit; text-decoration: inherit;">tty</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}if true, allocate a pseudo-tty (docker run -t)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2379,7 +2307,7 @@ started after creation. If false, then the container is only created.
 <a href="#ulimits_python" style="color: inherit; text-decoration: inherit;">ulimits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerulimit">Input[Container<wbr>Ulimit<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#containerulimit">Sequence[Container<wbr>Ulimit<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Ulimits below for
 details.
@@ -2389,7 +2317,7 @@ details.
 <a href="#uploads_python" style="color: inherit; text-decoration: inherit;">uploads</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerupload">Input[Container<wbr>Upload<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#containerupload">Sequence[Container<wbr>Upload<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See File Upload below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2398,7 +2326,7 @@ details.
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User used for run the first process. Format is
 `user` or `user:group` which user and group can be passed literraly or
@@ -2409,7 +2337,7 @@ by name.
 <a href="#userns_mode_python" style="color: inherit; text-decoration: inherit;">userns_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sets the usernamespace mode for the container when usernamespace remapping option is enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2418,7 +2346,7 @@ by name.
 <a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containervolume">Input[Container<wbr>Volume<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#containervolume">Sequence[Container<wbr>Volume<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Volumes below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2427,7 +2355,7 @@ by name.
 <a href="#working_dir_python" style="color: inherit; text-decoration: inherit;">working_<wbr>dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The working directory for commands to run in
 {{% /md %}}</dd></dl>
@@ -2760,85 +2688,20 @@ Get an existing Container resource's state with the given name, ID, and optional
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ContainerState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Container</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ContainerState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Container</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">attach</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">bridge</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ContainerCapabilitiesArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">command</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">container_logs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">cpu_set</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">cpu_shares</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">destroy_grace_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">devices</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ContainerDeviceArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">dns</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">dns_opts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">dns_searches</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">domainname</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">entrypoints</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">envs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">exit_code</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">gateway</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">group_adds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">healthcheck</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ContainerHealthcheckArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">hosts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ContainerHostArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">image</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">init</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">ip_prefix_length</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">ipc_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ContainerLabelArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">links</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">log_driver</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">log_opts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
-        <span class="nx">logs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">max_retry_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">memory</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">memory_swap</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">mounts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ContainerMountArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">must_run</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">network_aliases</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">network_datas</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ContainerNetworkDataArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">network_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">networks_advanced</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ContainerNetworksAdvancedArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">pid_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">ports</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ContainerPortArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">privileged</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">publish_all_ports</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">read_only</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">remove_volumes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">restart</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">rm</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">security_opts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">shm_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">start</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">stdin_open</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">sysctls</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
-        <span class="nx">tmpfs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
-        <span class="nx">tty</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">ulimits</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ContainerUlimitArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">uploads</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ContainerUploadArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">user</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">userns_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ContainerVolumeArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">working_dir</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Container</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attach</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">bridge</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[ContainerCapabilitiesArgs]</span> = None<span class="p">, </span><span class="nx">command</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">container_logs</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_set</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_shares</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">destroy_grace_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">dns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">dns_opts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">dns_searches</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">domainname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entrypoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">envs</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">exit_code</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">gateway</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_adds</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">healthcheck</span><span class="p">:</span> <span class="nx">Optional[ContainerHealthcheckArgs]</span> = None<span class="p">, </span><span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hosts</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerHostArgs]]</span> = None<span class="p">, </span><span class="nx">image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">init</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_prefix_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ipc_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerLabelArgs]]</span> = None<span class="p">, </span><span class="nx">links</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">log_driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_opts</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">logs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">max_retry_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">memory</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">memory_swap</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">mounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerMountArgs]]</span> = None<span class="p">, </span><span class="nx">must_run</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_aliases</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">network_datas</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerNetworkDataArgs]]</span> = None<span class="p">, </span><span class="nx">network_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">networks_advanced</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerNetworksAdvancedArgs]]</span> = None<span class="p">, </span><span class="nx">pid_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ports</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerPortArgs]]</span> = None<span class="p">, </span><span class="nx">privileged</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">publish_all_ports</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">read_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">remove_volumes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">restart</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rm</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">security_opts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">shm_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">start</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">stdin_open</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sysctls</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">tmpfs</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">tty</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ulimits</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerUlimitArgs]]</span> = None<span class="p">, </span><span class="nx">uploads</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerUploadArgs]]</span> = None<span class="p">, </span><span class="nx">user</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">userns_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerVolumeArgs]]</span> = None<span class="p">, </span><span class="nx">working_dir</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Container</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetContainer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ContainerState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Container</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetContainer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ContainerState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Container</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Container</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ContainerState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Container</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ContainerState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4123,7 +3986,7 @@ by name.
 <a href="#state_attach_nodejs" style="color: inherit; text-decoration: inherit;">attach</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true attach to the container after its creation and waits the end of his execution.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4132,7 +3995,7 @@ by name.
 <a href="#state_bridge_nodejs" style="color: inherit; text-decoration: inherit;">bridge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network bridge of the container as read from its NetworkSettings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4141,7 +4004,7 @@ by name.
 <a href="#state_capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containercapabilities">pulumi<wbr>Input<Container<wbr>Capabilities<wbr>Args></a></span>
+        <span class="property-type"><a href="#containercapabilities">Container<wbr>Capabilities</a></span>
     </dt>
     <dd>{{% md %}}See Capabilities below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4150,7 +4013,7 @@ by name.
 <a href="#state_command_nodejs" style="color: inherit; text-decoration: inherit;">command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The command to use to start the
 container. For example, to run `/usr/bin/myprogram -f baz.conf` set the
@@ -4161,7 +4024,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#state_containerlogs_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The logs of the container if its execution is done (`attach` must be disabled).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4170,7 +4033,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#state_cpuset_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma-separated list or hyphen-separated range of CPUs a container can use, e.g. `0-1`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4179,7 +4042,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#state_cpushares_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Shares</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}CPU shares (relative weight) for the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4188,7 +4051,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#state_destroygraceseconds_nodejs" style="color: inherit; text-decoration: inherit;">destroy<wbr>Grace<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}If defined will attempt to stop the container before destroying. Container will be destroyed after `n` seconds or on successful stop.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4197,7 +4060,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#state_devices_nodejs" style="color: inherit; text-decoration: inherit;">devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerdevice">pulumi<wbr>Input<pulumi<wbr>Input<Container<wbr>Device<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#containerdevice">Container<wbr>Device[]</a></span>
     </dt>
     <dd>{{% md %}}See Devices below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4206,7 +4069,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#state_dns_nodejs" style="color: inherit; text-decoration: inherit;">dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of DNS servers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4215,7 +4078,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#state_dnsopts_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Opts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of DNS options used by the DNS provider(s), see `resolv.conf` documentation for valid list of options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4224,7 +4087,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#state_dnssearches_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Searches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of DNS search domains that are used when bare unqualified hostnames are used inside of the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4233,7 +4096,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#state_domainname_nodejs" style="color: inherit; text-decoration: inherit;">domainname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain name of the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4242,7 +4105,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#state_entrypoints_nodejs" style="color: inherit; text-decoration: inherit;">entrypoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The command to use as the
 Entrypoint for the container. The Entrypoint allows you to configure a
@@ -4255,7 +4118,7 @@ when starting a container, set the entrypoint to be
 <a href="#state_envs_nodejs" style="color: inherit; text-decoration: inherit;">envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Environment variables to set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4264,7 +4127,7 @@ when starting a container, set the entrypoint to be
 <a href="#state_exitcode_nodejs" style="color: inherit; text-decoration: inherit;">exit<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The exit code of the container if its execution is done (`must_run` must be disabled).
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -4273,7 +4136,7 @@ when starting a container, set the entrypoint to be
 <a href="#state_gateway_nodejs" style="color: inherit; text-decoration: inherit;">gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The network gateway of the container as read from its
 NetworkSettings.
@@ -4283,7 +4146,7 @@ NetworkSettings.
 <a href="#state_groupadds_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Add additional groups to run as.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4292,7 +4155,7 @@ NetworkSettings.
 <a href="#state_healthcheck_nodejs" style="color: inherit; text-decoration: inherit;">healthcheck</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerhealthcheck">pulumi<wbr>Input<Container<wbr>Healthcheck<wbr>Args></a></span>
+        <span class="property-type"><a href="#containerhealthcheck">Container<wbr>Healthcheck</a></span>
     </dt>
     <dd>{{% md %}}See Healthcheck below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4301,7 +4164,7 @@ NetworkSettings.
 <a href="#state_hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname of the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4310,7 +4173,7 @@ NetworkSettings.
 <a href="#state_hosts_nodejs" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerhost">pulumi<wbr>Input<pulumi<wbr>Input<Container<wbr>Host<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#containerhost">Container<wbr>Host[]</a></span>
     </dt>
     <dd>{{% md %}}Hostname to add.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4319,7 +4182,7 @@ NetworkSettings.
 <a href="#state_image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the image to back this container.
 The easiest way to get this value is to use the `docker.RemoteImage` resource
@@ -4330,7 +4193,7 @@ as is shown in the example above.
 <a href="#state_init_nodejs" style="color: inherit; text-decoration: inherit;">init</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Configured whether an init process should be injected for this container. If unset this will default to the `dockerd` defaults.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -4339,7 +4202,7 @@ as is shown in the example above.
 <a href="#state_ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The IP address of the container's first network it.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -4348,7 +4211,7 @@ as is shown in the example above.
 <a href="#state_ipprefixlength_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Prefix<wbr>Length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The IP prefix length of the container as read from its
 NetworkSettings.
@@ -4358,7 +4221,7 @@ NetworkSettings.
 <a href="#state_ipcmode_nodejs" style="color: inherit; text-decoration: inherit;">ipc<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPC sharing mode for the container. Possible values are: `none`, `private`, `shareable`, `container:<name|id>` or `host`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4367,7 +4230,7 @@ NetworkSettings.
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerlabel">pulumi<wbr>Input<pulumi<wbr>Input<Container<wbr>Label<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#containerlabel">Container<wbr>Label[]</a></span>
     </dt>
     <dd>{{% md %}}Adding labels.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -4376,7 +4239,7 @@ NetworkSettings.
 <a href="#state_links_nodejs" style="color: inherit; text-decoration: inherit;">links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of links for link based
 connectivity between containers that are running on the same host.
@@ -4386,7 +4249,7 @@ connectivity between containers that are running on the same host.
 <a href="#state_logdriver_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Driver</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The logging driver to use for the container.
 Defaults to "json-file".
@@ -4396,7 +4259,7 @@ Defaults to "json-file".
 <a href="#state_logopts_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Opts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Key/value pairs to use as options for
 the logging driver.
@@ -4406,7 +4269,7 @@ the logging driver.
 <a href="#state_logs_nodejs" style="color: inherit; text-decoration: inherit;">logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Save the container logs (`attach` must be enabled).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4415,7 +4278,7 @@ the logging driver.
 <a href="#state_maxretrycount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Retry<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum amount of times to an attempt
 a restart when `restart` is set to "on-failure"
@@ -4425,7 +4288,7 @@ a restart when `restart` is set to "on-failure"
 <a href="#state_memory_nodejs" style="color: inherit; text-decoration: inherit;">memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The memory limit for the container in MBs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4434,7 +4297,7 @@ a restart when `restart` is set to "on-failure"
 <a href="#state_memoryswap_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Swap</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4442,7 +4305,7 @@ a restart when `restart` is set to "on-failure"
 <a href="#state_mounts_nodejs" style="color: inherit; text-decoration: inherit;">mounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containermount">pulumi<wbr>Input<pulumi<wbr>Input<Container<wbr>Mount<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#containermount">Container<wbr>Mount[]</a></span>
     </dt>
     <dd>{{% md %}}See Mounts below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4451,7 +4314,7 @@ a restart when `restart` is set to "on-failure"
 <a href="#state_mustrun_nodejs" style="color: inherit; text-decoration: inherit;">must<wbr>Run</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4459,7 +4322,7 @@ a restart when `restart` is set to "on-failure"
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -4467,7 +4330,7 @@ a restart when `restart` is set to "on-failure"
 <a href="#state_networkaliases_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Aliases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Network aliases of the container for user-defined networks only. *Deprecated:* use `networks_advanced` instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use networks_advanced instead. Will be removed in v2.0.0{{% /md %}}</p></dd><dt class="property-optional"
@@ -4476,7 +4339,7 @@ a restart when `restart` is set to "on-failure"
 <a href="#state_networkdatas_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Datas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containernetworkdata">pulumi<wbr>Input<pulumi<wbr>Input<Container<wbr>Network<wbr>Data<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#containernetworkdata">Container<wbr>Network<wbr>Data[]</a></span>
     </dt>
     <dd>{{% md %}}(Map of a block) The IP addresses of the container on each
 network. Key are the network names, values are the IP addresses.
@@ -4486,7 +4349,7 @@ network. Key are the network names, values are the IP addresses.
 <a href="#state_networkmode_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network mode of the container.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -4495,7 +4358,7 @@ network. Key are the network names, values are the IP addresses.
 <a href="#state_networks_nodejs" style="color: inherit; text-decoration: inherit;">networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Id of the networks in which the
 container is. *Deprecated:* use `networks_advanced` instead.
@@ -4505,7 +4368,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
 <a href="#state_networksadvanced_nodejs" style="color: inherit; text-decoration: inherit;">networks<wbr>Advanced</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containernetworksadvanced">pulumi<wbr>Input<pulumi<wbr>Input<Container<wbr>Networks<wbr>Advanced<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#containernetworksadvanced">Container<wbr>Networks<wbr>Advanced[]</a></span>
     </dt>
     <dd>{{% md %}}See Networks Advanced below for details. If this block has priority to the deprecated `network_alias` and `network` properties.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4514,7 +4377,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
 <a href="#state_pidmode_nodejs" style="color: inherit; text-decoration: inherit;">pid<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PID (Process) Namespace mode for the container. Either `container:<name|id>` or `host`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4523,7 +4386,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
 <a href="#state_ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerport">pulumi<wbr>Input<pulumi<wbr>Input<Container<wbr>Port<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#containerport">Container<wbr>Port[]</a></span>
     </dt>
     <dd>{{% md %}}See Ports below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4532,7 +4395,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
 <a href="#state_privileged_nodejs" style="color: inherit; text-decoration: inherit;">privileged</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Run container in privileged mode.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4541,7 +4404,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
 <a href="#state_publishallports_nodejs" style="color: inherit; text-decoration: inherit;">publish<wbr>All<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Publish all ports of the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4550,7 +4413,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
 <a href="#state_readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, this volume will be readonly.
 Defaults to false.
@@ -4560,7 +4423,7 @@ Defaults to false.
 <a href="#state_removevolumes_nodejs" style="color: inherit; text-decoration: inherit;">remove<wbr>Volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4568,7 +4431,7 @@ Defaults to false.
 <a href="#state_restart_nodejs" style="color: inherit; text-decoration: inherit;">restart</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The restart policy for the container. Must be
 one of "no", "on-failure", "always", "unless-stopped".
@@ -4578,7 +4441,7 @@ one of "no", "on-failure", "always", "unless-stopped".
 <a href="#state_rm_nodejs" style="color: inherit; text-decoration: inherit;">rm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4586,7 +4449,7 @@ one of "no", "on-failure", "always", "unless-stopped".
 <a href="#state_securityopts_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Opts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of string values to customize labels for MLS systems, such as SELinux. See https://docs.docker.com/engine/reference/run/#security-configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4595,7 +4458,7 @@ one of "no", "on-failure", "always", "unless-stopped".
 <a href="#state_shmsize_nodejs" style="color: inherit; text-decoration: inherit;">shm<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Size of `/dev/shm` in MBs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4604,7 +4467,7 @@ one of "no", "on-failure", "always", "unless-stopped".
 <a href="#state_start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, then the Docker container will be
 started after creation. If false, then the container is only created.
@@ -4614,7 +4477,7 @@ started after creation. If false, then the container is only created.
 <a href="#state_stdinopen_nodejs" style="color: inherit; text-decoration: inherit;">stdin<wbr>Open</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}if true, keep STDIN open even if not attached (docker run -i)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4623,7 +4486,7 @@ started after creation. If false, then the container is only created.
 <a href="#state_sysctls_nodejs" style="color: inherit; text-decoration: inherit;">sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of kernel parameters (sysctls) to set in the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4632,7 +4495,7 @@ started after creation. If false, then the container is only created.
 <a href="#state_tmpfs_nodejs" style="color: inherit; text-decoration: inherit;">tmpfs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of container directories which should be replaced by `tmpfs mounts`, and their corresponding mount options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4641,7 +4504,7 @@ started after creation. If false, then the container is only created.
 <a href="#state_tty_nodejs" style="color: inherit; text-decoration: inherit;">tty</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}if true, allocate a pseudo-tty (docker run -t)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4650,7 +4513,7 @@ started after creation. If false, then the container is only created.
 <a href="#state_ulimits_nodejs" style="color: inherit; text-decoration: inherit;">ulimits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerulimit">pulumi<wbr>Input<pulumi<wbr>Input<Container<wbr>Ulimit<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#containerulimit">Container<wbr>Ulimit[]</a></span>
     </dt>
     <dd>{{% md %}}See Ulimits below for
 details.
@@ -4660,7 +4523,7 @@ details.
 <a href="#state_uploads_nodejs" style="color: inherit; text-decoration: inherit;">uploads</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerupload">pulumi<wbr>Input<pulumi<wbr>Input<Container<wbr>Upload<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#containerupload">Container<wbr>Upload[]</a></span>
     </dt>
     <dd>{{% md %}}See File Upload below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4669,7 +4532,7 @@ details.
 <a href="#state_user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User used for run the first process. Format is
 `user` or `user:group` which user and group can be passed literraly or
@@ -4680,7 +4543,7 @@ by name.
 <a href="#state_usernsmode_nodejs" style="color: inherit; text-decoration: inherit;">userns<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the usernamespace mode for the container when usernamespace remapping option is enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4689,7 +4552,7 @@ by name.
 <a href="#state_volumes_nodejs" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containervolume">pulumi<wbr>Input<pulumi<wbr>Input<Container<wbr>Volume<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#containervolume">Container<wbr>Volume[]</a></span>
     </dt>
     <dd>{{% md %}}See Volumes below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4698,7 +4561,7 @@ by name.
 <a href="#state_workingdir_nodejs" style="color: inherit; text-decoration: inherit;">working<wbr>Dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The working directory for commands to run in
 {{% /md %}}</dd></dl>
@@ -4711,7 +4574,7 @@ by name.
 <a href="#state_attach_python" style="color: inherit; text-decoration: inherit;">attach</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true attach to the container after its creation and waits the end of his execution.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4720,7 +4583,7 @@ by name.
 <a href="#state_bridge_python" style="color: inherit; text-decoration: inherit;">bridge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The network bridge of the container as read from its NetworkSettings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4729,7 +4592,7 @@ by name.
 <a href="#state_capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containercapabilities">Input[Container<wbr>Capabilities<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containercapabilities">Container<wbr>Capabilities<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Capabilities below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4738,7 +4601,7 @@ by name.
 <a href="#state_command_python" style="color: inherit; text-decoration: inherit;">command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The command to use to start the
 container. For example, to run `/usr/bin/myprogram -f baz.conf` set the
@@ -4749,7 +4612,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#state_container_logs_python" style="color: inherit; text-decoration: inherit;">container_<wbr>logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The logs of the container if its execution is done (`attach` must be disabled).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4758,7 +4621,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#state_cpu_set_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A comma-separated list or hyphen-separated range of CPUs a container can use, e.g. `0-1`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4767,7 +4630,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#state_cpu_shares_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>shares</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}CPU shares (relative weight) for the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4776,7 +4639,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#state_destroy_grace_seconds_python" style="color: inherit; text-decoration: inherit;">destroy_<wbr>grace_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If defined will attempt to stop the container before destroying. Container will be destroyed after `n` seconds or on successful stop.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4785,7 +4648,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#state_devices_python" style="color: inherit; text-decoration: inherit;">devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerdevice">Input[Container<wbr>Device<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#containerdevice">Sequence[Container<wbr>Device<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Devices below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4794,7 +4657,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#state_dns_python" style="color: inherit; text-decoration: inherit;">dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of DNS servers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4803,7 +4666,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#state_dns_opts_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>opts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of DNS options used by the DNS provider(s), see `resolv.conf` documentation for valid list of options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4812,7 +4675,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#state_dns_searches_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>searches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of DNS search domains that are used when bare unqualified hostnames are used inside of the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4821,7 +4684,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#state_domainname_python" style="color: inherit; text-decoration: inherit;">domainname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Domain name of the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4830,7 +4693,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#state_entrypoints_python" style="color: inherit; text-decoration: inherit;">entrypoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The command to use as the
 Entrypoint for the container. The Entrypoint allows you to configure a
@@ -4843,7 +4706,7 @@ when starting a container, set the entrypoint to be
 <a href="#state_envs_python" style="color: inherit; text-decoration: inherit;">envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Environment variables to set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4852,7 +4715,7 @@ when starting a container, set the entrypoint to be
 <a href="#state_exit_code_python" style="color: inherit; text-decoration: inherit;">exit_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The exit code of the container if its execution is done (`must_run` must be disabled).
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -4861,7 +4724,7 @@ when starting a container, set the entrypoint to be
 <a href="#state_gateway_python" style="color: inherit; text-decoration: inherit;">gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The network gateway of the container as read from its
 NetworkSettings.
@@ -4871,7 +4734,7 @@ NetworkSettings.
 <a href="#state_group_adds_python" style="color: inherit; text-decoration: inherit;">group_<wbr>adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Add additional groups to run as.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4880,7 +4743,7 @@ NetworkSettings.
 <a href="#state_healthcheck_python" style="color: inherit; text-decoration: inherit;">healthcheck</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerhealthcheck">Input[Container<wbr>Healthcheck<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containerhealthcheck">Container<wbr>Healthcheck<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Healthcheck below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4889,7 +4752,7 @@ NetworkSettings.
 <a href="#state_hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Hostname of the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4898,7 +4761,7 @@ NetworkSettings.
 <a href="#state_hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerhost">Input[Container<wbr>Host<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#containerhost">Sequence[Container<wbr>Host<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Hostname to add.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4907,7 +4770,7 @@ NetworkSettings.
 <a href="#state_image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the image to back this container.
 The easiest way to get this value is to use the `docker.RemoteImage` resource
@@ -4918,7 +4781,7 @@ as is shown in the example above.
 <a href="#state_init_python" style="color: inherit; text-decoration: inherit;">init</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Configured whether an init process should be injected for this container. If unset this will default to the `dockerd` defaults.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -4927,7 +4790,7 @@ as is shown in the example above.
 <a href="#state_ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The IP address of the container's first network it.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -4936,7 +4799,7 @@ as is shown in the example above.
 <a href="#state_ip_prefix_length_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>prefix_<wbr>length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The IP prefix length of the container as read from its
 NetworkSettings.
@@ -4946,7 +4809,7 @@ NetworkSettings.
 <a href="#state_ipc_mode_python" style="color: inherit; text-decoration: inherit;">ipc_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IPC sharing mode for the container. Possible values are: `none`, `private`, `shareable`, `container:<name|id>` or `host`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4955,7 +4818,7 @@ NetworkSettings.
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerlabel">Input[Container<wbr>Label<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#containerlabel">Sequence[Container<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Adding labels.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -4964,7 +4827,7 @@ NetworkSettings.
 <a href="#state_links_python" style="color: inherit; text-decoration: inherit;">links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of links for link based
 connectivity between containers that are running on the same host.
@@ -4974,7 +4837,7 @@ connectivity between containers that are running on the same host.
 <a href="#state_log_driver_python" style="color: inherit; text-decoration: inherit;">log_<wbr>driver</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The logging driver to use for the container.
 Defaults to "json-file".
@@ -4984,7 +4847,7 @@ Defaults to "json-file".
 <a href="#state_log_opts_python" style="color: inherit; text-decoration: inherit;">log_<wbr>opts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Key/value pairs to use as options for
 the logging driver.
@@ -4994,7 +4857,7 @@ the logging driver.
 <a href="#state_logs_python" style="color: inherit; text-decoration: inherit;">logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Save the container logs (`attach` must be enabled).
 {{% /md %}}</dd><dt class="property-optional"
@@ -5003,7 +4866,7 @@ the logging driver.
 <a href="#state_max_retry_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retry_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of times to an attempt
 a restart when `restart` is set to "on-failure"
@@ -5013,7 +4876,7 @@ a restart when `restart` is set to "on-failure"
 <a href="#state_memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The memory limit for the container in MBs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5022,7 +4885,7 @@ a restart when `restart` is set to "on-failure"
 <a href="#state_memory_swap_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>swap</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5030,7 +4893,7 @@ a restart when `restart` is set to "on-failure"
 <a href="#state_mounts_python" style="color: inherit; text-decoration: inherit;">mounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containermount">Input[Container<wbr>Mount<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#containermount">Sequence[Container<wbr>Mount<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Mounts below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5039,7 +4902,7 @@ a restart when `restart` is set to "on-failure"
 <a href="#state_must_run_python" style="color: inherit; text-decoration: inherit;">must_<wbr>run</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5047,7 +4910,7 @@ a restart when `restart` is set to "on-failure"
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -5055,7 +4918,7 @@ a restart when `restart` is set to "on-failure"
 <a href="#state_network_aliases_python" style="color: inherit; text-decoration: inherit;">network_<wbr>aliases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Network aliases of the container for user-defined networks only. *Deprecated:* use `networks_advanced` instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use networks_advanced instead. Will be removed in v2.0.0{{% /md %}}</p></dd><dt class="property-optional"
@@ -5064,7 +4927,7 @@ a restart when `restart` is set to "on-failure"
 <a href="#state_network_datas_python" style="color: inherit; text-decoration: inherit;">network_<wbr>datas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containernetworkdata">Input[Container<wbr>Network<wbr>Data<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#containernetworkdata">Sequence[Container<wbr>Network<wbr>Data<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(Map of a block) The IP addresses of the container on each
 network. Key are the network names, values are the IP addresses.
@@ -5074,7 +4937,7 @@ network. Key are the network names, values are the IP addresses.
 <a href="#state_network_mode_python" style="color: inherit; text-decoration: inherit;">network_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Network mode of the container.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -5083,7 +4946,7 @@ network. Key are the network names, values are the IP addresses.
 <a href="#state_networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Id of the networks in which the
 container is. *Deprecated:* use `networks_advanced` instead.
@@ -5093,7 +4956,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
 <a href="#state_networks_advanced_python" style="color: inherit; text-decoration: inherit;">networks_<wbr>advanced</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containernetworksadvanced">Input[Container<wbr>Networks<wbr>Advanced<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#containernetworksadvanced">Sequence[Container<wbr>Networks<wbr>Advanced<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Networks Advanced below for details. If this block has priority to the deprecated `network_alias` and `network` properties.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5102,7 +4965,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
 <a href="#state_pid_mode_python" style="color: inherit; text-decoration: inherit;">pid_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The PID (Process) Namespace mode for the container. Either `container:<name|id>` or `host`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5111,7 +4974,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
 <a href="#state_ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerport">Input[Container<wbr>Port<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#containerport">Sequence[Container<wbr>Port<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Ports below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5120,7 +4983,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
 <a href="#state_privileged_python" style="color: inherit; text-decoration: inherit;">privileged</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Run container in privileged mode.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5129,7 +4992,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
 <a href="#state_publish_all_ports_python" style="color: inherit; text-decoration: inherit;">publish_<wbr>all_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Publish all ports of the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5138,7 +5001,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
 <a href="#state_read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, this volume will be readonly.
 Defaults to false.
@@ -5148,7 +5011,7 @@ Defaults to false.
 <a href="#state_remove_volumes_python" style="color: inherit; text-decoration: inherit;">remove_<wbr>volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5156,7 +5019,7 @@ Defaults to false.
 <a href="#state_restart_python" style="color: inherit; text-decoration: inherit;">restart</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The restart policy for the container. Must be
 one of "no", "on-failure", "always", "unless-stopped".
@@ -5166,7 +5029,7 @@ one of "no", "on-failure", "always", "unless-stopped".
 <a href="#state_rm_python" style="color: inherit; text-decoration: inherit;">rm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5174,7 +5037,7 @@ one of "no", "on-failure", "always", "unless-stopped".
 <a href="#state_security_opts_python" style="color: inherit; text-decoration: inherit;">security_<wbr>opts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of string values to customize labels for MLS systems, such as SELinux. See https://docs.docker.com/engine/reference/run/#security-configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5183,7 +5046,7 @@ one of "no", "on-failure", "always", "unless-stopped".
 <a href="#state_shm_size_python" style="color: inherit; text-decoration: inherit;">shm_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of `/dev/shm` in MBs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5192,7 +5055,7 @@ one of "no", "on-failure", "always", "unless-stopped".
 <a href="#state_start_python" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, then the Docker container will be
 started after creation. If false, then the container is only created.
@@ -5202,7 +5065,7 @@ started after creation. If false, then the container is only created.
 <a href="#state_stdin_open_python" style="color: inherit; text-decoration: inherit;">stdin_<wbr>open</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}if true, keep STDIN open even if not attached (docker run -i)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5211,7 +5074,7 @@ started after creation. If false, then the container is only created.
 <a href="#state_sysctls_python" style="color: inherit; text-decoration: inherit;">sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of kernel parameters (sysctls) to set in the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5220,7 +5083,7 @@ started after creation. If false, then the container is only created.
 <a href="#state_tmpfs_python" style="color: inherit; text-decoration: inherit;">tmpfs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of container directories which should be replaced by `tmpfs mounts`, and their corresponding mount options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5229,7 +5092,7 @@ started after creation. If false, then the container is only created.
 <a href="#state_tty_python" style="color: inherit; text-decoration: inherit;">tty</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}if true, allocate a pseudo-tty (docker run -t)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5238,7 +5101,7 @@ started after creation. If false, then the container is only created.
 <a href="#state_ulimits_python" style="color: inherit; text-decoration: inherit;">ulimits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerulimit">Input[Container<wbr>Ulimit<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#containerulimit">Sequence[Container<wbr>Ulimit<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Ulimits below for
 details.
@@ -5248,7 +5111,7 @@ details.
 <a href="#state_uploads_python" style="color: inherit; text-decoration: inherit;">uploads</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerupload">Input[Container<wbr>Upload<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#containerupload">Sequence[Container<wbr>Upload<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See File Upload below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5257,7 +5120,7 @@ details.
 <a href="#state_user_python" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User used for run the first process. Format is
 `user` or `user:group` which user and group can be passed literraly or
@@ -5268,7 +5131,7 @@ by name.
 <a href="#state_userns_mode_python" style="color: inherit; text-decoration: inherit;">userns_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sets the usernamespace mode for the container when usernamespace remapping option is enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5277,7 +5140,7 @@ by name.
 <a href="#state_volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containervolume">Input[Container<wbr>Volume<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#containervolume">Sequence[Container<wbr>Volume<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Volumes below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5286,7 +5149,7 @@ by name.
 <a href="#state_working_dir_python" style="color: inherit; text-decoration: inherit;">working_<wbr>dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The working directory for commands to run in
 {{% /md %}}</dd></dl>
@@ -5354,7 +5217,7 @@ by name.
 <a href="#adds_nodejs" style="color: inherit; text-decoration: inherit;">adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}list of linux capabilities to add.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5363,7 +5226,7 @@ by name.
 <a href="#drops_nodejs" style="color: inherit; text-decoration: inherit;">drops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}list of linux capabilities to drop.
 {{% /md %}}</dd></dl>
@@ -5376,7 +5239,7 @@ by name.
 <a href="#adds_python" style="color: inherit; text-decoration: inherit;">adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}list of linux capabilities to add.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5385,7 +5248,7 @@ by name.
 <a href="#drops_python" style="color: inherit; text-decoration: inherit;">drops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}list of linux capabilities to drop.
 {{% /md %}}</dd></dl>
@@ -5470,7 +5333,7 @@ Defaults to `rwm`.
 <a href="#hostpath_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path on the host where the device
 is located.
@@ -5480,7 +5343,7 @@ is located.
 <a href="#containerpath_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path in the container where the
 device will be binded.
@@ -5490,7 +5353,7 @@ device will be binded.
 <a href="#permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cgroup permissions given to the
 container to access the device.
@@ -5505,7 +5368,7 @@ Defaults to `rwm`.
 <a href="#host_path_python" style="color: inherit; text-decoration: inherit;">host_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path on the host where the device
 is located.
@@ -5515,7 +5378,7 @@ is located.
 <a href="#container_path_python" style="color: inherit; text-decoration: inherit;">container_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path in the container where the
 device will be binded.
@@ -5525,7 +5388,7 @@ device will be binded.
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The cgroup permissions given to the
 container to access the device.
@@ -5642,7 +5505,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#tests_nodejs" style="color: inherit; text-decoration: inherit;">tests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Command to run to check health. For example, to run `curl -f http://localhost/health` set the
 command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
@@ -5652,7 +5515,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time between running the check `(ms|s|m|h)`. Default: `0s`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5661,7 +5524,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#retries_nodejs" style="color: inherit; text-decoration: inherit;">retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Consecutive failures needed to report unhealthy. Default: `0`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5670,7 +5533,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#startperiod_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Start period for the container to initialize before counting retries towards unstable `(ms|s|m|h)`. Default: `0s`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5679,7 +5542,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum time to allow one check to run `(ms|s|m|h)`. Default: `0s`.
 {{% /md %}}</dd></dl>
@@ -5692,7 +5555,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#tests_python" style="color: inherit; text-decoration: inherit;">tests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Command to run to check health. For example, to run `curl -f http://localhost/health` set the
 command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
@@ -5702,7 +5565,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time between running the check `(ms|s|m|h)`. Default: `0s`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5711,7 +5574,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#retries_python" style="color: inherit; text-decoration: inherit;">retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Consecutive failures needed to report unhealthy. Default: `0`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5720,7 +5583,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#start_period_python" style="color: inherit; text-decoration: inherit;">start_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Start period for the container to initialize before counting retries towards unstable `(ms|s|m|h)`. Default: `0s`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5729,7 +5592,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Maximum time to allow one check to run `(ms|s|m|h)`. Default: `0s`.
 {{% /md %}}</dd></dl>
@@ -5788,7 +5651,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname to add.
 {{% /md %}}</dd><dt class="property-required"
@@ -5797,7 +5660,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#ip_nodejs" style="color: inherit; text-decoration: inherit;">ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address this hostname should resolve to.
 {{% /md %}}</dd></dl>
@@ -5810,7 +5673,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Hostname to add.
 {{% /md %}}</dd><dt class="property-required"
@@ -5819,7 +5682,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP address this hostname should resolve to.
 {{% /md %}}</dd></dl>
@@ -5878,7 +5741,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the label
 {{% /md %}}</dd><dt class="property-required"
@@ -5887,7 +5750,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the label
 {{% /md %}}</dd></dl>
@@ -5900,7 +5763,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the label
 {{% /md %}}</dd><dt class="property-required"
@@ -5909,7 +5772,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value of the label
 {{% /md %}}</dd></dl>
@@ -6060,7 +5923,7 @@ Defaults to false.
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The container path.
 {{% /md %}}</dd><dt class="property-required"
@@ -6069,7 +5932,7 @@ Defaults to false.
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mount type: valid values are `bind|volume|tmpfs`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6078,7 +5941,7 @@ Defaults to false.
 <a href="#bindoptions_nodejs" style="color: inherit; text-decoration: inherit;">bind<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containermountbindoptions">pulumi<wbr>Input<Container<wbr>Mount<wbr>Bind<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#containermountbindoptions">Container<wbr>Mount<wbr>Bind<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration for the `bind` type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6087,7 +5950,7 @@ Defaults to false.
 <a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, this volume will be readonly.
 Defaults to false.
@@ -6097,7 +5960,7 @@ Defaults to false.
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mount source (e.g., a volume name, a host path)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6106,7 +5969,7 @@ Defaults to false.
 <a href="#tmpfsoptions_nodejs" style="color: inherit; text-decoration: inherit;">tmpfs<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containermounttmpfsoptions">pulumi<wbr>Input<Container<wbr>Mount<wbr>Tmpfs<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#containermounttmpfsoptions">Container<wbr>Mount<wbr>Tmpfs<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration for the `tmpf` type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6115,7 +5978,7 @@ Defaults to false.
 <a href="#volumeoptions_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containermountvolumeoptions">pulumi<wbr>Input<Container<wbr>Mount<wbr>Volume<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#containermountvolumeoptions">Container<wbr>Mount<wbr>Volume<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration for the `volume` type.
 {{% /md %}}</dd></dl>
@@ -6128,7 +5991,7 @@ Defaults to false.
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The container path.
 {{% /md %}}</dd><dt class="property-required"
@@ -6137,7 +6000,7 @@ Defaults to false.
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The mount type: valid values are `bind|volume|tmpfs`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6146,7 +6009,7 @@ Defaults to false.
 <a href="#bind_options_python" style="color: inherit; text-decoration: inherit;">bind_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containermountbindoptions">Input[Container<wbr>Mount<wbr>Bind<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containermountbindoptions">Container<wbr>Mount<wbr>Bind<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration for the `bind` type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6155,7 +6018,7 @@ Defaults to false.
 <a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, this volume will be readonly.
 Defaults to false.
@@ -6165,7 +6028,7 @@ Defaults to false.
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The mount source (e.g., a volume name, a host path)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6174,7 +6037,7 @@ Defaults to false.
 <a href="#tmpfs_options_python" style="color: inherit; text-decoration: inherit;">tmpfs_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containermounttmpfsoptions">Input[Container<wbr>Mount<wbr>Tmpfs<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containermounttmpfsoptions">Container<wbr>Mount<wbr>Tmpfs<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration for the `tmpf` type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6183,7 +6046,7 @@ Defaults to false.
 <a href="#volume_options_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containermountvolumeoptions">Input[Container<wbr>Mount<wbr>Volume<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containermountvolumeoptions">Container<wbr>Mount<wbr>Volume<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration for the `volume` type.
 {{% /md %}}</dd></dl>
@@ -6224,7 +6087,7 @@ Defaults to false.
 <a href="#propagation_nodejs" style="color: inherit; text-decoration: inherit;">propagation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A propagation mode with the value.
 {{% /md %}}</dd></dl>
@@ -6237,7 +6100,7 @@ Defaults to false.
 <a href="#propagation_python" style="color: inherit; text-decoration: inherit;">propagation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A propagation mode with the value.
 {{% /md %}}</dd></dl>
@@ -6296,7 +6159,7 @@ Defaults to false.
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The permission mode for the tmpfs mount in an integer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6305,7 +6168,7 @@ Defaults to false.
 <a href="#sizebytes_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size for the tmpfs mount in bytes.
 {{% /md %}}</dd></dl>
@@ -6318,7 +6181,7 @@ Defaults to false.
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The permission mode for the tmpfs mount in an integer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6327,7 +6190,7 @@ Defaults to false.
 <a href="#size_bytes_python" style="color: inherit; text-decoration: inherit;">size_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size for the tmpfs mount in bytes.
 {{% /md %}}</dd></dl>
@@ -6420,7 +6283,7 @@ Defaults to false.
 <a href="#drivername_nodejs" style="color: inherit; text-decoration: inherit;">driver<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6428,7 +6291,7 @@ Defaults to false.
 <a href="#driveroptions_nodejs" style="color: inherit; text-decoration: inherit;">driver<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Options for the driver.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6437,7 +6300,7 @@ Defaults to false.
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containermountvolumeoptionslabel">pulumi<wbr>Input<pulumi<wbr>Input<Container<wbr>Mount<wbr>Volume<wbr>Options<wbr>Label<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#containermountvolumeoptionslabel">Container<wbr>Mount<wbr>Volume<wbr>Options<wbr>Label[]</a></span>
     </dt>
     <dd>{{% md %}}Adding labels.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6446,7 +6309,7 @@ Defaults to false.
 <a href="#nocopy_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Copy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to populate volume with data from the target.
 {{% /md %}}</dd></dl>
@@ -6459,7 +6322,7 @@ Defaults to false.
 <a href="#driver_name_python" style="color: inherit; text-decoration: inherit;">driver_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6467,7 +6330,7 @@ Defaults to false.
 <a href="#driver_options_python" style="color: inherit; text-decoration: inherit;">driver_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Options for the driver.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6476,7 +6339,7 @@ Defaults to false.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containermountvolumeoptionslabel">Input[Container<wbr>Mount<wbr>Volume<wbr>Options<wbr>Label<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#containermountvolumeoptionslabel">Sequence[Container<wbr>Mount<wbr>Volume<wbr>Options<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Adding labels.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6485,7 +6348,7 @@ Defaults to false.
 <a href="#no_copy_python" style="color: inherit; text-decoration: inherit;">no_<wbr>copy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to populate volume with data from the target.
 {{% /md %}}</dd></dl>
@@ -6544,7 +6407,7 @@ Defaults to false.
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the label
 {{% /md %}}</dd><dt class="property-required"
@@ -6553,7 +6416,7 @@ Defaults to false.
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the label
 {{% /md %}}</dd></dl>
@@ -6566,7 +6429,7 @@ Defaults to false.
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the label
 {{% /md %}}</dd><dt class="property-required"
@@ -6575,7 +6438,7 @@ Defaults to false.
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value of the label
 {{% /md %}}</dd></dl>
@@ -6720,7 +6583,7 @@ NetworkSettings.
 <a href="#gateway_nodejs" style="color: inherit; text-decoration: inherit;">gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The network gateway of the container as read from its
 NetworkSettings.
@@ -6730,7 +6593,7 @@ NetworkSettings.
 <a href="#globalipv6address_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Ipv6Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6738,7 +6601,7 @@ NetworkSettings.
 <a href="#globalipv6prefixlength_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Ipv6Prefix<wbr>Length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6746,7 +6609,7 @@ NetworkSettings.
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The IP address of the container's first network it.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6755,7 +6618,7 @@ NetworkSettings.
 <a href="#ipprefixlength_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Prefix<wbr>Length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The IP prefix length of the container as read from its
 NetworkSettings.
@@ -6765,7 +6628,7 @@ NetworkSettings.
 <a href="#ipv6gateway_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6773,7 +6636,7 @@ NetworkSettings.
 <a href="#networkname_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6785,7 +6648,7 @@ NetworkSettings.
 <a href="#gateway_python" style="color: inherit; text-decoration: inherit;">gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The network gateway of the container as read from its
 NetworkSettings.
@@ -6795,7 +6658,7 @@ NetworkSettings.
 <a href="#global_ipv6_address_python" style="color: inherit; text-decoration: inherit;">global_<wbr>ipv6_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6803,7 +6666,7 @@ NetworkSettings.
 <a href="#global_ipv6_prefix_length_python" style="color: inherit; text-decoration: inherit;">global_<wbr>ipv6_<wbr>prefix_<wbr>length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6811,7 +6674,7 @@ NetworkSettings.
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The IP address of the container's first network it.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6820,7 +6683,7 @@ NetworkSettings.
 <a href="#ip_prefix_length_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>prefix_<wbr>length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The IP prefix length of the container as read from its
 NetworkSettings.
@@ -6830,7 +6693,7 @@ NetworkSettings.
 <a href="#ipv6_gateway_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6838,7 +6701,7 @@ NetworkSettings.
 <a href="#network_name_python" style="color: inherit; text-decoration: inherit;">network_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6932,7 +6795,7 @@ NetworkSettings.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the network.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6941,7 +6804,7 @@ NetworkSettings.
 <a href="#aliases_nodejs" style="color: inherit; text-decoration: inherit;">aliases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The network aliases of the container in the specific network.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6950,7 +6813,7 @@ NetworkSettings.
 <a href="#ipv4address_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPV4 address of the container in the specific network.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6959,7 +6822,7 @@ NetworkSettings.
 <a href="#ipv6address_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPV6 address of the container in the specific network.
 {{% /md %}}</dd></dl>
@@ -6972,7 +6835,7 @@ NetworkSettings.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the network.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6981,7 +6844,7 @@ NetworkSettings.
 <a href="#aliases_python" style="color: inherit; text-decoration: inherit;">aliases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The network aliases of the container in the specific network.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6990,7 +6853,7 @@ NetworkSettings.
 <a href="#ipv4_address_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPV4 address of the container in the specific network.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6999,7 +6862,7 @@ NetworkSettings.
 <a href="#ipv6_address_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPV6 address of the container in the specific network.
 {{% /md %}}</dd></dl>
@@ -7096,7 +6959,7 @@ defaults to `tcp`.
 <a href="#internal_nodejs" style="color: inherit; text-decoration: inherit;">internal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Port within the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7105,7 +6968,7 @@ defaults to `tcp`.
 <a href="#external_nodejs" style="color: inherit; text-decoration: inherit;">external</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Port exposed out of the container. If not given a free random port `>= 32768` will be used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7114,7 +6977,7 @@ defaults to `tcp`.
 <a href="#ip_nodejs" style="color: inherit; text-decoration: inherit;">ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address this hostname should resolve to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7123,7 +6986,7 @@ defaults to `tcp`.
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protocol that can be used over this port,
 defaults to `tcp`.
@@ -7137,7 +7000,7 @@ defaults to `tcp`.
 <a href="#internal_python" style="color: inherit; text-decoration: inherit;">internal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port within the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7146,7 +7009,7 @@ defaults to `tcp`.
 <a href="#external_python" style="color: inherit; text-decoration: inherit;">external</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port exposed out of the container. If not given a free random port `>= 32768` will be used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7155,7 +7018,7 @@ defaults to `tcp`.
 <a href="#ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP address this hostname should resolve to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7164,7 +7027,7 @@ defaults to `tcp`.
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Protocol that can be used over this port,
 defaults to `tcp`.
@@ -7236,7 +7099,7 @@ defaults to `tcp`.
 <a href="#hard_nodejs" style="color: inherit; text-decoration: inherit;">hard</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7244,7 +7107,7 @@ defaults to `tcp`.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7252,7 +7115,7 @@ defaults to `tcp`.
 <a href="#soft_nodejs" style="color: inherit; text-decoration: inherit;">soft</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7264,7 +7127,7 @@ defaults to `tcp`.
 <a href="#hard_python" style="color: inherit; text-decoration: inherit;">hard</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7272,7 +7135,7 @@ defaults to `tcp`.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7280,7 +7143,7 @@ defaults to `tcp`.
 <a href="#soft_python" style="color: inherit; text-decoration: inherit;">soft</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7412,7 +7275,7 @@ Defaults to false.
 <a href="#file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}path to a file in the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7421,7 +7284,7 @@ Defaults to false.
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Literal string value to use as the object content, which will be uploaded as UTF-8-encoded text.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7430,7 +7293,7 @@ Defaults to false.
 <a href="#contentbase64_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Base64</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7438,7 +7301,7 @@ Defaults to false.
 <a href="#executable_nodejs" style="color: inherit; text-decoration: inherit;">executable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, the file will be uploaded with user
 executable permission.
@@ -7449,7 +7312,7 @@ Defaults to false.
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A filename that references a file which will be uploaded as the object content. This allows for large file uploads that do not get stored in state.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7458,7 +7321,7 @@ Defaults to false.
 <a href="#sourcehash_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If using `source`, this will force an update if the file content has updated but the filename has not.
 {{% /md %}}</dd></dl>
@@ -7471,7 +7334,7 @@ Defaults to false.
 <a href="#file_python" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}path to a file in the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7480,7 +7343,7 @@ Defaults to false.
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Literal string value to use as the object content, which will be uploaded as UTF-8-encoded text.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7489,7 +7352,7 @@ Defaults to false.
 <a href="#content_base64_python" style="color: inherit; text-decoration: inherit;">content_<wbr>base64</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7497,7 +7360,7 @@ Defaults to false.
 <a href="#executable_python" style="color: inherit; text-decoration: inherit;">executable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the file will be uploaded with user
 executable permission.
@@ -7508,7 +7371,7 @@ Defaults to false.
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A filename that references a file which will be uploaded as the object content. This allows for large file uploads that do not get stored in state.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7517,7 +7380,7 @@ Defaults to false.
 <a href="#source_hash_python" style="color: inherit; text-decoration: inherit;">source_<wbr>hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If using `source`, this will force an update if the file content has updated but the filename has not.
 {{% /md %}}</dd></dl>
@@ -7640,7 +7503,7 @@ should be mounted.
 <a href="#containerpath_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path in the container where the
 device will be binded.
@@ -7650,7 +7513,7 @@ device will be binded.
 <a href="#fromcontainer_nodejs" style="color: inherit; text-decoration: inherit;">from<wbr>Container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The container where the volume is
 coming from.
@@ -7660,7 +7523,7 @@ coming from.
 <a href="#hostpath_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path on the host where the device
 is located.
@@ -7670,7 +7533,7 @@ is located.
 <a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, this volume will be readonly.
 Defaults to false.
@@ -7680,7 +7543,7 @@ Defaults to false.
 <a href="#volumename_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the docker volume which
 should be mounted.
@@ -7694,7 +7557,7 @@ should be mounted.
 <a href="#container_path_python" style="color: inherit; text-decoration: inherit;">container_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path in the container where the
 device will be binded.
@@ -7704,7 +7567,7 @@ device will be binded.
 <a href="#from_container_python" style="color: inherit; text-decoration: inherit;">from_<wbr>container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The container where the volume is
 coming from.
@@ -7714,7 +7577,7 @@ coming from.
 <a href="#host_path_python" style="color: inherit; text-decoration: inherit;">host_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path on the host where the device
 is located.
@@ -7724,7 +7587,7 @@ is located.
 <a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, this volume will be readonly.
 Defaults to false.
@@ -7734,7 +7597,7 @@ Defaults to false.
 <a href="#volume_name_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the docker volume which
 should be mounted.

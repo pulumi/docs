@@ -43,6 +43,6 @@ A Pulumi package for interacting with Docker in Pulumi programs
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`docker` Terraform Provider](https://github.com/terraform-providers/terraform-provider-docker).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.0.0</dd>
+	<dd>2.10.0</dd>
 </dl>
 
