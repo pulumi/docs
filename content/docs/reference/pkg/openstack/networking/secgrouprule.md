@@ -63,8 +63,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-openstack/sdk/v3/go/openstack/networking"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -155,19 +155,36 @@ const secgroupRule1 = new openstack.networking.SecGroupRule("secgroup_rule_1", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SecGroupRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SecGroupRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SecGroupRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SecGroupRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SecGroupRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ethertype</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port_range_max</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">port_range_min</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remote_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remote_ip_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SecGroupRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                 <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">direction</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">ethertype</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">port_range_max</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                 <span class="nx">port_range_min</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                 <span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">remote_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">remote_ip_prefix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SecGroupRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SecGroupRuleArgs</a></span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSecGroupRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SecGroupRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecGroupRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSecGroupRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SecGroupRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecGroupRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SecGroupRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SecGroupRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SecGroupRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SecGroupRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -202,22 +219,32 @@ const secgroupRule1 = new openstack.networking.SecGroupRule("secgroup_rule_1", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">SecGroupRuleArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -226,7 +253,7 @@ const secgroupRule1 = new openstack.networking.SecGroupRule("secgroup_rule_1", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -250,7 +277,7 @@ const secgroupRule1 = new openstack.networking.SecGroupRule("secgroup_rule_1", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -585,7 +612,7 @@ security group rule.
 <a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The direction of the rule, valid values are __ingress__
 or __egress__. Changing this creates a new security group rule.
@@ -595,7 +622,7 @@ or __egress__. Changing this creates a new security group rule.
 <a href="#ethertype_nodejs" style="color: inherit; text-decoration: inherit;">ethertype</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The layer 3 protocol type, valid values are __IPv4__
 or __IPv6__. Changing this creates a new security group rule.
@@ -605,7 +632,7 @@ or __IPv6__. Changing this creates a new security group rule.
 <a href="#securitygroupid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The security group id the rule should belong
 to, the value needs to be an Openstack ID of a security group in the same
@@ -616,7 +643,7 @@ tenant. Changing this creates a new security group rule.
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A description of the rule. Changing this creates a new security group rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -625,7 +652,7 @@ tenant. Changing this creates a new security group rule.
 <a href="#portrangemax_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Range<wbr>Max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The higher part of the allowed port range, valid
 integer value needs to be between 1 and 65535. Changing this creates a new
@@ -636,7 +663,7 @@ security group rule.
 <a href="#portrangemin_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Range<wbr>Min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The lower part of the allowed port range, valid
 integer value needs to be between 1 and 65535. Changing this creates a new
@@ -647,7 +674,7 @@ security group rule.
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The layer 4 protocol type, valid values are following. Changing this creates a new security group rule. This is required if you want to specify a port range.
 * __tcp__
@@ -677,7 +704,7 @@ security group rule.
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 networking client.
 A networking client is needed to create a port. If omitted, the
@@ -689,7 +716,7 @@ security group rule.
 <a href="#remotegroupid_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The remote group id, the value needs to be an
 Openstack ID of a security group in the same tenant. Changing this creates
@@ -700,7 +727,7 @@ a new security group rule.
 <a href="#remoteipprefix_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Ip<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The remote CIDR, the value needs to be a valid
 CIDR (i.e. 192.168.0.0/16). Changing this creates a new security group rule.
@@ -710,7 +737,7 @@ CIDR (i.e. 192.168.0.0/16). Changing this creates a new security group rule.
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The owner of the security group. Required if admin
 wants to create a port for another tenant. Changing this creates a new
@@ -725,7 +752,7 @@ security group rule.
 <a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The direction of the rule, valid values are __ingress__
 or __egress__. Changing this creates a new security group rule.
@@ -735,7 +762,7 @@ or __egress__. Changing this creates a new security group rule.
 <a href="#ethertype_python" style="color: inherit; text-decoration: inherit;">ethertype</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The layer 3 protocol type, valid values are __IPv4__
 or __IPv6__. Changing this creates a new security group rule.
@@ -745,7 +772,7 @@ or __IPv6__. Changing this creates a new security group rule.
 <a href="#security_group_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The security group id the rule should belong
 to, the value needs to be an Openstack ID of a security group in the same
@@ -756,7 +783,7 @@ tenant. Changing this creates a new security group rule.
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A description of the rule. Changing this creates a new security group rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -765,7 +792,7 @@ tenant. Changing this creates a new security group rule.
 <a href="#port_range_max_python" style="color: inherit; text-decoration: inherit;">port_<wbr>range_<wbr>max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The higher part of the allowed port range, valid
 integer value needs to be between 1 and 65535. Changing this creates a new
@@ -776,7 +803,7 @@ security group rule.
 <a href="#port_range_min_python" style="color: inherit; text-decoration: inherit;">port_<wbr>range_<wbr>min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The lower part of the allowed port range, valid
 integer value needs to be between 1 and 65535. Changing this creates a new
@@ -787,7 +814,7 @@ security group rule.
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The layer 4 protocol type, valid values are following. Changing this creates a new security group rule. This is required if you want to specify a port range.
 * __tcp__
@@ -817,7 +844,7 @@ security group rule.
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 networking client.
 A networking client is needed to create a port. If omitted, the
@@ -829,7 +856,7 @@ security group rule.
 <a href="#remote_group_id_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The remote group id, the value needs to be an
 Openstack ID of a security group in the same tenant. Changing this creates
@@ -840,7 +867,7 @@ a new security group rule.
 <a href="#remote_ip_prefix_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>ip_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The remote CIDR, the value needs to be a valid
 CIDR (i.e. 192.168.0.0/16). Changing this creates a new security group rule.
@@ -850,7 +877,7 @@ CIDR (i.e. 192.168.0.0/16). Changing this creates a new security group rule.
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The owner of the security group. Required if admin
 wants to create a port for another tenant. Changing this creates a new
@@ -921,20 +948,33 @@ Get an existing SecGroupRule resource's state with the given name, ID, and optio
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">SecGroupRuleState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">SecGroupRule</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">SecGroupRuleState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">SecGroupRule</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ethertype</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port_range_max</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">port_range_min</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remote_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remote_ip_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> SecGroupRule</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">direction</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">ethertype</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">port_range_max</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">port_range_min</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">remote_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">remote_ip_prefix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> SecGroupRule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecGroupRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">SecGroupRuleState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecGroupRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecGroupRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">SecGroupRuleState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecGroupRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">SecGroupRule</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">SecGroupRuleState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">SecGroupRule</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">SecGroupRuleState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1323,7 +1363,7 @@ security group rule.
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A description of the rule. Changing this creates a new security group rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1332,7 +1372,7 @@ security group rule.
 <a href="#state_direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The direction of the rule, valid values are __ingress__
 or __egress__. Changing this creates a new security group rule.
@@ -1342,7 +1382,7 @@ or __egress__. Changing this creates a new security group rule.
 <a href="#state_ethertype_nodejs" style="color: inherit; text-decoration: inherit;">ethertype</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The layer 3 protocol type, valid values are __IPv4__
 or __IPv6__. Changing this creates a new security group rule.
@@ -1352,7 +1392,7 @@ or __IPv6__. Changing this creates a new security group rule.
 <a href="#state_portrangemax_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Range<wbr>Max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The higher part of the allowed port range, valid
 integer value needs to be between 1 and 65535. Changing this creates a new
@@ -1363,7 +1403,7 @@ security group rule.
 <a href="#state_portrangemin_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Range<wbr>Min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The lower part of the allowed port range, valid
 integer value needs to be between 1 and 65535. Changing this creates a new
@@ -1374,7 +1414,7 @@ security group rule.
 <a href="#state_protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The layer 4 protocol type, valid values are following. Changing this creates a new security group rule. This is required if you want to specify a port range.
 * __tcp__
@@ -1404,7 +1444,7 @@ security group rule.
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 networking client.
 A networking client is needed to create a port. If omitted, the
@@ -1416,7 +1456,7 @@ security group rule.
 <a href="#state_remotegroupid_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The remote group id, the value needs to be an
 Openstack ID of a security group in the same tenant. Changing this creates
@@ -1427,7 +1467,7 @@ a new security group rule.
 <a href="#state_remoteipprefix_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Ip<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The remote CIDR, the value needs to be a valid
 CIDR (i.e. 192.168.0.0/16). Changing this creates a new security group rule.
@@ -1437,7 +1477,7 @@ CIDR (i.e. 192.168.0.0/16). Changing this creates a new security group rule.
 <a href="#state_securitygroupid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The security group id the rule should belong
 to, the value needs to be an Openstack ID of a security group in the same
@@ -1448,7 +1488,7 @@ tenant. Changing this creates a new security group rule.
 <a href="#state_tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The owner of the security group. Required if admin
 wants to create a port for another tenant. Changing this creates a new
@@ -1463,7 +1503,7 @@ security group rule.
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A description of the rule. Changing this creates a new security group rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1472,7 +1512,7 @@ security group rule.
 <a href="#state_direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The direction of the rule, valid values are __ingress__
 or __egress__. Changing this creates a new security group rule.
@@ -1482,7 +1522,7 @@ or __egress__. Changing this creates a new security group rule.
 <a href="#state_ethertype_python" style="color: inherit; text-decoration: inherit;">ethertype</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The layer 3 protocol type, valid values are __IPv4__
 or __IPv6__. Changing this creates a new security group rule.
@@ -1492,7 +1532,7 @@ or __IPv6__. Changing this creates a new security group rule.
 <a href="#state_port_range_max_python" style="color: inherit; text-decoration: inherit;">port_<wbr>range_<wbr>max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The higher part of the allowed port range, valid
 integer value needs to be between 1 and 65535. Changing this creates a new
@@ -1503,7 +1543,7 @@ security group rule.
 <a href="#state_port_range_min_python" style="color: inherit; text-decoration: inherit;">port_<wbr>range_<wbr>min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The lower part of the allowed port range, valid
 integer value needs to be between 1 and 65535. Changing this creates a new
@@ -1514,7 +1554,7 @@ security group rule.
 <a href="#state_protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The layer 4 protocol type, valid values are following. Changing this creates a new security group rule. This is required if you want to specify a port range.
 * __tcp__
@@ -1544,7 +1584,7 @@ security group rule.
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 networking client.
 A networking client is needed to create a port. If omitted, the
@@ -1556,7 +1596,7 @@ security group rule.
 <a href="#state_remote_group_id_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The remote group id, the value needs to be an
 Openstack ID of a security group in the same tenant. Changing this creates
@@ -1567,7 +1607,7 @@ a new security group rule.
 <a href="#state_remote_ip_prefix_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>ip_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The remote CIDR, the value needs to be a valid
 CIDR (i.e. 192.168.0.0/16). Changing this creates a new security group rule.
@@ -1577,7 +1617,7 @@ CIDR (i.e. 192.168.0.0/16). Changing this creates a new security group rule.
 <a href="#state_security_group_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The security group id the rule should belong
 to, the value needs to be an Openstack ID of a security group in the same
@@ -1588,7 +1628,7 @@ tenant. Changing this creates a new security group rule.
 <a href="#state_tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The owner of the security group. Required if admin
 wants to create a port for another tenant. Changing this creates a new

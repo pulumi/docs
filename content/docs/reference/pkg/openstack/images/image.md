@@ -26,19 +26,44 @@ Images can be imported using the `id`, e.g.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Image</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ImageArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Image</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ImageArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Image</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">container_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hidden</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">image_cache_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_source_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_source_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_source_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">local_file_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">min_disk_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_ram_mb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">protected</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">verify_checksum</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">visibility</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">web_download</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Image</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+          <span class="nx">container_format</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">disk_format</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">hidden</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+          <span class="nx">image_cache_path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">image_source_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">image_source_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">image_source_username</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">local_file_path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">min_disk_gb</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+          <span class="nx">min_ram_mb</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+          <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+          <span class="nx">protected</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+          <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+          <span class="nx">verify_checksum</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+          <span class="nx">visibility</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">web_download</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Image</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ImageArgs</a></span><span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewImage</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ImageArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Image</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewImage</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ImageArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Image</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Image</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ImageArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Image</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ImageArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -73,22 +98,32 @@ Images can be imported using the `id`, e.g.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ImageArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -97,7 +132,7 @@ Images can be imported using the `id`, e.g.
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -121,7 +156,7 @@ Images can be imported using the `id`, e.g.
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -572,7 +607,7 @@ Conflicts with `local_file_path`. Defaults to false.
 <a href="#containerformat_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The container format. Must be one of
 "ami", "ari", "aki", "bare", "ovf".
@@ -582,7 +617,7 @@ Conflicts with `local_file_path`. Defaults to false.
 <a href="#diskformat_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The disk format. Must be one of
 "ami", "ari", "aki", "vhd", "vmdk", "raw", "qcow2", "vdi", "iso".
@@ -592,7 +627,7 @@ Conflicts with `local_file_path`. Defaults to false.
 <a href="#hidden_nodejs" style="color: inherit; text-decoration: inherit;">hidden</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true, image will be hidden from public list.
 Defaults to false.
@@ -602,7 +637,7 @@ Defaults to false.
 <a href="#imagecachepath_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Cache<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -610,7 +645,7 @@ Defaults to false.
 <a href="#imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique ID (valid UUID) of image to create. Changing 
 this creates a new image.
@@ -620,7 +655,7 @@ this creates a new image.
 <a href="#imagesourcepassword_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Source<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The password of basic auth to download `image_source_url`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -629,7 +664,7 @@ this creates a new image.
 <a href="#imagesourceurl_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Source<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}This is the url of the raw image. If `web_download`
 is not used, then the image will be downloaded in the `image_cache_path` before
@@ -641,7 +676,7 @@ Conflicts with `local_file_path`.
 <a href="#imagesourceusername_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Source<wbr>Username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The username of basic auth to download `image_source_url`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -650,7 +685,7 @@ Conflicts with `local_file_path`.
 <a href="#localfilepath_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>File<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}This is the filepath of the raw image file
 that will be uploaded to Glance. Conflicts with `image_source_url` and
@@ -661,7 +696,7 @@ that will be uploaded to Glance. Conflicts with `image_source_url` and
 <a href="#mindiskgb_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Disk<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Amount of disk space (in GB) required to boot image.
 Defaults to 0.
@@ -671,7 +706,7 @@ Defaults to 0.
 <a href="#minrammb_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Ram<wbr>Mb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Amount of ram (in MB) required to boot image.
 Defauts to 0.
@@ -681,7 +716,7 @@ Defauts to 0.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the image.
 {{% /md %}}</dd><dt class="property-optional"
@@ -690,7 +725,7 @@ Defauts to 0.
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}A map of key/value pairs to set freeform
 information about an image. See the "Notes" section for further
@@ -701,7 +736,7 @@ information about properties.
 <a href="#protected_nodejs" style="color: inherit; text-decoration: inherit;">protected</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true, image will not be deletable.
 Defaults to false.
@@ -711,7 +746,7 @@ Defaults to false.
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Glance client.
 A Glance client is needed to create an Image that can be used with
@@ -723,7 +758,7 @@ is used. Changing this creates a new Image.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The tags of the image. It must be a list of strings.
 At this time, it is not possible to delete all tags of an image.
@@ -733,7 +768,7 @@ At this time, it is not possible to delete all tags of an image.
 <a href="#verifychecksum_nodejs" style="color: inherit; text-decoration: inherit;">verify<wbr>Checksum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If false, the checksum will not be verified
 once the image is finished uploading. Conflicts with `web_download`.
@@ -744,7 +779,7 @@ Defaults to true when not using `web_download`.
 <a href="#visibility_nodejs" style="color: inherit; text-decoration: inherit;">visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The visibility of the image. Must be one of
 "public", "private", "community", or "shared". The ability to set the
@@ -755,7 +790,7 @@ visibility depends upon the configuration of the OpenStack cloud.
 <a href="#webdownload_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Download</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true, the "web-download" import method will
 be used to let Openstack download the image directly from the remote source.
@@ -770,7 +805,7 @@ Conflicts with `local_file_path`. Defaults to false.
 <a href="#container_format_python" style="color: inherit; text-decoration: inherit;">container_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The container format. Must be one of
 "ami", "ari", "aki", "bare", "ovf".
@@ -780,7 +815,7 @@ Conflicts with `local_file_path`. Defaults to false.
 <a href="#disk_format_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The disk format. Must be one of
 "ami", "ari", "aki", "vhd", "vmdk", "raw", "qcow2", "vdi", "iso".
@@ -790,7 +825,7 @@ Conflicts with `local_file_path`. Defaults to false.
 <a href="#hidden_python" style="color: inherit; text-decoration: inherit;">hidden</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true, image will be hidden from public list.
 Defaults to false.
@@ -800,7 +835,7 @@ Defaults to false.
 <a href="#image_cache_path_python" style="color: inherit; text-decoration: inherit;">image_<wbr>cache_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -808,7 +843,7 @@ Defaults to false.
 <a href="#image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique ID (valid UUID) of image to create. Changing 
 this creates a new image.
@@ -818,7 +853,7 @@ this creates a new image.
 <a href="#image_source_password_python" style="color: inherit; text-decoration: inherit;">image_<wbr>source_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The password of basic auth to download `image_source_url`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -827,7 +862,7 @@ this creates a new image.
 <a href="#image_source_url_python" style="color: inherit; text-decoration: inherit;">image_<wbr>source_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}This is the url of the raw image. If `web_download`
 is not used, then the image will be downloaded in the `image_cache_path` before
@@ -839,7 +874,7 @@ Conflicts with `local_file_path`.
 <a href="#image_source_username_python" style="color: inherit; text-decoration: inherit;">image_<wbr>source_<wbr>username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The username of basic auth to download `image_source_url`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -848,7 +883,7 @@ Conflicts with `local_file_path`.
 <a href="#local_file_path_python" style="color: inherit; text-decoration: inherit;">local_<wbr>file_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}This is the filepath of the raw image file
 that will be uploaded to Glance. Conflicts with `image_source_url` and
@@ -859,7 +894,7 @@ that will be uploaded to Glance. Conflicts with `image_source_url` and
 <a href="#min_disk_gb_python" style="color: inherit; text-decoration: inherit;">min_<wbr>disk_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Amount of disk space (in GB) required to boot image.
 Defaults to 0.
@@ -869,7 +904,7 @@ Defaults to 0.
 <a href="#min_ram_mb_python" style="color: inherit; text-decoration: inherit;">min_<wbr>ram_<wbr>mb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Amount of ram (in MB) required to boot image.
 Defauts to 0.
@@ -879,7 +914,7 @@ Defauts to 0.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the image.
 {{% /md %}}</dd><dt class="property-optional"
@@ -888,7 +923,7 @@ Defauts to 0.
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}A map of key/value pairs to set freeform
 information about an image. See the "Notes" section for further
@@ -899,7 +934,7 @@ information about properties.
 <a href="#protected_python" style="color: inherit; text-decoration: inherit;">protected</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true, image will not be deletable.
 Defaults to false.
@@ -909,7 +944,7 @@ Defaults to false.
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Glance client.
 A Glance client is needed to create an Image that can be used with
@@ -921,7 +956,7 @@ is used. Changing this creates a new Image.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The tags of the image. It must be a list of strings.
 At this time, it is not possible to delete all tags of an image.
@@ -931,7 +966,7 @@ At this time, it is not possible to delete all tags of an image.
 <a href="#verify_checksum_python" style="color: inherit; text-decoration: inherit;">verify_<wbr>checksum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If false, the checksum will not be verified
 once the image is finished uploading. Conflicts with `web_download`.
@@ -942,7 +977,7 @@ Defaults to true when not using `web_download`.
 <a href="#visibility_python" style="color: inherit; text-decoration: inherit;">visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The visibility of the image. Must be one of
 "public", "private", "community", or "shared". The ability to set the
@@ -953,7 +988,7 @@ visibility depends upon the configuration of the OpenStack cloud.
 <a href="#web_download_python" style="color: inherit; text-decoration: inherit;">web_<wbr>download</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true, the "web-download" import method will
 be used to let Openstack download the image directly from the remote source.
@@ -1408,20 +1443,51 @@ Get an existing Image resource's state with the given name, ID, and optional ext
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ImageState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Image</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ImageState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Image</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">checksum</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">container_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hidden</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">image_cache_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_source_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_source_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_source_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">local_file_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">min_disk_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_ram_mb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">protected</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">size_bytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">update_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">updated_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">verify_checksum</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">visibility</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">web_download</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Image</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">checksum</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">container_format</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">created_at</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">disk_format</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">file</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">hidden</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">image_cache_path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">image_source_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">image_source_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">image_source_username</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">local_file_path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+        <span class="nx">min_disk_gb</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">min_ram_mb</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+        <span class="nx">protected</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">size_bytes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">update_at</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">updated_at</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">verify_checksum</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">visibility</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">web_download</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">) -&gt;</span> Image</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetImage<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ImageState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Image</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetImage<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ImageState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Image</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Image</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ImageState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Image</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ImageState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2118,7 +2184,7 @@ Conflicts with `local_file_path`. Defaults to false.
 <a href="#state_checksum_nodejs" style="color: inherit; text-decoration: inherit;">checksum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The checksum of the data associated with the image.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2127,7 +2193,7 @@ Conflicts with `local_file_path`. Defaults to false.
 <a href="#state_containerformat_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The container format. Must be one of
 "ami", "ari", "aki", "bare", "ovf".
@@ -2137,7 +2203,7 @@ Conflicts with `local_file_path`. Defaults to false.
 <a href="#state_createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The date the image was created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2146,7 +2212,7 @@ Conflicts with `local_file_path`. Defaults to false.
 <a href="#state_diskformat_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The disk format. Must be one of
 "ami", "ari", "aki", "vhd", "vmdk", "raw", "qcow2", "vdi", "iso".
@@ -2156,7 +2222,7 @@ Conflicts with `local_file_path`. Defaults to false.
 <a href="#state_file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the trailing path after the glance
 endpoint that represent the location of the image
@@ -2167,7 +2233,7 @@ or the path to retrieve it.
 <a href="#state_hidden_nodejs" style="color: inherit; text-decoration: inherit;">hidden</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true, image will be hidden from public list.
 Defaults to false.
@@ -2177,7 +2243,7 @@ Defaults to false.
 <a href="#state_imagecachepath_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Cache<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2185,7 +2251,7 @@ Defaults to false.
 <a href="#state_imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique ID (valid UUID) of image to create. Changing 
 this creates a new image.
@@ -2195,7 +2261,7 @@ this creates a new image.
 <a href="#state_imagesourcepassword_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Source<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The password of basic auth to download `image_source_url`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2204,7 +2270,7 @@ this creates a new image.
 <a href="#state_imagesourceurl_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Source<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}This is the url of the raw image. If `web_download`
 is not used, then the image will be downloaded in the `image_cache_path` before
@@ -2216,7 +2282,7 @@ Conflicts with `local_file_path`.
 <a href="#state_imagesourceusername_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Source<wbr>Username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The username of basic auth to download `image_source_url`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2225,7 +2291,7 @@ Conflicts with `local_file_path`.
 <a href="#state_localfilepath_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>File<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}This is the filepath of the raw image file
 that will be uploaded to Glance. Conflicts with `image_source_url` and
@@ -2236,7 +2302,7 @@ that will be uploaded to Glance. Conflicts with `image_source_url` and
 <a href="#state_metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}The metadata associated with the image.
 Image metadata allow for meaningfully define the image properties
@@ -2247,7 +2313,7 @@ and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.ht
 <a href="#state_mindiskgb_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Disk<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Amount of disk space (in GB) required to boot image.
 Defaults to 0.
@@ -2257,7 +2323,7 @@ Defaults to 0.
 <a href="#state_minrammb_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Ram<wbr>Mb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Amount of ram (in MB) required to boot image.
 Defauts to 0.
@@ -2267,7 +2333,7 @@ Defauts to 0.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the image.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2276,7 +2342,7 @@ Defauts to 0.
 <a href="#state_owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The id of the openstack user who owns the image.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2285,7 +2351,7 @@ Defauts to 0.
 <a href="#state_properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}A map of key/value pairs to set freeform
 information about an image. See the "Notes" section for further
@@ -2296,7 +2362,7 @@ information about properties.
 <a href="#state_protected_nodejs" style="color: inherit; text-decoration: inherit;">protected</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true, image will not be deletable.
 Defaults to false.
@@ -2306,7 +2372,7 @@ Defaults to false.
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Glance client.
 A Glance client is needed to create an Image that can be used with
@@ -2318,7 +2384,7 @@ is used. Changing this creates a new Image.
 <a href="#state_schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path to the JSON-schema that represent
 the image or image
@@ -2328,7 +2394,7 @@ the image or image
 <a href="#state_sizebytes_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The size in bytes of the data associated with the image.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2337,7 +2403,7 @@ the image or image
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The status of the image. It can be "queued", "active"
 or "saving".
@@ -2347,7 +2413,7 @@ or "saving".
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The tags of the image. It must be a list of strings.
 At this time, it is not possible to delete all tags of an image.
@@ -2357,7 +2423,7 @@ At this time, it is not possible to delete all tags of an image.
 <a href="#state_updateat_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}(**Deprecated** - use `updated_at` instead)
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use updated_at instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -2366,7 +2432,7 @@ At this time, it is not possible to delete all tags of an image.
 <a href="#state_updatedat_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The date the image was last updated.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2375,7 +2441,7 @@ At this time, it is not possible to delete all tags of an image.
 <a href="#state_verifychecksum_nodejs" style="color: inherit; text-decoration: inherit;">verify<wbr>Checksum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If false, the checksum will not be verified
 once the image is finished uploading. Conflicts with `web_download`.
@@ -2386,7 +2452,7 @@ Defaults to true when not using `web_download`.
 <a href="#state_visibility_nodejs" style="color: inherit; text-decoration: inherit;">visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The visibility of the image. Must be one of
 "public", "private", "community", or "shared". The ability to set the
@@ -2397,7 +2463,7 @@ visibility depends upon the configuration of the OpenStack cloud.
 <a href="#state_webdownload_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Download</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true, the "web-download" import method will
 be used to let Openstack download the image directly from the remote source.
@@ -2412,7 +2478,7 @@ Conflicts with `local_file_path`. Defaults to false.
 <a href="#state_checksum_python" style="color: inherit; text-decoration: inherit;">checksum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The checksum of the data associated with the image.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2421,7 +2487,7 @@ Conflicts with `local_file_path`. Defaults to false.
 <a href="#state_container_format_python" style="color: inherit; text-decoration: inherit;">container_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The container format. Must be one of
 "ami", "ari", "aki", "bare", "ovf".
@@ -2431,7 +2497,7 @@ Conflicts with `local_file_path`. Defaults to false.
 <a href="#state_created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The date the image was created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2440,7 +2506,7 @@ Conflicts with `local_file_path`. Defaults to false.
 <a href="#state_disk_format_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The disk format. Must be one of
 "ami", "ari", "aki", "vhd", "vmdk", "raw", "qcow2", "vdi", "iso".
@@ -2450,7 +2516,7 @@ Conflicts with `local_file_path`. Defaults to false.
 <a href="#state_file_python" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the trailing path after the glance
 endpoint that represent the location of the image
@@ -2461,7 +2527,7 @@ or the path to retrieve it.
 <a href="#state_hidden_python" style="color: inherit; text-decoration: inherit;">hidden</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true, image will be hidden from public list.
 Defaults to false.
@@ -2471,7 +2537,7 @@ Defaults to false.
 <a href="#state_image_cache_path_python" style="color: inherit; text-decoration: inherit;">image_<wbr>cache_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2479,7 +2545,7 @@ Defaults to false.
 <a href="#state_image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique ID (valid UUID) of image to create. Changing 
 this creates a new image.
@@ -2489,7 +2555,7 @@ this creates a new image.
 <a href="#state_image_source_password_python" style="color: inherit; text-decoration: inherit;">image_<wbr>source_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The password of basic auth to download `image_source_url`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2498,7 +2564,7 @@ this creates a new image.
 <a href="#state_image_source_url_python" style="color: inherit; text-decoration: inherit;">image_<wbr>source_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}This is the url of the raw image. If `web_download`
 is not used, then the image will be downloaded in the `image_cache_path` before
@@ -2510,7 +2576,7 @@ Conflicts with `local_file_path`.
 <a href="#state_image_source_username_python" style="color: inherit; text-decoration: inherit;">image_<wbr>source_<wbr>username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The username of basic auth to download `image_source_url`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2519,7 +2585,7 @@ Conflicts with `local_file_path`.
 <a href="#state_local_file_path_python" style="color: inherit; text-decoration: inherit;">local_<wbr>file_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}This is the filepath of the raw image file
 that will be uploaded to Glance. Conflicts with `image_source_url` and
@@ -2530,7 +2596,7 @@ that will be uploaded to Glance. Conflicts with `image_source_url` and
 <a href="#state_metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}The metadata associated with the image.
 Image metadata allow for meaningfully define the image properties
@@ -2541,7 +2607,7 @@ and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.ht
 <a href="#state_min_disk_gb_python" style="color: inherit; text-decoration: inherit;">min_<wbr>disk_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Amount of disk space (in GB) required to boot image.
 Defaults to 0.
@@ -2551,7 +2617,7 @@ Defaults to 0.
 <a href="#state_min_ram_mb_python" style="color: inherit; text-decoration: inherit;">min_<wbr>ram_<wbr>mb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Amount of ram (in MB) required to boot image.
 Defauts to 0.
@@ -2561,7 +2627,7 @@ Defauts to 0.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the image.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2570,7 +2636,7 @@ Defauts to 0.
 <a href="#state_owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The id of the openstack user who owns the image.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2579,7 +2645,7 @@ Defauts to 0.
 <a href="#state_properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}A map of key/value pairs to set freeform
 information about an image. See the "Notes" section for further
@@ -2590,7 +2656,7 @@ information about properties.
 <a href="#state_protected_python" style="color: inherit; text-decoration: inherit;">protected</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true, image will not be deletable.
 Defaults to false.
@@ -2600,7 +2666,7 @@ Defaults to false.
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Glance client.
 A Glance client is needed to create an Image that can be used with
@@ -2612,7 +2678,7 @@ is used. Changing this creates a new Image.
 <a href="#state_schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path to the JSON-schema that represent
 the image or image
@@ -2622,7 +2688,7 @@ the image or image
 <a href="#state_size_bytes_python" style="color: inherit; text-decoration: inherit;">size_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The size in bytes of the data associated with the image.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2631,7 +2697,7 @@ the image or image
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The status of the image. It can be "queued", "active"
 or "saving".
@@ -2641,7 +2707,7 @@ or "saving".
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The tags of the image. It must be a list of strings.
 At this time, it is not possible to delete all tags of an image.
@@ -2651,7 +2717,7 @@ At this time, it is not possible to delete all tags of an image.
 <a href="#state_update_at_python" style="color: inherit; text-decoration: inherit;">update_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}(**Deprecated** - use `updated_at` instead)
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use updated_at instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -2660,7 +2726,7 @@ At this time, it is not possible to delete all tags of an image.
 <a href="#state_updated_at_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The date the image was last updated.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2669,7 +2735,7 @@ At this time, it is not possible to delete all tags of an image.
 <a href="#state_verify_checksum_python" style="color: inherit; text-decoration: inherit;">verify_<wbr>checksum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If false, the checksum will not be verified
 once the image is finished uploading. Conflicts with `web_download`.
@@ -2680,7 +2746,7 @@ Defaults to true when not using `web_download`.
 <a href="#state_visibility_python" style="color: inherit; text-decoration: inherit;">visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The visibility of the image. Must be one of
 "public", "private", "community", or "shared". The ability to set the
@@ -2691,7 +2757,7 @@ visibility depends upon the configuration of the OpenStack cloud.
 <a href="#state_web_download_python" style="color: inherit; text-decoration: inherit;">web_<wbr>download</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true, the "web-download" import method will
 be used to let Openstack download the image directly from the remote source.

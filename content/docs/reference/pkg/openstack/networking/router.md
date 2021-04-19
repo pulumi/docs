@@ -52,8 +52,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-openstack/sdk/v3/go/openstack/networking"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -119,19 +119,40 @@ const router1 = new openstack.networking.Router("router_1", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Router</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">RouterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Router</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">RouterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Router</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_state_up</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">availability_zone_hints</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">distributed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_snat</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">external_fixed_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[RouterExternalFixedIpArgs]]</span> = None<span class="p">, </span><span class="nx">external_gateway</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_network_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">value_specs</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">vendor_options</span><span class="p">:</span> <span class="nx">Optional[RouterVendorOptionsArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Router</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+           <span class="nx">admin_state_up</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">availability_zone_hints</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+           <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">distributed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">enable_snat</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">external_fixed_ips</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[RouterExternalFixedIpArgs]]]]</span> = None<span class="p">,</span>
+           <span class="nx">external_gateway</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">external_network_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">external_subnet_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+           <span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">value_specs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+           <span class="nx">vendor_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[RouterVendorOptionsArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Router</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[RouterArgs]</a></span> = None<span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRouter</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">RouterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Router</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRouter</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">RouterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Router</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Router</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RouterArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Router</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">RouterArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -166,22 +187,32 @@ const router1 = new openstack.networking.Router("router_1", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">RouterArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -190,7 +221,7 @@ const router1 = new openstack.networking.Router("router_1", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -214,7 +245,7 @@ const router1 = new openstack.networking.Router("router_1", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -609,7 +640,7 @@ Supported options are described below.
 <a href="#adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Administrative up/down status for the router
 (must be "true" or "false" if provided). Changing this updates the
@@ -620,7 +651,7 @@ Supported options are described below.
 <a href="#availabilityzonehints_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone<wbr>Hints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}An availability zone is used to make 
 network resources highly available. Used for resources with high availability
@@ -632,7 +663,7 @@ creates a new router.
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Human-readable description for the router.
 {{% /md %}}</dd><dt class="property-optional"
@@ -641,7 +672,7 @@ creates a new router.
 <a href="#distributed_nodejs" style="color: inherit; text-decoration: inherit;">distributed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether or not to create a
 distributed router. The default policy setting in Neutron restricts
@@ -652,7 +683,7 @@ usage of this property to administrative users only.
 <a href="#enablesnat_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Snat</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable Source NAT for the router. Valid values are
 "true" or "false". An `external_network_id` has to be set in order to
@@ -665,7 +696,7 @@ in OpenStack Neutron.
 <a href="#externalfixedips_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Fixed<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routerexternalfixedip">Router<wbr>External<wbr>Fixed<wbr>Ip[]</a></span>
+        <span class="property-type"><a href="#routerexternalfixedip">pulumi.<wbr>Input<pulumi.<wbr>Input<Router<wbr>External<wbr>Fixed<wbr>Ip<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}An external fixed IP for the router. This
 can be repeated. The structure is described below. An `external_network_id`
@@ -677,7 +708,7 @@ external fixed IPs of the router.
 <a href="#externalgateway_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The
 network UUID of an external gateway for the router. A router with an
@@ -690,7 +721,7 @@ of an existing router.
 <a href="#externalnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Network<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The network UUID of an external gateway
 for the router. A router with an external gateway is required if any
@@ -702,7 +733,7 @@ this updates the external gateway of the router.
 <a href="#externalsubnetids_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Subnet<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of external subnet IDs to try over
 each to obtain a fixed IP for the router. If a subnet ID in a list has
@@ -715,7 +746,7 @@ IP. Conflicts with an `external_fixed_ip` argument.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name for the router. Changing this
 updates the `name` of an existing router.
@@ -725,7 +756,7 @@ updates the `name` of an existing router.
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 networking client.
 A networking client is needed to create a router. If omitted, the
@@ -737,7 +768,7 @@ router.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A set of string tags for the router.
 {{% /md %}}</dd><dt class="property-optional"
@@ -746,7 +777,7 @@ router.
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The owner of the floating IP. Required if admin wants
 to create a router for another tenant. Changing this creates a new router.
@@ -756,7 +787,7 @@ to create a router for another tenant. Changing this creates a new router.
 <a href="#valuespecs_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Map of additional driver-specific options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -765,7 +796,7 @@ to create a router for another tenant. Changing this creates a new router.
 <a href="#vendoroptions_nodejs" style="color: inherit; text-decoration: inherit;">vendor<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routervendoroptions">Router<wbr>Vendor<wbr>Options</a></span>
+        <span class="property-type"><a href="#routervendoroptions">pulumi.<wbr>Input<Router<wbr>Vendor<wbr>Options<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Map of additional vendor-specific options.
 Supported options are described below.
@@ -779,7 +810,7 @@ Supported options are described below.
 <a href="#admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Administrative up/down status for the router
 (must be "true" or "false" if provided). Changing this updates the
@@ -790,7 +821,7 @@ Supported options are described below.
 <a href="#availability_zone_hints_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone_<wbr>hints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}An availability zone is used to make 
 network resources highly available. Used for resources with high availability
@@ -802,7 +833,7 @@ creates a new router.
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Human-readable description for the router.
 {{% /md %}}</dd><dt class="property-optional"
@@ -811,7 +842,7 @@ creates a new router.
 <a href="#distributed_python" style="color: inherit; text-decoration: inherit;">distributed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not to create a
 distributed router. The default policy setting in Neutron restricts
@@ -822,7 +853,7 @@ usage of this property to administrative users only.
 <a href="#enable_snat_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>snat</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable Source NAT for the router. Valid values are
 "true" or "false". An `external_network_id` has to be set in order to
@@ -835,7 +866,7 @@ in OpenStack Neutron.
 <a href="#external_fixed_ips_python" style="color: inherit; text-decoration: inherit;">external_<wbr>fixed_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routerexternalfixedip">Sequence[Router<wbr>External<wbr>Fixed<wbr>Ip<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routerexternalfixedip">Input[Router<wbr>External<wbr>Fixed<wbr>Ip<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}An external fixed IP for the router. This
 can be repeated. The structure is described below. An `external_network_id`
@@ -847,7 +878,7 @@ external fixed IPs of the router.
 <a href="#external_gateway_python" style="color: inherit; text-decoration: inherit;">external_<wbr>gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The
 network UUID of an external gateway for the router. A router with an
@@ -860,7 +891,7 @@ of an existing router.
 <a href="#external_network_id_python" style="color: inherit; text-decoration: inherit;">external_<wbr>network_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The network UUID of an external gateway
 for the router. A router with an external gateway is required if any
@@ -872,7 +903,7 @@ this updates the external gateway of the router.
 <a href="#external_subnet_ids_python" style="color: inherit; text-decoration: inherit;">external_<wbr>subnet_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of external subnet IDs to try over
 each to obtain a fixed IP for the router. If a subnet ID in a list has
@@ -885,7 +916,7 @@ IP. Conflicts with an `external_fixed_ip` argument.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name for the router. Changing this
 updates the `name` of an existing router.
@@ -895,7 +926,7 @@ updates the `name` of an existing router.
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 networking client.
 A networking client is needed to create a router. If omitted, the
@@ -907,7 +938,7 @@ router.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the router.
 {{% /md %}}</dd><dt class="property-optional"
@@ -916,7 +947,7 @@ router.
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The owner of the floating IP. Required if admin wants
 to create a router for another tenant. Changing this creates a new router.
@@ -926,7 +957,7 @@ to create a router for another tenant. Changing this creates a new router.
 <a href="#value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Map of additional driver-specific options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -935,7 +966,7 @@ to create a router for another tenant. Changing this creates a new router.
 <a href="#vendor_options_python" style="color: inherit; text-decoration: inherit;">vendor_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routervendoroptions">Router<wbr>Vendor<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#routervendoroptions">Input[Router<wbr>Vendor<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Map of additional vendor-specific options.
 Supported options are described below.
@@ -1045,20 +1076,38 @@ Get an existing Router resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">RouterState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Router</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">RouterState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Router</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_state_up</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">all_tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">availability_zone_hints</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">distributed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_snat</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">external_fixed_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[RouterExternalFixedIpArgs]]</span> = None<span class="p">, </span><span class="nx">external_gateway</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_network_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">value_specs</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">vendor_options</span><span class="p">:</span> <span class="nx">Optional[RouterVendorOptionsArgs]</span> = None<span class="p">) -&gt;</span> Router</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">admin_state_up</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">all_tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">availability_zone_hints</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">distributed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">enable_snat</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">external_fixed_ips</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[RouterExternalFixedIpArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">external_gateway</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">external_network_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">external_subnet_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">value_specs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+        <span class="nx">vendor_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[RouterVendorOptionsArgs]]</span> = None<span class="p">) -&gt;</span> Router</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRouter<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">RouterState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Router</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRouter<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">RouterState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Router</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Router</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">RouterState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Router</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">RouterState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1527,7 +1576,7 @@ Supported options are described below.
 <a href="#state_adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Administrative up/down status for the router
 (must be "true" or "false" if provided). Changing this updates the
@@ -1538,7 +1587,7 @@ Supported options are described below.
 <a href="#state_alltags_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the router, which have been
 explicitly and implicitly added.
@@ -1548,7 +1597,7 @@ explicitly and implicitly added.
 <a href="#state_availabilityzonehints_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone<wbr>Hints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}An availability zone is used to make 
 network resources highly available. Used for resources with high availability
@@ -1560,7 +1609,7 @@ creates a new router.
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Human-readable description for the router.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1569,7 +1618,7 @@ creates a new router.
 <a href="#state_distributed_nodejs" style="color: inherit; text-decoration: inherit;">distributed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether or not to create a
 distributed router. The default policy setting in Neutron restricts
@@ -1580,7 +1629,7 @@ usage of this property to administrative users only.
 <a href="#state_enablesnat_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Snat</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable Source NAT for the router. Valid values are
 "true" or "false". An `external_network_id` has to be set in order to
@@ -1593,7 +1642,7 @@ in OpenStack Neutron.
 <a href="#state_externalfixedips_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Fixed<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routerexternalfixedip">Router<wbr>External<wbr>Fixed<wbr>Ip[]</a></span>
+        <span class="property-type"><a href="#routerexternalfixedip">pulumi.<wbr>Input<pulumi.<wbr>Input<Router<wbr>External<wbr>Fixed<wbr>Ip<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}An external fixed IP for the router. This
 can be repeated. The structure is described below. An `external_network_id`
@@ -1605,7 +1654,7 @@ external fixed IPs of the router.
 <a href="#state_externalgateway_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The
 network UUID of an external gateway for the router. A router with an
@@ -1618,7 +1667,7 @@ of an existing router.
 <a href="#state_externalnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Network<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The network UUID of an external gateway
 for the router. A router with an external gateway is required if any
@@ -1630,7 +1679,7 @@ this updates the external gateway of the router.
 <a href="#state_externalsubnetids_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Subnet<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of external subnet IDs to try over
 each to obtain a fixed IP for the router. If a subnet ID in a list has
@@ -1643,7 +1692,7 @@ IP. Conflicts with an `external_fixed_ip` argument.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name for the router. Changing this
 updates the `name` of an existing router.
@@ -1653,7 +1702,7 @@ updates the `name` of an existing router.
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 networking client.
 A networking client is needed to create a router. If omitted, the
@@ -1665,7 +1714,7 @@ router.
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A set of string tags for the router.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1674,7 +1723,7 @@ router.
 <a href="#state_tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The owner of the floating IP. Required if admin wants
 to create a router for another tenant. Changing this creates a new router.
@@ -1684,7 +1733,7 @@ to create a router for another tenant. Changing this creates a new router.
 <a href="#state_valuespecs_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Map of additional driver-specific options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1693,7 +1742,7 @@ to create a router for another tenant. Changing this creates a new router.
 <a href="#state_vendoroptions_nodejs" style="color: inherit; text-decoration: inherit;">vendor<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routervendoroptions">Router<wbr>Vendor<wbr>Options</a></span>
+        <span class="property-type"><a href="#routervendoroptions">pulumi.<wbr>Input<Router<wbr>Vendor<wbr>Options<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Map of additional vendor-specific options.
 Supported options are described below.
@@ -1707,7 +1756,7 @@ Supported options are described below.
 <a href="#state_admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Administrative up/down status for the router
 (must be "true" or "false" if provided). Changing this updates the
@@ -1718,7 +1767,7 @@ Supported options are described below.
 <a href="#state_all_tags_python" style="color: inherit; text-decoration: inherit;">all_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the router, which have been
 explicitly and implicitly added.
@@ -1728,7 +1777,7 @@ explicitly and implicitly added.
 <a href="#state_availability_zone_hints_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone_<wbr>hints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}An availability zone is used to make 
 network resources highly available. Used for resources with high availability
@@ -1740,7 +1789,7 @@ creates a new router.
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Human-readable description for the router.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1749,7 +1798,7 @@ creates a new router.
 <a href="#state_distributed_python" style="color: inherit; text-decoration: inherit;">distributed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not to create a
 distributed router. The default policy setting in Neutron restricts
@@ -1760,7 +1809,7 @@ usage of this property to administrative users only.
 <a href="#state_enable_snat_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>snat</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable Source NAT for the router. Valid values are
 "true" or "false". An `external_network_id` has to be set in order to
@@ -1773,7 +1822,7 @@ in OpenStack Neutron.
 <a href="#state_external_fixed_ips_python" style="color: inherit; text-decoration: inherit;">external_<wbr>fixed_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routerexternalfixedip">Sequence[Router<wbr>External<wbr>Fixed<wbr>Ip<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routerexternalfixedip">Input[Router<wbr>External<wbr>Fixed<wbr>Ip<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}An external fixed IP for the router. This
 can be repeated. The structure is described below. An `external_network_id`
@@ -1785,7 +1834,7 @@ external fixed IPs of the router.
 <a href="#state_external_gateway_python" style="color: inherit; text-decoration: inherit;">external_<wbr>gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The
 network UUID of an external gateway for the router. A router with an
@@ -1798,7 +1847,7 @@ of an existing router.
 <a href="#state_external_network_id_python" style="color: inherit; text-decoration: inherit;">external_<wbr>network_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The network UUID of an external gateway
 for the router. A router with an external gateway is required if any
@@ -1810,7 +1859,7 @@ this updates the external gateway of the router.
 <a href="#state_external_subnet_ids_python" style="color: inherit; text-decoration: inherit;">external_<wbr>subnet_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of external subnet IDs to try over
 each to obtain a fixed IP for the router. If a subnet ID in a list has
@@ -1823,7 +1872,7 @@ IP. Conflicts with an `external_fixed_ip` argument.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name for the router. Changing this
 updates the `name` of an existing router.
@@ -1833,7 +1882,7 @@ updates the `name` of an existing router.
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 networking client.
 A networking client is needed to create a router. If omitted, the
@@ -1845,7 +1894,7 @@ router.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the router.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1854,7 +1903,7 @@ router.
 <a href="#state_tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The owner of the floating IP. Required if admin wants
 to create a router for another tenant. Changing this creates a new router.
@@ -1864,7 +1913,7 @@ to create a router for another tenant. Changing this creates a new router.
 <a href="#state_value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Map of additional driver-specific options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1873,7 +1922,7 @@ to create a router for another tenant. Changing this creates a new router.
 <a href="#state_vendor_options_python" style="color: inherit; text-decoration: inherit;">vendor_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routervendoroptions">Router<wbr>Vendor<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#routervendoroptions">Input[Router<wbr>Vendor<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Map of additional vendor-specific options.
 Supported options are described below.
@@ -1942,7 +1991,7 @@ Supported options are described below.
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IP address to set on the router.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1951,7 +2000,7 @@ Supported options are described below.
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Subnet in which the fixed IP belongs to.
 {{% /md %}}</dd></dl>
@@ -1964,7 +2013,7 @@ Supported options are described below.
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IP address to set on the router.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1973,7 +2022,7 @@ Supported options are described below.
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Subnet in which the fixed IP belongs to.
 {{% /md %}}</dd></dl>
@@ -2016,7 +2065,7 @@ the Router gateway is assigned during creation or updated after creation.
 <a href="#setroutergatewayaftercreate_nodejs" style="color: inherit; text-decoration: inherit;">set<wbr>Router<wbr>Gateway<wbr>After<wbr>Create</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean to control whether
 the Router gateway is assigned during creation or updated after creation.
@@ -2030,7 +2079,7 @@ the Router gateway is assigned during creation or updated after creation.
 <a href="#set_router_gateway_after_create_python" style="color: inherit; text-decoration: inherit;">set_<wbr>router_<wbr>gateway_<wbr>after_<wbr>create</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean to control whether
 the Router gateway is assigned during creation or updated after creation.

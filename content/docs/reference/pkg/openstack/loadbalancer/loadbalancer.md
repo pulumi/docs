@@ -51,8 +51,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/loadbalancer"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-openstack/sdk/v3/go/openstack/loadbalancer"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -114,19 +114,37 @@ const lb1 = new openstack.loadbalancer.LoadBalancer("lb_1", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">LoadBalancer</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">LoadBalancerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">LoadBalancer</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">LoadBalancerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">LoadBalancer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_state_up</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">flavor_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">loadbalancer_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vip_network_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vip_port_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vip_subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">LoadBalancer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                 <span class="nx">admin_state_up</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                 <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">flavor_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">loadbalancer_provider</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">security_group_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                 <span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">vip_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">vip_network_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">vip_port_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">vip_subnet_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">LoadBalancer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[LoadBalancerArgs]</a></span> = None<span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLoadBalancer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">LoadBalancerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LoadBalancer</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLoadBalancer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">LoadBalancerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LoadBalancer</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">LoadBalancer</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">LoadBalancerArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">LoadBalancer</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">LoadBalancerArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -161,22 +179,32 @@ const lb1 = new openstack.loadbalancer.LoadBalancer("lb_1", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">LoadBalancerArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -185,7 +213,7 @@ const lb1 = new openstack.loadbalancer.LoadBalancer("lb_1", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -209,7 +237,7 @@ const lb1 = new openstack.loadbalancer.LoadBalancer("lb_1", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -530,7 +558,7 @@ It is required to Neutron LBaaS but optional for Octavia.
 <a href="#adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The administrative state of the Loadbalancer.
 A valid value is true (UP) or false (DOWN).
@@ -540,7 +568,7 @@ A valid value is true (UP) or false (DOWN).
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Human-readable description for the Loadbalancer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -549,7 +577,7 @@ A valid value is true (UP) or false (DOWN).
 <a href="#flavorid_nodejs" style="color: inherit; text-decoration: inherit;">flavor<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The UUID of a flavor. Changing this creates a new
 loadbalancer.
@@ -559,7 +587,7 @@ loadbalancer.
 <a href="#loadbalancerprovider_nodejs" style="color: inherit; text-decoration: inherit;">loadbalancer<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the provider. Changing this
 creates a new loadbalancer.
@@ -569,7 +597,7 @@ creates a new loadbalancer.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Human-readable name for the Loadbalancer. Does not have
 to be unique.
@@ -579,7 +607,7 @@ to be unique.
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create an LB member. If omitted, the
@@ -591,7 +619,7 @@ LB member.
 <a href="#securitygroupids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to apply to the
 loadbalancer. The security groups must be specified by ID and not name (as
@@ -602,7 +630,7 @@ opposed to how they are configured with the Compute Instance).
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the Loadbalancer.  Only administrative users can specify a tenant UUID
@@ -613,7 +641,7 @@ other than their own.  Changing this creates a new loadbalancer.
 <a href="#vipaddress_nodejs" style="color: inherit; text-decoration: inherit;">vip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ip address of the load balancer.
 Changing this creates a new loadbalancer.
@@ -623,7 +651,7 @@ Changing this creates a new loadbalancer.
 <a href="#vipnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">vip<wbr>Network<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The network on which to allocate the
 Loadbalancer's address. A tenant can only create Loadbalancers on networks
@@ -636,7 +664,7 @@ It is available only for Octavia.
 <a href="#vipportid_nodejs" style="color: inherit; text-decoration: inherit;">vip<wbr>Port<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The port UUID that the loadbalancer will use.
 Changing this creates a new loadbalancer. It is available only for Octavia.
@@ -646,7 +674,7 @@ Changing this creates a new loadbalancer. It is available only for Octavia.
 <a href="#vipsubnetid_nodejs" style="color: inherit; text-decoration: inherit;">vip<wbr>Subnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The subnet on which to allocate the
 Loadbalancer's address. A tenant can only create Loadbalancers on networks
@@ -663,7 +691,7 @@ It is required to Neutron LBaaS but optional for Octavia.
 <a href="#admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The administrative state of the Loadbalancer.
 A valid value is true (UP) or false (DOWN).
@@ -673,7 +701,7 @@ A valid value is true (UP) or false (DOWN).
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Human-readable description for the Loadbalancer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -682,7 +710,7 @@ A valid value is true (UP) or false (DOWN).
 <a href="#flavor_id_python" style="color: inherit; text-decoration: inherit;">flavor_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The UUID of a flavor. Changing this creates a new
 loadbalancer.
@@ -692,7 +720,7 @@ loadbalancer.
 <a href="#loadbalancer_provider_python" style="color: inherit; text-decoration: inherit;">loadbalancer_<wbr>provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the provider. Changing this
 creates a new loadbalancer.
@@ -702,7 +730,7 @@ creates a new loadbalancer.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Human-readable name for the Loadbalancer. Does not have
 to be unique.
@@ -712,7 +740,7 @@ to be unique.
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create an LB member. If omitted, the
@@ -724,7 +752,7 @@ LB member.
 <a href="#security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to apply to the
 loadbalancer. The security groups must be specified by ID and not name (as
@@ -735,7 +763,7 @@ opposed to how they are configured with the Compute Instance).
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the Loadbalancer.  Only administrative users can specify a tenant UUID
@@ -746,7 +774,7 @@ other than their own.  Changing this creates a new loadbalancer.
 <a href="#vip_address_python" style="color: inherit; text-decoration: inherit;">vip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ip address of the load balancer.
 Changing this creates a new loadbalancer.
@@ -756,7 +784,7 @@ Changing this creates a new loadbalancer.
 <a href="#vip_network_id_python" style="color: inherit; text-decoration: inherit;">vip_<wbr>network_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The network on which to allocate the
 Loadbalancer's address. A tenant can only create Loadbalancers on networks
@@ -769,7 +797,7 @@ It is available only for Octavia.
 <a href="#vip_port_id_python" style="color: inherit; text-decoration: inherit;">vip_<wbr>port_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The port UUID that the loadbalancer will use.
 Changing this creates a new loadbalancer. It is available only for Octavia.
@@ -779,7 +807,7 @@ Changing this creates a new loadbalancer. It is available only for Octavia.
 <a href="#vip_subnet_id_python" style="color: inherit; text-decoration: inherit;">vip_<wbr>subnet_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The subnet on which to allocate the
 Loadbalancer's address. A tenant can only create Loadbalancers on networks
@@ -852,20 +880,34 @@ Get an existing LoadBalancer resource's state with the given name, ID, and optio
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">LoadBalancerState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">LoadBalancer</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">LoadBalancerState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">LoadBalancer</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_state_up</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">flavor_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">loadbalancer_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vip_network_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vip_port_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vip_subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> LoadBalancer</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">admin_state_up</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">flavor_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">loadbalancer_provider</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">security_group_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">vip_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">vip_network_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">vip_port_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">vip_subnet_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> LoadBalancer</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLoadBalancer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">LoadBalancerState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LoadBalancer</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLoadBalancer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">LoadBalancerState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LoadBalancer</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">LoadBalancer</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">LoadBalancerState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">LoadBalancer</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">LoadBalancerState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1240,7 +1282,7 @@ It is required to Neutron LBaaS but optional for Octavia.
 <a href="#state_adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The administrative state of the Loadbalancer.
 A valid value is true (UP) or false (DOWN).
@@ -1250,7 +1292,7 @@ A valid value is true (UP) or false (DOWN).
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Human-readable description for the Loadbalancer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1259,7 +1301,7 @@ A valid value is true (UP) or false (DOWN).
 <a href="#state_flavorid_nodejs" style="color: inherit; text-decoration: inherit;">flavor<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The UUID of a flavor. Changing this creates a new
 loadbalancer.
@@ -1269,7 +1311,7 @@ loadbalancer.
 <a href="#state_loadbalancerprovider_nodejs" style="color: inherit; text-decoration: inherit;">loadbalancer<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the provider. Changing this
 creates a new loadbalancer.
@@ -1279,7 +1321,7 @@ creates a new loadbalancer.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Human-readable name for the Loadbalancer. Does not have
 to be unique.
@@ -1289,7 +1331,7 @@ to be unique.
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create an LB member. If omitted, the
@@ -1301,7 +1343,7 @@ LB member.
 <a href="#state_securitygroupids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to apply to the
 loadbalancer. The security groups must be specified by ID and not name (as
@@ -1312,7 +1354,7 @@ opposed to how they are configured with the Compute Instance).
 <a href="#state_tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the Loadbalancer.  Only administrative users can specify a tenant UUID
@@ -1323,7 +1365,7 @@ other than their own.  Changing this creates a new loadbalancer.
 <a href="#state_vipaddress_nodejs" style="color: inherit; text-decoration: inherit;">vip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ip address of the load balancer.
 Changing this creates a new loadbalancer.
@@ -1333,7 +1375,7 @@ Changing this creates a new loadbalancer.
 <a href="#state_vipnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">vip<wbr>Network<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The network on which to allocate the
 Loadbalancer's address. A tenant can only create Loadbalancers on networks
@@ -1346,7 +1388,7 @@ It is available only for Octavia.
 <a href="#state_vipportid_nodejs" style="color: inherit; text-decoration: inherit;">vip<wbr>Port<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The port UUID that the loadbalancer will use.
 Changing this creates a new loadbalancer. It is available only for Octavia.
@@ -1356,7 +1398,7 @@ Changing this creates a new loadbalancer. It is available only for Octavia.
 <a href="#state_vipsubnetid_nodejs" style="color: inherit; text-decoration: inherit;">vip<wbr>Subnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The subnet on which to allocate the
 Loadbalancer's address. A tenant can only create Loadbalancers on networks
@@ -1373,7 +1415,7 @@ It is required to Neutron LBaaS but optional for Octavia.
 <a href="#state_admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The administrative state of the Loadbalancer.
 A valid value is true (UP) or false (DOWN).
@@ -1383,7 +1425,7 @@ A valid value is true (UP) or false (DOWN).
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Human-readable description for the Loadbalancer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1392,7 +1434,7 @@ A valid value is true (UP) or false (DOWN).
 <a href="#state_flavor_id_python" style="color: inherit; text-decoration: inherit;">flavor_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The UUID of a flavor. Changing this creates a new
 loadbalancer.
@@ -1402,7 +1444,7 @@ loadbalancer.
 <a href="#state_loadbalancer_provider_python" style="color: inherit; text-decoration: inherit;">loadbalancer_<wbr>provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the provider. Changing this
 creates a new loadbalancer.
@@ -1412,7 +1454,7 @@ creates a new loadbalancer.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Human-readable name for the Loadbalancer. Does not have
 to be unique.
@@ -1422,7 +1464,7 @@ to be unique.
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create an LB member. If omitted, the
@@ -1434,7 +1476,7 @@ LB member.
 <a href="#state_security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to apply to the
 loadbalancer. The security groups must be specified by ID and not name (as
@@ -1445,7 +1487,7 @@ opposed to how they are configured with the Compute Instance).
 <a href="#state_tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the Loadbalancer.  Only administrative users can specify a tenant UUID
@@ -1456,7 +1498,7 @@ other than their own.  Changing this creates a new loadbalancer.
 <a href="#state_vip_address_python" style="color: inherit; text-decoration: inherit;">vip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ip address of the load balancer.
 Changing this creates a new loadbalancer.
@@ -1466,7 +1508,7 @@ Changing this creates a new loadbalancer.
 <a href="#state_vip_network_id_python" style="color: inherit; text-decoration: inherit;">vip_<wbr>network_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The network on which to allocate the
 Loadbalancer's address. A tenant can only create Loadbalancers on networks
@@ -1479,7 +1521,7 @@ It is available only for Octavia.
 <a href="#state_vip_port_id_python" style="color: inherit; text-decoration: inherit;">vip_<wbr>port_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The port UUID that the loadbalancer will use.
 Changing this creates a new loadbalancer. It is available only for Octavia.
@@ -1489,7 +1531,7 @@ Changing this creates a new loadbalancer. It is available only for Octavia.
 <a href="#state_vip_subnet_id_python" style="color: inherit; text-decoration: inherit;">vip_<wbr>subnet_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The subnet on which to allocate the
 Loadbalancer's address. A tenant can only create Loadbalancers on networks

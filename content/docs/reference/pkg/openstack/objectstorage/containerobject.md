@@ -74,8 +74,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/objectstorage"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-openstack/sdk/v3/go/openstack/objectstorage"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -223,8 +223,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/objectstorage"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-openstack/sdk/v3/go/openstack/objectstorage"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -328,19 +328,40 @@ const doc1 = new openstack.objectstorage.ContainerObject("doc_1", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ContainerObject</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ContainerObjectArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ContainerObject</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ContainerObjectArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ContainerObject</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">content</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">content_disposition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">content_encoding</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">content_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">copy_from</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">delete_after</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">delete_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">detect_content_type</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">object_manifest</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ContainerObject</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                    <span class="nx">container_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">content</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">content_disposition</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">content_encoding</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">content_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">copy_from</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">delete_after</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                    <span class="nx">delete_at</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">detect_content_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                    <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+                    <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">object_manifest</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ContainerObject</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ContainerObjectArgs</a></span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewContainerObject</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ContainerObjectArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ContainerObject</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewContainerObject</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ContainerObjectArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ContainerObject</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ContainerObject</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ContainerObjectArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ContainerObject</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ContainerObjectArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -375,22 +396,32 @@ const doc1 = new openstack.objectstorage.ContainerObject("doc_1", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ContainerObjectArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -399,7 +430,7 @@ const doc1 = new openstack.objectstorage.ContainerObject("doc_1", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -423,7 +454,7 @@ const doc1 = new openstack.objectstorage.ContainerObject("doc_1", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -804,7 +835,7 @@ as the object's content. Conflicts with `source` and `copy_from`.
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique (within an account) name for the container. 
 The container name must be from 1 to 256 characters long and can start
@@ -818,7 +849,7 @@ character delimits the container and object name. For example, the path
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A string representing the content of the object. Conflicts with
 `source` and `copy_from`.
@@ -828,7 +859,7 @@ character delimits the container and object name. For example, the path
 <a href="#contentdisposition_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Disposition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A string which specifies the override behavior for 
 the browser. For example, this header might specify that the browser use a download
@@ -839,7 +870,7 @@ program to save this file rather than show the file, which is the default.
 <a href="#contentencoding_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A string representing the value of the Content-Encoding
 metadata.
@@ -849,7 +880,7 @@ metadata.
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A string which sets the MIME type for the object.
 {{% /md %}}</dd><dt class="property-optional"
@@ -858,7 +889,7 @@ metadata.
 <a href="#copyfrom_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A string representing the name of an object 
 used to create the new object by copying the `copy_from` object. The value is in form
@@ -871,7 +902,7 @@ container and object before you include them in the header. Conflicts with `sour
 <a href="#deleteafter_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>After</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}An integer representing the number of seconds after which the
 system removes the object. Internally, the Object Storage system stores this value in
@@ -882,7 +913,7 @@ the X-Delete-At metadata item.
 <a href="#deleteat_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An string representing the date when the system removes the object. 
 For example, "2015-08-26" is equivalent to Mon, Wed, 26 Aug 2015 00:00:00 GMT.
@@ -892,7 +923,7 @@ For example, "2015-08-26" is equivalent to Mon, Wed, 26 Aug 2015 00:00:00 GMT.
 <a href="#detectcontenttype_nodejs" style="color: inherit; text-decoration: inherit;">detect<wbr>Content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If set to true, Object Storage guesses the content 
 type based on the file extension and ignores the value sent in the Content-Type
@@ -903,7 +934,7 @@ header, if present.
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Used to trigger updates. The only meaningful value is ${md5(file("path/to/file"))}.
 {{% /md %}}</dd><dt class="property-optional"
@@ -912,7 +943,7 @@ header, if present.
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -920,7 +951,7 @@ header, if present.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name for the object.
 {{% /md %}}</dd><dt class="property-optional"
@@ -929,7 +960,7 @@ header, if present.
 <a href="#objectmanifest_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Manifest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A string set to specify that this is a dynamic large 
 object manifest object. The value is the container and object name prefix of the
@@ -942,7 +973,7 @@ header.
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The region in which to create the container. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -953,7 +984,7 @@ creates a new container.
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A string representing the local path of a file which will be used
 as the object's content. Conflicts with `source` and `copy_from`.
@@ -967,7 +998,7 @@ as the object's content. Conflicts with `source` and `copy_from`.
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique (within an account) name for the container. 
 The container name must be from 1 to 256 characters long and can start
@@ -981,7 +1012,7 @@ character delimits the container and object name. For example, the path
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A string representing the content of the object. Conflicts with
 `source` and `copy_from`.
@@ -991,7 +1022,7 @@ character delimits the container and object name. For example, the path
 <a href="#content_disposition_python" style="color: inherit; text-decoration: inherit;">content_<wbr>disposition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A string which specifies the override behavior for 
 the browser. For example, this header might specify that the browser use a download
@@ -1002,7 +1033,7 @@ program to save this file rather than show the file, which is the default.
 <a href="#content_encoding_python" style="color: inherit; text-decoration: inherit;">content_<wbr>encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A string representing the value of the Content-Encoding
 metadata.
@@ -1012,7 +1043,7 @@ metadata.
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A string which sets the MIME type for the object.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1021,7 +1052,7 @@ metadata.
 <a href="#copy_from_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A string representing the name of an object 
 used to create the new object by copying the `copy_from` object. The value is in form
@@ -1034,7 +1065,7 @@ container and object before you include them in the header. Conflicts with `sour
 <a href="#delete_after_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>after</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}An integer representing the number of seconds after which the
 system removes the object. Internally, the Object Storage system stores this value in
@@ -1045,7 +1076,7 @@ the X-Delete-At metadata item.
 <a href="#delete_at_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An string representing the date when the system removes the object. 
 For example, "2015-08-26" is equivalent to Mon, Wed, 26 Aug 2015 00:00:00 GMT.
@@ -1055,7 +1086,7 @@ For example, "2015-08-26" is equivalent to Mon, Wed, 26 Aug 2015 00:00:00 GMT.
 <a href="#detect_content_type_python" style="color: inherit; text-decoration: inherit;">detect_<wbr>content_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If set to true, Object Storage guesses the content 
 type based on the file extension and ignores the value sent in the Content-Type
@@ -1066,7 +1097,7 @@ header, if present.
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Used to trigger updates. The only meaningful value is ${md5(file("path/to/file"))}.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1075,7 +1106,7 @@ header, if present.
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1083,7 +1114,7 @@ header, if present.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name for the object.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1092,7 +1123,7 @@ header, if present.
 <a href="#object_manifest_python" style="color: inherit; text-decoration: inherit;">object_<wbr>manifest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A string set to specify that this is a dynamic large 
 object manifest object. The value is the container and object name prefix of the
@@ -1105,7 +1136,7 @@ header.
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The region in which to create the container. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -1116,7 +1147,7 @@ creates a new container.
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A string representing the local path of a file which will be used
 as the object's content. Conflicts with `source` and `copy_from`.
@@ -1366,20 +1397,41 @@ Get an existing ContainerObject resource's state with the given name, ID, and op
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ContainerObjectState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ContainerObject</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ContainerObjectState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ContainerObject</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">content</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">content_disposition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">content_encoding</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">content_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">content_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">copy_from</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">delete_after</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">delete_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">detect_content_type</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_modified</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">object_manifest</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">trans_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ContainerObject</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">container_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">content</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">content_disposition</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">content_encoding</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">content_length</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">content_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">copy_from</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">date</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">delete_after</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">delete_at</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">detect_content_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">last_modified</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">object_manifest</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">trans_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> ContainerObject</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetContainerObject<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ContainerObjectState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ContainerObject</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetContainerObject<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ContainerObjectState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ContainerObject</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ContainerObject</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ContainerObjectState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ContainerObject</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ContainerObjectState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1904,7 +1956,7 @@ need this value if you report a problem.
 <a href="#state_containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique (within an account) name for the container. 
 The container name must be from 1 to 256 characters long and can start
@@ -1918,7 +1970,7 @@ character delimits the container and object name. For example, the path
 <a href="#state_content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A string representing the content of the object. Conflicts with
 `source` and `copy_from`.
@@ -1928,7 +1980,7 @@ character delimits the container and object name. For example, the path
 <a href="#state_contentdisposition_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Disposition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A string which specifies the override behavior for 
 the browser. For example, this header might specify that the browser use a download
@@ -1939,7 +1991,7 @@ program to save this file rather than show the file, which is the default.
 <a href="#state_contentencoding_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A string representing the value of the Content-Encoding
 metadata.
@@ -1949,7 +2001,7 @@ metadata.
 <a href="#state_contentlength_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}If the operation succeeds, this value is zero (0) or the 
 length of informational or error text in the response body.
@@ -1959,7 +2011,7 @@ length of informational or error text in the response body.
 <a href="#state_contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A string which sets the MIME type for the object.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1968,7 +2020,7 @@ length of informational or error text in the response body.
 <a href="#state_copyfrom_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A string representing the name of an object 
 used to create the new object by copying the `copy_from` object. The value is in form
@@ -1981,7 +2033,7 @@ container and object before you include them in the header. Conflicts with `sour
 <a href="#state_date_nodejs" style="color: inherit; text-decoration: inherit;">date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The date and time the system responded to the request, using the preferred 
 format of RFC 7231 as shown in this example Thu, 16 Jun 2016 15:10:38 GMT. The
@@ -1992,7 +2044,7 @@ time is always in UTC.
 <a href="#state_deleteafter_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>After</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}An integer representing the number of seconds after which the
 system removes the object. Internally, the Object Storage system stores this value in
@@ -2003,7 +2055,7 @@ the X-Delete-At metadata item.
 <a href="#state_deleteat_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An string representing the date when the system removes the object. 
 For example, "2015-08-26" is equivalent to Mon, Wed, 26 Aug 2015 00:00:00 GMT.
@@ -2013,7 +2065,7 @@ For example, "2015-08-26" is equivalent to Mon, Wed, 26 Aug 2015 00:00:00 GMT.
 <a href="#state_detectcontenttype_nodejs" style="color: inherit; text-decoration: inherit;">detect<wbr>Content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If set to true, Object Storage guesses the content 
 type based on the file extension and ignores the value sent in the Content-Type
@@ -2024,7 +2076,7 @@ header, if present.
 <a href="#state_etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Used to trigger updates. The only meaningful value is ${md5(file("path/to/file"))}.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2033,7 +2085,7 @@ header, if present.
 <a href="#state_lastmodified_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The date and time when the object was last modified. The date and time 
 stamp format is ISO 8601:
@@ -2047,7 +2099,7 @@ example, the offset value is -05:00.
 <a href="#state_metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2055,7 +2107,7 @@ example, the offset value is -05:00.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name for the object.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2064,7 +2116,7 @@ example, the offset value is -05:00.
 <a href="#state_objectmanifest_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Manifest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A string set to specify that this is a dynamic large 
 object manifest object. The value is the container and object name prefix of the
@@ -2077,7 +2129,7 @@ header.
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The region in which to create the container. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -2088,7 +2140,7 @@ creates a new container.
 <a href="#state_source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A string representing the local path of a file which will be used
 as the object's content. Conflicts with `source` and `copy_from`.
@@ -2098,7 +2150,7 @@ as the object's content. Conflicts with `source` and `copy_from`.
 <a href="#state_transid_nodejs" style="color: inherit; text-decoration: inherit;">trans<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique transaction ID for this request. Your service provider might 
 need this value if you report a problem.
@@ -2112,7 +2164,7 @@ need this value if you report a problem.
 <a href="#state_container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique (within an account) name for the container. 
 The container name must be from 1 to 256 characters long and can start
@@ -2126,7 +2178,7 @@ character delimits the container and object name. For example, the path
 <a href="#state_content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A string representing the content of the object. Conflicts with
 `source` and `copy_from`.
@@ -2136,7 +2188,7 @@ character delimits the container and object name. For example, the path
 <a href="#state_content_disposition_python" style="color: inherit; text-decoration: inherit;">content_<wbr>disposition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A string which specifies the override behavior for 
 the browser. For example, this header might specify that the browser use a download
@@ -2147,7 +2199,7 @@ program to save this file rather than show the file, which is the default.
 <a href="#state_content_encoding_python" style="color: inherit; text-decoration: inherit;">content_<wbr>encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A string representing the value of the Content-Encoding
 metadata.
@@ -2157,7 +2209,7 @@ metadata.
 <a href="#state_content_length_python" style="color: inherit; text-decoration: inherit;">content_<wbr>length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}If the operation succeeds, this value is zero (0) or the 
 length of informational or error text in the response body.
@@ -2167,7 +2219,7 @@ length of informational or error text in the response body.
 <a href="#state_content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A string which sets the MIME type for the object.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2176,7 +2228,7 @@ length of informational or error text in the response body.
 <a href="#state_copy_from_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A string representing the name of an object 
 used to create the new object by copying the `copy_from` object. The value is in form
@@ -2189,7 +2241,7 @@ container and object before you include them in the header. Conflicts with `sour
 <a href="#state_date_python" style="color: inherit; text-decoration: inherit;">date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The date and time the system responded to the request, using the preferred 
 format of RFC 7231 as shown in this example Thu, 16 Jun 2016 15:10:38 GMT. The
@@ -2200,7 +2252,7 @@ time is always in UTC.
 <a href="#state_delete_after_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>after</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}An integer representing the number of seconds after which the
 system removes the object. Internally, the Object Storage system stores this value in
@@ -2211,7 +2263,7 @@ the X-Delete-At metadata item.
 <a href="#state_delete_at_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An string representing the date when the system removes the object. 
 For example, "2015-08-26" is equivalent to Mon, Wed, 26 Aug 2015 00:00:00 GMT.
@@ -2221,7 +2273,7 @@ For example, "2015-08-26" is equivalent to Mon, Wed, 26 Aug 2015 00:00:00 GMT.
 <a href="#state_detect_content_type_python" style="color: inherit; text-decoration: inherit;">detect_<wbr>content_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If set to true, Object Storage guesses the content 
 type based on the file extension and ignores the value sent in the Content-Type
@@ -2232,7 +2284,7 @@ header, if present.
 <a href="#state_etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Used to trigger updates. The only meaningful value is ${md5(file("path/to/file"))}.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2241,7 +2293,7 @@ header, if present.
 <a href="#state_last_modified_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The date and time when the object was last modified. The date and time 
 stamp format is ISO 8601:
@@ -2255,7 +2307,7 @@ example, the offset value is -05:00.
 <a href="#state_metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2263,7 +2315,7 @@ example, the offset value is -05:00.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name for the object.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2272,7 +2324,7 @@ example, the offset value is -05:00.
 <a href="#state_object_manifest_python" style="color: inherit; text-decoration: inherit;">object_<wbr>manifest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A string set to specify that this is a dynamic large 
 object manifest object. The value is the container and object name prefix of the
@@ -2285,7 +2337,7 @@ header.
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The region in which to create the container. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -2296,7 +2348,7 @@ creates a new container.
 <a href="#state_source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A string representing the local path of a file which will be used
 as the object's content. Conflicts with `source` and `copy_from`.
@@ -2306,7 +2358,7 @@ as the object's content. Conflicts with `source` and `copy_from`.
 <a href="#state_trans_id_python" style="color: inherit; text-decoration: inherit;">trans_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique transaction ID for this request. Your service provider might 
 need this value if you report a problem.

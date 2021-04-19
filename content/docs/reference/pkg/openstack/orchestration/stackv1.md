@@ -80,8 +80,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/orchestration"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-openstack/sdk/v3/go/openstack/orchestration"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -197,19 +197,42 @@ resources:
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">StackV1</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StackV1Args</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">StackV1</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StackV1Args</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">StackV1</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">stack_outputs</span><span class="p">:</span> <span class="nx">Optional[Sequence[StackV1StackOutputArgs]]</span> = None<span class="p">, </span><span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">creation_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disable_rollback</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">environment_opts</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_topics</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status_reason</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">template_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_opts</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">updated_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">StackV1</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">stack_outputs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[StackV1StackOutputArgs]]]]</span> = None<span class="p">,</span>
+            <span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+            <span class="nx">creation_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">disable_rollback</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+            <span class="nx">environment_opts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">notification_topics</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+            <span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+            <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">status_reason</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+            <span class="nx">template_description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">template_opts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+            <span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+            <span class="nx">updated_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">StackV1</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StackV1Args</a></span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewStackV1</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">StackV1Args</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">StackV1</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewStackV1</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">StackV1Args</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">StackV1</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">StackV1</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">StackV1Args</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">StackV1</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">StackV1Args</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -244,22 +267,32 @@ resources:
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">StackV1Args</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -268,7 +301,7 @@ resources:
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -292,7 +325,7 @@ resources:
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -697,7 +730,7 @@ is the time zone as an offset from UTC.
 <a href="#templateopts_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Opts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Template key/value pairs to associate with the
 stack which contains either the template file or url.
@@ -709,7 +742,7 @@ Template Opts.
 <a href="#stackoutputs_nodejs" style="color: inherit; text-decoration: inherit;">Stack<wbr>Outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stackv1stackoutput">Stack<wbr>V1Stack<wbr>Output[]</a></span>
+        <span class="property-type"><a href="#stackv1stackoutput">pulumi.<wbr>Input<pulumi.<wbr>Input<Stack<wbr>V1Stack<wbr>Output<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of stack outputs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -718,7 +751,7 @@ Template Opts.
 <a href="#capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of stack capabilities for stack.
 {{% /md %}}</dd><dt class="property-optional"
@@ -727,7 +760,7 @@ Template Opts.
 <a href="#creationtime_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The date and time when the resource was created. The date
 and time stamp format is ISO 8601: CCYY-MM-DDThh:mm:ss±hh:mm
@@ -739,7 +772,7 @@ is the time zone as an offset from UTC.
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The description of the stack resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -748,7 +781,7 @@ is the time zone as an offset from UTC.
 <a href="#disablerollback_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Rollback</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enables or disables deletion of all stack
 resources when a stack creation fails. Default is true, meaning all
@@ -759,7 +792,7 @@ resources are not deleted when stack creation fails.
 <a href="#environmentopts_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Opts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Environment key/value pairs to associate with
 the stack which contains details for the environment of the stack.
@@ -771,7 +804,7 @@ Environment Opts.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name for the stack. It must start with an
 alphabetic character. Changing this updates the stack's name.
@@ -781,7 +814,7 @@ alphabetic character. Changing this updates the stack's name.
 <a href="#notificationtopics_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Topics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of notification topics for stack.
 {{% /md %}}</dd><dt class="property-optional"
@@ -790,7 +823,7 @@ alphabetic character. Changing this updates the stack's name.
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}User-defined key/value pairs as parameters to pass
 to the template. Changing this updates the existing stack parameters.
@@ -800,7 +833,7 @@ to the template. Changing this updates the existing stack parameters.
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The region in which to create the stack. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -811,7 +844,7 @@ creates a new stack.
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The status of the stack.
 {{% /md %}}</dd><dt class="property-optional"
@@ -820,7 +853,7 @@ creates a new stack.
 <a href="#statusreason_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The reason for the current status of the stack.
 {{% /md %}}</dd><dt class="property-optional"
@@ -829,7 +862,7 @@ creates a new stack.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of tags to assosciate with the Stack
 {{% /md %}}</dd><dt class="property-optional"
@@ -838,7 +871,7 @@ creates a new stack.
 <a href="#templatedescription_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The description of the stack template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -847,7 +880,7 @@ creates a new stack.
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The timeout for stack action in minutes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -856,7 +889,7 @@ creates a new stack.
 <a href="#updatedtime_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The date and time when the resource was updated. The date
 and time stamp format is ISO 8601: CCYY-MM-DDThh:mm:ss±hh:mm
@@ -872,7 +905,7 @@ is the time zone as an offset from UTC.
 <a href="#template_opts_python" style="color: inherit; text-decoration: inherit;">template_<wbr>opts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Template key/value pairs to associate with the
 stack which contains either the template file or url.
@@ -884,7 +917,7 @@ Template Opts.
 <a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of stack capabilities for stack.
 {{% /md %}}</dd><dt class="property-optional"
@@ -893,7 +926,7 @@ Template Opts.
 <a href="#creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The date and time when the resource was created. The date
 and time stamp format is ISO 8601: CCYY-MM-DDThh:mm:ss±hh:mm
@@ -905,7 +938,7 @@ is the time zone as an offset from UTC.
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The description of the stack resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -914,7 +947,7 @@ is the time zone as an offset from UTC.
 <a href="#disable_rollback_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>rollback</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enables or disables deletion of all stack
 resources when a stack creation fails. Default is true, meaning all
@@ -925,7 +958,7 @@ resources are not deleted when stack creation fails.
 <a href="#environment_opts_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>opts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Environment key/value pairs to associate with
 the stack which contains details for the environment of the stack.
@@ -937,7 +970,7 @@ Environment Opts.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name for the stack. It must start with an
 alphabetic character. Changing this updates the stack's name.
@@ -947,7 +980,7 @@ alphabetic character. Changing this updates the stack's name.
 <a href="#notification_topics_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>topics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of notification topics for stack.
 {{% /md %}}</dd><dt class="property-optional"
@@ -956,7 +989,7 @@ alphabetic character. Changing this updates the stack's name.
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}User-defined key/value pairs as parameters to pass
 to the template. Changing this updates the existing stack parameters.
@@ -966,7 +999,7 @@ to the template. Changing this updates the existing stack parameters.
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The region in which to create the stack. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -977,7 +1010,7 @@ creates a new stack.
 <a href="#stack_outputs_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stackv1stackoutput">Sequence[Stack<wbr>V1Stack<wbr>Output<wbr>Args]</a></span>
+        <span class="property-type"><a href="#stackv1stackoutput">Input[Stack<wbr>V1Stack<wbr>Output<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of stack outputs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -986,7 +1019,7 @@ creates a new stack.
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The status of the stack.
 {{% /md %}}</dd><dt class="property-optional"
@@ -995,7 +1028,7 @@ creates a new stack.
 <a href="#status_reason_python" style="color: inherit; text-decoration: inherit;">status_<wbr>reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The reason for the current status of the stack.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1004,7 +1037,7 @@ creates a new stack.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of tags to assosciate with the Stack
 {{% /md %}}</dd><dt class="property-optional"
@@ -1013,7 +1046,7 @@ creates a new stack.
 <a href="#template_description_python" style="color: inherit; text-decoration: inherit;">template_<wbr>description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The description of the stack template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1022,7 +1055,7 @@ creates a new stack.
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The timeout for stack action in minutes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1031,7 +1064,7 @@ creates a new stack.
 <a href="#updated_time_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The date and time when the resource was updated. The date
 and time stamp format is ISO 8601: CCYY-MM-DDThh:mm:ss±hh:mm
@@ -1103,20 +1136,39 @@ Get an existing StackV1 resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">StackV1State</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">StackV1</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">StackV1State</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">StackV1</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">stack_outputs</span><span class="p">:</span> <span class="nx">Optional[Sequence[StackV1StackOutputArgs]]</span> = None<span class="p">, </span><span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">creation_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disable_rollback</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">environment_opts</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_topics</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status_reason</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">template_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_opts</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">updated_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> StackV1</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">stack_outputs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[StackV1StackOutputArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">creation_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">disable_rollback</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">environment_opts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">notification_topics</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+        <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">status_reason</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">template_description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">template_opts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+        <span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">updated_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> StackV1</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetStackV1<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">StackV1State</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">StackV1</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetStackV1<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">StackV1State</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">StackV1</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">StackV1</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">StackV1State</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">StackV1</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">StackV1State</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1575,7 +1627,7 @@ is the time zone as an offset from UTC.
 <a href="#state_stackoutputs_nodejs" style="color: inherit; text-decoration: inherit;">Stack<wbr>Outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stackv1stackoutput">Stack<wbr>V1Stack<wbr>Output[]</a></span>
+        <span class="property-type"><a href="#stackv1stackoutput">pulumi.<wbr>Input<pulumi.<wbr>Input<Stack<wbr>V1Stack<wbr>Output<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of stack outputs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1584,7 +1636,7 @@ is the time zone as an offset from UTC.
 <a href="#state_capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of stack capabilities for stack.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1593,7 +1645,7 @@ is the time zone as an offset from UTC.
 <a href="#state_creationtime_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The date and time when the resource was created. The date
 and time stamp format is ISO 8601: CCYY-MM-DDThh:mm:ss±hh:mm
@@ -1605,7 +1657,7 @@ is the time zone as an offset from UTC.
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The description of the stack resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1614,7 +1666,7 @@ is the time zone as an offset from UTC.
 <a href="#state_disablerollback_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Rollback</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enables or disables deletion of all stack
 resources when a stack creation fails. Default is true, meaning all
@@ -1625,7 +1677,7 @@ resources are not deleted when stack creation fails.
 <a href="#state_environmentopts_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Opts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Environment key/value pairs to associate with
 the stack which contains details for the environment of the stack.
@@ -1637,7 +1689,7 @@ Environment Opts.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name for the stack. It must start with an
 alphabetic character. Changing this updates the stack's name.
@@ -1647,7 +1699,7 @@ alphabetic character. Changing this updates the stack's name.
 <a href="#state_notificationtopics_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Topics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of notification topics for stack.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1656,7 +1708,7 @@ alphabetic character. Changing this updates the stack's name.
 <a href="#state_parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}User-defined key/value pairs as parameters to pass
 to the template. Changing this updates the existing stack parameters.
@@ -1666,7 +1718,7 @@ to the template. Changing this updates the existing stack parameters.
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The region in which to create the stack. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -1677,7 +1729,7 @@ creates a new stack.
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The status of the stack.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1686,7 +1738,7 @@ creates a new stack.
 <a href="#state_statusreason_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The reason for the current status of the stack.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1695,7 +1747,7 @@ creates a new stack.
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of tags to assosciate with the Stack
 {{% /md %}}</dd><dt class="property-optional"
@@ -1704,7 +1756,7 @@ creates a new stack.
 <a href="#state_templatedescription_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The description of the stack template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1713,7 +1765,7 @@ creates a new stack.
 <a href="#state_templateopts_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Opts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Template key/value pairs to associate with the
 stack which contains either the template file or url.
@@ -1725,7 +1777,7 @@ Template Opts.
 <a href="#state_timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The timeout for stack action in minutes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1734,7 +1786,7 @@ Template Opts.
 <a href="#state_updatedtime_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The date and time when the resource was updated. The date
 and time stamp format is ISO 8601: CCYY-MM-DDThh:mm:ss±hh:mm
@@ -1750,7 +1802,7 @@ is the time zone as an offset from UTC.
 <a href="#state_capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of stack capabilities for stack.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1759,7 +1811,7 @@ is the time zone as an offset from UTC.
 <a href="#state_creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The date and time when the resource was created. The date
 and time stamp format is ISO 8601: CCYY-MM-DDThh:mm:ss±hh:mm
@@ -1771,7 +1823,7 @@ is the time zone as an offset from UTC.
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The description of the stack resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1780,7 +1832,7 @@ is the time zone as an offset from UTC.
 <a href="#state_disable_rollback_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>rollback</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enables or disables deletion of all stack
 resources when a stack creation fails. Default is true, meaning all
@@ -1791,7 +1843,7 @@ resources are not deleted when stack creation fails.
 <a href="#state_environment_opts_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>opts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Environment key/value pairs to associate with
 the stack which contains details for the environment of the stack.
@@ -1803,7 +1855,7 @@ Environment Opts.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name for the stack. It must start with an
 alphabetic character. Changing this updates the stack's name.
@@ -1813,7 +1865,7 @@ alphabetic character. Changing this updates the stack's name.
 <a href="#state_notification_topics_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>topics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of notification topics for stack.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1822,7 +1874,7 @@ alphabetic character. Changing this updates the stack's name.
 <a href="#state_parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}User-defined key/value pairs as parameters to pass
 to the template. Changing this updates the existing stack parameters.
@@ -1832,7 +1884,7 @@ to the template. Changing this updates the existing stack parameters.
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The region in which to create the stack. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -1843,7 +1895,7 @@ creates a new stack.
 <a href="#state_stack_outputs_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stackv1stackoutput">Sequence[Stack<wbr>V1Stack<wbr>Output<wbr>Args]</a></span>
+        <span class="property-type"><a href="#stackv1stackoutput">Input[Stack<wbr>V1Stack<wbr>Output<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of stack outputs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1852,7 +1904,7 @@ creates a new stack.
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The status of the stack.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1861,7 +1913,7 @@ creates a new stack.
 <a href="#state_status_reason_python" style="color: inherit; text-decoration: inherit;">status_<wbr>reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The reason for the current status of the stack.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1870,7 +1922,7 @@ creates a new stack.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of tags to assosciate with the Stack
 {{% /md %}}</dd><dt class="property-optional"
@@ -1879,7 +1931,7 @@ creates a new stack.
 <a href="#state_template_description_python" style="color: inherit; text-decoration: inherit;">template_<wbr>description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The description of the stack template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1888,7 +1940,7 @@ creates a new stack.
 <a href="#state_template_opts_python" style="color: inherit; text-decoration: inherit;">template_<wbr>opts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Template key/value pairs to associate with the
 stack which contains either the template file or url.
@@ -1900,7 +1952,7 @@ Template Opts.
 <a href="#state_timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The timeout for stack action in minutes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1909,7 +1961,7 @@ Template Opts.
 <a href="#state_updated_time_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The date and time when the resource was updated. The date
 and time stamp format is ISO 8601: CCYY-MM-DDThh:mm:ss±hh:mm
@@ -1994,7 +2046,7 @@ is the time zone as an offset from UTC.
 <a href="#outputkey_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2002,7 +2054,7 @@ is the time zone as an offset from UTC.
 <a href="#outputvalue_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2010,7 +2062,7 @@ is the time zone as an offset from UTC.
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The description of the stack resource.
 {{% /md %}}</dd></dl>
@@ -2023,7 +2075,7 @@ is the time zone as an offset from UTC.
 <a href="#output_key_python" style="color: inherit; text-decoration: inherit;">output_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2031,7 +2083,7 @@ is the time zone as an offset from UTC.
 <a href="#output_value_python" style="color: inherit; text-decoration: inherit;">output_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2039,7 +2091,7 @@ is the time zone as an offset from UTC.
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The description of the stack resource.
 {{% /md %}}</dd></dl>
