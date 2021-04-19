@@ -44,15 +44,23 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        // Allocate /31 block of max 2 public IPv4 addresses in Parsippany, NJ (ewr1) for myproject
+        // Allocate /31 block of max 2 public IPv4 addresses in Silicon Valley (sv15) facility for myproject
         var twoElasticAddresses = new EquinixMetal.ReservedIpBlock("twoElasticAddresses", new EquinixMetal.ReservedIpBlockArgs
         {
             ProjectId = local.Project_id,
-            Facility = "ewr1",
+            Facility = "sv15",
             Quantity = 2,
         });
+        // Allocate 1 floating IP in Sillicon Valley (sv) metro
+        var testReservedIpBlock = new EquinixMetal.ReservedIpBlock("testReservedIpBlock", new EquinixMetal.ReservedIpBlockArgs
+        {
+            ProjectId = local.Project_id,
+            Type = "public_ipv4",
+            Metro = "sv",
+            Quantity = 1,
+        });
         // Allocate 1 global floating IP, which can be assigned to device in any facility
-        var test = new EquinixMetal.ReservedIpBlock("test", new EquinixMetal.ReservedIpBlockArgs
+        var testIndex_reservedIpBlockReservedIpBlock = new EquinixMetal.ReservedIpBlock("testIndex/reservedIpBlockReservedIpBlock", new EquinixMetal.ReservedIpBlockArgs
         {
             ProjectId = local.Project_id,
             Type = "global_ipv4",
@@ -73,21 +81,30 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-equinix-metal/sdk/go/equinix-metal"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-equinix-metal/sdk/v2/go/equinix-metal"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := equinix - metal.NewReservedIpBlock(ctx, "twoElasticAddresses", &equinix-metal.ReservedIpBlockArgs{
 			ProjectId: pulumi.Any(local.Project_id),
-			Facility:  pulumi.String("ewr1"),
+			Facility:  pulumi.String("sv15"),
 			Quantity:  pulumi.Int(2),
 		})
 		if err != nil {
 			return err
 		}
-		_, err = equinix - metal.NewReservedIpBlock(ctx, "test", &equinix-metal.ReservedIpBlockArgs{
+		_, err = equinix - metal.NewReservedIpBlock(ctx, "testReservedIpBlock", &equinix-metal.ReservedIpBlockArgs{
+			ProjectId: pulumi.Any(local.Project_id),
+			Type:      pulumi.String("public_ipv4"),
+			Metro:     pulumi.String("sv"),
+			Quantity:  pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = equinix - metal.NewReservedIpBlock(ctx, "testIndex_reservedIpBlockReservedIpBlock", &equinix-metal.ReservedIpBlockArgs{
 			ProjectId: pulumi.Any(local.Project_id),
 			Type:      pulumi.String("global_ipv4"),
 			Quantity:  pulumi.Int(1),
@@ -110,13 +127,19 @@ func main() {
 import pulumi
 import pulumi_equinix_metal as equinix_metal
 
-# Allocate /31 block of max 2 public IPv4 addresses in Parsippany, NJ (ewr1) for myproject
+# Allocate /31 block of max 2 public IPv4 addresses in Silicon Valley (sv15) facility for myproject
 two_elastic_addresses = equinix_metal.ReservedIpBlock("twoElasticAddresses",
     project_id=local["project_id"],
-    facility="ewr1",
+    facility="sv15",
     quantity=2)
+# Allocate 1 floating IP in Sillicon Valley (sv) metro
+test_reserved_ip_block = equinix_metal.ReservedIpBlock("testReservedIpBlock",
+    project_id=local["project_id"],
+    type="public_ipv4",
+    metro="sv",
+    quantity=1)
 # Allocate 1 global floating IP, which can be assigned to device in any facility
-test = equinix_metal.ReservedIpBlock("test",
+test_index_reserved_ip_block_reserved_ip_block = equinix_metal.ReservedIpBlock("testIndex/reservedIpBlockReservedIpBlock",
     project_id=local["project_id"],
     type="global_ipv4",
     quantity=1)
@@ -133,14 +156,21 @@ test = equinix_metal.ReservedIpBlock("test",
 import * as pulumi from "@pulumi/pulumi";
 import * as equinix_metal from "@pulumi/equinix-metal";
 
-// Allocate /31 block of max 2 public IPv4 addresses in Parsippany, NJ (ewr1) for myproject
+// Allocate /31 block of max 2 public IPv4 addresses in Silicon Valley (sv15) facility for myproject
 const twoElasticAddresses = new equinix_metal.ReservedIpBlock("twoElasticAddresses", {
     projectId: local.project_id,
-    facility: "ewr1",
+    facility: "sv15",
     quantity: 2,
 });
+// Allocate 1 floating IP in Sillicon Valley (sv) metro
+const testReservedIpBlock = new equinix_metal.ReservedIpBlock("testReservedIpBlock", {
+    projectId: local.project_id,
+    type: "public_ipv4",
+    metro: "sv",
+    quantity: 1,
+});
 // Allocate 1 global floating IP, which can be assigned to device in any facility
-const test = new equinix_metal.ReservedIpBlock("test", {
+const testIndex_reservedIpBlockReservedIpBlock = new equinix_metal.ReservedIpBlock("testIndex/reservedIpBlockReservedIpBlock", {
     projectId: local.project_id,
     type: "global_ipv4",
     quantity: 1,
@@ -164,19 +194,31 @@ const test = new equinix_metal.ReservedIpBlock("test", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ReservedIpBlock</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReservedIpBlockArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ReservedIpBlock</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReservedIpBlockArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ReservedIpBlock</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">facility</span><span class="p">:</span> <span class="nx">Optional[Union[str, Facility]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">quantity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[Union[str, IpBlockType]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ReservedIpBlock</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                    <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">facility</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, Facility]]]</span> = None<span class="p">,</span>
+                    <span class="nx">metro</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">quantity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                    <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, IpBlockType]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ReservedIpBlock</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReservedIpBlockArgs</a></span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReservedIpBlock</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ReservedIpBlockArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReservedIpBlock</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReservedIpBlock</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ReservedIpBlockArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReservedIpBlock</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ReservedIpBlock</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ReservedIpBlockArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ReservedIpBlock</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ReservedIpBlockArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -211,22 +253,32 @@ const test = new equinix_metal.ReservedIpBlock("test", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ReservedIpBlockArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -235,7 +287,7 @@ const test = new equinix_metal.ReservedIpBlock("test", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -259,7 +311,7 @@ const test = new equinix_metal.ReservedIpBlock("test", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -343,7 +395,16 @@ The ReservedIpBlock resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#facility">Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Facility</a></span>
     </dt>
-    <dd>{{% md %}}Facility where to allocate the public IP address block, makes sense only for type==public_ipv4, must be empty for type==global_ipv4
+    <dd>{{% md %}}Facility where to allocate the public IP address block, makes sense only for type==public_ipv4, must be empty for type==global_ipv4, conflicts with `metro`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metro_csharp">
+<a href="#metro_csharp" style="color: inherit; text-decoration: inherit;">Metro</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Metro where to allocate the public IP address block, makes sense only for type==public_ipv4, must be empty for type==global_ipv4, conflicts with `facility`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
@@ -392,7 +453,16 @@ The ReservedIpBlock resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#facility">Facility</a></span>
     </dt>
-    <dd>{{% md %}}Facility where to allocate the public IP address block, makes sense only for type==public_ipv4, must be empty for type==global_ipv4
+    <dd>{{% md %}}Facility where to allocate the public IP address block, makes sense only for type==public_ipv4, must be empty for type==global_ipv4, conflicts with `metro`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metro_go">
+<a href="#metro_go" style="color: inherit; text-decoration: inherit;">Metro</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Metro where to allocate the public IP address block, makes sense only for type==public_ipv4, must be empty for type==global_ipv4, conflicts with `facility`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
@@ -412,7 +482,7 @@ The ReservedIpBlock resource accepts the following [input]({{< relref "/docs/int
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The metal project ID where to allocate the address block
 {{% /md %}}</dd><dt class="property-required"
@@ -421,7 +491,7 @@ The ReservedIpBlock resource accepts the following [input]({{< relref "/docs/int
 <a href="#quantity_nodejs" style="color: inherit; text-decoration: inherit;">quantity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of allocated /32 addresses, a power of 2
 {{% /md %}}</dd><dt class="property-optional"
@@ -430,7 +500,7 @@ The ReservedIpBlock resource accepts the following [input]({{< relref "/docs/int
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Arbitrary description
 {{% /md %}}</dd><dt class="property-optional"
@@ -439,16 +509,25 @@ The ReservedIpBlock resource accepts the following [input]({{< relref "/docs/int
 <a href="#facility_nodejs" style="color: inherit; text-decoration: inherit;">facility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#facility">Facility</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#facility">pulumi<wbr>Input<Facility></a></span>
     </dt>
-    <dd>{{% md %}}Facility where to allocate the public IP address block, makes sense only for type==public_ipv4, must be empty for type==global_ipv4
+    <dd>{{% md %}}Facility where to allocate the public IP address block, makes sense only for type==public_ipv4, must be empty for type==global_ipv4, conflicts with `metro`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metro_nodejs">
+<a href="#metro_nodejs" style="color: inherit; text-decoration: inherit;">metro</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
+    </dt>
+    <dd>{{% md %}}Metro where to allocate the public IP address block, makes sense only for type==public_ipv4, must be empty for type==global_ipv4, conflicts with `facility`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ipblocktype">Ip<wbr>Block<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#ipblocktype">pulumi<wbr>Input<Ip<wbr>Block<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Either "global_ipv4" or "public_ipv4", defaults to "public_ipv4" for backward compatibility
 {{% /md %}}</dd></dl>
@@ -461,7 +540,7 @@ The ReservedIpBlock resource accepts the following [input]({{< relref "/docs/int
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The metal project ID where to allocate the address block
 {{% /md %}}</dd><dt class="property-required"
@@ -470,7 +549,7 @@ The ReservedIpBlock resource accepts the following [input]({{< relref "/docs/int
 <a href="#quantity_python" style="color: inherit; text-decoration: inherit;">quantity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of allocated /32 addresses, a power of 2
 {{% /md %}}</dd><dt class="property-optional"
@@ -479,7 +558,7 @@ The ReservedIpBlock resource accepts the following [input]({{< relref "/docs/int
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Arbitrary description
 {{% /md %}}</dd><dt class="property-optional"
@@ -488,16 +567,25 @@ The ReservedIpBlock resource accepts the following [input]({{< relref "/docs/int
 <a href="#facility_python" style="color: inherit; text-decoration: inherit;">facility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#facility">Facility</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#facility">Input[Facility]</a></span>
     </dt>
-    <dd>{{% md %}}Facility where to allocate the public IP address block, makes sense only for type==public_ipv4, must be empty for type==global_ipv4
+    <dd>{{% md %}}Facility where to allocate the public IP address block, makes sense only for type==public_ipv4, must be empty for type==global_ipv4, conflicts with `metro`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metro_python">
+<a href="#metro_python" style="color: inherit; text-decoration: inherit;">metro</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
+    </dt>
+    <dd>{{% md %}}Metro where to allocate the public IP address block, makes sense only for type==public_ipv4, must be empty for type==global_ipv4, conflicts with `facility`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#ipblocktype">Ip<wbr>Block<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#ipblocktype">Input[Ip<wbr>Block<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Either "global_ipv4" or "public_ipv4", defaults to "public_ipv4" for backward compatibility
 {{% /md %}}</dd></dl>
@@ -946,20 +1034,39 @@ Get an existing ReservedIpBlock resource's state with the given name, ID, and op
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ReservedIpBlockState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ReservedIpBlock</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ReservedIpBlockState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ReservedIpBlock</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">address_family</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cidr</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cidr_notation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">facility</span><span class="p">:</span> <span class="nx">Optional[Union[str, Facility]]</span> = None<span class="p">, </span><span class="nx">gateway</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">global_</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">manageable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">management</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">netmask</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">quantity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[Union[str, IpBlockType]]</span> = None<span class="p">) -&gt;</span> ReservedIpBlock</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">address_family</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">cidr</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">cidr_notation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">facility</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, Facility]]]</span> = None<span class="p">,</span>
+        <span class="nx">gateway</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">global_</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">manageable</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">management</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">metro</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">netmask</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">public</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">quantity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, IpBlockType]]]</span> = None<span class="p">) -&gt;</span> ReservedIpBlock</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetReservedIpBlock<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ReservedIpBlockState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReservedIpBlock</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetReservedIpBlock<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ReservedIpBlockState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReservedIpBlock</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ReservedIpBlock</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ReservedIpBlockState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ReservedIpBlock</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ReservedIpBlockState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1114,7 +1221,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#facility">Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Facility</a></span>
     </dt>
-    <dd>{{% md %}}Facility where to allocate the public IP address block, makes sense only for type==public_ipv4, must be empty for type==global_ipv4
+    <dd>{{% md %}}Facility where to allocate the public IP address block, makes sense only for type==public_ipv4, must be empty for type==global_ipv4, conflicts with `metro`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gateway_csharp">
@@ -1149,6 +1256,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_metro_csharp">
+<a href="#state_metro_csharp" style="color: inherit; text-decoration: inherit;">Metro</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Metro where to allocate the public IP address block, makes sense only for type==public_ipv4, must be empty for type==global_ipv4, conflicts with `facility`
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_netmask_csharp">
 <a href="#state_netmask_csharp" style="color: inherit; text-decoration: inherit;">Netmask</a>
@@ -1258,7 +1374,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#facility">Facility</a></span>
     </dt>
-    <dd>{{% md %}}Facility where to allocate the public IP address block, makes sense only for type==public_ipv4, must be empty for type==global_ipv4
+    <dd>{{% md %}}Facility where to allocate the public IP address block, makes sense only for type==public_ipv4, must be empty for type==global_ipv4, conflicts with `metro`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gateway_go">
@@ -1293,6 +1409,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_metro_go">
+<a href="#state_metro_go" style="color: inherit; text-decoration: inherit;">Metro</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Metro where to allocate the public IP address block, makes sense only for type==public_ipv4, must be empty for type==global_ipv4, conflicts with `facility`
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_netmask_go">
 <a href="#state_netmask_go" style="color: inherit; text-decoration: inherit;">Netmask</a>
@@ -1356,7 +1481,7 @@ The following state arguments are supported:
 <a href="#state_address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1364,7 +1489,7 @@ The following state arguments are supported:
 <a href="#state_addressfamily_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Address family as integer (4 or 6)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1373,7 +1498,7 @@ The following state arguments are supported:
 <a href="#state_cidr_nodejs" style="color: inherit; text-decoration: inherit;">cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}length of CIDR prefix of the block as integer
 {{% /md %}}</dd><dt class="property-optional"
@@ -1382,7 +1507,7 @@ The following state arguments are supported:
 <a href="#state_cidrnotation_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Notation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Address and mask in CIDR notation, e.g. "147.229.15.30/31"
 {{% /md %}}</dd><dt class="property-optional"
@@ -1391,7 +1516,7 @@ The following state arguments are supported:
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Arbitrary description
 {{% /md %}}</dd><dt class="property-optional"
@@ -1400,16 +1525,16 @@ The following state arguments are supported:
 <a href="#state_facility_nodejs" style="color: inherit; text-decoration: inherit;">facility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#facility">Facility</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#facility">pulumi<wbr>Input<Facility></a></span>
     </dt>
-    <dd>{{% md %}}Facility where to allocate the public IP address block, makes sense only for type==public_ipv4, must be empty for type==global_ipv4
+    <dd>{{% md %}}Facility where to allocate the public IP address block, makes sense only for type==public_ipv4, must be empty for type==global_ipv4, conflicts with `metro`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gateway_nodejs">
 <a href="#state_gateway_nodejs" style="color: inherit; text-decoration: inherit;">gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1417,7 +1542,7 @@ The following state arguments are supported:
 <a href="#state_global_nodejs" style="color: inherit; text-decoration: inherit;">global</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}boolean flag whether addresses from a block are global (i.e. can be assigned in any facility)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1426,7 +1551,7 @@ The following state arguments are supported:
 <a href="#state_manageable_nodejs" style="color: inherit; text-decoration: inherit;">manageable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1434,15 +1559,24 @@ The following state arguments are supported:
 <a href="#state_management_nodejs" style="color: inherit; text-decoration: inherit;">management</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_metro_nodejs">
+<a href="#state_metro_nodejs" style="color: inherit; text-decoration: inherit;">metro</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
+    </dt>
+    <dd>{{% md %}}Metro where to allocate the public IP address block, makes sense only for type==public_ipv4, must be empty for type==global_ipv4, conflicts with `facility`
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_netmask_nodejs">
 <a href="#state_netmask_nodejs" style="color: inherit; text-decoration: inherit;">netmask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Mask in decimal notation, e.g. "255.255.255.0"
 {{% /md %}}</dd><dt class="property-optional"
@@ -1451,7 +1585,7 @@ The following state arguments are supported:
 <a href="#state_network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Network IP address portion of the block specification
 {{% /md %}}</dd><dt class="property-optional"
@@ -1460,7 +1594,7 @@ The following state arguments are supported:
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The metal project ID where to allocate the address block
 {{% /md %}}</dd><dt class="property-optional"
@@ -1469,7 +1603,7 @@ The following state arguments are supported:
 <a href="#state_public_nodejs" style="color: inherit; text-decoration: inherit;">public</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}boolean flag whether addresses from a block are public
 {{% /md %}}</dd><dt class="property-optional"
@@ -1478,7 +1612,7 @@ The following state arguments are supported:
 <a href="#state_quantity_nodejs" style="color: inherit; text-decoration: inherit;">quantity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of allocated /32 addresses, a power of 2
 {{% /md %}}</dd><dt class="property-optional"
@@ -1487,7 +1621,7 @@ The following state arguments are supported:
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ipblocktype">Ip<wbr>Block<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#ipblocktype">pulumi<wbr>Input<Ip<wbr>Block<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Either "global_ipv4" or "public_ipv4", defaults to "public_ipv4" for backward compatibility
 {{% /md %}}</dd></dl>
@@ -1500,7 +1634,7 @@ The following state arguments are supported:
 <a href="#state_address_python" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1508,7 +1642,7 @@ The following state arguments are supported:
 <a href="#state_address_family_python" style="color: inherit; text-decoration: inherit;">address_<wbr>family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Address family as integer (4 or 6)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1517,7 +1651,7 @@ The following state arguments are supported:
 <a href="#state_cidr_python" style="color: inherit; text-decoration: inherit;">cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}length of CIDR prefix of the block as integer
 {{% /md %}}</dd><dt class="property-optional"
@@ -1526,7 +1660,7 @@ The following state arguments are supported:
 <a href="#state_cidr_notation_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>notation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Address and mask in CIDR notation, e.g. "147.229.15.30/31"
 {{% /md %}}</dd><dt class="property-optional"
@@ -1535,7 +1669,7 @@ The following state arguments are supported:
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Arbitrary description
 {{% /md %}}</dd><dt class="property-optional"
@@ -1544,16 +1678,16 @@ The following state arguments are supported:
 <a href="#state_facility_python" style="color: inherit; text-decoration: inherit;">facility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#facility">Facility</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#facility">Input[Facility]</a></span>
     </dt>
-    <dd>{{% md %}}Facility where to allocate the public IP address block, makes sense only for type==public_ipv4, must be empty for type==global_ipv4
+    <dd>{{% md %}}Facility where to allocate the public IP address block, makes sense only for type==public_ipv4, must be empty for type==global_ipv4, conflicts with `metro`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gateway_python">
 <a href="#state_gateway_python" style="color: inherit; text-decoration: inherit;">gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1561,7 +1695,7 @@ The following state arguments are supported:
 <a href="#state_global__python" style="color: inherit; text-decoration: inherit;">global_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}boolean flag whether addresses from a block are global (i.e. can be assigned in any facility)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1570,7 +1704,7 @@ The following state arguments are supported:
 <a href="#state_manageable_python" style="color: inherit; text-decoration: inherit;">manageable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1578,15 +1712,24 @@ The following state arguments are supported:
 <a href="#state_management_python" style="color: inherit; text-decoration: inherit;">management</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_metro_python">
+<a href="#state_metro_python" style="color: inherit; text-decoration: inherit;">metro</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
+    </dt>
+    <dd>{{% md %}}Metro where to allocate the public IP address block, makes sense only for type==public_ipv4, must be empty for type==global_ipv4, conflicts with `facility`
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_netmask_python">
 <a href="#state_netmask_python" style="color: inherit; text-decoration: inherit;">netmask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Mask in decimal notation, e.g. "255.255.255.0"
 {{% /md %}}</dd><dt class="property-optional"
@@ -1595,7 +1738,7 @@ The following state arguments are supported:
 <a href="#state_network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Network IP address portion of the block specification
 {{% /md %}}</dd><dt class="property-optional"
@@ -1604,7 +1747,7 @@ The following state arguments are supported:
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The metal project ID where to allocate the address block
 {{% /md %}}</dd><dt class="property-optional"
@@ -1613,7 +1756,7 @@ The following state arguments are supported:
 <a href="#state_public_python" style="color: inherit; text-decoration: inherit;">public</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}boolean flag whether addresses from a block are public
 {{% /md %}}</dd><dt class="property-optional"
@@ -1622,7 +1765,7 @@ The following state arguments are supported:
 <a href="#state_quantity_python" style="color: inherit; text-decoration: inherit;">quantity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of allocated /32 addresses, a power of 2
 {{% /md %}}</dd><dt class="property-optional"
@@ -1631,7 +1774,7 @@ The following state arguments are supported:
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#ipblocktype">Ip<wbr>Block<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#ipblocktype">Input[Ip<wbr>Block<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Either "global_ipv4" or "public_ipv4", defaults to "public_ipv4" for backward compatibility
 {{% /md %}}</dd></dl>
