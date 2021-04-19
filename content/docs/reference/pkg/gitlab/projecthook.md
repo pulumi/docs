@@ -58,8 +58,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gitlab/sdk/v3/go/gitlab"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gitlab/sdk/v4/go/gitlab"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -128,19 +128,41 @@ const example = new gitlab.ProjectHook("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ProjectHook</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProjectHookArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ProjectHook</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProjectHookArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ProjectHook</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">confidential_issues_events</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">confidential_note_events</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">deployment_events</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_ssl_verification</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">issues_events</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">job_events</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">merge_requests_events</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">note_events</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">pipeline_events</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">push_events</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">push_events_branch_filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tag_push_events</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wiki_page_events</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ProjectHook</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                <span class="nx">confidential_issues_events</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                <span class="nx">confidential_note_events</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                <span class="nx">deployment_events</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                <span class="nx">enable_ssl_verification</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                <span class="nx">issues_events</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                <span class="nx">job_events</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                <span class="nx">merge_requests_events</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                <span class="nx">note_events</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                <span class="nx">pipeline_events</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">push_events</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                <span class="nx">push_events_branch_filter</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">tag_push_events</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                <span class="nx">token</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">wiki_page_events</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ProjectHook</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProjectHookArgs</a></span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProjectHook</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProjectHookArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ProjectHook</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProjectHook</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProjectHookArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ProjectHook</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ProjectHook</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ProjectHookArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ProjectHook</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ProjectHookArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -175,22 +197,32 @@ const example = new gitlab.ProjectHook("example", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ProjectHookArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -199,7 +231,7 @@ const example = new gitlab.ProjectHook("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -223,7 +255,7 @@ const example = new gitlab.ProjectHook("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -574,7 +606,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name or id of the project to add the hook to.
 {{% /md %}}</dd><dt class="property-required"
@@ -583,7 +615,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The url of the hook to invoke.
 {{% /md %}}</dd><dt class="property-optional"
@@ -592,7 +624,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#confidentialissuesevents_nodejs" style="color: inherit; text-decoration: inherit;">confidential<wbr>Issues<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Invoke the hook for confidential issues events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -601,7 +633,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#confidentialnoteevents_nodejs" style="color: inherit; text-decoration: inherit;">confidential<wbr>Note<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Invoke the hook for confidential notes events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -610,7 +642,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#deploymentevents_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Invoke the hook for deployment events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -619,7 +651,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#enablesslverification_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Ssl<wbr>Verification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable ssl verification when invoking the hook.
 {{% /md %}}</dd><dt class="property-optional"
@@ -628,7 +660,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#issuesevents_nodejs" style="color: inherit; text-decoration: inherit;">issues<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Invoke the hook for issues events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -637,7 +669,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#jobevents_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Invoke the hook for job events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -646,7 +678,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#mergerequestsevents_nodejs" style="color: inherit; text-decoration: inherit;">merge<wbr>Requests<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Invoke the hook for merge requests.
 {{% /md %}}</dd><dt class="property-optional"
@@ -655,7 +687,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#noteevents_nodejs" style="color: inherit; text-decoration: inherit;">note<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Invoke the hook for notes events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -664,7 +696,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#pipelineevents_nodejs" style="color: inherit; text-decoration: inherit;">pipeline<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Invoke the hook for pipeline events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -673,7 +705,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#pushevents_nodejs" style="color: inherit; text-decoration: inherit;">push<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Invoke the hook for push events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -682,7 +714,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#pusheventsbranchfilter_nodejs" style="color: inherit; text-decoration: inherit;">push<wbr>Events<wbr>Branch<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Invoke the hook for push events on matching branches only.
 {{% /md %}}</dd><dt class="property-optional"
@@ -691,7 +723,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tagpushevents_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Push<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Invoke the hook for tag push events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -700,7 +732,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A token to present when invoking the hook.
 {{% /md %}}</dd><dt class="property-optional"
@@ -709,7 +741,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#wikipageevents_nodejs" style="color: inherit; text-decoration: inherit;">wiki<wbr>Page<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Invoke the hook for wiki page events.
 {{% /md %}}</dd></dl>
@@ -722,7 +754,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name or id of the project to add the hook to.
 {{% /md %}}</dd><dt class="property-required"
@@ -731,7 +763,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The url of the hook to invoke.
 {{% /md %}}</dd><dt class="property-optional"
@@ -740,7 +772,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#confidential_issues_events_python" style="color: inherit; text-decoration: inherit;">confidential_<wbr>issues_<wbr>events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for confidential issues events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -749,7 +781,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#confidential_note_events_python" style="color: inherit; text-decoration: inherit;">confidential_<wbr>note_<wbr>events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for confidential notes events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -758,7 +790,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#deployment_events_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for deployment events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -767,7 +799,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#enable_ssl_verification_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>ssl_<wbr>verification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable ssl verification when invoking the hook.
 {{% /md %}}</dd><dt class="property-optional"
@@ -776,7 +808,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#issues_events_python" style="color: inherit; text-decoration: inherit;">issues_<wbr>events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for issues events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -785,7 +817,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#job_events_python" style="color: inherit; text-decoration: inherit;">job_<wbr>events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for job events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -794,7 +826,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#merge_requests_events_python" style="color: inherit; text-decoration: inherit;">merge_<wbr>requests_<wbr>events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for merge requests.
 {{% /md %}}</dd><dt class="property-optional"
@@ -803,7 +835,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#note_events_python" style="color: inherit; text-decoration: inherit;">note_<wbr>events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for notes events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -812,7 +844,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#pipeline_events_python" style="color: inherit; text-decoration: inherit;">pipeline_<wbr>events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for pipeline events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -821,7 +853,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#push_events_python" style="color: inherit; text-decoration: inherit;">push_<wbr>events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for push events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -830,7 +862,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#push_events_branch_filter_python" style="color: inherit; text-decoration: inherit;">push_<wbr>events_<wbr>branch_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for push events on matching branches only.
 {{% /md %}}</dd><dt class="property-optional"
@@ -839,7 +871,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tag_push_events_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>push_<wbr>events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for tag push events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -848,7 +880,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A token to present when invoking the hook.
 {{% /md %}}</dd><dt class="property-optional"
@@ -857,7 +889,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#wiki_page_events_python" style="color: inherit; text-decoration: inherit;">wiki_<wbr>page_<wbr>events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for wiki page events.
 {{% /md %}}</dd></dl>
@@ -926,20 +958,38 @@ Get an existing ProjectHook resource's state with the given name, ID, and option
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ProjectHookState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ProjectHook</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ProjectHookState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ProjectHook</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">confidential_issues_events</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">confidential_note_events</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">deployment_events</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_ssl_verification</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">issues_events</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">job_events</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">merge_requests_events</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">note_events</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">pipeline_events</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">push_events</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">push_events_branch_filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tag_push_events</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wiki_page_events</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> ProjectHook</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">confidential_issues_events</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">confidential_note_events</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">deployment_events</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">enable_ssl_verification</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">issues_events</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">job_events</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">merge_requests_events</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">note_events</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">pipeline_events</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">push_events</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">push_events_branch_filter</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tag_push_events</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">token</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">wiki_page_events</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">) -&gt;</span> ProjectHook</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProjectHook<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ProjectHookState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ProjectHook</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProjectHook<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ProjectHookState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ProjectHook</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ProjectHook</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ProjectHookState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ProjectHook</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ProjectHookState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1344,7 +1394,7 @@ The following state arguments are supported:
 <a href="#state_confidentialissuesevents_nodejs" style="color: inherit; text-decoration: inherit;">confidential<wbr>Issues<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Invoke the hook for confidential issues events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1353,7 +1403,7 @@ The following state arguments are supported:
 <a href="#state_confidentialnoteevents_nodejs" style="color: inherit; text-decoration: inherit;">confidential<wbr>Note<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Invoke the hook for confidential notes events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1362,7 +1412,7 @@ The following state arguments are supported:
 <a href="#state_deploymentevents_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Invoke the hook for deployment events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1371,7 +1421,7 @@ The following state arguments are supported:
 <a href="#state_enablesslverification_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Ssl<wbr>Verification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable ssl verification when invoking the hook.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1380,7 +1430,7 @@ The following state arguments are supported:
 <a href="#state_issuesevents_nodejs" style="color: inherit; text-decoration: inherit;">issues<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Invoke the hook for issues events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1389,7 +1439,7 @@ The following state arguments are supported:
 <a href="#state_jobevents_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Invoke the hook for job events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1398,7 +1448,7 @@ The following state arguments are supported:
 <a href="#state_mergerequestsevents_nodejs" style="color: inherit; text-decoration: inherit;">merge<wbr>Requests<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Invoke the hook for merge requests.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1407,7 +1457,7 @@ The following state arguments are supported:
 <a href="#state_noteevents_nodejs" style="color: inherit; text-decoration: inherit;">note<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Invoke the hook for notes events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1416,7 +1466,7 @@ The following state arguments are supported:
 <a href="#state_pipelineevents_nodejs" style="color: inherit; text-decoration: inherit;">pipeline<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Invoke the hook for pipeline events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1425,7 +1475,7 @@ The following state arguments are supported:
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name or id of the project to add the hook to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1434,7 +1484,7 @@ The following state arguments are supported:
 <a href="#state_pushevents_nodejs" style="color: inherit; text-decoration: inherit;">push<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Invoke the hook for push events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1443,7 +1493,7 @@ The following state arguments are supported:
 <a href="#state_pusheventsbranchfilter_nodejs" style="color: inherit; text-decoration: inherit;">push<wbr>Events<wbr>Branch<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Invoke the hook for push events on matching branches only.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1452,7 +1502,7 @@ The following state arguments are supported:
 <a href="#state_tagpushevents_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Push<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Invoke the hook for tag push events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1461,7 +1511,7 @@ The following state arguments are supported:
 <a href="#state_token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A token to present when invoking the hook.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1470,7 +1520,7 @@ The following state arguments are supported:
 <a href="#state_url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The url of the hook to invoke.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1479,7 +1529,7 @@ The following state arguments are supported:
 <a href="#state_wikipageevents_nodejs" style="color: inherit; text-decoration: inherit;">wiki<wbr>Page<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Invoke the hook for wiki page events.
 {{% /md %}}</dd></dl>
@@ -1492,7 +1542,7 @@ The following state arguments are supported:
 <a href="#state_confidential_issues_events_python" style="color: inherit; text-decoration: inherit;">confidential_<wbr>issues_<wbr>events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for confidential issues events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1501,7 +1551,7 @@ The following state arguments are supported:
 <a href="#state_confidential_note_events_python" style="color: inherit; text-decoration: inherit;">confidential_<wbr>note_<wbr>events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for confidential notes events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1510,7 +1560,7 @@ The following state arguments are supported:
 <a href="#state_deployment_events_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for deployment events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1519,7 +1569,7 @@ The following state arguments are supported:
 <a href="#state_enable_ssl_verification_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>ssl_<wbr>verification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable ssl verification when invoking the hook.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1528,7 +1578,7 @@ The following state arguments are supported:
 <a href="#state_issues_events_python" style="color: inherit; text-decoration: inherit;">issues_<wbr>events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for issues events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1537,7 +1587,7 @@ The following state arguments are supported:
 <a href="#state_job_events_python" style="color: inherit; text-decoration: inherit;">job_<wbr>events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for job events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1546,7 +1596,7 @@ The following state arguments are supported:
 <a href="#state_merge_requests_events_python" style="color: inherit; text-decoration: inherit;">merge_<wbr>requests_<wbr>events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for merge requests.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1555,7 +1605,7 @@ The following state arguments are supported:
 <a href="#state_note_events_python" style="color: inherit; text-decoration: inherit;">note_<wbr>events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for notes events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1564,7 +1614,7 @@ The following state arguments are supported:
 <a href="#state_pipeline_events_python" style="color: inherit; text-decoration: inherit;">pipeline_<wbr>events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for pipeline events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1573,7 +1623,7 @@ The following state arguments are supported:
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name or id of the project to add the hook to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1582,7 +1632,7 @@ The following state arguments are supported:
 <a href="#state_push_events_python" style="color: inherit; text-decoration: inherit;">push_<wbr>events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for push events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1591,7 +1641,7 @@ The following state arguments are supported:
 <a href="#state_push_events_branch_filter_python" style="color: inherit; text-decoration: inherit;">push_<wbr>events_<wbr>branch_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for push events on matching branches only.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1600,7 +1650,7 @@ The following state arguments are supported:
 <a href="#state_tag_push_events_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>push_<wbr>events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for tag push events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1609,7 +1659,7 @@ The following state arguments are supported:
 <a href="#state_token_python" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A token to present when invoking the hook.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1618,7 +1668,7 @@ The following state arguments are supported:
 <a href="#state_url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The url of the hook to invoke.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1627,7 +1677,7 @@ The following state arguments are supported:
 <a href="#state_wiki_page_events_python" style="color: inherit; text-decoration: inherit;">wiki_<wbr>page_<wbr>events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for wiki page events.
 {{% /md %}}</dd></dl>

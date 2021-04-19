@@ -18,19 +18,60 @@ meta_desc: "Documentation for the gitlab.Project resource with examples, input p
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Project</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ProjectArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Project</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ProjectArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Project</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">approvals_before_merge</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">archived</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">container_registry_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">default_branch</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_with_project_templates_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">import_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initialize_with_readme</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">issues_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">lfs_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">merge_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">merge_requests_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">mirror</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">mirror_overwrites_diverged_branches</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">mirror_trigger_builds</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">only_allow_merge_if_all_discussions_are_resolved</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">only_allow_merge_if_pipeline_succeeds</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">only_mirror_protected_branches</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">packages_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">pages_access_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pipelines_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">push_rules</span><span class="p">:</span> <span class="nx">Optional[ProjectPushRulesArgs]</span> = None<span class="p">, </span><span class="nx">remove_source_branch_after_merge</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">request_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">shared_runners_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">snippets_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">template_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_project_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">use_custom_template</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">visibility_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wiki_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Project</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">approvals_before_merge</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+            <span class="nx">archived</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+            <span class="nx">container_registry_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+            <span class="nx">default_branch</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">group_with_project_templates_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+            <span class="nx">import_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">initialize_with_readme</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+            <span class="nx">issues_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+            <span class="nx">lfs_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+            <span class="nx">merge_method</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">merge_requests_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+            <span class="nx">mirror</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+            <span class="nx">mirror_overwrites_diverged_branches</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+            <span class="nx">mirror_trigger_builds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">namespace_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+            <span class="nx">only_allow_merge_if_all_discussions_are_resolved</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+            <span class="nx">only_allow_merge_if_pipeline_succeeds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+            <span class="nx">only_mirror_protected_branches</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+            <span class="nx">packages_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+            <span class="nx">pages_access_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">pipelines_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+            <span class="nx">push_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ProjectPushRulesArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">remove_source_branch_after_merge</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+            <span class="nx">request_access_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+            <span class="nx">shared_runners_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+            <span class="nx">snippets_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+            <span class="nx">template_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">template_project_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+            <span class="nx">use_custom_template</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+            <span class="nx">visibility_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">wiki_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Project</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[ProjectArgs]</a></span> = None<span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProject</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ProjectArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Project</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProject</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ProjectArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Project</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Project</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ProjectArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Project</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ProjectArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -65,22 +106,32 @@ meta_desc: "Documentation for the gitlab.Project resource with examples, input p
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ProjectArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -89,7 +140,7 @@ meta_desc: "Documentation for the gitlab.Project resource with examples, input p
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -113,7 +164,7 @@ meta_desc: "Documentation for the gitlab.Project resource with examples, input p
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -822,7 +873,7 @@ Repositories are created as private by default.
 <a href="#approvalsbeforemerge_nodejs" style="color: inherit; text-decoration: inherit;">approvals<wbr>Before<wbr>Merge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of merge request approvals required for merging. Default is 0.
 {{% /md %}}</dd><dt class="property-optional"
@@ -831,7 +882,7 @@ Repositories are created as private by default.
 <a href="#archived_nodejs" style="color: inherit; text-decoration: inherit;">archived</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the project is in read-only mode (archived). Repositories can be archived/unarchived by toggling this parameter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -840,7 +891,7 @@ Repositories are created as private by default.
 <a href="#containerregistryenabled_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Registry<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable container registry for the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -849,7 +900,7 @@ Repositories are created as private by default.
 <a href="#defaultbranch_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Branch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The default branch for the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -858,7 +909,7 @@ Repositories are created as private by default.
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A description of the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -867,7 +918,7 @@ Repositories are created as private by default.
 <a href="#groupwithprojecttemplatesid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>With<wbr>Project<wbr>Templates<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}For group-level custom templates, specifies ID of group from which all the custom project templates are sourced. Leave empty for instance-level templates. Requires use_custom_template to be true (enterprise edition).
 {{% /md %}}</dd><dt class="property-optional"
@@ -876,7 +927,7 @@ Repositories are created as private by default.
 <a href="#importurl_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Git URL to a repository to be imported.
 {{% /md %}}</dd><dt class="property-optional"
@@ -885,7 +936,7 @@ Repositories are created as private by default.
 <a href="#initializewithreadme_nodejs" style="color: inherit; text-decoration: inherit;">initialize<wbr>With<wbr>Readme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Create master branch with first commit containing a README.md file.
 {{% /md %}}</dd><dt class="property-optional"
@@ -894,7 +945,7 @@ Repositories are created as private by default.
 <a href="#issuesenabled_nodejs" style="color: inherit; text-decoration: inherit;">issues<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable issue tracking for the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -903,7 +954,7 @@ Repositories are created as private by default.
 <a href="#lfsenabled_nodejs" style="color: inherit; text-decoration: inherit;">lfs<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable LFS for the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -912,7 +963,7 @@ Repositories are created as private by default.
 <a href="#mergemethod_nodejs" style="color: inherit; text-decoration: inherit;">merge<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Set to `ff` to create fast-forward merges
 Valid values are `merge`, `rebase_merge`, `ff`
@@ -923,7 +974,7 @@ Repositories are created with `merge` by default
 <a href="#mergerequestsenabled_nodejs" style="color: inherit; text-decoration: inherit;">merge<wbr>Requests<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable merge requests for the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -932,7 +983,7 @@ Repositories are created with `merge` by default
 <a href="#mirror_nodejs" style="color: inherit; text-decoration: inherit;">mirror</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enables pull mirroring in a project. Default is `false`. For further information on mirroring,
 consult the [gitlab documentation](https://docs.gitlab.com/ee/user/project/repository/repository_mirroring.html#repository-mirroring).
@@ -942,7 +993,7 @@ consult the [gitlab documentation](https://docs.gitlab.com/ee/user/project/repos
 <a href="#mirroroverwritesdivergedbranches_nodejs" style="color: inherit; text-decoration: inherit;">mirror<wbr>Overwrites<wbr>Diverged<wbr>Branches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Pull mirror overwrites diverged branches.
 {{% /md %}}</dd><dt class="property-optional"
@@ -951,7 +1002,7 @@ consult the [gitlab documentation](https://docs.gitlab.com/ee/user/project/repos
 <a href="#mirrortriggerbuilds_nodejs" style="color: inherit; text-decoration: inherit;">mirror<wbr>Trigger<wbr>Builds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Pull mirroring triggers builds. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -960,7 +1011,7 @@ consult the [gitlab documentation](https://docs.gitlab.com/ee/user/project/repos
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -969,7 +1020,7 @@ consult the [gitlab documentation](https://docs.gitlab.com/ee/user/project/repos
 <a href="#namespaceid_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The namespace (group or user) of the project. Defaults to your user.
 See `gitlab.Group` for an example.
@@ -979,7 +1030,7 @@ See `gitlab.Group` for an example.
 <a href="#onlyallowmergeifalldiscussionsareresolved_nodejs" style="color: inherit; text-decoration: inherit;">only<wbr>Allow<wbr>Merge<wbr>If<wbr>All<wbr>Discussions<wbr>Are<wbr>Resolved</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Set to true if you want allow merges only if all discussions are resolved.
 {{% /md %}}</dd><dt class="property-optional"
@@ -988,7 +1039,7 @@ See `gitlab.Group` for an example.
 <a href="#onlyallowmergeifpipelinesucceeds_nodejs" style="color: inherit; text-decoration: inherit;">only<wbr>Allow<wbr>Merge<wbr>If<wbr>Pipeline<wbr>Succeeds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Set to true if you want allow merges only if a pipeline succeeds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -997,7 +1048,7 @@ See `gitlab.Group` for an example.
 <a href="#onlymirrorprotectedbranches_nodejs" style="color: inherit; text-decoration: inherit;">only<wbr>Mirror<wbr>Protected<wbr>Branches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Only mirror protected branches.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1006,7 +1057,7 @@ See `gitlab.Group` for an example.
 <a href="#packagesenabled_nodejs" style="color: inherit; text-decoration: inherit;">packages<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable packages repository for the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1015,7 +1066,7 @@ See `gitlab.Group` for an example.
 <a href="#pagesaccesslevel_nodejs" style="color: inherit; text-decoration: inherit;">pages<wbr>Access<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Enable pages access control
 Valid values are `disabled`, `private`, `enabled`, `public`.
@@ -1026,7 +1077,7 @@ Valid values are `disabled`, `private`, `enabled`, `public`.
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path of the repository.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1035,7 +1086,7 @@ Valid values are `disabled`, `private`, `enabled`, `public`.
 <a href="#pipelinesenabled_nodejs" style="color: inherit; text-decoration: inherit;">pipelines<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable pipelines for the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1044,7 +1095,7 @@ Valid values are `disabled`, `private`, `enabled`, `public`.
 <a href="#pushrules_nodejs" style="color: inherit; text-decoration: inherit;">push<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectpushrules">Project<wbr>Push<wbr>Rules</a></span>
+        <span class="property-type"><a href="#projectpushrules">pulumi<wbr>Input<Project<wbr>Push<wbr>Rules<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Push rules for the project (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1053,7 +1104,7 @@ Valid values are `disabled`, `private`, `enabled`, `public`.
 <a href="#removesourcebranchaftermerge_nodejs" style="color: inherit; text-decoration: inherit;">remove<wbr>Source<wbr>Branch<wbr>After<wbr>Merge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable `Delete source branch` option by default for all new merge requests.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1062,7 +1113,7 @@ Valid values are `disabled`, `private`, `enabled`, `public`.
 <a href="#requestaccessenabled_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Access<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Allow users to request member access.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1071,7 +1122,7 @@ Valid values are `disabled`, `private`, `enabled`, `public`.
 <a href="#sharedrunnersenabled_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Runners<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable shared runners for this project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1080,7 +1131,7 @@ Valid values are `disabled`, `private`, `enabled`, `public`.
 <a href="#snippetsenabled_nodejs" style="color: inherit; text-decoration: inherit;">snippets<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable snippets for the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1089,7 +1140,7 @@ Valid values are `disabled`, `private`, `enabled`, `public`.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Tags (topics) of the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1098,7 +1149,7 @@ Valid values are `disabled`, `private`, `enabled`, `public`.
 <a href="#templatename_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}When used without use_custom_template, name of a built-in project template. When used with use_custom_template, name of a custom project template. This option is mutually exclusive with `template_project_id`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1107,7 +1158,7 @@ Valid values are `disabled`, `private`, `enabled`, `public`.
 <a href="#templateprojectid_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}When used with use_custom_template, project ID of a custom project template. This is preferable to using template_name since template_name may be ambiguous (enterprise edition). This option is mutually exclusive with `template_name`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1116,7 +1167,7 @@ Valid values are `disabled`, `private`, `enabled`, `public`.
 <a href="#usecustomtemplate_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Custom<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Use either custom instance or group (with group_with_project_templates_id) project template (enterprise edition).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1125,7 +1176,7 @@ Valid values are `disabled`, `private`, `enabled`, `public`.
 <a href="#visibilitylevel_nodejs" style="color: inherit; text-decoration: inherit;">visibility<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Set to `public` to create a public project.
 Valid values are `private`, `internal`, `public`.
@@ -1136,7 +1187,7 @@ Repositories are created as private by default.
 <a href="#wikienabled_nodejs" style="color: inherit; text-decoration: inherit;">wiki<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable wiki for the project.
 {{% /md %}}</dd></dl>
@@ -1149,7 +1200,7 @@ Repositories are created as private by default.
 <a href="#approvals_before_merge_python" style="color: inherit; text-decoration: inherit;">approvals_<wbr>before_<wbr>merge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Number of merge request approvals required for merging. Default is 0.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1158,7 +1209,7 @@ Repositories are created as private by default.
 <a href="#archived_python" style="color: inherit; text-decoration: inherit;">archived</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the project is in read-only mode (archived). Repositories can be archived/unarchived by toggling this parameter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1167,7 +1218,7 @@ Repositories are created as private by default.
 <a href="#container_registry_enabled_python" style="color: inherit; text-decoration: inherit;">container_<wbr>registry_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable container registry for the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1176,7 +1227,7 @@ Repositories are created as private by default.
 <a href="#default_branch_python" style="color: inherit; text-decoration: inherit;">default_<wbr>branch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The default branch for the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1185,7 +1236,7 @@ Repositories are created as private by default.
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A description of the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1194,7 +1245,7 @@ Repositories are created as private by default.
 <a href="#group_with_project_templates_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>with_<wbr>project_<wbr>templates_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}For group-level custom templates, specifies ID of group from which all the custom project templates are sourced. Leave empty for instance-level templates. Requires use_custom_template to be true (enterprise edition).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1203,7 +1254,7 @@ Repositories are created as private by default.
 <a href="#import_url_python" style="color: inherit; text-decoration: inherit;">import_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Git URL to a repository to be imported.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1212,7 +1263,7 @@ Repositories are created as private by default.
 <a href="#initialize_with_readme_python" style="color: inherit; text-decoration: inherit;">initialize_<wbr>with_<wbr>readme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Create master branch with first commit containing a README.md file.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1221,7 +1272,7 @@ Repositories are created as private by default.
 <a href="#issues_enabled_python" style="color: inherit; text-decoration: inherit;">issues_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable issue tracking for the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1230,7 +1281,7 @@ Repositories are created as private by default.
 <a href="#lfs_enabled_python" style="color: inherit; text-decoration: inherit;">lfs_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable LFS for the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1239,7 +1290,7 @@ Repositories are created as private by default.
 <a href="#merge_method_python" style="color: inherit; text-decoration: inherit;">merge_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Set to `ff` to create fast-forward merges
 Valid values are `merge`, `rebase_merge`, `ff`
@@ -1250,7 +1301,7 @@ Repositories are created with `merge` by default
 <a href="#merge_requests_enabled_python" style="color: inherit; text-decoration: inherit;">merge_<wbr>requests_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable merge requests for the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1259,7 +1310,7 @@ Repositories are created with `merge` by default
 <a href="#mirror_python" style="color: inherit; text-decoration: inherit;">mirror</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enables pull mirroring in a project. Default is `false`. For further information on mirroring,
 consult the [gitlab documentation](https://docs.gitlab.com/ee/user/project/repository/repository_mirroring.html#repository-mirroring).
@@ -1269,7 +1320,7 @@ consult the [gitlab documentation](https://docs.gitlab.com/ee/user/project/repos
 <a href="#mirror_overwrites_diverged_branches_python" style="color: inherit; text-decoration: inherit;">mirror_<wbr>overwrites_<wbr>diverged_<wbr>branches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Pull mirror overwrites diverged branches.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1278,7 +1329,7 @@ consult the [gitlab documentation](https://docs.gitlab.com/ee/user/project/repos
 <a href="#mirror_trigger_builds_python" style="color: inherit; text-decoration: inherit;">mirror_<wbr>trigger_<wbr>builds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Pull mirroring triggers builds. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1287,7 +1338,7 @@ consult the [gitlab documentation](https://docs.gitlab.com/ee/user/project/repos
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1296,7 +1347,7 @@ consult the [gitlab documentation](https://docs.gitlab.com/ee/user/project/repos
 <a href="#namespace_id_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The namespace (group or user) of the project. Defaults to your user.
 See `gitlab.Group` for an example.
@@ -1306,7 +1357,7 @@ See `gitlab.Group` for an example.
 <a href="#only_allow_merge_if_all_discussions_are_resolved_python" style="color: inherit; text-decoration: inherit;">only_<wbr>allow_<wbr>merge_<wbr>if_<wbr>all_<wbr>discussions_<wbr>are_<wbr>resolved</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Set to true if you want allow merges only if all discussions are resolved.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1315,7 +1366,7 @@ See `gitlab.Group` for an example.
 <a href="#only_allow_merge_if_pipeline_succeeds_python" style="color: inherit; text-decoration: inherit;">only_<wbr>allow_<wbr>merge_<wbr>if_<wbr>pipeline_<wbr>succeeds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Set to true if you want allow merges only if a pipeline succeeds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1324,7 +1375,7 @@ See `gitlab.Group` for an example.
 <a href="#only_mirror_protected_branches_python" style="color: inherit; text-decoration: inherit;">only_<wbr>mirror_<wbr>protected_<wbr>branches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Only mirror protected branches.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1333,7 +1384,7 @@ See `gitlab.Group` for an example.
 <a href="#packages_enabled_python" style="color: inherit; text-decoration: inherit;">packages_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable packages repository for the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1342,7 +1393,7 @@ See `gitlab.Group` for an example.
 <a href="#pages_access_level_python" style="color: inherit; text-decoration: inherit;">pages_<wbr>access_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Enable pages access control
 Valid values are `disabled`, `private`, `enabled`, `public`.
@@ -1353,7 +1404,7 @@ Valid values are `disabled`, `private`, `enabled`, `public`.
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path of the repository.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1362,7 +1413,7 @@ Valid values are `disabled`, `private`, `enabled`, `public`.
 <a href="#pipelines_enabled_python" style="color: inherit; text-decoration: inherit;">pipelines_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable pipelines for the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1371,7 +1422,7 @@ Valid values are `disabled`, `private`, `enabled`, `public`.
 <a href="#push_rules_python" style="color: inherit; text-decoration: inherit;">push_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectpushrules">Project<wbr>Push<wbr>Rules<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectpushrules">Input[Project<wbr>Push<wbr>Rules<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Push rules for the project (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1380,7 +1431,7 @@ Valid values are `disabled`, `private`, `enabled`, `public`.
 <a href="#remove_source_branch_after_merge_python" style="color: inherit; text-decoration: inherit;">remove_<wbr>source_<wbr>branch_<wbr>after_<wbr>merge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable `Delete source branch` option by default for all new merge requests.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1389,7 +1440,7 @@ Valid values are `disabled`, `private`, `enabled`, `public`.
 <a href="#request_access_enabled_python" style="color: inherit; text-decoration: inherit;">request_<wbr>access_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Allow users to request member access.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1398,7 +1449,7 @@ Valid values are `disabled`, `private`, `enabled`, `public`.
 <a href="#shared_runners_enabled_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>runners_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable shared runners for this project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1407,7 +1458,7 @@ Valid values are `disabled`, `private`, `enabled`, `public`.
 <a href="#snippets_enabled_python" style="color: inherit; text-decoration: inherit;">snippets_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable snippets for the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1416,7 +1467,7 @@ Valid values are `disabled`, `private`, `enabled`, `public`.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Tags (topics) of the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1425,7 +1476,7 @@ Valid values are `disabled`, `private`, `enabled`, `public`.
 <a href="#template_name_python" style="color: inherit; text-decoration: inherit;">template_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}When used without use_custom_template, name of a built-in project template. When used with use_custom_template, name of a custom project template. This option is mutually exclusive with `template_project_id`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1434,7 +1485,7 @@ Valid values are `disabled`, `private`, `enabled`, `public`.
 <a href="#template_project_id_python" style="color: inherit; text-decoration: inherit;">template_<wbr>project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}When used with use_custom_template, project ID of a custom project template. This is preferable to using template_name since template_name may be ambiguous (enterprise edition). This option is mutually exclusive with `template_name`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1443,7 +1494,7 @@ Valid values are `disabled`, `private`, `enabled`, `public`.
 <a href="#use_custom_template_python" style="color: inherit; text-decoration: inherit;">use_<wbr>custom_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Use either custom instance or group (with group_with_project_templates_id) project template (enterprise edition).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1452,7 +1503,7 @@ Valid values are `disabled`, `private`, `enabled`, `public`.
 <a href="#visibility_level_python" style="color: inherit; text-decoration: inherit;">visibility_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Set to `public` to create a public project.
 Valid values are `private`, `internal`, `public`.
@@ -1463,7 +1514,7 @@ Repositories are created as private by default.
 <a href="#wiki_enabled_python" style="color: inherit; text-decoration: inherit;">wiki_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable wiki for the project.
 {{% /md %}}</dd></dl>
@@ -1720,20 +1771,62 @@ Get an existing Project resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ProjectState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Project</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ProjectState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Project</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">approvals_before_merge</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">archived</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">container_registry_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">default_branch</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_with_project_templates_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">http_url_to_repo</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">import_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initialize_with_readme</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">issues_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">lfs_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">merge_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">merge_requests_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">mirror</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">mirror_overwrites_diverged_branches</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">mirror_trigger_builds</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">only_allow_merge_if_all_discussions_are_resolved</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">only_allow_merge_if_pipeline_succeeds</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">only_mirror_protected_branches</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">packages_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">pages_access_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path_with_namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pipelines_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">push_rules</span><span class="p">:</span> <span class="nx">Optional[ProjectPushRulesArgs]</span> = None<span class="p">, </span><span class="nx">remove_source_branch_after_merge</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">request_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">runners_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shared_runners_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">snippets_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ssh_url_to_repo</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">template_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_project_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">use_custom_template</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">visibility_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">web_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wiki_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Project</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">approvals_before_merge</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">archived</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">container_registry_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">default_branch</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">group_with_project_templates_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">http_url_to_repo</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">import_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">initialize_with_readme</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">issues_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">lfs_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">merge_method</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">merge_requests_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">mirror</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">mirror_overwrites_diverged_branches</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">mirror_trigger_builds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">namespace_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">only_allow_merge_if_all_discussions_are_resolved</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">only_allow_merge_if_pipeline_succeeds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">only_mirror_protected_branches</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">packages_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">pages_access_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">path_with_namespace</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">pipelines_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">push_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ProjectPushRulesArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">remove_source_branch_after_merge</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">request_access_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">runners_token</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">shared_runners_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">snippets_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">ssh_url_to_repo</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">template_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">template_project_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">use_custom_template</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">visibility_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">web_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">wiki_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">) -&gt;</span> Project</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProject<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ProjectState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Project</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProject<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ProjectState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Project</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Project</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ProjectState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Project</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ProjectState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2590,7 +2683,7 @@ Repositories are created as private by default.
 <a href="#state_approvalsbeforemerge_nodejs" style="color: inherit; text-decoration: inherit;">approvals<wbr>Before<wbr>Merge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of merge request approvals required for merging. Default is 0.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2599,7 +2692,7 @@ Repositories are created as private by default.
 <a href="#state_archived_nodejs" style="color: inherit; text-decoration: inherit;">archived</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the project is in read-only mode (archived). Repositories can be archived/unarchived by toggling this parameter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2608,7 +2701,7 @@ Repositories are created as private by default.
 <a href="#state_containerregistryenabled_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Registry<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable container registry for the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2617,7 +2710,7 @@ Repositories are created as private by default.
 <a href="#state_defaultbranch_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Branch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The default branch for the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2626,7 +2719,7 @@ Repositories are created as private by default.
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A description of the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2635,7 +2728,7 @@ Repositories are created as private by default.
 <a href="#state_groupwithprojecttemplatesid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>With<wbr>Project<wbr>Templates<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}For group-level custom templates, specifies ID of group from which all the custom project templates are sourced. Leave empty for instance-level templates. Requires use_custom_template to be true (enterprise edition).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2644,7 +2737,7 @@ Repositories are created as private by default.
 <a href="#state_httpurltorepo_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Url<wbr>To<wbr>Repo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the
 repository via HTTP.
@@ -2654,7 +2747,7 @@ repository via HTTP.
 <a href="#state_importurl_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Git URL to a repository to be imported.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2663,7 +2756,7 @@ repository via HTTP.
 <a href="#state_initializewithreadme_nodejs" style="color: inherit; text-decoration: inherit;">initialize<wbr>With<wbr>Readme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Create master branch with first commit containing a README.md file.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2672,7 +2765,7 @@ repository via HTTP.
 <a href="#state_issuesenabled_nodejs" style="color: inherit; text-decoration: inherit;">issues<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable issue tracking for the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2681,7 +2774,7 @@ repository via HTTP.
 <a href="#state_lfsenabled_nodejs" style="color: inherit; text-decoration: inherit;">lfs<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable LFS for the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2690,7 +2783,7 @@ repository via HTTP.
 <a href="#state_mergemethod_nodejs" style="color: inherit; text-decoration: inherit;">merge<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Set to `ff` to create fast-forward merges
 Valid values are `merge`, `rebase_merge`, `ff`
@@ -2701,7 +2794,7 @@ Repositories are created with `merge` by default
 <a href="#state_mergerequestsenabled_nodejs" style="color: inherit; text-decoration: inherit;">merge<wbr>Requests<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable merge requests for the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2710,7 +2803,7 @@ Repositories are created with `merge` by default
 <a href="#state_mirror_nodejs" style="color: inherit; text-decoration: inherit;">mirror</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enables pull mirroring in a project. Default is `false`. For further information on mirroring,
 consult the [gitlab documentation](https://docs.gitlab.com/ee/user/project/repository/repository_mirroring.html#repository-mirroring).
@@ -2720,7 +2813,7 @@ consult the [gitlab documentation](https://docs.gitlab.com/ee/user/project/repos
 <a href="#state_mirroroverwritesdivergedbranches_nodejs" style="color: inherit; text-decoration: inherit;">mirror<wbr>Overwrites<wbr>Diverged<wbr>Branches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Pull mirror overwrites diverged branches.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2729,7 +2822,7 @@ consult the [gitlab documentation](https://docs.gitlab.com/ee/user/project/repos
 <a href="#state_mirrortriggerbuilds_nodejs" style="color: inherit; text-decoration: inherit;">mirror<wbr>Trigger<wbr>Builds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Pull mirroring triggers builds. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2738,7 +2831,7 @@ consult the [gitlab documentation](https://docs.gitlab.com/ee/user/project/repos
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2747,7 +2840,7 @@ consult the [gitlab documentation](https://docs.gitlab.com/ee/user/project/repos
 <a href="#state_namespaceid_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The namespace (group or user) of the project. Defaults to your user.
 See `gitlab.Group` for an example.
@@ -2757,7 +2850,7 @@ See `gitlab.Group` for an example.
 <a href="#state_onlyallowmergeifalldiscussionsareresolved_nodejs" style="color: inherit; text-decoration: inherit;">only<wbr>Allow<wbr>Merge<wbr>If<wbr>All<wbr>Discussions<wbr>Are<wbr>Resolved</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Set to true if you want allow merges only if all discussions are resolved.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2766,7 +2859,7 @@ See `gitlab.Group` for an example.
 <a href="#state_onlyallowmergeifpipelinesucceeds_nodejs" style="color: inherit; text-decoration: inherit;">only<wbr>Allow<wbr>Merge<wbr>If<wbr>Pipeline<wbr>Succeeds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Set to true if you want allow merges only if a pipeline succeeds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2775,7 +2868,7 @@ See `gitlab.Group` for an example.
 <a href="#state_onlymirrorprotectedbranches_nodejs" style="color: inherit; text-decoration: inherit;">only<wbr>Mirror<wbr>Protected<wbr>Branches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Only mirror protected branches.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2784,7 +2877,7 @@ See `gitlab.Group` for an example.
 <a href="#state_packagesenabled_nodejs" style="color: inherit; text-decoration: inherit;">packages<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable packages repository for the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2793,7 +2886,7 @@ See `gitlab.Group` for an example.
 <a href="#state_pagesaccesslevel_nodejs" style="color: inherit; text-decoration: inherit;">pages<wbr>Access<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Enable pages access control
 Valid values are `disabled`, `private`, `enabled`, `public`.
@@ -2804,7 +2897,7 @@ Valid values are `disabled`, `private`, `enabled`, `public`.
 <a href="#state_path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path of the repository.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2813,7 +2906,7 @@ Valid values are `disabled`, `private`, `enabled`, `public`.
 <a href="#state_pathwithnamespace_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>With<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path of the repository with namespace.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2822,7 +2915,7 @@ Valid values are `disabled`, `private`, `enabled`, `public`.
 <a href="#state_pipelinesenabled_nodejs" style="color: inherit; text-decoration: inherit;">pipelines<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable pipelines for the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2831,7 +2924,7 @@ Valid values are `disabled`, `private`, `enabled`, `public`.
 <a href="#state_pushrules_nodejs" style="color: inherit; text-decoration: inherit;">push<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectpushrules">Project<wbr>Push<wbr>Rules</a></span>
+        <span class="property-type"><a href="#projectpushrules">pulumi<wbr>Input<Project<wbr>Push<wbr>Rules<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Push rules for the project (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2840,7 +2933,7 @@ Valid values are `disabled`, `private`, `enabled`, `public`.
 <a href="#state_removesourcebranchaftermerge_nodejs" style="color: inherit; text-decoration: inherit;">remove<wbr>Source<wbr>Branch<wbr>After<wbr>Merge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable `Delete source branch` option by default for all new merge requests.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2849,7 +2942,7 @@ Valid values are `disabled`, `private`, `enabled`, `public`.
 <a href="#state_requestaccessenabled_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Access<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Allow users to request member access.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2858,7 +2951,7 @@ Valid values are `disabled`, `private`, `enabled`, `public`.
 <a href="#state_runnerstoken_nodejs" style="color: inherit; text-decoration: inherit;">runners<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Registration token to use during runner setup.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2867,7 +2960,7 @@ Valid values are `disabled`, `private`, `enabled`, `public`.
 <a href="#state_sharedrunnersenabled_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Runners<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable shared runners for this project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2876,7 +2969,7 @@ Valid values are `disabled`, `private`, `enabled`, `public`.
 <a href="#state_snippetsenabled_nodejs" style="color: inherit; text-decoration: inherit;">snippets<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable snippets for the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2885,7 +2978,7 @@ Valid values are `disabled`, `private`, `enabled`, `public`.
 <a href="#state_sshurltorepo_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Url<wbr>To<wbr>Repo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the
 repository via SSH.
@@ -2895,7 +2988,7 @@ repository via SSH.
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Tags (topics) of the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2904,7 +2997,7 @@ repository via SSH.
 <a href="#state_templatename_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}When used without use_custom_template, name of a built-in project template. When used with use_custom_template, name of a custom project template. This option is mutually exclusive with `template_project_id`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2913,7 +3006,7 @@ repository via SSH.
 <a href="#state_templateprojectid_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}When used with use_custom_template, project ID of a custom project template. This is preferable to using template_name since template_name may be ambiguous (enterprise edition). This option is mutually exclusive with `template_name`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2922,7 +3015,7 @@ repository via SSH.
 <a href="#state_usecustomtemplate_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Custom<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Use either custom instance or group (with group_with_project_templates_id) project template (enterprise edition).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2931,7 +3024,7 @@ repository via SSH.
 <a href="#state_visibilitylevel_nodejs" style="color: inherit; text-decoration: inherit;">visibility<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Set to `public` to create a public project.
 Valid values are `private`, `internal`, `public`.
@@ -2942,7 +3035,7 @@ Repositories are created as private by default.
 <a href="#state_weburl_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}URL that can be used to find the project in a browser.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2951,7 +3044,7 @@ Repositories are created as private by default.
 <a href="#state_wikienabled_nodejs" style="color: inherit; text-decoration: inherit;">wiki<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable wiki for the project.
 {{% /md %}}</dd></dl>
@@ -2964,7 +3057,7 @@ Repositories are created as private by default.
 <a href="#state_approvals_before_merge_python" style="color: inherit; text-decoration: inherit;">approvals_<wbr>before_<wbr>merge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Number of merge request approvals required for merging. Default is 0.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2973,7 +3066,7 @@ Repositories are created as private by default.
 <a href="#state_archived_python" style="color: inherit; text-decoration: inherit;">archived</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the project is in read-only mode (archived). Repositories can be archived/unarchived by toggling this parameter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2982,7 +3075,7 @@ Repositories are created as private by default.
 <a href="#state_container_registry_enabled_python" style="color: inherit; text-decoration: inherit;">container_<wbr>registry_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable container registry for the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2991,7 +3084,7 @@ Repositories are created as private by default.
 <a href="#state_default_branch_python" style="color: inherit; text-decoration: inherit;">default_<wbr>branch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The default branch for the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3000,7 +3093,7 @@ Repositories are created as private by default.
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A description of the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3009,7 +3102,7 @@ Repositories are created as private by default.
 <a href="#state_group_with_project_templates_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>with_<wbr>project_<wbr>templates_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}For group-level custom templates, specifies ID of group from which all the custom project templates are sourced. Leave empty for instance-level templates. Requires use_custom_template to be true (enterprise edition).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3018,7 +3111,7 @@ Repositories are created as private by default.
 <a href="#state_http_url_to_repo_python" style="color: inherit; text-decoration: inherit;">http_<wbr>url_<wbr>to_<wbr>repo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the
 repository via HTTP.
@@ -3028,7 +3121,7 @@ repository via HTTP.
 <a href="#state_import_url_python" style="color: inherit; text-decoration: inherit;">import_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Git URL to a repository to be imported.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3037,7 +3130,7 @@ repository via HTTP.
 <a href="#state_initialize_with_readme_python" style="color: inherit; text-decoration: inherit;">initialize_<wbr>with_<wbr>readme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Create master branch with first commit containing a README.md file.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3046,7 +3139,7 @@ repository via HTTP.
 <a href="#state_issues_enabled_python" style="color: inherit; text-decoration: inherit;">issues_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable issue tracking for the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3055,7 +3148,7 @@ repository via HTTP.
 <a href="#state_lfs_enabled_python" style="color: inherit; text-decoration: inherit;">lfs_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable LFS for the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3064,7 +3157,7 @@ repository via HTTP.
 <a href="#state_merge_method_python" style="color: inherit; text-decoration: inherit;">merge_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Set to `ff` to create fast-forward merges
 Valid values are `merge`, `rebase_merge`, `ff`
@@ -3075,7 +3168,7 @@ Repositories are created with `merge` by default
 <a href="#state_merge_requests_enabled_python" style="color: inherit; text-decoration: inherit;">merge_<wbr>requests_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable merge requests for the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3084,7 +3177,7 @@ Repositories are created with `merge` by default
 <a href="#state_mirror_python" style="color: inherit; text-decoration: inherit;">mirror</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enables pull mirroring in a project. Default is `false`. For further information on mirroring,
 consult the [gitlab documentation](https://docs.gitlab.com/ee/user/project/repository/repository_mirroring.html#repository-mirroring).
@@ -3094,7 +3187,7 @@ consult the [gitlab documentation](https://docs.gitlab.com/ee/user/project/repos
 <a href="#state_mirror_overwrites_diverged_branches_python" style="color: inherit; text-decoration: inherit;">mirror_<wbr>overwrites_<wbr>diverged_<wbr>branches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Pull mirror overwrites diverged branches.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3103,7 +3196,7 @@ consult the [gitlab documentation](https://docs.gitlab.com/ee/user/project/repos
 <a href="#state_mirror_trigger_builds_python" style="color: inherit; text-decoration: inherit;">mirror_<wbr>trigger_<wbr>builds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Pull mirroring triggers builds. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3112,7 +3205,7 @@ consult the [gitlab documentation](https://docs.gitlab.com/ee/user/project/repos
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3121,7 +3214,7 @@ consult the [gitlab documentation](https://docs.gitlab.com/ee/user/project/repos
 <a href="#state_namespace_id_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The namespace (group or user) of the project. Defaults to your user.
 See `gitlab.Group` for an example.
@@ -3131,7 +3224,7 @@ See `gitlab.Group` for an example.
 <a href="#state_only_allow_merge_if_all_discussions_are_resolved_python" style="color: inherit; text-decoration: inherit;">only_<wbr>allow_<wbr>merge_<wbr>if_<wbr>all_<wbr>discussions_<wbr>are_<wbr>resolved</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Set to true if you want allow merges only if all discussions are resolved.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3140,7 +3233,7 @@ See `gitlab.Group` for an example.
 <a href="#state_only_allow_merge_if_pipeline_succeeds_python" style="color: inherit; text-decoration: inherit;">only_<wbr>allow_<wbr>merge_<wbr>if_<wbr>pipeline_<wbr>succeeds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Set to true if you want allow merges only if a pipeline succeeds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3149,7 +3242,7 @@ See `gitlab.Group` for an example.
 <a href="#state_only_mirror_protected_branches_python" style="color: inherit; text-decoration: inherit;">only_<wbr>mirror_<wbr>protected_<wbr>branches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Only mirror protected branches.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3158,7 +3251,7 @@ See `gitlab.Group` for an example.
 <a href="#state_packages_enabled_python" style="color: inherit; text-decoration: inherit;">packages_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable packages repository for the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3167,7 +3260,7 @@ See `gitlab.Group` for an example.
 <a href="#state_pages_access_level_python" style="color: inherit; text-decoration: inherit;">pages_<wbr>access_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Enable pages access control
 Valid values are `disabled`, `private`, `enabled`, `public`.
@@ -3178,7 +3271,7 @@ Valid values are `disabled`, `private`, `enabled`, `public`.
 <a href="#state_path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path of the repository.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3187,7 +3280,7 @@ Valid values are `disabled`, `private`, `enabled`, `public`.
 <a href="#state_path_with_namespace_python" style="color: inherit; text-decoration: inherit;">path_<wbr>with_<wbr>namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path of the repository with namespace.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3196,7 +3289,7 @@ Valid values are `disabled`, `private`, `enabled`, `public`.
 <a href="#state_pipelines_enabled_python" style="color: inherit; text-decoration: inherit;">pipelines_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable pipelines for the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3205,7 +3298,7 @@ Valid values are `disabled`, `private`, `enabled`, `public`.
 <a href="#state_push_rules_python" style="color: inherit; text-decoration: inherit;">push_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectpushrules">Project<wbr>Push<wbr>Rules<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectpushrules">Input[Project<wbr>Push<wbr>Rules<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Push rules for the project (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3214,7 +3307,7 @@ Valid values are `disabled`, `private`, `enabled`, `public`.
 <a href="#state_remove_source_branch_after_merge_python" style="color: inherit; text-decoration: inherit;">remove_<wbr>source_<wbr>branch_<wbr>after_<wbr>merge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable `Delete source branch` option by default for all new merge requests.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3223,7 +3316,7 @@ Valid values are `disabled`, `private`, `enabled`, `public`.
 <a href="#state_request_access_enabled_python" style="color: inherit; text-decoration: inherit;">request_<wbr>access_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Allow users to request member access.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3232,7 +3325,7 @@ Valid values are `disabled`, `private`, `enabled`, `public`.
 <a href="#state_runners_token_python" style="color: inherit; text-decoration: inherit;">runners_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Registration token to use during runner setup.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3241,7 +3334,7 @@ Valid values are `disabled`, `private`, `enabled`, `public`.
 <a href="#state_shared_runners_enabled_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>runners_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable shared runners for this project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3250,7 +3343,7 @@ Valid values are `disabled`, `private`, `enabled`, `public`.
 <a href="#state_snippets_enabled_python" style="color: inherit; text-decoration: inherit;">snippets_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable snippets for the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3259,7 +3352,7 @@ Valid values are `disabled`, `private`, `enabled`, `public`.
 <a href="#state_ssh_url_to_repo_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>url_<wbr>to_<wbr>repo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the
 repository via SSH.
@@ -3269,7 +3362,7 @@ repository via SSH.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Tags (topics) of the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3278,7 +3371,7 @@ repository via SSH.
 <a href="#state_template_name_python" style="color: inherit; text-decoration: inherit;">template_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}When used without use_custom_template, name of a built-in project template. When used with use_custom_template, name of a custom project template. This option is mutually exclusive with `template_project_id`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3287,7 +3380,7 @@ repository via SSH.
 <a href="#state_template_project_id_python" style="color: inherit; text-decoration: inherit;">template_<wbr>project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}When used with use_custom_template, project ID of a custom project template. This is preferable to using template_name since template_name may be ambiguous (enterprise edition). This option is mutually exclusive with `template_name`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3296,7 +3389,7 @@ repository via SSH.
 <a href="#state_use_custom_template_python" style="color: inherit; text-decoration: inherit;">use_<wbr>custom_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Use either custom instance or group (with group_with_project_templates_id) project template (enterprise edition).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3305,7 +3398,7 @@ repository via SSH.
 <a href="#state_visibility_level_python" style="color: inherit; text-decoration: inherit;">visibility_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Set to `public` to create a public project.
 Valid values are `private`, `internal`, `public`.
@@ -3316,7 +3409,7 @@ Repositories are created as private by default.
 <a href="#state_web_url_python" style="color: inherit; text-decoration: inherit;">web_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}URL that can be used to find the project in a browser.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3325,7 +3418,7 @@ Repositories are created as private by default.
 <a href="#state_wiki_enabled_python" style="color: inherit; text-decoration: inherit;">wiki_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable wiki for the project.
 {{% /md %}}</dd></dl>
@@ -3555,7 +3648,7 @@ Repositories are created as private by default.
 <a href="#authoremailregex_nodejs" style="color: inherit; text-decoration: inherit;">author<wbr>Email<wbr>Regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}All commit author emails must match this regex, e.g. `@my-company.com$`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3564,7 +3657,7 @@ Repositories are created as private by default.
 <a href="#branchnameregex_nodejs" style="color: inherit; text-decoration: inherit;">branch<wbr>Name<wbr>Regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}All branch names must match this regex, e.g. `(feature|hotfix)\/*`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3573,7 +3666,7 @@ Repositories are created as private by default.
 <a href="#commitcommittercheck_nodejs" style="color: inherit; text-decoration: inherit;">commit<wbr>Committer<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Users can only push commits to this repository that were committed with one of their own verified emails.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3582,7 +3675,7 @@ Repositories are created as private by default.
 <a href="#commitmessagenegativeregex_nodejs" style="color: inherit; text-decoration: inherit;">commit<wbr>Message<wbr>Negative<wbr>Regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}No commit message is allowed to match this regex, for example `ssh\:\/\/`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3591,7 +3684,7 @@ Repositories are created as private by default.
 <a href="#commitmessageregex_nodejs" style="color: inherit; text-decoration: inherit;">commit<wbr>Message<wbr>Regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}All commit messages must match this regex, e.g. `Fixed \d+\..*`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3600,7 +3693,7 @@ Repositories are created as private by default.
 <a href="#denydeletetag_nodejs" style="color: inherit; text-decoration: inherit;">deny<wbr>Delete<wbr>Tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Deny deleting a tag.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3609,7 +3702,7 @@ Repositories are created as private by default.
 <a href="#filenameregex_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Name<wbr>Regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}All commited filenames must not match this regex, e.g. `(jar|exe)$`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3618,7 +3711,7 @@ Repositories are created as private by default.
 <a href="#maxfilesize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>File<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Maximum file size (MB).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3627,7 +3720,7 @@ Repositories are created as private by default.
 <a href="#membercheck_nodejs" style="color: inherit; text-decoration: inherit;">member<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Restrict commits by author (email) to existing GitLab users.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3636,7 +3729,7 @@ Repositories are created as private by default.
 <a href="#preventsecrets_nodejs" style="color: inherit; text-decoration: inherit;">prevent<wbr>Secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}GitLab will reject any files that are likely to contain secrets.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3645,7 +3738,7 @@ Repositories are created as private by default.
 <a href="#rejectunsignedcommits_nodejs" style="color: inherit; text-decoration: inherit;">reject<wbr>Unsigned<wbr>Commits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Reject commit when it’s not signed through GPG.
 {{% /md %}}</dd></dl>
@@ -3658,7 +3751,7 @@ Repositories are created as private by default.
 <a href="#author_email_regex_python" style="color: inherit; text-decoration: inherit;">author_<wbr>email_<wbr>regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}All commit author emails must match this regex, e.g. `@my-company.com$`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3667,7 +3760,7 @@ Repositories are created as private by default.
 <a href="#branch_name_regex_python" style="color: inherit; text-decoration: inherit;">branch_<wbr>name_<wbr>regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}All branch names must match this regex, e.g. `(feature|hotfix)\/*`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3676,7 +3769,7 @@ Repositories are created as private by default.
 <a href="#commit_committer_check_python" style="color: inherit; text-decoration: inherit;">commit_<wbr>committer_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Users can only push commits to this repository that were committed with one of their own verified emails.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3685,7 +3778,7 @@ Repositories are created as private by default.
 <a href="#commit_message_negative_regex_python" style="color: inherit; text-decoration: inherit;">commit_<wbr>message_<wbr>negative_<wbr>regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}No commit message is allowed to match this regex, for example `ssh\:\/\/`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3694,7 +3787,7 @@ Repositories are created as private by default.
 <a href="#commit_message_regex_python" style="color: inherit; text-decoration: inherit;">commit_<wbr>message_<wbr>regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}All commit messages must match this regex, e.g. `Fixed \d+\..*`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3703,7 +3796,7 @@ Repositories are created as private by default.
 <a href="#deny_delete_tag_python" style="color: inherit; text-decoration: inherit;">deny_<wbr>delete_<wbr>tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Deny deleting a tag.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3712,7 +3805,7 @@ Repositories are created as private by default.
 <a href="#file_name_regex_python" style="color: inherit; text-decoration: inherit;">file_<wbr>name_<wbr>regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}All commited filenames must not match this regex, e.g. `(jar|exe)$`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3721,7 +3814,7 @@ Repositories are created as private by default.
 <a href="#max_file_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>file_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Maximum file size (MB).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3730,7 +3823,7 @@ Repositories are created as private by default.
 <a href="#member_check_python" style="color: inherit; text-decoration: inherit;">member_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Restrict commits by author (email) to existing GitLab users.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3739,7 +3832,7 @@ Repositories are created as private by default.
 <a href="#prevent_secrets_python" style="color: inherit; text-decoration: inherit;">prevent_<wbr>secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}GitLab will reject any files that are likely to contain secrets.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3748,7 +3841,7 @@ Repositories are created as private by default.
 <a href="#reject_unsigned_commits_python" style="color: inherit; text-decoration: inherit;">reject_<wbr>unsigned_<wbr>commits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Reject commit when it’s not signed through GPG.
 {{% /md %}}</dd></dl>
