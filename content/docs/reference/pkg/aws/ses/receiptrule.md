@@ -75,8 +75,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ses"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ses"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -183,19 +183,39 @@ const store = new aws.ses.ReceiptRule("store", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ReceiptRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReceiptRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ReceiptRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReceiptRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ReceiptRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">add_header_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ReceiptRuleAddHeaderActionArgs]]</span> = None<span class="p">, </span><span class="nx">after</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bounce_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ReceiptRuleBounceActionArgs]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">lambda_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ReceiptRuleLambdaActionArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recipients</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">rule_set_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">s3_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ReceiptRuleS3ActionArgs]]</span> = None<span class="p">, </span><span class="nx">scan_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sns_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ReceiptRuleSnsActionArgs]]</span> = None<span class="p">, </span><span class="nx">stop_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ReceiptRuleStopActionArgs]]</span> = None<span class="p">, </span><span class="nx">tls_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workmail_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ReceiptRuleWorkmailActionArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ReceiptRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                <span class="nx">add_header_actions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ReceiptRuleAddHeaderActionArgs]]]]</span> = None<span class="p">,</span>
+                <span class="nx">after</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">bounce_actions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ReceiptRuleBounceActionArgs]]]]</span> = None<span class="p">,</span>
+                <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                <span class="nx">lambda_actions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ReceiptRuleLambdaActionArgs]]]]</span> = None<span class="p">,</span>
+                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">recipients</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                <span class="nx">rule_set_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">s3_actions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ReceiptRuleS3ActionArgs]]]]</span> = None<span class="p">,</span>
+                <span class="nx">scan_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                <span class="nx">sns_actions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ReceiptRuleSnsActionArgs]]]]</span> = None<span class="p">,</span>
+                <span class="nx">stop_actions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ReceiptRuleStopActionArgs]]]]</span> = None<span class="p">,</span>
+                <span class="nx">tls_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">workmail_actions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ReceiptRuleWorkmailActionArgs]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ReceiptRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReceiptRuleArgs</a></span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReceiptRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ReceiptRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReceiptRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReceiptRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ReceiptRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReceiptRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ReceiptRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ReceiptRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ReceiptRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ReceiptRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -230,22 +250,32 @@ const store = new aws.ses.ReceiptRule("store", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ReceiptRuleArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -254,7 +284,7 @@ const store = new aws.ses.ReceiptRule("store", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -278,7 +308,7 @@ const store = new aws.ses.ReceiptRule("store", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -593,7 +623,7 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#rulesetname_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Set<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the rule set
 {{% /md %}}</dd><dt class="property-optional"
@@ -602,7 +632,7 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#addheaderactions_nodejs" style="color: inherit; text-decoration: inherit;">add<wbr>Header<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptruleaddheaderaction">Receipt<wbr>Rule<wbr>Add<wbr>Header<wbr>Action[]</a></span>
+        <span class="property-type"><a href="#receiptruleaddheaderaction">pulumi.<wbr>Input<pulumi.<wbr>Input<Receipt<wbr>Rule<wbr>Add<wbr>Header<wbr>Action<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of Add Header Action blocks. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -611,7 +641,7 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#after_nodejs" style="color: inherit; text-decoration: inherit;">after</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the rule to place this rule after
 {{% /md %}}</dd><dt class="property-optional"
@@ -620,7 +650,7 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#bounceactions_nodejs" style="color: inherit; text-decoration: inherit;">bounce<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulebounceaction">Receipt<wbr>Rule<wbr>Bounce<wbr>Action[]</a></span>
+        <span class="property-type"><a href="#receiptrulebounceaction">pulumi.<wbr>Input<pulumi.<wbr>Input<Receipt<wbr>Rule<wbr>Bounce<wbr>Action<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of Bounce Action blocks. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -629,7 +659,7 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true, the rule will be enabled
 {{% /md %}}</dd><dt class="property-optional"
@@ -638,7 +668,7 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#lambdaactions_nodejs" style="color: inherit; text-decoration: inherit;">lambda<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulelambdaaction">Receipt<wbr>Rule<wbr>Lambda<wbr>Action[]</a></span>
+        <span class="property-type"><a href="#receiptrulelambdaaction">pulumi.<wbr>Input<pulumi.<wbr>Input<Receipt<wbr>Rule<wbr>Lambda<wbr>Action<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of Lambda Action blocks. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -647,7 +677,7 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the rule
 {{% /md %}}</dd><dt class="property-optional"
@@ -656,7 +686,7 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#recipients_nodejs" style="color: inherit; text-decoration: inherit;">recipients</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of email addresses
 {{% /md %}}</dd><dt class="property-optional"
@@ -665,7 +695,7 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#s3actions_nodejs" style="color: inherit; text-decoration: inherit;">s3Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrules3action">Receipt<wbr>Rule<wbr>S3Action[]</a></span>
+        <span class="property-type"><a href="#receiptrules3action">pulumi.<wbr>Input<pulumi.<wbr>Input<Receipt<wbr>Rule<wbr>S3Action<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of S3 Action blocks. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -674,7 +704,7 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#scanenabled_nodejs" style="color: inherit; text-decoration: inherit;">scan<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true, incoming emails will be scanned for spam and viruses
 {{% /md %}}</dd><dt class="property-optional"
@@ -683,7 +713,7 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#snsactions_nodejs" style="color: inherit; text-decoration: inherit;">sns<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulesnsaction">Receipt<wbr>Rule<wbr>Sns<wbr>Action[]</a></span>
+        <span class="property-type"><a href="#receiptrulesnsaction">pulumi.<wbr>Input<pulumi.<wbr>Input<Receipt<wbr>Rule<wbr>Sns<wbr>Action<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of SNS Action blocks. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -692,7 +722,7 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#stopactions_nodejs" style="color: inherit; text-decoration: inherit;">stop<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulestopaction">Receipt<wbr>Rule<wbr>Stop<wbr>Action[]</a></span>
+        <span class="property-type"><a href="#receiptrulestopaction">pulumi.<wbr>Input<pulumi.<wbr>Input<Receipt<wbr>Rule<wbr>Stop<wbr>Action<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of Stop Action blocks. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -701,7 +731,7 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tlspolicy_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Require or Optional
 {{% /md %}}</dd><dt class="property-optional"
@@ -710,7 +740,7 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#workmailactions_nodejs" style="color: inherit; text-decoration: inherit;">workmail<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptruleworkmailaction">Receipt<wbr>Rule<wbr>Workmail<wbr>Action[]</a></span>
+        <span class="property-type"><a href="#receiptruleworkmailaction">pulumi.<wbr>Input<pulumi.<wbr>Input<Receipt<wbr>Rule<wbr>Workmail<wbr>Action<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of WorkMail Action blocks. Documented below.
 {{% /md %}}</dd></dl>
@@ -723,7 +753,7 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#rule_set_name_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>set_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the rule set
 {{% /md %}}</dd><dt class="property-optional"
@@ -732,7 +762,7 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#add_header_actions_python" style="color: inherit; text-decoration: inherit;">add_<wbr>header_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptruleaddheaderaction">Sequence[Receipt<wbr>Rule<wbr>Add<wbr>Header<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#receiptruleaddheaderaction">Input[Receipt<wbr>Rule<wbr>Add<wbr>Header<wbr>Action<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of Add Header Action blocks. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -741,7 +771,7 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#after_python" style="color: inherit; text-decoration: inherit;">after</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the rule to place this rule after
 {{% /md %}}</dd><dt class="property-optional"
@@ -750,7 +780,7 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#bounce_actions_python" style="color: inherit; text-decoration: inherit;">bounce_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulebounceaction">Sequence[Receipt<wbr>Rule<wbr>Bounce<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#receiptrulebounceaction">Input[Receipt<wbr>Rule<wbr>Bounce<wbr>Action<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of Bounce Action blocks. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -759,7 +789,7 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true, the rule will be enabled
 {{% /md %}}</dd><dt class="property-optional"
@@ -768,7 +798,7 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#lambda_actions_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulelambdaaction">Sequence[Receipt<wbr>Rule<wbr>Lambda<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#receiptrulelambdaaction">Input[Receipt<wbr>Rule<wbr>Lambda<wbr>Action<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of Lambda Action blocks. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -777,7 +807,7 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the rule
 {{% /md %}}</dd><dt class="property-optional"
@@ -786,7 +816,7 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#recipients_python" style="color: inherit; text-decoration: inherit;">recipients</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of email addresses
 {{% /md %}}</dd><dt class="property-optional"
@@ -795,7 +825,7 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#s3_actions_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrules3action">Sequence[Receipt<wbr>Rule<wbr>S3Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#receiptrules3action">Input[Receipt<wbr>Rule<wbr>S3Action<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of S3 Action blocks. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -804,7 +834,7 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#scan_enabled_python" style="color: inherit; text-decoration: inherit;">scan_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true, incoming emails will be scanned for spam and viruses
 {{% /md %}}</dd><dt class="property-optional"
@@ -813,7 +843,7 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#sns_actions_python" style="color: inherit; text-decoration: inherit;">sns_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulesnsaction">Sequence[Receipt<wbr>Rule<wbr>Sns<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#receiptrulesnsaction">Input[Receipt<wbr>Rule<wbr>Sns<wbr>Action<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of SNS Action blocks. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -822,7 +852,7 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#stop_actions_python" style="color: inherit; text-decoration: inherit;">stop_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulestopaction">Sequence[Receipt<wbr>Rule<wbr>Stop<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#receiptrulestopaction">Input[Receipt<wbr>Rule<wbr>Stop<wbr>Action<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of Stop Action blocks. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -831,7 +861,7 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tls_policy_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Require or Optional
 {{% /md %}}</dd><dt class="property-optional"
@@ -840,7 +870,7 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#workmail_actions_python" style="color: inherit; text-decoration: inherit;">workmail_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptruleworkmailaction">Sequence[Receipt<wbr>Rule<wbr>Workmail<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#receiptruleworkmailaction">Input[Receipt<wbr>Rule<wbr>Workmail<wbr>Action<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of WorkMail Action blocks. Documented below.
 {{% /md %}}</dd></dl>
@@ -945,20 +975,37 @@ Get an existing ReceiptRule resource's state with the given name, ID, and option
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ReceiptRuleState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ReceiptRule</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ReceiptRuleState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ReceiptRule</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">add_header_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ReceiptRuleAddHeaderActionArgs]]</span> = None<span class="p">, </span><span class="nx">after</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bounce_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ReceiptRuleBounceActionArgs]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">lambda_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ReceiptRuleLambdaActionArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recipients</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">rule_set_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">s3_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ReceiptRuleS3ActionArgs]]</span> = None<span class="p">, </span><span class="nx">scan_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sns_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ReceiptRuleSnsActionArgs]]</span> = None<span class="p">, </span><span class="nx">stop_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ReceiptRuleStopActionArgs]]</span> = None<span class="p">, </span><span class="nx">tls_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workmail_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ReceiptRuleWorkmailActionArgs]]</span> = None<span class="p">) -&gt;</span> ReceiptRule</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">add_header_actions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ReceiptRuleAddHeaderActionArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">after</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">bounce_actions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ReceiptRuleBounceActionArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">lambda_actions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ReceiptRuleLambdaActionArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">recipients</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">rule_set_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">s3_actions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ReceiptRuleS3ActionArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">scan_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">sns_actions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ReceiptRuleSnsActionArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">stop_actions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ReceiptRuleStopActionArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">tls_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">workmail_actions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ReceiptRuleWorkmailActionArgs]]]]</span> = None<span class="p">) -&gt;</span> ReceiptRule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetReceiptRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ReceiptRuleState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReceiptRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetReceiptRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ReceiptRuleState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReceiptRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ReceiptRule</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ReceiptRuleState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ReceiptRule</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ReceiptRuleState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1345,7 +1392,7 @@ The following state arguments are supported:
 <a href="#state_addheaderactions_nodejs" style="color: inherit; text-decoration: inherit;">add<wbr>Header<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptruleaddheaderaction">Receipt<wbr>Rule<wbr>Add<wbr>Header<wbr>Action[]</a></span>
+        <span class="property-type"><a href="#receiptruleaddheaderaction">pulumi.<wbr>Input<pulumi.<wbr>Input<Receipt<wbr>Rule<wbr>Add<wbr>Header<wbr>Action<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of Add Header Action blocks. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1354,7 +1401,7 @@ The following state arguments are supported:
 <a href="#state_after_nodejs" style="color: inherit; text-decoration: inherit;">after</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the rule to place this rule after
 {{% /md %}}</dd><dt class="property-optional"
@@ -1363,7 +1410,7 @@ The following state arguments are supported:
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The SES receipt rule ARN.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1372,7 +1419,7 @@ The following state arguments are supported:
 <a href="#state_bounceactions_nodejs" style="color: inherit; text-decoration: inherit;">bounce<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulebounceaction">Receipt<wbr>Rule<wbr>Bounce<wbr>Action[]</a></span>
+        <span class="property-type"><a href="#receiptrulebounceaction">pulumi.<wbr>Input<pulumi.<wbr>Input<Receipt<wbr>Rule<wbr>Bounce<wbr>Action<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of Bounce Action blocks. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1381,7 +1428,7 @@ The following state arguments are supported:
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true, the rule will be enabled
 {{% /md %}}</dd><dt class="property-optional"
@@ -1390,7 +1437,7 @@ The following state arguments are supported:
 <a href="#state_lambdaactions_nodejs" style="color: inherit; text-decoration: inherit;">lambda<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulelambdaaction">Receipt<wbr>Rule<wbr>Lambda<wbr>Action[]</a></span>
+        <span class="property-type"><a href="#receiptrulelambdaaction">pulumi.<wbr>Input<pulumi.<wbr>Input<Receipt<wbr>Rule<wbr>Lambda<wbr>Action<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of Lambda Action blocks. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1399,7 +1446,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the rule
 {{% /md %}}</dd><dt class="property-optional"
@@ -1408,7 +1455,7 @@ The following state arguments are supported:
 <a href="#state_recipients_nodejs" style="color: inherit; text-decoration: inherit;">recipients</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of email addresses
 {{% /md %}}</dd><dt class="property-optional"
@@ -1417,7 +1464,7 @@ The following state arguments are supported:
 <a href="#state_rulesetname_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Set<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the rule set
 {{% /md %}}</dd><dt class="property-optional"
@@ -1426,7 +1473,7 @@ The following state arguments are supported:
 <a href="#state_s3actions_nodejs" style="color: inherit; text-decoration: inherit;">s3Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrules3action">Receipt<wbr>Rule<wbr>S3Action[]</a></span>
+        <span class="property-type"><a href="#receiptrules3action">pulumi.<wbr>Input<pulumi.<wbr>Input<Receipt<wbr>Rule<wbr>S3Action<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of S3 Action blocks. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1435,7 +1482,7 @@ The following state arguments are supported:
 <a href="#state_scanenabled_nodejs" style="color: inherit; text-decoration: inherit;">scan<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true, incoming emails will be scanned for spam and viruses
 {{% /md %}}</dd><dt class="property-optional"
@@ -1444,7 +1491,7 @@ The following state arguments are supported:
 <a href="#state_snsactions_nodejs" style="color: inherit; text-decoration: inherit;">sns<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulesnsaction">Receipt<wbr>Rule<wbr>Sns<wbr>Action[]</a></span>
+        <span class="property-type"><a href="#receiptrulesnsaction">pulumi.<wbr>Input<pulumi.<wbr>Input<Receipt<wbr>Rule<wbr>Sns<wbr>Action<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of SNS Action blocks. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1453,7 +1500,7 @@ The following state arguments are supported:
 <a href="#state_stopactions_nodejs" style="color: inherit; text-decoration: inherit;">stop<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulestopaction">Receipt<wbr>Rule<wbr>Stop<wbr>Action[]</a></span>
+        <span class="property-type"><a href="#receiptrulestopaction">pulumi.<wbr>Input<pulumi.<wbr>Input<Receipt<wbr>Rule<wbr>Stop<wbr>Action<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of Stop Action blocks. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1462,7 +1509,7 @@ The following state arguments are supported:
 <a href="#state_tlspolicy_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Require or Optional
 {{% /md %}}</dd><dt class="property-optional"
@@ -1471,7 +1518,7 @@ The following state arguments are supported:
 <a href="#state_workmailactions_nodejs" style="color: inherit; text-decoration: inherit;">workmail<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptruleworkmailaction">Receipt<wbr>Rule<wbr>Workmail<wbr>Action[]</a></span>
+        <span class="property-type"><a href="#receiptruleworkmailaction">pulumi.<wbr>Input<pulumi.<wbr>Input<Receipt<wbr>Rule<wbr>Workmail<wbr>Action<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of WorkMail Action blocks. Documented below.
 {{% /md %}}</dd></dl>
@@ -1484,7 +1531,7 @@ The following state arguments are supported:
 <a href="#state_add_header_actions_python" style="color: inherit; text-decoration: inherit;">add_<wbr>header_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptruleaddheaderaction">Sequence[Receipt<wbr>Rule<wbr>Add<wbr>Header<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#receiptruleaddheaderaction">Input[Receipt<wbr>Rule<wbr>Add<wbr>Header<wbr>Action<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of Add Header Action blocks. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1493,7 +1540,7 @@ The following state arguments are supported:
 <a href="#state_after_python" style="color: inherit; text-decoration: inherit;">after</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the rule to place this rule after
 {{% /md %}}</dd><dt class="property-optional"
@@ -1502,7 +1549,7 @@ The following state arguments are supported:
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The SES receipt rule ARN.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1511,7 +1558,7 @@ The following state arguments are supported:
 <a href="#state_bounce_actions_python" style="color: inherit; text-decoration: inherit;">bounce_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulebounceaction">Sequence[Receipt<wbr>Rule<wbr>Bounce<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#receiptrulebounceaction">Input[Receipt<wbr>Rule<wbr>Bounce<wbr>Action<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of Bounce Action blocks. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1520,7 +1567,7 @@ The following state arguments are supported:
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true, the rule will be enabled
 {{% /md %}}</dd><dt class="property-optional"
@@ -1529,7 +1576,7 @@ The following state arguments are supported:
 <a href="#state_lambda_actions_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulelambdaaction">Sequence[Receipt<wbr>Rule<wbr>Lambda<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#receiptrulelambdaaction">Input[Receipt<wbr>Rule<wbr>Lambda<wbr>Action<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of Lambda Action blocks. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1538,7 +1585,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the rule
 {{% /md %}}</dd><dt class="property-optional"
@@ -1547,7 +1594,7 @@ The following state arguments are supported:
 <a href="#state_recipients_python" style="color: inherit; text-decoration: inherit;">recipients</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of email addresses
 {{% /md %}}</dd><dt class="property-optional"
@@ -1556,7 +1603,7 @@ The following state arguments are supported:
 <a href="#state_rule_set_name_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>set_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the rule set
 {{% /md %}}</dd><dt class="property-optional"
@@ -1565,7 +1612,7 @@ The following state arguments are supported:
 <a href="#state_s3_actions_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrules3action">Sequence[Receipt<wbr>Rule<wbr>S3Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#receiptrules3action">Input[Receipt<wbr>Rule<wbr>S3Action<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of S3 Action blocks. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1574,7 +1621,7 @@ The following state arguments are supported:
 <a href="#state_scan_enabled_python" style="color: inherit; text-decoration: inherit;">scan_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true, incoming emails will be scanned for spam and viruses
 {{% /md %}}</dd><dt class="property-optional"
@@ -1583,7 +1630,7 @@ The following state arguments are supported:
 <a href="#state_sns_actions_python" style="color: inherit; text-decoration: inherit;">sns_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulesnsaction">Sequence[Receipt<wbr>Rule<wbr>Sns<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#receiptrulesnsaction">Input[Receipt<wbr>Rule<wbr>Sns<wbr>Action<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of SNS Action blocks. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1592,7 +1639,7 @@ The following state arguments are supported:
 <a href="#state_stop_actions_python" style="color: inherit; text-decoration: inherit;">stop_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulestopaction">Sequence[Receipt<wbr>Rule<wbr>Stop<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#receiptrulestopaction">Input[Receipt<wbr>Rule<wbr>Stop<wbr>Action<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of Stop Action blocks. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1601,7 +1648,7 @@ The following state arguments are supported:
 <a href="#state_tls_policy_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Require or Optional
 {{% /md %}}</dd><dt class="property-optional"
@@ -1610,7 +1657,7 @@ The following state arguments are supported:
 <a href="#state_workmail_actions_python" style="color: inherit; text-decoration: inherit;">workmail_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptruleworkmailaction">Sequence[Receipt<wbr>Rule<wbr>Workmail<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#receiptruleworkmailaction">Input[Receipt<wbr>Rule<wbr>Workmail<wbr>Action<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of WorkMail Action blocks. Documented below.
 {{% /md %}}</dd></dl>
@@ -1696,7 +1743,7 @@ The following state arguments are supported:
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the header to add
 {{% /md %}}</dd><dt class="property-required"
@@ -1705,7 +1752,7 @@ The following state arguments are supported:
 <a href="#headervalue_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value of the header to add
 {{% /md %}}</dd><dt class="property-required"
@@ -1714,7 +1761,7 @@ The following state arguments are supported:
 <a href="#position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
 {{% /md %}}</dd></dl>
@@ -1727,7 +1774,7 @@ The following state arguments are supported:
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the header to add
 {{% /md %}}</dd><dt class="property-required"
@@ -1736,7 +1783,7 @@ The following state arguments are supported:
 <a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value of the header to add
 {{% /md %}}</dd><dt class="property-required"
@@ -1745,7 +1792,7 @@ The following state arguments are supported:
 <a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
 {{% /md %}}</dd></dl>
@@ -1876,7 +1923,7 @@ The following state arguments are supported:
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The message to send
 {{% /md %}}</dd><dt class="property-required"
@@ -1885,7 +1932,7 @@ The following state arguments are supported:
 <a href="#position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
 {{% /md %}}</dd><dt class="property-required"
@@ -1894,7 +1941,7 @@ The following state arguments are supported:
 <a href="#sender_nodejs" style="color: inherit; text-decoration: inherit;">sender</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The email address of the sender
 {{% /md %}}</dd><dt class="property-required"
@@ -1903,7 +1950,7 @@ The following state arguments are supported:
 <a href="#smtpreplycode_nodejs" style="color: inherit; text-decoration: inherit;">smtp<wbr>Reply<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The RFC 5321 SMTP reply code
 {{% /md %}}</dd><dt class="property-optional"
@@ -1912,7 +1959,7 @@ The following state arguments are supported:
 <a href="#statuscode_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The RFC 3463 SMTP enhanced status code
 {{% /md %}}</dd><dt class="property-optional"
@@ -1921,7 +1968,7 @@ The following state arguments are supported:
 <a href="#topicarn_nodejs" style="color: inherit; text-decoration: inherit;">topic<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd></dl>
@@ -1934,7 +1981,7 @@ The following state arguments are supported:
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The message to send
 {{% /md %}}</dd><dt class="property-required"
@@ -1943,7 +1990,7 @@ The following state arguments are supported:
 <a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
 {{% /md %}}</dd><dt class="property-required"
@@ -1952,7 +1999,7 @@ The following state arguments are supported:
 <a href="#sender_python" style="color: inherit; text-decoration: inherit;">sender</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The email address of the sender
 {{% /md %}}</dd><dt class="property-required"
@@ -1961,7 +2008,7 @@ The following state arguments are supported:
 <a href="#smtp_reply_code_python" style="color: inherit; text-decoration: inherit;">smtp_<wbr>reply_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The RFC 5321 SMTP reply code
 {{% /md %}}</dd><dt class="property-optional"
@@ -1970,7 +2017,7 @@ The following state arguments are supported:
 <a href="#status_code_python" style="color: inherit; text-decoration: inherit;">status_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The RFC 3463 SMTP enhanced status code
 {{% /md %}}</dd><dt class="property-optional"
@@ -1979,7 +2026,7 @@ The following state arguments are supported:
 <a href="#topic_arn_python" style="color: inherit; text-decoration: inherit;">topic_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd></dl>
@@ -2074,7 +2121,7 @@ The following state arguments are supported:
 <a href="#functionarn_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of the Lambda function to invoke
 {{% /md %}}</dd><dt class="property-required"
@@ -2083,7 +2130,7 @@ The following state arguments are supported:
 <a href="#position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
 {{% /md %}}</dd><dt class="property-optional"
@@ -2092,7 +2139,7 @@ The following state arguments are supported:
 <a href="#invocationtype_nodejs" style="color: inherit; text-decoration: inherit;">invocation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Event or RequestResponse
 {{% /md %}}</dd><dt class="property-optional"
@@ -2101,7 +2148,7 @@ The following state arguments are supported:
 <a href="#topicarn_nodejs" style="color: inherit; text-decoration: inherit;">topic<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd></dl>
@@ -2114,7 +2161,7 @@ The following state arguments are supported:
 <a href="#function_arn_python" style="color: inherit; text-decoration: inherit;">function_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of the Lambda function to invoke
 {{% /md %}}</dd><dt class="property-required"
@@ -2123,7 +2170,7 @@ The following state arguments are supported:
 <a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
 {{% /md %}}</dd><dt class="property-optional"
@@ -2132,7 +2179,7 @@ The following state arguments are supported:
 <a href="#invocation_type_python" style="color: inherit; text-decoration: inherit;">invocation_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Event or RequestResponse
 {{% /md %}}</dd><dt class="property-optional"
@@ -2141,7 +2188,7 @@ The following state arguments are supported:
 <a href="#topic_arn_python" style="color: inherit; text-decoration: inherit;">topic_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd></dl>
@@ -2254,7 +2301,7 @@ The following state arguments are supported:
 <a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the S3 bucket
 {{% /md %}}</dd><dt class="property-required"
@@ -2263,7 +2310,7 @@ The following state arguments are supported:
 <a href="#position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
 {{% /md %}}</dd><dt class="property-optional"
@@ -2272,7 +2319,7 @@ The following state arguments are supported:
 <a href="#kmskeyarn_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of the KMS key
 {{% /md %}}</dd><dt class="property-optional"
@@ -2281,7 +2328,7 @@ The following state arguments are supported:
 <a href="#objectkeyprefix_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Key<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The key prefix of the S3 bucket
 {{% /md %}}</dd><dt class="property-optional"
@@ -2290,7 +2337,7 @@ The following state arguments are supported:
 <a href="#topicarn_nodejs" style="color: inherit; text-decoration: inherit;">topic<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd></dl>
@@ -2303,7 +2350,7 @@ The following state arguments are supported:
 <a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the S3 bucket
 {{% /md %}}</dd><dt class="property-required"
@@ -2312,7 +2359,7 @@ The following state arguments are supported:
 <a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
 {{% /md %}}</dd><dt class="property-optional"
@@ -2321,7 +2368,7 @@ The following state arguments are supported:
 <a href="#kms_key_arn_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of the KMS key
 {{% /md %}}</dd><dt class="property-optional"
@@ -2330,7 +2377,7 @@ The following state arguments are supported:
 <a href="#object_key_prefix_python" style="color: inherit; text-decoration: inherit;">object_<wbr>key_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The key prefix of the S3 bucket
 {{% /md %}}</dd><dt class="property-optional"
@@ -2339,7 +2386,7 @@ The following state arguments are supported:
 <a href="#topic_arn_python" style="color: inherit; text-decoration: inherit;">topic_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd></dl>
@@ -2398,7 +2445,7 @@ The following state arguments are supported:
 <a href="#position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
 {{% /md %}}</dd><dt class="property-required"
@@ -2407,7 +2454,7 @@ The following state arguments are supported:
 <a href="#topicarn_nodejs" style="color: inherit; text-decoration: inherit;">topic<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd></dl>
@@ -2420,7 +2467,7 @@ The following state arguments are supported:
 <a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
 {{% /md %}}</dd><dt class="property-required"
@@ -2429,7 +2476,7 @@ The following state arguments are supported:
 <a href="#topic_arn_python" style="color: inherit; text-decoration: inherit;">topic_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd></dl>
@@ -2506,7 +2553,7 @@ The following state arguments are supported:
 <a href="#position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
 {{% /md %}}</dd><dt class="property-required"
@@ -2515,7 +2562,7 @@ The following state arguments are supported:
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The scope to apply
 {{% /md %}}</dd><dt class="property-optional"
@@ -2524,7 +2571,7 @@ The following state arguments are supported:
 <a href="#topicarn_nodejs" style="color: inherit; text-decoration: inherit;">topic<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd></dl>
@@ -2537,7 +2584,7 @@ The following state arguments are supported:
 <a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
 {{% /md %}}</dd><dt class="property-required"
@@ -2546,7 +2593,7 @@ The following state arguments are supported:
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The scope to apply
 {{% /md %}}</dd><dt class="property-optional"
@@ -2555,7 +2602,7 @@ The following state arguments are supported:
 <a href="#topic_arn_python" style="color: inherit; text-decoration: inherit;">topic_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd></dl>
@@ -2632,7 +2679,7 @@ The following state arguments are supported:
 <a href="#organizationarn_nodejs" style="color: inherit; text-decoration: inherit;">organization<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of the WorkMail organization
 {{% /md %}}</dd><dt class="property-required"
@@ -2641,7 +2688,7 @@ The following state arguments are supported:
 <a href="#position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
 {{% /md %}}</dd><dt class="property-optional"
@@ -2650,7 +2697,7 @@ The following state arguments are supported:
 <a href="#topicarn_nodejs" style="color: inherit; text-decoration: inherit;">topic<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd></dl>
@@ -2663,7 +2710,7 @@ The following state arguments are supported:
 <a href="#organization_arn_python" style="color: inherit; text-decoration: inherit;">organization_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of the WorkMail organization
 {{% /md %}}</dd><dt class="property-required"
@@ -2672,7 +2719,7 @@ The following state arguments are supported:
 <a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
 {{% /md %}}</dd><dt class="property-optional"
@@ -2681,7 +2728,7 @@ The following state arguments are supported:
 <a href="#topic_arn_python" style="color: inherit; text-decoration: inherit;">topic_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd></dl>

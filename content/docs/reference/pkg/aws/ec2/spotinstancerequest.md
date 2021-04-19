@@ -80,8 +80,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -161,19 +161,69 @@ const cheapWorker = new aws.ec2.SpotInstanceRequest("cheap_worker", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SpotInstanceRequest</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SpotInstanceRequestArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SpotInstanceRequest</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SpotInstanceRequestArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SpotInstanceRequest</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">ami</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">associate_public_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">block_duration_minutes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cpu_core_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cpu_threads_per_core</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">credit_specification</span><span class="p">:</span> <span class="nx">Optional[SpotInstanceRequestCreditSpecificationArgs]</span> = None<span class="p">, </span><span class="nx">disable_api_termination</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[SpotInstanceRequestEbsBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enclave_options</span><span class="p">:</span> <span class="nx">Optional[SpotInstanceRequestEnclaveOptionsArgs]</span> = None<span class="p">, </span><span class="nx">ephemeral_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[SpotInstanceRequestEphemeralBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">get_password_data</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hibernation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">host_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_initiated_shutdown_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_interruption_behaviour</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipv6_address_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ipv6_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">launch_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata_options</span><span class="p">:</span> <span class="nx">Optional[SpotInstanceRequestMetadataOptionsArgs]</span> = None<span class="p">, </span><span class="nx">monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[SpotInstanceRequestNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">placement_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_block_device</span><span class="p">:</span> <span class="nx">Optional[SpotInstanceRequestRootBlockDeviceArgs]</span> = None<span class="p">, </span><span class="nx">secondary_private_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">source_dest_check</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">spot_price</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spot_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tenancy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_data_base64</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">valid_from</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">valid_until</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volume_tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_security_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">wait_for_fulfillment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SpotInstanceRequest</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                        <span class="nx">ami</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">associate_public_ip_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                        <span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">block_duration_minutes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                        <span class="nx">cpu_core_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                        <span class="nx">cpu_threads_per_core</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                        <span class="nx">credit_specification</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SpotInstanceRequestCreditSpecificationArgs]]</span> = None<span class="p">,</span>
+                        <span class="nx">disable_api_termination</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                        <span class="nx">ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[SpotInstanceRequestEbsBlockDeviceArgs]]]]</span> = None<span class="p">,</span>
+                        <span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                        <span class="nx">enclave_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SpotInstanceRequestEnclaveOptionsArgs]]</span> = None<span class="p">,</span>
+                        <span class="nx">ephemeral_block_devices</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[SpotInstanceRequestEphemeralBlockDeviceArgs]]]]</span> = None<span class="p">,</span>
+                        <span class="nx">get_password_data</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                        <span class="nx">hibernation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                        <span class="nx">host_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">instance_initiated_shutdown_behavior</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">instance_interruption_behaviour</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">ipv6_address_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                        <span class="nx">ipv6_addresses</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                        <span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">launch_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">metadata_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SpotInstanceRequestMetadataOptionsArgs]]</span> = None<span class="p">,</span>
+                        <span class="nx">monitoring</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                        <span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[SpotInstanceRequestNetworkInterfaceArgs]]]]</span> = None<span class="p">,</span>
+                        <span class="nx">placement_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">private_ip</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">root_block_device</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SpotInstanceRequestRootBlockDeviceArgs]]</span> = None<span class="p">,</span>
+                        <span class="nx">secondary_private_ips</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                        <span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                        <span class="nx">source_dest_check</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                        <span class="nx">spot_price</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">spot_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                        <span class="nx">tenancy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">user_data_base64</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">valid_from</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">valid_until</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">volume_tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                        <span class="nx">vpc_security_group_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                        <span class="nx">wait_for_fulfillment</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SpotInstanceRequest</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SpotInstanceRequestArgs</a></span><span class="p">,</span>
+                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSpotInstanceRequest</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SpotInstanceRequestArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SpotInstanceRequest</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSpotInstanceRequest</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SpotInstanceRequestArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SpotInstanceRequest</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SpotInstanceRequest</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SpotInstanceRequestArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SpotInstanceRequest</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SpotInstanceRequestArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -208,22 +258,32 @@ const cheapWorker = new aws.ec2.SpotInstanceRequest("cheap_worker", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">SpotInstanceRequestArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -232,7 +292,7 @@ const cheapWorker = new aws.ec2.SpotInstanceRequest("cheap_worker", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -256,7 +316,7 @@ const cheapWorker = new aws.ec2.SpotInstanceRequest("cheap_worker", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1123,7 +1183,7 @@ timeout of 10m is reached.
 <a href="#ami_nodejs" style="color: inherit; text-decoration: inherit;">ami</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}AMI to use for the instance.
 {{% /md %}}</dd><dt class="property-required"
@@ -1132,7 +1192,7 @@ timeout of 10m is reached.
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1141,7 +1201,7 @@ timeout of 10m is reached.
 <a href="#associatepublicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">associate<wbr>Public<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to associate a public IP address with an instance in a VPC.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1150,7 +1210,7 @@ timeout of 10m is reached.
 <a href="#availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}AZ to start the instance in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1159,7 +1219,7 @@ timeout of 10m is reached.
 <a href="#blockdurationminutes_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Duration<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The required duration for the Spot instances, in minutes. This value must be a multiple of 60 (60, 120, 180, 240, 300, or 360).
 The duration period starts as soon as your Spot instance receives its instance ID. At the end of the duration period, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two-minute warning before it terminates.
@@ -1170,7 +1230,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#cpucorecount_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Core<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Sets the number of CPU cores for an instance. This option is only supported on creation of instance type that support CPU Options [CPU Cores and Threads Per CPU Core Per Instance Type](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values) - specifying this option for unsupported instance types will return an error from the EC2 API.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1179,7 +1239,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#cputhreadspercore_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Threads<wbr>Per<wbr>Core</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}If set to to 1, hyperthreading is disabled on the launched instance. Defaults to 2 if not set. See [Optimizing CPU Options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) for more information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1188,7 +1248,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#creditspecification_nodejs" style="color: inherit; text-decoration: inherit;">credit<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestcreditspecification">Spot<wbr>Instance<wbr>Request<wbr>Credit<wbr>Specification</a></span>
+        <span class="property-type"><a href="#spotinstancerequestcreditspecification">pulumi.<wbr>Input<Spot<wbr>Instance<wbr>Request<wbr>Credit<wbr>Specification<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block for customizing the credit specification of the instance. See Credit Specification below for more details. the provider will only perform drift detection of its value when present in a configuration. Removing this configuration on existing instances will only stop managing it. It will not change the configuration back to the default for the instance type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1197,7 +1257,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#disableapitermination_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Api<wbr>Termination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true, enables [EC2 Instance Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1206,7 +1266,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#ebsblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Block<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestebsblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Ebs<wbr>Block<wbr>Device[]</a></span>
+        <span class="property-type"><a href="#spotinstancerequestebsblockdevice">pulumi.<wbr>Input<pulumi.<wbr>Input<Spot<wbr>Instance<wbr>Request<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more configuration blocks with additional EBS block devices to attach to the instance. Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection. When accessing this as an attribute reference, it is a set of objects.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1215,7 +1275,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#ebsoptimized_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Optimized</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized. Note that if this is not set on an instance type that is optimized by default then this will show as disabled but if the instance type is optimized by default then there is no need to set this and there is no effect to disabling it. See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) of the AWS User Guide for more information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1224,7 +1284,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#enclaveoptions_nodejs" style="color: inherit; text-decoration: inherit;">enclave<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestenclaveoptions">Spot<wbr>Instance<wbr>Request<wbr>Enclave<wbr>Options</a></span>
+        <span class="property-type"><a href="#spotinstancerequestenclaveoptions">pulumi.<wbr>Input<Spot<wbr>Instance<wbr>Request<wbr>Enclave<wbr>Options<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Enable Nitro Enclaves on launched instances. See Enclave Options below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1233,7 +1293,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#ephemeralblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">ephemeral<wbr>Block<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestephemeralblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Ephemeral<wbr>Block<wbr>Device[]</a></span>
+        <span class="property-type"><a href="#spotinstancerequestephemeralblockdevice">pulumi.<wbr>Input<pulumi.<wbr>Input<Spot<wbr>Instance<wbr>Request<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more configuration blocks to customize Ephemeral (also known as "Instance Store") volumes on the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a set of objects.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1242,7 +1302,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#getpassworddata_nodejs" style="color: inherit; text-decoration: inherit;">get<wbr>Password<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true, wait for password data to become available and retrieve it. Useful for getting the administrator password for instances running Microsoft Windows. The password data is exported to the `password_data` attribute. See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html) for more information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1251,7 +1311,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#hibernation_nodejs" style="color: inherit; text-decoration: inherit;">hibernation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will support hibernation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1260,7 +1320,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#hostid_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1269,7 +1329,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#iaminstanceprofile_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Instance<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}IAM Instance Profile to launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the [EC2 documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions), notably `iam:PassRole`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1278,7 +1338,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#instanceinitiatedshutdownbehavior_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Initiated<wbr>Shutdown<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Shutdown behavior for the instance. Amazon defaults this to `stop` for EBS-backed instances and `terminate` for instance-store instances. Cannot be set on instance-store instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior) for more information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1287,7 +1347,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#instanceinterruptionbehaviour_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Interruption<wbr>Behaviour</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Indicates whether a Spot instance stops or terminates when it is interrupted. Default is `terminate` as this is the current AWS behaviour.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1296,7 +1356,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#ipv6addresscount_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Address<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}A number of IPv6 addresses to associate with the primary network interface. Amazon EC2 chooses the IPv6 addresses from the range of your subnet.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1305,7 +1365,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#ipv6addresses_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Specify one or more IPv6 addresses from the range of the subnet to associate with the primary network interface
 {{% /md %}}</dd><dt class="property-optional"
@@ -1314,7 +1374,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1323,7 +1383,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#launchgroup_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A launch group is a group of spot instances that launch together and terminate together.
 If left empty instances are launched and terminated individually.
@@ -1333,7 +1393,7 @@ If left empty instances are launched and terminated individually.
 <a href="#metadataoptions_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestmetadataoptions">Spot<wbr>Instance<wbr>Request<wbr>Metadata<wbr>Options</a></span>
+        <span class="property-type"><a href="#spotinstancerequestmetadataoptions">pulumi.<wbr>Input<Spot<wbr>Instance<wbr>Request<wbr>Metadata<wbr>Options<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Customize the metadata options of the instance. See Metadata Options below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1342,7 +1402,7 @@ If left empty instances are launched and terminated individually.
 <a href="#monitoring_nodejs" style="color: inherit; text-decoration: inherit;">monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will have detailed monitoring enabled. (Available since v0.6.0)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1351,7 +1411,7 @@ If left empty instances are launched and terminated individually.
 <a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestnetworkinterface">Spot<wbr>Instance<wbr>Request<wbr>Network<wbr>Interface[]</a></span>
+        <span class="property-type"><a href="#spotinstancerequestnetworkinterface">pulumi.<wbr>Input<pulumi.<wbr>Input<Spot<wbr>Instance<wbr>Request<wbr>Network<wbr>Interface<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Customize network interfaces to be attached at instance boot time. See Network Interfaces below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1360,7 +1420,7 @@ If left empty instances are launched and terminated individually.
 <a href="#placementgroup_nodejs" style="color: inherit; text-decoration: inherit;">placement<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Placement Group to start the instance in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1369,7 +1429,7 @@ If left empty instances are launched and terminated individually.
 <a href="#privateip_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Private IP address to associate with the instance in a VPC.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1378,7 +1438,7 @@ If left empty instances are launched and terminated individually.
 <a href="#rootblockdevice_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Block<wbr>Device</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestrootblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device</a></span>
+        <span class="property-type"><a href="#spotinstancerequestrootblockdevice">pulumi.<wbr>Input<Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block to customize details about the root block device of the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a list containing one object.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1387,7 +1447,7 @@ If left empty instances are launched and terminated individually.
 <a href="#secondaryprivateips_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Private<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of secondary private IPv4 addresses to assign to the instance's primary network interface (eth0) in a VPC. Can only be assigned to the primary network interface (eth0) attached at instance creation, not a pre-existing network interface i.e. referenced in a `network_interface` block. Refer to the [Elastic network interfaces documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#AvailableIpPerENI) to see the maximum number of private IP addresses allowed per instance type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1396,7 +1456,7 @@ If left empty instances are launched and terminated individually.
 <a href="#securitygroups_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of security group names (EC2-Classic) or IDs (default VPC) to associate with.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1405,7 +1465,7 @@ If left empty instances are launched and terminated individually.
 <a href="#sourcedestcheck_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Dest<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Controls if traffic is routed to the instance when the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1414,7 +1474,7 @@ If left empty instances are launched and terminated individually.
 <a href="#spotprice_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The maximum price to request on the spot market.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1423,7 +1483,7 @@ If left empty instances are launched and terminated individually.
 <a href="#spottype_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If set to `one-time`, after
 the instance is terminated, the spot request will be closed.
@@ -1433,7 +1493,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}VPC Subnet ID to launch in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1442,7 +1502,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1451,7 +1511,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#tenancy_nodejs" style="color: inherit; text-decoration: inherit;">tenancy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1460,7 +1520,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#userdata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1469,7 +1529,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#userdatabase64_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data<wbr>Base64</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1478,7 +1538,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#validfrom_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The start date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). The default is to start fulfilling the request immediately.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1487,7 +1547,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#validuntil_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>Until</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request. The default end date is 7 days from the current date.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1496,7 +1556,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#volumetags_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A map of tags to assign, at instance-creation time, to root and EBS volumes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1505,7 +1565,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#vpcsecuritygroupids_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Security<wbr>Group<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to associate with.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1514,7 +1574,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#waitforfulfillment_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Fulfillment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If set, this provider will
 wait for the Spot Request to be fulfilled, and will throw an error if the
@@ -1529,7 +1589,7 @@ timeout of 10m is reached.
 <a href="#ami_python" style="color: inherit; text-decoration: inherit;">ami</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}AMI to use for the instance.
 {{% /md %}}</dd><dt class="property-required"
@@ -1538,7 +1598,7 @@ timeout of 10m is reached.
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1547,7 +1607,7 @@ timeout of 10m is reached.
 <a href="#associate_public_ip_address_python" style="color: inherit; text-decoration: inherit;">associate_<wbr>public_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to associate a public IP address with an instance in a VPC.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1556,7 +1616,7 @@ timeout of 10m is reached.
 <a href="#availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}AZ to start the instance in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1565,7 +1625,7 @@ timeout of 10m is reached.
 <a href="#block_duration_minutes_python" style="color: inherit; text-decoration: inherit;">block_<wbr>duration_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The required duration for the Spot instances, in minutes. This value must be a multiple of 60 (60, 120, 180, 240, 300, or 360).
 The duration period starts as soon as your Spot instance receives its instance ID. At the end of the duration period, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two-minute warning before it terminates.
@@ -1576,7 +1636,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#cpu_core_count_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>core_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Sets the number of CPU cores for an instance. This option is only supported on creation of instance type that support CPU Options [CPU Cores and Threads Per CPU Core Per Instance Type](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values) - specifying this option for unsupported instance types will return an error from the EC2 API.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1585,7 +1645,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#cpu_threads_per_core_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>threads_<wbr>per_<wbr>core</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}If set to to 1, hyperthreading is disabled on the launched instance. Defaults to 2 if not set. See [Optimizing CPU Options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) for more information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1594,7 +1654,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#credit_specification_python" style="color: inherit; text-decoration: inherit;">credit_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestcreditspecification">Spot<wbr>Instance<wbr>Request<wbr>Credit<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#spotinstancerequestcreditspecification">Input[Spot<wbr>Instance<wbr>Request<wbr>Credit<wbr>Specification<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for customizing the credit specification of the instance. See Credit Specification below for more details. the provider will only perform drift detection of its value when present in a configuration. Removing this configuration on existing instances will only stop managing it. It will not change the configuration back to the default for the instance type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1603,7 +1663,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#disable_api_termination_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>api_<wbr>termination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true, enables [EC2 Instance Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1612,7 +1672,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#ebs_block_devices_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>block_<wbr>devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestebsblockdevice">Sequence[Spot<wbr>Instance<wbr>Request<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args]</a></span>
+        <span class="property-type"><a href="#spotinstancerequestebsblockdevice">Input[Spot<wbr>Instance<wbr>Request<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more configuration blocks with additional EBS block devices to attach to the instance. Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection. When accessing this as an attribute reference, it is a set of objects.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1621,7 +1681,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#ebs_optimized_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>optimized</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized. Note that if this is not set on an instance type that is optimized by default then this will show as disabled but if the instance type is optimized by default then there is no need to set this and there is no effect to disabling it. See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) of the AWS User Guide for more information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1630,7 +1690,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#enclave_options_python" style="color: inherit; text-decoration: inherit;">enclave_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestenclaveoptions">Spot<wbr>Instance<wbr>Request<wbr>Enclave<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#spotinstancerequestenclaveoptions">Input[Spot<wbr>Instance<wbr>Request<wbr>Enclave<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Enable Nitro Enclaves on launched instances. See Enclave Options below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1639,7 +1699,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#ephemeral_block_devices_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>block_<wbr>devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestephemeralblockdevice">Sequence[Spot<wbr>Instance<wbr>Request<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args]</a></span>
+        <span class="property-type"><a href="#spotinstancerequestephemeralblockdevice">Input[Spot<wbr>Instance<wbr>Request<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more configuration blocks to customize Ephemeral (also known as "Instance Store") volumes on the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a set of objects.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1648,7 +1708,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#get_password_data_python" style="color: inherit; text-decoration: inherit;">get_<wbr>password_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true, wait for password data to become available and retrieve it. Useful for getting the administrator password for instances running Microsoft Windows. The password data is exported to the `password_data` attribute. See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html) for more information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1657,7 +1717,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#hibernation_python" style="color: inherit; text-decoration: inherit;">hibernation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will support hibernation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1666,7 +1726,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#host_id_python" style="color: inherit; text-decoration: inherit;">host_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1675,7 +1735,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#iam_instance_profile_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>instance_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}IAM Instance Profile to launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the [EC2 documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions), notably `iam:PassRole`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1684,7 +1744,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#instance_initiated_shutdown_behavior_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>initiated_<wbr>shutdown_<wbr>behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Shutdown behavior for the instance. Amazon defaults this to `stop` for EBS-backed instances and `terminate` for instance-store instances. Cannot be set on instance-store instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior) for more information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1693,7 +1753,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#instance_interruption_behaviour_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>interruption_<wbr>behaviour</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Indicates whether a Spot instance stops or terminates when it is interrupted. Default is `terminate` as this is the current AWS behaviour.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1702,7 +1762,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#ipv6_address_count_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>address_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}A number of IPv6 addresses to associate with the primary network interface. Amazon EC2 chooses the IPv6 addresses from the range of your subnet.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1711,7 +1771,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#ipv6_addresses_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Specify one or more IPv6 addresses from the range of the subnet to associate with the primary network interface
 {{% /md %}}</dd><dt class="property-optional"
@@ -1720,7 +1780,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1729,7 +1789,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#launch_group_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A launch group is a group of spot instances that launch together and terminate together.
 If left empty instances are launched and terminated individually.
@@ -1739,7 +1799,7 @@ If left empty instances are launched and terminated individually.
 <a href="#metadata_options_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestmetadataoptions">Spot<wbr>Instance<wbr>Request<wbr>Metadata<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#spotinstancerequestmetadataoptions">Input[Spot<wbr>Instance<wbr>Request<wbr>Metadata<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Customize the metadata options of the instance. See Metadata Options below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1748,7 +1808,7 @@ If left empty instances are launched and terminated individually.
 <a href="#monitoring_python" style="color: inherit; text-decoration: inherit;">monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will have detailed monitoring enabled. (Available since v0.6.0)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1757,7 +1817,7 @@ If left empty instances are launched and terminated individually.
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestnetworkinterface">Sequence[Spot<wbr>Instance<wbr>Request<wbr>Network<wbr>Interface<wbr>Args]</a></span>
+        <span class="property-type"><a href="#spotinstancerequestnetworkinterface">Input[Spot<wbr>Instance<wbr>Request<wbr>Network<wbr>Interface<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Customize network interfaces to be attached at instance boot time. See Network Interfaces below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1766,7 +1826,7 @@ If left empty instances are launched and terminated individually.
 <a href="#placement_group_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Placement Group to start the instance in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1775,7 +1835,7 @@ If left empty instances are launched and terminated individually.
 <a href="#private_ip_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Private IP address to associate with the instance in a VPC.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1784,7 +1844,7 @@ If left empty instances are launched and terminated individually.
 <a href="#root_block_device_python" style="color: inherit; text-decoration: inherit;">root_<wbr>block_<wbr>device</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestrootblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device<wbr>Args</a></span>
+        <span class="property-type"><a href="#spotinstancerequestrootblockdevice">Input[Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to customize details about the root block device of the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a list containing one object.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1793,7 +1853,7 @@ If left empty instances are launched and terminated individually.
 <a href="#secondary_private_ips_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>private_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of secondary private IPv4 addresses to assign to the instance's primary network interface (eth0) in a VPC. Can only be assigned to the primary network interface (eth0) attached at instance creation, not a pre-existing network interface i.e. referenced in a `network_interface` block. Refer to the [Elastic network interfaces documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#AvailableIpPerENI) to see the maximum number of private IP addresses allowed per instance type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1802,7 +1862,7 @@ If left empty instances are launched and terminated individually.
 <a href="#security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of security group names (EC2-Classic) or IDs (default VPC) to associate with.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1811,7 +1871,7 @@ If left empty instances are launched and terminated individually.
 <a href="#source_dest_check_python" style="color: inherit; text-decoration: inherit;">source_<wbr>dest_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Controls if traffic is routed to the instance when the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1820,7 +1880,7 @@ If left empty instances are launched and terminated individually.
 <a href="#spot_price_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The maximum price to request on the spot market.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1829,7 +1889,7 @@ If left empty instances are launched and terminated individually.
 <a href="#spot_type_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If set to `one-time`, after
 the instance is terminated, the spot request will be closed.
@@ -1839,7 +1899,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}VPC Subnet ID to launch in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1848,7 +1908,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1857,7 +1917,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#tenancy_python" style="color: inherit; text-decoration: inherit;">tenancy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1866,7 +1926,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#user_data_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1875,7 +1935,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#user_data_base64_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data_<wbr>base64</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1884,7 +1944,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#valid_from_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The start date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). The default is to start fulfilling the request immediately.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1893,7 +1953,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#valid_until_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>until</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request. The default end date is 7 days from the current date.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1902,7 +1962,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#volume_tags_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign, at instance-creation time, to root and EBS volumes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1911,7 +1971,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#vpc_security_group_ids_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>security_<wbr>group_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to associate with.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1920,7 +1980,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#wait_for_fulfillment_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>fulfillment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If set, this provider will
 wait for the Spot Request to be fulfilled, and will throw an error if the
@@ -2399,20 +2459,77 @@ Get an existing SpotInstanceRequest resource's state with the given name, ID, an
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">SpotInstanceRequestState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">SpotInstanceRequest</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">SpotInstanceRequestState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">SpotInstanceRequest</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">ami</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">associate_public_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">block_duration_minutes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cpu_core_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cpu_threads_per_core</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">credit_specification</span><span class="p">:</span> <span class="nx">Optional[SpotInstanceRequestCreditSpecificationArgs]</span> = None<span class="p">, </span><span class="nx">disable_api_termination</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[SpotInstanceRequestEbsBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enclave_options</span><span class="p">:</span> <span class="nx">Optional[SpotInstanceRequestEnclaveOptionsArgs]</span> = None<span class="p">, </span><span class="nx">ephemeral_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[SpotInstanceRequestEphemeralBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">get_password_data</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hibernation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">host_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_initiated_shutdown_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_interruption_behaviour</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipv6_address_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ipv6_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">launch_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata_options</span><span class="p">:</span> <span class="nx">Optional[SpotInstanceRequestMetadataOptionsArgs]</span> = None<span class="p">, </span><span class="nx">monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[SpotInstanceRequestNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">outpost_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">placement_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_network_interface_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_dns</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_dns</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_block_device</span><span class="p">:</span> <span class="nx">Optional[SpotInstanceRequestRootBlockDeviceArgs]</span> = None<span class="p">, </span><span class="nx">secondary_private_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">source_dest_check</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">spot_bid_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spot_instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spot_price</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spot_request_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spot_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tenancy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_data_base64</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">valid_from</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">valid_until</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volume_tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_security_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">wait_for_fulfillment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> SpotInstanceRequest</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">ami</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">associate_public_ip_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">block_duration_minutes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">cpu_core_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">cpu_threads_per_core</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">credit_specification</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SpotInstanceRequestCreditSpecificationArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">disable_api_termination</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[SpotInstanceRequestEbsBlockDeviceArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">enclave_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SpotInstanceRequestEnclaveOptionsArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">ephemeral_block_devices</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[SpotInstanceRequestEphemeralBlockDeviceArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">get_password_data</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">hibernation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">host_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">instance_initiated_shutdown_behavior</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">instance_interruption_behaviour</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">instance_state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">ipv6_address_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">ipv6_addresses</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">launch_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">metadata_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SpotInstanceRequestMetadataOptionsArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">monitoring</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[SpotInstanceRequestNetworkInterfaceArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">outpost_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">password_data</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">placement_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">primary_network_interface_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">private_dns</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">private_ip</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">public_dns</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">public_ip</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">root_block_device</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SpotInstanceRequestRootBlockDeviceArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">secondary_private_ips</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">source_dest_check</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">spot_bid_status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">spot_instance_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">spot_price</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">spot_request_state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">spot_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">tenancy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">user_data_base64</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">valid_from</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">valid_until</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">volume_tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">vpc_security_group_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">wait_for_fulfillment</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">) -&gt;</span> SpotInstanceRequest</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSpotInstanceRequest<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">SpotInstanceRequestState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SpotInstanceRequest</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSpotInstanceRequest<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">SpotInstanceRequestState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SpotInstanceRequest</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">SpotInstanceRequest</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">SpotInstanceRequestState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">SpotInstanceRequest</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">SpotInstanceRequestState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3537,7 +3654,7 @@ timeout of 10m is reached.
 <a href="#state_ami_nodejs" style="color: inherit; text-decoration: inherit;">ami</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}AMI to use for the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3546,7 +3663,7 @@ timeout of 10m is reached.
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3554,7 +3671,7 @@ timeout of 10m is reached.
 <a href="#state_associatepublicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">associate<wbr>Public<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to associate a public IP address with an instance in a VPC.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3563,7 +3680,7 @@ timeout of 10m is reached.
 <a href="#state_availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}AZ to start the instance in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3572,7 +3689,7 @@ timeout of 10m is reached.
 <a href="#state_blockdurationminutes_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Duration<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The required duration for the Spot instances, in minutes. This value must be a multiple of 60 (60, 120, 180, 240, 300, or 360).
 The duration period starts as soon as your Spot instance receives its instance ID. At the end of the duration period, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two-minute warning before it terminates.
@@ -3583,7 +3700,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#state_cpucorecount_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Core<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Sets the number of CPU cores for an instance. This option is only supported on creation of instance type that support CPU Options [CPU Cores and Threads Per CPU Core Per Instance Type](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values) - specifying this option for unsupported instance types will return an error from the EC2 API.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3592,7 +3709,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#state_cputhreadspercore_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Threads<wbr>Per<wbr>Core</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}If set to to 1, hyperthreading is disabled on the launched instance. Defaults to 2 if not set. See [Optimizing CPU Options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) for more information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3601,7 +3718,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#state_creditspecification_nodejs" style="color: inherit; text-decoration: inherit;">credit<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestcreditspecification">Spot<wbr>Instance<wbr>Request<wbr>Credit<wbr>Specification</a></span>
+        <span class="property-type"><a href="#spotinstancerequestcreditspecification">pulumi.<wbr>Input<Spot<wbr>Instance<wbr>Request<wbr>Credit<wbr>Specification<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block for customizing the credit specification of the instance. See Credit Specification below for more details. the provider will only perform drift detection of its value when present in a configuration. Removing this configuration on existing instances will only stop managing it. It will not change the configuration back to the default for the instance type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3610,7 +3727,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#state_disableapitermination_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Api<wbr>Termination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true, enables [EC2 Instance Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3619,7 +3736,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#state_ebsblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Block<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestebsblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Ebs<wbr>Block<wbr>Device[]</a></span>
+        <span class="property-type"><a href="#spotinstancerequestebsblockdevice">pulumi.<wbr>Input<pulumi.<wbr>Input<Spot<wbr>Instance<wbr>Request<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more configuration blocks with additional EBS block devices to attach to the instance. Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection. When accessing this as an attribute reference, it is a set of objects.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3628,7 +3745,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#state_ebsoptimized_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Optimized</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized. Note that if this is not set on an instance type that is optimized by default then this will show as disabled but if the instance type is optimized by default then there is no need to set this and there is no effect to disabling it. See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) of the AWS User Guide for more information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3637,7 +3754,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#state_enclaveoptions_nodejs" style="color: inherit; text-decoration: inherit;">enclave<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestenclaveoptions">Spot<wbr>Instance<wbr>Request<wbr>Enclave<wbr>Options</a></span>
+        <span class="property-type"><a href="#spotinstancerequestenclaveoptions">pulumi.<wbr>Input<Spot<wbr>Instance<wbr>Request<wbr>Enclave<wbr>Options<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Enable Nitro Enclaves on launched instances. See Enclave Options below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3646,7 +3763,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#state_ephemeralblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">ephemeral<wbr>Block<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestephemeralblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Ephemeral<wbr>Block<wbr>Device[]</a></span>
+        <span class="property-type"><a href="#spotinstancerequestephemeralblockdevice">pulumi.<wbr>Input<pulumi.<wbr>Input<Spot<wbr>Instance<wbr>Request<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more configuration blocks to customize Ephemeral (also known as "Instance Store") volumes on the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a set of objects.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3655,7 +3772,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#state_getpassworddata_nodejs" style="color: inherit; text-decoration: inherit;">get<wbr>Password<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true, wait for password data to become available and retrieve it. Useful for getting the administrator password for instances running Microsoft Windows. The password data is exported to the `password_data` attribute. See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html) for more information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3664,7 +3781,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#state_hibernation_nodejs" style="color: inherit; text-decoration: inherit;">hibernation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will support hibernation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3673,7 +3790,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#state_hostid_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3682,7 +3799,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#state_iaminstanceprofile_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Instance<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}IAM Instance Profile to launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the [EC2 documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions), notably `iam:PassRole`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3691,7 +3808,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#state_instanceinitiatedshutdownbehavior_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Initiated<wbr>Shutdown<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Shutdown behavior for the instance. Amazon defaults this to `stop` for EBS-backed instances and `terminate` for instance-store instances. Cannot be set on instance-store instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior) for more information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3700,7 +3817,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#state_instanceinterruptionbehaviour_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Interruption<wbr>Behaviour</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Indicates whether a Spot instance stops or terminates when it is interrupted. Default is `terminate` as this is the current AWS behaviour.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3709,7 +3826,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#state_instancestate_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3717,7 +3834,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#state_instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3726,7 +3843,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#state_ipv6addresscount_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Address<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}A number of IPv6 addresses to associate with the primary network interface. Amazon EC2 chooses the IPv6 addresses from the range of your subnet.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3735,7 +3852,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#state_ipv6addresses_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Specify one or more IPv6 addresses from the range of the subnet to associate with the primary network interface
 {{% /md %}}</dd><dt class="property-optional"
@@ -3744,7 +3861,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#state_keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3753,7 +3870,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#state_launchgroup_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A launch group is a group of spot instances that launch together and terminate together.
 If left empty instances are launched and terminated individually.
@@ -3763,7 +3880,7 @@ If left empty instances are launched and terminated individually.
 <a href="#state_metadataoptions_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestmetadataoptions">Spot<wbr>Instance<wbr>Request<wbr>Metadata<wbr>Options</a></span>
+        <span class="property-type"><a href="#spotinstancerequestmetadataoptions">pulumi.<wbr>Input<Spot<wbr>Instance<wbr>Request<wbr>Metadata<wbr>Options<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Customize the metadata options of the instance. See Metadata Options below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3772,7 +3889,7 @@ If left empty instances are launched and terminated individually.
 <a href="#state_monitoring_nodejs" style="color: inherit; text-decoration: inherit;">monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will have detailed monitoring enabled. (Available since v0.6.0)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3781,7 +3898,7 @@ If left empty instances are launched and terminated individually.
 <a href="#state_networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestnetworkinterface">Spot<wbr>Instance<wbr>Request<wbr>Network<wbr>Interface[]</a></span>
+        <span class="property-type"><a href="#spotinstancerequestnetworkinterface">pulumi.<wbr>Input<pulumi.<wbr>Input<Spot<wbr>Instance<wbr>Request<wbr>Network<wbr>Interface<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Customize network interfaces to be attached at instance boot time. See Network Interfaces below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3790,7 +3907,7 @@ If left empty instances are launched and terminated individually.
 <a href="#state_outpostarn_nodejs" style="color: inherit; text-decoration: inherit;">outpost<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3798,7 +3915,7 @@ If left empty instances are launched and terminated individually.
 <a href="#state_passworddata_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3806,7 +3923,7 @@ If left empty instances are launched and terminated individually.
 <a href="#state_placementgroup_nodejs" style="color: inherit; text-decoration: inherit;">placement<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Placement Group to start the instance in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3815,7 +3932,7 @@ If left empty instances are launched and terminated individually.
 <a href="#state_primarynetworkinterfaceid_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Network<wbr>Interface<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3823,7 +3940,7 @@ If left empty instances are launched and terminated individually.
 <a href="#state_privatedns_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The private DNS name assigned to the instance. Can only be
 used inside the Amazon EC2, and only available if you've enabled DNS hostnames
@@ -3834,7 +3951,7 @@ for your VPC
 <a href="#state_privateip_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Private IP address to associate with the instance in a VPC.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3843,7 +3960,7 @@ for your VPC
 <a href="#state_publicdns_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The public DNS name assigned to the instance. For EC2-VPC, this
 is only available if you've enabled DNS hostnames for your VPC
@@ -3853,7 +3970,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#state_publicip_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The public IP address assigned to the instance, if applicable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3862,7 +3979,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#state_rootblockdevice_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Block<wbr>Device</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestrootblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device</a></span>
+        <span class="property-type"><a href="#spotinstancerequestrootblockdevice">pulumi.<wbr>Input<Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block to customize details about the root block device of the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a list containing one object.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3871,7 +3988,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#state_secondaryprivateips_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Private<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of secondary private IPv4 addresses to assign to the instance's primary network interface (eth0) in a VPC. Can only be assigned to the primary network interface (eth0) attached at instance creation, not a pre-existing network interface i.e. referenced in a `network_interface` block. Refer to the [Elastic network interfaces documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#AvailableIpPerENI) to see the maximum number of private IP addresses allowed per instance type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3880,7 +3997,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#state_securitygroups_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of security group names (EC2-Classic) or IDs (default VPC) to associate with.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3889,7 +4006,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#state_sourcedestcheck_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Dest<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Controls if traffic is routed to the instance when the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3898,7 +4015,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#state_spotbidstatus_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Bid<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The current [bid
 status](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-bid-status.html)
@@ -3912,7 +4029,7 @@ of the Spot Instance Request.
 <a href="#state_spotinstanceid_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Instance<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Instance ID (if any) that is currently fulfilling
 the Spot Instance request.
@@ -3922,7 +4039,7 @@ the Spot Instance request.
 <a href="#state_spotprice_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The maximum price to request on the spot market.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3931,7 +4048,7 @@ the Spot Instance request.
 <a href="#state_spotrequeststate_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Request<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3939,7 +4056,7 @@ the Spot Instance request.
 <a href="#state_spottype_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If set to `one-time`, after
 the instance is terminated, the spot request will be closed.
@@ -3949,7 +4066,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#state_subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}VPC Subnet ID to launch in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3958,7 +4075,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3967,7 +4084,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#state_tenancy_nodejs" style="color: inherit; text-decoration: inherit;">tenancy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3976,7 +4093,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#state_userdata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3985,7 +4102,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#state_userdatabase64_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data<wbr>Base64</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3994,7 +4111,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#state_validfrom_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The start date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). The default is to start fulfilling the request immediately.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4003,7 +4120,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#state_validuntil_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>Until</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request. The default end date is 7 days from the current date.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4012,7 +4129,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#state_volumetags_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A map of tags to assign, at instance-creation time, to root and EBS volumes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4021,7 +4138,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#state_vpcsecuritygroupids_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Security<wbr>Group<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to associate with.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4030,7 +4147,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#state_waitforfulfillment_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Fulfillment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If set, this provider will
 wait for the Spot Request to be fulfilled, and will throw an error if the
@@ -4045,7 +4162,7 @@ timeout of 10m is reached.
 <a href="#state_ami_python" style="color: inherit; text-decoration: inherit;">ami</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}AMI to use for the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4054,7 +4171,7 @@ timeout of 10m is reached.
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4062,7 +4179,7 @@ timeout of 10m is reached.
 <a href="#state_associate_public_ip_address_python" style="color: inherit; text-decoration: inherit;">associate_<wbr>public_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to associate a public IP address with an instance in a VPC.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4071,7 +4188,7 @@ timeout of 10m is reached.
 <a href="#state_availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}AZ to start the instance in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4080,7 +4197,7 @@ timeout of 10m is reached.
 <a href="#state_block_duration_minutes_python" style="color: inherit; text-decoration: inherit;">block_<wbr>duration_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The required duration for the Spot instances, in minutes. This value must be a multiple of 60 (60, 120, 180, 240, 300, or 360).
 The duration period starts as soon as your Spot instance receives its instance ID. At the end of the duration period, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two-minute warning before it terminates.
@@ -4091,7 +4208,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#state_cpu_core_count_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>core_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Sets the number of CPU cores for an instance. This option is only supported on creation of instance type that support CPU Options [CPU Cores and Threads Per CPU Core Per Instance Type](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values) - specifying this option for unsupported instance types will return an error from the EC2 API.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4100,7 +4217,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#state_cpu_threads_per_core_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>threads_<wbr>per_<wbr>core</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}If set to to 1, hyperthreading is disabled on the launched instance. Defaults to 2 if not set. See [Optimizing CPU Options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) for more information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4109,7 +4226,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#state_credit_specification_python" style="color: inherit; text-decoration: inherit;">credit_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestcreditspecification">Spot<wbr>Instance<wbr>Request<wbr>Credit<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#spotinstancerequestcreditspecification">Input[Spot<wbr>Instance<wbr>Request<wbr>Credit<wbr>Specification<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for customizing the credit specification of the instance. See Credit Specification below for more details. the provider will only perform drift detection of its value when present in a configuration. Removing this configuration on existing instances will only stop managing it. It will not change the configuration back to the default for the instance type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4118,7 +4235,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#state_disable_api_termination_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>api_<wbr>termination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true, enables [EC2 Instance Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4127,7 +4244,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#state_ebs_block_devices_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>block_<wbr>devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestebsblockdevice">Sequence[Spot<wbr>Instance<wbr>Request<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args]</a></span>
+        <span class="property-type"><a href="#spotinstancerequestebsblockdevice">Input[Spot<wbr>Instance<wbr>Request<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more configuration blocks with additional EBS block devices to attach to the instance. Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection. When accessing this as an attribute reference, it is a set of objects.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4136,7 +4253,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#state_ebs_optimized_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>optimized</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized. Note that if this is not set on an instance type that is optimized by default then this will show as disabled but if the instance type is optimized by default then there is no need to set this and there is no effect to disabling it. See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) of the AWS User Guide for more information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4145,7 +4262,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#state_enclave_options_python" style="color: inherit; text-decoration: inherit;">enclave_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestenclaveoptions">Spot<wbr>Instance<wbr>Request<wbr>Enclave<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#spotinstancerequestenclaveoptions">Input[Spot<wbr>Instance<wbr>Request<wbr>Enclave<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Enable Nitro Enclaves on launched instances. See Enclave Options below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4154,7 +4271,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#state_ephemeral_block_devices_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>block_<wbr>devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestephemeralblockdevice">Sequence[Spot<wbr>Instance<wbr>Request<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args]</a></span>
+        <span class="property-type"><a href="#spotinstancerequestephemeralblockdevice">Input[Spot<wbr>Instance<wbr>Request<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more configuration blocks to customize Ephemeral (also known as "Instance Store") volumes on the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a set of objects.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4163,7 +4280,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#state_get_password_data_python" style="color: inherit; text-decoration: inherit;">get_<wbr>password_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true, wait for password data to become available and retrieve it. Useful for getting the administrator password for instances running Microsoft Windows. The password data is exported to the `password_data` attribute. See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html) for more information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4172,7 +4289,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#state_hibernation_python" style="color: inherit; text-decoration: inherit;">hibernation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will support hibernation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4181,7 +4298,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#state_host_id_python" style="color: inherit; text-decoration: inherit;">host_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4190,7 +4307,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#state_iam_instance_profile_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>instance_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}IAM Instance Profile to launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the [EC2 documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions), notably `iam:PassRole`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4199,7 +4316,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#state_instance_initiated_shutdown_behavior_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>initiated_<wbr>shutdown_<wbr>behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Shutdown behavior for the instance. Amazon defaults this to `stop` for EBS-backed instances and `terminate` for instance-store instances. Cannot be set on instance-store instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior) for more information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4208,7 +4325,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#state_instance_interruption_behaviour_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>interruption_<wbr>behaviour</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Indicates whether a Spot instance stops or terminates when it is interrupted. Default is `terminate` as this is the current AWS behaviour.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4217,7 +4334,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#state_instance_state_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4225,7 +4342,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#state_instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4234,7 +4351,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#state_ipv6_address_count_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>address_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}A number of IPv6 addresses to associate with the primary network interface. Amazon EC2 chooses the IPv6 addresses from the range of your subnet.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4243,7 +4360,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#state_ipv6_addresses_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Specify one or more IPv6 addresses from the range of the subnet to associate with the primary network interface
 {{% /md %}}</dd><dt class="property-optional"
@@ -4252,7 +4369,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#state_key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4261,7 +4378,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
 <a href="#state_launch_group_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A launch group is a group of spot instances that launch together and terminate together.
 If left empty instances are launched and terminated individually.
@@ -4271,7 +4388,7 @@ If left empty instances are launched and terminated individually.
 <a href="#state_metadata_options_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestmetadataoptions">Spot<wbr>Instance<wbr>Request<wbr>Metadata<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#spotinstancerequestmetadataoptions">Input[Spot<wbr>Instance<wbr>Request<wbr>Metadata<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Customize the metadata options of the instance. See Metadata Options below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4280,7 +4397,7 @@ If left empty instances are launched and terminated individually.
 <a href="#state_monitoring_python" style="color: inherit; text-decoration: inherit;">monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will have detailed monitoring enabled. (Available since v0.6.0)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4289,7 +4406,7 @@ If left empty instances are launched and terminated individually.
 <a href="#state_network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestnetworkinterface">Sequence[Spot<wbr>Instance<wbr>Request<wbr>Network<wbr>Interface<wbr>Args]</a></span>
+        <span class="property-type"><a href="#spotinstancerequestnetworkinterface">Input[Spot<wbr>Instance<wbr>Request<wbr>Network<wbr>Interface<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Customize network interfaces to be attached at instance boot time. See Network Interfaces below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4298,7 +4415,7 @@ If left empty instances are launched and terminated individually.
 <a href="#state_outpost_arn_python" style="color: inherit; text-decoration: inherit;">outpost_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4306,7 +4423,7 @@ If left empty instances are launched and terminated individually.
 <a href="#state_password_data_python" style="color: inherit; text-decoration: inherit;">password_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4314,7 +4431,7 @@ If left empty instances are launched and terminated individually.
 <a href="#state_placement_group_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Placement Group to start the instance in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4323,7 +4440,7 @@ If left empty instances are launched and terminated individually.
 <a href="#state_primary_network_interface_id_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>network_<wbr>interface_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4331,7 +4448,7 @@ If left empty instances are launched and terminated individually.
 <a href="#state_private_dns_python" style="color: inherit; text-decoration: inherit;">private_<wbr>dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The private DNS name assigned to the instance. Can only be
 used inside the Amazon EC2, and only available if you've enabled DNS hostnames
@@ -4342,7 +4459,7 @@ for your VPC
 <a href="#state_private_ip_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Private IP address to associate with the instance in a VPC.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4351,7 +4468,7 @@ for your VPC
 <a href="#state_public_dns_python" style="color: inherit; text-decoration: inherit;">public_<wbr>dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The public DNS name assigned to the instance. For EC2-VPC, this
 is only available if you've enabled DNS hostnames for your VPC
@@ -4361,7 +4478,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#state_public_ip_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The public IP address assigned to the instance, if applicable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4370,7 +4487,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#state_root_block_device_python" style="color: inherit; text-decoration: inherit;">root_<wbr>block_<wbr>device</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestrootblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device<wbr>Args</a></span>
+        <span class="property-type"><a href="#spotinstancerequestrootblockdevice">Input[Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to customize details about the root block device of the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a list containing one object.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4379,7 +4496,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#state_secondary_private_ips_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>private_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of secondary private IPv4 addresses to assign to the instance's primary network interface (eth0) in a VPC. Can only be assigned to the primary network interface (eth0) attached at instance creation, not a pre-existing network interface i.e. referenced in a `network_interface` block. Refer to the [Elastic network interfaces documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#AvailableIpPerENI) to see the maximum number of private IP addresses allowed per instance type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4388,7 +4505,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#state_security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of security group names (EC2-Classic) or IDs (default VPC) to associate with.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4397,7 +4514,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#state_source_dest_check_python" style="color: inherit; text-decoration: inherit;">source_<wbr>dest_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Controls if traffic is routed to the instance when the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4406,7 +4523,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#state_spot_bid_status_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>bid_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The current [bid
 status](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-bid-status.html)
@@ -4420,7 +4537,7 @@ of the Spot Instance Request.
 <a href="#state_spot_instance_id_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>instance_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Instance ID (if any) that is currently fulfilling
 the Spot Instance request.
@@ -4430,7 +4547,7 @@ the Spot Instance request.
 <a href="#state_spot_price_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The maximum price to request on the spot market.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4439,7 +4556,7 @@ the Spot Instance request.
 <a href="#state_spot_request_state_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>request_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4447,7 +4564,7 @@ the Spot Instance request.
 <a href="#state_spot_type_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If set to `one-time`, after
 the instance is terminated, the spot request will be closed.
@@ -4457,7 +4574,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#state_subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}VPC Subnet ID to launch in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4466,7 +4583,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4475,7 +4592,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#state_tenancy_python" style="color: inherit; text-decoration: inherit;">tenancy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4484,7 +4601,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#state_user_data_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4493,7 +4610,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#state_user_data_base64_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data_<wbr>base64</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4502,7 +4619,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#state_valid_from_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The start date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). The default is to start fulfilling the request immediately.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4511,7 +4628,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#state_valid_until_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>until</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request. The default end date is 7 days from the current date.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4520,7 +4637,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#state_volume_tags_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign, at instance-creation time, to root and EBS volumes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4529,7 +4646,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#state_vpc_security_group_ids_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>security_<wbr>group_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to associate with.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4538,7 +4655,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#state_wait_for_fulfillment_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>fulfillment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If set, this provider will
 wait for the Spot Request to be fulfilled, and will throw an error if the
@@ -4590,7 +4707,7 @@ timeout of 10m is reached.
 <a href="#cpucredits_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Credits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Credit option for CPU usage. Valid values include `standard` or `unlimited`. T3 instances are launched as unlimited by default. T2 instances are launched as standard by default.
 {{% /md %}}</dd></dl>
@@ -4603,7 +4720,7 @@ timeout of 10m is reached.
 <a href="#cpu_credits_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>credits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Credit option for CPU usage. Valid values include `standard` or `unlimited`. T3 instances are launched as unlimited by default. T2 instances are launched as standard by default.
 {{% /md %}}</dd></dl>
@@ -4822,7 +4939,7 @@ timeout of 10m is reached.
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the device to mount.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4831,7 +4948,7 @@ timeout of 10m is reached.
 <a href="#deleteontermination_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>On<wbr>Termination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the volume should be destroyed on instance termination. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4840,7 +4957,7 @@ timeout of 10m is reached.
 <a href="#encrypted_nodejs" style="color: inherit; text-decoration: inherit;">encrypted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enables [EBS encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html) on the volume. Defaults to `false`. Cannot be used with `snapshot_id`. Must be configured to perform drift detection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4849,7 +4966,7 @@ timeout of 10m is reached.
 <a href="#iops_nodejs" style="color: inherit; text-decoration: inherit;">iops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Amount of provisioned [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html). Only valid for volume_type of `io1`, `io2` or `gp3`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4858,7 +4975,7 @@ timeout of 10m is reached.
 <a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the KMS Key to use when encrypting the volume. Must be configured to perform drift detection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4867,7 +4984,7 @@ timeout of 10m is reached.
 <a href="#snapshotid_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Snapshot ID to mount.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4876,7 +4993,7 @@ timeout of 10m is reached.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the device.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4885,7 +5002,7 @@ timeout of 10m is reached.
 <a href="#throughput_nodejs" style="color: inherit; text-decoration: inherit;">throughput</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Throughput to provision for a volume in mebibytes per second (MiB/s). This is only valid for `volume_type` of `gp3`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4894,7 +5011,7 @@ timeout of 10m is reached.
 <a href="#volumeid_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4902,7 +5019,7 @@ timeout of 10m is reached.
 <a href="#volumesize_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Size of the volume in gibibytes (GiB).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4911,7 +5028,7 @@ timeout of 10m is reached.
 <a href="#volumetype_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of volume. Valid values include `standard`, `gp2`, `gp3`, `io1`, `io2`, `sc1`, or `st1`. Defaults to `gp2`.
 {{% /md %}}</dd></dl>
@@ -4924,7 +5041,7 @@ timeout of 10m is reached.
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the device to mount.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4933,7 +5050,7 @@ timeout of 10m is reached.
 <a href="#delete_on_termination_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>on_<wbr>termination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the volume should be destroyed on instance termination. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4942,7 +5059,7 @@ timeout of 10m is reached.
 <a href="#encrypted_python" style="color: inherit; text-decoration: inherit;">encrypted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enables [EBS encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html) on the volume. Defaults to `false`. Cannot be used with `snapshot_id`. Must be configured to perform drift detection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4951,7 +5068,7 @@ timeout of 10m is reached.
 <a href="#iops_python" style="color: inherit; text-decoration: inherit;">iops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Amount of provisioned [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html). Only valid for volume_type of `io1`, `io2` or `gp3`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4960,7 +5077,7 @@ timeout of 10m is reached.
 <a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the KMS Key to use when encrypting the volume. Must be configured to perform drift detection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4969,7 +5086,7 @@ timeout of 10m is reached.
 <a href="#snapshot_id_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Snapshot ID to mount.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4978,7 +5095,7 @@ timeout of 10m is reached.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the device.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4987,7 +5104,7 @@ timeout of 10m is reached.
 <a href="#throughput_python" style="color: inherit; text-decoration: inherit;">throughput</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Throughput to provision for a volume in mebibytes per second (MiB/s). This is only valid for `volume_type` of `gp3`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4996,7 +5113,7 @@ timeout of 10m is reached.
 <a href="#volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5004,7 +5121,7 @@ timeout of 10m is reached.
 <a href="#volume_size_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Size of the volume in gibibytes (GiB).
 {{% /md %}}</dd><dt class="property-optional"
@@ -5013,7 +5130,7 @@ timeout of 10m is reached.
 <a href="#volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of volume. Valid values include `standard`, `gp2`, `gp3`, `io1`, `io2`, `sc1`, or `st1`. Defaults to `gp2`.
 {{% /md %}}</dd></dl>
@@ -5054,7 +5171,7 @@ timeout of 10m is reached.
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether Nitro Enclaves will be enabled on the instance. Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -5067,7 +5184,7 @@ timeout of 10m is reached.
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether Nitro Enclaves will be enabled on the instance. Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -5144,7 +5261,7 @@ timeout of 10m is reached.
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the block device to mount on the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5153,7 +5270,7 @@ timeout of 10m is reached.
 <a href="#nodevice_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Device</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Suppresses the specified device included in the AMI's block device mapping.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5162,7 +5279,7 @@ timeout of 10m is reached.
 <a href="#virtualname_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}[Instance Store Device Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames) (e.g. `ephemeral0`).
 {{% /md %}}</dd></dl>
@@ -5175,7 +5292,7 @@ timeout of 10m is reached.
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the block device to mount on the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5184,7 +5301,7 @@ timeout of 10m is reached.
 <a href="#no_device_python" style="color: inherit; text-decoration: inherit;">no_<wbr>device</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Suppresses the specified device included in the AMI's block device mapping.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5193,7 +5310,7 @@ timeout of 10m is reached.
 <a href="#virtual_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}[Instance Store Device Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames) (e.g. `ephemeral0`).
 {{% /md %}}</dd></dl>
@@ -5270,7 +5387,7 @@ timeout of 10m is reached.
 <a href="#httpendpoint_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Whether the metadata service is available. Valid values include `enabled` or `disabled`. Defaults to `enabled`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5279,7 +5396,7 @@ timeout of 10m is reached.
 <a href="#httpputresponsehoplimit_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the further instance metadata requests can travel. Valid values are integer from `1` to `64`. Defaults to `1`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5288,7 +5405,7 @@ timeout of 10m is reached.
 <a href="#httptokens_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Tokens</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Whether or not the metadata service requires session tokens, also referred to as _Instance Metadata Service Version 2 (IMDSv2)_. Valid values include `optional` or `required`. Defaults to `optional`.
 {{% /md %}}</dd></dl>
@@ -5301,7 +5418,7 @@ timeout of 10m is reached.
 <a href="#http_endpoint_python" style="color: inherit; text-decoration: inherit;">http_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Whether the metadata service is available. Valid values include `enabled` or `disabled`. Defaults to `enabled`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5310,7 +5427,7 @@ timeout of 10m is reached.
 <a href="#http_put_response_hop_limit_python" style="color: inherit; text-decoration: inherit;">http_<wbr>put_<wbr>response_<wbr>hop_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the further instance metadata requests can travel. Valid values are integer from `1` to `64`. Defaults to `1`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5319,7 +5436,7 @@ timeout of 10m is reached.
 <a href="#http_tokens_python" style="color: inherit; text-decoration: inherit;">http_<wbr>tokens</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Whether or not the metadata service requires session tokens, also referred to as _Instance Metadata Service Version 2 (IMDSv2)_. Valid values include `optional` or `required`. Defaults to `optional`.
 {{% /md %}}</dd></dl>
@@ -5396,7 +5513,7 @@ timeout of 10m is reached.
 <a href="#deviceindex_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Index</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Integer index of the network interface attachment. Limited by instance type.
 {{% /md %}}</dd><dt class="property-required"
@@ -5405,7 +5522,7 @@ timeout of 10m is reached.
 <a href="#networkinterfaceid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interface<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of the network interface to attach.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5414,7 +5531,7 @@ timeout of 10m is reached.
 <a href="#deleteontermination_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>On<wbr>Termination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether or not to delete the network interface on instance termination. Defaults to `false`. Currently, the only valid value is `false`, as this is only supported when creating new network interfaces when launching an instance.
 {{% /md %}}</dd></dl>
@@ -5427,7 +5544,7 @@ timeout of 10m is reached.
 <a href="#device_index_python" style="color: inherit; text-decoration: inherit;">device_<wbr>index</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Integer index of the network interface attachment. Limited by instance type.
 {{% /md %}}</dd><dt class="property-required"
@@ -5436,7 +5553,7 @@ timeout of 10m is reached.
 <a href="#network_interface_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interface_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of the network interface to attach.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5445,7 +5562,7 @@ timeout of 10m is reached.
 <a href="#delete_on_termination_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>on_<wbr>termination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether or not to delete the network interface on instance termination. Defaults to `false`. Currently, the only valid value is `false`, as this is only supported when creating new network interfaces when launching an instance.
 {{% /md %}}</dd></dl>
@@ -5646,7 +5763,7 @@ timeout of 10m is reached.
 <a href="#deleteontermination_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>On<wbr>Termination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the volume should be destroyed on instance termination. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5655,7 +5772,7 @@ timeout of 10m is reached.
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the device to mount.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5664,7 +5781,7 @@ timeout of 10m is reached.
 <a href="#encrypted_nodejs" style="color: inherit; text-decoration: inherit;">encrypted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to enable volume encryption. Defaults to `false`. Must be configured to perform drift detection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5673,7 +5790,7 @@ timeout of 10m is reached.
 <a href="#iops_nodejs" style="color: inherit; text-decoration: inherit;">iops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Amount of provisioned [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html). Only valid for volume_type of `io1`, `io2` or `gp3`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5682,7 +5799,7 @@ timeout of 10m is reached.
 <a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the KMS Key to use when encrypting the volume. Must be configured to perform drift detection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5691,7 +5808,7 @@ timeout of 10m is reached.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the device.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5700,7 +5817,7 @@ timeout of 10m is reached.
 <a href="#throughput_nodejs" style="color: inherit; text-decoration: inherit;">throughput</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Throughput to provision for a volume in mebibytes per second (MiB/s). This is only valid for `volume_type` of `gp3`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5709,7 +5826,7 @@ timeout of 10m is reached.
 <a href="#volumeid_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5717,7 +5834,7 @@ timeout of 10m is reached.
 <a href="#volumesize_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Size of the volume in gibibytes (GiB).
 {{% /md %}}</dd><dt class="property-optional"
@@ -5726,7 +5843,7 @@ timeout of 10m is reached.
 <a href="#volumetype_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of volume. Valid values include `standard`, `gp2`, `gp3`, `io1`, `io2`, `sc1`, or `st1`. Defaults to `gp2`.
 {{% /md %}}</dd></dl>
@@ -5739,7 +5856,7 @@ timeout of 10m is reached.
 <a href="#delete_on_termination_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>on_<wbr>termination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the volume should be destroyed on instance termination. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5748,7 +5865,7 @@ timeout of 10m is reached.
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the device to mount.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5757,7 +5874,7 @@ timeout of 10m is reached.
 <a href="#encrypted_python" style="color: inherit; text-decoration: inherit;">encrypted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to enable volume encryption. Defaults to `false`. Must be configured to perform drift detection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5766,7 +5883,7 @@ timeout of 10m is reached.
 <a href="#iops_python" style="color: inherit; text-decoration: inherit;">iops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Amount of provisioned [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html). Only valid for volume_type of `io1`, `io2` or `gp3`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5775,7 +5892,7 @@ timeout of 10m is reached.
 <a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the KMS Key to use when encrypting the volume. Must be configured to perform drift detection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5784,7 +5901,7 @@ timeout of 10m is reached.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the device.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5793,7 +5910,7 @@ timeout of 10m is reached.
 <a href="#throughput_python" style="color: inherit; text-decoration: inherit;">throughput</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Throughput to provision for a volume in mebibytes per second (MiB/s). This is only valid for `volume_type` of `gp3`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5802,7 +5919,7 @@ timeout of 10m is reached.
 <a href="#volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5810,7 +5927,7 @@ timeout of 10m is reached.
 <a href="#volume_size_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Size of the volume in gibibytes (GiB).
 {{% /md %}}</dd><dt class="property-optional"
@@ -5819,7 +5936,7 @@ timeout of 10m is reached.
 <a href="#volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of volume. Valid values include `standard`, `gp2`, `gp3`, `io1`, `io2`, `sc1`, or `st1`. Defaults to `gp2`.
 {{% /md %}}</dd></dl>

@@ -159,11 +159,11 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudwatch"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lambda"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
 )
 
 func main() {
@@ -260,8 +260,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lambda"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -528,19 +528,51 @@ const example = new aws.lambda.Function("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Function</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FunctionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Function</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FunctionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Function</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">code</span><span class="p">:</span> <span class="nx">Optional[pulumi.Archive]</span> = None<span class="p">, </span><span class="nx">code_signing_config_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dead_letter_config</span><span class="p">:</span> <span class="nx">Optional[_lambda_.FunctionDeadLetterConfigArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">environment</span><span class="p">:</span> <span class="nx">Optional[_lambda_.FunctionEnvironmentArgs]</span> = None<span class="p">, </span><span class="nx">file_system_config</span><span class="p">:</span> <span class="nx">Optional[_lambda_.FunctionFileSystemConfigArgs]</span> = None<span class="p">, </span><span class="nx">handler</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_config</span><span class="p">:</span> <span class="nx">Optional[_lambda_.FunctionImageConfigArgs]</span> = None<span class="p">, </span><span class="nx">image_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_key_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">layers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">memory_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">package_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">publish</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">reserved_concurrent_executions</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime</span><span class="p">:</span> <span class="nx">Optional[Union[str, _lambda_.Runtime]]</span> = None<span class="p">, </span><span class="nx">s3_bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">s3_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">s3_object_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_code_hash</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tracing_config</span><span class="p">:</span> <span class="nx">Optional[_lambda_.FunctionTracingConfigArgs]</span> = None<span class="p">, </span><span class="nx">vpc_config</span><span class="p">:</span> <span class="nx">Optional[_lambda_.FunctionVpcConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Function</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">code</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[pulumi.Archive]]</span> = None<span class="p">,</span>
+             <span class="nx">code_signing_config_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">dead_letter_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_lambda_.FunctionDeadLetterConfigArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">environment</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_lambda_.FunctionEnvironmentArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">file_system_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_lambda_.FunctionFileSystemConfigArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">handler</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">image_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_lambda_.FunctionImageConfigArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">image_uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">kms_key_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">layers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+             <span class="nx">memory_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">package_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">publish</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+             <span class="nx">reserved_concurrent_executions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+             <span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">runtime</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, _lambda_.Runtime]]]</span> = None<span class="p">,</span>
+             <span class="nx">s3_bucket</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">s3_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">s3_object_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">source_code_hash</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+             <span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+             <span class="nx">tracing_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_lambda_.FunctionTracingConfigArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">vpc_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_lambda_.FunctionVpcConfigArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Function</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FunctionArgs</a></span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFunction</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FunctionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Function</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFunction</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FunctionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Function</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Function</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">FunctionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Function</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">FunctionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -575,22 +607,32 @@ const example = new aws.lambda.Function("example", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">FunctionArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -599,7 +641,7 @@ const example = new aws.lambda.Function("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -623,7 +665,7 @@ const example = new aws.lambda.Function("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1154,7 +1196,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">ARN</span>
+        <span class="property-type">pulumi.<wbr>Input<ARN></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the function's execution role. The role provides the function's identity and access to AWS services and resources.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1163,7 +1205,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.asset.<wbr>Archive</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.asset.<wbr>Archive></span>
     </dt>
     <dd>{{% md %}}Path to the function's deployment package within the local filesystem. Conflicts with `image_uri`, `s3_bucket`, `s3_key`, and `s3_object_version`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1172,7 +1214,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#codesigningconfigarn_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Signing<wbr>Config<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}To enable code signing for this function, specify the ARN of a code-signing configuration. A code-signing configuration includes a set of signing profiles, which define the trusted publishers for this function.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1181,7 +1223,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#deadletterconfig_nodejs" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config</a></span>
+        <span class="property-type"><a href="#functiondeadletterconfig">pulumi.<wbr>Input<Function<wbr>Dead<wbr>Letter<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1190,7 +1232,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description of what your Lambda Function does.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1199,7 +1241,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#environment_nodejs" style="color: inherit; text-decoration: inherit;">environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionenvironment">Function<wbr>Environment</a></span>
+        <span class="property-type"><a href="#functionenvironment">pulumi.<wbr>Input<Function<wbr>Environment<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1208,7 +1250,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#filesystemconfig_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionfilesystemconfig">Function<wbr>File<wbr>System<wbr>Config</a></span>
+        <span class="property-type"><a href="#functionfilesystemconfig">pulumi.<wbr>Input<Function<wbr>File<wbr>System<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1217,7 +1259,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#handler_nodejs" style="color: inherit; text-decoration: inherit;">handler</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Function [entrypoint](https://docs.aws.amazon.com/lambda/latest/dg/walkthrough-custom-events-create-test-function.html) in your code.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1226,7 +1268,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#imageconfig_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionimageconfig">Function<wbr>Image<wbr>Config</a></span>
+        <span class="property-type"><a href="#functionimageconfig">pulumi.<wbr>Input<Function<wbr>Image<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1235,7 +1277,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#imageuri_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ECR image URI containing the function's deployment package. Conflicts with `filename`, `s3_bucket`, `s3_key`, and `s3_object_version`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1244,7 +1286,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#kmskeyarn_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the AWS Key Management Service (KMS) key that is used to encrypt environment variables. If this configuration is not provided when environment variables are in use, AWS Lambda uses a default service key. If this configuration is provided when environment variables are not in use, the AWS Lambda API does not save this configuration and the provider will show a perpetual difference of adding the key. To fix the perpetual difference, remove this configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1253,7 +1295,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#layers_nodejs" style="color: inherit; text-decoration: inherit;">layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of Lambda Layer Version ARNs (maximum of 5) to attach to your Lambda Function. See [Lambda Layers](https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1262,7 +1304,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#memorysize_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Amount of memory in MB your Lambda Function can use at runtime. Defaults to `128`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1271,7 +1313,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique name for your Lambda Function.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1280,7 +1322,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#packagetype_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Lambda deployment package type. Valid values are `Zip` and `Image`. Defaults to `Zip`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1289,7 +1331,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#publish_nodejs" style="color: inherit; text-decoration: inherit;">publish</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to publish creation/change as new Lambda Function Version. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1298,7 +1340,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#reservedconcurrentexecutions_nodejs" style="color: inherit; text-decoration: inherit;">reserved<wbr>Concurrent<wbr>Executions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Amount of reserved concurrent executions for this lambda function. A value of `0` disables lambda from being triggered and `-1` removes any concurrency limitations. Defaults to Unreserved Concurrency Limits `-1`. See [Managing Concurrency](https://docs.aws.amazon.com/lambda/latest/dg/concurrent-executions.html)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1307,7 +1349,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#runtime_nodejs" style="color: inherit; text-decoration: inherit;">runtime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#runtime">Runtime</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#runtime">pulumi.<wbr>Input<Runtime></a></span>
     </dt>
     <dd>{{% md %}}Identifier of the function's runtime. See [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime) for valid values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1316,7 +1358,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#s3bucket_nodejs" style="color: inherit; text-decoration: inherit;">s3Bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}S3 bucket location containing the function's deployment package. Conflicts with `filename` and `image_uri`. This bucket must reside in the same AWS region where you are creating the Lambda function.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1325,7 +1367,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#s3key_nodejs" style="color: inherit; text-decoration: inherit;">s3Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}S3 key of an object containing the function's deployment package. Conflicts with `filename` and `image_uri`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1334,7 +1376,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#s3objectversion_nodejs" style="color: inherit; text-decoration: inherit;">s3Object<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Object version containing the function's deployment package. Conflicts with `filename` and `image_uri`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1343,7 +1385,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#sourcecodehash_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Code<wbr>Hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either `filename` or `s3_key`. The usual way to set this is `filebase64sha256("file.zip")`, where "file.zip" is the local filename of the lambda function source archive.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1352,7 +1394,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Map of tags to assign to the object.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1361,7 +1403,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Amount of time your Lambda Function has to run in seconds. Defaults to `3`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1370,7 +1412,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tracingconfig_nodejs" style="color: inherit; text-decoration: inherit;">tracing<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config</a></span>
+        <span class="property-type"><a href="#functiontracingconfig">pulumi.<wbr>Input<Function<wbr>Tracing<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1379,7 +1421,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#vpcconfig_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionvpcconfig">Function<wbr>Vpc<wbr>Config</a></span>
+        <span class="property-type"><a href="#functionvpcconfig">pulumi.<wbr>Input<Function<wbr>Vpc<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd></dl>
@@ -1392,7 +1434,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">Input[str]</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the function's execution role. The role provides the function's identity and access to AWS services and resources.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1401,7 +1443,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Archive</span>
+        <span class="property-type">pulumi.<wbr>Input[pulumi.<wbr>Archive]</span>
     </dt>
     <dd>{{% md %}}Path to the function's deployment package within the local filesystem. Conflicts with `image_uri`, `s3_bucket`, `s3_key`, and `s3_object_version`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1410,7 +1452,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#code_signing_config_arn_python" style="color: inherit; text-decoration: inherit;">code_<wbr>signing_<wbr>config_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}To enable code signing for this function, specify the ARN of a code-signing configuration. A code-signing configuration includes a set of signing profiles, which define the trusted publishers for this function.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1419,7 +1461,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#dead_letter_config_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1428,7 +1470,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description of what your Lambda Function does.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1437,7 +1479,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#environment_python" style="color: inherit; text-decoration: inherit;">environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionenvironment">Function<wbr>Environment<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionenvironment">Function<wbr>Environment<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1446,7 +1488,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#file_system_config_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionfilesystemconfig">Function<wbr>File<wbr>System<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionfilesystemconfig">Function<wbr>File<wbr>System<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1455,7 +1497,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#handler_python" style="color: inherit; text-decoration: inherit;">handler</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Function [entrypoint](https://docs.aws.amazon.com/lambda/latest/dg/walkthrough-custom-events-create-test-function.html) in your code.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1464,7 +1506,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#image_config_python" style="color: inherit; text-decoration: inherit;">image_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionimageconfig">Function<wbr>Image<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionimageconfig">Function<wbr>Image<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1473,7 +1515,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#image_uri_python" style="color: inherit; text-decoration: inherit;">image_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ECR image URI containing the function's deployment package. Conflicts with `filename`, `s3_bucket`, `s3_key`, and `s3_object_version`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1482,7 +1524,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#kms_key_arn_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the AWS Key Management Service (KMS) key that is used to encrypt environment variables. If this configuration is not provided when environment variables are in use, AWS Lambda uses a default service key. If this configuration is provided when environment variables are not in use, the AWS Lambda API does not save this configuration and the provider will show a perpetual difference of adding the key. To fix the perpetual difference, remove this configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1491,7 +1533,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#layers_python" style="color: inherit; text-decoration: inherit;">layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of Lambda Layer Version ARNs (maximum of 5) to attach to your Lambda Function. See [Lambda Layers](https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1500,7 +1542,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#memory_size_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Amount of memory in MB your Lambda Function can use at runtime. Defaults to `128`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1509,7 +1551,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique name for your Lambda Function.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1518,7 +1560,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#package_type_python" style="color: inherit; text-decoration: inherit;">package_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Lambda deployment package type. Valid values are `Zip` and `Image`. Defaults to `Zip`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1527,7 +1569,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#publish_python" style="color: inherit; text-decoration: inherit;">publish</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to publish creation/change as new Lambda Function Version. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1536,7 +1578,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#reserved_concurrent_executions_python" style="color: inherit; text-decoration: inherit;">reserved_<wbr>concurrent_<wbr>executions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Amount of reserved concurrent executions for this lambda function. A value of `0` disables lambda from being triggered and `-1` removes any concurrency limitations. Defaults to Unreserved Concurrency Limits `-1`. See [Managing Concurrency](https://docs.aws.amazon.com/lambda/latest/dg/concurrent-executions.html)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1545,7 +1587,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#runtime_python" style="color: inherit; text-decoration: inherit;">runtime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#runtime">Runtime</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#runtime">Runtime]</a></span>
     </dt>
     <dd>{{% md %}}Identifier of the function's runtime. See [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime) for valid values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1554,7 +1596,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#s3_bucket_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}S3 bucket location containing the function's deployment package. Conflicts with `filename` and `image_uri`. This bucket must reside in the same AWS region where you are creating the Lambda function.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1563,7 +1605,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#s3_key_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}S3 key of an object containing the function's deployment package. Conflicts with `filename` and `image_uri`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1572,7 +1614,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#s3_object_version_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>object_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Object version containing the function's deployment package. Conflicts with `filename` and `image_uri`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1581,7 +1623,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#source_code_hash_python" style="color: inherit; text-decoration: inherit;">source_<wbr>code_<wbr>hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either `filename` or `s3_key`. The usual way to set this is `filebase64sha256("file.zip")`, where "file.zip" is the local filename of the lambda function source archive.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1590,7 +1632,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Map of tags to assign to the object.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1599,7 +1641,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Amount of time your Lambda Function has to run in seconds. Defaults to `3`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1608,7 +1650,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tracing_config_python" style="color: inherit; text-decoration: inherit;">tracing_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1617,7 +1659,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#vpc_config_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionvpcconfig">Function<wbr>Vpc<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionvpcconfig">Function<wbr>Vpc<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd></dl>
@@ -1978,20 +2020,56 @@ Get an existing Function resource's state with the given name, ID, and optional 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">FunctionState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Function</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">FunctionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Function</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">code</span><span class="p">:</span> <span class="nx">Optional[pulumi.Archive]</span> = None<span class="p">, </span><span class="nx">code_signing_config_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dead_letter_config</span><span class="p">:</span> <span class="nx">Optional[_lambda_.FunctionDeadLetterConfigArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">environment</span><span class="p">:</span> <span class="nx">Optional[_lambda_.FunctionEnvironmentArgs]</span> = None<span class="p">, </span><span class="nx">file_system_config</span><span class="p">:</span> <span class="nx">Optional[_lambda_.FunctionFileSystemConfigArgs]</span> = None<span class="p">, </span><span class="nx">handler</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_config</span><span class="p">:</span> <span class="nx">Optional[_lambda_.FunctionImageConfigArgs]</span> = None<span class="p">, </span><span class="nx">image_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">invoke_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_key_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_modified</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">layers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">memory_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">package_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">publish</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">qualified_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reserved_concurrent_executions</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime</span><span class="p">:</span> <span class="nx">Optional[Union[str, _lambda_.Runtime]]</span> = None<span class="p">, </span><span class="nx">s3_bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">s3_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">s3_object_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">signing_job_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">signing_profile_version_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_code_hash</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_code_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tracing_config</span><span class="p">:</span> <span class="nx">Optional[_lambda_.FunctionTracingConfigArgs]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_config</span><span class="p">:</span> <span class="nx">Optional[_lambda_.FunctionVpcConfigArgs]</span> = None<span class="p">) -&gt;</span> Function</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">code</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[pulumi.Archive]]</span> = None<span class="p">,</span>
+        <span class="nx">code_signing_config_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">dead_letter_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_lambda_.FunctionDeadLetterConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">environment</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_lambda_.FunctionEnvironmentArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">file_system_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_lambda_.FunctionFileSystemConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">handler</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">image_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_lambda_.FunctionImageConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">image_uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">invoke_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">kms_key_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">last_modified</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">layers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">memory_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">package_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">publish</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">qualified_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">reserved_concurrent_executions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">runtime</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, _lambda_.Runtime]]]</span> = None<span class="p">,</span>
+        <span class="nx">s3_bucket</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">s3_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">s3_object_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">signing_job_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">signing_profile_version_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">source_code_hash</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">source_code_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">tracing_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_lambda_.FunctionTracingConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">vpc_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_lambda_.FunctionVpcConfigArgs]]</span> = None<span class="p">) -&gt;</span> Function</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFunction<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">FunctionState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Function</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFunction<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">FunctionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Function</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Function</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">FunctionState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Function</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">FunctionState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2722,7 +2800,7 @@ The following state arguments are supported:
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2731,7 +2809,7 @@ The following state arguments are supported:
 <a href="#state_code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.asset.<wbr>Archive</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.asset.<wbr>Archive></span>
     </dt>
     <dd>{{% md %}}Path to the function's deployment package within the local filesystem. Conflicts with `image_uri`, `s3_bucket`, `s3_key`, and `s3_object_version`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2740,7 +2818,7 @@ The following state arguments are supported:
 <a href="#state_codesigningconfigarn_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Signing<wbr>Config<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}To enable code signing for this function, specify the ARN of a code-signing configuration. A code-signing configuration includes a set of signing profiles, which define the trusted publishers for this function.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2749,7 +2827,7 @@ The following state arguments are supported:
 <a href="#state_deadletterconfig_nodejs" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config</a></span>
+        <span class="property-type"><a href="#functiondeadletterconfig">pulumi.<wbr>Input<Function<wbr>Dead<wbr>Letter<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2758,7 +2836,7 @@ The following state arguments are supported:
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description of what your Lambda Function does.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2767,7 +2845,7 @@ The following state arguments are supported:
 <a href="#state_environment_nodejs" style="color: inherit; text-decoration: inherit;">environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionenvironment">Function<wbr>Environment</a></span>
+        <span class="property-type"><a href="#functionenvironment">pulumi.<wbr>Input<Function<wbr>Environment<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2776,7 +2854,7 @@ The following state arguments are supported:
 <a href="#state_filesystemconfig_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionfilesystemconfig">Function<wbr>File<wbr>System<wbr>Config</a></span>
+        <span class="property-type"><a href="#functionfilesystemconfig">pulumi.<wbr>Input<Function<wbr>File<wbr>System<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2785,7 +2863,7 @@ The following state arguments are supported:
 <a href="#state_handler_nodejs" style="color: inherit; text-decoration: inherit;">handler</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Function [entrypoint](https://docs.aws.amazon.com/lambda/latest/dg/walkthrough-custom-events-create-test-function.html) in your code.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2794,7 +2872,7 @@ The following state arguments are supported:
 <a href="#state_imageconfig_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionimageconfig">Function<wbr>Image<wbr>Config</a></span>
+        <span class="property-type"><a href="#functionimageconfig">pulumi.<wbr>Input<Function<wbr>Image<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2803,7 +2881,7 @@ The following state arguments are supported:
 <a href="#state_imageuri_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ECR image URI containing the function's deployment package. Conflicts with `filename`, `s3_bucket`, `s3_key`, and `s3_object_version`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2812,7 +2890,7 @@ The following state arguments are supported:
 <a href="#state_invokearn_nodejs" style="color: inherit; text-decoration: inherit;">invoke<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARN to be used for invoking Lambda Function from API Gateway - to be used in `aws.apigateway.Integration`'s `uri`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2821,7 +2899,7 @@ The following state arguments are supported:
 <a href="#state_kmskeyarn_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the AWS Key Management Service (KMS) key that is used to encrypt environment variables. If this configuration is not provided when environment variables are in use, AWS Lambda uses a default service key. If this configuration is provided when environment variables are not in use, the AWS Lambda API does not save this configuration and the provider will show a perpetual difference of adding the key. To fix the perpetual difference, remove this configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2830,7 +2908,7 @@ The following state arguments are supported:
 <a href="#state_lastmodified_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Date this resource was last modified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2839,7 +2917,7 @@ The following state arguments are supported:
 <a href="#state_layers_nodejs" style="color: inherit; text-decoration: inherit;">layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of Lambda Layer Version ARNs (maximum of 5) to attach to your Lambda Function. See [Lambda Layers](https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2848,7 +2926,7 @@ The following state arguments are supported:
 <a href="#state_memorysize_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Amount of memory in MB your Lambda Function can use at runtime. Defaults to `128`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2857,7 +2935,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique name for your Lambda Function.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2866,7 +2944,7 @@ The following state arguments are supported:
 <a href="#state_packagetype_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Lambda deployment package type. Valid values are `Zip` and `Image`. Defaults to `Zip`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2875,7 +2953,7 @@ The following state arguments are supported:
 <a href="#state_publish_nodejs" style="color: inherit; text-decoration: inherit;">publish</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to publish creation/change as new Lambda Function Version. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2884,7 +2962,7 @@ The following state arguments are supported:
 <a href="#state_qualifiedarn_nodejs" style="color: inherit; text-decoration: inherit;">qualified<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARN identifying your Lambda Function Version (if versioning is enabled via `publish = true`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2893,7 +2971,7 @@ The following state arguments are supported:
 <a href="#state_reservedconcurrentexecutions_nodejs" style="color: inherit; text-decoration: inherit;">reserved<wbr>Concurrent<wbr>Executions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Amount of reserved concurrent executions for this lambda function. A value of `0` disables lambda from being triggered and `-1` removes any concurrency limitations. Defaults to Unreserved Concurrency Limits `-1`. See [Managing Concurrency](https://docs.aws.amazon.com/lambda/latest/dg/concurrent-executions.html)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2902,7 +2980,7 @@ The following state arguments are supported:
 <a href="#state_role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">ARN</span>
+        <span class="property-type">pulumi.<wbr>Input<ARN></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the function's execution role. The role provides the function's identity and access to AWS services and resources.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2911,7 +2989,7 @@ The following state arguments are supported:
 <a href="#state_runtime_nodejs" style="color: inherit; text-decoration: inherit;">runtime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#runtime">Runtime</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#runtime">pulumi.<wbr>Input<Runtime></a></span>
     </dt>
     <dd>{{% md %}}Identifier of the function's runtime. See [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime) for valid values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2920,7 +2998,7 @@ The following state arguments are supported:
 <a href="#state_s3bucket_nodejs" style="color: inherit; text-decoration: inherit;">s3Bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}S3 bucket location containing the function's deployment package. Conflicts with `filename` and `image_uri`. This bucket must reside in the same AWS region where you are creating the Lambda function.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2929,7 +3007,7 @@ The following state arguments are supported:
 <a href="#state_s3key_nodejs" style="color: inherit; text-decoration: inherit;">s3Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}S3 key of an object containing the function's deployment package. Conflicts with `filename` and `image_uri`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2938,7 +3016,7 @@ The following state arguments are supported:
 <a href="#state_s3objectversion_nodejs" style="color: inherit; text-decoration: inherit;">s3Object<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Object version containing the function's deployment package. Conflicts with `filename` and `image_uri`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2947,7 +3025,7 @@ The following state arguments are supported:
 <a href="#state_signingjobarn_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Job<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARN of the signing job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2956,7 +3034,7 @@ The following state arguments are supported:
 <a href="#state_signingprofileversionarn_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Profile<wbr>Version<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARN of the signing profile version.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2965,7 +3043,7 @@ The following state arguments are supported:
 <a href="#state_sourcecodehash_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Code<wbr>Hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either `filename` or `s3_key`. The usual way to set this is `filebase64sha256("file.zip")`, where "file.zip" is the local filename of the lambda function source archive.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2974,7 +3052,7 @@ The following state arguments are supported:
 <a href="#state_sourcecodesize_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Code<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Size in bytes of the function .zip file.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2983,7 +3061,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Map of tags to assign to the object.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2992,7 +3070,7 @@ The following state arguments are supported:
 <a href="#state_timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Amount of time your Lambda Function has to run in seconds. Defaults to `3`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3001,7 +3079,7 @@ The following state arguments are supported:
 <a href="#state_tracingconfig_nodejs" style="color: inherit; text-decoration: inherit;">tracing<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config</a></span>
+        <span class="property-type"><a href="#functiontracingconfig">pulumi.<wbr>Input<Function<wbr>Tracing<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3010,7 +3088,7 @@ The following state arguments are supported:
 <a href="#state_version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Latest published version of your Lambda Function.
 * `vpc_config.vpc_id` - ID of the VPC.
@@ -3020,7 +3098,7 @@ The following state arguments are supported:
 <a href="#state_vpcconfig_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionvpcconfig">Function<wbr>Vpc<wbr>Config</a></span>
+        <span class="property-type"><a href="#functionvpcconfig">pulumi.<wbr>Input<Function<wbr>Vpc<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd></dl>
@@ -3033,7 +3111,7 @@ The following state arguments are supported:
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3042,7 +3120,7 @@ The following state arguments are supported:
 <a href="#state_code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Archive</span>
+        <span class="property-type">pulumi.<wbr>Input[pulumi.<wbr>Archive]</span>
     </dt>
     <dd>{{% md %}}Path to the function's deployment package within the local filesystem. Conflicts with `image_uri`, `s3_bucket`, `s3_key`, and `s3_object_version`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3051,7 +3129,7 @@ The following state arguments are supported:
 <a href="#state_code_signing_config_arn_python" style="color: inherit; text-decoration: inherit;">code_<wbr>signing_<wbr>config_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}To enable code signing for this function, specify the ARN of a code-signing configuration. A code-signing configuration includes a set of signing profiles, which define the trusted publishers for this function.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3060,7 +3138,7 @@ The following state arguments are supported:
 <a href="#state_dead_letter_config_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3069,7 +3147,7 @@ The following state arguments are supported:
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description of what your Lambda Function does.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3078,7 +3156,7 @@ The following state arguments are supported:
 <a href="#state_environment_python" style="color: inherit; text-decoration: inherit;">environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionenvironment">Function<wbr>Environment<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionenvironment">Function<wbr>Environment<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3087,7 +3165,7 @@ The following state arguments are supported:
 <a href="#state_file_system_config_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionfilesystemconfig">Function<wbr>File<wbr>System<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionfilesystemconfig">Function<wbr>File<wbr>System<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3096,7 +3174,7 @@ The following state arguments are supported:
 <a href="#state_handler_python" style="color: inherit; text-decoration: inherit;">handler</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Function [entrypoint](https://docs.aws.amazon.com/lambda/latest/dg/walkthrough-custom-events-create-test-function.html) in your code.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3105,7 +3183,7 @@ The following state arguments are supported:
 <a href="#state_image_config_python" style="color: inherit; text-decoration: inherit;">image_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionimageconfig">Function<wbr>Image<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionimageconfig">Function<wbr>Image<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3114,7 +3192,7 @@ The following state arguments are supported:
 <a href="#state_image_uri_python" style="color: inherit; text-decoration: inherit;">image_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ECR image URI containing the function's deployment package. Conflicts with `filename`, `s3_bucket`, `s3_key`, and `s3_object_version`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3123,7 +3201,7 @@ The following state arguments are supported:
 <a href="#state_invoke_arn_python" style="color: inherit; text-decoration: inherit;">invoke_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARN to be used for invoking Lambda Function from API Gateway - to be used in `aws.apigateway.Integration`'s `uri`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3132,7 +3210,7 @@ The following state arguments are supported:
 <a href="#state_kms_key_arn_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the AWS Key Management Service (KMS) key that is used to encrypt environment variables. If this configuration is not provided when environment variables are in use, AWS Lambda uses a default service key. If this configuration is provided when environment variables are not in use, the AWS Lambda API does not save this configuration and the provider will show a perpetual difference of adding the key. To fix the perpetual difference, remove this configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3141,7 +3219,7 @@ The following state arguments are supported:
 <a href="#state_last_modified_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Date this resource was last modified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3150,7 +3228,7 @@ The following state arguments are supported:
 <a href="#state_layers_python" style="color: inherit; text-decoration: inherit;">layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of Lambda Layer Version ARNs (maximum of 5) to attach to your Lambda Function. See [Lambda Layers](https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3159,7 +3237,7 @@ The following state arguments are supported:
 <a href="#state_memory_size_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Amount of memory in MB your Lambda Function can use at runtime. Defaults to `128`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3168,7 +3246,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique name for your Lambda Function.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3177,7 +3255,7 @@ The following state arguments are supported:
 <a href="#state_package_type_python" style="color: inherit; text-decoration: inherit;">package_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Lambda deployment package type. Valid values are `Zip` and `Image`. Defaults to `Zip`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3186,7 +3264,7 @@ The following state arguments are supported:
 <a href="#state_publish_python" style="color: inherit; text-decoration: inherit;">publish</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to publish creation/change as new Lambda Function Version. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3195,7 +3273,7 @@ The following state arguments are supported:
 <a href="#state_qualified_arn_python" style="color: inherit; text-decoration: inherit;">qualified_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARN identifying your Lambda Function Version (if versioning is enabled via `publish = true`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3204,7 +3282,7 @@ The following state arguments are supported:
 <a href="#state_reserved_concurrent_executions_python" style="color: inherit; text-decoration: inherit;">reserved_<wbr>concurrent_<wbr>executions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Amount of reserved concurrent executions for this lambda function. A value of `0` disables lambda from being triggered and `-1` removes any concurrency limitations. Defaults to Unreserved Concurrency Limits `-1`. See [Managing Concurrency](https://docs.aws.amazon.com/lambda/latest/dg/concurrent-executions.html)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3213,7 +3291,7 @@ The following state arguments are supported:
 <a href="#state_role_python" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">Input[str]</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the function's execution role. The role provides the function's identity and access to AWS services and resources.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3222,7 +3300,7 @@ The following state arguments are supported:
 <a href="#state_runtime_python" style="color: inherit; text-decoration: inherit;">runtime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#runtime">Runtime</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#runtime">Runtime]</a></span>
     </dt>
     <dd>{{% md %}}Identifier of the function's runtime. See [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime) for valid values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3231,7 +3309,7 @@ The following state arguments are supported:
 <a href="#state_s3_bucket_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}S3 bucket location containing the function's deployment package. Conflicts with `filename` and `image_uri`. This bucket must reside in the same AWS region where you are creating the Lambda function.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3240,7 +3318,7 @@ The following state arguments are supported:
 <a href="#state_s3_key_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}S3 key of an object containing the function's deployment package. Conflicts with `filename` and `image_uri`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3249,7 +3327,7 @@ The following state arguments are supported:
 <a href="#state_s3_object_version_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>object_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Object version containing the function's deployment package. Conflicts with `filename` and `image_uri`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3258,7 +3336,7 @@ The following state arguments are supported:
 <a href="#state_signing_job_arn_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>job_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARN of the signing job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3267,7 +3345,7 @@ The following state arguments are supported:
 <a href="#state_signing_profile_version_arn_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>profile_<wbr>version_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARN of the signing profile version.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3276,7 +3354,7 @@ The following state arguments are supported:
 <a href="#state_source_code_hash_python" style="color: inherit; text-decoration: inherit;">source_<wbr>code_<wbr>hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either `filename` or `s3_key`. The usual way to set this is `filebase64sha256("file.zip")`, where "file.zip" is the local filename of the lambda function source archive.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3285,7 +3363,7 @@ The following state arguments are supported:
 <a href="#state_source_code_size_python" style="color: inherit; text-decoration: inherit;">source_<wbr>code_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Size in bytes of the function .zip file.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3294,7 +3372,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Map of tags to assign to the object.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3303,7 +3381,7 @@ The following state arguments are supported:
 <a href="#state_timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Amount of time your Lambda Function has to run in seconds. Defaults to `3`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3312,7 +3390,7 @@ The following state arguments are supported:
 <a href="#state_tracing_config_python" style="color: inherit; text-decoration: inherit;">tracing_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3321,7 +3399,7 @@ The following state arguments are supported:
 <a href="#state_version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Latest published version of your Lambda Function.
 * `vpc_config.vpc_id` - ID of the VPC.
@@ -3331,7 +3409,7 @@ The following state arguments are supported:
 <a href="#state_vpc_config_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionvpcconfig">Function<wbr>Vpc<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionvpcconfig">Function<wbr>Vpc<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd></dl>
@@ -3381,7 +3459,7 @@ The following state arguments are supported:
 <a href="#targetarn_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARN of an SNS topic or SQS queue to notify when an invocation fails. If this option is used, the function's IAM role must be granted suitable access to write to the target object, which means allowing either the `sns:Publish` or `sqs:SendMessage` action on this ARN, depending on which service is targeted.
 {{% /md %}}</dd></dl>
@@ -3394,7 +3472,7 @@ The following state arguments are supported:
 <a href="#target_arn_python" style="color: inherit; text-decoration: inherit;">target_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARN of an SNS topic or SQS queue to notify when an invocation fails. If this option is used, the function's IAM role must be granted suitable access to write to the target object, which means allowing either the `sns:Publish` or `sqs:SendMessage` action on this ARN, depending on which service is targeted.
 {{% /md %}}</dd></dl>
@@ -3435,7 +3513,7 @@ The following state arguments are supported:
 <a href="#variables_nodejs" style="color: inherit; text-decoration: inherit;">variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Map of environment variables that are accessible from the function code during execution.
 {{% /md %}}</dd></dl>
@@ -3448,7 +3526,7 @@ The following state arguments are supported:
 <a href="#variables_python" style="color: inherit; text-decoration: inherit;">variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Map of environment variables that are accessible from the function code during execution.
 {{% /md %}}</dd></dl>
@@ -3507,7 +3585,7 @@ The following state arguments are supported:
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
 {{% /md %}}</dd><dt class="property-required"
@@ -3516,7 +3594,7 @@ The following state arguments are supported:
 <a href="#localmountpath_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Mount<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Path where the function can access the file system, starting with /mnt/.
 {{% /md %}}</dd></dl>
@@ -3529,7 +3607,7 @@ The following state arguments are supported:
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
 {{% /md %}}</dd><dt class="property-required"
@@ -3538,7 +3616,7 @@ The following state arguments are supported:
 <a href="#local_mount_path_python" style="color: inherit; text-decoration: inherit;">local_<wbr>mount_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Path where the function can access the file system, starting with /mnt/.
 {{% /md %}}</dd></dl>
@@ -3615,7 +3693,7 @@ The following state arguments are supported:
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Parameters that you want to pass in with `entry_point`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3624,7 +3702,7 @@ The following state arguments are supported:
 <a href="#entrypoints_nodejs" style="color: inherit; text-decoration: inherit;">entry<wbr>Points</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Entry point to your application, which is typically the location of the runtime executable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3633,7 +3711,7 @@ The following state arguments are supported:
 <a href="#workingdirectory_nodejs" style="color: inherit; text-decoration: inherit;">working<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Working directory.
 {{% /md %}}</dd></dl>
@@ -3646,7 +3724,7 @@ The following state arguments are supported:
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Parameters that you want to pass in with `entry_point`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3655,7 +3733,7 @@ The following state arguments are supported:
 <a href="#entry_points_python" style="color: inherit; text-decoration: inherit;">entry_<wbr>points</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Entry point to your application, which is typically the location of the runtime executable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3664,7 +3742,7 @@ The following state arguments are supported:
 <a href="#working_directory_python" style="color: inherit; text-decoration: inherit;">working_<wbr>directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Working directory.
 {{% /md %}}</dd></dl>
@@ -3705,7 +3783,7 @@ The following state arguments are supported:
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Whether to to sample and trace a subset of incoming requests with AWS X-Ray. Valid values are `PassThrough` and `Active`. If `PassThrough`, Lambda will only trace the request from an upstream service if it contains a tracing header with "sampled=1". If `Active`, Lambda will respect any tracing header it receives from an upstream service. If no tracing header is received, Lambda will call X-Ray for a tracing decision.
 {{% /md %}}</dd></dl>
@@ -3718,7 +3796,7 @@ The following state arguments are supported:
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Whether to to sample and trace a subset of incoming requests with AWS X-Ray. Valid values are `PassThrough` and `Active`. If `PassThrough`, Lambda will only trace the request from an upstream service if it contains a tracing header with "sampled=1". If `Active`, Lambda will respect any tracing header it receives from an upstream service. If no tracing header is received, Lambda will call X-Ray for a tracing decision.
 {{% /md %}}</dd></dl>
@@ -3793,7 +3871,7 @@ The following state arguments are supported:
 <a href="#securitygroupids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of security group IDs associated with the Lambda function.
 {{% /md %}}</dd><dt class="property-required"
@@ -3802,7 +3880,7 @@ The following state arguments are supported:
 <a href="#subnetids_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of subnet IDs associated with the Lambda function.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3811,7 +3889,7 @@ The following state arguments are supported:
 <a href="#vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3823,7 +3901,7 @@ The following state arguments are supported:
 <a href="#security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of security group IDs associated with the Lambda function.
 {{% /md %}}</dd><dt class="property-required"
@@ -3832,7 +3910,7 @@ The following state arguments are supported:
 <a href="#subnet_ids_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of subnet IDs associated with the Lambda function.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3841,7 +3919,7 @@ The following state arguments are supported:
 <a href="#vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -312,10 +312,10 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/kinesis"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -496,9 +496,9 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/redshift"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/kinesis"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/redshift"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -723,9 +723,9 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticsearch"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/elasticsearch"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/kinesis"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -1210,8 +1210,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/kinesis"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -1372,8 +1372,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/kinesis"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -1523,19 +1523,39 @@ const testStream = new aws.kinesis.FirehoseDeliveryStream("testStream", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">FirehoseDeliveryStream</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FirehoseDeliveryStreamArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">FirehoseDeliveryStream</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FirehoseDeliveryStreamArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">FirehoseDeliveryStream</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">elasticsearch_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamElasticsearchConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">extended_s3_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamExtendedS3ConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">http_endpoint_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamHttpEndpointConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">kinesis_source_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamKinesisSourceConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redshift_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamRedshiftConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">s3_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamS3ConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">server_side_encryption</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamServerSideEncryptionArgs]</span> = None<span class="p">, </span><span class="nx">splunk_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamSplunkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">version_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">FirehoseDeliveryStream</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                           <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                           <span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                           <span class="nx">destination_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                           <span class="nx">elasticsearch_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[FirehoseDeliveryStreamElasticsearchConfigurationArgs]]</span> = None<span class="p">,</span>
+                           <span class="nx">extended_s3_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[FirehoseDeliveryStreamExtendedS3ConfigurationArgs]]</span> = None<span class="p">,</span>
+                           <span class="nx">http_endpoint_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[FirehoseDeliveryStreamHttpEndpointConfigurationArgs]]</span> = None<span class="p">,</span>
+                           <span class="nx">kinesis_source_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[FirehoseDeliveryStreamKinesisSourceConfigurationArgs]]</span> = None<span class="p">,</span>
+                           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                           <span class="nx">redshift_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[FirehoseDeliveryStreamRedshiftConfigurationArgs]]</span> = None<span class="p">,</span>
+                           <span class="nx">s3_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[FirehoseDeliveryStreamS3ConfigurationArgs]]</span> = None<span class="p">,</span>
+                           <span class="nx">server_side_encryption</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[FirehoseDeliveryStreamServerSideEncryptionArgs]]</span> = None<span class="p">,</span>
+                           <span class="nx">splunk_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[FirehoseDeliveryStreamSplunkConfigurationArgs]]</span> = None<span class="p">,</span>
+                           <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                           <span class="nx">version_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">FirehoseDeliveryStream</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FirehoseDeliveryStreamArgs</a></span><span class="p">,</span>
+                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFirehoseDeliveryStream</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FirehoseDeliveryStreamArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FirehoseDeliveryStream</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFirehoseDeliveryStream</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FirehoseDeliveryStreamArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FirehoseDeliveryStream</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">FirehoseDeliveryStream</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">FirehoseDeliveryStreamArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">FirehoseDeliveryStream</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">FirehoseDeliveryStreamArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1570,22 +1590,32 @@ const testStream = new aws.kinesis.FirehoseDeliveryStream("testStream", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">FirehoseDeliveryStreamArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1594,7 +1624,7 @@ const testStream = new aws.kinesis.FirehoseDeliveryStream("testStream", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -1618,7 +1648,7 @@ const testStream = new aws.kinesis.FirehoseDeliveryStream("testStream", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1941,7 +1971,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}This is the destination to where the data is delivered. The only options are `s3` (Deprecated, use `extended_s3` instead), `extended_s3`, `redshift`, `elasticsearch`, `splunk`, and `http_endpoint`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1950,7 +1980,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) specifying the Stream
 {{% /md %}}</dd><dt class="property-optional"
@@ -1959,7 +1989,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#destinationid_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1967,7 +1997,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#elasticsearchconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfiguration">pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration options if elasticsearch is the destination. More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1976,7 +2006,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#extendeds3configuration_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>S3Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configuration">pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Enhanced configuration options for the s3 destination. More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1985,7 +2015,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#httpendpointconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Endpoint<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfiguration">pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration options if http_endpoint is the destination. requires the user to also specify a `s3_configuration` block.  More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1994,7 +2024,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#kinesissourceconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">kinesis<wbr>Source<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamkinesissourceconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Kinesis<wbr>Source<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamkinesissourceconfiguration">pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Kinesis<wbr>Source<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Allows the ability to specify the kinesis stream that is used as the source of the firehose delivery stream.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2003,7 +2033,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A name to identify the stream. This is unique to the
 AWS account and region the Stream is created in.
@@ -2013,7 +2043,7 @@ AWS account and region the Stream is created in.
 <a href="#redshiftconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">redshift<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfiguration">pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration options if redshift is the destination.
 Using `redshift_configuration` requires the user to also specify a
@@ -2024,7 +2054,7 @@ Using `redshift_configuration` requires the user to also specify a
 <a href="#s3configuration_nodejs" style="color: inherit; text-decoration: inherit;">s3Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreams3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreams3configuration">pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Required for non-S3 destinations. For S3 destination, use `extended_s3_configuration` instead. Configuration options for the s3 destination (or the intermediate bucket if the destination
 is redshift). More details are given below.
@@ -2034,7 +2064,7 @@ is redshift). More details are given below.
 <a href="#serversideencryption_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Side<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamserversideencryption">Firehose<wbr>Delivery<wbr>Stream<wbr>Server<wbr>Side<wbr>Encryption</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamserversideencryption">pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Server<wbr>Side<wbr>Encryption<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Encrypt at rest options.
 Server-side encryption should not be enabled when a kinesis stream is configured as the source of the firehose delivery stream.
@@ -2044,7 +2074,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#splunkconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">splunk<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfiguration">pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration options if splunk is the destination. More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2053,7 +2083,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2062,7 +2092,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#versionid_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the table version for the output data schema. Defaults to `LATEST`.
 {{% /md %}}</dd></dl>
@@ -2075,7 +2105,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}This is the destination to where the data is delivered. The only options are `s3` (Deprecated, use `extended_s3` instead), `extended_s3`, `redshift`, `elasticsearch`, `splunk`, and `http_endpoint`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2084,7 +2114,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) specifying the Stream
 {{% /md %}}</dd><dt class="property-optional"
@@ -2093,7 +2123,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#destination_id_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2101,7 +2131,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#elasticsearch_configuration_python" style="color: inherit; text-decoration: inherit;">elasticsearch_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfiguration">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration options if elasticsearch is the destination. More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2110,7 +2140,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#extended_s3_configuration_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>s3_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configuration">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Enhanced configuration options for the s3 destination. More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2119,7 +2149,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#http_endpoint_configuration_python" style="color: inherit; text-decoration: inherit;">http_<wbr>endpoint_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfiguration">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration options if http_endpoint is the destination. requires the user to also specify a `s3_configuration` block.  More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2128,7 +2158,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#kinesis_source_configuration_python" style="color: inherit; text-decoration: inherit;">kinesis_<wbr>source_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamkinesissourceconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Kinesis<wbr>Source<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamkinesissourceconfiguration">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Kinesis<wbr>Source<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Allows the ability to specify the kinesis stream that is used as the source of the firehose delivery stream.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2137,7 +2167,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A name to identify the stream. This is unique to the
 AWS account and region the Stream is created in.
@@ -2147,7 +2177,7 @@ AWS account and region the Stream is created in.
 <a href="#redshift_configuration_python" style="color: inherit; text-decoration: inherit;">redshift_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfiguration">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration options if redshift is the destination.
 Using `redshift_configuration` requires the user to also specify a
@@ -2158,7 +2188,7 @@ Using `redshift_configuration` requires the user to also specify a
 <a href="#s3_configuration_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreams3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreams3configuration">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Required for non-S3 destinations. For S3 destination, use `extended_s3_configuration` instead. Configuration options for the s3 destination (or the intermediate bucket if the destination
 is redshift). More details are given below.
@@ -2168,7 +2198,7 @@ is redshift). More details are given below.
 <a href="#server_side_encryption_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamserversideencryption">Firehose<wbr>Delivery<wbr>Stream<wbr>Server<wbr>Side<wbr>Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamserversideencryption">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Server<wbr>Side<wbr>Encryption<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Encrypt at rest options.
 Server-side encryption should not be enabled when a kinesis stream is configured as the source of the firehose delivery stream.
@@ -2178,7 +2208,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#splunk_configuration_python" style="color: inherit; text-decoration: inherit;">splunk_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfiguration">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration options if splunk is the destination. More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2187,7 +2217,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2196,7 +2226,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#version_id_python" style="color: inherit; text-decoration: inherit;">version_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the table version for the output data schema. Defaults to `LATEST`.
 {{% /md %}}</dd></dl>
@@ -2265,20 +2295,36 @@ Get an existing FirehoseDeliveryStream resource's state with the given name, ID,
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">FirehoseDeliveryStreamState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">FirehoseDeliveryStream</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">FirehoseDeliveryStreamState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">FirehoseDeliveryStream</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">elasticsearch_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamElasticsearchConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">extended_s3_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamExtendedS3ConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">http_endpoint_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamHttpEndpointConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">kinesis_source_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamKinesisSourceConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redshift_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamRedshiftConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">s3_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamS3ConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">server_side_encryption</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamServerSideEncryptionArgs]</span> = None<span class="p">, </span><span class="nx">splunk_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamSplunkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">version_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> FirehoseDeliveryStream</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">destination_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">elasticsearch_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[FirehoseDeliveryStreamElasticsearchConfigurationArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">extended_s3_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[FirehoseDeliveryStreamExtendedS3ConfigurationArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">http_endpoint_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[FirehoseDeliveryStreamHttpEndpointConfigurationArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">kinesis_source_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[FirehoseDeliveryStreamKinesisSourceConfigurationArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">redshift_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[FirehoseDeliveryStreamRedshiftConfigurationArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">s3_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[FirehoseDeliveryStreamS3ConfigurationArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">server_side_encryption</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[FirehoseDeliveryStreamServerSideEncryptionArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">splunk_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[FirehoseDeliveryStreamSplunkConfigurationArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">version_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> FirehoseDeliveryStream</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFirehoseDeliveryStream<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">FirehoseDeliveryStreamState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FirehoseDeliveryStream</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFirehoseDeliveryStream<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">FirehoseDeliveryStreamState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FirehoseDeliveryStream</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">FirehoseDeliveryStream</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">FirehoseDeliveryStreamState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">FirehoseDeliveryStream</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">FirehoseDeliveryStreamState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2655,7 +2701,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) specifying the Stream
 {{% /md %}}</dd><dt class="property-optional"
@@ -2664,7 +2710,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#state_destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}This is the destination to where the data is delivered. The only options are `s3` (Deprecated, use `extended_s3` instead), `extended_s3`, `redshift`, `elasticsearch`, `splunk`, and `http_endpoint`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2673,7 +2719,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#state_destinationid_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2681,7 +2727,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#state_elasticsearchconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfiguration">pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration options if elasticsearch is the destination. More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2690,7 +2736,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#state_extendeds3configuration_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>S3Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configuration">pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Enhanced configuration options for the s3 destination. More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2699,7 +2745,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#state_httpendpointconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Endpoint<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfiguration">pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration options if http_endpoint is the destination. requires the user to also specify a `s3_configuration` block.  More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2708,7 +2754,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#state_kinesissourceconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">kinesis<wbr>Source<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamkinesissourceconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Kinesis<wbr>Source<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamkinesissourceconfiguration">pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Kinesis<wbr>Source<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Allows the ability to specify the kinesis stream that is used as the source of the firehose delivery stream.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2717,7 +2763,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A name to identify the stream. This is unique to the
 AWS account and region the Stream is created in.
@@ -2727,7 +2773,7 @@ AWS account and region the Stream is created in.
 <a href="#state_redshiftconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">redshift<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfiguration">pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration options if redshift is the destination.
 Using `redshift_configuration` requires the user to also specify a
@@ -2738,7 +2784,7 @@ Using `redshift_configuration` requires the user to also specify a
 <a href="#state_s3configuration_nodejs" style="color: inherit; text-decoration: inherit;">s3Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreams3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreams3configuration">pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Required for non-S3 destinations. For S3 destination, use `extended_s3_configuration` instead. Configuration options for the s3 destination (or the intermediate bucket if the destination
 is redshift). More details are given below.
@@ -2748,7 +2794,7 @@ is redshift). More details are given below.
 <a href="#state_serversideencryption_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Side<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamserversideencryption">Firehose<wbr>Delivery<wbr>Stream<wbr>Server<wbr>Side<wbr>Encryption</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamserversideencryption">pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Server<wbr>Side<wbr>Encryption<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Encrypt at rest options.
 Server-side encryption should not be enabled when a kinesis stream is configured as the source of the firehose delivery stream.
@@ -2758,7 +2804,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#state_splunkconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">splunk<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfiguration">pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration options if splunk is the destination. More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2767,7 +2813,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2776,7 +2822,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#state_versionid_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the table version for the output data schema. Defaults to `LATEST`.
 {{% /md %}}</dd></dl>
@@ -2789,7 +2835,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) specifying the Stream
 {{% /md %}}</dd><dt class="property-optional"
@@ -2798,7 +2844,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#state_destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}This is the destination to where the data is delivered. The only options are `s3` (Deprecated, use `extended_s3` instead), `extended_s3`, `redshift`, `elasticsearch`, `splunk`, and `http_endpoint`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2807,7 +2853,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#state_destination_id_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2815,7 +2861,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#state_elasticsearch_configuration_python" style="color: inherit; text-decoration: inherit;">elasticsearch_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfiguration">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration options if elasticsearch is the destination. More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2824,7 +2870,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#state_extended_s3_configuration_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>s3_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configuration">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Enhanced configuration options for the s3 destination. More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2833,7 +2879,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#state_http_endpoint_configuration_python" style="color: inherit; text-decoration: inherit;">http_<wbr>endpoint_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfiguration">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration options if http_endpoint is the destination. requires the user to also specify a `s3_configuration` block.  More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2842,7 +2888,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#state_kinesis_source_configuration_python" style="color: inherit; text-decoration: inherit;">kinesis_<wbr>source_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamkinesissourceconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Kinesis<wbr>Source<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamkinesissourceconfiguration">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Kinesis<wbr>Source<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Allows the ability to specify the kinesis stream that is used as the source of the firehose delivery stream.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2851,7 +2897,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A name to identify the stream. This is unique to the
 AWS account and region the Stream is created in.
@@ -2861,7 +2907,7 @@ AWS account and region the Stream is created in.
 <a href="#state_redshift_configuration_python" style="color: inherit; text-decoration: inherit;">redshift_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfiguration">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration options if redshift is the destination.
 Using `redshift_configuration` requires the user to also specify a
@@ -2872,7 +2918,7 @@ Using `redshift_configuration` requires the user to also specify a
 <a href="#state_s3_configuration_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreams3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreams3configuration">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Required for non-S3 destinations. For S3 destination, use `extended_s3_configuration` instead. Configuration options for the s3 destination (or the intermediate bucket if the destination
 is redshift). More details are given below.
@@ -2882,7 +2928,7 @@ is redshift). More details are given below.
 <a href="#state_server_side_encryption_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamserversideencryption">Firehose<wbr>Delivery<wbr>Stream<wbr>Server<wbr>Side<wbr>Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamserversideencryption">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Server<wbr>Side<wbr>Encryption<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Encrypt at rest options.
 Server-side encryption should not be enabled when a kinesis stream is configured as the source of the firehose delivery stream.
@@ -2892,7 +2938,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#state_splunk_configuration_python" style="color: inherit; text-decoration: inherit;">splunk_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfiguration">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration options if splunk is the destination. More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2901,7 +2947,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2910,7 +2956,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#state_version_id_python" style="color: inherit; text-decoration: inherit;">version_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the table version for the output data schema. Defaults to `LATEST`.
 {{% /md %}}</dd></dl>
@@ -3176,7 +3222,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#indexname_nodejs" style="color: inherit; text-decoration: inherit;">index<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Elasticsearch index name.
 {{% /md %}}</dd><dt class="property-required"
@@ -3185,7 +3231,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role to be assumed by Firehose for calling the Amazon ES Configuration API and for indexing documents.  The pattern needs to be `arn:.*`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3194,7 +3240,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#bufferinginterval_nodejs" style="color: inherit; text-decoration: inherit;">buffering<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Buffer incoming data for the specified period of time, in seconds between 60 to 900, before delivering it to the destination.  The default value is 300s.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3203,7 +3249,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#bufferingsize_nodejs" style="color: inherit; text-decoration: inherit;">buffering<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Buffer incoming data to the specified size, in MBs between 1 to 100, before delivering it to the destination.  The default value is 5MB.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3212,7 +3258,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#cloudwatchloggingoptions_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Logging<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationcloudwatchloggingoptions">pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
 {{% /md %}}</dd><dt class="property-optional"
@@ -3221,7 +3267,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#clusterendpoint_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The endpoint to use when communicating with the cluster. Conflicts with `domain_arn`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3230,7 +3276,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#domainarn_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of the Amazon ES domain.  The IAM role must have permission for `DescribeElasticsearchDomain`, `DescribeElasticsearchDomains`, and `DescribeElasticsearchDomainConfig` after assuming `RoleARN`.  The pattern needs to be `arn:.*`. Conflicts with `cluster_endpoint`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3239,7 +3285,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#indexrotationperiod_nodejs" style="color: inherit; text-decoration: inherit;">index<wbr>Rotation<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Elasticsearch index rotation period.  Index rotation appends a timestamp to the IndexName to facilitate expiration of old data.  Valid values are `NoRotation`, `OneHour`, `OneDay`, `OneWeek`, and `OneMonth`.  The default value is `OneDay`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3248,7 +3294,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#processingconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">processing<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfiguration">pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The data processing configuration.  More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3257,7 +3303,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#retryduration_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}After an initial failure to deliver to Amazon Elasticsearch, the total amount of time, in seconds between 0 to 7200, during which Firehose re-attempts delivery (including the first attempt).  After this time has elapsed, the failed documents are written to Amazon S3.  The default value is 300s.  There will be no retry if the value is 0.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3266,7 +3312,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#s3backupmode_nodejs" style="color: inherit; text-decoration: inherit;">s3Backup<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Defines how documents should be delivered to Amazon S3.  Valid values are `FailedDocumentsOnly` and `AllDocuments`.  Default value is `FailedDocumentsOnly`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3275,7 +3321,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#typename_nodejs" style="color: inherit; text-decoration: inherit;">type<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Elasticsearch type name with maximum length of 100 characters.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3284,7 +3330,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#vpcconfig_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationvpcconfig">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Vpc<wbr>Config</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationvpcconfig">pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Vpc<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The VPC configuration for the delivery stream to connect to Elastic Search associated with the VPC. More details are given below
 {{% /md %}}</dd></dl>
@@ -3297,7 +3343,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#index_name_python" style="color: inherit; text-decoration: inherit;">index_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Elasticsearch index name.
 {{% /md %}}</dd><dt class="property-required"
@@ -3306,7 +3352,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role to be assumed by Firehose for calling the Amazon ES Configuration API and for indexing documents.  The pattern needs to be `arn:.*`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3315,7 +3361,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#buffering_interval_python" style="color: inherit; text-decoration: inherit;">buffering_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Buffer incoming data for the specified period of time, in seconds between 60 to 900, before delivering it to the destination.  The default value is 300s.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3324,7 +3370,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#buffering_size_python" style="color: inherit; text-decoration: inherit;">buffering_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Buffer incoming data to the specified size, in MBs between 1 to 100, before delivering it to the destination.  The default value is 5MB.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3333,7 +3379,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#cloudwatch_logging_options_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>logging_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationcloudwatchloggingoptions">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
 {{% /md %}}</dd><dt class="property-optional"
@@ -3342,7 +3388,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#cluster_endpoint_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The endpoint to use when communicating with the cluster. Conflicts with `domain_arn`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3351,7 +3397,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#domain_arn_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of the Amazon ES domain.  The IAM role must have permission for `DescribeElasticsearchDomain`, `DescribeElasticsearchDomains`, and `DescribeElasticsearchDomainConfig` after assuming `RoleARN`.  The pattern needs to be `arn:.*`. Conflicts with `cluster_endpoint`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3360,7 +3406,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#index_rotation_period_python" style="color: inherit; text-decoration: inherit;">index_<wbr>rotation_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Elasticsearch index rotation period.  Index rotation appends a timestamp to the IndexName to facilitate expiration of old data.  Valid values are `NoRotation`, `OneHour`, `OneDay`, `OneWeek`, and `OneMonth`.  The default value is `OneDay`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3369,7 +3415,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#processing_configuration_python" style="color: inherit; text-decoration: inherit;">processing_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfiguration">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The data processing configuration.  More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3378,7 +3424,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#retry_duration_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}After an initial failure to deliver to Amazon Elasticsearch, the total amount of time, in seconds between 0 to 7200, during which Firehose re-attempts delivery (including the first attempt).  After this time has elapsed, the failed documents are written to Amazon S3.  The default value is 300s.  There will be no retry if the value is 0.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3387,7 +3433,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#s3_backup_mode_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>backup_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Defines how documents should be delivered to Amazon S3.  Valid values are `FailedDocumentsOnly` and `AllDocuments`.  Default value is `FailedDocumentsOnly`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3396,7 +3442,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#type_name_python" style="color: inherit; text-decoration: inherit;">type_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Elasticsearch type name with maximum length of 100 characters.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3405,7 +3451,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#vpc_config_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationvpcconfig">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Vpc<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationvpcconfig">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Vpc<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The VPC configuration for the delivery stream to connect to Elastic Search associated with the VPC. More details are given below
 {{% /md %}}</dd></dl>
@@ -3482,7 +3528,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enables or disables the logging. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3491,7 +3537,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#loggroupname_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3500,7 +3546,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#logstreamname_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Stream<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd></dl>
@@ -3513,7 +3559,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enables or disables the logging. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3522,7 +3568,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#log_group_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3531,7 +3577,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#log_stream_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>stream_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd></dl>
@@ -3590,7 +3636,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enables or disables data processing.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3599,7 +3645,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#processors_nodejs" style="color: inherit; text-decoration: inherit;">processors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessor">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor[]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessor">pulumi.<wbr>Input<pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Array of data processors. More details are given below
 {{% /md %}}</dd></dl>
@@ -3612,7 +3658,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enables or disables data processing.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3621,7 +3667,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#processors_python" style="color: inherit; text-decoration: inherit;">processors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessor">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessor">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Array of data processors. More details are given below
 {{% /md %}}</dd></dl>
@@ -3680,7 +3726,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of processor. Valid Values: `Lambda`
 {{% /md %}}</dd><dt class="property-optional"
@@ -3689,7 +3735,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessorparameter">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter[]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessorparameter">pulumi.<wbr>Input<pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd></dl>
@@ -3702,7 +3748,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of processor. Valid Values: `Lambda`
 {{% /md %}}</dd><dt class="property-optional"
@@ -3711,7 +3757,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessorparameter">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessorparameter">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd></dl>
@@ -3770,7 +3816,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#parametername_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Parameter name. Valid Values: `LambdaArn`, `NumberOfRetries`, `RoleArn`, `BufferSizeInMBs`, `BufferIntervalInSeconds`
 {{% /md %}}</dd><dt class="property-required"
@@ -3779,7 +3825,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#parametervalue_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.
 {{% /md %}}</dd></dl>
@@ -3792,7 +3838,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#parameter_name_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Parameter name. Valid Values: `LambdaArn`, `NumberOfRetries`, `RoleArn`, `BufferSizeInMBs`, `BufferIntervalInSeconds`
 {{% /md %}}</dd><dt class="property-required"
@@ -3801,7 +3847,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#parameter_value_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.
 {{% /md %}}</dd></dl>
@@ -3894,7 +3940,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role to be assumed by Firehose for calling the Amazon EC2 configuration API and for creating network interfaces. Make sure role has necessary [IAM permissions](https://docs.aws.amazon.com/firehose/latest/dev/controlling-access.html#using-iam-es-vpc)
 {{% /md %}}</dd><dt class="property-required"
@@ -3903,7 +3949,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#securitygroupids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to associate with Kinesis Firehose.
 {{% /md %}}</dd><dt class="property-required"
@@ -3912,7 +3958,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#subnetids_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of subnet IDs to associate with Kinesis Firehose.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3921,7 +3967,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3933,7 +3979,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role to be assumed by Firehose for calling the Amazon EC2 configuration API and for creating network interfaces. Make sure role has necessary [IAM permissions](https://docs.aws.amazon.com/firehose/latest/dev/controlling-access.html#using-iam-es-vpc)
 {{% /md %}}</dd><dt class="property-required"
@@ -3942,7 +3988,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to associate with Kinesis Firehose.
 {{% /md %}}</dd><dt class="property-required"
@@ -3951,7 +3997,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#subnet_ids_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of subnet IDs to associate with Kinesis Firehose.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3960,7 +4006,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4220,7 +4266,7 @@ be used.
 <a href="#bucketarn_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of the S3 bucket
 {{% /md %}}</dd><dt class="property-required"
@@ -4229,7 +4275,7 @@ be used.
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren't allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4238,7 +4284,7 @@ be used.
 <a href="#bufferinterval_nodejs" style="color: inherit; text-decoration: inherit;">buffer<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4247,7 +4293,7 @@ be used.
 <a href="#buffersize_nodejs" style="color: inherit; text-decoration: inherit;">buffer<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
 We recommend setting SizeInMBs to a value greater than the amount of data you typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest data at 1 MB/sec set SizeInMBs to be 10 MB or higher.
@@ -4257,7 +4303,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a href="#cloudwatchloggingoptions_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Logging<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationcloudwatchloggingoptions">pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
 {{% /md %}}</dd><dt class="property-optional"
@@ -4266,7 +4312,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a href="#compressionformat_nodejs" style="color: inherit; text-decoration: inherit;">compression<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP & Snappy. If the destination is redshift you cannot use ZIP or Snappy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4275,7 +4321,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a href="#dataformatconversionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Format<wbr>Conversion<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfiguration">pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Nested argument for the serializer, deserializer, and schema for converting data from the JSON format to the Parquet or ORC format before writing it to Amazon S3. More details given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4284,7 +4330,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a href="#erroroutputprefix_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Output<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Prefix added to failed records before writing them to S3. This prefix appears immediately following the bucket name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4293,7 +4339,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a href="#kmskeyarn_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the KMS key ARN the stream will use to encrypt data. If not set, no encryption will
 be used.
@@ -4303,7 +4349,7 @@ be used.
 <a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The "YYYY/MM/DD/HH" time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket
 {{% /md %}}</dd><dt class="property-optional"
@@ -4312,7 +4358,7 @@ be used.
 <a href="#processingconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">processing<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfiguration">pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The data processing configuration.  More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4321,7 +4367,7 @@ be used.
 <a href="#s3backupconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">s3Backup<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurations3backupconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>S3Backup<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurations3backupconfiguration">pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>S3Backup<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The configuration for backup in Amazon S3. Required if `s3_backup_mode` is `Enabled`. Supports the same fields as `s3_configuration` object.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4330,7 +4376,7 @@ be used.
 <a href="#s3backupmode_nodejs" style="color: inherit; text-decoration: inherit;">s3Backup<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 backup mode.  Valid values are `Disabled` and `Enabled`.  Default value is `Disabled`.
 {{% /md %}}</dd></dl>
@@ -4343,7 +4389,7 @@ be used.
 <a href="#bucket_arn_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of the S3 bucket
 {{% /md %}}</dd><dt class="property-required"
@@ -4352,7 +4398,7 @@ be used.
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren't allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4361,7 +4407,7 @@ be used.
 <a href="#buffer_interval_python" style="color: inherit; text-decoration: inherit;">buffer_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4370,7 +4416,7 @@ be used.
 <a href="#buffer_size_python" style="color: inherit; text-decoration: inherit;">buffer_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
 We recommend setting SizeInMBs to a value greater than the amount of data you typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest data at 1 MB/sec set SizeInMBs to be 10 MB or higher.
@@ -4380,7 +4426,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a href="#cloudwatch_logging_options_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>logging_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationcloudwatchloggingoptions">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
 {{% /md %}}</dd><dt class="property-optional"
@@ -4389,7 +4435,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a href="#compression_format_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP & Snappy. If the destination is redshift you cannot use ZIP or Snappy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4398,7 +4444,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a href="#data_format_conversion_configuration_python" style="color: inherit; text-decoration: inherit;">data_<wbr>format_<wbr>conversion_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfiguration">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Nested argument for the serializer, deserializer, and schema for converting data from the JSON format to the Parquet or ORC format before writing it to Amazon S3. More details given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4407,7 +4453,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a href="#error_output_prefix_python" style="color: inherit; text-decoration: inherit;">error_<wbr>output_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Prefix added to failed records before writing them to S3. This prefix appears immediately following the bucket name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4416,7 +4462,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a href="#kms_key_arn_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the KMS key ARN the stream will use to encrypt data. If not set, no encryption will
 be used.
@@ -4426,7 +4472,7 @@ be used.
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The "YYYY/MM/DD/HH" time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket
 {{% /md %}}</dd><dt class="property-optional"
@@ -4435,7 +4481,7 @@ be used.
 <a href="#processing_configuration_python" style="color: inherit; text-decoration: inherit;">processing_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfiguration">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The data processing configuration.  More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4444,7 +4490,7 @@ be used.
 <a href="#s3_backup_configuration_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>backup_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurations3backupconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>S3Backup<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurations3backupconfiguration">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>S3Backup<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The configuration for backup in Amazon S3. Required if `s3_backup_mode` is `Enabled`. Supports the same fields as `s3_configuration` object.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4453,7 +4499,7 @@ be used.
 <a href="#s3_backup_mode_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>backup_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Amazon S3 backup mode.  Valid values are `Disabled` and `Enabled`.  Default value is `Disabled`.
 {{% /md %}}</dd></dl>
@@ -4530,7 +4576,7 @@ be used.
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enables or disables the logging. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4539,7 +4585,7 @@ be used.
 <a href="#loggroupname_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4548,7 +4594,7 @@ be used.
 <a href="#logstreamname_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Stream<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd></dl>
@@ -4561,7 +4607,7 @@ be used.
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enables or disables the logging. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4570,7 +4616,7 @@ be used.
 <a href="#log_group_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4579,7 +4625,7 @@ be used.
 <a href="#log_stream_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>stream_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd></dl>
@@ -4674,7 +4720,7 @@ be used.
 <a href="#inputformatconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Format<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfiguration">pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies the deserializer that you want Kinesis Data Firehose to use to convert the format of your data from JSON. More details below.
 {{% /md %}}</dd><dt class="property-required"
@@ -4683,7 +4729,7 @@ be used.
 <a href="#outputformatconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Format<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfiguration">pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies the serializer that you want Kinesis Data Firehose to use to convert the format of your data to the Parquet or ORC format. More details below.
 {{% /md %}}</dd><dt class="property-required"
@@ -4692,7 +4738,7 @@ be used.
 <a href="#schemaconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationschemaconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Schema<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationschemaconfiguration">pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Schema<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies the AWS Glue Data Catalog table that contains the column information. More details below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4701,7 +4747,7 @@ be used.
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Defaults to `true`. Set it to `false` if you want to disable format conversion while preserving the configuration details.
 {{% /md %}}</dd></dl>
@@ -4714,7 +4760,7 @@ be used.
 <a href="#input_format_configuration_python" style="color: inherit; text-decoration: inherit;">input_<wbr>format_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfiguration">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies the deserializer that you want Kinesis Data Firehose to use to convert the format of your data from JSON. More details below.
 {{% /md %}}</dd><dt class="property-required"
@@ -4723,7 +4769,7 @@ be used.
 <a href="#output_format_configuration_python" style="color: inherit; text-decoration: inherit;">output_<wbr>format_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfiguration">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies the serializer that you want Kinesis Data Firehose to use to convert the format of your data to the Parquet or ORC format. More details below.
 {{% /md %}}</dd><dt class="property-required"
@@ -4732,7 +4778,7 @@ be used.
 <a href="#schema_configuration_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationschemaconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Schema<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationschemaconfiguration">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Schema<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies the AWS Glue Data Catalog table that contains the column information. More details below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4741,7 +4787,7 @@ be used.
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Defaults to `true`. Set it to `false` if you want to disable format conversion while preserving the configuration details.
 {{% /md %}}</dd></dl>
@@ -4782,7 +4828,7 @@ be used.
 <a href="#deserializer_nodejs" style="color: inherit; text-decoration: inherit;">deserializer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializer">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializer">pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies which deserializer to use. You can choose either the Apache Hive JSON SerDe or the OpenX JSON SerDe. More details below.
 {{% /md %}}</dd></dl>
@@ -4795,7 +4841,7 @@ be used.
 <a href="#deserializer_python" style="color: inherit; text-decoration: inherit;">deserializer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializer">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializer">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies which deserializer to use. You can choose either the Apache Hive JSON SerDe or the OpenX JSON SerDe. More details below.
 {{% /md %}}</dd></dl>
@@ -4854,7 +4900,7 @@ be used.
 <a href="#hivejsonserde_nodejs" style="color: inherit; text-decoration: inherit;">hive<wbr>Json<wbr>Ser<wbr>De</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializerhivejsonserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Hive<wbr>Json<wbr>Ser<wbr>De</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializerhivejsonserde">pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Hive<wbr>Json<wbr>Ser<wbr>De<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies the native Hive / HCatalog JsonSerDe. More details below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4863,7 +4909,7 @@ be used.
 <a href="#openxjsonserde_nodejs" style="color: inherit; text-decoration: inherit;">open<wbr>XJson<wbr>Ser<wbr>De</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializeropenxjsonserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Open<wbr>XJson<wbr>Ser<wbr>De</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializeropenxjsonserde">pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Open<wbr>XJson<wbr>Ser<wbr>De<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies the OpenX SerDe. More details below.
 {{% /md %}}</dd></dl>
@@ -4876,7 +4922,7 @@ be used.
 <a href="#hive_json_ser_de_python" style="color: inherit; text-decoration: inherit;">hive_<wbr>json_<wbr>ser_<wbr>de</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializerhivejsonserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Hive<wbr>Json<wbr>Ser<wbr>De<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializerhivejsonserde">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Hive<wbr>Json<wbr>Ser<wbr>De<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies the native Hive / HCatalog JsonSerDe. More details below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4885,7 +4931,7 @@ be used.
 <a href="#open_x_json_ser_de_python" style="color: inherit; text-decoration: inherit;">open_<wbr>x_<wbr>json_<wbr>ser_<wbr>de</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializeropenxjsonserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Open<wbr>XJson<wbr>Ser<wbr>De<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializeropenxjsonserde">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Open<wbr>XJson<wbr>Ser<wbr>De<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies the OpenX SerDe. More details below.
 {{% /md %}}</dd></dl>
@@ -4926,7 +4972,7 @@ be used.
 <a href="#timestampformats_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Formats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of how you want Kinesis Data Firehose to parse the date and time stamps that may be present in your input data JSON. To specify these format strings, follow the pattern syntax of JodaTime's DateTimeFormat format strings. For more information, see [Class DateTimeFormat](https://www.joda.org/joda-time/apidocs/org/joda/time/format/DateTimeFormat.html). You can also use the special value millis to parse time stamps in epoch milliseconds. If you don't specify a format, Kinesis Data Firehose uses java.sql.Timestamp::valueOf by default.
 {{% /md %}}</dd></dl>
@@ -4939,7 +4985,7 @@ be used.
 <a href="#timestamp_formats_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>formats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of how you want Kinesis Data Firehose to parse the date and time stamps that may be present in your input data JSON. To specify these format strings, follow the pattern syntax of JodaTime's DateTimeFormat format strings. For more information, see [Class DateTimeFormat](https://www.joda.org/joda-time/apidocs/org/joda/time/format/DateTimeFormat.html). You can also use the special value millis to parse time stamps in epoch milliseconds. If you don't specify a format, Kinesis Data Firehose uses java.sql.Timestamp::valueOf by default.
 {{% /md %}}</dd></dl>
@@ -5016,7 +5062,7 @@ be used.
 <a href="#caseinsensitive_nodejs" style="color: inherit; text-decoration: inherit;">case<wbr>Insensitive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When set to true, which is the default, Kinesis Data Firehose converts JSON keys to lowercase before deserializing them.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5025,7 +5071,7 @@ be used.
 <a href="#columntojsonkeymappings_nodejs" style="color: inherit; text-decoration: inherit;">column<wbr>To<wbr>Json<wbr>Key<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A map of column names to JSON keys that aren't identical to the column names. This is useful when the JSON contains keys that are Hive keywords. For example, timestamp is a Hive keyword. If you have a JSON key named timestamp, set this parameter to `{ ts = "timestamp" }` to map this key to a column named ts.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5034,7 +5080,7 @@ be used.
 <a href="#convertdotsinjsonkeystounderscores_nodejs" style="color: inherit; text-decoration: inherit;">convert<wbr>Dots<wbr>In<wbr>Json<wbr>Keys<wbr>To<wbr>Underscores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When set to `true`, specifies that the names of the keys include dots and that you want Kinesis Data Firehose to replace them with underscores. This is useful because Apache Hive does not allow dots in column names. For example, if the JSON contains a key whose name is "a.b", you can define the column name to be "a_b" when using this option. Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -5047,7 +5093,7 @@ be used.
 <a href="#case_insensitive_python" style="color: inherit; text-decoration: inherit;">case_<wbr>insensitive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When set to true, which is the default, Kinesis Data Firehose converts JSON keys to lowercase before deserializing them.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5056,7 +5102,7 @@ be used.
 <a href="#column_to_json_key_mappings_python" style="color: inherit; text-decoration: inherit;">column_<wbr>to_<wbr>json_<wbr>key_<wbr>mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A map of column names to JSON keys that aren't identical to the column names. This is useful when the JSON contains keys that are Hive keywords. For example, timestamp is a Hive keyword. If you have a JSON key named timestamp, set this parameter to `{ ts = "timestamp" }` to map this key to a column named ts.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5065,7 +5111,7 @@ be used.
 <a href="#convert_dots_in_json_keys_to_underscores_python" style="color: inherit; text-decoration: inherit;">convert_<wbr>dots_<wbr>in_<wbr>json_<wbr>keys_<wbr>to_<wbr>underscores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When set to `true`, specifies that the names of the keys include dots and that you want Kinesis Data Firehose to replace them with underscores. This is useful because Apache Hive does not allow dots in column names. For example, if the JSON contains a key whose name is "a.b", you can define the column name to be "a_b" when using this option. Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -5106,7 +5152,7 @@ be used.
 <a href="#serializer_nodejs" style="color: inherit; text-decoration: inherit;">serializer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializer">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializer">pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies which serializer to use. You can choose either the ORC SerDe or the Parquet SerDe. More details below.
 {{% /md %}}</dd></dl>
@@ -5119,7 +5165,7 @@ be used.
 <a href="#serializer_python" style="color: inherit; text-decoration: inherit;">serializer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializer">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializer">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies which serializer to use. You can choose either the ORC SerDe or the Parquet SerDe. More details below.
 {{% /md %}}</dd></dl>
@@ -5178,7 +5224,7 @@ be used.
 <a href="#orcserde_nodejs" style="color: inherit; text-decoration: inherit;">orc<wbr>Ser<wbr>De</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerorcserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Orc<wbr>Ser<wbr>De</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerorcserde">pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Orc<wbr>Ser<wbr>De<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies converting data to the ORC format before storing it in Amazon S3. For more information, see [Apache ORC](https://orc.apache.org/docs/). More details below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5187,7 +5233,7 @@ be used.
 <a href="#parquetserde_nodejs" style="color: inherit; text-decoration: inherit;">parquet<wbr>Ser<wbr>De</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerparquetserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Parquet<wbr>Ser<wbr>De</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerparquetserde">pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Parquet<wbr>Ser<wbr>De<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies converting data to the Parquet format before storing it in Amazon S3. For more information, see [Apache Parquet](https://parquet.apache.org/documentation/latest/). More details below.
 {{% /md %}}</dd></dl>
@@ -5200,7 +5246,7 @@ be used.
 <a href="#orc_ser_de_python" style="color: inherit; text-decoration: inherit;">orc_<wbr>ser_<wbr>de</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerorcserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Orc<wbr>Ser<wbr>De<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerorcserde">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Orc<wbr>Ser<wbr>De<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies converting data to the ORC format before storing it in Amazon S3. For more information, see [Apache ORC](https://orc.apache.org/docs/). More details below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5209,7 +5255,7 @@ be used.
 <a href="#parquet_ser_de_python" style="color: inherit; text-decoration: inherit;">parquet_<wbr>ser_<wbr>de</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerparquetserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Parquet<wbr>Ser<wbr>De<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerparquetserde">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Parquet<wbr>Ser<wbr>De<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies converting data to the Parquet format before storing it in Amazon S3. For more information, see [Apache Parquet](https://parquet.apache.org/documentation/latest/). More details below.
 {{% /md %}}</dd></dl>
@@ -5412,7 +5458,7 @@ be used.
 <a href="#blocksizebytes_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Size<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The Hadoop Distributed File System (HDFS) block size. This is useful if you intend to copy the data from Amazon S3 to HDFS before querying. The default is 256 MiB and the minimum is 64 MiB. Kinesis Data Firehose uses this value for padding calculations.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5421,7 +5467,7 @@ be used.
 <a href="#bloomfiltercolumns_nodejs" style="color: inherit; text-decoration: inherit;">bloom<wbr>Filter<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of column names for which you want Kinesis Data Firehose to create bloom filters.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5430,7 +5476,7 @@ be used.
 <a href="#bloomfilterfalsepositiveprobability_nodejs" style="color: inherit; text-decoration: inherit;">bloom<wbr>Filter<wbr>False<wbr>Positive<wbr>Probability</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The Bloom filter false positive probability (FPP). The lower the FPP, the bigger the Bloom filter. The default value is `0.05`, the minimum is `0`, and the maximum is `1`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5439,7 +5485,7 @@ be used.
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The compression code to use over data blocks. The possible values are `UNCOMPRESSED`, `SNAPPY`, and `GZIP`, with the default being `SNAPPY`. Use `SNAPPY` for higher decompression speed. Use `GZIP` if the compression ratio is more important than speed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5448,7 +5494,7 @@ be used.
 <a href="#dictionarykeythreshold_nodejs" style="color: inherit; text-decoration: inherit;">dictionary<wbr>Key<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}A float that represents the fraction of the total number of non-null rows. To turn off dictionary encoding, set this fraction to a number that is less than the number of distinct keys in a dictionary. To always use dictionary encoding, set this threshold to `1`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5457,7 +5503,7 @@ be used.
 <a href="#enablepadding_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Padding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Set this to `true` to indicate that you want stripes to be padded to the HDFS block boundaries. This is useful if you intend to copy the data from Amazon S3 to HDFS before querying. The default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5466,7 +5512,7 @@ be used.
 <a href="#formatversion_nodejs" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The version of the file to write. The possible values are `V0_11` and `V0_12`. The default is `V0_12`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5475,7 +5521,7 @@ be used.
 <a href="#paddingtolerance_nodejs" style="color: inherit; text-decoration: inherit;">padding<wbr>Tolerance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}A float between 0 and 1 that defines the tolerance for block padding as a decimal fraction of stripe size. The default value is `0.05`, which means 5 percent of stripe size. For the default values of 64 MiB ORC stripes and 256 MiB HDFS blocks, the default block padding tolerance of 5 percent reserves a maximum of 3.2 MiB for padding within the 256 MiB block. In such a case, if the available size within the block is more than 3.2 MiB, a new, smaller stripe is inserted to fit within that space. This ensures that no stripe crosses block boundaries and causes remote reads within a node-local task. Kinesis Data Firehose ignores this parameter when `enable_padding` is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5484,7 +5530,7 @@ be used.
 <a href="#rowindexstride_nodejs" style="color: inherit; text-decoration: inherit;">row<wbr>Index<wbr>Stride</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of rows between index entries. The default is `10000` and the minimum is `1000`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5493,7 +5539,7 @@ be used.
 <a href="#stripesizebytes_nodejs" style="color: inherit; text-decoration: inherit;">stripe<wbr>Size<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of bytes in each stripe. The default is 64 MiB and the minimum is 8 MiB.
 {{% /md %}}</dd></dl>
@@ -5506,7 +5552,7 @@ be used.
 <a href="#block_size_bytes_python" style="color: inherit; text-decoration: inherit;">block_<wbr>size_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The Hadoop Distributed File System (HDFS) block size. This is useful if you intend to copy the data from Amazon S3 to HDFS before querying. The default is 256 MiB and the minimum is 64 MiB. Kinesis Data Firehose uses this value for padding calculations.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5515,7 +5561,7 @@ be used.
 <a href="#bloom_filter_columns_python" style="color: inherit; text-decoration: inherit;">bloom_<wbr>filter_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of column names for which you want Kinesis Data Firehose to create bloom filters.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5524,7 +5570,7 @@ be used.
 <a href="#bloom_filter_false_positive_probability_python" style="color: inherit; text-decoration: inherit;">bloom_<wbr>filter_<wbr>false_<wbr>positive_<wbr>probability</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The Bloom filter false positive probability (FPP). The lower the FPP, the bigger the Bloom filter. The default value is `0.05`, the minimum is `0`, and the maximum is `1`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5533,7 +5579,7 @@ be used.
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The compression code to use over data blocks. The possible values are `UNCOMPRESSED`, `SNAPPY`, and `GZIP`, with the default being `SNAPPY`. Use `SNAPPY` for higher decompression speed. Use `GZIP` if the compression ratio is more important than speed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5542,7 +5588,7 @@ be used.
 <a href="#dictionary_key_threshold_python" style="color: inherit; text-decoration: inherit;">dictionary_<wbr>key_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}A float that represents the fraction of the total number of non-null rows. To turn off dictionary encoding, set this fraction to a number that is less than the number of distinct keys in a dictionary. To always use dictionary encoding, set this threshold to `1`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5551,7 +5597,7 @@ be used.
 <a href="#enable_padding_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>padding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Set this to `true` to indicate that you want stripes to be padded to the HDFS block boundaries. This is useful if you intend to copy the data from Amazon S3 to HDFS before querying. The default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5560,7 +5606,7 @@ be used.
 <a href="#format_version_python" style="color: inherit; text-decoration: inherit;">format_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The version of the file to write. The possible values are `V0_11` and `V0_12`. The default is `V0_12`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5569,7 +5615,7 @@ be used.
 <a href="#padding_tolerance_python" style="color: inherit; text-decoration: inherit;">padding_<wbr>tolerance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}A float between 0 and 1 that defines the tolerance for block padding as a decimal fraction of stripe size. The default value is `0.05`, which means 5 percent of stripe size. For the default values of 64 MiB ORC stripes and 256 MiB HDFS blocks, the default block padding tolerance of 5 percent reserves a maximum of 3.2 MiB for padding within the 256 MiB block. In such a case, if the available size within the block is more than 3.2 MiB, a new, smaller stripe is inserted to fit within that space. This ensures that no stripe crosses block boundaries and causes remote reads within a node-local task. Kinesis Data Firehose ignores this parameter when `enable_padding` is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5578,7 +5624,7 @@ be used.
 <a href="#row_index_stride_python" style="color: inherit; text-decoration: inherit;">row_<wbr>index_<wbr>stride</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of rows between index entries. The default is `10000` and the minimum is `1000`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5587,7 +5633,7 @@ be used.
 <a href="#stripe_size_bytes_python" style="color: inherit; text-decoration: inherit;">stripe_<wbr>size_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of bytes in each stripe. The default is 64 MiB and the minimum is 8 MiB.
 {{% /md %}}</dd></dl>
@@ -5718,7 +5764,7 @@ be used.
 <a href="#blocksizebytes_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Size<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The Hadoop Distributed File System (HDFS) block size. This is useful if you intend to copy the data from Amazon S3 to HDFS before querying. The default is 256 MiB and the minimum is 64 MiB. Kinesis Data Firehose uses this value for padding calculations.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5727,7 +5773,7 @@ be used.
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The compression code to use over data blocks. The possible values are `UNCOMPRESSED`, `SNAPPY`, and `GZIP`, with the default being `SNAPPY`. Use `SNAPPY` for higher decompression speed. Use `GZIP` if the compression ratio is more important than speed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5736,7 +5782,7 @@ be used.
 <a href="#enabledictionarycompression_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Dictionary<wbr>Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable dictionary compression.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5745,7 +5791,7 @@ be used.
 <a href="#maxpaddingbytes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Padding<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum amount of padding to apply. This is useful if you intend to copy the data from Amazon S3 to HDFS before querying. The default is `0`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5754,7 +5800,7 @@ be used.
 <a href="#pagesizebytes_nodejs" style="color: inherit; text-decoration: inherit;">page<wbr>Size<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The Parquet page size. Column chunks are divided into pages. A page is conceptually an indivisible unit (in terms of compression and encoding). The minimum value is 64 KiB and the default is 1 MiB.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5763,7 +5809,7 @@ be used.
 <a href="#writerversion_nodejs" style="color: inherit; text-decoration: inherit;">writer<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Indicates the version of row format to output. The possible values are `V1` and `V2`. The default is `V1`.
 {{% /md %}}</dd></dl>
@@ -5776,7 +5822,7 @@ be used.
 <a href="#block_size_bytes_python" style="color: inherit; text-decoration: inherit;">block_<wbr>size_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The Hadoop Distributed File System (HDFS) block size. This is useful if you intend to copy the data from Amazon S3 to HDFS before querying. The default is 256 MiB and the minimum is 64 MiB. Kinesis Data Firehose uses this value for padding calculations.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5785,7 +5831,7 @@ be used.
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The compression code to use over data blocks. The possible values are `UNCOMPRESSED`, `SNAPPY`, and `GZIP`, with the default being `SNAPPY`. Use `SNAPPY` for higher decompression speed. Use `GZIP` if the compression ratio is more important than speed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5794,7 +5840,7 @@ be used.
 <a href="#enable_dictionary_compression_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>dictionary_<wbr>compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable dictionary compression.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5803,7 +5849,7 @@ be used.
 <a href="#max_padding_bytes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>padding_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum amount of padding to apply. This is useful if you intend to copy the data from Amazon S3 to HDFS before querying. The default is `0`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5812,7 +5858,7 @@ be used.
 <a href="#page_size_bytes_python" style="color: inherit; text-decoration: inherit;">page_<wbr>size_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The Parquet page size. Column chunks are divided into pages. A page is conceptually an indivisible unit (in terms of compression and encoding). The minimum value is 64 KiB and the default is 1 MiB.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5821,7 +5867,7 @@ be used.
 <a href="#writer_version_python" style="color: inherit; text-decoration: inherit;">writer_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Indicates the version of row format to output. The possible values are `V1` and `V2`. The default is `V1`.
 {{% /md %}}</dd></dl>
@@ -5952,7 +5998,7 @@ be used.
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the AWS Glue database that contains the schema for the output data.
 {{% /md %}}</dd><dt class="property-required"
@@ -5961,7 +6007,7 @@ be used.
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren't allowed.
 {{% /md %}}</dd><dt class="property-required"
@@ -5970,7 +6016,7 @@ be used.
 <a href="#tablename_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the AWS Glue table that contains the column information that constitutes your data schema.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5979,7 +6025,7 @@ be used.
 <a href="#catalogid_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the AWS Glue Data Catalog. If you don't supply this, the AWS account ID is used by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5988,7 +6034,7 @@ be used.
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If you don't specify an AWS Region, the default is the current region.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5997,7 +6043,7 @@ be used.
 <a href="#versionid_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the table version for the output data schema. Defaults to `LATEST`.
 {{% /md %}}</dd></dl>
@@ -6010,7 +6056,7 @@ be used.
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the AWS Glue database that contains the schema for the output data.
 {{% /md %}}</dd><dt class="property-required"
@@ -6019,7 +6065,7 @@ be used.
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren't allowed.
 {{% /md %}}</dd><dt class="property-required"
@@ -6028,7 +6074,7 @@ be used.
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the AWS Glue table that contains the column information that constitutes your data schema.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6037,7 +6083,7 @@ be used.
 <a href="#catalog_id_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the AWS Glue Data Catalog. If you don't supply this, the AWS account ID is used by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6046,7 +6092,7 @@ be used.
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If you don't specify an AWS Region, the default is the current region.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6055,7 +6101,7 @@ be used.
 <a href="#version_id_python" style="color: inherit; text-decoration: inherit;">version_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the table version for the output data schema. Defaults to `LATEST`.
 {{% /md %}}</dd></dl>
@@ -6114,7 +6160,7 @@ be used.
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enables or disables data processing.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6123,7 +6169,7 @@ be used.
 <a href="#processors_nodejs" style="color: inherit; text-decoration: inherit;">processors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessor">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor[]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessor">pulumi.<wbr>Input<pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Array of data processors. More details are given below
 {{% /md %}}</dd></dl>
@@ -6136,7 +6182,7 @@ be used.
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enables or disables data processing.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6145,7 +6191,7 @@ be used.
 <a href="#processors_python" style="color: inherit; text-decoration: inherit;">processors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessor">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessor">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Array of data processors. More details are given below
 {{% /md %}}</dd></dl>
@@ -6204,7 +6250,7 @@ be used.
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of processor. Valid Values: `Lambda`
 {{% /md %}}</dd><dt class="property-optional"
@@ -6213,7 +6259,7 @@ be used.
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessorparameter">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter[]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessorparameter">pulumi.<wbr>Input<pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd></dl>
@@ -6226,7 +6272,7 @@ be used.
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of processor. Valid Values: `Lambda`
 {{% /md %}}</dd><dt class="property-optional"
@@ -6235,7 +6281,7 @@ be used.
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessorparameter">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessorparameter">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd></dl>
@@ -6294,7 +6340,7 @@ be used.
 <a href="#parametername_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Parameter name. Valid Values: `LambdaArn`, `NumberOfRetries`, `RoleArn`, `BufferSizeInMBs`, `BufferIntervalInSeconds`
 {{% /md %}}</dd><dt class="property-required"
@@ -6303,7 +6349,7 @@ be used.
 <a href="#parametervalue_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.
 {{% /md %}}</dd></dl>
@@ -6316,7 +6362,7 @@ be used.
 <a href="#parameter_name_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Parameter name. Valid Values: `LambdaArn`, `NumberOfRetries`, `RoleArn`, `BufferSizeInMBs`, `BufferIntervalInSeconds`
 {{% /md %}}</dd><dt class="property-required"
@@ -6325,7 +6371,7 @@ be used.
 <a href="#parameter_value_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.
 {{% /md %}}</dd></dl>
@@ -6496,7 +6542,7 @@ be used.
 <a href="#bucketarn_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of the S3 bucket
 {{% /md %}}</dd><dt class="property-required"
@@ -6505,7 +6551,7 @@ be used.
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren't allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6514,7 +6560,7 @@ be used.
 <a href="#bufferinterval_nodejs" style="color: inherit; text-decoration: inherit;">buffer<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6523,7 +6569,7 @@ be used.
 <a href="#buffersize_nodejs" style="color: inherit; text-decoration: inherit;">buffer<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
 We recommend setting SizeInMBs to a value greater than the amount of data you typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest data at 1 MB/sec set SizeInMBs to be 10 MB or higher.
@@ -6533,7 +6579,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a href="#cloudwatchloggingoptions_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Logging<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurations3backupconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>S3Backup<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurations3backupconfigurationcloudwatchloggingoptions">pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>S3Backup<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
 {{% /md %}}</dd><dt class="property-optional"
@@ -6542,7 +6588,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a href="#compressionformat_nodejs" style="color: inherit; text-decoration: inherit;">compression<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP & Snappy. If the destination is redshift you cannot use ZIP or Snappy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6551,7 +6597,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a href="#kmskeyarn_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the KMS key ARN the stream will use to encrypt data. If not set, no encryption will
 be used.
@@ -6561,7 +6607,7 @@ be used.
 <a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The "YYYY/MM/DD/HH" time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket
 {{% /md %}}</dd></dl>
@@ -6574,7 +6620,7 @@ be used.
 <a href="#bucket_arn_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of the S3 bucket
 {{% /md %}}</dd><dt class="property-required"
@@ -6583,7 +6629,7 @@ be used.
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren't allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6592,7 +6638,7 @@ be used.
 <a href="#buffer_interval_python" style="color: inherit; text-decoration: inherit;">buffer_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6601,7 +6647,7 @@ be used.
 <a href="#buffer_size_python" style="color: inherit; text-decoration: inherit;">buffer_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
 We recommend setting SizeInMBs to a value greater than the amount of data you typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest data at 1 MB/sec set SizeInMBs to be 10 MB or higher.
@@ -6611,7 +6657,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a href="#cloudwatch_logging_options_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>logging_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurations3backupconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>S3Backup<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurations3backupconfigurationcloudwatchloggingoptions">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>S3Backup<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
 {{% /md %}}</dd><dt class="property-optional"
@@ -6620,7 +6666,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a href="#compression_format_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP & Snappy. If the destination is redshift you cannot use ZIP or Snappy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6629,7 +6675,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a href="#kms_key_arn_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the KMS key ARN the stream will use to encrypt data. If not set, no encryption will
 be used.
@@ -6639,7 +6685,7 @@ be used.
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The "YYYY/MM/DD/HH" time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket
 {{% /md %}}</dd></dl>
@@ -6716,7 +6762,7 @@ be used.
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enables or disables the logging. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6725,7 +6771,7 @@ be used.
 <a href="#loggroupname_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6734,7 +6780,7 @@ be used.
 <a href="#logstreamname_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Stream<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd></dl>
@@ -6747,7 +6793,7 @@ be used.
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enables or disables the logging. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6756,7 +6802,7 @@ be used.
 <a href="#log_group_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6765,7 +6811,7 @@ be used.
 <a href="#log_stream_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>stream_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd></dl>
@@ -6986,7 +7032,7 @@ be used.
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The HTTP endpoint URL to which Kinesis Firehose sends your data.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6995,7 +7041,7 @@ be used.
 <a href="#accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The access key required for Kinesis Firehose to authenticate with the HTTP endpoint selected as the destination.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7004,7 +7050,7 @@ be used.
 <a href="#bufferinginterval_nodejs" style="color: inherit; text-decoration: inherit;">buffering<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300 (5 minutes).
 {{% /md %}}</dd><dt class="property-optional"
@@ -7013,7 +7059,7 @@ be used.
 <a href="#bufferingsize_nodejs" style="color: inherit; text-decoration: inherit;">buffering<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7022,7 +7068,7 @@ be used.
 <a href="#cloudwatchloggingoptions_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Logging<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationcloudwatchloggingoptions">pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7031,7 +7077,7 @@ be used.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The HTTP endpoint name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7040,7 +7086,7 @@ be used.
 <a href="#processingconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">processing<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Processing<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationprocessingconfiguration">pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The data processing configuration.  More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7049,7 +7095,7 @@ be used.
 <a href="#requestconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationrequestconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Request<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationrequestconfiguration">pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Request<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The request configuration.  More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7058,7 +7104,7 @@ be used.
 <a href="#retryduration_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Total amount of seconds Firehose spends on retries. This duration starts after the initial attempt fails, It does not include the time periods during which Firehose waits for acknowledgment from the specified destination after each attempt. Valid values between `0` and `7200`. Default is `300`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7067,7 +7113,7 @@ be used.
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Kinesis Data Firehose uses this IAM role for all the permissions that the delivery stream needs. The pattern needs to be `arn:.*`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7076,7 +7122,7 @@ be used.
 <a href="#s3backupmode_nodejs" style="color: inherit; text-decoration: inherit;">s3Backup<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Defines how documents should be delivered to Amazon S3.  Valid values are `FailedEventsOnly` and `AllEvents`.  Default value is `FailedEventsOnly`.
 {{% /md %}}</dd></dl>
@@ -7089,7 +7135,7 @@ be used.
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The HTTP endpoint URL to which Kinesis Firehose sends your data.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7098,7 +7144,7 @@ be used.
 <a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The access key required for Kinesis Firehose to authenticate with the HTTP endpoint selected as the destination.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7107,7 +7153,7 @@ be used.
 <a href="#buffering_interval_python" style="color: inherit; text-decoration: inherit;">buffering_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300 (5 minutes).
 {{% /md %}}</dd><dt class="property-optional"
@@ -7116,7 +7162,7 @@ be used.
 <a href="#buffering_size_python" style="color: inherit; text-decoration: inherit;">buffering_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7125,7 +7171,7 @@ be used.
 <a href="#cloudwatch_logging_options_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>logging_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationcloudwatchloggingoptions">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7134,7 +7180,7 @@ be used.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The HTTP endpoint name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7143,7 +7189,7 @@ be used.
 <a href="#processing_configuration_python" style="color: inherit; text-decoration: inherit;">processing_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationprocessingconfiguration">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The data processing configuration.  More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7152,7 +7198,7 @@ be used.
 <a href="#request_configuration_python" style="color: inherit; text-decoration: inherit;">request_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationrequestconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Request<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationrequestconfiguration">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Request<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The request configuration.  More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7161,7 +7207,7 @@ be used.
 <a href="#retry_duration_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Total amount of seconds Firehose spends on retries. This duration starts after the initial attempt fails, It does not include the time periods during which Firehose waits for acknowledgment from the specified destination after each attempt. Valid values between `0` and `7200`. Default is `300`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7170,7 +7216,7 @@ be used.
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Kinesis Data Firehose uses this IAM role for all the permissions that the delivery stream needs. The pattern needs to be `arn:.*`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7179,7 +7225,7 @@ be used.
 <a href="#s3_backup_mode_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>backup_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Defines how documents should be delivered to Amazon S3.  Valid values are `FailedEventsOnly` and `AllEvents`.  Default value is `FailedEventsOnly`.
 {{% /md %}}</dd></dl>
@@ -7256,7 +7302,7 @@ be used.
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enables or disables the logging. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7265,7 +7311,7 @@ be used.
 <a href="#loggroupname_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7274,7 +7320,7 @@ be used.
 <a href="#logstreamname_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Stream<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd></dl>
@@ -7287,7 +7333,7 @@ be used.
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enables or disables the logging. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7296,7 +7342,7 @@ be used.
 <a href="#log_group_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7305,7 +7351,7 @@ be used.
 <a href="#log_stream_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>stream_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd></dl>
@@ -7364,7 +7410,7 @@ be used.
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enables or disables data processing.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7373,7 +7419,7 @@ be used.
 <a href="#processors_nodejs" style="color: inherit; text-decoration: inherit;">processors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationprocessingconfigurationprocessor">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor[]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationprocessingconfigurationprocessor">pulumi.<wbr>Input<pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Array of data processors. More details are given below
 {{% /md %}}</dd></dl>
@@ -7386,7 +7432,7 @@ be used.
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enables or disables data processing.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7395,7 +7441,7 @@ be used.
 <a href="#processors_python" style="color: inherit; text-decoration: inherit;">processors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationprocessingconfigurationprocessor">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationprocessingconfigurationprocessor">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Array of data processors. More details are given below
 {{% /md %}}</dd></dl>
@@ -7454,7 +7500,7 @@ be used.
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of processor. Valid Values: `Lambda`
 {{% /md %}}</dd><dt class="property-optional"
@@ -7463,7 +7509,7 @@ be used.
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationprocessingconfigurationprocessorparameter">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter[]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationprocessingconfigurationprocessorparameter">pulumi.<wbr>Input<pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd></dl>
@@ -7476,7 +7522,7 @@ be used.
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of processor. Valid Values: `Lambda`
 {{% /md %}}</dd><dt class="property-optional"
@@ -7485,7 +7531,7 @@ be used.
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationprocessingconfigurationprocessorparameter">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationprocessingconfigurationprocessorparameter">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd></dl>
@@ -7544,7 +7590,7 @@ be used.
 <a href="#parametername_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Parameter name. Valid Values: `LambdaArn`, `NumberOfRetries`, `RoleArn`, `BufferSizeInMBs`, `BufferIntervalInSeconds`
 {{% /md %}}</dd><dt class="property-required"
@@ -7553,7 +7599,7 @@ be used.
 <a href="#parametervalue_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.
 {{% /md %}}</dd></dl>
@@ -7566,7 +7612,7 @@ be used.
 <a href="#parameter_name_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Parameter name. Valid Values: `LambdaArn`, `NumberOfRetries`, `RoleArn`, `BufferSizeInMBs`, `BufferIntervalInSeconds`
 {{% /md %}}</dd><dt class="property-required"
@@ -7575,7 +7621,7 @@ be used.
 <a href="#parameter_value_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.
 {{% /md %}}</dd></dl>
@@ -7634,7 +7680,7 @@ be used.
 <a href="#commonattributes_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationrequestconfigurationcommonattribute">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Request<wbr>Configuration<wbr>Common<wbr>Attribute[]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationrequestconfigurationcommonattribute">pulumi.<wbr>Input<pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Request<wbr>Configuration<wbr>Common<wbr>Attribute<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Describes the metadata sent to the HTTP endpoint destination. More details are given below
 {{% /md %}}</dd><dt class="property-optional"
@@ -7643,7 +7689,7 @@ be used.
 <a href="#contentencoding_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Kinesis Data Firehose uses the content encoding to compress the body of a request before sending the request to the destination. Valid values are `NONE` and `GZIP`.  Default value is `NONE`.
 {{% /md %}}</dd></dl>
@@ -7656,7 +7702,7 @@ be used.
 <a href="#common_attributes_python" style="color: inherit; text-decoration: inherit;">common_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationrequestconfigurationcommonattribute">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Request<wbr>Configuration<wbr>Common<wbr>Attribute<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationrequestconfigurationcommonattribute">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Request<wbr>Configuration<wbr>Common<wbr>Attribute<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Describes the metadata sent to the HTTP endpoint destination. More details are given below
 {{% /md %}}</dd><dt class="property-optional"
@@ -7665,7 +7711,7 @@ be used.
 <a href="#content_encoding_python" style="color: inherit; text-decoration: inherit;">content_<wbr>encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Kinesis Data Firehose uses the content encoding to compress the body of a request before sending the request to the destination. Valid values are `NONE` and `GZIP`.  Default value is `NONE`.
 {{% /md %}}</dd></dl>
@@ -7724,7 +7770,7 @@ be used.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the HTTP endpoint common attribute.
 {{% /md %}}</dd><dt class="property-required"
@@ -7733,7 +7779,7 @@ be used.
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value of the HTTP endpoint common attribute.
 {{% /md %}}</dd></dl>
@@ -7746,7 +7792,7 @@ be used.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the HTTP endpoint common attribute.
 {{% /md %}}</dd><dt class="property-required"
@@ -7755,7 +7801,7 @@ be used.
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value of the HTTP endpoint common attribute.
 {{% /md %}}</dd></dl>
@@ -7814,7 +7860,7 @@ be used.
 <a href="#kinesisstreamarn_nodejs" style="color: inherit; text-decoration: inherit;">kinesis<wbr>Stream<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The kinesis stream used as the source of the firehose delivery stream.
 {{% /md %}}</dd><dt class="property-required"
@@ -7823,7 +7869,7 @@ be used.
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of the role that provides access to the source Kinesis stream.
 {{% /md %}}</dd></dl>
@@ -7836,7 +7882,7 @@ be used.
 <a href="#kinesis_stream_arn_python" style="color: inherit; text-decoration: inherit;">kinesis_<wbr>stream_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The kinesis stream used as the source of the firehose delivery stream.
 {{% /md %}}</dd><dt class="property-required"
@@ -7845,7 +7891,7 @@ be used.
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of the role that provides access to the source Kinesis stream.
 {{% /md %}}</dd></dl>
@@ -8084,7 +8130,7 @@ be used.
 <a href="#clusterjdbcurl_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Jdbcurl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The jdbcurl of the redshift cluster.
 {{% /md %}}</dd><dt class="property-required"
@@ -8093,7 +8139,7 @@ be used.
 <a href="#datatablename_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Table<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the table in the redshift cluster that the s3 bucket will copy to.
 {{% /md %}}</dd><dt class="property-required"
@@ -8102,7 +8148,7 @@ be used.
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The password for the username above.
 {{% /md %}}</dd><dt class="property-required"
@@ -8111,7 +8157,7 @@ be used.
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The arn of the role the stream assumes.
 {{% /md %}}</dd><dt class="property-required"
@@ -8120,7 +8166,7 @@ be used.
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The username that the firehose delivery stream will assume. It is strongly recommended that the username and password provided is used exclusively for Amazon Kinesis Firehose purposes, and that the permissions for the account are restricted for Amazon Redshift INSERT permissions.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8129,7 +8175,7 @@ be used.
 <a href="#cloudwatchloggingoptions_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Logging<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationcloudwatchloggingoptions">pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
 {{% /md %}}</dd><dt class="property-optional"
@@ -8138,7 +8184,7 @@ be used.
 <a href="#copyoptions_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Copy options for copying the data from the s3 intermediate bucket into redshift, for example to change the default delimiter. For valid values, see the [AWS documentation](http://docs.aws.amazon.com/firehose/latest/APIReference/API_CopyCommand.html)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8147,7 +8193,7 @@ be used.
 <a href="#datatablecolumns_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Table<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The data table columns that will be targeted by the copy command.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8156,7 +8202,7 @@ be used.
 <a href="#processingconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">processing<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfiguration">pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The data processing configuration.  More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8165,7 +8211,7 @@ be used.
 <a href="#retryduration_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The length of time during which Firehose retries delivery after a failure, starting from the initial request and including the first attempt. The default value is 3600 seconds (60 minutes). Firehose does not retry if the value of DurationInSeconds is 0 (zero) or if the first delivery attempt takes longer than the current value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8174,7 +8220,7 @@ be used.
 <a href="#s3backupconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">s3Backup<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurations3backupconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>S3Backup<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurations3backupconfiguration">pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>S3Backup<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The configuration for backup in Amazon S3. Required if `s3_backup_mode` is `Enabled`. Supports the same fields as `s3_configuration` object.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8183,7 +8229,7 @@ be used.
 <a href="#s3backupmode_nodejs" style="color: inherit; text-decoration: inherit;">s3Backup<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 backup mode.  Valid values are `Disabled` and `Enabled`.  Default value is `Disabled`.
 {{% /md %}}</dd></dl>
@@ -8196,7 +8242,7 @@ be used.
 <a href="#cluster_jdbcurl_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>jdbcurl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The jdbcurl of the redshift cluster.
 {{% /md %}}</dd><dt class="property-required"
@@ -8205,7 +8251,7 @@ be used.
 <a href="#data_table_name_python" style="color: inherit; text-decoration: inherit;">data_<wbr>table_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the table in the redshift cluster that the s3 bucket will copy to.
 {{% /md %}}</dd><dt class="property-required"
@@ -8214,7 +8260,7 @@ be used.
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The password for the username above.
 {{% /md %}}</dd><dt class="property-required"
@@ -8223,7 +8269,7 @@ be used.
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The arn of the role the stream assumes.
 {{% /md %}}</dd><dt class="property-required"
@@ -8232,7 +8278,7 @@ be used.
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The username that the firehose delivery stream will assume. It is strongly recommended that the username and password provided is used exclusively for Amazon Kinesis Firehose purposes, and that the permissions for the account are restricted for Amazon Redshift INSERT permissions.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8241,7 +8287,7 @@ be used.
 <a href="#cloudwatch_logging_options_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>logging_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationcloudwatchloggingoptions">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
 {{% /md %}}</dd><dt class="property-optional"
@@ -8250,7 +8296,7 @@ be used.
 <a href="#copy_options_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Copy options for copying the data from the s3 intermediate bucket into redshift, for example to change the default delimiter. For valid values, see the [AWS documentation](http://docs.aws.amazon.com/firehose/latest/APIReference/API_CopyCommand.html)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8259,7 +8305,7 @@ be used.
 <a href="#data_table_columns_python" style="color: inherit; text-decoration: inherit;">data_<wbr>table_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The data table columns that will be targeted by the copy command.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8268,7 +8314,7 @@ be used.
 <a href="#processing_configuration_python" style="color: inherit; text-decoration: inherit;">processing_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfiguration">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The data processing configuration.  More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8277,7 +8323,7 @@ be used.
 <a href="#retry_duration_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The length of time during which Firehose retries delivery after a failure, starting from the initial request and including the first attempt. The default value is 3600 seconds (60 minutes). Firehose does not retry if the value of DurationInSeconds is 0 (zero) or if the first delivery attempt takes longer than the current value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8286,7 +8332,7 @@ be used.
 <a href="#s3_backup_configuration_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>backup_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurations3backupconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>S3Backup<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurations3backupconfiguration">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>S3Backup<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The configuration for backup in Amazon S3. Required if `s3_backup_mode` is `Enabled`. Supports the same fields as `s3_configuration` object.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8295,7 +8341,7 @@ be used.
 <a href="#s3_backup_mode_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>backup_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Amazon S3 backup mode.  Valid values are `Disabled` and `Enabled`.  Default value is `Disabled`.
 {{% /md %}}</dd></dl>
@@ -8372,7 +8418,7 @@ be used.
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enables or disables the logging. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8381,7 +8427,7 @@ be used.
 <a href="#loggroupname_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8390,7 +8436,7 @@ be used.
 <a href="#logstreamname_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Stream<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd></dl>
@@ -8403,7 +8449,7 @@ be used.
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enables or disables the logging. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8412,7 +8458,7 @@ be used.
 <a href="#log_group_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8421,7 +8467,7 @@ be used.
 <a href="#log_stream_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>stream_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd></dl>
@@ -8480,7 +8526,7 @@ be used.
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enables or disables data processing.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8489,7 +8535,7 @@ be used.
 <a href="#processors_nodejs" style="color: inherit; text-decoration: inherit;">processors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessor">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor[]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessor">pulumi.<wbr>Input<pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Array of data processors. More details are given below
 {{% /md %}}</dd></dl>
@@ -8502,7 +8548,7 @@ be used.
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enables or disables data processing.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8511,7 +8557,7 @@ be used.
 <a href="#processors_python" style="color: inherit; text-decoration: inherit;">processors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessor">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessor">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Array of data processors. More details are given below
 {{% /md %}}</dd></dl>
@@ -8570,7 +8616,7 @@ be used.
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of processor. Valid Values: `Lambda`
 {{% /md %}}</dd><dt class="property-optional"
@@ -8579,7 +8625,7 @@ be used.
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessorparameter">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter[]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessorparameter">pulumi.<wbr>Input<pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd></dl>
@@ -8592,7 +8638,7 @@ be used.
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of processor. Valid Values: `Lambda`
 {{% /md %}}</dd><dt class="property-optional"
@@ -8601,7 +8647,7 @@ be used.
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessorparameter">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessorparameter">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd></dl>
@@ -8660,7 +8706,7 @@ be used.
 <a href="#parametername_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Parameter name. Valid Values: `LambdaArn`, `NumberOfRetries`, `RoleArn`, `BufferSizeInMBs`, `BufferIntervalInSeconds`
 {{% /md %}}</dd><dt class="property-required"
@@ -8669,7 +8715,7 @@ be used.
 <a href="#parametervalue_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.
 {{% /md %}}</dd></dl>
@@ -8682,7 +8728,7 @@ be used.
 <a href="#parameter_name_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Parameter name. Valid Values: `LambdaArn`, `NumberOfRetries`, `RoleArn`, `BufferSizeInMBs`, `BufferIntervalInSeconds`
 {{% /md %}}</dd><dt class="property-required"
@@ -8691,7 +8737,7 @@ be used.
 <a href="#parameter_value_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.
 {{% /md %}}</dd></dl>
@@ -8862,7 +8908,7 @@ be used.
 <a href="#bucketarn_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of the S3 bucket
 {{% /md %}}</dd><dt class="property-required"
@@ -8871,7 +8917,7 @@ be used.
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren't allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8880,7 +8926,7 @@ be used.
 <a href="#bufferinterval_nodejs" style="color: inherit; text-decoration: inherit;">buffer<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8889,7 +8935,7 @@ be used.
 <a href="#buffersize_nodejs" style="color: inherit; text-decoration: inherit;">buffer<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
 We recommend setting SizeInMBs to a value greater than the amount of data you typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest data at 1 MB/sec set SizeInMBs to be 10 MB or higher.
@@ -8899,7 +8945,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a href="#cloudwatchloggingoptions_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Logging<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurations3backupconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>S3Backup<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurations3backupconfigurationcloudwatchloggingoptions">pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>S3Backup<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
 {{% /md %}}</dd><dt class="property-optional"
@@ -8908,7 +8954,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a href="#compressionformat_nodejs" style="color: inherit; text-decoration: inherit;">compression<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP & Snappy. If the destination is redshift you cannot use ZIP or Snappy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8917,7 +8963,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a href="#kmskeyarn_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the KMS key ARN the stream will use to encrypt data. If not set, no encryption will
 be used.
@@ -8927,7 +8973,7 @@ be used.
 <a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The "YYYY/MM/DD/HH" time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket
 {{% /md %}}</dd></dl>
@@ -8940,7 +8986,7 @@ be used.
 <a href="#bucket_arn_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of the S3 bucket
 {{% /md %}}</dd><dt class="property-required"
@@ -8949,7 +8995,7 @@ be used.
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren't allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8958,7 +9004,7 @@ be used.
 <a href="#buffer_interval_python" style="color: inherit; text-decoration: inherit;">buffer_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8967,7 +9013,7 @@ be used.
 <a href="#buffer_size_python" style="color: inherit; text-decoration: inherit;">buffer_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
 We recommend setting SizeInMBs to a value greater than the amount of data you typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest data at 1 MB/sec set SizeInMBs to be 10 MB or higher.
@@ -8977,7 +9023,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a href="#cloudwatch_logging_options_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>logging_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurations3backupconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>S3Backup<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurations3backupconfigurationcloudwatchloggingoptions">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>S3Backup<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
 {{% /md %}}</dd><dt class="property-optional"
@@ -8986,7 +9032,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a href="#compression_format_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP & Snappy. If the destination is redshift you cannot use ZIP or Snappy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8995,7 +9041,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a href="#kms_key_arn_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the KMS key ARN the stream will use to encrypt data. If not set, no encryption will
 be used.
@@ -9005,7 +9051,7 @@ be used.
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The "YYYY/MM/DD/HH" time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket
 {{% /md %}}</dd></dl>
@@ -9082,7 +9128,7 @@ be used.
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enables or disables the logging. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9091,7 +9137,7 @@ be used.
 <a href="#loggroupname_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9100,7 +9146,7 @@ be used.
 <a href="#logstreamname_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Stream<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd></dl>
@@ -9113,7 +9159,7 @@ be used.
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enables or disables the logging. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9122,7 +9168,7 @@ be used.
 <a href="#log_group_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9131,7 +9177,7 @@ be used.
 <a href="#log_stream_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>stream_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd></dl>
@@ -9302,7 +9348,7 @@ be used.
 <a href="#bucketarn_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of the S3 bucket
 {{% /md %}}</dd><dt class="property-required"
@@ -9311,7 +9357,7 @@ be used.
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren't allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9320,7 +9366,7 @@ be used.
 <a href="#bufferinterval_nodejs" style="color: inherit; text-decoration: inherit;">buffer<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9329,7 +9375,7 @@ be used.
 <a href="#buffersize_nodejs" style="color: inherit; text-decoration: inherit;">buffer<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
 We recommend setting SizeInMBs to a value greater than the amount of data you typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest data at 1 MB/sec set SizeInMBs to be 10 MB or higher.
@@ -9339,7 +9385,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a href="#cloudwatchloggingoptions_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Logging<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreams3configurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreams3configurationcloudwatchloggingoptions">pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
 {{% /md %}}</dd><dt class="property-optional"
@@ -9348,7 +9394,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a href="#compressionformat_nodejs" style="color: inherit; text-decoration: inherit;">compression<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP & Snappy. If the destination is redshift you cannot use ZIP or Snappy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9357,7 +9403,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a href="#kmskeyarn_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the KMS key ARN the stream will use to encrypt data. If not set, no encryption will
 be used.
@@ -9367,7 +9413,7 @@ be used.
 <a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The "YYYY/MM/DD/HH" time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket
 {{% /md %}}</dd></dl>
@@ -9380,7 +9426,7 @@ be used.
 <a href="#bucket_arn_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of the S3 bucket
 {{% /md %}}</dd><dt class="property-required"
@@ -9389,7 +9435,7 @@ be used.
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren't allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9398,7 +9444,7 @@ be used.
 <a href="#buffer_interval_python" style="color: inherit; text-decoration: inherit;">buffer_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9407,7 +9453,7 @@ be used.
 <a href="#buffer_size_python" style="color: inherit; text-decoration: inherit;">buffer_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
 We recommend setting SizeInMBs to a value greater than the amount of data you typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest data at 1 MB/sec set SizeInMBs to be 10 MB or higher.
@@ -9417,7 +9463,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a href="#cloudwatch_logging_options_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>logging_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreams3configurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreams3configurationcloudwatchloggingoptions">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
 {{% /md %}}</dd><dt class="property-optional"
@@ -9426,7 +9472,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a href="#compression_format_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP & Snappy. If the destination is redshift you cannot use ZIP or Snappy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9435,7 +9481,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a href="#kms_key_arn_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the KMS key ARN the stream will use to encrypt data. If not set, no encryption will
 be used.
@@ -9445,7 +9491,7 @@ be used.
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The "YYYY/MM/DD/HH" time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket
 {{% /md %}}</dd></dl>
@@ -9522,7 +9568,7 @@ be used.
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enables or disables the logging. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9531,7 +9577,7 @@ be used.
 <a href="#loggroupname_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9540,7 +9586,7 @@ be used.
 <a href="#logstreamname_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Stream<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd></dl>
@@ -9553,7 +9599,7 @@ be used.
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enables or disables the logging. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9562,7 +9608,7 @@ be used.
 <a href="#log_group_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9571,7 +9617,7 @@ be used.
 <a href="#log_stream_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>stream_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd></dl>
@@ -9648,7 +9694,7 @@ be used.
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to enable encryption at rest. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9657,7 +9703,7 @@ be used.
 <a href="#keyarn_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the encryption key. Required when `key_type` is `CUSTOMER_MANAGED_CMK`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9666,7 +9712,7 @@ be used.
 <a href="#keytype_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of encryption key. Default is `AWS_OWNED_CMK`. Valid values are `AWS_OWNED_CMK` and `CUSTOMER_MANAGED_CMK`
 {{% /md %}}</dd></dl>
@@ -9679,7 +9725,7 @@ be used.
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to enable encryption at rest. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9688,7 +9734,7 @@ be used.
 <a href="#key_arn_python" style="color: inherit; text-decoration: inherit;">key_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the encryption key. Required when `key_type` is `CUSTOMER_MANAGED_CMK`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9697,7 +9743,7 @@ be used.
 <a href="#key_type_python" style="color: inherit; text-decoration: inherit;">key_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of encryption key. Default is `AWS_OWNED_CMK`. Valid values are `AWS_OWNED_CMK` and `CUSTOMER_MANAGED_CMK`
 {{% /md %}}</dd></dl>
@@ -9864,7 +9910,7 @@ be used.
 <a href="#hecendpoint_nodejs" style="color: inherit; text-decoration: inherit;">hec<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The HTTP Event Collector (HEC) endpoint to which Kinesis Firehose sends your data.
 {{% /md %}}</dd><dt class="property-required"
@@ -9873,7 +9919,7 @@ be used.
 <a href="#hectoken_nodejs" style="color: inherit; text-decoration: inherit;">hec<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The GUID that you obtain from your Splunk cluster when you create a new HEC endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9882,7 +9928,7 @@ be used.
 <a href="#cloudwatchloggingoptions_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Logging<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationcloudwatchloggingoptions">pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9891,7 +9937,7 @@ be used.
 <a href="#hecacknowledgmenttimeout_nodejs" style="color: inherit; text-decoration: inherit;">hec<wbr>Acknowledgment<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds between 180 and 600, that Kinesis Firehose waits to receive an acknowledgment from Splunk after it sends it data.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9900,7 +9946,7 @@ be used.
 <a href="#hecendpointtype_nodejs" style="color: inherit; text-decoration: inherit;">hec<wbr>Endpoint<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The HEC endpoint type. Valid values are `Raw` or `Event`. The default value is `Raw`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9909,7 +9955,7 @@ be used.
 <a href="#processingconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">processing<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfiguration">pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The data processing configuration.  More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9918,7 +9964,7 @@ be used.
 <a href="#retryduration_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}After an initial failure to deliver to Splunk, the total amount of time, in seconds between 0 to 7200, during which Firehose re-attempts delivery (including the first attempt).  After this time has elapsed, the failed documents are written to Amazon S3.  The default value is 300s.  There will be no retry if the value is 0.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9927,7 +9973,7 @@ be used.
 <a href="#s3backupmode_nodejs" style="color: inherit; text-decoration: inherit;">s3Backup<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Defines how documents should be delivered to Amazon S3.  Valid values are `FailedEventsOnly` and `AllEvents`.  Default value is `FailedEventsOnly`.
 {{% /md %}}</dd></dl>
@@ -9940,7 +9986,7 @@ be used.
 <a href="#hec_endpoint_python" style="color: inherit; text-decoration: inherit;">hec_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The HTTP Event Collector (HEC) endpoint to which Kinesis Firehose sends your data.
 {{% /md %}}</dd><dt class="property-required"
@@ -9949,7 +9995,7 @@ be used.
 <a href="#hec_token_python" style="color: inherit; text-decoration: inherit;">hec_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The GUID that you obtain from your Splunk cluster when you create a new HEC endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9958,7 +10004,7 @@ be used.
 <a href="#cloudwatch_logging_options_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>logging_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationcloudwatchloggingoptions">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9967,7 +10013,7 @@ be used.
 <a href="#hec_acknowledgment_timeout_python" style="color: inherit; text-decoration: inherit;">hec_<wbr>acknowledgment_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds between 180 and 600, that Kinesis Firehose waits to receive an acknowledgment from Splunk after it sends it data.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9976,7 +10022,7 @@ be used.
 <a href="#hec_endpoint_type_python" style="color: inherit; text-decoration: inherit;">hec_<wbr>endpoint_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The HEC endpoint type. Valid values are `Raw` or `Event`. The default value is `Raw`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9985,7 +10031,7 @@ be used.
 <a href="#processing_configuration_python" style="color: inherit; text-decoration: inherit;">processing_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfiguration">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The data processing configuration.  More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9994,7 +10040,7 @@ be used.
 <a href="#retry_duration_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}After an initial failure to deliver to Splunk, the total amount of time, in seconds between 0 to 7200, during which Firehose re-attempts delivery (including the first attempt).  After this time has elapsed, the failed documents are written to Amazon S3.  The default value is 300s.  There will be no retry if the value is 0.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10003,7 +10049,7 @@ be used.
 <a href="#s3_backup_mode_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>backup_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Defines how documents should be delivered to Amazon S3.  Valid values are `FailedEventsOnly` and `AllEvents`.  Default value is `FailedEventsOnly`.
 {{% /md %}}</dd></dl>
@@ -10080,7 +10126,7 @@ be used.
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enables or disables the logging. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10089,7 +10135,7 @@ be used.
 <a href="#loggroupname_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10098,7 +10144,7 @@ be used.
 <a href="#logstreamname_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Stream<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd></dl>
@@ -10111,7 +10157,7 @@ be used.
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enables or disables the logging. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10120,7 +10166,7 @@ be used.
 <a href="#log_group_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10129,7 +10175,7 @@ be used.
 <a href="#log_stream_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>stream_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd></dl>
@@ -10188,7 +10234,7 @@ be used.
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enables or disables data processing.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10197,7 +10243,7 @@ be used.
 <a href="#processors_nodejs" style="color: inherit; text-decoration: inherit;">processors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessor">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor[]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessor">pulumi.<wbr>Input<pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Array of data processors. More details are given below
 {{% /md %}}</dd></dl>
@@ -10210,7 +10256,7 @@ be used.
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enables or disables data processing.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10219,7 +10265,7 @@ be used.
 <a href="#processors_python" style="color: inherit; text-decoration: inherit;">processors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessor">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessor">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Array of data processors. More details are given below
 {{% /md %}}</dd></dl>
@@ -10278,7 +10324,7 @@ be used.
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of processor. Valid Values: `Lambda`
 {{% /md %}}</dd><dt class="property-optional"
@@ -10287,7 +10333,7 @@ be used.
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessorparameter">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter[]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessorparameter">pulumi.<wbr>Input<pulumi.<wbr>Input<Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd></dl>
@@ -10300,7 +10346,7 @@ be used.
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of processor. Valid Values: `Lambda`
 {{% /md %}}</dd><dt class="property-optional"
@@ -10309,7 +10355,7 @@ be used.
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessorparameter">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessorparameter">Input[Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd></dl>
@@ -10368,7 +10414,7 @@ be used.
 <a href="#parametername_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Parameter name. Valid Values: `LambdaArn`, `NumberOfRetries`, `RoleArn`, `BufferSizeInMBs`, `BufferIntervalInSeconds`
 {{% /md %}}</dd><dt class="property-required"
@@ -10377,7 +10423,7 @@ be used.
 <a href="#parametervalue_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.
 {{% /md %}}</dd></dl>
@@ -10390,7 +10436,7 @@ be used.
 <a href="#parameter_name_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Parameter name. Valid Values: `LambdaArn`, `NumberOfRetries`, `RoleArn`, `BufferSizeInMBs`, `BufferIntervalInSeconds`
 {{% /md %}}</dd><dt class="property-required"
@@ -10399,7 +10445,7 @@ be used.
 <a href="#parameter_value_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.
 {{% /md %}}</dd></dl>

@@ -130,9 +130,9 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cognito"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cognito"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -360,19 +360,28 @@ const mainIdentityPoolRoleAttachment = new aws.cognito.IdentityPoolRoleAttachmen
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IdentityPoolRoleAttachment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IdentityPoolRoleAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IdentityPoolRoleAttachment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IdentityPoolRoleAttachmentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IdentityPoolRoleAttachment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">identity_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_mappings</span><span class="p">:</span> <span class="nx">Optional[Sequence[IdentityPoolRoleAttachmentRoleMappingArgs]]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">IdentityPoolRoleAttachment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                               <span class="nx">identity_pool_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                               <span class="nx">role_mappings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[IdentityPoolRoleAttachmentRoleMappingArgs]]]]</span> = None<span class="p">,</span>
+                               <span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">IdentityPoolRoleAttachment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IdentityPoolRoleAttachmentArgs</a></span><span class="p">,</span>
+                               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIdentityPoolRoleAttachment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IdentityPoolRoleAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IdentityPoolRoleAttachment</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIdentityPoolRoleAttachment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IdentityPoolRoleAttachmentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IdentityPoolRoleAttachment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IdentityPoolRoleAttachment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">IdentityPoolRoleAttachmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IdentityPoolRoleAttachment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">IdentityPoolRoleAttachmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -407,22 +416,32 @@ const mainIdentityPoolRoleAttachment = new aws.cognito.IdentityPoolRoleAttachmen
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">IdentityPoolRoleAttachmentArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -431,7 +450,7 @@ const mainIdentityPoolRoleAttachment = new aws.cognito.IdentityPoolRoleAttachmen
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -455,7 +474,7 @@ const mainIdentityPoolRoleAttachment = new aws.cognito.IdentityPoolRoleAttachmen
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -572,7 +591,7 @@ The IdentityPoolRoleAttachment resource accepts the following [input]({{< relref
 <a href="#identitypoolid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Pool<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An identity pool ID in the format REGION:GUID.
 {{% /md %}}</dd><dt class="property-required"
@@ -581,7 +600,7 @@ The IdentityPoolRoleAttachment resource accepts the following [input]({{< relref
 <a href="#roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}The map of roles associated with this pool. For a given role, the key will be either "authenticated" or "unauthenticated" and the value will be the Role ARN.
 {{% /md %}}</dd><dt class="property-optional"
@@ -590,7 +609,7 @@ The IdentityPoolRoleAttachment resource accepts the following [input]({{< relref
 <a href="#rolemappings_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolroleattachmentrolemapping">Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping[]</a></span>
+        <span class="property-type"><a href="#identitypoolroleattachmentrolemapping">pulumi.<wbr>Input<pulumi.<wbr>Input<Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A List of Role Mapping.
 {{% /md %}}</dd></dl>
@@ -603,7 +622,7 @@ The IdentityPoolRoleAttachment resource accepts the following [input]({{< relref
 <a href="#identity_pool_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>pool_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An identity pool ID in the format REGION:GUID.
 {{% /md %}}</dd><dt class="property-required"
@@ -612,7 +631,7 @@ The IdentityPoolRoleAttachment resource accepts the following [input]({{< relref
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The map of roles associated with this pool. For a given role, the key will be either "authenticated" or "unauthenticated" and the value will be the Role ARN.
 {{% /md %}}</dd><dt class="property-optional"
@@ -621,7 +640,7 @@ The IdentityPoolRoleAttachment resource accepts the following [input]({{< relref
 <a href="#role_mappings_python" style="color: inherit; text-decoration: inherit;">role_<wbr>mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolroleattachmentrolemapping">Sequence[Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping<wbr>Args]</a></span>
+        <span class="property-type"><a href="#identitypoolroleattachmentrolemapping">Input[Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A List of Role Mapping.
 {{% /md %}}</dd></dl>
@@ -690,20 +709,25 @@ Get an existing IdentityPoolRoleAttachment resource's state with the given name,
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">IdentityPoolRoleAttachmentState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">IdentityPoolRoleAttachment</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">IdentityPoolRoleAttachmentState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">IdentityPoolRoleAttachment</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">identity_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_mappings</span><span class="p">:</span> <span class="nx">Optional[Sequence[IdentityPoolRoleAttachmentRoleMappingArgs]]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> IdentityPoolRoleAttachment</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">identity_pool_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">role_mappings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[IdentityPoolRoleAttachmentRoleMappingArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> IdentityPoolRoleAttachment</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIdentityPoolRoleAttachment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">IdentityPoolRoleAttachmentState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IdentityPoolRoleAttachment</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIdentityPoolRoleAttachment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">IdentityPoolRoleAttachmentState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IdentityPoolRoleAttachment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">IdentityPoolRoleAttachment</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">IdentityPoolRoleAttachmentState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">IdentityPoolRoleAttachment</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">IdentityPoolRoleAttachmentState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -874,7 +898,7 @@ The following state arguments are supported:
 <a href="#state_identitypoolid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Pool<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An identity pool ID in the format REGION:GUID.
 {{% /md %}}</dd><dt class="property-optional"
@@ -883,7 +907,7 @@ The following state arguments are supported:
 <a href="#state_rolemappings_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolroleattachmentrolemapping">Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping[]</a></span>
+        <span class="property-type"><a href="#identitypoolroleattachmentrolemapping">pulumi.<wbr>Input<pulumi.<wbr>Input<Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A List of Role Mapping.
 {{% /md %}}</dd><dt class="property-optional"
@@ -892,7 +916,7 @@ The following state arguments are supported:
 <a href="#state_roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}The map of roles associated with this pool. For a given role, the key will be either "authenticated" or "unauthenticated" and the value will be the Role ARN.
 {{% /md %}}</dd></dl>
@@ -905,7 +929,7 @@ The following state arguments are supported:
 <a href="#state_identity_pool_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>pool_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An identity pool ID in the format REGION:GUID.
 {{% /md %}}</dd><dt class="property-optional"
@@ -914,7 +938,7 @@ The following state arguments are supported:
 <a href="#state_role_mappings_python" style="color: inherit; text-decoration: inherit;">role_<wbr>mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolroleattachmentrolemapping">Sequence[Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping<wbr>Args]</a></span>
+        <span class="property-type"><a href="#identitypoolroleattachmentrolemapping">Input[Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A List of Role Mapping.
 {{% /md %}}</dd><dt class="property-optional"
@@ -923,7 +947,7 @@ The following state arguments are supported:
 <a href="#state_roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The map of roles associated with this pool. For a given role, the key will be either "authenticated" or "unauthenticated" and the value will be the Role ARN.
 {{% /md %}}</dd></dl>
@@ -1027,7 +1051,7 @@ The following state arguments are supported:
 <a href="#identityprovider_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A string identifying the identity provider, for example, "graph.facebook.com" or "cognito-idp.us-east-1.amazonaws.com/us-east-1_abcdefghi:app_client_id".
 {{% /md %}}</dd><dt class="property-required"
@@ -1036,7 +1060,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The role mapping type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1045,7 +1069,7 @@ The following state arguments are supported:
 <a href="#ambiguousroleresolution_nodejs" style="color: inherit; text-decoration: inherit;">ambiguous<wbr>Role<wbr>Resolution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the action to be taken if either no rules match the claim value for the Rules type, or there is no cognito:preferred_role claim and there are multiple cognito:roles matches for the Token type. `Required` if you specify Token or Rules as the Type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1054,7 +1078,7 @@ The following state arguments are supported:
 <a href="#mappingrules_nodejs" style="color: inherit; text-decoration: inherit;">mapping<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolroleattachmentrolemappingmappingrule">Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping<wbr>Mapping<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#identitypoolroleattachmentrolemappingmappingrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping<wbr>Mapping<wbr>Rule<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The Rules Configuration to be used for mapping users to roles. You can specify up to 25 rules per identity provider. Rules are evaluated in order. The first one to match specifies the role.
 {{% /md %}}</dd></dl>
@@ -1067,7 +1091,7 @@ The following state arguments are supported:
 <a href="#identity_provider_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A string identifying the identity provider, for example, "graph.facebook.com" or "cognito-idp.us-east-1.amazonaws.com/us-east-1_abcdefghi:app_client_id".
 {{% /md %}}</dd><dt class="property-required"
@@ -1076,7 +1100,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The role mapping type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1085,7 +1109,7 @@ The following state arguments are supported:
 <a href="#ambiguous_role_resolution_python" style="color: inherit; text-decoration: inherit;">ambiguous_<wbr>role_<wbr>resolution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the action to be taken if either no rules match the claim value for the Rules type, or there is no cognito:preferred_role claim and there are multiple cognito:roles matches for the Token type. `Required` if you specify Token or Rules as the Type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1094,7 +1118,7 @@ The following state arguments are supported:
 <a href="#mapping_rules_python" style="color: inherit; text-decoration: inherit;">mapping_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolroleattachmentrolemappingmappingrule">Sequence[Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping<wbr>Mapping<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#identitypoolroleattachmentrolemappingmappingrule">Input[Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping<wbr>Mapping<wbr>Rule<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The Rules Configuration to be used for mapping users to roles. You can specify up to 25 rules per identity provider. Rules are evaluated in order. The first one to match specifies the role.
 {{% /md %}}</dd></dl>
@@ -1189,7 +1213,7 @@ The following state arguments are supported:
 <a href="#claim_nodejs" style="color: inherit; text-decoration: inherit;">claim</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The claim name that must be present in the token, for example, "isAdmin" or "paid".
 {{% /md %}}</dd><dt class="property-required"
@@ -1198,7 +1222,7 @@ The following state arguments are supported:
 <a href="#matchtype_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The match condition that specifies how closely the claim value in the IdP token must match Value.
 {{% /md %}}</dd><dt class="property-required"
@@ -1207,7 +1231,7 @@ The following state arguments are supported:
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The role ARN.
 {{% /md %}}</dd><dt class="property-required"
@@ -1216,7 +1240,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A brief string that the claim must match, for example, "paid" or "yes".
 {{% /md %}}</dd></dl>
@@ -1229,7 +1253,7 @@ The following state arguments are supported:
 <a href="#claim_python" style="color: inherit; text-decoration: inherit;">claim</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The claim name that must be present in the token, for example, "isAdmin" or "paid".
 {{% /md %}}</dd><dt class="property-required"
@@ -1238,7 +1262,7 @@ The following state arguments are supported:
 <a href="#match_type_python" style="color: inherit; text-decoration: inherit;">match_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The match condition that specifies how closely the claim value in the IdP token must match Value.
 {{% /md %}}</dd><dt class="property-required"
@@ -1247,7 +1271,7 @@ The following state arguments are supported:
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The role ARN.
 {{% /md %}}</dd><dt class="property-required"
@@ -1256,7 +1280,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A brief string that the claim must match, for example, "paid" or "yes".
 {{% /md %}}</dd></dl>

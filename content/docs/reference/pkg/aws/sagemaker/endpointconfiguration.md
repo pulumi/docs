@@ -64,8 +64,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sagemaker"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sagemaker"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -154,19 +154,30 @@ const ec = new aws.sagemaker.EndpointConfiguration("ec", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">EndpointConfiguration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EndpointConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">EndpointConfiguration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EndpointConfigurationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">EndpointConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">data_capture_config</span><span class="p">:</span> <span class="nx">Optional[EndpointConfigurationDataCaptureConfigArgs]</span> = None<span class="p">, </span><span class="nx">kms_key_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">production_variants</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointConfigurationProductionVariantArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">EndpointConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                          <span class="nx">data_capture_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EndpointConfigurationDataCaptureConfigArgs]]</span> = None<span class="p">,</span>
+                          <span class="nx">kms_key_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                          <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                          <span class="nx">production_variants</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[EndpointConfigurationProductionVariantArgs]]]]</span> = None<span class="p">,</span>
+                          <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">EndpointConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EndpointConfigurationArgs</a></span><span class="p">,</span>
+                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEndpointConfiguration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EndpointConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EndpointConfiguration</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEndpointConfiguration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EndpointConfigurationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EndpointConfiguration</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">EndpointConfiguration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">EndpointConfigurationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">EndpointConfiguration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">EndpointConfigurationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -201,22 +212,32 @@ const ec = new aws.sagemaker.EndpointConfiguration("ec", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">EndpointConfigurationArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -225,7 +246,7 @@ const ec = new aws.sagemaker.EndpointConfiguration("ec", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -249,7 +270,7 @@ const ec = new aws.sagemaker.EndpointConfiguration("ec", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -402,7 +423,7 @@ The EndpointConfiguration resource accepts the following [input]({{< relref "/do
 <a href="#productionvariants_nodejs" style="color: inherit; text-decoration: inherit;">production<wbr>Variants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointconfigurationproductionvariant">Endpoint<wbr>Configuration<wbr>Production<wbr>Variant[]</a></span>
+        <span class="property-type"><a href="#endpointconfigurationproductionvariant">pulumi.<wbr>Input<pulumi.<wbr>Input<Endpoint<wbr>Configuration<wbr>Production<wbr>Variant<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Fields are documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -411,7 +432,7 @@ The EndpointConfiguration resource accepts the following [input]({{< relref "/do
 <a href="#datacaptureconfig_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Capture<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointconfigurationdatacaptureconfig">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config</a></span>
+        <span class="property-type"><a href="#endpointconfigurationdatacaptureconfig">pulumi.<wbr>Input<Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Specifies the parameters to capture input/output of Sagemaker models endpoints. Fields are documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -420,7 +441,7 @@ The EndpointConfiguration resource accepts the following [input]({{< relref "/do
 <a href="#kmskeyarn_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -429,7 +450,7 @@ The EndpointConfiguration resource accepts the following [input]({{< relref "/do
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the endpoint configuration. If omitted, this provider will assign a random, unique name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -438,7 +459,7 @@ The EndpointConfiguration resource accepts the following [input]({{< relref "/do
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -451,7 +472,7 @@ The EndpointConfiguration resource accepts the following [input]({{< relref "/do
 <a href="#production_variants_python" style="color: inherit; text-decoration: inherit;">production_<wbr>variants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointconfigurationproductionvariant">Sequence[Endpoint<wbr>Configuration<wbr>Production<wbr>Variant<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointconfigurationproductionvariant">Input[Endpoint<wbr>Configuration<wbr>Production<wbr>Variant<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Fields are documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -460,7 +481,7 @@ The EndpointConfiguration resource accepts the following [input]({{< relref "/do
 <a href="#data_capture_config_python" style="color: inherit; text-decoration: inherit;">data_<wbr>capture_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointconfigurationdatacaptureconfig">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointconfigurationdatacaptureconfig">Input[Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parameters to capture input/output of Sagemaker models endpoints. Fields are documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -469,7 +490,7 @@ The EndpointConfiguration resource accepts the following [input]({{< relref "/do
 <a href="#kms_key_arn_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -478,7 +499,7 @@ The EndpointConfiguration resource accepts the following [input]({{< relref "/do
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the endpoint configuration. If omitted, this provider will assign a random, unique name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -487,7 +508,7 @@ The EndpointConfiguration resource accepts the following [input]({{< relref "/do
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -592,20 +613,28 @@ Get an existing EndpointConfiguration resource's state with the given name, ID, 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">EndpointConfigurationState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">EndpointConfiguration</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">EndpointConfigurationState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">EndpointConfiguration</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_capture_config</span><span class="p">:</span> <span class="nx">Optional[EndpointConfigurationDataCaptureConfigArgs]</span> = None<span class="p">, </span><span class="nx">kms_key_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">production_variants</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointConfigurationProductionVariantArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> EndpointConfiguration</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">data_capture_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EndpointConfigurationDataCaptureConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">kms_key_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">production_variants</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[EndpointConfigurationProductionVariantArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> EndpointConfiguration</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEndpointConfiguration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">EndpointConfigurationState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EndpointConfiguration</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEndpointConfiguration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">EndpointConfigurationState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EndpointConfiguration</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">EndpointConfiguration</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">EndpointConfigurationState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">EndpointConfiguration</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">EndpointConfigurationState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -830,7 +859,7 @@ The following state arguments are supported:
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) assigned by AWS to this endpoint configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -839,7 +868,7 @@ The following state arguments are supported:
 <a href="#state_datacaptureconfig_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Capture<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointconfigurationdatacaptureconfig">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config</a></span>
+        <span class="property-type"><a href="#endpointconfigurationdatacaptureconfig">pulumi.<wbr>Input<Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Specifies the parameters to capture input/output of Sagemaker models endpoints. Fields are documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -848,7 +877,7 @@ The following state arguments are supported:
 <a href="#state_kmskeyarn_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -857,7 +886,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the endpoint configuration. If omitted, this provider will assign a random, unique name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -866,7 +895,7 @@ The following state arguments are supported:
 <a href="#state_productionvariants_nodejs" style="color: inherit; text-decoration: inherit;">production<wbr>Variants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointconfigurationproductionvariant">Endpoint<wbr>Configuration<wbr>Production<wbr>Variant[]</a></span>
+        <span class="property-type"><a href="#endpointconfigurationproductionvariant">pulumi.<wbr>Input<pulumi.<wbr>Input<Endpoint<wbr>Configuration<wbr>Production<wbr>Variant<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Fields are documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -875,7 +904,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -888,7 +917,7 @@ The following state arguments are supported:
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) assigned by AWS to this endpoint configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -897,7 +926,7 @@ The following state arguments are supported:
 <a href="#state_data_capture_config_python" style="color: inherit; text-decoration: inherit;">data_<wbr>capture_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointconfigurationdatacaptureconfig">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointconfigurationdatacaptureconfig">Input[Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parameters to capture input/output of Sagemaker models endpoints. Fields are documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -906,7 +935,7 @@ The following state arguments are supported:
 <a href="#state_kms_key_arn_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -915,7 +944,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the endpoint configuration. If omitted, this provider will assign a random, unique name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -924,7 +953,7 @@ The following state arguments are supported:
 <a href="#state_production_variants_python" style="color: inherit; text-decoration: inherit;">production_<wbr>variants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointconfigurationproductionvariant">Sequence[Endpoint<wbr>Configuration<wbr>Production<wbr>Variant<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointconfigurationproductionvariant">Input[Endpoint<wbr>Configuration<wbr>Production<wbr>Variant<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Fields are documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -933,7 +962,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -1073,7 +1102,7 @@ The following state arguments are supported:
 <a href="#captureoptions_nodejs" style="color: inherit; text-decoration: inherit;">capture<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointconfigurationdatacaptureconfigcaptureoption">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Capture<wbr>Option[]</a></span>
+        <span class="property-type"><a href="#endpointconfigurationdatacaptureconfigcaptureoption">pulumi.<wbr>Input<pulumi.<wbr>Input<Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Capture<wbr>Option<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Specifies what data to capture. Fields are documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1082,7 +1111,7 @@ The following state arguments are supported:
 <a href="#destinations3uri_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>S3Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The URL for S3 location where the captured data is stored.
 {{% /md %}}</dd><dt class="property-required"
@@ -1091,7 +1120,7 @@ The following state arguments are supported:
 <a href="#initialsamplingpercentage_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Sampling<wbr>Percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Portion of data to capture. Should be between 0 and 100.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1100,7 +1129,7 @@ The following state arguments are supported:
 <a href="#capturecontenttypeheader_nodejs" style="color: inherit; text-decoration: inherit;">capture<wbr>Content<wbr>Type<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointconfigurationdatacaptureconfigcapturecontenttypeheader">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Capture<wbr>Content<wbr>Type<wbr>Header</a></span>
+        <span class="property-type"><a href="#endpointconfigurationdatacaptureconfigcapturecontenttypeheader">pulumi.<wbr>Input<Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Capture<wbr>Content<wbr>Type<wbr>Header<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The content type headers to capture. Fields are documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1109,7 +1138,7 @@ The following state arguments are supported:
 <a href="#enablecapture_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Capture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to enable data capture. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1118,7 +1147,7 @@ The following state arguments are supported:
 <a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt the captured data on Amazon S3.
 {{% /md %}}</dd></dl>
@@ -1131,7 +1160,7 @@ The following state arguments are supported:
 <a href="#capture_options_python" style="color: inherit; text-decoration: inherit;">capture_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointconfigurationdatacaptureconfigcaptureoption">Sequence[Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Capture<wbr>Option<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointconfigurationdatacaptureconfigcaptureoption">Input[Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Capture<wbr>Option<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Specifies what data to capture. Fields are documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1140,7 +1169,7 @@ The following state arguments are supported:
 <a href="#destination_s3_uri_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>s3_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The URL for S3 location where the captured data is stored.
 {{% /md %}}</dd><dt class="property-required"
@@ -1149,7 +1178,7 @@ The following state arguments are supported:
 <a href="#initial_sampling_percentage_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>sampling_<wbr>percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Portion of data to capture. Should be between 0 and 100.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1158,7 +1187,7 @@ The following state arguments are supported:
 <a href="#capture_content_type_header_python" style="color: inherit; text-decoration: inherit;">capture_<wbr>content_<wbr>type_<wbr>header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointconfigurationdatacaptureconfigcapturecontenttypeheader">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Capture<wbr>Content<wbr>Type<wbr>Header<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointconfigurationdatacaptureconfigcapturecontenttypeheader">Input[Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Capture<wbr>Content<wbr>Type<wbr>Header<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The content type headers to capture. Fields are documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1167,7 +1196,7 @@ The following state arguments are supported:
 <a href="#enable_capture_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>capture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to enable data capture. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1176,7 +1205,7 @@ The following state arguments are supported:
 <a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt the captured data on Amazon S3.
 {{% /md %}}</dd></dl>
@@ -1235,7 +1264,7 @@ The following state arguments are supported:
 <a href="#csvcontenttypes_nodejs" style="color: inherit; text-decoration: inherit;">csv<wbr>Content<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The CSV content type headers to capture.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1244,7 +1273,7 @@ The following state arguments are supported:
 <a href="#jsoncontenttypes_nodejs" style="color: inherit; text-decoration: inherit;">json<wbr>Content<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The JSON content type headers to capture.
 {{% /md %}}</dd></dl>
@@ -1257,7 +1286,7 @@ The following state arguments are supported:
 <a href="#csv_content_types_python" style="color: inherit; text-decoration: inherit;">csv_<wbr>content_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The CSV content type headers to capture.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1266,7 +1295,7 @@ The following state arguments are supported:
 <a href="#json_content_types_python" style="color: inherit; text-decoration: inherit;">json_<wbr>content_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The JSON content type headers to capture.
 {{% /md %}}</dd></dl>
@@ -1307,7 +1336,7 @@ The following state arguments are supported:
 <a href="#capturemode_nodejs" style="color: inherit; text-decoration: inherit;">capture<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the data to be captured. Should be one of `Input` or `Output`.
 {{% /md %}}</dd></dl>
@@ -1320,7 +1349,7 @@ The following state arguments are supported:
 <a href="#capture_mode_python" style="color: inherit; text-decoration: inherit;">capture_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the data to be captured. Should be one of `Input` or `Output`.
 {{% /md %}}</dd></dl>
@@ -1451,7 +1480,7 @@ The following state arguments are supported:
 <a href="#initialinstancecount_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Instance<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Initial number of instances used for auto-scaling.
 {{% /md %}}</dd><dt class="property-required"
@@ -1460,7 +1489,7 @@ The following state arguments are supported:
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of instance to start.
 {{% /md %}}</dd><dt class="property-required"
@@ -1469,7 +1498,7 @@ The following state arguments are supported:
 <a href="#modelname_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the model to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1478,7 +1507,7 @@ The following state arguments are supported:
 <a href="#acceleratortype_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The size of the Elastic Inference (EI) instance to use for the production variant.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1487,7 +1516,7 @@ The following state arguments are supported:
 <a href="#initialvariantweight_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Variant<wbr>Weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Determines initial traffic distribution among all of the models that you specify in the endpoint configuration. If unspecified, it defaults to 1.0.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1496,7 +1525,7 @@ The following state arguments are supported:
 <a href="#variantname_nodejs" style="color: inherit; text-decoration: inherit;">variant<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the variant. If omitted, this provider will assign a random, unique name.
 {{% /md %}}</dd></dl>
@@ -1509,7 +1538,7 @@ The following state arguments are supported:
 <a href="#initial_instance_count_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>instance_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Initial number of instances used for auto-scaling.
 {{% /md %}}</dd><dt class="property-required"
@@ -1518,7 +1547,7 @@ The following state arguments are supported:
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of instance to start.
 {{% /md %}}</dd><dt class="property-required"
@@ -1527,7 +1556,7 @@ The following state arguments are supported:
 <a href="#model_name_python" style="color: inherit; text-decoration: inherit;">model_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the model to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1536,7 +1565,7 @@ The following state arguments are supported:
 <a href="#accelerator_type_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The size of the Elastic Inference (EI) instance to use for the production variant.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1545,7 +1574,7 @@ The following state arguments are supported:
 <a href="#initial_variant_weight_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>variant_<wbr>weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Determines initial traffic distribution among all of the models that you specify in the endpoint configuration. If unspecified, it defaults to 1.0.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1554,7 +1583,7 @@ The following state arguments are supported:
 <a href="#variant_name_python" style="color: inherit; text-decoration: inherit;">variant_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the variant. If omitted, this provider will assign a random, unique name.
 {{% /md %}}</dd></dl>

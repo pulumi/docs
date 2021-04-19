@@ -59,8 +59,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/glue"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -169,8 +169,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/glue"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -281,8 +281,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/glue"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -509,8 +509,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/glue"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -641,8 +641,8 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/glue"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -764,19 +764,43 @@ const eventsCrawler = new aws.glue.Crawler("eventsCrawler", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Crawler</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CrawlerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Crawler</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CrawlerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Crawler</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">catalog_targets</span><span class="p">:</span> <span class="nx">Optional[Sequence[CrawlerCatalogTargetArgs]]</span> = None<span class="p">, </span><span class="nx">classifiers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dynamodb_targets</span><span class="p">:</span> <span class="nx">Optional[Sequence[CrawlerDynamodbTargetArgs]]</span> = None<span class="p">, </span><span class="nx">jdbc_targets</span><span class="p">:</span> <span class="nx">Optional[Sequence[CrawlerJdbcTargetArgs]]</span> = None<span class="p">, </span><span class="nx">lineage_configuration</span><span class="p">:</span> <span class="nx">Optional[CrawlerLineageConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">mongodb_targets</span><span class="p">:</span> <span class="nx">Optional[Sequence[CrawlerMongodbTargetArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recrawl_policy</span><span class="p">:</span> <span class="nx">Optional[CrawlerRecrawlPolicyArgs]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">s3_targets</span><span class="p">:</span> <span class="nx">Optional[Sequence[CrawlerS3TargetArgs]]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema_change_policy</span><span class="p">:</span> <span class="nx">Optional[CrawlerSchemaChangePolicyArgs]</span> = None<span class="p">, </span><span class="nx">security_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">table_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Crawler</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">catalog_targets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[CrawlerCatalogTargetArgs]]]]</span> = None<span class="p">,</span>
+            <span class="nx">classifiers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+            <span class="nx">configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">dynamodb_targets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[CrawlerDynamodbTargetArgs]]]]</span> = None<span class="p">,</span>
+            <span class="nx">jdbc_targets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[CrawlerJdbcTargetArgs]]]]</span> = None<span class="p">,</span>
+            <span class="nx">lineage_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CrawlerLineageConfigurationArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">mongodb_targets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[CrawlerMongodbTargetArgs]]]]</span> = None<span class="p">,</span>
+            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">recrawl_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CrawlerRecrawlPolicyArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">s3_targets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[CrawlerS3TargetArgs]]]]</span> = None<span class="p">,</span>
+            <span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">schema_change_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CrawlerSchemaChangePolicyArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">security_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">table_prefix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Crawler</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CrawlerArgs</a></span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCrawler</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CrawlerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Crawler</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCrawler</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CrawlerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Crawler</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Crawler</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">CrawlerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Crawler</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">CrawlerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -811,22 +835,32 @@ const eventsCrawler = new aws.glue.Crawler("eventsCrawler", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">CrawlerArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -835,7 +869,7 @@ const eventsCrawler = new aws.glue.Crawler("eventsCrawler", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -859,7 +893,7 @@ const eventsCrawler = new aws.glue.Crawler("eventsCrawler", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1244,7 +1278,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Glue database to be synchronized.
 {{% /md %}}</dd><dt class="property-required"
@@ -1253,7 +1287,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IAM role friendly name (including path without leading slash), or ARN of an IAM role, used by the crawler to access other resources.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1262,7 +1296,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#catalogtargets_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlercatalogtarget">Crawler<wbr>Catalog<wbr>Target[]</a></span>
+        <span class="property-type"><a href="#crawlercatalogtarget">pulumi.<wbr>Input<pulumi.<wbr>Input<Crawler<wbr>Catalog<wbr>Target<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1270,7 +1304,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#classifiers_nodejs" style="color: inherit; text-decoration: inherit;">classifiers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of custom classifiers. By default, all AWS classifiers are included in a crawl, but these custom classifiers always override the default classifiers for a given classification.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1279,7 +1313,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}JSON string of configuration information. For more details see [Setting Crawler Configuration Options](https://docs.aws.amazon.com/glue/latest/dg/crawler-configuration.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1288,7 +1322,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description of the crawler.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1297,7 +1331,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#dynamodbtargets_nodejs" style="color: inherit; text-decoration: inherit;">dynamodb<wbr>Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlerdynamodbtarget">Crawler<wbr>Dynamodb<wbr>Target[]</a></span>
+        <span class="property-type"><a href="#crawlerdynamodbtarget">pulumi.<wbr>Input<pulumi.<wbr>Input<Crawler<wbr>Dynamodb<wbr>Target<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of nested DynamoDB target arguments. See Dynamodb Target below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1306,7 +1340,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#jdbctargets_nodejs" style="color: inherit; text-decoration: inherit;">jdbc<wbr>Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlerjdbctarget">Crawler<wbr>Jdbc<wbr>Target[]</a></span>
+        <span class="property-type"><a href="#crawlerjdbctarget">pulumi.<wbr>Input<pulumi.<wbr>Input<Crawler<wbr>Jdbc<wbr>Target<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of nested JBDC target arguments. See JDBC Target below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1315,7 +1349,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#lineageconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">lineage<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlerlineageconfiguration">Crawler<wbr>Lineage<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#crawlerlineageconfiguration">pulumi.<wbr>Input<Crawler<wbr>Lineage<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Specifies data lineage configuration settings for the crawler. See Lineage Configuration below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1324,7 +1358,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#mongodbtargets_nodejs" style="color: inherit; text-decoration: inherit;">mongodb<wbr>Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlermongodbtarget">Crawler<wbr>Mongodb<wbr>Target[]</a></span>
+        <span class="property-type"><a href="#crawlermongodbtarget">pulumi.<wbr>Input<pulumi.<wbr>Input<Crawler<wbr>Mongodb<wbr>Target<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List nested MongoDB target arguments. See MongoDB Target below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1333,7 +1367,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the crawler.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1342,7 +1376,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#recrawlpolicy_nodejs" style="color: inherit; text-decoration: inherit;">recrawl<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlerrecrawlpolicy">Crawler<wbr>Recrawl<wbr>Policy</a></span>
+        <span class="property-type"><a href="#crawlerrecrawlpolicy">pulumi.<wbr>Input<Crawler<wbr>Recrawl<wbr>Policy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A policy that specifies whether to crawl the entire dataset again, or to crawl only folders that were added since the last crawler run.. See Recrawl Policy below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1351,7 +1385,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#s3targets_nodejs" style="color: inherit; text-decoration: inherit;">s3Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlers3target">Crawler<wbr>S3Target[]</a></span>
+        <span class="property-type"><a href="#crawlers3target">pulumi.<wbr>Input<pulumi.<wbr>Input<Crawler<wbr>S3Target<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List nested Amazon S3 target arguments. See S3 Target below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1360,7 +1394,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A cron expression used to specify the schedule. For more information, see [Time-Based Schedules for Jobs and Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html). For example, to run something every day at 12:15 UTC, you would specify: `cron(15 12 * * ? *)`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1369,7 +1403,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#schemachangepolicy_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Change<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlerschemachangepolicy">Crawler<wbr>Schema<wbr>Change<wbr>Policy</a></span>
+        <span class="property-type"><a href="#crawlerschemachangepolicy">pulumi.<wbr>Input<Crawler<wbr>Schema<wbr>Change<wbr>Policy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Policy for the crawler's update and deletion behavior. See Schema Change Policy below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1378,7 +1412,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#securityconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of Security Configuration to be used by the crawler
 {{% /md %}}</dd><dt class="property-optional"
@@ -1387,7 +1421,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tableprefix_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The table prefix used for catalog tables that are created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1396,7 +1430,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd></dl>
@@ -1409,7 +1443,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Glue database to be synchronized.
 {{% /md %}}</dd><dt class="property-required"
@@ -1418,7 +1452,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IAM role friendly name (including path without leading slash), or ARN of an IAM role, used by the crawler to access other resources.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1427,7 +1461,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#catalog_targets_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlercatalogtarget">Sequence[Crawler<wbr>Catalog<wbr>Target<wbr>Args]</a></span>
+        <span class="property-type"><a href="#crawlercatalogtarget">Input[Crawler<wbr>Catalog<wbr>Target<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1435,7 +1469,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#classifiers_python" style="color: inherit; text-decoration: inherit;">classifiers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of custom classifiers. By default, all AWS classifiers are included in a crawl, but these custom classifiers always override the default classifiers for a given classification.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1444,7 +1478,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}JSON string of configuration information. For more details see [Setting Crawler Configuration Options](https://docs.aws.amazon.com/glue/latest/dg/crawler-configuration.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1453,7 +1487,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description of the crawler.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1462,7 +1496,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#dynamodb_targets_python" style="color: inherit; text-decoration: inherit;">dynamodb_<wbr>targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlerdynamodbtarget">Sequence[Crawler<wbr>Dynamodb<wbr>Target<wbr>Args]</a></span>
+        <span class="property-type"><a href="#crawlerdynamodbtarget">Input[Crawler<wbr>Dynamodb<wbr>Target<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of nested DynamoDB target arguments. See Dynamodb Target below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1471,7 +1505,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#jdbc_targets_python" style="color: inherit; text-decoration: inherit;">jdbc_<wbr>targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlerjdbctarget">Sequence[Crawler<wbr>Jdbc<wbr>Target<wbr>Args]</a></span>
+        <span class="property-type"><a href="#crawlerjdbctarget">Input[Crawler<wbr>Jdbc<wbr>Target<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of nested JBDC target arguments. See JDBC Target below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1480,7 +1514,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#lineage_configuration_python" style="color: inherit; text-decoration: inherit;">lineage_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlerlineageconfiguration">Crawler<wbr>Lineage<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#crawlerlineageconfiguration">Input[Crawler<wbr>Lineage<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies data lineage configuration settings for the crawler. See Lineage Configuration below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1489,7 +1523,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#mongodb_targets_python" style="color: inherit; text-decoration: inherit;">mongodb_<wbr>targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlermongodbtarget">Sequence[Crawler<wbr>Mongodb<wbr>Target<wbr>Args]</a></span>
+        <span class="property-type"><a href="#crawlermongodbtarget">Input[Crawler<wbr>Mongodb<wbr>Target<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List nested MongoDB target arguments. See MongoDB Target below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1498,7 +1532,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the crawler.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1507,7 +1541,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#recrawl_policy_python" style="color: inherit; text-decoration: inherit;">recrawl_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlerrecrawlpolicy">Crawler<wbr>Recrawl<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#crawlerrecrawlpolicy">Input[Crawler<wbr>Recrawl<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A policy that specifies whether to crawl the entire dataset again, or to crawl only folders that were added since the last crawler run.. See Recrawl Policy below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1516,7 +1550,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#s3_targets_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlers3target">Sequence[Crawler<wbr>S3Target<wbr>Args]</a></span>
+        <span class="property-type"><a href="#crawlers3target">Input[Crawler<wbr>S3Target<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List nested Amazon S3 target arguments. See S3 Target below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1525,7 +1559,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A cron expression used to specify the schedule. For more information, see [Time-Based Schedules for Jobs and Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html). For example, to run something every day at 12:15 UTC, you would specify: `cron(15 12 * * ? *)`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1534,7 +1568,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#schema_change_policy_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>change_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlerschemachangepolicy">Crawler<wbr>Schema<wbr>Change<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#crawlerschemachangepolicy">Input[Crawler<wbr>Schema<wbr>Change<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Policy for the crawler's update and deletion behavior. See Schema Change Policy below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1543,7 +1577,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#security_configuration_python" style="color: inherit; text-decoration: inherit;">security_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of Security Configuration to be used by the crawler
 {{% /md %}}</dd><dt class="property-optional"
@@ -1552,7 +1586,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#table_prefix_python" style="color: inherit; text-decoration: inherit;">table_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The table prefix used for catalog tables that are created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1561,7 +1595,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd></dl>
@@ -1666,20 +1700,41 @@ Get an existing Crawler resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">CrawlerState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Crawler</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">CrawlerState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Crawler</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">catalog_targets</span><span class="p">:</span> <span class="nx">Optional[Sequence[CrawlerCatalogTargetArgs]]</span> = None<span class="p">, </span><span class="nx">classifiers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dynamodb_targets</span><span class="p">:</span> <span class="nx">Optional[Sequence[CrawlerDynamodbTargetArgs]]</span> = None<span class="p">, </span><span class="nx">jdbc_targets</span><span class="p">:</span> <span class="nx">Optional[Sequence[CrawlerJdbcTargetArgs]]</span> = None<span class="p">, </span><span class="nx">lineage_configuration</span><span class="p">:</span> <span class="nx">Optional[CrawlerLineageConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">mongodb_targets</span><span class="p">:</span> <span class="nx">Optional[Sequence[CrawlerMongodbTargetArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recrawl_policy</span><span class="p">:</span> <span class="nx">Optional[CrawlerRecrawlPolicyArgs]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">s3_targets</span><span class="p">:</span> <span class="nx">Optional[Sequence[CrawlerS3TargetArgs]]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema_change_policy</span><span class="p">:</span> <span class="nx">Optional[CrawlerSchemaChangePolicyArgs]</span> = None<span class="p">, </span><span class="nx">security_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">table_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Crawler</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">catalog_targets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[CrawlerCatalogTargetArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">classifiers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">dynamodb_targets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[CrawlerDynamodbTargetArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">jdbc_targets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[CrawlerJdbcTargetArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">lineage_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CrawlerLineageConfigurationArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">mongodb_targets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[CrawlerMongodbTargetArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">recrawl_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CrawlerRecrawlPolicyArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">s3_targets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[CrawlerS3TargetArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">schema_change_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CrawlerSchemaChangePolicyArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">security_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">table_prefix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> Crawler</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCrawler<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">CrawlerState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Crawler</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCrawler<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">CrawlerState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Crawler</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Crawler</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">CrawlerState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Crawler</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">CrawlerState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2136,7 +2191,7 @@ The following state arguments are supported:
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of the crawler
 {{% /md %}}</dd><dt class="property-optional"
@@ -2145,7 +2200,7 @@ The following state arguments are supported:
 <a href="#state_catalogtargets_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlercatalogtarget">Crawler<wbr>Catalog<wbr>Target[]</a></span>
+        <span class="property-type"><a href="#crawlercatalogtarget">pulumi.<wbr>Input<pulumi.<wbr>Input<Crawler<wbr>Catalog<wbr>Target<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2153,7 +2208,7 @@ The following state arguments are supported:
 <a href="#state_classifiers_nodejs" style="color: inherit; text-decoration: inherit;">classifiers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of custom classifiers. By default, all AWS classifiers are included in a crawl, but these custom classifiers always override the default classifiers for a given classification.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2162,7 +2217,7 @@ The following state arguments are supported:
 <a href="#state_configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}JSON string of configuration information. For more details see [Setting Crawler Configuration Options](https://docs.aws.amazon.com/glue/latest/dg/crawler-configuration.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2171,7 +2226,7 @@ The following state arguments are supported:
 <a href="#state_databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Glue database to be synchronized.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2180,7 +2235,7 @@ The following state arguments are supported:
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description of the crawler.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2189,7 +2244,7 @@ The following state arguments are supported:
 <a href="#state_dynamodbtargets_nodejs" style="color: inherit; text-decoration: inherit;">dynamodb<wbr>Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlerdynamodbtarget">Crawler<wbr>Dynamodb<wbr>Target[]</a></span>
+        <span class="property-type"><a href="#crawlerdynamodbtarget">pulumi.<wbr>Input<pulumi.<wbr>Input<Crawler<wbr>Dynamodb<wbr>Target<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of nested DynamoDB target arguments. See Dynamodb Target below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2198,7 +2253,7 @@ The following state arguments are supported:
 <a href="#state_jdbctargets_nodejs" style="color: inherit; text-decoration: inherit;">jdbc<wbr>Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlerjdbctarget">Crawler<wbr>Jdbc<wbr>Target[]</a></span>
+        <span class="property-type"><a href="#crawlerjdbctarget">pulumi.<wbr>Input<pulumi.<wbr>Input<Crawler<wbr>Jdbc<wbr>Target<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of nested JBDC target arguments. See JDBC Target below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2207,7 +2262,7 @@ The following state arguments are supported:
 <a href="#state_lineageconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">lineage<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlerlineageconfiguration">Crawler<wbr>Lineage<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#crawlerlineageconfiguration">pulumi.<wbr>Input<Crawler<wbr>Lineage<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Specifies data lineage configuration settings for the crawler. See Lineage Configuration below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2216,7 +2271,7 @@ The following state arguments are supported:
 <a href="#state_mongodbtargets_nodejs" style="color: inherit; text-decoration: inherit;">mongodb<wbr>Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlermongodbtarget">Crawler<wbr>Mongodb<wbr>Target[]</a></span>
+        <span class="property-type"><a href="#crawlermongodbtarget">pulumi.<wbr>Input<pulumi.<wbr>Input<Crawler<wbr>Mongodb<wbr>Target<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List nested MongoDB target arguments. See MongoDB Target below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2225,7 +2280,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the crawler.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2234,7 +2289,7 @@ The following state arguments are supported:
 <a href="#state_recrawlpolicy_nodejs" style="color: inherit; text-decoration: inherit;">recrawl<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlerrecrawlpolicy">Crawler<wbr>Recrawl<wbr>Policy</a></span>
+        <span class="property-type"><a href="#crawlerrecrawlpolicy">pulumi.<wbr>Input<Crawler<wbr>Recrawl<wbr>Policy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A policy that specifies whether to crawl the entire dataset again, or to crawl only folders that were added since the last crawler run.. See Recrawl Policy below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2243,7 +2298,7 @@ The following state arguments are supported:
 <a href="#state_role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IAM role friendly name (including path without leading slash), or ARN of an IAM role, used by the crawler to access other resources.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2252,7 +2307,7 @@ The following state arguments are supported:
 <a href="#state_s3targets_nodejs" style="color: inherit; text-decoration: inherit;">s3Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlers3target">Crawler<wbr>S3Target[]</a></span>
+        <span class="property-type"><a href="#crawlers3target">pulumi.<wbr>Input<pulumi.<wbr>Input<Crawler<wbr>S3Target<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List nested Amazon S3 target arguments. See S3 Target below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2261,7 +2316,7 @@ The following state arguments are supported:
 <a href="#state_schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A cron expression used to specify the schedule. For more information, see [Time-Based Schedules for Jobs and Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html). For example, to run something every day at 12:15 UTC, you would specify: `cron(15 12 * * ? *)`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2270,7 +2325,7 @@ The following state arguments are supported:
 <a href="#state_schemachangepolicy_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Change<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlerschemachangepolicy">Crawler<wbr>Schema<wbr>Change<wbr>Policy</a></span>
+        <span class="property-type"><a href="#crawlerschemachangepolicy">pulumi.<wbr>Input<Crawler<wbr>Schema<wbr>Change<wbr>Policy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Policy for the crawler's update and deletion behavior. See Schema Change Policy below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2279,7 +2334,7 @@ The following state arguments are supported:
 <a href="#state_securityconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of Security Configuration to be used by the crawler
 {{% /md %}}</dd><dt class="property-optional"
@@ -2288,7 +2343,7 @@ The following state arguments are supported:
 <a href="#state_tableprefix_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The table prefix used for catalog tables that are created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2297,7 +2352,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd></dl>
@@ -2310,7 +2365,7 @@ The following state arguments are supported:
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of the crawler
 {{% /md %}}</dd><dt class="property-optional"
@@ -2319,7 +2374,7 @@ The following state arguments are supported:
 <a href="#state_catalog_targets_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlercatalogtarget">Sequence[Crawler<wbr>Catalog<wbr>Target<wbr>Args]</a></span>
+        <span class="property-type"><a href="#crawlercatalogtarget">Input[Crawler<wbr>Catalog<wbr>Target<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2327,7 +2382,7 @@ The following state arguments are supported:
 <a href="#state_classifiers_python" style="color: inherit; text-decoration: inherit;">classifiers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of custom classifiers. By default, all AWS classifiers are included in a crawl, but these custom classifiers always override the default classifiers for a given classification.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2336,7 +2391,7 @@ The following state arguments are supported:
 <a href="#state_configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}JSON string of configuration information. For more details see [Setting Crawler Configuration Options](https://docs.aws.amazon.com/glue/latest/dg/crawler-configuration.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2345,7 +2400,7 @@ The following state arguments are supported:
 <a href="#state_database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Glue database to be synchronized.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2354,7 +2409,7 @@ The following state arguments are supported:
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description of the crawler.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2363,7 +2418,7 @@ The following state arguments are supported:
 <a href="#state_dynamodb_targets_python" style="color: inherit; text-decoration: inherit;">dynamodb_<wbr>targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlerdynamodbtarget">Sequence[Crawler<wbr>Dynamodb<wbr>Target<wbr>Args]</a></span>
+        <span class="property-type"><a href="#crawlerdynamodbtarget">Input[Crawler<wbr>Dynamodb<wbr>Target<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of nested DynamoDB target arguments. See Dynamodb Target below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2372,7 +2427,7 @@ The following state arguments are supported:
 <a href="#state_jdbc_targets_python" style="color: inherit; text-decoration: inherit;">jdbc_<wbr>targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlerjdbctarget">Sequence[Crawler<wbr>Jdbc<wbr>Target<wbr>Args]</a></span>
+        <span class="property-type"><a href="#crawlerjdbctarget">Input[Crawler<wbr>Jdbc<wbr>Target<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of nested JBDC target arguments. See JDBC Target below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2381,7 +2436,7 @@ The following state arguments are supported:
 <a href="#state_lineage_configuration_python" style="color: inherit; text-decoration: inherit;">lineage_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlerlineageconfiguration">Crawler<wbr>Lineage<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#crawlerlineageconfiguration">Input[Crawler<wbr>Lineage<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies data lineage configuration settings for the crawler. See Lineage Configuration below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2390,7 +2445,7 @@ The following state arguments are supported:
 <a href="#state_mongodb_targets_python" style="color: inherit; text-decoration: inherit;">mongodb_<wbr>targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlermongodbtarget">Sequence[Crawler<wbr>Mongodb<wbr>Target<wbr>Args]</a></span>
+        <span class="property-type"><a href="#crawlermongodbtarget">Input[Crawler<wbr>Mongodb<wbr>Target<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List nested MongoDB target arguments. See MongoDB Target below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2399,7 +2454,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the crawler.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2408,7 +2463,7 @@ The following state arguments are supported:
 <a href="#state_recrawl_policy_python" style="color: inherit; text-decoration: inherit;">recrawl_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlerrecrawlpolicy">Crawler<wbr>Recrawl<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#crawlerrecrawlpolicy">Input[Crawler<wbr>Recrawl<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A policy that specifies whether to crawl the entire dataset again, or to crawl only folders that were added since the last crawler run.. See Recrawl Policy below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2417,7 +2472,7 @@ The following state arguments are supported:
 <a href="#state_role_python" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IAM role friendly name (including path without leading slash), or ARN of an IAM role, used by the crawler to access other resources.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2426,7 +2481,7 @@ The following state arguments are supported:
 <a href="#state_s3_targets_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlers3target">Sequence[Crawler<wbr>S3Target<wbr>Args]</a></span>
+        <span class="property-type"><a href="#crawlers3target">Input[Crawler<wbr>S3Target<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List nested Amazon S3 target arguments. See S3 Target below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2435,7 +2490,7 @@ The following state arguments are supported:
 <a href="#state_schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A cron expression used to specify the schedule. For more information, see [Time-Based Schedules for Jobs and Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html). For example, to run something every day at 12:15 UTC, you would specify: `cron(15 12 * * ? *)`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2444,7 +2499,7 @@ The following state arguments are supported:
 <a href="#state_schema_change_policy_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>change_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlerschemachangepolicy">Crawler<wbr>Schema<wbr>Change<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#crawlerschemachangepolicy">Input[Crawler<wbr>Schema<wbr>Change<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Policy for the crawler's update and deletion behavior. See Schema Change Policy below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2453,7 +2508,7 @@ The following state arguments are supported:
 <a href="#state_security_configuration_python" style="color: inherit; text-decoration: inherit;">security_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of Security Configuration to be used by the crawler
 {{% /md %}}</dd><dt class="property-optional"
@@ -2462,7 +2517,7 @@ The following state arguments are supported:
 <a href="#state_table_prefix_python" style="color: inherit; text-decoration: inherit;">table_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The table prefix used for catalog tables that are created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2471,7 +2526,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd></dl>
@@ -2539,7 +2594,7 @@ The following state arguments are supported:
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Glue database to be synchronized.
 {{% /md %}}</dd><dt class="property-required"
@@ -2548,7 +2603,7 @@ The following state arguments are supported:
 <a href="#tables_nodejs" style="color: inherit; text-decoration: inherit;">tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of catalog tables to be synchronized.
 {{% /md %}}</dd></dl>
@@ -2561,7 +2616,7 @@ The following state arguments are supported:
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Glue database to be synchronized.
 {{% /md %}}</dd><dt class="property-required"
@@ -2570,7 +2625,7 @@ The following state arguments are supported:
 <a href="#tables_python" style="color: inherit; text-decoration: inherit;">tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of catalog tables to be synchronized.
 {{% /md %}}</dd></dl>
@@ -2647,7 +2702,7 @@ The following state arguments are supported:
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path of the Amazon DocumentDB or MongoDB target (database/collection).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2656,7 +2711,7 @@ The following state arguments are supported:
 <a href="#scanall_nodejs" style="color: inherit; text-decoration: inherit;">scan<wbr>All</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether to scan all the records, or to sample rows from the table. Scanning all the records can take a long time when the table is not a high throughput table. Default value is `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2665,7 +2720,7 @@ The following state arguments are supported:
 <a href="#scanrate_nodejs" style="color: inherit; text-decoration: inherit;">scan<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The percentage of the configured read capacity units to use by the AWS Glue crawler. The valid values are null or a value between 0.1 to 1.5.
 {{% /md %}}</dd></dl>
@@ -2678,7 +2733,7 @@ The following state arguments are supported:
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path of the Amazon DocumentDB or MongoDB target (database/collection).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2687,7 +2742,7 @@ The following state arguments are supported:
 <a href="#scan_all_python" style="color: inherit; text-decoration: inherit;">scan_<wbr>all</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether to scan all the records, or to sample rows from the table. Scanning all the records can take a long time when the table is not a high throughput table. Default value is `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2696,7 +2751,7 @@ The following state arguments are supported:
 <a href="#scan_rate_python" style="color: inherit; text-decoration: inherit;">scan_<wbr>rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The percentage of the configured read capacity units to use by the AWS Glue crawler. The valid values are null or a value between 0.1 to 1.5.
 {{% /md %}}</dd></dl>
@@ -2773,7 +2828,7 @@ The following state arguments are supported:
 <a href="#connectionname_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the connection to use to connect to the Amazon DocumentDB or MongoDB target.
 {{% /md %}}</dd><dt class="property-required"
@@ -2782,7 +2837,7 @@ The following state arguments are supported:
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path of the Amazon DocumentDB or MongoDB target (database/collection).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2791,7 +2846,7 @@ The following state arguments are supported:
 <a href="#exclusions_nodejs" style="color: inherit; text-decoration: inherit;">exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of glob patterns used to exclude from the crawl.
 {{% /md %}}</dd></dl>
@@ -2804,7 +2859,7 @@ The following state arguments are supported:
 <a href="#connection_name_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the connection to use to connect to the Amazon DocumentDB or MongoDB target.
 {{% /md %}}</dd><dt class="property-required"
@@ -2813,7 +2868,7 @@ The following state arguments are supported:
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path of the Amazon DocumentDB or MongoDB target (database/collection).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2822,7 +2877,7 @@ The following state arguments are supported:
 <a href="#exclusions_python" style="color: inherit; text-decoration: inherit;">exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of glob patterns used to exclude from the crawl.
 {{% /md %}}</dd></dl>
@@ -2863,7 +2918,7 @@ The following state arguments are supported:
 <a href="#crawlerlineagesettings_nodejs" style="color: inherit; text-decoration: inherit;">crawler<wbr>Lineage<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies whether data lineage is enabled for the crawler. Valid values are: `ENABLE` and `DISABLE`. Default value is `Disable`.
 {{% /md %}}</dd></dl>
@@ -2876,7 +2931,7 @@ The following state arguments are supported:
 <a href="#crawler_lineage_settings_python" style="color: inherit; text-decoration: inherit;">crawler_<wbr>lineage_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies whether data lineage is enabled for the crawler. Valid values are: `ENABLE` and `DISABLE`. Default value is `Disable`.
 {{% /md %}}</dd></dl>
@@ -2953,7 +3008,7 @@ The following state arguments are supported:
 <a href="#connectionname_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the connection to use to connect to the Amazon DocumentDB or MongoDB target.
 {{% /md %}}</dd><dt class="property-required"
@@ -2962,7 +3017,7 @@ The following state arguments are supported:
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path of the Amazon DocumentDB or MongoDB target (database/collection).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2971,7 +3026,7 @@ The following state arguments are supported:
 <a href="#scanall_nodejs" style="color: inherit; text-decoration: inherit;">scan<wbr>All</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether to scan all the records, or to sample rows from the table. Scanning all the records can take a long time when the table is not a high throughput table. Default value is `true`.
 {{% /md %}}</dd></dl>
@@ -2984,7 +3039,7 @@ The following state arguments are supported:
 <a href="#connection_name_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the connection to use to connect to the Amazon DocumentDB or MongoDB target.
 {{% /md %}}</dd><dt class="property-required"
@@ -2993,7 +3048,7 @@ The following state arguments are supported:
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path of the Amazon DocumentDB or MongoDB target (database/collection).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3002,7 +3057,7 @@ The following state arguments are supported:
 <a href="#scan_all_python" style="color: inherit; text-decoration: inherit;">scan_<wbr>all</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether to scan all the records, or to sample rows from the table. Scanning all the records can take a long time when the table is not a high throughput table. Default value is `true`.
 {{% /md %}}</dd></dl>
@@ -3043,7 +3098,7 @@ The following state arguments are supported:
 <a href="#recrawlbehavior_nodejs" style="color: inherit; text-decoration: inherit;">recrawl<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies whether to crawl the entire dataset again or to crawl only folders that were added since the last crawler run. Valid Values are: `CRAWL_EVERYTHING` and `CRAWL_NEW_FOLDERS_ONLY`. Default value is `CRAWL_EVERYTHING`.
 {{% /md %}}</dd></dl>
@@ -3056,7 +3111,7 @@ The following state arguments are supported:
 <a href="#recrawl_behavior_python" style="color: inherit; text-decoration: inherit;">recrawl_<wbr>behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies whether to crawl the entire dataset again or to crawl only folders that were added since the last crawler run. Valid Values are: `CRAWL_EVERYTHING` and `CRAWL_NEW_FOLDERS_ONLY`. Default value is `CRAWL_EVERYTHING`.
 {{% /md %}}</dd></dl>
@@ -3133,7 +3188,7 @@ The following state arguments are supported:
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path of the Amazon DocumentDB or MongoDB target (database/collection).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3142,7 +3197,7 @@ The following state arguments are supported:
 <a href="#connectionname_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the connection to use to connect to the Amazon DocumentDB or MongoDB target.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3151,7 +3206,7 @@ The following state arguments are supported:
 <a href="#exclusions_nodejs" style="color: inherit; text-decoration: inherit;">exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of glob patterns used to exclude from the crawl.
 {{% /md %}}</dd></dl>
@@ -3164,7 +3219,7 @@ The following state arguments are supported:
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path of the Amazon DocumentDB or MongoDB target (database/collection).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3173,7 +3228,7 @@ The following state arguments are supported:
 <a href="#connection_name_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the connection to use to connect to the Amazon DocumentDB or MongoDB target.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3182,7 +3237,7 @@ The following state arguments are supported:
 <a href="#exclusions_python" style="color: inherit; text-decoration: inherit;">exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of glob patterns used to exclude from the crawl.
 {{% /md %}}</dd></dl>
@@ -3241,7 +3296,7 @@ The following state arguments are supported:
 <a href="#deletebehavior_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The deletion behavior when the crawler finds a deleted object. Valid values: `LOG`, `DELETE_FROM_DATABASE`, or `DEPRECATE_IN_DATABASE`. Defaults to `DEPRECATE_IN_DATABASE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3250,7 +3305,7 @@ The following state arguments are supported:
 <a href="#updatebehavior_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The update behavior when the crawler finds a changed schema. Valid values: `LOG` or `UPDATE_IN_DATABASE`. Defaults to `UPDATE_IN_DATABASE`.
 {{% /md %}}</dd></dl>
@@ -3263,7 +3318,7 @@ The following state arguments are supported:
 <a href="#delete_behavior_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The deletion behavior when the crawler finds a deleted object. Valid values: `LOG`, `DELETE_FROM_DATABASE`, or `DEPRECATE_IN_DATABASE`. Defaults to `DEPRECATE_IN_DATABASE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3272,7 +3327,7 @@ The following state arguments are supported:
 <a href="#update_behavior_python" style="color: inherit; text-decoration: inherit;">update_<wbr>behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The update behavior when the crawler finds a changed schema. Valid values: `LOG` or `UPDATE_IN_DATABASE`. Defaults to `UPDATE_IN_DATABASE`.
 {{% /md %}}</dd></dl>

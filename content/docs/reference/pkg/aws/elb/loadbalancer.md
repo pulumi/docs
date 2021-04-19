@@ -241,19 +241,41 @@ const bar = new aws.elb.LoadBalancer("bar", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">LoadBalancer</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LoadBalancerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">LoadBalancer</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LoadBalancerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">LoadBalancer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_logs</span><span class="p">:</span> <span class="nx">Optional[LoadBalancerAccessLogsArgs]</span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">connection_draining</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">connection_draining_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cross_zone_load_balancing</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">health_check</span><span class="p">:</span> <span class="nx">Optional[LoadBalancerHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">idle_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">instances</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">internal</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">listeners</span><span class="p">:</span> <span class="nx">Optional[Sequence[LoadBalancerListenerArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">source_security_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnets</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">LoadBalancer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                 <span class="nx">access_logs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LoadBalancerAccessLogsArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                 <span class="nx">connection_draining</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                 <span class="nx">connection_draining_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                 <span class="nx">cross_zone_load_balancing</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                 <span class="nx">health_check</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LoadBalancerHealthCheckArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">idle_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                 <span class="nx">instances</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                 <span class="nx">internal</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                 <span class="nx">listeners</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[LoadBalancerListenerArgs]]]]</span> = None<span class="p">,</span>
+                 <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                 <span class="nx">source_security_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">subnets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                 <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">LoadBalancer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LoadBalancerArgs</a></span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLoadBalancer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">LoadBalancerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LoadBalancer</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLoadBalancer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">LoadBalancerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LoadBalancer</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">LoadBalancer</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">LoadBalancerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">LoadBalancer</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">LoadBalancerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -288,22 +310,32 @@ const bar = new aws.elb.LoadBalancer("bar", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">LoadBalancerArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -312,7 +344,7 @@ const bar = new aws.elb.LoadBalancer("bar", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -336,7 +368,7 @@ const bar = new aws.elb.LoadBalancer("bar", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -695,7 +727,7 @@ instances. Use this for Classic or Default VPC only.
 <a href="#listeners_nodejs" style="color: inherit; text-decoration: inherit;">listeners</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerlistener">Load<wbr>Balancer<wbr>Listener[]</a></span>
+        <span class="property-type"><a href="#loadbalancerlistener">pulumi.<wbr>Input<pulumi.<wbr>Input<Load<wbr>Balancer<wbr>Listener<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of listener blocks. Listeners documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -704,7 +736,7 @@ instances. Use this for Classic or Default VPC only.
 <a href="#accesslogs_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs</a></span>
+        <span class="property-type"><a href="#loadbalanceraccesslogs">pulumi.<wbr>Input<Load<wbr>Balancer<wbr>Access<wbr>Logs<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}An Access Logs block. Access Logs documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -713,7 +745,7 @@ instances. Use this for Classic or Default VPC only.
 <a href="#availabilityzones_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The AZ's to serve traffic in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -722,7 +754,7 @@ instances. Use this for Classic or Default VPC only.
 <a href="#connectiondraining_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Draining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean to enable connection draining. Default: `false`
 {{% /md %}}</dd><dt class="property-optional"
@@ -731,7 +763,7 @@ instances. Use this for Classic or Default VPC only.
 <a href="#connectiondrainingtimeout_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Draining<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The time in seconds to allow for connections to drain. Default: `300`
 {{% /md %}}</dd><dt class="property-optional"
@@ -740,7 +772,7 @@ instances. Use this for Classic or Default VPC only.
 <a href="#crosszoneloadbalancing_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Zone<wbr>Load<wbr>Balancing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable cross-zone load balancing. Default: `true`
 {{% /md %}}</dd><dt class="property-optional"
@@ -749,7 +781,7 @@ instances. Use this for Classic or Default VPC only.
 <a href="#healthcheck_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerhealthcheck">Load<wbr>Balancer<wbr>Health<wbr>Check</a></span>
+        <span class="property-type"><a href="#loadbalancerhealthcheck">pulumi.<wbr>Input<Load<wbr>Balancer<wbr>Health<wbr>Check<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A health_check block. Health Check documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -758,7 +790,7 @@ instances. Use this for Classic or Default VPC only.
 <a href="#idletimeout_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The time in seconds that the connection is allowed to be idle. Default: `60`
 {{% /md %}}</dd><dt class="property-optional"
@@ -767,7 +799,7 @@ instances. Use this for Classic or Default VPC only.
 <a href="#instances_nodejs" style="color: inherit; text-decoration: inherit;">instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of instance ids to place in the ELB pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -776,7 +808,7 @@ instances. Use this for Classic or Default VPC only.
 <a href="#internal_nodejs" style="color: inherit; text-decoration: inherit;">internal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true, ELB will be an internal ELB.
 {{% /md %}}</dd><dt class="property-optional"
@@ -785,7 +817,7 @@ instances. Use this for Classic or Default VPC only.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the ELB. By default generated by this provider.
 {{% /md %}}</dd><dt class="property-optional"
@@ -794,7 +826,7 @@ instances. Use this for Classic or Default VPC only.
 <a href="#nameprefix_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
@@ -804,7 +836,7 @@ prefix. Conflicts with `name`.
 <a href="#securitygroups_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to assign to the ELB.
 Only valid if creating an ELB within a VPC
@@ -814,7 +846,7 @@ Only valid if creating an ELB within a VPC
 <a href="#sourcesecuritygroup_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Security<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the security group that you can use as
 part of your inbound rules for your load balancer's back-end application
@@ -825,7 +857,7 @@ instances. Use this for Classic or Default VPC only.
 <a href="#subnets_nodejs" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of subnet IDs to attach to the ELB.
 {{% /md %}}</dd><dt class="property-optional"
@@ -834,7 +866,7 @@ instances. Use this for Classic or Default VPC only.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -847,7 +879,7 @@ instances. Use this for Classic or Default VPC only.
 <a href="#listeners_python" style="color: inherit; text-decoration: inherit;">listeners</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerlistener">Sequence[Load<wbr>Balancer<wbr>Listener<wbr>Args]</a></span>
+        <span class="property-type"><a href="#loadbalancerlistener">Input[Load<wbr>Balancer<wbr>Listener<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of listener blocks. Listeners documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -856,7 +888,7 @@ instances. Use this for Classic or Default VPC only.
 <a href="#access_logs_python" style="color: inherit; text-decoration: inherit;">access_<wbr>logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#loadbalanceraccesslogs">Input[Load<wbr>Balancer<wbr>Access<wbr>Logs<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An Access Logs block. Access Logs documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -865,7 +897,7 @@ instances. Use this for Classic or Default VPC only.
 <a href="#availability_zones_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The AZ's to serve traffic in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -874,7 +906,7 @@ instances. Use this for Classic or Default VPC only.
 <a href="#connection_draining_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>draining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean to enable connection draining. Default: `false`
 {{% /md %}}</dd><dt class="property-optional"
@@ -883,7 +915,7 @@ instances. Use this for Classic or Default VPC only.
 <a href="#connection_draining_timeout_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>draining_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The time in seconds to allow for connections to drain. Default: `300`
 {{% /md %}}</dd><dt class="property-optional"
@@ -892,7 +924,7 @@ instances. Use this for Classic or Default VPC only.
 <a href="#cross_zone_load_balancing_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>zone_<wbr>load_<wbr>balancing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable cross-zone load balancing. Default: `true`
 {{% /md %}}</dd><dt class="property-optional"
@@ -901,7 +933,7 @@ instances. Use this for Classic or Default VPC only.
 <a href="#health_check_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerhealthcheck">Load<wbr>Balancer<wbr>Health<wbr>Check<wbr>Args</a></span>
+        <span class="property-type"><a href="#loadbalancerhealthcheck">Input[Load<wbr>Balancer<wbr>Health<wbr>Check<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A health_check block. Health Check documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -910,7 +942,7 @@ instances. Use this for Classic or Default VPC only.
 <a href="#idle_timeout_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The time in seconds that the connection is allowed to be idle. Default: `60`
 {{% /md %}}</dd><dt class="property-optional"
@@ -919,7 +951,7 @@ instances. Use this for Classic or Default VPC only.
 <a href="#instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of instance ids to place in the ELB pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -928,7 +960,7 @@ instances. Use this for Classic or Default VPC only.
 <a href="#internal_python" style="color: inherit; text-decoration: inherit;">internal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true, ELB will be an internal ELB.
 {{% /md %}}</dd><dt class="property-optional"
@@ -937,7 +969,7 @@ instances. Use this for Classic or Default VPC only.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the ELB. By default generated by this provider.
 {{% /md %}}</dd><dt class="property-optional"
@@ -946,7 +978,7 @@ instances. Use this for Classic or Default VPC only.
 <a href="#name_prefix_python" style="color: inherit; text-decoration: inherit;">name_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
@@ -956,7 +988,7 @@ prefix. Conflicts with `name`.
 <a href="#security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to assign to the ELB.
 Only valid if creating an ELB within a VPC
@@ -966,7 +998,7 @@ Only valid if creating an ELB within a VPC
 <a href="#source_security_group_python" style="color: inherit; text-decoration: inherit;">source_<wbr>security_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the security group that you can use as
 part of your inbound rules for your load balancer's back-end application
@@ -977,7 +1009,7 @@ instances. Use this for Classic or Default VPC only.
 <a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of subnet IDs to attach to the ELB.
 {{% /md %}}</dd><dt class="property-optional"
@@ -986,7 +1018,7 @@ instances. Use this for Classic or Default VPC only.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -1207,20 +1239,42 @@ Get an existing LoadBalancer resource's state with the given name, ID, and optio
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">LoadBalancerState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">LoadBalancer</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">LoadBalancerState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">LoadBalancer</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_logs</span><span class="p">:</span> <span class="nx">Optional[LoadBalancerAccessLogsArgs]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">connection_draining</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">connection_draining_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cross_zone_load_balancing</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dns_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_check</span><span class="p">:</span> <span class="nx">Optional[LoadBalancerHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">idle_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">instances</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">internal</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">listeners</span><span class="p">:</span> <span class="nx">Optional[Sequence[LoadBalancerListenerArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">source_security_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnets</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> LoadBalancer</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">access_logs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LoadBalancerAccessLogsArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">connection_draining</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">connection_draining_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">cross_zone_load_balancing</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">dns_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">health_check</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LoadBalancerHealthCheckArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">idle_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">instances</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">internal</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">listeners</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[LoadBalancerListenerArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">source_security_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">source_security_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">subnets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> LoadBalancer</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLoadBalancer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">LoadBalancerState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LoadBalancer</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLoadBalancer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">LoadBalancerState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LoadBalancer</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">LoadBalancer</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">LoadBalancerState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">LoadBalancer</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">LoadBalancerState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1709,7 +1763,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#state_accesslogs_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs</a></span>
+        <span class="property-type"><a href="#loadbalanceraccesslogs">pulumi.<wbr>Input<Load<wbr>Balancer<wbr>Access<wbr>Logs<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}An Access Logs block. Access Logs documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1718,7 +1772,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of the ELB
 {{% /md %}}</dd><dt class="property-optional"
@@ -1727,7 +1781,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#state_availabilityzones_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The AZ's to serve traffic in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1736,7 +1790,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#state_connectiondraining_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Draining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean to enable connection draining. Default: `false`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1745,7 +1799,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#state_connectiondrainingtimeout_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Draining<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The time in seconds to allow for connections to drain. Default: `300`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1754,7 +1808,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#state_crosszoneloadbalancing_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Zone<wbr>Load<wbr>Balancing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable cross-zone load balancing. Default: `true`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1763,7 +1817,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#state_dnsname_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The DNS name of the ELB
 {{% /md %}}</dd><dt class="property-optional"
@@ -1772,7 +1826,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#state_healthcheck_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerhealthcheck">Load<wbr>Balancer<wbr>Health<wbr>Check</a></span>
+        <span class="property-type"><a href="#loadbalancerhealthcheck">pulumi.<wbr>Input<Load<wbr>Balancer<wbr>Health<wbr>Check<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A health_check block. Health Check documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1781,7 +1835,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#state_idletimeout_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The time in seconds that the connection is allowed to be idle. Default: `60`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1790,7 +1844,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#state_instances_nodejs" style="color: inherit; text-decoration: inherit;">instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of instance ids to place in the ELB pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1799,7 +1853,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#state_internal_nodejs" style="color: inherit; text-decoration: inherit;">internal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true, ELB will be an internal ELB.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1808,7 +1862,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#state_listeners_nodejs" style="color: inherit; text-decoration: inherit;">listeners</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerlistener">Load<wbr>Balancer<wbr>Listener[]</a></span>
+        <span class="property-type"><a href="#loadbalancerlistener">pulumi.<wbr>Input<pulumi.<wbr>Input<Load<wbr>Balancer<wbr>Listener<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of listener blocks. Listeners documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1817,7 +1871,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the ELB. By default generated by this provider.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1826,7 +1880,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#state_nameprefix_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
@@ -1836,7 +1890,7 @@ prefix. Conflicts with `name`.
 <a href="#state_securitygroups_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to assign to the ELB.
 Only valid if creating an ELB within a VPC
@@ -1846,7 +1900,7 @@ Only valid if creating an ELB within a VPC
 <a href="#state_sourcesecuritygroup_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Security<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the security group that you can use as
 part of your inbound rules for your load balancer's back-end application
@@ -1857,7 +1911,7 @@ instances. Use this for Classic or Default VPC only.
 <a href="#state_sourcesecuritygroupid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Security<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the security group that you can use as
 part of your inbound rules for your load balancer's back-end application
@@ -1868,7 +1922,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#state_subnets_nodejs" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of subnet IDs to attach to the ELB.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1877,7 +1931,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1886,7 +1940,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#state_zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The canonical hosted zone ID of the ELB (to be used in a Route 53 Alias record)
 {{% /md %}}</dd></dl>
@@ -1899,7 +1953,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#state_access_logs_python" style="color: inherit; text-decoration: inherit;">access_<wbr>logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#loadbalanceraccesslogs">Input[Load<wbr>Balancer<wbr>Access<wbr>Logs<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An Access Logs block. Access Logs documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1908,7 +1962,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of the ELB
 {{% /md %}}</dd><dt class="property-optional"
@@ -1917,7 +1971,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#state_availability_zones_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The AZ's to serve traffic in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1926,7 +1980,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#state_connection_draining_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>draining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean to enable connection draining. Default: `false`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1935,7 +1989,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#state_connection_draining_timeout_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>draining_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The time in seconds to allow for connections to drain. Default: `300`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1944,7 +1998,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#state_cross_zone_load_balancing_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>zone_<wbr>load_<wbr>balancing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable cross-zone load balancing. Default: `true`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1953,7 +2007,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#state_dns_name_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The DNS name of the ELB
 {{% /md %}}</dd><dt class="property-optional"
@@ -1962,7 +2016,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#state_health_check_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerhealthcheck">Load<wbr>Balancer<wbr>Health<wbr>Check<wbr>Args</a></span>
+        <span class="property-type"><a href="#loadbalancerhealthcheck">Input[Load<wbr>Balancer<wbr>Health<wbr>Check<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A health_check block. Health Check documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1971,7 +2025,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#state_idle_timeout_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The time in seconds that the connection is allowed to be idle. Default: `60`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1980,7 +2034,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#state_instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of instance ids to place in the ELB pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1989,7 +2043,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#state_internal_python" style="color: inherit; text-decoration: inherit;">internal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true, ELB will be an internal ELB.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1998,7 +2052,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#state_listeners_python" style="color: inherit; text-decoration: inherit;">listeners</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerlistener">Sequence[Load<wbr>Balancer<wbr>Listener<wbr>Args]</a></span>
+        <span class="property-type"><a href="#loadbalancerlistener">Input[Load<wbr>Balancer<wbr>Listener<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of listener blocks. Listeners documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2007,7 +2061,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the ELB. By default generated by this provider.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2016,7 +2070,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#state_name_prefix_python" style="color: inherit; text-decoration: inherit;">name_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
@@ -2026,7 +2080,7 @@ prefix. Conflicts with `name`.
 <a href="#state_security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to assign to the ELB.
 Only valid if creating an ELB within a VPC
@@ -2036,7 +2090,7 @@ Only valid if creating an ELB within a VPC
 <a href="#state_source_security_group_python" style="color: inherit; text-decoration: inherit;">source_<wbr>security_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the security group that you can use as
 part of your inbound rules for your load balancer's back-end application
@@ -2047,7 +2101,7 @@ instances. Use this for Classic or Default VPC only.
 <a href="#state_source_security_group_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>security_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the security group that you can use as
 part of your inbound rules for your load balancer's back-end application
@@ -2058,7 +2112,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#state_subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of subnet IDs to attach to the ELB.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2067,7 +2121,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2076,7 +2130,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#state_zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The canonical hosted zone ID of the ELB (to be used in a Route 53 Alias record)
 {{% /md %}}</dd></dl>
@@ -2180,7 +2234,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The S3 bucket name to store the logs in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2189,7 +2243,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#bucketprefix_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The S3 bucket prefix. Logs are stored in the root if not configured.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2198,7 +2252,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean to enable / disable `access_logs`. Default is `true`
 {{% /md %}}</dd><dt class="property-optional"
@@ -2207,7 +2261,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The publishing interval in minutes. Default: 60 minutes.
 {{% /md %}}</dd></dl>
@@ -2220,7 +2274,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The S3 bucket name to store the logs in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2229,7 +2283,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#bucket_prefix_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The S3 bucket prefix. Logs are stored in the root if not configured.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2238,7 +2292,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean to enable / disable `access_logs`. Default is `true`
 {{% /md %}}</dd><dt class="property-optional"
@@ -2247,7 +2301,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The publishing interval in minutes. Default: 60 minutes.
 {{% /md %}}</dd></dl>
@@ -2366,7 +2420,7 @@ values are:
 <a href="#healthythreshold_nodejs" style="color: inherit; text-decoration: inherit;">healthy<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of checks before the instance is declared healthy.
 {{% /md %}}</dd><dt class="property-required"
@@ -2375,7 +2429,7 @@ values are:
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The interval between checks.
 {{% /md %}}</dd><dt class="property-required"
@@ -2384,7 +2438,7 @@ values are:
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The target of the check. Valid pattern is "${PROTOCOL}:${PORT}${PATH}", where PROTOCOL
 values are:
@@ -2396,7 +2450,7 @@ values are:
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The length of time before the check times out.
 {{% /md %}}</dd><dt class="property-required"
@@ -2405,7 +2459,7 @@ values are:
 <a href="#unhealthythreshold_nodejs" style="color: inherit; text-decoration: inherit;">unhealthy<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of checks before the instance is declared unhealthy.
 {{% /md %}}</dd></dl>
@@ -2418,7 +2472,7 @@ values are:
 <a href="#healthy_threshold_python" style="color: inherit; text-decoration: inherit;">healthy_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of checks before the instance is declared healthy.
 {{% /md %}}</dd><dt class="property-required"
@@ -2427,7 +2481,7 @@ values are:
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The interval between checks.
 {{% /md %}}</dd><dt class="property-required"
@@ -2436,7 +2490,7 @@ values are:
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The target of the check. Valid pattern is "${PROTOCOL}:${PORT}${PATH}", where PROTOCOL
 values are:
@@ -2448,7 +2502,7 @@ values are:
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The length of time before the check times out.
 {{% /md %}}</dd><dt class="property-required"
@@ -2457,7 +2511,7 @@ values are:
 <a href="#unhealthy_threshold_python" style="color: inherit; text-decoration: inherit;">unhealthy_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of checks before the instance is declared unhealthy.
 {{% /md %}}</dd></dl>
@@ -2576,7 +2630,7 @@ uploaded to AWS IAM. **Note ECDSA-specific restrictions below.  Only valid when 
 <a href="#instanceport_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The port on the instance to route to
 {{% /md %}}</dd><dt class="property-required"
@@ -2585,7 +2639,7 @@ uploaded to AWS IAM. **Note ECDSA-specific restrictions below.  Only valid when 
 <a href="#instanceprotocol_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The protocol to use to the instance. Valid
 values are `HTTP`, `HTTPS`, `TCP`, or `SSL`
@@ -2595,7 +2649,7 @@ values are `HTTP`, `HTTPS`, `TCP`, or `SSL`
 <a href="#lbport_nodejs" style="color: inherit; text-decoration: inherit;">lb<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The port to listen on for the load balancer
 {{% /md %}}</dd><dt class="property-required"
@@ -2604,7 +2658,7 @@ values are `HTTP`, `HTTPS`, `TCP`, or `SSL`
 <a href="#lbprotocol_nodejs" style="color: inherit; text-decoration: inherit;">lb<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The protocol to listen on. Valid values are `HTTP`,
 `HTTPS`, `TCP`, or `SSL`
@@ -2614,7 +2668,7 @@ values are `HTTP`, `HTTPS`, `TCP`, or `SSL`
 <a href="#sslcertificateid_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Certificate<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of an SSL certificate you have
 uploaded to AWS IAM. **Note ECDSA-specific restrictions below.  Only valid when `lb_protocol` is either HTTPS or SSL**
@@ -2628,7 +2682,7 @@ uploaded to AWS IAM. **Note ECDSA-specific restrictions below.  Only valid when 
 <a href="#instance_port_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The port on the instance to route to
 {{% /md %}}</dd><dt class="property-required"
@@ -2637,7 +2691,7 @@ uploaded to AWS IAM. **Note ECDSA-specific restrictions below.  Only valid when 
 <a href="#instance_protocol_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The protocol to use to the instance. Valid
 values are `HTTP`, `HTTPS`, `TCP`, or `SSL`
@@ -2647,7 +2701,7 @@ values are `HTTP`, `HTTPS`, `TCP`, or `SSL`
 <a href="#lb_port_python" style="color: inherit; text-decoration: inherit;">lb_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The port to listen on for the load balancer
 {{% /md %}}</dd><dt class="property-required"
@@ -2656,7 +2710,7 @@ values are `HTTP`, `HTTPS`, `TCP`, or `SSL`
 <a href="#lb_protocol_python" style="color: inherit; text-decoration: inherit;">lb_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The protocol to listen on. Valid values are `HTTP`,
 `HTTPS`, `TCP`, or `SSL`
@@ -2666,7 +2720,7 @@ values are `HTTP`, `HTTPS`, `TCP`, or `SSL`
 <a href="#ssl_certificate_id_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>certificate_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of an SSL certificate you have
 uploaded to AWS IAM. **Note ECDSA-specific restrictions below.  Only valid when `lb_protocol` is either HTTPS or SSL**

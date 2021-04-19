@@ -56,8 +56,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/redshift"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/redshift"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -135,19 +135,59 @@ const defaultCluster = new aws.redshift.Cluster("default", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_version_upgrade</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">automated_snapshot_retention_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_parameter_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_public_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_revision_number</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">cluster_subnet_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">elastic_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encrypted</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enhanced_vpc_routing</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">final_snapshot_identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iam_roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">kms_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logging</span><span class="p">:</span> <span class="nx">Optional[ClusterLoggingArgs]</span> = None<span class="p">, </span><span class="nx">master_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">number_of_nodes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">owner_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">preferred_maintenance_window</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">publicly_accessible</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">skip_final_snapshot</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">snapshot_cluster_identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snapshot_copy</span><span class="p">:</span> <span class="nx">Optional[ClusterSnapshotCopyArgs]</span> = None<span class="p">, </span><span class="nx">snapshot_identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_security_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">allow_version_upgrade</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+            <span class="nx">automated_snapshot_retention_period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+            <span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">cluster_identifier</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">cluster_parameter_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">cluster_public_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">cluster_revision_number</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">cluster_security_groups</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+            <span class="nx">cluster_subnet_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">cluster_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">cluster_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">elastic_ip</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">encrypted</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+            <span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">enhanced_vpc_routing</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+            <span class="nx">final_snapshot_identifier</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">iam_roles</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+            <span class="nx">kms_key_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">logging</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterLoggingArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">master_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">master_username</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">node_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">number_of_nodes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+            <span class="nx">owner_account</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+            <span class="nx">preferred_maintenance_window</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">publicly_accessible</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+            <span class="nx">skip_final_snapshot</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+            <span class="nx">snapshot_cluster_identifier</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">snapshot_copy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterSnapshotCopyArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">snapshot_identifier</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+            <span class="nx">vpc_security_group_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -182,22 +222,32 @@ const defaultCluster = new aws.redshift.Cluster("default", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -206,7 +256,7 @@ const defaultCluster = new aws.redshift.Cluster("default", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -230,7 +280,7 @@ const defaultCluster = new aws.redshift.Cluster("default", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -919,7 +969,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
 <a href="#clusteridentifier_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Cluster Identifier. Must be a lower case
 string.
@@ -929,7 +979,7 @@ string.
 <a href="#nodetype_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The node type to be provisioned for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -938,7 +988,7 @@ string.
 <a href="#allowversionupgrade_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Version<wbr>Upgrade</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true , major version upgrades can be applied during the maintenance window to the Amazon Redshift engine that is running on the cluster. Default is true
 {{% /md %}}</dd><dt class="property-optional"
@@ -947,7 +997,7 @@ string.
 <a href="#automatedsnapshotretentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">automated<wbr>Snapshot<wbr>Retention<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of days that automated snapshots are retained. If the value is 0, automated snapshots are disabled. Even if automated snapshots are disabled, you can still create manual snapshots when you want with create-cluster-snapshot. Default is 1.
 {{% /md %}}</dd><dt class="property-optional"
@@ -956,7 +1006,7 @@ string.
 <a href="#availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The EC2 Availability Zone (AZ) in which you want Amazon Redshift to provision the cluster. For example, if you have several EC2 instances running in a specific Availability Zone, then you might want the cluster to be provisioned in the same zone in order to decrease network latency.
 {{% /md %}}</dd><dt class="property-optional"
@@ -965,7 +1015,7 @@ string.
 <a href="#clusterparametergroupname_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Parameter<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the parameter group to be associated with this cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -974,7 +1024,7 @@ string.
 <a href="#clusterpublickey_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Public<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The public key for the cluster
 {{% /md %}}</dd><dt class="property-optional"
@@ -983,7 +1033,7 @@ string.
 <a href="#clusterrevisionnumber_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Revision<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The specific revision number of the database in the cluster
 {{% /md %}}</dd><dt class="property-optional"
@@ -992,7 +1042,7 @@ string.
 <a href="#clustersecuritygroups_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Security<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of security groups to be associated with this cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1001,7 +1051,7 @@ string.
 <a href="#clustersubnetgroupname_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Subnet<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of a cluster subnet group to be associated with this cluster. If this parameter is not provided the resulting cluster will be deployed outside virtual private cloud (VPC).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1010,7 +1060,7 @@ string.
 <a href="#clustertype_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The cluster type to use. Either `single-node` or `multi-node`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1019,7 +1069,7 @@ string.
 <a href="#clusterversion_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The version of the Amazon Redshift engine software that you want to deploy on the cluster.
 The version selected runs on all the nodes in the cluster.
@@ -1029,7 +1079,7 @@ The version selected runs on all the nodes in the cluster.
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the first database to be created when the cluster is created.
 If you do not provide a name, Amazon Redshift will create a default database called `dev`.
@@ -1039,7 +1089,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
 <a href="#elasticip_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Elastic IP (EIP) address for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1048,7 +1098,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
 <a href="#encrypted_nodejs" style="color: inherit; text-decoration: inherit;">encrypted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true , the data in the cluster is encrypted at rest.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1057,7 +1107,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The connection endpoint
 {{% /md %}}</dd><dt class="property-optional"
@@ -1066,7 +1116,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
 <a href="#enhancedvpcrouting_nodejs" style="color: inherit; text-decoration: inherit;">enhanced<wbr>Vpc<wbr>Routing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true , enhanced VPC routing is enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1075,7 +1125,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
 <a href="#finalsnapshotidentifier_nodejs" style="color: inherit; text-decoration: inherit;">final<wbr>Snapshot<wbr>Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The identifier of the final snapshot that is to be created immediately before deleting the cluster. If this parameter is provided, `skip_final_snapshot` must be false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1084,7 +1134,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
 <a href="#iamroles_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of IAM Role ARNs to associate with the cluster. A Maximum of 10 can be associated to the cluster at any time.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1093,7 +1143,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
 <a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key. When specifying `kms_key_id`, `encrypted` needs to be set to true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1102,7 +1152,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
 <a href="#logging_nodejs" style="color: inherit; text-decoration: inherit;">logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterlogging">Cluster<wbr>Logging</a></span>
+        <span class="property-type"><a href="#clusterlogging">pulumi.<wbr>Input<Cluster<wbr>Logging<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Logging, documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1111,7 +1161,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
 <a href="#masterpassword_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Password for the master DB user.
 Note that this may show up in logs, and it will be stored in the state file. Password must contain at least 8 chars and
@@ -1122,7 +1172,7 @@ contain at least one uppercase letter, one lowercase letter, and one number.
 <a href="#masterusername_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Username for the master DB user.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1131,7 +1181,7 @@ contain at least one uppercase letter, one lowercase letter, and one number.
 <a href="#numberofnodes_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of compute nodes in the cluster. This parameter is required when the ClusterType parameter is specified as multi-node. Default is 1.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1140,7 +1190,7 @@ contain at least one uppercase letter, one lowercase letter, and one number.
 <a href="#owneraccount_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AWS customer account used to create or copy the snapshot. Required if you are restoring a snapshot you do not own, optional if you own the snapshot.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1149,7 +1199,7 @@ contain at least one uppercase letter, one lowercase letter, and one number.
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The port number on which the cluster accepts incoming connections.
 The cluster is accessible only via the JDBC and ODBC connection strings. Part of the connection string requires the port on which the cluster will listen for incoming connections. Default port is 5439.
@@ -1159,7 +1209,7 @@ The cluster is accessible only via the JDBC and ODBC connection strings. Part of
 <a href="#preferredmaintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Maintenance<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The weekly time range (in UTC) during which automated cluster maintenance can occur.
 Format: ddd:hh24:mi-ddd:hh24:mi
@@ -1169,7 +1219,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
 <a href="#publiclyaccessible_nodejs" style="color: inherit; text-decoration: inherit;">publicly<wbr>Accessible</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true, the cluster can be accessed from a public network. Default is `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1178,7 +1228,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
 <a href="#skipfinalsnapshot_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Final<wbr>Snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Determines whether a final snapshot of the cluster is created before Amazon Redshift deletes the cluster. If true , a final cluster snapshot is not created. If false , a final cluster snapshot is created before the cluster is deleted. Default is false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1187,7 +1237,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
 <a href="#snapshotclusteridentifier_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Cluster<wbr>Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the cluster the source snapshot was created from.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1196,7 +1246,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
 <a href="#snapshotcopy_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Copy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustersnapshotcopy">Cluster<wbr>Snapshot<wbr>Copy</a></span>
+        <span class="property-type"><a href="#clustersnapshotcopy">pulumi.<wbr>Input<Cluster<wbr>Snapshot<wbr>Copy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration of automatic copy of snapshots from one region to another. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1205,7 +1255,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
 <a href="#snapshotidentifier_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the snapshot from which to create the new cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1214,7 +1264,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1223,7 +1273,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
 <a href="#vpcsecuritygroupids_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Security<wbr>Group<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of Virtual Private Cloud (VPC) security groups to be associated with the cluster.
 {{% /md %}}</dd></dl>
@@ -1236,7 +1286,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
 <a href="#cluster_identifier_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Cluster Identifier. Must be a lower case
 string.
@@ -1246,7 +1296,7 @@ string.
 <a href="#node_type_python" style="color: inherit; text-decoration: inherit;">node_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The node type to be provisioned for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1255,7 +1305,7 @@ string.
 <a href="#allow_version_upgrade_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>version_<wbr>upgrade</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true , major version upgrades can be applied during the maintenance window to the Amazon Redshift engine that is running on the cluster. Default is true
 {{% /md %}}</dd><dt class="property-optional"
@@ -1264,7 +1314,7 @@ string.
 <a href="#automated_snapshot_retention_period_python" style="color: inherit; text-decoration: inherit;">automated_<wbr>snapshot_<wbr>retention_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of days that automated snapshots are retained. If the value is 0, automated snapshots are disabled. Even if automated snapshots are disabled, you can still create manual snapshots when you want with create-cluster-snapshot. Default is 1.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1273,7 +1323,7 @@ string.
 <a href="#availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The EC2 Availability Zone (AZ) in which you want Amazon Redshift to provision the cluster. For example, if you have several EC2 instances running in a specific Availability Zone, then you might want the cluster to be provisioned in the same zone in order to decrease network latency.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1282,7 +1332,7 @@ string.
 <a href="#cluster_parameter_group_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>parameter_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the parameter group to be associated with this cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1291,7 +1341,7 @@ string.
 <a href="#cluster_public_key_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>public_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The public key for the cluster
 {{% /md %}}</dd><dt class="property-optional"
@@ -1300,7 +1350,7 @@ string.
 <a href="#cluster_revision_number_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>revision_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The specific revision number of the database in the cluster
 {{% /md %}}</dd><dt class="property-optional"
@@ -1309,7 +1359,7 @@ string.
 <a href="#cluster_security_groups_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>security_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of security groups to be associated with this cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1318,7 +1368,7 @@ string.
 <a href="#cluster_subnet_group_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>subnet_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of a cluster subnet group to be associated with this cluster. If this parameter is not provided the resulting cluster will be deployed outside virtual private cloud (VPC).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1327,7 +1377,7 @@ string.
 <a href="#cluster_type_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The cluster type to use. Either `single-node` or `multi-node`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1336,7 +1386,7 @@ string.
 <a href="#cluster_version_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The version of the Amazon Redshift engine software that you want to deploy on the cluster.
 The version selected runs on all the nodes in the cluster.
@@ -1346,7 +1396,7 @@ The version selected runs on all the nodes in the cluster.
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the first database to be created when the cluster is created.
 If you do not provide a name, Amazon Redshift will create a default database called `dev`.
@@ -1356,7 +1406,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
 <a href="#elastic_ip_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Elastic IP (EIP) address for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1365,7 +1415,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
 <a href="#encrypted_python" style="color: inherit; text-decoration: inherit;">encrypted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true , the data in the cluster is encrypted at rest.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1374,7 +1424,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The connection endpoint
 {{% /md %}}</dd><dt class="property-optional"
@@ -1383,7 +1433,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
 <a href="#enhanced_vpc_routing_python" style="color: inherit; text-decoration: inherit;">enhanced_<wbr>vpc_<wbr>routing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true , enhanced VPC routing is enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1392,7 +1442,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
 <a href="#final_snapshot_identifier_python" style="color: inherit; text-decoration: inherit;">final_<wbr>snapshot_<wbr>identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The identifier of the final snapshot that is to be created immediately before deleting the cluster. If this parameter is provided, `skip_final_snapshot` must be false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1401,7 +1451,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
 <a href="#iam_roles_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of IAM Role ARNs to associate with the cluster. A Maximum of 10 can be associated to the cluster at any time.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1410,7 +1460,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
 <a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key. When specifying `kms_key_id`, `encrypted` needs to be set to true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1419,7 +1469,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
 <a href="#logging_python" style="color: inherit; text-decoration: inherit;">logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterlogging">Cluster<wbr>Logging<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterlogging">Input[Cluster<wbr>Logging<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Logging, documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1428,7 +1478,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
 <a href="#master_password_python" style="color: inherit; text-decoration: inherit;">master_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Password for the master DB user.
 Note that this may show up in logs, and it will be stored in the state file. Password must contain at least 8 chars and
@@ -1439,7 +1489,7 @@ contain at least one uppercase letter, one lowercase letter, and one number.
 <a href="#master_username_python" style="color: inherit; text-decoration: inherit;">master_<wbr>username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Username for the master DB user.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1448,7 +1498,7 @@ contain at least one uppercase letter, one lowercase letter, and one number.
 <a href="#number_of_nodes_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of compute nodes in the cluster. This parameter is required when the ClusterType parameter is specified as multi-node. Default is 1.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1457,7 +1507,7 @@ contain at least one uppercase letter, one lowercase letter, and one number.
 <a href="#owner_account_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AWS customer account used to create or copy the snapshot. Required if you are restoring a snapshot you do not own, optional if you own the snapshot.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1466,7 +1516,7 @@ contain at least one uppercase letter, one lowercase letter, and one number.
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The port number on which the cluster accepts incoming connections.
 The cluster is accessible only via the JDBC and ODBC connection strings. Part of the connection string requires the port on which the cluster will listen for incoming connections. Default port is 5439.
@@ -1476,7 +1526,7 @@ The cluster is accessible only via the JDBC and ODBC connection strings. Part of
 <a href="#preferred_maintenance_window_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>maintenance_<wbr>window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The weekly time range (in UTC) during which automated cluster maintenance can occur.
 Format: ddd:hh24:mi-ddd:hh24:mi
@@ -1486,7 +1536,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
 <a href="#publicly_accessible_python" style="color: inherit; text-decoration: inherit;">publicly_<wbr>accessible</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true, the cluster can be accessed from a public network. Default is `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1495,7 +1545,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
 <a href="#skip_final_snapshot_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>final_<wbr>snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Determines whether a final snapshot of the cluster is created before Amazon Redshift deletes the cluster. If true , a final cluster snapshot is not created. If false , a final cluster snapshot is created before the cluster is deleted. Default is false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1504,7 +1554,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
 <a href="#snapshot_cluster_identifier_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>cluster_<wbr>identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the cluster the source snapshot was created from.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1513,7 +1563,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
 <a href="#snapshot_copy_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>copy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustersnapshotcopy">Cluster<wbr>Snapshot<wbr>Copy<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustersnapshotcopy">Input[Cluster<wbr>Snapshot<wbr>Copy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration of automatic copy of snapshots from one region to another. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1522,7 +1572,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
 <a href="#snapshot_identifier_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the snapshot from which to create the new cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1531,7 +1581,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1540,7 +1590,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
 <a href="#vpc_security_group_ids_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>security_<wbr>group_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of Virtual Private Cloud (VPC) security groups to be associated with the cluster.
 {{% /md %}}</dd></dl>
@@ -1681,20 +1731,58 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ClusterState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Cluster</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ClusterState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Cluster</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_version_upgrade</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">automated_snapshot_retention_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_parameter_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_public_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_revision_number</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">cluster_subnet_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">elastic_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encrypted</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enhanced_vpc_routing</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">final_snapshot_identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iam_roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">kms_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logging</span><span class="p">:</span> <span class="nx">Optional[ClusterLoggingArgs]</span> = None<span class="p">, </span><span class="nx">master_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">number_of_nodes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">owner_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">preferred_maintenance_window</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">publicly_accessible</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">skip_final_snapshot</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">snapshot_cluster_identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snapshot_copy</span><span class="p">:</span> <span class="nx">Optional[ClusterSnapshotCopyArgs]</span> = None<span class="p">, </span><span class="nx">snapshot_identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_security_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">allow_version_upgrade</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">automated_snapshot_retention_period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">cluster_identifier</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">cluster_parameter_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">cluster_public_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">cluster_revision_number</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">cluster_security_groups</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">cluster_subnet_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">cluster_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">cluster_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">dns_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">elastic_ip</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">encrypted</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">enhanced_vpc_routing</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">final_snapshot_identifier</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">iam_roles</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">kms_key_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">logging</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterLoggingArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">master_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">master_username</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">node_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">number_of_nodes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">owner_account</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">preferred_maintenance_window</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">publicly_accessible</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">skip_final_snapshot</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">snapshot_cluster_identifier</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">snapshot_copy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterSnapshotCopyArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">snapshot_identifier</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">vpc_security_group_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ClusterState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ClusterState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Cluster</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ClusterState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Cluster</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ClusterState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2473,7 +2561,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
 <a href="#state_allowversionupgrade_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Version<wbr>Upgrade</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true , major version upgrades can be applied during the maintenance window to the Amazon Redshift engine that is running on the cluster. Default is true
 {{% /md %}}</dd><dt class="property-optional"
@@ -2482,7 +2570,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of cluster
 {{% /md %}}</dd><dt class="property-optional"
@@ -2491,7 +2579,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
 <a href="#state_automatedsnapshotretentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">automated<wbr>Snapshot<wbr>Retention<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of days that automated snapshots are retained. If the value is 0, automated snapshots are disabled. Even if automated snapshots are disabled, you can still create manual snapshots when you want with create-cluster-snapshot. Default is 1.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2500,7 +2588,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
 <a href="#state_availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The EC2 Availability Zone (AZ) in which you want Amazon Redshift to provision the cluster. For example, if you have several EC2 instances running in a specific Availability Zone, then you might want the cluster to be provisioned in the same zone in order to decrease network latency.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2509,7 +2597,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
 <a href="#state_clusteridentifier_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Cluster Identifier. Must be a lower case
 string.
@@ -2519,7 +2607,7 @@ string.
 <a href="#state_clusterparametergroupname_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Parameter<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the parameter group to be associated with this cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2528,7 +2616,7 @@ string.
 <a href="#state_clusterpublickey_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Public<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The public key for the cluster
 {{% /md %}}</dd><dt class="property-optional"
@@ -2537,7 +2625,7 @@ string.
 <a href="#state_clusterrevisionnumber_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Revision<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The specific revision number of the database in the cluster
 {{% /md %}}</dd><dt class="property-optional"
@@ -2546,7 +2634,7 @@ string.
 <a href="#state_clustersecuritygroups_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Security<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of security groups to be associated with this cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2555,7 +2643,7 @@ string.
 <a href="#state_clustersubnetgroupname_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Subnet<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of a cluster subnet group to be associated with this cluster. If this parameter is not provided the resulting cluster will be deployed outside virtual private cloud (VPC).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2564,7 +2652,7 @@ string.
 <a href="#state_clustertype_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The cluster type to use. Either `single-node` or `multi-node`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2573,7 +2661,7 @@ string.
 <a href="#state_clusterversion_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The version of the Amazon Redshift engine software that you want to deploy on the cluster.
 The version selected runs on all the nodes in the cluster.
@@ -2583,7 +2671,7 @@ The version selected runs on all the nodes in the cluster.
 <a href="#state_databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the first database to be created when the cluster is created.
 If you do not provide a name, Amazon Redshift will create a default database called `dev`.
@@ -2593,7 +2681,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
 <a href="#state_dnsname_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The DNS name of the cluster
 {{% /md %}}</dd><dt class="property-optional"
@@ -2602,7 +2690,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
 <a href="#state_elasticip_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Elastic IP (EIP) address for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2611,7 +2699,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
 <a href="#state_encrypted_nodejs" style="color: inherit; text-decoration: inherit;">encrypted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true , the data in the cluster is encrypted at rest.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2620,7 +2708,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
 <a href="#state_endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The connection endpoint
 {{% /md %}}</dd><dt class="property-optional"
@@ -2629,7 +2717,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
 <a href="#state_enhancedvpcrouting_nodejs" style="color: inherit; text-decoration: inherit;">enhanced<wbr>Vpc<wbr>Routing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true , enhanced VPC routing is enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2638,7 +2726,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
 <a href="#state_finalsnapshotidentifier_nodejs" style="color: inherit; text-decoration: inherit;">final<wbr>Snapshot<wbr>Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The identifier of the final snapshot that is to be created immediately before deleting the cluster. If this parameter is provided, `skip_final_snapshot` must be false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2647,7 +2735,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
 <a href="#state_iamroles_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of IAM Role ARNs to associate with the cluster. A Maximum of 10 can be associated to the cluster at any time.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2656,7 +2744,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
 <a href="#state_kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key. When specifying `kms_key_id`, `encrypted` needs to be set to true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2665,7 +2753,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
 <a href="#state_logging_nodejs" style="color: inherit; text-decoration: inherit;">logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterlogging">Cluster<wbr>Logging</a></span>
+        <span class="property-type"><a href="#clusterlogging">pulumi.<wbr>Input<Cluster<wbr>Logging<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Logging, documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2674,7 +2762,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
 <a href="#state_masterpassword_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Password for the master DB user.
 Note that this may show up in logs, and it will be stored in the state file. Password must contain at least 8 chars and
@@ -2685,7 +2773,7 @@ contain at least one uppercase letter, one lowercase letter, and one number.
 <a href="#state_masterusername_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Username for the master DB user.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2694,7 +2782,7 @@ contain at least one uppercase letter, one lowercase letter, and one number.
 <a href="#state_nodetype_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The node type to be provisioned for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2703,7 +2791,7 @@ contain at least one uppercase letter, one lowercase letter, and one number.
 <a href="#state_numberofnodes_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of compute nodes in the cluster. This parameter is required when the ClusterType parameter is specified as multi-node. Default is 1.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2712,7 +2800,7 @@ contain at least one uppercase letter, one lowercase letter, and one number.
 <a href="#state_owneraccount_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AWS customer account used to create or copy the snapshot. Required if you are restoring a snapshot you do not own, optional if you own the snapshot.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2721,7 +2809,7 @@ contain at least one uppercase letter, one lowercase letter, and one number.
 <a href="#state_port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The port number on which the cluster accepts incoming connections.
 The cluster is accessible only via the JDBC and ODBC connection strings. Part of the connection string requires the port on which the cluster will listen for incoming connections. Default port is 5439.
@@ -2731,7 +2819,7 @@ The cluster is accessible only via the JDBC and ODBC connection strings. Part of
 <a href="#state_preferredmaintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Maintenance<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The weekly time range (in UTC) during which automated cluster maintenance can occur.
 Format: ddd:hh24:mi-ddd:hh24:mi
@@ -2741,7 +2829,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
 <a href="#state_publiclyaccessible_nodejs" style="color: inherit; text-decoration: inherit;">publicly<wbr>Accessible</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true, the cluster can be accessed from a public network. Default is `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2750,7 +2838,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
 <a href="#state_skipfinalsnapshot_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Final<wbr>Snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Determines whether a final snapshot of the cluster is created before Amazon Redshift deletes the cluster. If true , a final cluster snapshot is not created. If false , a final cluster snapshot is created before the cluster is deleted. Default is false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2759,7 +2847,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
 <a href="#state_snapshotclusteridentifier_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Cluster<wbr>Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the cluster the source snapshot was created from.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2768,7 +2856,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
 <a href="#state_snapshotcopy_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Copy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustersnapshotcopy">Cluster<wbr>Snapshot<wbr>Copy</a></span>
+        <span class="property-type"><a href="#clustersnapshotcopy">pulumi.<wbr>Input<Cluster<wbr>Snapshot<wbr>Copy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration of automatic copy of snapshots from one region to another. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2777,7 +2865,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
 <a href="#state_snapshotidentifier_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the snapshot from which to create the new cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2786,7 +2874,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2795,7 +2883,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
 <a href="#state_vpcsecuritygroupids_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Security<wbr>Group<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of Virtual Private Cloud (VPC) security groups to be associated with the cluster.
 {{% /md %}}</dd></dl>
@@ -2808,7 +2896,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
 <a href="#state_allow_version_upgrade_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>version_<wbr>upgrade</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true , major version upgrades can be applied during the maintenance window to the Amazon Redshift engine that is running on the cluster. Default is true
 {{% /md %}}</dd><dt class="property-optional"
@@ -2817,7 +2905,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of cluster
 {{% /md %}}</dd><dt class="property-optional"
@@ -2826,7 +2914,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
 <a href="#state_automated_snapshot_retention_period_python" style="color: inherit; text-decoration: inherit;">automated_<wbr>snapshot_<wbr>retention_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of days that automated snapshots are retained. If the value is 0, automated snapshots are disabled. Even if automated snapshots are disabled, you can still create manual snapshots when you want with create-cluster-snapshot. Default is 1.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2835,7 +2923,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
 <a href="#state_availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The EC2 Availability Zone (AZ) in which you want Amazon Redshift to provision the cluster. For example, if you have several EC2 instances running in a specific Availability Zone, then you might want the cluster to be provisioned in the same zone in order to decrease network latency.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2844,7 +2932,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
 <a href="#state_cluster_identifier_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Cluster Identifier. Must be a lower case
 string.
@@ -2854,7 +2942,7 @@ string.
 <a href="#state_cluster_parameter_group_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>parameter_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the parameter group to be associated with this cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2863,7 +2951,7 @@ string.
 <a href="#state_cluster_public_key_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>public_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The public key for the cluster
 {{% /md %}}</dd><dt class="property-optional"
@@ -2872,7 +2960,7 @@ string.
 <a href="#state_cluster_revision_number_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>revision_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The specific revision number of the database in the cluster
 {{% /md %}}</dd><dt class="property-optional"
@@ -2881,7 +2969,7 @@ string.
 <a href="#state_cluster_security_groups_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>security_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of security groups to be associated with this cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2890,7 +2978,7 @@ string.
 <a href="#state_cluster_subnet_group_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>subnet_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of a cluster subnet group to be associated with this cluster. If this parameter is not provided the resulting cluster will be deployed outside virtual private cloud (VPC).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2899,7 +2987,7 @@ string.
 <a href="#state_cluster_type_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The cluster type to use. Either `single-node` or `multi-node`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2908,7 +2996,7 @@ string.
 <a href="#state_cluster_version_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The version of the Amazon Redshift engine software that you want to deploy on the cluster.
 The version selected runs on all the nodes in the cluster.
@@ -2918,7 +3006,7 @@ The version selected runs on all the nodes in the cluster.
 <a href="#state_database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the first database to be created when the cluster is created.
 If you do not provide a name, Amazon Redshift will create a default database called `dev`.
@@ -2928,7 +3016,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
 <a href="#state_dns_name_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The DNS name of the cluster
 {{% /md %}}</dd><dt class="property-optional"
@@ -2937,7 +3025,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
 <a href="#state_elastic_ip_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Elastic IP (EIP) address for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2946,7 +3034,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
 <a href="#state_encrypted_python" style="color: inherit; text-decoration: inherit;">encrypted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true , the data in the cluster is encrypted at rest.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2955,7 +3043,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
 <a href="#state_endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The connection endpoint
 {{% /md %}}</dd><dt class="property-optional"
@@ -2964,7 +3052,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
 <a href="#state_enhanced_vpc_routing_python" style="color: inherit; text-decoration: inherit;">enhanced_<wbr>vpc_<wbr>routing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true , enhanced VPC routing is enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2973,7 +3061,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
 <a href="#state_final_snapshot_identifier_python" style="color: inherit; text-decoration: inherit;">final_<wbr>snapshot_<wbr>identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The identifier of the final snapshot that is to be created immediately before deleting the cluster. If this parameter is provided, `skip_final_snapshot` must be false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2982,7 +3070,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
 <a href="#state_iam_roles_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of IAM Role ARNs to associate with the cluster. A Maximum of 10 can be associated to the cluster at any time.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2991,7 +3079,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
 <a href="#state_kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key. When specifying `kms_key_id`, `encrypted` needs to be set to true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3000,7 +3088,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
 <a href="#state_logging_python" style="color: inherit; text-decoration: inherit;">logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterlogging">Cluster<wbr>Logging<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterlogging">Input[Cluster<wbr>Logging<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Logging, documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3009,7 +3097,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
 <a href="#state_master_password_python" style="color: inherit; text-decoration: inherit;">master_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Password for the master DB user.
 Note that this may show up in logs, and it will be stored in the state file. Password must contain at least 8 chars and
@@ -3020,7 +3108,7 @@ contain at least one uppercase letter, one lowercase letter, and one number.
 <a href="#state_master_username_python" style="color: inherit; text-decoration: inherit;">master_<wbr>username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Username for the master DB user.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3029,7 +3117,7 @@ contain at least one uppercase letter, one lowercase letter, and one number.
 <a href="#state_node_type_python" style="color: inherit; text-decoration: inherit;">node_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The node type to be provisioned for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3038,7 +3126,7 @@ contain at least one uppercase letter, one lowercase letter, and one number.
 <a href="#state_number_of_nodes_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of compute nodes in the cluster. This parameter is required when the ClusterType parameter is specified as multi-node. Default is 1.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3047,7 +3135,7 @@ contain at least one uppercase letter, one lowercase letter, and one number.
 <a href="#state_owner_account_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AWS customer account used to create or copy the snapshot. Required if you are restoring a snapshot you do not own, optional if you own the snapshot.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3056,7 +3144,7 @@ contain at least one uppercase letter, one lowercase letter, and one number.
 <a href="#state_port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The port number on which the cluster accepts incoming connections.
 The cluster is accessible only via the JDBC and ODBC connection strings. Part of the connection string requires the port on which the cluster will listen for incoming connections. Default port is 5439.
@@ -3066,7 +3154,7 @@ The cluster is accessible only via the JDBC and ODBC connection strings. Part of
 <a href="#state_preferred_maintenance_window_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>maintenance_<wbr>window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The weekly time range (in UTC) during which automated cluster maintenance can occur.
 Format: ddd:hh24:mi-ddd:hh24:mi
@@ -3076,7 +3164,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
 <a href="#state_publicly_accessible_python" style="color: inherit; text-decoration: inherit;">publicly_<wbr>accessible</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true, the cluster can be accessed from a public network. Default is `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3085,7 +3173,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
 <a href="#state_skip_final_snapshot_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>final_<wbr>snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Determines whether a final snapshot of the cluster is created before Amazon Redshift deletes the cluster. If true , a final cluster snapshot is not created. If false , a final cluster snapshot is created before the cluster is deleted. Default is false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3094,7 +3182,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
 <a href="#state_snapshot_cluster_identifier_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>cluster_<wbr>identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the cluster the source snapshot was created from.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3103,7 +3191,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
 <a href="#state_snapshot_copy_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>copy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustersnapshotcopy">Cluster<wbr>Snapshot<wbr>Copy<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustersnapshotcopy">Input[Cluster<wbr>Snapshot<wbr>Copy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration of automatic copy of snapshots from one region to another. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3112,7 +3200,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
 <a href="#state_snapshot_identifier_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the snapshot from which to create the new cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3121,7 +3209,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3130,7 +3218,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
 <a href="#state_vpc_security_group_ids_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>security_<wbr>group_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of Virtual Private Cloud (VPC) security groups to be associated with the cluster.
 {{% /md %}}</dd></dl>
@@ -3218,7 +3306,7 @@ For more information on the permissions required for the bucket, please read the
 <a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enables logging information such as queries and connection attempts, for the specified Amazon Redshift cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3227,7 +3315,7 @@ For more information on the permissions required for the bucket, please read the
 <a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of an existing S3 bucket where the log files are to be stored. Must be in the same region as the cluster and the cluster must have read bucket and put object permissions.
 For more information on the permissions required for the bucket, please read the AWS [documentation](http://docs.aws.amazon.com/redshift/latest/mgmt/db-auditing.html#db-auditing-enable-logging)
@@ -3237,7 +3325,7 @@ For more information on the permissions required for the bucket, please read the
 <a href="#s3keyprefix_nodejs" style="color: inherit; text-decoration: inherit;">s3Key<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The prefix applied to the log file names.
 {{% /md %}}</dd></dl>
@@ -3250,7 +3338,7 @@ For more information on the permissions required for the bucket, please read the
 <a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enables logging information such as queries and connection attempts, for the specified Amazon Redshift cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3259,7 +3347,7 @@ For more information on the permissions required for the bucket, please read the
 <a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of an existing S3 bucket where the log files are to be stored. Must be in the same region as the cluster and the cluster must have read bucket and put object permissions.
 For more information on the permissions required for the bucket, please read the AWS [documentation](http://docs.aws.amazon.com/redshift/latest/mgmt/db-auditing.html#db-auditing-enable-logging)
@@ -3269,7 +3357,7 @@ For more information on the permissions required for the bucket, please read the
 <a href="#s3_key_prefix_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>key_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The prefix applied to the log file names.
 {{% /md %}}</dd></dl>
@@ -3346,7 +3434,7 @@ For more information on the permissions required for the bucket, please read the
 <a href="#destinationregion_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The destination region that you want to copy snapshots to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3355,7 +3443,7 @@ For more information on the permissions required for the bucket, please read the
 <a href="#grantname_nodejs" style="color: inherit; text-decoration: inherit;">grant<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the snapshot copy grant to use when snapshots of an AWS KMS-encrypted cluster are copied to the destination region.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3364,7 +3452,7 @@ For more information on the permissions required for the bucket, please read the
 <a href="#retentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of days to retain automated snapshots in the destination region after they are copied from the source region. Defaults to `7`.
 {{% /md %}}</dd></dl>
@@ -3377,7 +3465,7 @@ For more information on the permissions required for the bucket, please read the
 <a href="#destination_region_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The destination region that you want to copy snapshots to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3386,7 +3474,7 @@ For more information on the permissions required for the bucket, please read the
 <a href="#grant_name_python" style="color: inherit; text-decoration: inherit;">grant_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the snapshot copy grant to use when snapshots of an AWS KMS-encrypted cluster are copied to the destination region.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3395,7 +3483,7 @@ For more information on the permissions required for the bucket, please read the
 <a href="#retention_period_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of days to retain automated snapshots in the destination region after they are copied from the source region. Defaults to `7`.
 {{% /md %}}</dd></dl>

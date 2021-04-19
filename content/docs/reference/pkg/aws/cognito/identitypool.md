@@ -170,19 +170,33 @@ const main = new aws.cognito.IdentityPool("main", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IdentityPool</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IdentityPoolArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IdentityPool</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IdentityPoolArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IdentityPool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_unauthenticated_identities</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cognito_identity_providers</span><span class="p">:</span> <span class="nx">Optional[Sequence[IdentityPoolCognitoIdentityProviderArgs]]</span> = None<span class="p">, </span><span class="nx">developer_provider_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">openid_connect_provider_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">saml_provider_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">supported_login_providers</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">IdentityPool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                 <span class="nx">allow_unauthenticated_identities</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                 <span class="nx">cognito_identity_providers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[IdentityPoolCognitoIdentityProviderArgs]]]]</span> = None<span class="p">,</span>
+                 <span class="nx">developer_provider_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">identity_pool_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">openid_connect_provider_arns</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                 <span class="nx">saml_provider_arns</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                 <span class="nx">supported_login_providers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                 <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">IdentityPool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IdentityPoolArgs</a></span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIdentityPool</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IdentityPoolArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IdentityPool</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIdentityPool</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IdentityPoolArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IdentityPool</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IdentityPool</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">IdentityPoolArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IdentityPool</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">IdentityPoolArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -217,22 +231,32 @@ const main = new aws.cognito.IdentityPool("main", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">IdentityPoolArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -241,7 +265,7 @@ const main = new aws.cognito.IdentityPool("main", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -265,7 +289,7 @@ const main = new aws.cognito.IdentityPool("main", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -474,7 +498,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#identitypoolname_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Pool<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Cognito Identity Pool name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -483,7 +507,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#allowunauthenticatedidentities_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Unauthenticated<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the identity pool supports unauthenticated logins or not.
 {{% /md %}}</dd><dt class="property-optional"
@@ -492,7 +516,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#cognitoidentityproviders_nodejs" style="color: inherit; text-decoration: inherit;">cognito<wbr>Identity<wbr>Providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolcognitoidentityprovider">Identity<wbr>Pool<wbr>Cognito<wbr>Identity<wbr>Provider[]</a></span>
+        <span class="property-type"><a href="#identitypoolcognitoidentityprovider">pulumi.<wbr>Input<pulumi.<wbr>Input<Identity<wbr>Pool<wbr>Cognito<wbr>Identity<wbr>Provider<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}An array of Amazon Cognito Identity user pools and their client IDs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -501,7 +525,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#developerprovidername_nodejs" style="color: inherit; text-decoration: inherit;">developer<wbr>Provider<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The "domain" by which Cognito will refer to your users. This name acts as a placeholder that allows your
 backend and the Cognito service to communicate about the developer provider.
@@ -511,7 +535,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#openidconnectproviderarns_nodejs" style="color: inherit; text-decoration: inherit;">openid<wbr>Connect<wbr>Provider<wbr>Arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Set of OpendID Connect provider ARNs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -520,7 +544,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#samlproviderarns_nodejs" style="color: inherit; text-decoration: inherit;">saml<wbr>Provider<wbr>Arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}An array of Amazon Resource Names (ARNs) of the SAML provider for your identity.
 {{% /md %}}</dd><dt class="property-optional"
@@ -529,7 +553,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#supportedloginproviders_nodejs" style="color: inherit; text-decoration: inherit;">supported<wbr>Login<wbr>Providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Key-Value pairs mapping provider names to provider app IDs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -538,7 +562,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the Identity Pool.
 {{% /md %}}</dd></dl>
@@ -551,7 +575,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#identity_pool_name_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>pool_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Cognito Identity Pool name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -560,7 +584,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#allow_unauthenticated_identities_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>unauthenticated_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the identity pool supports unauthenticated logins or not.
 {{% /md %}}</dd><dt class="property-optional"
@@ -569,7 +593,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#cognito_identity_providers_python" style="color: inherit; text-decoration: inherit;">cognito_<wbr>identity_<wbr>providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolcognitoidentityprovider">Sequence[Identity<wbr>Pool<wbr>Cognito<wbr>Identity<wbr>Provider<wbr>Args]</a></span>
+        <span class="property-type"><a href="#identitypoolcognitoidentityprovider">Input[Identity<wbr>Pool<wbr>Cognito<wbr>Identity<wbr>Provider<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}An array of Amazon Cognito Identity user pools and their client IDs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -578,7 +602,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#developer_provider_name_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>provider_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The "domain" by which Cognito will refer to your users. This name acts as a placeholder that allows your
 backend and the Cognito service to communicate about the developer provider.
@@ -588,7 +612,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#openid_connect_provider_arns_python" style="color: inherit; text-decoration: inherit;">openid_<wbr>connect_<wbr>provider_<wbr>arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Set of OpendID Connect provider ARNs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -597,7 +621,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#saml_provider_arns_python" style="color: inherit; text-decoration: inherit;">saml_<wbr>provider_<wbr>arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}An array of Amazon Resource Names (ARNs) of the SAML provider for your identity.
 {{% /md %}}</dd><dt class="property-optional"
@@ -606,7 +630,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#supported_login_providers_python" style="color: inherit; text-decoration: inherit;">supported_<wbr>login_<wbr>providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Key-Value pairs mapping provider names to provider app IDs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -615,7 +639,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the Identity Pool.
 {{% /md %}}</dd></dl>
@@ -720,20 +744,31 @@ Get an existing IdentityPool resource's state with the given name, ID, and optio
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">IdentityPoolState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">IdentityPool</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">IdentityPoolState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">IdentityPool</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_unauthenticated_identities</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cognito_identity_providers</span><span class="p">:</span> <span class="nx">Optional[Sequence[IdentityPoolCognitoIdentityProviderArgs]]</span> = None<span class="p">, </span><span class="nx">developer_provider_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">openid_connect_provider_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">saml_provider_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">supported_login_providers</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> IdentityPool</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">allow_unauthenticated_identities</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">cognito_identity_providers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[IdentityPoolCognitoIdentityProviderArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">developer_provider_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">identity_pool_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">openid_connect_provider_arns</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">saml_provider_arns</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">supported_login_providers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> IdentityPool</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIdentityPool<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">IdentityPoolState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IdentityPool</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIdentityPool<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">IdentityPoolState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IdentityPool</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">IdentityPool</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">IdentityPoolState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">IdentityPool</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">IdentityPoolState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1014,7 +1049,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#state_allowunauthenticatedidentities_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Unauthenticated<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the identity pool supports unauthenticated logins or not.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1023,7 +1058,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of the identity pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1032,7 +1067,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#state_cognitoidentityproviders_nodejs" style="color: inherit; text-decoration: inherit;">cognito<wbr>Identity<wbr>Providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolcognitoidentityprovider">Identity<wbr>Pool<wbr>Cognito<wbr>Identity<wbr>Provider[]</a></span>
+        <span class="property-type"><a href="#identitypoolcognitoidentityprovider">pulumi.<wbr>Input<pulumi.<wbr>Input<Identity<wbr>Pool<wbr>Cognito<wbr>Identity<wbr>Provider<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}An array of Amazon Cognito Identity user pools and their client IDs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1041,7 +1076,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#state_developerprovidername_nodejs" style="color: inherit; text-decoration: inherit;">developer<wbr>Provider<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The "domain" by which Cognito will refer to your users. This name acts as a placeholder that allows your
 backend and the Cognito service to communicate about the developer provider.
@@ -1051,7 +1086,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#state_identitypoolname_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Pool<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Cognito Identity Pool name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1060,7 +1095,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#state_openidconnectproviderarns_nodejs" style="color: inherit; text-decoration: inherit;">openid<wbr>Connect<wbr>Provider<wbr>Arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Set of OpendID Connect provider ARNs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1069,7 +1104,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#state_samlproviderarns_nodejs" style="color: inherit; text-decoration: inherit;">saml<wbr>Provider<wbr>Arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}An array of Amazon Resource Names (ARNs) of the SAML provider for your identity.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1078,7 +1113,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#state_supportedloginproviders_nodejs" style="color: inherit; text-decoration: inherit;">supported<wbr>Login<wbr>Providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Key-Value pairs mapping provider names to provider app IDs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1087,7 +1122,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the Identity Pool.
 {{% /md %}}</dd></dl>
@@ -1100,7 +1135,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#state_allow_unauthenticated_identities_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>unauthenticated_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the identity pool supports unauthenticated logins or not.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1109,7 +1144,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of the identity pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1118,7 +1153,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#state_cognito_identity_providers_python" style="color: inherit; text-decoration: inherit;">cognito_<wbr>identity_<wbr>providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolcognitoidentityprovider">Sequence[Identity<wbr>Pool<wbr>Cognito<wbr>Identity<wbr>Provider<wbr>Args]</a></span>
+        <span class="property-type"><a href="#identitypoolcognitoidentityprovider">Input[Identity<wbr>Pool<wbr>Cognito<wbr>Identity<wbr>Provider<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}An array of Amazon Cognito Identity user pools and their client IDs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1127,7 +1162,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#state_developer_provider_name_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>provider_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The "domain" by which Cognito will refer to your users. This name acts as a placeholder that allows your
 backend and the Cognito service to communicate about the developer provider.
@@ -1137,7 +1172,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#state_identity_pool_name_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>pool_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Cognito Identity Pool name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1146,7 +1181,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#state_openid_connect_provider_arns_python" style="color: inherit; text-decoration: inherit;">openid_<wbr>connect_<wbr>provider_<wbr>arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Set of OpendID Connect provider ARNs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1155,7 +1190,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#state_saml_provider_arns_python" style="color: inherit; text-decoration: inherit;">saml_<wbr>provider_<wbr>arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}An array of Amazon Resource Names (ARNs) of the SAML provider for your identity.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1164,7 +1199,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#state_supported_login_providers_python" style="color: inherit; text-decoration: inherit;">supported_<wbr>login_<wbr>providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Key-Value pairs mapping provider names to provider app IDs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1173,7 +1208,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the Identity Pool.
 {{% /md %}}</dd></dl>
@@ -1259,7 +1294,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The client ID for the Amazon Cognito Identity User Pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1268,7 +1303,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#providername_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The provider name for an Amazon Cognito Identity User Pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1277,7 +1312,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#serversidetokencheck_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Side<wbr>Token<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether server-side token validation is enabled for the identity provider’s token or not.
 {{% /md %}}</dd></dl>
@@ -1290,7 +1325,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The client ID for the Amazon Cognito Identity User Pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1299,7 +1334,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#provider_name_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The provider name for an Amazon Cognito Identity User Pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1308,7 +1343,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#server_side_token_check_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>token_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether server-side token validation is enabled for the identity provider’s token or not.
 {{% /md %}}</dd></dl>

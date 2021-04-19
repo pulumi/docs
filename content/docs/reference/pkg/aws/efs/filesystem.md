@@ -54,8 +54,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/efs"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/efs"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -147,8 +147,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/efs"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/efs"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -216,19 +216,34 @@ const fooWithLifecylePolicy = new aws.efs.FileSystem("foo_with_lifecyle_policy",
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">FileSystem</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">FileSystemArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">FileSystem</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">FileSystemArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">FileSystem</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">availability_zone_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">creation_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encrypted</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kms_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lifecycle_policy</span><span class="p">:</span> <span class="nx">Optional[FileSystemLifecyclePolicyArgs]</span> = None<span class="p">, </span><span class="nx">performance_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provisioned_throughput_in_mibps</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">throughput_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">FileSystem</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+               <span class="nx">availability_zone_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">creation_token</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">encrypted</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+               <span class="nx">kms_key_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">lifecycle_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[FileSystemLifecyclePolicyArgs]]</span> = None<span class="p">,</span>
+               <span class="nx">performance_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">provisioned_throughput_in_mibps</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
+               <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+               <span class="nx">throughput_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">FileSystem</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[FileSystemArgs]</a></span> = None<span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFileSystem</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">FileSystemArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FileSystem</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFileSystem</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">FileSystemArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FileSystem</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">FileSystem</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">FileSystemArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">FileSystem</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">FileSystemArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -263,22 +278,32 @@ const fooWithLifecylePolicy = new aws.efs.FileSystem("foo_with_lifecyle_policy",
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">FileSystemArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -287,7 +312,7 @@ const fooWithLifecylePolicy = new aws.efs.FileSystem("foo_with_lifecyle_policy",
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -311,7 +336,7 @@ const fooWithLifecylePolicy = new aws.efs.FileSystem("foo_with_lifecyle_policy",
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -542,7 +567,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#availabilityzonename_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the AWS Availability Zone in which to create the file system. Used to create a file system that uses One Zone storage classes. See [user guide](https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html) for more information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -551,7 +576,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#creationtoken_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name (a maximum of 64 characters are allowed)
 used as reference when creating the Elastic File System to ensure idempotent file
@@ -563,7 +588,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#encrypted_nodejs" style="color: inherit; text-decoration: inherit;">encrypted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true, the disk will be encrypted.
 {{% /md %}}</dd><dt class="property-optional"
@@ -572,7 +597,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key. When specifying kms_key_id, encrypted needs to be set to true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -581,7 +606,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#lifecyclepolicy_nodejs" style="color: inherit; text-decoration: inherit;">lifecycle<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filesystemlifecyclepolicy">File<wbr>System<wbr>Lifecycle<wbr>Policy</a></span>
+        <span class="property-type"><a href="#filesystemlifecyclepolicy">pulumi.<wbr>Input<File<wbr>System<wbr>Lifecycle<wbr>Policy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A file system [lifecycle policy](https://docs.aws.amazon.com/efs/latest/ug/API_LifecyclePolicy.html) object (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -590,7 +615,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#performancemode_nodejs" style="color: inherit; text-decoration: inherit;">performance<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The file system performance mode. Can be either `"generalPurpose"` or `"maxIO"` (Default: `"generalPurpose"`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -599,7 +624,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#provisionedthroughputinmibps_nodejs" style="color: inherit; text-decoration: inherit;">provisioned<wbr>Throughput<wbr>In<wbr>Mibps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The throughput, measured in MiB/s, that you want to provision for the file system. Only applicable with `throughput_mode` set to `provisioned`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -608,7 +633,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the file system.
 {{% /md %}}</dd><dt class="property-optional"
@@ -617,7 +642,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#throughputmode_nodejs" style="color: inherit; text-decoration: inherit;">throughput<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Throughput mode for the file system. Defaults to `bursting`. Valid values: `bursting`, `provisioned`. When using `provisioned`, also set `provisioned_throughput_in_mibps`.
 {{% /md %}}</dd></dl>
@@ -630,7 +655,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#availability_zone_name_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the AWS Availability Zone in which to create the file system. Used to create a file system that uses One Zone storage classes. See [user guide](https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html) for more information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -639,7 +664,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#creation_token_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name (a maximum of 64 characters are allowed)
 used as reference when creating the Elastic File System to ensure idempotent file
@@ -651,7 +676,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#encrypted_python" style="color: inherit; text-decoration: inherit;">encrypted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true, the disk will be encrypted.
 {{% /md %}}</dd><dt class="property-optional"
@@ -660,7 +685,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key. When specifying kms_key_id, encrypted needs to be set to true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -669,7 +694,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#lifecycle_policy_python" style="color: inherit; text-decoration: inherit;">lifecycle_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filesystemlifecyclepolicy">File<wbr>System<wbr>Lifecycle<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#filesystemlifecyclepolicy">Input[File<wbr>System<wbr>Lifecycle<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A file system [lifecycle policy](https://docs.aws.amazon.com/efs/latest/ug/API_LifecyclePolicy.html) object (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -678,7 +703,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#performance_mode_python" style="color: inherit; text-decoration: inherit;">performance_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The file system performance mode. Can be either `"generalPurpose"` or `"maxIO"` (Default: `"generalPurpose"`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -687,7 +712,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#provisioned_throughput_in_mibps_python" style="color: inherit; text-decoration: inherit;">provisioned_<wbr>throughput_<wbr>in_<wbr>mibps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The throughput, measured in MiB/s, that you want to provision for the file system. Only applicable with `throughput_mode` set to `provisioned`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -696,7 +721,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the file system.
 {{% /md %}}</dd><dt class="property-optional"
@@ -705,7 +730,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#throughput_mode_python" style="color: inherit; text-decoration: inherit;">throughput_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Throughput mode for the file system. Defaults to `bursting`. Valid values: `bursting`, `provisioned`. When using `provisioned`, also set `provisioned_throughput_in_mibps`.
 {{% /md %}}</dd></dl>
@@ -990,20 +1015,37 @@ Get an existing FileSystem resource's state with the given name, ID, and optiona
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">FileSystemState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">FileSystem</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">FileSystemState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">FileSystem</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">availability_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">availability_zone_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">creation_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encrypted</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kms_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lifecycle_policy</span><span class="p">:</span> <span class="nx">Optional[FileSystemLifecyclePolicyArgs]</span> = None<span class="p">, </span><span class="nx">number_of_mount_targets</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">owner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">performance_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provisioned_throughput_in_mibps</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">size_in_bytes</span><span class="p">:</span> <span class="nx">Optional[Sequence[FileSystemSizeInByteArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">throughput_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> FileSystem</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">availability_zone_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">availability_zone_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">creation_token</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">dns_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">encrypted</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">kms_key_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">lifecycle_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[FileSystemLifecyclePolicyArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">number_of_mount_targets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">owner_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">performance_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">provisioned_throughput_in_mibps</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
+        <span class="nx">size_in_bytes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[FileSystemSizeInByteArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">throughput_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> FileSystem</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFileSystem<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">FileSystemState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FileSystem</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFileSystem<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">FileSystemState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FileSystem</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">FileSystem</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">FileSystemState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">FileSystem</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">FileSystemState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1396,7 +1438,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name of the file system.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1405,7 +1447,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#state_availabilityzoneid_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The identifier of the Availability Zone in which the file system's One Zone storage classes exist.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1414,7 +1456,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#state_availabilityzonename_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the AWS Availability Zone in which to create the file system. Used to create a file system that uses One Zone storage classes. See [user guide](https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html) for more information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1423,7 +1465,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#state_creationtoken_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name (a maximum of 64 characters are allowed)
 used as reference when creating the Elastic File System to ensure idempotent file
@@ -1435,7 +1477,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#state_dnsname_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The DNS name for the filesystem per [documented convention](http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1444,7 +1486,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#state_encrypted_nodejs" style="color: inherit; text-decoration: inherit;">encrypted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true, the disk will be encrypted.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1453,7 +1495,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#state_kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key. When specifying kms_key_id, encrypted needs to be set to true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1462,7 +1504,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#state_lifecyclepolicy_nodejs" style="color: inherit; text-decoration: inherit;">lifecycle<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filesystemlifecyclepolicy">File<wbr>System<wbr>Lifecycle<wbr>Policy</a></span>
+        <span class="property-type"><a href="#filesystemlifecyclepolicy">pulumi.<wbr>Input<File<wbr>System<wbr>Lifecycle<wbr>Policy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A file system [lifecycle policy](https://docs.aws.amazon.com/efs/latest/ug/API_LifecyclePolicy.html) object (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1471,7 +1513,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#state_numberofmounttargets_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Mount<wbr>Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The current number of mount targets that the file system has.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1480,7 +1522,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#state_ownerid_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AWS account that created the file system. If the file system was createdby an IAM user, the parent account to which the user belongs is the owner.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1489,7 +1531,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#state_performancemode_nodejs" style="color: inherit; text-decoration: inherit;">performance<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The file system performance mode. Can be either `"generalPurpose"` or `"maxIO"` (Default: `"generalPurpose"`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1498,7 +1540,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#state_provisionedthroughputinmibps_nodejs" style="color: inherit; text-decoration: inherit;">provisioned<wbr>Throughput<wbr>In<wbr>Mibps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The throughput, measured in MiB/s, that you want to provision for the file system. Only applicable with `throughput_mode` set to `provisioned`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1507,7 +1549,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#state_sizeinbytes_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filesystemsizeinbyte">File<wbr>System<wbr>Size<wbr>In<wbr>Byte[]</a></span>
+        <span class="property-type"><a href="#filesystemsizeinbyte">pulumi.<wbr>Input<pulumi.<wbr>Input<File<wbr>System<wbr>Size<wbr>In<wbr>Byte<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The latest known metered size (in bytes) of data stored in the file system, the value is not the exact size that the file system was at any point in time. See Size In Bytes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1516,7 +1558,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the file system.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1525,7 +1567,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#state_throughputmode_nodejs" style="color: inherit; text-decoration: inherit;">throughput<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Throughput mode for the file system. Defaults to `bursting`. Valid values: `bursting`, `provisioned`. When using `provisioned`, also set `provisioned_throughput_in_mibps`.
 {{% /md %}}</dd></dl>
@@ -1538,7 +1580,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name of the file system.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1547,7 +1589,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#state_availability_zone_id_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The identifier of the Availability Zone in which the file system's One Zone storage classes exist.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1556,7 +1598,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#state_availability_zone_name_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the AWS Availability Zone in which to create the file system. Used to create a file system that uses One Zone storage classes. See [user guide](https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html) for more information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1565,7 +1607,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#state_creation_token_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name (a maximum of 64 characters are allowed)
 used as reference when creating the Elastic File System to ensure idempotent file
@@ -1577,7 +1619,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#state_dns_name_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The DNS name for the filesystem per [documented convention](http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1586,7 +1628,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#state_encrypted_python" style="color: inherit; text-decoration: inherit;">encrypted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true, the disk will be encrypted.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1595,7 +1637,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#state_kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key. When specifying kms_key_id, encrypted needs to be set to true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1604,7 +1646,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#state_lifecycle_policy_python" style="color: inherit; text-decoration: inherit;">lifecycle_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filesystemlifecyclepolicy">File<wbr>System<wbr>Lifecycle<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#filesystemlifecyclepolicy">Input[File<wbr>System<wbr>Lifecycle<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A file system [lifecycle policy](https://docs.aws.amazon.com/efs/latest/ug/API_LifecyclePolicy.html) object (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1613,7 +1655,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#state_number_of_mount_targets_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>mount_<wbr>targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The current number of mount targets that the file system has.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1622,7 +1664,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#state_owner_id_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AWS account that created the file system. If the file system was createdby an IAM user, the parent account to which the user belongs is the owner.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1631,7 +1673,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#state_performance_mode_python" style="color: inherit; text-decoration: inherit;">performance_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The file system performance mode. Can be either `"generalPurpose"` or `"maxIO"` (Default: `"generalPurpose"`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1640,7 +1682,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#state_provisioned_throughput_in_mibps_python" style="color: inherit; text-decoration: inherit;">provisioned_<wbr>throughput_<wbr>in_<wbr>mibps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The throughput, measured in MiB/s, that you want to provision for the file system. Only applicable with `throughput_mode` set to `provisioned`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1649,7 +1691,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#state_size_in_bytes_python" style="color: inherit; text-decoration: inherit;">size_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filesystemsizeinbyte">Sequence[File<wbr>System<wbr>Size<wbr>In<wbr>Byte<wbr>Args]</a></span>
+        <span class="property-type"><a href="#filesystemsizeinbyte">Input[File<wbr>System<wbr>Size<wbr>In<wbr>Byte<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The latest known metered size (in bytes) of data stored in the file system, the value is not the exact size that the file system was at any point in time. See Size In Bytes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1658,7 +1700,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the file system.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1667,7 +1709,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#state_throughput_mode_python" style="color: inherit; text-decoration: inherit;">throughput_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Throughput mode for the file system. Defaults to `bursting`. Valid values: `bursting`, `provisioned`. When using `provisioned`, also set `provisioned_throughput_in_mibps`.
 {{% /md %}}</dd></dl>
@@ -1717,7 +1759,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#transitiontoia_nodejs" style="color: inherit; text-decoration: inherit;">transition<wbr>To<wbr>Ia</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Indicates how long it takes to transition files to the IA storage class. Valid values: `AFTER_7_DAYS`, `AFTER_14_DAYS`, `AFTER_30_DAYS`, `AFTER_60_DAYS`, or `AFTER_90_DAYS`.
 {{% /md %}}</dd></dl>
@@ -1730,7 +1772,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#transition_to_ia_python" style="color: inherit; text-decoration: inherit;">transition_<wbr>to_<wbr>ia</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Indicates how long it takes to transition files to the IA storage class. Valid values: `AFTER_7_DAYS`, `AFTER_14_DAYS`, `AFTER_30_DAYS`, `AFTER_60_DAYS`, or `AFTER_90_DAYS`.
 {{% /md %}}</dd></dl>
@@ -1807,7 +1849,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The latest known metered size (in bytes) of data stored in the file system.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1816,7 +1858,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#valueinia_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>In<wbr>Ia</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The latest known metered size (in bytes) of data stored in the Infrequent Access storage class.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1825,7 +1867,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#valueinstandard_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>In<wbr>Standard</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The latest known metered size (in bytes) of data stored in the Standard storage class.
 {{% /md %}}</dd></dl>
@@ -1838,7 +1880,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The latest known metered size (in bytes) of data stored in the file system.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1847,7 +1889,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#value_in_ia_python" style="color: inherit; text-decoration: inherit;">value_<wbr>in_<wbr>ia</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The latest known metered size (in bytes) of data stored in the Infrequent Access storage class.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1856,7 +1898,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <a href="#value_in_standard_python" style="color: inherit; text-decoration: inherit;">value_<wbr>in_<wbr>standard</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The latest known metered size (in bytes) of data stored in the Standard storage class.
 {{% /md %}}</dd></dl>

@@ -54,8 +54,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cognito"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cognito"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -150,8 +150,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cognito"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cognito"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -305,11 +305,11 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cognito"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/pinpoint"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cognito"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/pinpoint"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -484,19 +484,44 @@ const testUserPoolClient = new aws.cognito.UserPoolClient("testUserPoolClient", 
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">UserPoolClient</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">UserPoolClientArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">UserPoolClient</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">UserPoolClientArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">UserPoolClient</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_token_validity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">allowed_oauth_flows</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">allowed_oauth_flows_user_pool_client</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allowed_oauth_scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">analytics_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolClientAnalyticsConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">callback_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">default_redirect_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">explicit_auth_flows</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">generate_secret</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">id_token_validity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">logout_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">prevent_user_existence_errors</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">read_attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">refresh_token_validity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">supported_identity_providers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">token_validity_units</span><span class="p">:</span> <span class="nx">Optional[UserPoolClientTokenValidityUnitsArgs]</span> = None<span class="p">, </span><span class="nx">user_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">write_attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">UserPoolClient</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                   <span class="nx">access_token_validity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                   <span class="nx">allowed_oauth_flows</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">allowed_oauth_flows_user_pool_client</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                   <span class="nx">allowed_oauth_scopes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">analytics_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[UserPoolClientAnalyticsConfigurationArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">callback_urls</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">default_redirect_uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">explicit_auth_flows</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">generate_secret</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                   <span class="nx">id_token_validity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                   <span class="nx">logout_urls</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">prevent_user_existence_errors</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">read_attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">refresh_token_validity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                   <span class="nx">supported_identity_providers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">token_validity_units</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[UserPoolClientTokenValidityUnitsArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">user_pool_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">write_attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">UserPoolClient</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">UserPoolClientArgs</a></span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewUserPoolClient</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">UserPoolClientArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">UserPoolClient</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewUserPoolClient</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">UserPoolClientArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">UserPoolClient</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">UserPoolClient</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">UserPoolClientArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">UserPoolClient</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">UserPoolClientArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -531,22 +556,32 @@ const testUserPoolClient = new aws.cognito.UserPoolClient("testUserPoolClient", 
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">UserPoolClientArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -555,7 +590,7 @@ const testUserPoolClient = new aws.cognito.UserPoolClient("testUserPoolClient", 
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -579,7 +614,7 @@ const testUserPoolClient = new aws.cognito.UserPoolClient("testUserPoolClient", 
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -984,7 +1019,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
 <a href="#userpoolid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Pool<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User pool the client belongs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -993,7 +1028,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
 <a href="#accesstokenvalidity_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token<wbr>Validity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Time limit, between 5 minutes and 1 day, after which the access token is no longer valid and cannot be used. This value will be overridden if you have entered a value in `token_validity_units`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1002,7 +1037,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
 <a href="#allowedoauthflows_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Oauth<wbr>Flows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of allowed OAuth flows (code, implicit, client_credentials).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1011,7 +1046,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
 <a href="#allowedoauthflowsuserpoolclient_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Oauth<wbr>Flows<wbr>User<wbr>Pool<wbr>Client</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the client is allowed to follow the OAuth protocol when interacting with Cognito user pools.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1020,7 +1055,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
 <a href="#allowedoauthscopes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Oauth<wbr>Scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of allowed OAuth scopes (phone, email, openid, profile, and aws.cognito.signin.user.admin).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1029,7 +1064,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
 <a href="#analyticsconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">analytics<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolclientanalyticsconfiguration">User<wbr>Pool<wbr>Client<wbr>Analytics<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#userpoolclientanalyticsconfiguration">pulumi.<wbr>Input<User<wbr>Pool<wbr>Client<wbr>Analytics<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block for Amazon Pinpoint analytics for collecting metrics for this user pool. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1038,7 +1073,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
 <a href="#callbackurls_nodejs" style="color: inherit; text-decoration: inherit;">callback<wbr>Urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of allowed callback URLs for the identity providers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1047,7 +1082,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
 <a href="#defaultredirecturi_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Redirect<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Default redirect URI. Must be in the list of callback URLs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1056,7 +1091,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
 <a href="#explicitauthflows_nodejs" style="color: inherit; text-decoration: inherit;">explicit<wbr>Auth<wbr>Flows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY, USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1065,7 +1100,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
 <a href="#generatesecret_nodejs" style="color: inherit; text-decoration: inherit;">generate<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Should an application secret be generated.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1074,7 +1109,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
 <a href="#idtokenvalidity_nodejs" style="color: inherit; text-decoration: inherit;">id<wbr>Token<wbr>Validity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Time limit, between 5 minutes and 1 day, after which the ID token is no longer valid and cannot be used. This value will be overridden if you have entered a value in `token_validity_units`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1083,7 +1118,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
 <a href="#logouturls_nodejs" style="color: inherit; text-decoration: inherit;">logout<wbr>Urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of allowed logout URLs for the identity providers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1092,7 +1127,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the application client.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1101,7 +1136,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
 <a href="#preventuserexistenceerrors_nodejs" style="color: inherit; text-decoration: inherit;">prevent<wbr>User<wbr>Existence<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Choose which errors and responses are returned by Cognito APIs during authentication, account confirmation, and password recovery when the user does not exist in the user pool. When set to `ENABLED` and the user does not exist, authentication returns an error indicating either the username or password was incorrect, and account confirmation and password recovery return a response indicating a code was sent to a simulated destination. When set to `LEGACY`, those APIs will return a `UserNotFoundException` exception if the user does not exist in the user pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1110,7 +1145,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
 <a href="#readattributes_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of user pool attributes the application client can read from.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1119,7 +1154,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
 <a href="#refreshtokenvalidity_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Token<wbr>Validity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Time limit in days refresh tokens are valid for.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1128,7 +1163,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
 <a href="#supportedidentityproviders_nodejs" style="color: inherit; text-decoration: inherit;">supported<wbr>Identity<wbr>Providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of provider names for the identity providers that are supported on this client.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1137,7 +1172,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
 <a href="#tokenvalidityunits_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Validity<wbr>Units</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolclienttokenvalidityunits">User<wbr>Pool<wbr>Client<wbr>Token<wbr>Validity<wbr>Units</a></span>
+        <span class="property-type"><a href="#userpoolclienttokenvalidityunits">pulumi.<wbr>Input<User<wbr>Pool<wbr>Client<wbr>Token<wbr>Validity<wbr>Units<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block for units in which the validity times are represented in. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1146,7 +1181,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
 <a href="#writeattributes_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of user pool attributes the application client can write to.
 {{% /md %}}</dd></dl>
@@ -1159,7 +1194,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
 <a href="#user_pool_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>pool_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User pool the client belongs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1168,7 +1203,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
 <a href="#access_token_validity_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token_<wbr>validity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Time limit, between 5 minutes and 1 day, after which the access token is no longer valid and cannot be used. This value will be overridden if you have entered a value in `token_validity_units`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1177,7 +1212,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
 <a href="#allowed_oauth_flows_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>oauth_<wbr>flows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of allowed OAuth flows (code, implicit, client_credentials).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1186,7 +1221,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
 <a href="#allowed_oauth_flows_user_pool_client_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>oauth_<wbr>flows_<wbr>user_<wbr>pool_<wbr>client</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the client is allowed to follow the OAuth protocol when interacting with Cognito user pools.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1195,7 +1230,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
 <a href="#allowed_oauth_scopes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>oauth_<wbr>scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of allowed OAuth scopes (phone, email, openid, profile, and aws.cognito.signin.user.admin).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1204,7 +1239,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
 <a href="#analytics_configuration_python" style="color: inherit; text-decoration: inherit;">analytics_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolclientanalyticsconfiguration">User<wbr>Pool<wbr>Client<wbr>Analytics<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#userpoolclientanalyticsconfiguration">Input[User<wbr>Pool<wbr>Client<wbr>Analytics<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for Amazon Pinpoint analytics for collecting metrics for this user pool. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1213,7 +1248,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
 <a href="#callback_urls_python" style="color: inherit; text-decoration: inherit;">callback_<wbr>urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of allowed callback URLs for the identity providers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1222,7 +1257,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
 <a href="#default_redirect_uri_python" style="color: inherit; text-decoration: inherit;">default_<wbr>redirect_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Default redirect URI. Must be in the list of callback URLs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1231,7 +1266,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
 <a href="#explicit_auth_flows_python" style="color: inherit; text-decoration: inherit;">explicit_<wbr>auth_<wbr>flows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY, USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1240,7 +1275,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
 <a href="#generate_secret_python" style="color: inherit; text-decoration: inherit;">generate_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Should an application secret be generated.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1249,7 +1284,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
 <a href="#id_token_validity_python" style="color: inherit; text-decoration: inherit;">id_<wbr>token_<wbr>validity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Time limit, between 5 minutes and 1 day, after which the ID token is no longer valid and cannot be used. This value will be overridden if you have entered a value in `token_validity_units`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1258,7 +1293,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
 <a href="#logout_urls_python" style="color: inherit; text-decoration: inherit;">logout_<wbr>urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of allowed logout URLs for the identity providers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1267,7 +1302,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the application client.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1276,7 +1311,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
 <a href="#prevent_user_existence_errors_python" style="color: inherit; text-decoration: inherit;">prevent_<wbr>user_<wbr>existence_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Choose which errors and responses are returned by Cognito APIs during authentication, account confirmation, and password recovery when the user does not exist in the user pool. When set to `ENABLED` and the user does not exist, authentication returns an error indicating either the username or password was incorrect, and account confirmation and password recovery return a response indicating a code was sent to a simulated destination. When set to `LEGACY`, those APIs will return a `UserNotFoundException` exception if the user does not exist in the user pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1285,7 +1320,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
 <a href="#read_attributes_python" style="color: inherit; text-decoration: inherit;">read_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of user pool attributes the application client can read from.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1294,7 +1329,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
 <a href="#refresh_token_validity_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token_<wbr>validity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Time limit in days refresh tokens are valid for.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1303,7 +1338,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
 <a href="#supported_identity_providers_python" style="color: inherit; text-decoration: inherit;">supported_<wbr>identity_<wbr>providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of provider names for the identity providers that are supported on this client.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1312,7 +1347,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
 <a href="#token_validity_units_python" style="color: inherit; text-decoration: inherit;">token_<wbr>validity_<wbr>units</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolclienttokenvalidityunits">User<wbr>Pool<wbr>Client<wbr>Token<wbr>Validity<wbr>Units<wbr>Args</a></span>
+        <span class="property-type"><a href="#userpoolclienttokenvalidityunits">Input[User<wbr>Pool<wbr>Client<wbr>Token<wbr>Validity<wbr>Units<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for units in which the validity times are represented in. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1321,7 +1356,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
 <a href="#write_attributes_python" style="color: inherit; text-decoration: inherit;">write_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of user pool attributes the application client can write to.
 {{% /md %}}</dd></dl>
@@ -1426,20 +1461,42 @@ Get an existing UserPoolClient resource's state with the given name, ID, and opt
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">UserPoolClientState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">UserPoolClient</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">UserPoolClientState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">UserPoolClient</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_token_validity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">allowed_oauth_flows</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">allowed_oauth_flows_user_pool_client</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allowed_oauth_scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">analytics_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolClientAnalyticsConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">callback_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_redirect_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">explicit_auth_flows</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">generate_secret</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">id_token_validity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">logout_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">prevent_user_existence_errors</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">read_attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">refresh_token_validity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">supported_identity_providers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">token_validity_units</span><span class="p">:</span> <span class="nx">Optional[UserPoolClientTokenValidityUnitsArgs]</span> = None<span class="p">, </span><span class="nx">user_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">write_attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> UserPoolClient</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">access_token_validity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">allowed_oauth_flows</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">allowed_oauth_flows_user_pool_client</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">allowed_oauth_scopes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">analytics_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[UserPoolClientAnalyticsConfigurationArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">callback_urls</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">default_redirect_uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">explicit_auth_flows</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">generate_secret</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">id_token_validity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">logout_urls</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">prevent_user_existence_errors</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">read_attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">refresh_token_validity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">supported_identity_providers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">token_validity_units</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[UserPoolClientTokenValidityUnitsArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">user_pool_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">write_attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> UserPoolClient</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUserPoolClient<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">UserPoolClientState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">UserPoolClient</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUserPoolClient<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">UserPoolClientState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">UserPoolClient</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">UserPoolClient</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">UserPoolClientState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">UserPoolClient</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">UserPoolClientState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1916,7 +1973,7 @@ The following state arguments are supported:
 <a href="#state_accesstokenvalidity_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token<wbr>Validity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Time limit, between 5 minutes and 1 day, after which the access token is no longer valid and cannot be used. This value will be overridden if you have entered a value in `token_validity_units`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1925,7 +1982,7 @@ The following state arguments are supported:
 <a href="#state_allowedoauthflows_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Oauth<wbr>Flows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of allowed OAuth flows (code, implicit, client_credentials).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1934,7 +1991,7 @@ The following state arguments are supported:
 <a href="#state_allowedoauthflowsuserpoolclient_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Oauth<wbr>Flows<wbr>User<wbr>Pool<wbr>Client</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the client is allowed to follow the OAuth protocol when interacting with Cognito user pools.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1943,7 +2000,7 @@ The following state arguments are supported:
 <a href="#state_allowedoauthscopes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Oauth<wbr>Scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of allowed OAuth scopes (phone, email, openid, profile, and aws.cognito.signin.user.admin).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1952,7 +2009,7 @@ The following state arguments are supported:
 <a href="#state_analyticsconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">analytics<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolclientanalyticsconfiguration">User<wbr>Pool<wbr>Client<wbr>Analytics<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#userpoolclientanalyticsconfiguration">pulumi.<wbr>Input<User<wbr>Pool<wbr>Client<wbr>Analytics<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block for Amazon Pinpoint analytics for collecting metrics for this user pool. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1961,7 +2018,7 @@ The following state arguments are supported:
 <a href="#state_callbackurls_nodejs" style="color: inherit; text-decoration: inherit;">callback<wbr>Urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of allowed callback URLs for the identity providers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1970,7 +2027,7 @@ The following state arguments are supported:
 <a href="#state_clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Client secret of the user pool client.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1979,7 +2036,7 @@ The following state arguments are supported:
 <a href="#state_defaultredirecturi_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Redirect<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Default redirect URI. Must be in the list of callback URLs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1988,7 +2045,7 @@ The following state arguments are supported:
 <a href="#state_explicitauthflows_nodejs" style="color: inherit; text-decoration: inherit;">explicit<wbr>Auth<wbr>Flows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY, USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1997,7 +2054,7 @@ The following state arguments are supported:
 <a href="#state_generatesecret_nodejs" style="color: inherit; text-decoration: inherit;">generate<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Should an application secret be generated.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2006,7 +2063,7 @@ The following state arguments are supported:
 <a href="#state_idtokenvalidity_nodejs" style="color: inherit; text-decoration: inherit;">id<wbr>Token<wbr>Validity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Time limit, between 5 minutes and 1 day, after which the ID token is no longer valid and cannot be used. This value will be overridden if you have entered a value in `token_validity_units`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2015,7 +2072,7 @@ The following state arguments are supported:
 <a href="#state_logouturls_nodejs" style="color: inherit; text-decoration: inherit;">logout<wbr>Urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of allowed logout URLs for the identity providers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2024,7 +2081,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the application client.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2033,7 +2090,7 @@ The following state arguments are supported:
 <a href="#state_preventuserexistenceerrors_nodejs" style="color: inherit; text-decoration: inherit;">prevent<wbr>User<wbr>Existence<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Choose which errors and responses are returned by Cognito APIs during authentication, account confirmation, and password recovery when the user does not exist in the user pool. When set to `ENABLED` and the user does not exist, authentication returns an error indicating either the username or password was incorrect, and account confirmation and password recovery return a response indicating a code was sent to a simulated destination. When set to `LEGACY`, those APIs will return a `UserNotFoundException` exception if the user does not exist in the user pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2042,7 +2099,7 @@ The following state arguments are supported:
 <a href="#state_readattributes_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of user pool attributes the application client can read from.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2051,7 +2108,7 @@ The following state arguments are supported:
 <a href="#state_refreshtokenvalidity_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Token<wbr>Validity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Time limit in days refresh tokens are valid for.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2060,7 +2117,7 @@ The following state arguments are supported:
 <a href="#state_supportedidentityproviders_nodejs" style="color: inherit; text-decoration: inherit;">supported<wbr>Identity<wbr>Providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of provider names for the identity providers that are supported on this client.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2069,7 +2126,7 @@ The following state arguments are supported:
 <a href="#state_tokenvalidityunits_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Validity<wbr>Units</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolclienttokenvalidityunits">User<wbr>Pool<wbr>Client<wbr>Token<wbr>Validity<wbr>Units</a></span>
+        <span class="property-type"><a href="#userpoolclienttokenvalidityunits">pulumi.<wbr>Input<User<wbr>Pool<wbr>Client<wbr>Token<wbr>Validity<wbr>Units<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block for units in which the validity times are represented in. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2078,7 +2135,7 @@ The following state arguments are supported:
 <a href="#state_userpoolid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Pool<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User pool the client belongs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2087,7 +2144,7 @@ The following state arguments are supported:
 <a href="#state_writeattributes_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of user pool attributes the application client can write to.
 {{% /md %}}</dd></dl>
@@ -2100,7 +2157,7 @@ The following state arguments are supported:
 <a href="#state_access_token_validity_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token_<wbr>validity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Time limit, between 5 minutes and 1 day, after which the access token is no longer valid and cannot be used. This value will be overridden if you have entered a value in `token_validity_units`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2109,7 +2166,7 @@ The following state arguments are supported:
 <a href="#state_allowed_oauth_flows_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>oauth_<wbr>flows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of allowed OAuth flows (code, implicit, client_credentials).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2118,7 +2175,7 @@ The following state arguments are supported:
 <a href="#state_allowed_oauth_flows_user_pool_client_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>oauth_<wbr>flows_<wbr>user_<wbr>pool_<wbr>client</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the client is allowed to follow the OAuth protocol when interacting with Cognito user pools.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2127,7 +2184,7 @@ The following state arguments are supported:
 <a href="#state_allowed_oauth_scopes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>oauth_<wbr>scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of allowed OAuth scopes (phone, email, openid, profile, and aws.cognito.signin.user.admin).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2136,7 +2193,7 @@ The following state arguments are supported:
 <a href="#state_analytics_configuration_python" style="color: inherit; text-decoration: inherit;">analytics_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolclientanalyticsconfiguration">User<wbr>Pool<wbr>Client<wbr>Analytics<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#userpoolclientanalyticsconfiguration">Input[User<wbr>Pool<wbr>Client<wbr>Analytics<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for Amazon Pinpoint analytics for collecting metrics for this user pool. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2145,7 +2202,7 @@ The following state arguments are supported:
 <a href="#state_callback_urls_python" style="color: inherit; text-decoration: inherit;">callback_<wbr>urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of allowed callback URLs for the identity providers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2154,7 +2211,7 @@ The following state arguments are supported:
 <a href="#state_client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Client secret of the user pool client.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2163,7 +2220,7 @@ The following state arguments are supported:
 <a href="#state_default_redirect_uri_python" style="color: inherit; text-decoration: inherit;">default_<wbr>redirect_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Default redirect URI. Must be in the list of callback URLs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2172,7 +2229,7 @@ The following state arguments are supported:
 <a href="#state_explicit_auth_flows_python" style="color: inherit; text-decoration: inherit;">explicit_<wbr>auth_<wbr>flows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY, USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2181,7 +2238,7 @@ The following state arguments are supported:
 <a href="#state_generate_secret_python" style="color: inherit; text-decoration: inherit;">generate_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Should an application secret be generated.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2190,7 +2247,7 @@ The following state arguments are supported:
 <a href="#state_id_token_validity_python" style="color: inherit; text-decoration: inherit;">id_<wbr>token_<wbr>validity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Time limit, between 5 minutes and 1 day, after which the ID token is no longer valid and cannot be used. This value will be overridden if you have entered a value in `token_validity_units`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2199,7 +2256,7 @@ The following state arguments are supported:
 <a href="#state_logout_urls_python" style="color: inherit; text-decoration: inherit;">logout_<wbr>urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of allowed logout URLs for the identity providers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2208,7 +2265,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the application client.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2217,7 +2274,7 @@ The following state arguments are supported:
 <a href="#state_prevent_user_existence_errors_python" style="color: inherit; text-decoration: inherit;">prevent_<wbr>user_<wbr>existence_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Choose which errors and responses are returned by Cognito APIs during authentication, account confirmation, and password recovery when the user does not exist in the user pool. When set to `ENABLED` and the user does not exist, authentication returns an error indicating either the username or password was incorrect, and account confirmation and password recovery return a response indicating a code was sent to a simulated destination. When set to `LEGACY`, those APIs will return a `UserNotFoundException` exception if the user does not exist in the user pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2226,7 +2283,7 @@ The following state arguments are supported:
 <a href="#state_read_attributes_python" style="color: inherit; text-decoration: inherit;">read_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of user pool attributes the application client can read from.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2235,7 +2292,7 @@ The following state arguments are supported:
 <a href="#state_refresh_token_validity_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token_<wbr>validity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Time limit in days refresh tokens are valid for.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2244,7 +2301,7 @@ The following state arguments are supported:
 <a href="#state_supported_identity_providers_python" style="color: inherit; text-decoration: inherit;">supported_<wbr>identity_<wbr>providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of provider names for the identity providers that are supported on this client.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2253,7 +2310,7 @@ The following state arguments are supported:
 <a href="#state_token_validity_units_python" style="color: inherit; text-decoration: inherit;">token_<wbr>validity_<wbr>units</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolclienttokenvalidityunits">User<wbr>Pool<wbr>Client<wbr>Token<wbr>Validity<wbr>Units<wbr>Args</a></span>
+        <span class="property-type"><a href="#userpoolclienttokenvalidityunits">Input[User<wbr>Pool<wbr>Client<wbr>Token<wbr>Validity<wbr>Units<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for units in which the validity times are represented in. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2262,7 +2319,7 @@ The following state arguments are supported:
 <a href="#state_user_pool_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>pool_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User pool the client belongs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2271,7 +2328,7 @@ The following state arguments are supported:
 <a href="#state_write_attributes_python" style="color: inherit; text-decoration: inherit;">write_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of user pool attributes the application client can write to.
 {{% /md %}}</dd></dl>
@@ -2393,7 +2450,7 @@ The following state arguments are supported:
 <a href="#applicationarn_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Application ARN for an Amazon Pinpoint application. Conflicts with `external_id` and `role_arn`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2402,7 +2459,7 @@ The following state arguments are supported:
 <a href="#applicationid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Application ID for an Amazon Pinpoint application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2411,7 +2468,7 @@ The following state arguments are supported:
 <a href="#externalid_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID for the Analytics Configuration. Conflicts with `application_arn`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2420,7 +2477,7 @@ The following state arguments are supported:
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARN of an IAM role that authorizes Amazon Cognito to publish events to Amazon Pinpoint analytics. Conflicts with `application_arn`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2429,7 +2486,7 @@ The following state arguments are supported:
 <a href="#userdatashared_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data<wbr>Shared</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If set to `true`, Amazon Cognito will include user data in the events it publishes to Amazon Pinpoint analytics.
 {{% /md %}}</dd></dl>
@@ -2442,7 +2499,7 @@ The following state arguments are supported:
 <a href="#application_arn_python" style="color: inherit; text-decoration: inherit;">application_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Application ARN for an Amazon Pinpoint application. Conflicts with `external_id` and `role_arn`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2451,7 +2508,7 @@ The following state arguments are supported:
 <a href="#application_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Application ID for an Amazon Pinpoint application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2460,7 +2517,7 @@ The following state arguments are supported:
 <a href="#external_id_python" style="color: inherit; text-decoration: inherit;">external_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID for the Analytics Configuration. Conflicts with `application_arn`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2469,7 +2526,7 @@ The following state arguments are supported:
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARN of an IAM role that authorizes Amazon Cognito to publish events to Amazon Pinpoint analytics. Conflicts with `application_arn`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2478,7 +2535,7 @@ The following state arguments are supported:
 <a href="#user_data_shared_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data_<wbr>shared</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If set to `true`, Amazon Cognito will include user data in the events it publishes to Amazon Pinpoint analytics.
 {{% /md %}}</dd></dl>
@@ -2555,7 +2612,7 @@ The following state arguments are supported:
 <a href="#accesstoken_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time unit in for the value in `access_token_validity`, defaults to `hours`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2564,7 +2621,7 @@ The following state arguments are supported:
 <a href="#idtoken_nodejs" style="color: inherit; text-decoration: inherit;">id<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time unit in for the value in `id_token_validity`, defaults to `hours`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2573,7 +2630,7 @@ The following state arguments are supported:
 <a href="#refreshtoken_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time unit in for the value in `refresh_token_validity`, defaults to `days`.
 {{% /md %}}</dd></dl>
@@ -2586,7 +2643,7 @@ The following state arguments are supported:
 <a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time unit in for the value in `access_token_validity`, defaults to `hours`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2595,7 +2652,7 @@ The following state arguments are supported:
 <a href="#id_token_python" style="color: inherit; text-decoration: inherit;">id_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time unit in for the value in `id_token_validity`, defaults to `hours`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2604,7 +2661,7 @@ The following state arguments are supported:
 <a href="#refresh_token_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time unit in for the value in `refresh_token_validity`, defaults to `days`.
 {{% /md %}}</dd></dl>

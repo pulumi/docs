@@ -56,8 +56,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/directconnect"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/directconnect"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -129,19 +129,35 @@ const example = new aws.directconnect.HostedTransitVirtualInterface("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">HostedTransitVirtualInterface</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">HostedTransitVirtualInterfaceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">HostedTransitVirtualInterface</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">HostedTransitVirtualInterfaceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">HostedTransitVirtualInterface</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">address_family</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">amazon_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bgp_asn</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">bgp_auth_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">customer_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mtu</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vlan</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">HostedTransitVirtualInterface</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                                  <span class="nx">address_family</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                  <span class="nx">amazon_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                  <span class="nx">bgp_asn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                                  <span class="nx">bgp_auth_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                  <span class="nx">connection_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                  <span class="nx">customer_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                  <span class="nx">mtu</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                                  <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                  <span class="nx">owner_account_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                  <span class="nx">vlan</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">HostedTransitVirtualInterface</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">HostedTransitVirtualInterfaceArgs</a></span><span class="p">,</span>
+                                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewHostedTransitVirtualInterface</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">HostedTransitVirtualInterfaceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">HostedTransitVirtualInterface</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewHostedTransitVirtualInterface</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">HostedTransitVirtualInterfaceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">HostedTransitVirtualInterface</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">HostedTransitVirtualInterface</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">HostedTransitVirtualInterfaceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">HostedTransitVirtualInterface</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">HostedTransitVirtualInterfaceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -176,22 +192,32 @@ const example = new aws.directconnect.HostedTransitVirtualInterface("example", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">HostedTransitVirtualInterfaceArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -200,7 +226,7 @@ const example = new aws.directconnect.HostedTransitVirtualInterface("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -224,7 +250,7 @@ const example = new aws.directconnect.HostedTransitVirtualInterface("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -467,7 +493,7 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 <a href="#addressfamily_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The address family for the BGP peer. `ipv4 ` or `ipv6`.
 {{% /md %}}</dd><dt class="property-required"
@@ -476,7 +502,7 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 <a href="#bgpasn_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
 {{% /md %}}</dd><dt class="property-required"
@@ -485,7 +511,7 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 <a href="#connectionid_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
 {{% /md %}}</dd><dt class="property-required"
@@ -494,7 +520,7 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 <a href="#owneraccountid_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>Account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AWS account that will own the new virtual interface.
 {{% /md %}}</dd><dt class="property-required"
@@ -503,7 +529,7 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 <a href="#vlan_nodejs" style="color: inherit; text-decoration: inherit;">vlan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The VLAN ID.
 {{% /md %}}</dd><dt class="property-optional"
@@ -512,7 +538,7 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 <a href="#amazonaddress_nodejs" style="color: inherit; text-decoration: inherit;">amazon<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -521,7 +547,7 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 <a href="#bgpauthkey_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Auth<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The authentication key for BGP configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -530,7 +556,7 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 <a href="#customeraddress_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -539,7 +565,7 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 <a href="#mtu_nodejs" style="color: inherit; text-decoration: inherit;">mtu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection. The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo frames). Default is `1500`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -548,7 +574,7 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name for the virtual interface.
 {{% /md %}}</dd></dl>
@@ -561,7 +587,7 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 <a href="#address_family_python" style="color: inherit; text-decoration: inherit;">address_<wbr>family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The address family for the BGP peer. `ipv4 ` or `ipv6`.
 {{% /md %}}</dd><dt class="property-required"
@@ -570,7 +596,7 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 <a href="#bgp_asn_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
 {{% /md %}}</dd><dt class="property-required"
@@ -579,7 +605,7 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 <a href="#connection_id_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
 {{% /md %}}</dd><dt class="property-required"
@@ -588,7 +614,7 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 <a href="#owner_account_id_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>account_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AWS account that will own the new virtual interface.
 {{% /md %}}</dd><dt class="property-required"
@@ -597,7 +623,7 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 <a href="#vlan_python" style="color: inherit; text-decoration: inherit;">vlan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The VLAN ID.
 {{% /md %}}</dd><dt class="property-optional"
@@ -606,7 +632,7 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 <a href="#amazon_address_python" style="color: inherit; text-decoration: inherit;">amazon_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -615,7 +641,7 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 <a href="#bgp_auth_key_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>auth_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The authentication key for BGP configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -624,7 +650,7 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 <a href="#customer_address_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -633,7 +659,7 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 <a href="#mtu_python" style="color: inherit; text-decoration: inherit;">mtu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection. The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo frames). Default is `1500`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -642,7 +668,7 @@ The HostedTransitVirtualInterface resource accepts the following [input]({{< rel
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name for the virtual interface.
 {{% /md %}}</dd></dl>
@@ -851,20 +877,36 @@ Get an existing HostedTransitVirtualInterface resource's state with the given na
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">HostedTransitVirtualInterfaceState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">HostedTransitVirtualInterface</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">HostedTransitVirtualInterfaceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">HostedTransitVirtualInterface</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">address_family</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">amazon_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">amazon_side_asn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">aws_device</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bgp_asn</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">bgp_auth_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">customer_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">jumbo_frame_capable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">mtu</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vlan</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> HostedTransitVirtualInterface</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">address_family</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">amazon_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">amazon_side_asn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">aws_device</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">bgp_asn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">bgp_auth_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">connection_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">customer_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">jumbo_frame_capable</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">mtu</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">owner_account_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">vlan</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">) -&gt;</span> HostedTransitVirtualInterface</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetHostedTransitVirtualInterface<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">HostedTransitVirtualInterfaceState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">HostedTransitVirtualInterface</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetHostedTransitVirtualInterface<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">HostedTransitVirtualInterfaceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">HostedTransitVirtualInterface</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">HostedTransitVirtualInterface</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">HostedTransitVirtualInterfaceState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">HostedTransitVirtualInterface</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">HostedTransitVirtualInterfaceState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1231,7 +1273,7 @@ The following state arguments are supported:
 <a href="#state_addressfamily_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The address family for the BGP peer. `ipv4 ` or `ipv6`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1240,7 +1282,7 @@ The following state arguments are supported:
 <a href="#state_amazonaddress_nodejs" style="color: inherit; text-decoration: inherit;">amazon<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1249,7 +1291,7 @@ The following state arguments are supported:
 <a href="#state_amazonsideasn_nodejs" style="color: inherit; text-decoration: inherit;">amazon<wbr>Side<wbr>Asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1257,7 +1299,7 @@ The following state arguments are supported:
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of the virtual interface.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1266,7 +1308,7 @@ The following state arguments are supported:
 <a href="#state_awsdevice_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Device</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Direct Connect endpoint on which the virtual interface terminates.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1275,7 +1317,7 @@ The following state arguments are supported:
 <a href="#state_bgpasn_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1284,7 +1326,7 @@ The following state arguments are supported:
 <a href="#state_bgpauthkey_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Auth<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The authentication key for BGP configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1293,7 +1335,7 @@ The following state arguments are supported:
 <a href="#state_connectionid_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1302,7 +1344,7 @@ The following state arguments are supported:
 <a href="#state_customeraddress_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1311,7 +1353,7 @@ The following state arguments are supported:
 <a href="#state_jumboframecapable_nodejs" style="color: inherit; text-decoration: inherit;">jumbo<wbr>Frame<wbr>Capable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether jumbo frames (8500 MTU) are supported.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1320,7 +1362,7 @@ The following state arguments are supported:
 <a href="#state_mtu_nodejs" style="color: inherit; text-decoration: inherit;">mtu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection. The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo frames). Default is `1500`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1329,7 +1371,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name for the virtual interface.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1338,7 +1380,7 @@ The following state arguments are supported:
 <a href="#state_owneraccountid_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>Account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AWS account that will own the new virtual interface.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1347,7 +1389,7 @@ The following state arguments are supported:
 <a href="#state_vlan_nodejs" style="color: inherit; text-decoration: inherit;">vlan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The VLAN ID.
 {{% /md %}}</dd></dl>
@@ -1360,7 +1402,7 @@ The following state arguments are supported:
 <a href="#state_address_family_python" style="color: inherit; text-decoration: inherit;">address_<wbr>family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The address family for the BGP peer. `ipv4 ` or `ipv6`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1369,7 +1411,7 @@ The following state arguments are supported:
 <a href="#state_amazon_address_python" style="color: inherit; text-decoration: inherit;">amazon_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1378,7 +1420,7 @@ The following state arguments are supported:
 <a href="#state_amazon_side_asn_python" style="color: inherit; text-decoration: inherit;">amazon_<wbr>side_<wbr>asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1386,7 +1428,7 @@ The following state arguments are supported:
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of the virtual interface.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1395,7 +1437,7 @@ The following state arguments are supported:
 <a href="#state_aws_device_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>device</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Direct Connect endpoint on which the virtual interface terminates.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1404,7 +1446,7 @@ The following state arguments are supported:
 <a href="#state_bgp_asn_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1413,7 +1455,7 @@ The following state arguments are supported:
 <a href="#state_bgp_auth_key_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>auth_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The authentication key for BGP configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1422,7 +1464,7 @@ The following state arguments are supported:
 <a href="#state_connection_id_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1431,7 +1473,7 @@ The following state arguments are supported:
 <a href="#state_customer_address_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1440,7 +1482,7 @@ The following state arguments are supported:
 <a href="#state_jumbo_frame_capable_python" style="color: inherit; text-decoration: inherit;">jumbo_<wbr>frame_<wbr>capable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether jumbo frames (8500 MTU) are supported.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1449,7 +1491,7 @@ The following state arguments are supported:
 <a href="#state_mtu_python" style="color: inherit; text-decoration: inherit;">mtu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection. The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo frames). Default is `1500`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1458,7 +1500,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name for the virtual interface.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1467,7 +1509,7 @@ The following state arguments are supported:
 <a href="#state_owner_account_id_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>account_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AWS account that will own the new virtual interface.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1476,7 +1518,7 @@ The following state arguments are supported:
 <a href="#state_vlan_python" style="color: inherit; text-decoration: inherit;">vlan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The VLAN ID.
 {{% /md %}}</dd></dl>

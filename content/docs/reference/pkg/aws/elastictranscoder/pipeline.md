@@ -62,8 +62,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elastictranscoder"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/elastictranscoder"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -153,19 +153,35 @@ const bar = new aws.elastictranscoder.Pipeline("bar", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Pipeline</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PipelineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Pipeline</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PipelineArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Pipeline</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aws_kms_key_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">content_config</span><span class="p">:</span> <span class="nx">Optional[PipelineContentConfigArgs]</span> = None<span class="p">, </span><span class="nx">content_config_permissions</span><span class="p">:</span> <span class="nx">Optional[Sequence[PipelineContentConfigPermissionArgs]]</span> = None<span class="p">, </span><span class="nx">input_bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notifications</span><span class="p">:</span> <span class="nx">Optional[PipelineNotificationsArgs]</span> = None<span class="p">, </span><span class="nx">output_bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">thumbnail_config</span><span class="p">:</span> <span class="nx">Optional[PipelineThumbnailConfigArgs]</span> = None<span class="p">, </span><span class="nx">thumbnail_config_permissions</span><span class="p">:</span> <span class="nx">Optional[Sequence[PipelineThumbnailConfigPermissionArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Pipeline</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">aws_kms_key_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">content_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PipelineContentConfigArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">content_config_permissions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[PipelineContentConfigPermissionArgs]]]]</span> = None<span class="p">,</span>
+             <span class="nx">input_bucket</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">notifications</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PipelineNotificationsArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">output_bucket</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">thumbnail_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PipelineThumbnailConfigArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">thumbnail_config_permissions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[PipelineThumbnailConfigPermissionArgs]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Pipeline</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PipelineArgs</a></span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPipeline</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PipelineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Pipeline</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPipeline</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PipelineArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Pipeline</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Pipeline</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PipelineArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Pipeline</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">PipelineArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -200,22 +216,32 @@ const bar = new aws.elastictranscoder.Pipeline("bar", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">PipelineArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -224,7 +250,7 @@ const bar = new aws.elastictranscoder.Pipeline("bar", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -248,7 +274,7 @@ const bar = new aws.elastictranscoder.Pipeline("bar", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -491,7 +517,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#inputbucket_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket in which you saved the media files that you want to transcode and the graphics that you want to use as watermarks.
 {{% /md %}}</dd><dt class="property-required"
@@ -500,7 +526,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IAM Amazon Resource Name (ARN) for the role that you want Elastic Transcoder to use to transcode jobs for this pipeline.
 {{% /md %}}</dd><dt class="property-optional"
@@ -509,7 +535,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#awskmskeyarn_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Kms<wbr>Key<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AWS Key Management Service (AWS KMS) key that you want to use with this pipeline.
 {{% /md %}}</dd><dt class="property-optional"
@@ -518,7 +544,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#contentconfig_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinecontentconfig">Pipeline<wbr>Content<wbr>Config</a></span>
+        <span class="property-type"><a href="#pipelinecontentconfig">pulumi.<wbr>Input<Pipeline<wbr>Content<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The ContentConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists. (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -527,7 +553,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#contentconfigpermissions_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Config<wbr>Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinecontentconfigpermission">Pipeline<wbr>Content<wbr>Config<wbr>Permission[]</a></span>
+        <span class="property-type"><a href="#pipelinecontentconfigpermission">pulumi.<wbr>Input<pulumi.<wbr>Input<Pipeline<wbr>Content<wbr>Config<wbr>Permission<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The permissions for the `content_config` object. (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -536,7 +562,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the pipeline. Maximum 40 characters
 {{% /md %}}</dd><dt class="property-optional"
@@ -545,7 +571,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#notifications_nodejs" style="color: inherit; text-decoration: inherit;">notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinenotifications">Pipeline<wbr>Notifications</a></span>
+        <span class="property-type"><a href="#pipelinenotifications">pulumi.<wbr>Input<Pipeline<wbr>Notifications<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The Amazon Simple Notification Service (Amazon SNS) topic that you want to notify to report job status. (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -554,7 +580,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#outputbucket_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket in which you want Elastic Transcoder to save the transcoded files.
 {{% /md %}}</dd><dt class="property-optional"
@@ -563,7 +589,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#thumbnailconfig_nodejs" style="color: inherit; text-decoration: inherit;">thumbnail<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinethumbnailconfig">Pipeline<wbr>Thumbnail<wbr>Config</a></span>
+        <span class="property-type"><a href="#pipelinethumbnailconfig">pulumi.<wbr>Input<Pipeline<wbr>Thumbnail<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The ThumbnailConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files. (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -572,7 +598,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#thumbnailconfigpermissions_nodejs" style="color: inherit; text-decoration: inherit;">thumbnail<wbr>Config<wbr>Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinethumbnailconfigpermission">Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission[]</a></span>
+        <span class="property-type"><a href="#pipelinethumbnailconfigpermission">pulumi.<wbr>Input<pulumi.<wbr>Input<Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The permissions for the `thumbnail_config` object. (documented below)
 {{% /md %}}</dd></dl>
@@ -585,7 +611,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#input_bucket_python" style="color: inherit; text-decoration: inherit;">input_<wbr>bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket in which you saved the media files that you want to transcode and the graphics that you want to use as watermarks.
 {{% /md %}}</dd><dt class="property-required"
@@ -594,7 +620,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IAM Amazon Resource Name (ARN) for the role that you want Elastic Transcoder to use to transcode jobs for this pipeline.
 {{% /md %}}</dd><dt class="property-optional"
@@ -603,7 +629,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#aws_kms_key_arn_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>kms_<wbr>key_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AWS Key Management Service (AWS KMS) key that you want to use with this pipeline.
 {{% /md %}}</dd><dt class="property-optional"
@@ -612,7 +638,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#content_config_python" style="color: inherit; text-decoration: inherit;">content_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinecontentconfig">Pipeline<wbr>Content<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinecontentconfig">Input[Pipeline<wbr>Content<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The ContentConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists. (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -621,7 +647,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#content_config_permissions_python" style="color: inherit; text-decoration: inherit;">content_<wbr>config_<wbr>permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinecontentconfigpermission">Sequence[Pipeline<wbr>Content<wbr>Config<wbr>Permission<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pipelinecontentconfigpermission">Input[Pipeline<wbr>Content<wbr>Config<wbr>Permission<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The permissions for the `content_config` object. (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -630,7 +656,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the pipeline. Maximum 40 characters
 {{% /md %}}</dd><dt class="property-optional"
@@ -639,7 +665,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#notifications_python" style="color: inherit; text-decoration: inherit;">notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinenotifications">Pipeline<wbr>Notifications<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinenotifications">Input[Pipeline<wbr>Notifications<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Simple Notification Service (Amazon SNS) topic that you want to notify to report job status. (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -648,7 +674,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#output_bucket_python" style="color: inherit; text-decoration: inherit;">output_<wbr>bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket in which you want Elastic Transcoder to save the transcoded files.
 {{% /md %}}</dd><dt class="property-optional"
@@ -657,7 +683,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#thumbnail_config_python" style="color: inherit; text-decoration: inherit;">thumbnail_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinethumbnailconfig">Pipeline<wbr>Thumbnail<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinethumbnailconfig">Input[Pipeline<wbr>Thumbnail<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The ThumbnailConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files. (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -666,7 +692,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#thumbnail_config_permissions_python" style="color: inherit; text-decoration: inherit;">thumbnail_<wbr>config_<wbr>permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinethumbnailconfigpermission">Sequence[Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pipelinethumbnailconfigpermission">Input[Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The permissions for the `thumbnail_config` object. (documented below)
 {{% /md %}}</dd></dl>
@@ -771,20 +797,33 @@ Get an existing Pipeline resource's state with the given name, ID, and optional 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">PipelineState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Pipeline</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">PipelineState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Pipeline</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">aws_kms_key_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">content_config</span><span class="p">:</span> <span class="nx">Optional[PipelineContentConfigArgs]</span> = None<span class="p">, </span><span class="nx">content_config_permissions</span><span class="p">:</span> <span class="nx">Optional[Sequence[PipelineContentConfigPermissionArgs]]</span> = None<span class="p">, </span><span class="nx">input_bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notifications</span><span class="p">:</span> <span class="nx">Optional[PipelineNotificationsArgs]</span> = None<span class="p">, </span><span class="nx">output_bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">thumbnail_config</span><span class="p">:</span> <span class="nx">Optional[PipelineThumbnailConfigArgs]</span> = None<span class="p">, </span><span class="nx">thumbnail_config_permissions</span><span class="p">:</span> <span class="nx">Optional[Sequence[PipelineThumbnailConfigPermissionArgs]]</span> = None<span class="p">) -&gt;</span> Pipeline</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">aws_kms_key_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">content_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PipelineContentConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">content_config_permissions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[PipelineContentConfigPermissionArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">input_bucket</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">notifications</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PipelineNotificationsArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">output_bucket</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">thumbnail_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PipelineThumbnailConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">thumbnail_config_permissions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[PipelineThumbnailConfigPermissionArgs]]]]</span> = None<span class="p">) -&gt;</span> Pipeline</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPipeline<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">PipelineState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Pipeline</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPipeline<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">PipelineState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Pipeline</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Pipeline</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">PipelineState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Pipeline</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">PipelineState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1099,7 +1138,7 @@ The following state arguments are supported:
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of the Elastictranscoder pipeline.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1108,7 +1147,7 @@ The following state arguments are supported:
 <a href="#state_awskmskeyarn_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Kms<wbr>Key<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AWS Key Management Service (AWS KMS) key that you want to use with this pipeline.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1117,7 +1156,7 @@ The following state arguments are supported:
 <a href="#state_contentconfig_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinecontentconfig">Pipeline<wbr>Content<wbr>Config</a></span>
+        <span class="property-type"><a href="#pipelinecontentconfig">pulumi.<wbr>Input<Pipeline<wbr>Content<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The ContentConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists. (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1126,7 +1165,7 @@ The following state arguments are supported:
 <a href="#state_contentconfigpermissions_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Config<wbr>Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinecontentconfigpermission">Pipeline<wbr>Content<wbr>Config<wbr>Permission[]</a></span>
+        <span class="property-type"><a href="#pipelinecontentconfigpermission">pulumi.<wbr>Input<pulumi.<wbr>Input<Pipeline<wbr>Content<wbr>Config<wbr>Permission<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The permissions for the `content_config` object. (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1135,7 +1174,7 @@ The following state arguments are supported:
 <a href="#state_inputbucket_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket in which you saved the media files that you want to transcode and the graphics that you want to use as watermarks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1144,7 +1183,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the pipeline. Maximum 40 characters
 {{% /md %}}</dd><dt class="property-optional"
@@ -1153,7 +1192,7 @@ The following state arguments are supported:
 <a href="#state_notifications_nodejs" style="color: inherit; text-decoration: inherit;">notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinenotifications">Pipeline<wbr>Notifications</a></span>
+        <span class="property-type"><a href="#pipelinenotifications">pulumi.<wbr>Input<Pipeline<wbr>Notifications<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The Amazon Simple Notification Service (Amazon SNS) topic that you want to notify to report job status. (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1162,7 +1201,7 @@ The following state arguments are supported:
 <a href="#state_outputbucket_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket in which you want Elastic Transcoder to save the transcoded files.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1171,7 +1210,7 @@ The following state arguments are supported:
 <a href="#state_role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IAM Amazon Resource Name (ARN) for the role that you want Elastic Transcoder to use to transcode jobs for this pipeline.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1180,7 +1219,7 @@ The following state arguments are supported:
 <a href="#state_thumbnailconfig_nodejs" style="color: inherit; text-decoration: inherit;">thumbnail<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinethumbnailconfig">Pipeline<wbr>Thumbnail<wbr>Config</a></span>
+        <span class="property-type"><a href="#pipelinethumbnailconfig">pulumi.<wbr>Input<Pipeline<wbr>Thumbnail<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The ThumbnailConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files. (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1189,7 +1228,7 @@ The following state arguments are supported:
 <a href="#state_thumbnailconfigpermissions_nodejs" style="color: inherit; text-decoration: inherit;">thumbnail<wbr>Config<wbr>Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinethumbnailconfigpermission">Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission[]</a></span>
+        <span class="property-type"><a href="#pipelinethumbnailconfigpermission">pulumi.<wbr>Input<pulumi.<wbr>Input<Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The permissions for the `thumbnail_config` object. (documented below)
 {{% /md %}}</dd></dl>
@@ -1202,7 +1241,7 @@ The following state arguments are supported:
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of the Elastictranscoder pipeline.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1211,7 +1250,7 @@ The following state arguments are supported:
 <a href="#state_aws_kms_key_arn_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>kms_<wbr>key_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AWS Key Management Service (AWS KMS) key that you want to use with this pipeline.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1220,7 +1259,7 @@ The following state arguments are supported:
 <a href="#state_content_config_python" style="color: inherit; text-decoration: inherit;">content_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinecontentconfig">Pipeline<wbr>Content<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinecontentconfig">Input[Pipeline<wbr>Content<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The ContentConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists. (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1229,7 +1268,7 @@ The following state arguments are supported:
 <a href="#state_content_config_permissions_python" style="color: inherit; text-decoration: inherit;">content_<wbr>config_<wbr>permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinecontentconfigpermission">Sequence[Pipeline<wbr>Content<wbr>Config<wbr>Permission<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pipelinecontentconfigpermission">Input[Pipeline<wbr>Content<wbr>Config<wbr>Permission<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The permissions for the `content_config` object. (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1238,7 +1277,7 @@ The following state arguments are supported:
 <a href="#state_input_bucket_python" style="color: inherit; text-decoration: inherit;">input_<wbr>bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket in which you saved the media files that you want to transcode and the graphics that you want to use as watermarks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1247,7 +1286,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the pipeline. Maximum 40 characters
 {{% /md %}}</dd><dt class="property-optional"
@@ -1256,7 +1295,7 @@ The following state arguments are supported:
 <a href="#state_notifications_python" style="color: inherit; text-decoration: inherit;">notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinenotifications">Pipeline<wbr>Notifications<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinenotifications">Input[Pipeline<wbr>Notifications<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Simple Notification Service (Amazon SNS) topic that you want to notify to report job status. (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1265,7 +1304,7 @@ The following state arguments are supported:
 <a href="#state_output_bucket_python" style="color: inherit; text-decoration: inherit;">output_<wbr>bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket in which you want Elastic Transcoder to save the transcoded files.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1274,7 +1313,7 @@ The following state arguments are supported:
 <a href="#state_role_python" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IAM Amazon Resource Name (ARN) for the role that you want Elastic Transcoder to use to transcode jobs for this pipeline.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1283,7 +1322,7 @@ The following state arguments are supported:
 <a href="#state_thumbnail_config_python" style="color: inherit; text-decoration: inherit;">thumbnail_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinethumbnailconfig">Pipeline<wbr>Thumbnail<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinethumbnailconfig">Input[Pipeline<wbr>Thumbnail<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The ThumbnailConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files. (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1292,7 +1331,7 @@ The following state arguments are supported:
 <a href="#state_thumbnail_config_permissions_python" style="color: inherit; text-decoration: inherit;">thumbnail_<wbr>config_<wbr>permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinethumbnailconfigpermission">Sequence[Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pipelinethumbnailconfigpermission">Input[Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The permissions for the `thumbnail_config` object. (documented below)
 {{% /md %}}</dd></dl>
@@ -1360,7 +1399,7 @@ The following state arguments are supported:
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1369,7 +1408,7 @@ The following state arguments are supported:
 <a href="#storageclass_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 storage class, `Standard` or `ReducedRedundancy`, that you want Elastic Transcoder to assign to the files and playlists that it stores in your Amazon S3 bucket.
 {{% /md %}}</dd></dl>
@@ -1382,7 +1421,7 @@ The following state arguments are supported:
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1391,7 +1430,7 @@ The following state arguments are supported:
 <a href="#storage_class_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Amazon S3 storage class, `Standard` or `ReducedRedundancy`, that you want Elastic Transcoder to assign to the files and playlists that it stores in your Amazon S3 bucket.
 {{% /md %}}</dd></dl>
@@ -1468,7 +1507,7 @@ The following state arguments are supported:
 <a href="#accesses_nodejs" style="color: inherit; text-decoration: inherit;">accesses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The permission that you want to give to the AWS user that you specified in `content_config_permissions.grantee`. Valid values are `Read`, `ReadAcp`, `WriteAcp` or `FullControl`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1477,7 +1516,7 @@ The following state arguments are supported:
 <a href="#grantee_nodejs" style="color: inherit; text-decoration: inherit;">grantee</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AWS user or group that you want to have access to transcoded files and playlists.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1486,7 +1525,7 @@ The following state arguments are supported:
 <a href="#granteetype_nodejs" style="color: inherit; text-decoration: inherit;">grantee<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specify the type of value that appears in the `content_config_permissions.grantee` object. Valid values are `Canonical`, `Email` or `Group`.
 {{% /md %}}</dd></dl>
@@ -1499,7 +1538,7 @@ The following state arguments are supported:
 <a href="#accesses_python" style="color: inherit; text-decoration: inherit;">accesses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The permission that you want to give to the AWS user that you specified in `content_config_permissions.grantee`. Valid values are `Read`, `ReadAcp`, `WriteAcp` or `FullControl`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1508,7 +1547,7 @@ The following state arguments are supported:
 <a href="#grantee_python" style="color: inherit; text-decoration: inherit;">grantee</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AWS user or group that you want to have access to transcoded files and playlists.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1517,7 +1556,7 @@ The following state arguments are supported:
 <a href="#grantee_type_python" style="color: inherit; text-decoration: inherit;">grantee_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specify the type of value that appears in the `content_config_permissions.grantee` object. Valid values are `Canonical`, `Email` or `Group`.
 {{% /md %}}</dd></dl>
@@ -1612,7 +1651,7 @@ The following state arguments are supported:
 <a href="#completed_nodejs" style="color: inherit; text-decoration: inherit;">completed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The topic ARN for the Amazon SNS topic that you want to notify when Elastic Transcoder has finished processing a job in this pipeline.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1621,7 +1660,7 @@ The following state arguments are supported:
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The topic ARN for the Amazon SNS topic that you want to notify when Elastic Transcoder encounters an error condition while processing a job in this pipeline.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1630,7 +1669,7 @@ The following state arguments are supported:
 <a href="#progressing_nodejs" style="color: inherit; text-decoration: inherit;">progressing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The topic ARN for the Amazon Simple Notification Service (Amazon SNS) topic that you want to notify when Elastic Transcoder has started to process a job in this pipeline.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1639,7 +1678,7 @@ The following state arguments are supported:
 <a href="#warning_nodejs" style="color: inherit; text-decoration: inherit;">warning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The topic ARN for the Amazon SNS topic that you want to notify when Elastic Transcoder encounters a warning condition while processing a job in this pipeline.
 {{% /md %}}</dd></dl>
@@ -1652,7 +1691,7 @@ The following state arguments are supported:
 <a href="#completed_python" style="color: inherit; text-decoration: inherit;">completed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The topic ARN for the Amazon SNS topic that you want to notify when Elastic Transcoder has finished processing a job in this pipeline.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1661,7 +1700,7 @@ The following state arguments are supported:
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The topic ARN for the Amazon SNS topic that you want to notify when Elastic Transcoder encounters an error condition while processing a job in this pipeline.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1670,7 +1709,7 @@ The following state arguments are supported:
 <a href="#progressing_python" style="color: inherit; text-decoration: inherit;">progressing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The topic ARN for the Amazon Simple Notification Service (Amazon SNS) topic that you want to notify when Elastic Transcoder has started to process a job in this pipeline.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1679,7 +1718,7 @@ The following state arguments are supported:
 <a href="#warning_python" style="color: inherit; text-decoration: inherit;">warning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The topic ARN for the Amazon SNS topic that you want to notify when Elastic Transcoder encounters a warning condition while processing a job in this pipeline.
 {{% /md %}}</dd></dl>
@@ -1738,7 +1777,7 @@ The following state arguments are supported:
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1747,7 +1786,7 @@ The following state arguments are supported:
 <a href="#storageclass_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 storage class, Standard or ReducedRedundancy, that you want Elastic Transcoder to assign to the thumbnails that it stores in your Amazon S3 bucket.
 {{% /md %}}</dd></dl>
@@ -1760,7 +1799,7 @@ The following state arguments are supported:
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1769,7 +1808,7 @@ The following state arguments are supported:
 <a href="#storage_class_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Amazon S3 storage class, Standard or ReducedRedundancy, that you want Elastic Transcoder to assign to the thumbnails that it stores in your Amazon S3 bucket.
 {{% /md %}}</dd></dl>
@@ -1846,7 +1885,7 @@ The following state arguments are supported:
 <a href="#accesses_nodejs" style="color: inherit; text-decoration: inherit;">accesses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The permission that you want to give to the AWS user that you specified in `thumbnail_config_permissions.grantee`. Valid values are `Read`, `ReadAcp`, `WriteAcp` or `FullControl`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1855,7 +1894,7 @@ The following state arguments are supported:
 <a href="#grantee_nodejs" style="color: inherit; text-decoration: inherit;">grantee</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AWS user or group that you want to have access to thumbnail files.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1864,7 +1903,7 @@ The following state arguments are supported:
 <a href="#granteetype_nodejs" style="color: inherit; text-decoration: inherit;">grantee<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specify the type of value that appears in the `thumbnail_config_permissions.grantee` object. Valid values are `Canonical`, `Email` or `Group`.
 {{% /md %}}</dd></dl>
@@ -1877,7 +1916,7 @@ The following state arguments are supported:
 <a href="#accesses_python" style="color: inherit; text-decoration: inherit;">accesses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The permission that you want to give to the AWS user that you specified in `thumbnail_config_permissions.grantee`. Valid values are `Read`, `ReadAcp`, `WriteAcp` or `FullControl`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1886,7 +1925,7 @@ The following state arguments are supported:
 <a href="#grantee_python" style="color: inherit; text-decoration: inherit;">grantee</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AWS user or group that you want to have access to thumbnail files.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1895,7 +1934,7 @@ The following state arguments are supported:
 <a href="#grantee_type_python" style="color: inherit; text-decoration: inherit;">grantee_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specify the type of value that appears in the `thumbnail_config_permissions.grantee` object. Valid values are `Canonical`, `Email` or `Group`.
 {{% /md %}}</dd></dl>

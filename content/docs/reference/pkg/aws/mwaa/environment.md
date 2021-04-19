@@ -480,19 +480,44 @@ const example = new aws.mwaa.Environment("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Environment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EnvironmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Environment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EnvironmentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Environment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">airflow_configuration_options</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">airflow_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dag_s3_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">environment_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">execution_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logging_configuration</span><span class="p">:</span> <span class="nx">Optional[EnvironmentLoggingConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">max_workers</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_workers</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_configuration</span><span class="p">:</span> <span class="nx">Optional[EnvironmentNetworkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">plugins_s3_object_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plugins_s3_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">requirements_s3_object_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">requirements_s3_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_bucket_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">webserver_access_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">weekly_maintenance_window_start</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Environment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                <span class="nx">airflow_configuration_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                <span class="nx">airflow_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">dag_s3_path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">environment_class</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">execution_role_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">kms_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">logging_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EnvironmentLoggingConfigurationArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">max_workers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                <span class="nx">min_workers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">network_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EnvironmentNetworkConfigurationArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">plugins_s3_object_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">plugins_s3_path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">requirements_s3_object_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">requirements_s3_path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">source_bucket_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                <span class="nx">webserver_access_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">weekly_maintenance_window_start</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Environment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EnvironmentArgs</a></span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEnvironment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EnvironmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Environment</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEnvironment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EnvironmentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Environment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Environment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">EnvironmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Environment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">EnvironmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -527,22 +552,32 @@ const example = new aws.mwaa.Environment("example", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">EnvironmentArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -551,7 +586,7 @@ const example = new aws.mwaa.Environment("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -575,7 +610,7 @@ const example = new aws.mwaa.Environment("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -980,7 +1015,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#dags3path_nodejs" style="color: inherit; text-decoration: inherit;">dag<wbr>S3Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The relative path to the DAG folder on your Amazon S3 storage bucket. For example, dags. For more information, see [Importing DAGs on Amazon MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-import.html).
 {{% /md %}}</dd><dt class="property-required"
@@ -989,7 +1024,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#executionrolearn_nodejs" style="color: inherit; text-decoration: inherit;">execution<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the task execution role that the Amazon MWAA and its environment can assume. Check the [official AWS documentation](https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-create-role.html) for the detailed role specification.
 {{% /md %}}</dd><dt class="property-required"
@@ -998,7 +1033,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#networkconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentnetworkconfiguration">Environment<wbr>Network<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#environmentnetworkconfiguration">pulumi.<wbr>Input<Environment<wbr>Network<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Specifies the network configuration for your Apache Airflow Environment. This includes two private subnets as well as security groups for the Airflow environment. Each subnet requires internet connection, otherwise the deployment will fail. See Network configuration below for details.
 {{% /md %}}</dd><dt class="property-required"
@@ -1007,7 +1042,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#sourcebucketarn_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Bucket<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of your Amazon S3 storage bucket. For example, arn:aws:s3:::airflow-mybucketname.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1016,7 +1051,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#airflowconfigurationoptions_nodejs" style="color: inherit; text-decoration: inherit;">airflow<wbr>Configuration<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}The `airflow_configuration_options` parameter specifies airflow override options. Check the [Official documentation](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-env-variables.html#configuring-env-variables-reference) for all possible configuration options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1025,7 +1060,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#airflowversion_nodejs" style="color: inherit; text-decoration: inherit;">airflow<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Airflow version of your environment, will be set by default to the latest version that MWAA supports.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1034,7 +1069,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#environmentclass_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Environment class for the cluster. Possible options are `mw1.small`, `mw1.medium`, `mw1.large`. Will be set by default to `mw1.small`. Please check the [AWS Pricing](https://aws.amazon.com/de/managed-workflows-for-apache-airflow/pricing/) for more information about the environment classes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1043,7 +1078,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#kmskey_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of your KMS key that you want to use for encryption. Will be set to the ARN of the managed KMS key `aws/airflow` by default. Please check the [Official Documentation](https://docs.aws.amazon.com/mwaa/latest/userguide/custom-keys-certs.html) for more information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1052,7 +1087,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#loggingconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentloggingconfiguration">Environment<wbr>Logging<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#environmentloggingconfiguration">pulumi.<wbr>Input<Environment<wbr>Logging<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The Apache Airflow logs you want to send to Amazon CloudWatch Logs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1061,7 +1096,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#maxworkers_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Workers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of workers that can be automatically scaled up. Value need to be between `1` and `25`. Will be `10` by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1070,7 +1105,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#minworkers_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Workers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The minimum number of workers that you want to run in your environment. Will be `1` by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1079,7 +1114,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Apache Airflow Environment
 {{% /md %}}</dd><dt class="property-optional"
@@ -1088,7 +1123,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#pluginss3objectversion_nodejs" style="color: inherit; text-decoration: inherit;">plugins<wbr>S3Object<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The plugins.zip file version you want to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1097,7 +1132,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#pluginss3path_nodejs" style="color: inherit; text-decoration: inherit;">plugins<wbr>S3Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The relative path to the plugins.zip file on your Amazon S3 storage bucket. For example, plugins.zip. If a relative path is provided in the request, then plugins_s3_object_version is required. For more information, see [Importing DAGs on Amazon MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-import.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1106,7 +1141,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#requirementss3objectversion_nodejs" style="color: inherit; text-decoration: inherit;">requirements<wbr>S3Object<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The requirements.txt file version you want to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1115,7 +1150,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#requirementss3path_nodejs" style="color: inherit; text-decoration: inherit;">requirements<wbr>S3Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The relative path to the requirements.txt file on your Amazon S3 storage bucket. For example, requirements.txt. If a relative path is provided in the request, then requirements_s3_object_version is required. For more information, see [Importing DAGs on Amazon MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-import.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1124,7 +1159,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}An array of key:value pairs to associate with the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1133,7 +1168,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#webserveraccessmode_nodejs" style="color: inherit; text-decoration: inherit;">webserver<wbr>Access<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies whether the webserver should be accessible over the internet or via your specified VPC. Possible options: `PRIVATE_ONLY` (default) and `PUBLIC_ONLY`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1142,7 +1177,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#weeklymaintenancewindowstart_nodejs" style="color: inherit; text-decoration: inherit;">weekly<wbr>Maintenance<wbr>Window<wbr>Start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the start date for the weekly maintenance window.
 {{% /md %}}</dd></dl>
@@ -1155,7 +1190,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#dag_s3_path_python" style="color: inherit; text-decoration: inherit;">dag_<wbr>s3_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The relative path to the DAG folder on your Amazon S3 storage bucket. For example, dags. For more information, see [Importing DAGs on Amazon MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-import.html).
 {{% /md %}}</dd><dt class="property-required"
@@ -1164,7 +1199,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#execution_role_arn_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the task execution role that the Amazon MWAA and its environment can assume. Check the [official AWS documentation](https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-create-role.html) for the detailed role specification.
 {{% /md %}}</dd><dt class="property-required"
@@ -1173,7 +1208,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#network_configuration_python" style="color: inherit; text-decoration: inherit;">network_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentnetworkconfiguration">Environment<wbr>Network<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentnetworkconfiguration">Input[Environment<wbr>Network<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the network configuration for your Apache Airflow Environment. This includes two private subnets as well as security groups for the Airflow environment. Each subnet requires internet connection, otherwise the deployment will fail. See Network configuration below for details.
 {{% /md %}}</dd><dt class="property-required"
@@ -1182,7 +1217,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#source_bucket_arn_python" style="color: inherit; text-decoration: inherit;">source_<wbr>bucket_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of your Amazon S3 storage bucket. For example, arn:aws:s3:::airflow-mybucketname.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1191,7 +1226,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#airflow_configuration_options_python" style="color: inherit; text-decoration: inherit;">airflow_<wbr>configuration_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The `airflow_configuration_options` parameter specifies airflow override options. Check the [Official documentation](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-env-variables.html#configuring-env-variables-reference) for all possible configuration options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1200,7 +1235,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#airflow_version_python" style="color: inherit; text-decoration: inherit;">airflow_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Airflow version of your environment, will be set by default to the latest version that MWAA supports.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1209,7 +1244,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#environment_class_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Environment class for the cluster. Possible options are `mw1.small`, `mw1.medium`, `mw1.large`. Will be set by default to `mw1.small`. Please check the [AWS Pricing](https://aws.amazon.com/de/managed-workflows-for-apache-airflow/pricing/) for more information about the environment classes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1218,7 +1253,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#kms_key_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of your KMS key that you want to use for encryption. Will be set to the ARN of the managed KMS key `aws/airflow` by default. Please check the [Official Documentation](https://docs.aws.amazon.com/mwaa/latest/userguide/custom-keys-certs.html) for more information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1227,7 +1262,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#logging_configuration_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentloggingconfiguration">Environment<wbr>Logging<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentloggingconfiguration">Input[Environment<wbr>Logging<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Apache Airflow logs you want to send to Amazon CloudWatch Logs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1236,7 +1271,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#max_workers_python" style="color: inherit; text-decoration: inherit;">max_<wbr>workers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of workers that can be automatically scaled up. Value need to be between `1` and `25`. Will be `10` by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1245,7 +1280,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#min_workers_python" style="color: inherit; text-decoration: inherit;">min_<wbr>workers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The minimum number of workers that you want to run in your environment. Will be `1` by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1254,7 +1289,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Apache Airflow Environment
 {{% /md %}}</dd><dt class="property-optional"
@@ -1263,7 +1298,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#plugins_s3_object_version_python" style="color: inherit; text-decoration: inherit;">plugins_<wbr>s3_<wbr>object_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The plugins.zip file version you want to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1272,7 +1307,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#plugins_s3_path_python" style="color: inherit; text-decoration: inherit;">plugins_<wbr>s3_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The relative path to the plugins.zip file on your Amazon S3 storage bucket. For example, plugins.zip. If a relative path is provided in the request, then plugins_s3_object_version is required. For more information, see [Importing DAGs on Amazon MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-import.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1281,7 +1316,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#requirements_s3_object_version_python" style="color: inherit; text-decoration: inherit;">requirements_<wbr>s3_<wbr>object_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The requirements.txt file version you want to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1290,7 +1325,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#requirements_s3_path_python" style="color: inherit; text-decoration: inherit;">requirements_<wbr>s3_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The relative path to the requirements.txt file on your Amazon S3 storage bucket. For example, requirements.txt. If a relative path is provided in the request, then requirements_s3_object_version is required. For more information, see [Importing DAGs on Amazon MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-import.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1299,7 +1334,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}An array of key:value pairs to associate with the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1308,7 +1343,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#webserver_access_mode_python" style="color: inherit; text-decoration: inherit;">webserver_<wbr>access_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies whether the webserver should be accessible over the internet or via your specified VPC. Possible options: `PRIVATE_ONLY` (default) and `PUBLIC_ONLY`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1317,7 +1352,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#weekly_maintenance_window_start_python" style="color: inherit; text-decoration: inherit;">weekly_<wbr>maintenance_<wbr>window_<wbr>start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the start date for the weekly maintenance window.
 {{% /md %}}</dd></dl>
@@ -1602,20 +1637,47 @@ Get an existing Environment resource's state with the given name, ID, and option
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">EnvironmentState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Environment</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">EnvironmentState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Environment</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">airflow_configuration_options</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">airflow_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dag_s3_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">environment_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">execution_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_updateds</span><span class="p">:</span> <span class="nx">Optional[Sequence[EnvironmentLastUpdatedArgs]]</span> = None<span class="p">, </span><span class="nx">logging_configuration</span><span class="p">:</span> <span class="nx">Optional[EnvironmentLoggingConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">max_workers</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_workers</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_configuration</span><span class="p">:</span> <span class="nx">Optional[EnvironmentNetworkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">plugins_s3_object_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plugins_s3_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">requirements_s3_object_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">requirements_s3_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_bucket_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">webserver_access_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">webserver_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">weekly_maintenance_window_start</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Environment</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">airflow_configuration_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">airflow_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">created_at</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">dag_s3_path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">environment_class</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">execution_role_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">kms_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">last_updateds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[EnvironmentLastUpdatedArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EnvironmentLoggingConfigurationArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">max_workers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">min_workers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">network_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EnvironmentNetworkConfigurationArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">plugins_s3_object_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">plugins_s3_path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">requirements_s3_object_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">requirements_s3_path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">service_role_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">source_bucket_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">webserver_access_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">webserver_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">weekly_maintenance_window_start</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Environment</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEnvironment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">EnvironmentState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Environment</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEnvironment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">EnvironmentState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Environment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Environment</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">EnvironmentState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Environment</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">EnvironmentState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2182,7 +2244,7 @@ The following state arguments are supported:
 <a href="#state_airflowconfigurationoptions_nodejs" style="color: inherit; text-decoration: inherit;">airflow<wbr>Configuration<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}The `airflow_configuration_options` parameter specifies airflow override options. Check the [Official documentation](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-env-variables.html#configuring-env-variables-reference) for all possible configuration options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2191,7 +2253,7 @@ The following state arguments are supported:
 <a href="#state_airflowversion_nodejs" style="color: inherit; text-decoration: inherit;">airflow<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Airflow version of your environment, will be set by default to the latest version that MWAA supports.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2200,7 +2262,7 @@ The following state arguments are supported:
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of the MWAA Environment
 {{% /md %}}</dd><dt class="property-optional"
@@ -2209,7 +2271,7 @@ The following state arguments are supported:
 <a href="#state_createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Created At date of the MWAA Environment
 * `logging_configuration.<LOG_TYPE>.cloud_watch_log_group_arn` - Provides the ARN for the CloudWatch group where the logs will be published
@@ -2219,7 +2281,7 @@ The following state arguments are supported:
 <a href="#state_dags3path_nodejs" style="color: inherit; text-decoration: inherit;">dag<wbr>S3Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The relative path to the DAG folder on your Amazon S3 storage bucket. For example, dags. For more information, see [Importing DAGs on Amazon MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-import.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2228,7 +2290,7 @@ The following state arguments are supported:
 <a href="#state_environmentclass_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Environment class for the cluster. Possible options are `mw1.small`, `mw1.medium`, `mw1.large`. Will be set by default to `mw1.small`. Please check the [AWS Pricing](https://aws.amazon.com/de/managed-workflows-for-apache-airflow/pricing/) for more information about the environment classes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2237,7 +2299,7 @@ The following state arguments are supported:
 <a href="#state_executionrolearn_nodejs" style="color: inherit; text-decoration: inherit;">execution<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the task execution role that the Amazon MWAA and its environment can assume. Check the [official AWS documentation](https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-create-role.html) for the detailed role specification.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2246,7 +2308,7 @@ The following state arguments are supported:
 <a href="#state_kmskey_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of your KMS key that you want to use for encryption. Will be set to the ARN of the managed KMS key `aws/airflow` by default. Please check the [Official Documentation](https://docs.aws.amazon.com/mwaa/latest/userguide/custom-keys-certs.html) for more information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2255,7 +2317,7 @@ The following state arguments are supported:
 <a href="#state_lastupdateds_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updateds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentlastupdated">Environment<wbr>Last<wbr>Updated[]</a></span>
+        <span class="property-type"><a href="#environmentlastupdated">pulumi.<wbr>Input<pulumi.<wbr>Input<Environment<wbr>Last<wbr>Updated<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2263,7 +2325,7 @@ The following state arguments are supported:
 <a href="#state_loggingconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentloggingconfiguration">Environment<wbr>Logging<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#environmentloggingconfiguration">pulumi.<wbr>Input<Environment<wbr>Logging<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The Apache Airflow logs you want to send to Amazon CloudWatch Logs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2272,7 +2334,7 @@ The following state arguments are supported:
 <a href="#state_maxworkers_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Workers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of workers that can be automatically scaled up. Value need to be between `1` and `25`. Will be `10` by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2281,7 +2343,7 @@ The following state arguments are supported:
 <a href="#state_minworkers_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Workers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The minimum number of workers that you want to run in your environment. Will be `1` by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2290,7 +2352,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Apache Airflow Environment
 {{% /md %}}</dd><dt class="property-optional"
@@ -2299,7 +2361,7 @@ The following state arguments are supported:
 <a href="#state_networkconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentnetworkconfiguration">Environment<wbr>Network<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#environmentnetworkconfiguration">pulumi.<wbr>Input<Environment<wbr>Network<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Specifies the network configuration for your Apache Airflow Environment. This includes two private subnets as well as security groups for the Airflow environment. Each subnet requires internet connection, otherwise the deployment will fail. See Network configuration below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2308,7 +2370,7 @@ The following state arguments are supported:
 <a href="#state_pluginss3objectversion_nodejs" style="color: inherit; text-decoration: inherit;">plugins<wbr>S3Object<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The plugins.zip file version you want to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2317,7 +2379,7 @@ The following state arguments are supported:
 <a href="#state_pluginss3path_nodejs" style="color: inherit; text-decoration: inherit;">plugins<wbr>S3Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The relative path to the plugins.zip file on your Amazon S3 storage bucket. For example, plugins.zip. If a relative path is provided in the request, then plugins_s3_object_version is required. For more information, see [Importing DAGs on Amazon MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-import.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2326,7 +2388,7 @@ The following state arguments are supported:
 <a href="#state_requirementss3objectversion_nodejs" style="color: inherit; text-decoration: inherit;">requirements<wbr>S3Object<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The requirements.txt file version you want to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2335,7 +2397,7 @@ The following state arguments are supported:
 <a href="#state_requirementss3path_nodejs" style="color: inherit; text-decoration: inherit;">requirements<wbr>S3Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The relative path to the requirements.txt file on your Amazon S3 storage bucket. For example, requirements.txt. If a relative path is provided in the request, then requirements_s3_object_version is required. For more information, see [Importing DAGs on Amazon MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-import.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2344,7 +2406,7 @@ The following state arguments are supported:
 <a href="#state_servicerolearn_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Service Role ARN of the Amazon MWAA Environment
 {{% /md %}}</dd><dt class="property-optional"
@@ -2353,7 +2415,7 @@ The following state arguments are supported:
 <a href="#state_sourcebucketarn_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Bucket<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of your Amazon S3 storage bucket. For example, arn:aws:s3:::airflow-mybucketname.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2362,7 +2424,7 @@ The following state arguments are supported:
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The status of the Amazon MWAA Environment
 {{% /md %}}</dd><dt class="property-optional"
@@ -2371,7 +2433,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}An array of key:value pairs to associate with the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2380,7 +2442,7 @@ The following state arguments are supported:
 <a href="#state_webserveraccessmode_nodejs" style="color: inherit; text-decoration: inherit;">webserver<wbr>Access<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies whether the webserver should be accessible over the internet or via your specified VPC. Possible options: `PRIVATE_ONLY` (default) and `PUBLIC_ONLY`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2389,7 +2451,7 @@ The following state arguments are supported:
 <a href="#state_webserverurl_nodejs" style="color: inherit; text-decoration: inherit;">webserver<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The webserver URL of the MWAA Environment
 {{% /md %}}</dd><dt class="property-optional"
@@ -2398,7 +2460,7 @@ The following state arguments are supported:
 <a href="#state_weeklymaintenancewindowstart_nodejs" style="color: inherit; text-decoration: inherit;">weekly<wbr>Maintenance<wbr>Window<wbr>Start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the start date for the weekly maintenance window.
 {{% /md %}}</dd></dl>
@@ -2411,7 +2473,7 @@ The following state arguments are supported:
 <a href="#state_airflow_configuration_options_python" style="color: inherit; text-decoration: inherit;">airflow_<wbr>configuration_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The `airflow_configuration_options` parameter specifies airflow override options. Check the [Official documentation](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-env-variables.html#configuring-env-variables-reference) for all possible configuration options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2420,7 +2482,7 @@ The following state arguments are supported:
 <a href="#state_airflow_version_python" style="color: inherit; text-decoration: inherit;">airflow_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Airflow version of your environment, will be set by default to the latest version that MWAA supports.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2429,7 +2491,7 @@ The following state arguments are supported:
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of the MWAA Environment
 {{% /md %}}</dd><dt class="property-optional"
@@ -2438,7 +2500,7 @@ The following state arguments are supported:
 <a href="#state_created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Created At date of the MWAA Environment
 * `logging_configuration.<LOG_TYPE>.cloud_watch_log_group_arn` - Provides the ARN for the CloudWatch group where the logs will be published
@@ -2448,7 +2510,7 @@ The following state arguments are supported:
 <a href="#state_dag_s3_path_python" style="color: inherit; text-decoration: inherit;">dag_<wbr>s3_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The relative path to the DAG folder on your Amazon S3 storage bucket. For example, dags. For more information, see [Importing DAGs on Amazon MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-import.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2457,7 +2519,7 @@ The following state arguments are supported:
 <a href="#state_environment_class_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Environment class for the cluster. Possible options are `mw1.small`, `mw1.medium`, `mw1.large`. Will be set by default to `mw1.small`. Please check the [AWS Pricing](https://aws.amazon.com/de/managed-workflows-for-apache-airflow/pricing/) for more information about the environment classes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2466,7 +2528,7 @@ The following state arguments are supported:
 <a href="#state_execution_role_arn_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the task execution role that the Amazon MWAA and its environment can assume. Check the [official AWS documentation](https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-create-role.html) for the detailed role specification.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2475,7 +2537,7 @@ The following state arguments are supported:
 <a href="#state_kms_key_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of your KMS key that you want to use for encryption. Will be set to the ARN of the managed KMS key `aws/airflow` by default. Please check the [Official Documentation](https://docs.aws.amazon.com/mwaa/latest/userguide/custom-keys-certs.html) for more information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2484,7 +2546,7 @@ The following state arguments are supported:
 <a href="#state_last_updateds_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updateds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentlastupdated">Sequence[Environment<wbr>Last<wbr>Updated<wbr>Args]</a></span>
+        <span class="property-type"><a href="#environmentlastupdated">Input[Environment<wbr>Last<wbr>Updated<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2492,7 +2554,7 @@ The following state arguments are supported:
 <a href="#state_logging_configuration_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentloggingconfiguration">Environment<wbr>Logging<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentloggingconfiguration">Input[Environment<wbr>Logging<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Apache Airflow logs you want to send to Amazon CloudWatch Logs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2501,7 +2563,7 @@ The following state arguments are supported:
 <a href="#state_max_workers_python" style="color: inherit; text-decoration: inherit;">max_<wbr>workers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of workers that can be automatically scaled up. Value need to be between `1` and `25`. Will be `10` by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2510,7 +2572,7 @@ The following state arguments are supported:
 <a href="#state_min_workers_python" style="color: inherit; text-decoration: inherit;">min_<wbr>workers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The minimum number of workers that you want to run in your environment. Will be `1` by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2519,7 +2581,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Apache Airflow Environment
 {{% /md %}}</dd><dt class="property-optional"
@@ -2528,7 +2590,7 @@ The following state arguments are supported:
 <a href="#state_network_configuration_python" style="color: inherit; text-decoration: inherit;">network_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentnetworkconfiguration">Environment<wbr>Network<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentnetworkconfiguration">Input[Environment<wbr>Network<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the network configuration for your Apache Airflow Environment. This includes two private subnets as well as security groups for the Airflow environment. Each subnet requires internet connection, otherwise the deployment will fail. See Network configuration below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2537,7 +2599,7 @@ The following state arguments are supported:
 <a href="#state_plugins_s3_object_version_python" style="color: inherit; text-decoration: inherit;">plugins_<wbr>s3_<wbr>object_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The plugins.zip file version you want to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2546,7 +2608,7 @@ The following state arguments are supported:
 <a href="#state_plugins_s3_path_python" style="color: inherit; text-decoration: inherit;">plugins_<wbr>s3_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The relative path to the plugins.zip file on your Amazon S3 storage bucket. For example, plugins.zip. If a relative path is provided in the request, then plugins_s3_object_version is required. For more information, see [Importing DAGs on Amazon MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-import.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2555,7 +2617,7 @@ The following state arguments are supported:
 <a href="#state_requirements_s3_object_version_python" style="color: inherit; text-decoration: inherit;">requirements_<wbr>s3_<wbr>object_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The requirements.txt file version you want to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2564,7 +2626,7 @@ The following state arguments are supported:
 <a href="#state_requirements_s3_path_python" style="color: inherit; text-decoration: inherit;">requirements_<wbr>s3_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The relative path to the requirements.txt file on your Amazon S3 storage bucket. For example, requirements.txt. If a relative path is provided in the request, then requirements_s3_object_version is required. For more information, see [Importing DAGs on Amazon MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-import.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2573,7 +2635,7 @@ The following state arguments are supported:
 <a href="#state_service_role_arn_python" style="color: inherit; text-decoration: inherit;">service_<wbr>role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Service Role ARN of the Amazon MWAA Environment
 {{% /md %}}</dd><dt class="property-optional"
@@ -2582,7 +2644,7 @@ The following state arguments are supported:
 <a href="#state_source_bucket_arn_python" style="color: inherit; text-decoration: inherit;">source_<wbr>bucket_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of your Amazon S3 storage bucket. For example, arn:aws:s3:::airflow-mybucketname.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2591,7 +2653,7 @@ The following state arguments are supported:
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The status of the Amazon MWAA Environment
 {{% /md %}}</dd><dt class="property-optional"
@@ -2600,7 +2662,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}An array of key:value pairs to associate with the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2609,7 +2671,7 @@ The following state arguments are supported:
 <a href="#state_webserver_access_mode_python" style="color: inherit; text-decoration: inherit;">webserver_<wbr>access_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies whether the webserver should be accessible over the internet or via your specified VPC. Possible options: `PRIVATE_ONLY` (default) and `PUBLIC_ONLY`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2618,7 +2680,7 @@ The following state arguments are supported:
 <a href="#state_webserver_url_python" style="color: inherit; text-decoration: inherit;">webserver_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The webserver URL of the MWAA Environment
 {{% /md %}}</dd><dt class="property-optional"
@@ -2627,7 +2689,7 @@ The following state arguments are supported:
 <a href="#state_weekly_maintenance_window_start_python" style="color: inherit; text-decoration: inherit;">weekly_<wbr>maintenance_<wbr>window_<wbr>start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the start date for the weekly maintenance window.
 {{% /md %}}</dd></dl>
@@ -2713,7 +2775,7 @@ The following state arguments are supported:
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Created At date of the MWAA Environment
 * `logging_configuration.<LOG_TYPE>.cloud_watch_log_group_arn` - Provides the ARN for the CloudWatch group where the logs will be published
@@ -2723,7 +2785,7 @@ The following state arguments are supported:
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentlastupdatederror">Environment<wbr>Last<wbr>Updated<wbr>Error[]</a></span>
+        <span class="property-type"><a href="#environmentlastupdatederror">pulumi.<wbr>Input<pulumi.<wbr>Input<Environment<wbr>Last<wbr>Updated<wbr>Error<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2731,7 +2793,7 @@ The following state arguments are supported:
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The status of the Amazon MWAA Environment
 {{% /md %}}</dd></dl>
@@ -2744,7 +2806,7 @@ The following state arguments are supported:
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Created At date of the MWAA Environment
 * `logging_configuration.<LOG_TYPE>.cloud_watch_log_group_arn` - Provides the ARN for the CloudWatch group where the logs will be published
@@ -2754,7 +2816,7 @@ The following state arguments are supported:
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentlastupdatederror">Sequence[Environment<wbr>Last<wbr>Updated<wbr>Error<wbr>Args]</a></span>
+        <span class="property-type"><a href="#environmentlastupdatederror">Input[Environment<wbr>Last<wbr>Updated<wbr>Error<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2762,7 +2824,7 @@ The following state arguments are supported:
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The status of the Amazon MWAA Environment
 {{% /md %}}</dd></dl>
@@ -2817,7 +2879,7 @@ The following state arguments are supported:
 <a href="#errorcode_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2825,7 +2887,7 @@ The following state arguments are supported:
 <a href="#errormessage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2837,7 +2899,7 @@ The following state arguments are supported:
 <a href="#error_code_python" style="color: inherit; text-decoration: inherit;">error_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2845,7 +2907,7 @@ The following state arguments are supported:
 <a href="#error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2957,7 +3019,7 @@ The following state arguments are supported:
 <a href="#dagprocessinglogs_nodejs" style="color: inherit; text-decoration: inherit;">dag<wbr>Processing<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentloggingconfigurationdagprocessinglogs">Environment<wbr>Logging<wbr>Configuration<wbr>Dag<wbr>Processing<wbr>Logs</a></span>
+        <span class="property-type"><a href="#environmentloggingconfigurationdagprocessinglogs">pulumi.<wbr>Input<Environment<wbr>Logging<wbr>Configuration<wbr>Dag<wbr>Processing<wbr>Logs<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}(Optional) Log configuration options for processing DAGs. See Module logging configuration for more information. Disabled by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2966,7 +3028,7 @@ The following state arguments are supported:
 <a href="#schedulerlogs_nodejs" style="color: inherit; text-decoration: inherit;">scheduler<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentloggingconfigurationschedulerlogs">Environment<wbr>Logging<wbr>Configuration<wbr>Scheduler<wbr>Logs</a></span>
+        <span class="property-type"><a href="#environmentloggingconfigurationschedulerlogs">pulumi.<wbr>Input<Environment<wbr>Logging<wbr>Configuration<wbr>Scheduler<wbr>Logs<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Log configuration options for the schedulers. See Module logging configuration for more information. Disabled by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2975,7 +3037,7 @@ The following state arguments are supported:
 <a href="#tasklogs_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentloggingconfigurationtasklogs">Environment<wbr>Logging<wbr>Configuration<wbr>Task<wbr>Logs</a></span>
+        <span class="property-type"><a href="#environmentloggingconfigurationtasklogs">pulumi.<wbr>Input<Environment<wbr>Logging<wbr>Configuration<wbr>Task<wbr>Logs<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Log configuration options for DAG tasks. See Module logging configuration for more information. Enabled by default with `INFO` log level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2984,7 +3046,7 @@ The following state arguments are supported:
 <a href="#webserverlogs_nodejs" style="color: inherit; text-decoration: inherit;">webserver<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentloggingconfigurationwebserverlogs">Environment<wbr>Logging<wbr>Configuration<wbr>Webserver<wbr>Logs</a></span>
+        <span class="property-type"><a href="#environmentloggingconfigurationwebserverlogs">pulumi.<wbr>Input<Environment<wbr>Logging<wbr>Configuration<wbr>Webserver<wbr>Logs<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Log configuration options for the webservers. See Module logging configuration for more information. Disabled by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2993,7 +3055,7 @@ The following state arguments are supported:
 <a href="#workerlogs_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentloggingconfigurationworkerlogs">Environment<wbr>Logging<wbr>Configuration<wbr>Worker<wbr>Logs</a></span>
+        <span class="property-type"><a href="#environmentloggingconfigurationworkerlogs">pulumi.<wbr>Input<Environment<wbr>Logging<wbr>Configuration<wbr>Worker<wbr>Logs<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Log configuration options for the workers. See Module logging configuration for more information. Disabled by default.
 {{% /md %}}</dd></dl>
@@ -3006,7 +3068,7 @@ The following state arguments are supported:
 <a href="#dag_processing_logs_python" style="color: inherit; text-decoration: inherit;">dag_<wbr>processing_<wbr>logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentloggingconfigurationdagprocessinglogs">Environment<wbr>Logging<wbr>Configuration<wbr>Dag<wbr>Processing<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentloggingconfigurationdagprocessinglogs">Input[Environment<wbr>Logging<wbr>Configuration<wbr>Dag<wbr>Processing<wbr>Logs<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Log configuration options for processing DAGs. See Module logging configuration for more information. Disabled by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3015,7 +3077,7 @@ The following state arguments are supported:
 <a href="#scheduler_logs_python" style="color: inherit; text-decoration: inherit;">scheduler_<wbr>logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentloggingconfigurationschedulerlogs">Environment<wbr>Logging<wbr>Configuration<wbr>Scheduler<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentloggingconfigurationschedulerlogs">Input[Environment<wbr>Logging<wbr>Configuration<wbr>Scheduler<wbr>Logs<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Log configuration options for the schedulers. See Module logging configuration for more information. Disabled by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3024,7 +3086,7 @@ The following state arguments are supported:
 <a href="#task_logs_python" style="color: inherit; text-decoration: inherit;">task_<wbr>logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentloggingconfigurationtasklogs">Environment<wbr>Logging<wbr>Configuration<wbr>Task<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentloggingconfigurationtasklogs">Input[Environment<wbr>Logging<wbr>Configuration<wbr>Task<wbr>Logs<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Log configuration options for DAG tasks. See Module logging configuration for more information. Enabled by default with `INFO` log level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3033,7 +3095,7 @@ The following state arguments are supported:
 <a href="#webserver_logs_python" style="color: inherit; text-decoration: inherit;">webserver_<wbr>logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentloggingconfigurationwebserverlogs">Environment<wbr>Logging<wbr>Configuration<wbr>Webserver<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentloggingconfigurationwebserverlogs">Input[Environment<wbr>Logging<wbr>Configuration<wbr>Webserver<wbr>Logs<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Log configuration options for the webservers. See Module logging configuration for more information. Disabled by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3042,7 +3104,7 @@ The following state arguments are supported:
 <a href="#worker_logs_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentloggingconfigurationworkerlogs">Environment<wbr>Logging<wbr>Configuration<wbr>Worker<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentloggingconfigurationworkerlogs">Input[Environment<wbr>Logging<wbr>Configuration<wbr>Worker<wbr>Logs<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Log configuration options for the workers. See Module logging configuration for more information. Disabled by default.
 {{% /md %}}</dd></dl>
@@ -3117,7 +3179,7 @@ The following state arguments are supported:
 <a href="#cloudwatchloggrouparn_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Watch<wbr>Log<wbr>Group<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3125,7 +3187,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enabling or disabling the collection of logs
 {{% /md %}}</dd><dt class="property-optional"
@@ -3134,7 +3196,7 @@ The following state arguments are supported:
 <a href="#loglevel_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Logging level. Valid values: `CRITICAL`, `ERROR`, `WARNING`, `INFO`, `DEBUG`. Will be `INFO` by default.
 {{% /md %}}</dd></dl>
@@ -3147,7 +3209,7 @@ The following state arguments are supported:
 <a href="#cloud_watch_log_group_arn_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>watch_<wbr>log_<wbr>group_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3155,7 +3217,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enabling or disabling the collection of logs
 {{% /md %}}</dd><dt class="property-optional"
@@ -3164,7 +3226,7 @@ The following state arguments are supported:
 <a href="#log_level_python" style="color: inherit; text-decoration: inherit;">log_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Logging level. Valid values: `CRITICAL`, `ERROR`, `WARNING`, `INFO`, `DEBUG`. Will be `INFO` by default.
 {{% /md %}}</dd></dl>
@@ -3239,7 +3301,7 @@ The following state arguments are supported:
 <a href="#cloudwatchloggrouparn_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Watch<wbr>Log<wbr>Group<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3247,7 +3309,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enabling or disabling the collection of logs
 {{% /md %}}</dd><dt class="property-optional"
@@ -3256,7 +3318,7 @@ The following state arguments are supported:
 <a href="#loglevel_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Logging level. Valid values: `CRITICAL`, `ERROR`, `WARNING`, `INFO`, `DEBUG`. Will be `INFO` by default.
 {{% /md %}}</dd></dl>
@@ -3269,7 +3331,7 @@ The following state arguments are supported:
 <a href="#cloud_watch_log_group_arn_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>watch_<wbr>log_<wbr>group_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3277,7 +3339,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enabling or disabling the collection of logs
 {{% /md %}}</dd><dt class="property-optional"
@@ -3286,7 +3348,7 @@ The following state arguments are supported:
 <a href="#log_level_python" style="color: inherit; text-decoration: inherit;">log_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Logging level. Valid values: `CRITICAL`, `ERROR`, `WARNING`, `INFO`, `DEBUG`. Will be `INFO` by default.
 {{% /md %}}</dd></dl>
@@ -3361,7 +3423,7 @@ The following state arguments are supported:
 <a href="#cloudwatchloggrouparn_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Watch<wbr>Log<wbr>Group<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3369,7 +3431,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enabling or disabling the collection of logs
 {{% /md %}}</dd><dt class="property-optional"
@@ -3378,7 +3440,7 @@ The following state arguments are supported:
 <a href="#loglevel_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Logging level. Valid values: `CRITICAL`, `ERROR`, `WARNING`, `INFO`, `DEBUG`. Will be `INFO` by default.
 {{% /md %}}</dd></dl>
@@ -3391,7 +3453,7 @@ The following state arguments are supported:
 <a href="#cloud_watch_log_group_arn_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>watch_<wbr>log_<wbr>group_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3399,7 +3461,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enabling or disabling the collection of logs
 {{% /md %}}</dd><dt class="property-optional"
@@ -3408,7 +3470,7 @@ The following state arguments are supported:
 <a href="#log_level_python" style="color: inherit; text-decoration: inherit;">log_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Logging level. Valid values: `CRITICAL`, `ERROR`, `WARNING`, `INFO`, `DEBUG`. Will be `INFO` by default.
 {{% /md %}}</dd></dl>
@@ -3483,7 +3545,7 @@ The following state arguments are supported:
 <a href="#cloudwatchloggrouparn_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Watch<wbr>Log<wbr>Group<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3491,7 +3553,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enabling or disabling the collection of logs
 {{% /md %}}</dd><dt class="property-optional"
@@ -3500,7 +3562,7 @@ The following state arguments are supported:
 <a href="#loglevel_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Logging level. Valid values: `CRITICAL`, `ERROR`, `WARNING`, `INFO`, `DEBUG`. Will be `INFO` by default.
 {{% /md %}}</dd></dl>
@@ -3513,7 +3575,7 @@ The following state arguments are supported:
 <a href="#cloud_watch_log_group_arn_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>watch_<wbr>log_<wbr>group_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3521,7 +3583,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enabling or disabling the collection of logs
 {{% /md %}}</dd><dt class="property-optional"
@@ -3530,7 +3592,7 @@ The following state arguments are supported:
 <a href="#log_level_python" style="color: inherit; text-decoration: inherit;">log_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Logging level. Valid values: `CRITICAL`, `ERROR`, `WARNING`, `INFO`, `DEBUG`. Will be `INFO` by default.
 {{% /md %}}</dd></dl>
@@ -3605,7 +3667,7 @@ The following state arguments are supported:
 <a href="#cloudwatchloggrouparn_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Watch<wbr>Log<wbr>Group<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3613,7 +3675,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enabling or disabling the collection of logs
 {{% /md %}}</dd><dt class="property-optional"
@@ -3622,7 +3684,7 @@ The following state arguments are supported:
 <a href="#loglevel_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Logging level. Valid values: `CRITICAL`, `ERROR`, `WARNING`, `INFO`, `DEBUG`. Will be `INFO` by default.
 {{% /md %}}</dd></dl>
@@ -3635,7 +3697,7 @@ The following state arguments are supported:
 <a href="#cloud_watch_log_group_arn_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>watch_<wbr>log_<wbr>group_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3643,7 +3705,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enabling or disabling the collection of logs
 {{% /md %}}</dd><dt class="property-optional"
@@ -3652,7 +3714,7 @@ The following state arguments are supported:
 <a href="#log_level_python" style="color: inherit; text-decoration: inherit;">log_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Logging level. Valid values: `CRITICAL`, `ERROR`, `WARNING`, `INFO`, `DEBUG`. Will be `INFO` by default.
 {{% /md %}}</dd></dl>
@@ -3711,7 +3773,7 @@ The following state arguments are supported:
 <a href="#securitygroupids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Security groups IDs for the environment. At least one of the security group needs to allow MWAA resources to talk to each other, otherwise MWAA cannot be provisioned.
 {{% /md %}}</dd><dt class="property-required"
@@ -3720,7 +3782,7 @@ The following state arguments are supported:
 <a href="#subnetids_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The private subnet IDs in which the environment should be created. MWAA requires two subnets.
 {{% /md %}}</dd></dl>
@@ -3733,7 +3795,7 @@ The following state arguments are supported:
 <a href="#security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Security groups IDs for the environment. At least one of the security group needs to allow MWAA resources to talk to each other, otherwise MWAA cannot be provisioned.
 {{% /md %}}</dd><dt class="property-required"
@@ -3742,7 +3804,7 @@ The following state arguments are supported:
 <a href="#subnet_ids_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The private subnet IDs in which the environment should be created. MWAA requires two subnets.
 {{% /md %}}</dd></dl>

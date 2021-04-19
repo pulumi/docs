@@ -53,8 +53,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/imagebuilder"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/imagebuilder"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -123,19 +123,31 @@ const example = new aws.imagebuilder.Image("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Image</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ImageArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Image</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ImageArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Image</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">distribution_configuration_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enhanced_image_metadata_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">image_recipe_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_tests_configuration</span><span class="p">:</span> <span class="nx">Optional[ImageImageTestsConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">infrastructure_configuration_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Image</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+          <span class="nx">distribution_configuration_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">enhanced_image_metadata_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+          <span class="nx">image_recipe_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">image_tests_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ImageImageTestsConfigurationArgs]]</span> = None<span class="p">,</span>
+          <span class="nx">infrastructure_configuration_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Image</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ImageArgs</a></span><span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewImage</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ImageArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Image</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewImage</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ImageArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Image</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Image</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ImageArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Image</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ImageArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -170,22 +182,32 @@ const example = new aws.imagebuilder.Image("example", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ImageArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -194,7 +216,7 @@ const example = new aws.imagebuilder.Image("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -218,7 +240,7 @@ const example = new aws.imagebuilder.Image("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -389,7 +411,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#imagerecipearn_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Recipe<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
 {{% /md %}}</dd><dt class="property-required"
@@ -398,7 +420,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#infrastructureconfigurationarn_nodejs" style="color: inherit; text-decoration: inherit;">infrastructure<wbr>Configuration<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Image Builder Infrastructure Configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -407,7 +429,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#distributionconfigurationarn_nodejs" style="color: inherit; text-decoration: inherit;">distribution<wbr>Configuration<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Image Builder Distribution Configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -416,7 +438,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#enhancedimagemetadataenabled_nodejs" style="color: inherit; text-decoration: inherit;">enhanced<wbr>Image<wbr>Metadata<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether additional information about the image being created is collected. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -425,7 +447,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#imagetestsconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Tests<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageimagetestsconfiguration">Image<wbr>Image<wbr>Tests<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#imageimagetestsconfiguration">pulumi.<wbr>Input<Image<wbr>Image<wbr>Tests<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block with image tests configuration. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -434,7 +456,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags for the Image Builder Image.
 {{% /md %}}</dd></dl>
@@ -447,7 +469,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#image_recipe_arn_python" style="color: inherit; text-decoration: inherit;">image_<wbr>recipe_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
 {{% /md %}}</dd><dt class="property-required"
@@ -456,7 +478,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#infrastructure_configuration_arn_python" style="color: inherit; text-decoration: inherit;">infrastructure_<wbr>configuration_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Image Builder Infrastructure Configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -465,7 +487,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#distribution_configuration_arn_python" style="color: inherit; text-decoration: inherit;">distribution_<wbr>configuration_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Image Builder Distribution Configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -474,7 +496,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#enhanced_image_metadata_enabled_python" style="color: inherit; text-decoration: inherit;">enhanced_<wbr>image_<wbr>metadata_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether additional information about the image being created is collected. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -483,7 +505,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#image_tests_configuration_python" style="color: inherit; text-decoration: inherit;">image_<wbr>tests_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageimagetestsconfiguration">Image<wbr>Image<wbr>Tests<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#imageimagetestsconfiguration">Input[Image<wbr>Image<wbr>Tests<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with image tests configuration. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -492,7 +514,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags for the Image Builder Image.
 {{% /md %}}</dd></dl>
@@ -813,20 +835,35 @@ Get an existing Image resource's state with the given name, ID, and optional ext
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ImageState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Image</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ImageState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Image</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">date_created</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">distribution_configuration_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enhanced_image_metadata_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">image_recipe_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_tests_configuration</span><span class="p">:</span> <span class="nx">Optional[ImageImageTestsConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">infrastructure_configuration_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_resources</span><span class="p">:</span> <span class="nx">Optional[Sequence[ImageOutputResourceArgs]]</span> = None<span class="p">, </span><span class="nx">platform</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Image</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">date_created</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">distribution_configuration_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">enhanced_image_metadata_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">image_recipe_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">image_tests_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ImageImageTestsConfigurationArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">infrastructure_configuration_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">os_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">output_resources</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ImageOutputResourceArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">platform</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Image</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetImage<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ImageState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Image</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetImage<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ImageState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Image</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Image</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ImageState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Image</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ImageState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1177,7 +1214,7 @@ The following state arguments are supported:
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the image.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1186,7 +1223,7 @@ The following state arguments are supported:
 <a href="#state_datecreated_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Created</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Date the image was created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1195,7 +1232,7 @@ The following state arguments are supported:
 <a href="#state_distributionconfigurationarn_nodejs" style="color: inherit; text-decoration: inherit;">distribution<wbr>Configuration<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Image Builder Distribution Configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1204,7 +1241,7 @@ The following state arguments are supported:
 <a href="#state_enhancedimagemetadataenabled_nodejs" style="color: inherit; text-decoration: inherit;">enhanced<wbr>Image<wbr>Metadata<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether additional information about the image being created is collected. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1213,7 +1250,7 @@ The following state arguments are supported:
 <a href="#state_imagerecipearn_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Recipe<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1222,7 +1259,7 @@ The following state arguments are supported:
 <a href="#state_imagetestsconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Tests<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageimagetestsconfiguration">Image<wbr>Image<wbr>Tests<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#imageimagetestsconfiguration">pulumi.<wbr>Input<Image<wbr>Image<wbr>Tests<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block with image tests configuration. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1231,7 +1268,7 @@ The following state arguments are supported:
 <a href="#state_infrastructureconfigurationarn_nodejs" style="color: inherit; text-decoration: inherit;">infrastructure<wbr>Configuration<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Image Builder Infrastructure Configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1240,7 +1277,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the AMI.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1249,7 +1286,7 @@ The following state arguments are supported:
 <a href="#state_osversion_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Operating System version of the image.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1258,7 +1295,7 @@ The following state arguments are supported:
 <a href="#state_outputresources_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageoutputresource">Image<wbr>Output<wbr>Resource[]</a></span>
+        <span class="property-type"><a href="#imageoutputresource">pulumi.<wbr>Input<pulumi.<wbr>Input<Image<wbr>Output<wbr>Resource<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of objects with resources created by the image.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1267,7 +1304,7 @@ The following state arguments are supported:
 <a href="#state_platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Platform of the image.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1276,7 +1313,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags for the Image Builder Image.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1285,7 +1322,7 @@ The following state arguments are supported:
 <a href="#state_version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Version of the image.
 {{% /md %}}</dd></dl>
@@ -1298,7 +1335,7 @@ The following state arguments are supported:
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the image.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1307,7 +1344,7 @@ The following state arguments are supported:
 <a href="#state_date_created_python" style="color: inherit; text-decoration: inherit;">date_<wbr>created</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Date the image was created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1316,7 +1353,7 @@ The following state arguments are supported:
 <a href="#state_distribution_configuration_arn_python" style="color: inherit; text-decoration: inherit;">distribution_<wbr>configuration_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Image Builder Distribution Configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1325,7 +1362,7 @@ The following state arguments are supported:
 <a href="#state_enhanced_image_metadata_enabled_python" style="color: inherit; text-decoration: inherit;">enhanced_<wbr>image_<wbr>metadata_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether additional information about the image being created is collected. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1334,7 +1371,7 @@ The following state arguments are supported:
 <a href="#state_image_recipe_arn_python" style="color: inherit; text-decoration: inherit;">image_<wbr>recipe_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1343,7 +1380,7 @@ The following state arguments are supported:
 <a href="#state_image_tests_configuration_python" style="color: inherit; text-decoration: inherit;">image_<wbr>tests_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageimagetestsconfiguration">Image<wbr>Image<wbr>Tests<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#imageimagetestsconfiguration">Input[Image<wbr>Image<wbr>Tests<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with image tests configuration. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1352,7 +1389,7 @@ The following state arguments are supported:
 <a href="#state_infrastructure_configuration_arn_python" style="color: inherit; text-decoration: inherit;">infrastructure_<wbr>configuration_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Image Builder Infrastructure Configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1361,7 +1398,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the AMI.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1370,7 +1407,7 @@ The following state arguments are supported:
 <a href="#state_os_version_python" style="color: inherit; text-decoration: inherit;">os_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Operating System version of the image.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1379,7 +1416,7 @@ The following state arguments are supported:
 <a href="#state_output_resources_python" style="color: inherit; text-decoration: inherit;">output_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageoutputresource">Sequence[Image<wbr>Output<wbr>Resource<wbr>Args]</a></span>
+        <span class="property-type"><a href="#imageoutputresource">Input[Image<wbr>Output<wbr>Resource<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of objects with resources created by the image.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1388,7 +1425,7 @@ The following state arguments are supported:
 <a href="#state_platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Platform of the image.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1397,7 +1434,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags for the Image Builder Image.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1406,7 +1443,7 @@ The following state arguments are supported:
 <a href="#state_version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Version of the image.
 {{% /md %}}</dd></dl>
@@ -1474,7 +1511,7 @@ The following state arguments are supported:
 <a href="#imagetestsenabled_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Tests<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether image tests are enabled. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1483,7 +1520,7 @@ The following state arguments are supported:
 <a href="#timeoutminutes_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of minutes before image tests time out. Valid values are between `60` and `1440`. Defaults to `720`.
 {{% /md %}}</dd></dl>
@@ -1496,7 +1533,7 @@ The following state arguments are supported:
 <a href="#image_tests_enabled_python" style="color: inherit; text-decoration: inherit;">image_<wbr>tests_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether image tests are enabled. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1505,7 +1542,7 @@ The following state arguments are supported:
 <a href="#timeout_minutes_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Number of minutes before image tests time out. Valid values are between `60` and `1440`. Defaults to `720`.
 {{% /md %}}</dd></dl>
@@ -1546,7 +1583,7 @@ The following state arguments are supported:
 <a href="#amis_nodejs" style="color: inherit; text-decoration: inherit;">amis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageoutputresourceami">Image<wbr>Output<wbr>Resource<wbr>Ami[]</a></span>
+        <span class="property-type"><a href="#imageoutputresourceami">pulumi.<wbr>Input<pulumi.<wbr>Input<Image<wbr>Output<wbr>Resource<wbr>Ami<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Set of objects with each Amazon Machine Image (AMI) created.
 {{% /md %}}</dd></dl>
@@ -1559,7 +1596,7 @@ The following state arguments are supported:
 <a href="#amis_python" style="color: inherit; text-decoration: inherit;">amis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageoutputresourceami">Sequence[Image<wbr>Output<wbr>Resource<wbr>Ami<wbr>Args]</a></span>
+        <span class="property-type"><a href="#imageoutputresourceami">Input[Image<wbr>Output<wbr>Resource<wbr>Ami<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Set of objects with each Amazon Machine Image (AMI) created.
 {{% /md %}}</dd></dl>
@@ -1672,7 +1709,7 @@ The following state arguments are supported:
 <a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Account identifier of the AMI.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1681,7 +1718,7 @@ The following state arguments are supported:
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description of the AMI.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1690,7 +1727,7 @@ The following state arguments are supported:
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Identifier of the AMI.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1699,7 +1736,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the AMI.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1708,7 +1745,7 @@ The following state arguments are supported:
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Region of the AMI.
 {{% /md %}}</dd></dl>
@@ -1721,7 +1758,7 @@ The following state arguments are supported:
 <a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Account identifier of the AMI.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1730,7 +1767,7 @@ The following state arguments are supported:
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description of the AMI.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1739,7 +1776,7 @@ The following state arguments are supported:
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Identifier of the AMI.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1748,7 +1785,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the AMI.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1757,7 +1794,7 @@ The following state arguments are supported:
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Region of the AMI.
 {{% /md %}}</dd></dl>

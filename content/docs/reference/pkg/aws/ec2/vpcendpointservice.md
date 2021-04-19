@@ -179,19 +179,31 @@ const example = new aws.ec2.VpcEndpointService("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VpcEndpointService</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VpcEndpointServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VpcEndpointService</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VpcEndpointServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VpcEndpointService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acceptance_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allowed_principals</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">gateway_load_balancer_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">network_load_balancer_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">private_dns_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">VpcEndpointService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                       <span class="nx">acceptance_required</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                       <span class="nx">allowed_principals</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                       <span class="nx">gateway_load_balancer_arns</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                       <span class="nx">network_load_balancer_arns</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                       <span class="nx">private_dns_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                       <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">VpcEndpointService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                       <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VpcEndpointServiceArgs</a></span><span class="p">,</span>
+                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVpcEndpointService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VpcEndpointServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VpcEndpointService</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVpcEndpointService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VpcEndpointServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VpcEndpointService</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VpcEndpointService</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VpcEndpointServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VpcEndpointService</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">VpcEndpointServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -226,22 +238,32 @@ const example = new aws.ec2.VpcEndpointService("example", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">VpcEndpointServiceArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -250,7 +272,7 @@ const example = new aws.ec2.VpcEndpointService("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -274,7 +296,7 @@ const example = new aws.ec2.VpcEndpointService("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -445,7 +467,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
 <a href="#acceptancerequired_nodejs" style="color: inherit; text-decoration: inherit;">acceptance<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -454,7 +476,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
 <a href="#allowedprincipals_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Principals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The ARNs of one or more principals allowed to discover the endpoint service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -463,7 +485,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
 <a href="#gatewayloadbalancerarns_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Load<wbr>Balancer<wbr>Arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Names (ARNs) of one or more Gateway Load Balancers for the endpoint service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -472,7 +494,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
 <a href="#networkloadbalancerarns_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Load<wbr>Balancer<wbr>Arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Names (ARNs) of one or more Network Load Balancers for the endpoint service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -481,7 +503,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
 <a href="#privatednsname_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Dns<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The private DNS name for the service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -490,7 +512,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -503,7 +525,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
 <a href="#acceptance_required_python" style="color: inherit; text-decoration: inherit;">acceptance_<wbr>required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -512,7 +534,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
 <a href="#allowed_principals_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>principals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The ARNs of one or more principals allowed to discover the endpoint service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -521,7 +543,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
 <a href="#gateway_load_balancer_arns_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>load_<wbr>balancer_<wbr>arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Names (ARNs) of one or more Gateway Load Balancers for the endpoint service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -530,7 +552,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
 <a href="#network_load_balancer_arns_python" style="color: inherit; text-decoration: inherit;">network_<wbr>load_<wbr>balancer_<wbr>arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Names (ARNs) of one or more Network Load Balancers for the endpoint service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -539,7 +561,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
 <a href="#private_dns_name_python" style="color: inherit; text-decoration: inherit;">private_<wbr>dns_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The private DNS name for the service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -548,7 +570,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -905,20 +927,36 @@ Get an existing VpcEndpointService resource's state with the given name, ID, and
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">VpcEndpointServiceState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">VpcEndpointService</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">VpcEndpointServiceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">VpcEndpointService</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acceptance_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allowed_principals</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">base_endpoint_dns_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">gateway_load_balancer_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">manages_vpc_endpoints</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">network_load_balancer_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">private_dns_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_dns_name_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpcEndpointServicePrivateDnsNameConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> VpcEndpointService</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">acceptance_required</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">allowed_principals</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">base_endpoint_dns_names</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">gateway_load_balancer_arns</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">manages_vpc_endpoints</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">network_load_balancer_arns</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">private_dns_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">private_dns_name_configurations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[VpcEndpointServicePrivateDnsNameConfigurationArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> VpcEndpointService</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVpcEndpointService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">VpcEndpointServiceState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VpcEndpointService</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVpcEndpointService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">VpcEndpointServiceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VpcEndpointService</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">VpcEndpointService</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">VpcEndpointServiceState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">VpcEndpointService</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">VpcEndpointServiceState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1287,7 +1325,7 @@ The following state arguments are supported:
 <a href="#state_acceptancerequired_nodejs" style="color: inherit; text-decoration: inherit;">acceptance<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1296,7 +1334,7 @@ The following state arguments are supported:
 <a href="#state_allowedprincipals_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Principals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The ARNs of one or more principals allowed to discover the endpoint service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1305,7 +1343,7 @@ The following state arguments are supported:
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the VPC endpoint service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1314,7 +1352,7 @@ The following state arguments are supported:
 <a href="#state_availabilityzones_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The Availability Zones in which the service is available.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1323,7 +1361,7 @@ The following state arguments are supported:
 <a href="#state_baseendpointdnsnames_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Endpoint<wbr>Dns<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The DNS names for the service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1332,7 +1370,7 @@ The following state arguments are supported:
 <a href="#state_gatewayloadbalancerarns_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Load<wbr>Balancer<wbr>Arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Names (ARNs) of one or more Gateway Load Balancers for the endpoint service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1341,7 +1379,7 @@ The following state arguments are supported:
 <a href="#state_managesvpcendpoints_nodejs" style="color: inherit; text-decoration: inherit;">manages<wbr>Vpc<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether or not the service manages its VPC endpoints - `true` or `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1350,7 +1388,7 @@ The following state arguments are supported:
 <a href="#state_networkloadbalancerarns_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Load<wbr>Balancer<wbr>Arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Names (ARNs) of one or more Network Load Balancers for the endpoint service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1359,7 +1397,7 @@ The following state arguments are supported:
 <a href="#state_privatednsname_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Dns<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The private DNS name for the service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1368,7 +1406,7 @@ The following state arguments are supported:
 <a href="#state_privatednsnameconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Dns<wbr>Name<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcendpointserviceprivatednsnameconfiguration">Vpc<wbr>Endpoint<wbr>Service<wbr>Private<wbr>Dns<wbr>Name<wbr>Configuration[]</a></span>
+        <span class="property-type"><a href="#vpcendpointserviceprivatednsnameconfiguration">pulumi.<wbr>Input<pulumi.<wbr>Input<Vpc<wbr>Endpoint<wbr>Service<wbr>Private<wbr>Dns<wbr>Name<wbr>Configuration<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of objects containing information about the endpoint service private DNS name configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1377,7 +1415,7 @@ The following state arguments are supported:
 <a href="#state_servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The service name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1386,7 +1424,7 @@ The following state arguments are supported:
 <a href="#state_servicetype_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The service type, `Gateway` or `Interface`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1395,7 +1433,7 @@ The following state arguments are supported:
 <a href="#state_state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Verification state of the VPC endpoint service. Consumers of the endpoint service can use the private name only when the state is `verified`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1404,7 +1442,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -1417,7 +1455,7 @@ The following state arguments are supported:
 <a href="#state_acceptance_required_python" style="color: inherit; text-decoration: inherit;">acceptance_<wbr>required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1426,7 +1464,7 @@ The following state arguments are supported:
 <a href="#state_allowed_principals_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>principals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The ARNs of one or more principals allowed to discover the endpoint service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1435,7 +1473,7 @@ The following state arguments are supported:
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the VPC endpoint service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1444,7 +1482,7 @@ The following state arguments are supported:
 <a href="#state_availability_zones_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The Availability Zones in which the service is available.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1453,7 +1491,7 @@ The following state arguments are supported:
 <a href="#state_base_endpoint_dns_names_python" style="color: inherit; text-decoration: inherit;">base_<wbr>endpoint_<wbr>dns_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The DNS names for the service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1462,7 +1500,7 @@ The following state arguments are supported:
 <a href="#state_gateway_load_balancer_arns_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>load_<wbr>balancer_<wbr>arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Names (ARNs) of one or more Gateway Load Balancers for the endpoint service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1471,7 +1509,7 @@ The following state arguments are supported:
 <a href="#state_manages_vpc_endpoints_python" style="color: inherit; text-decoration: inherit;">manages_<wbr>vpc_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether or not the service manages its VPC endpoints - `true` or `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1480,7 +1518,7 @@ The following state arguments are supported:
 <a href="#state_network_load_balancer_arns_python" style="color: inherit; text-decoration: inherit;">network_<wbr>load_<wbr>balancer_<wbr>arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Names (ARNs) of one or more Network Load Balancers for the endpoint service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1489,7 +1527,7 @@ The following state arguments are supported:
 <a href="#state_private_dns_name_python" style="color: inherit; text-decoration: inherit;">private_<wbr>dns_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The private DNS name for the service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1498,7 +1536,7 @@ The following state arguments are supported:
 <a href="#state_private_dns_name_configurations_python" style="color: inherit; text-decoration: inherit;">private_<wbr>dns_<wbr>name_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcendpointserviceprivatednsnameconfiguration">Sequence[Vpc<wbr>Endpoint<wbr>Service<wbr>Private<wbr>Dns<wbr>Name<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vpcendpointserviceprivatednsnameconfiguration">Input[Vpc<wbr>Endpoint<wbr>Service<wbr>Private<wbr>Dns<wbr>Name<wbr>Configuration<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of objects containing information about the endpoint service private DNS name configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1507,7 +1545,7 @@ The following state arguments are supported:
 <a href="#state_service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The service name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1516,7 +1554,7 @@ The following state arguments are supported:
 <a href="#state_service_type_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The service type, `Gateway` or `Interface`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1525,7 +1563,7 @@ The following state arguments are supported:
 <a href="#state_state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Verification state of the VPC endpoint service. Consumers of the endpoint service can use the private name only when the state is `verified`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1534,7 +1572,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -1638,7 +1676,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the record subdomain the service provider needs to create.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1647,7 +1685,7 @@ The following state arguments are supported:
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Verification state of the VPC endpoint service. Consumers of the endpoint service can use the private name only when the state is `verified`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1656,7 +1694,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Endpoint service verification type, for example `TXT`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1665,7 +1703,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Value the service provider adds to the private DNS name domain record before verification.
 {{% /md %}}</dd></dl>
@@ -1678,7 +1716,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the record subdomain the service provider needs to create.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1687,7 +1725,7 @@ The following state arguments are supported:
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Verification state of the VPC endpoint service. Consumers of the endpoint service can use the private name only when the state is `verified`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1696,7 +1734,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Endpoint service verification type, for example `TXT`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1705,7 +1743,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Value the service provider adds to the private DNS name domain record before verification.
 {{% /md %}}</dd></dl>

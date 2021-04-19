@@ -113,8 +113,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticbeanstalk"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/elasticbeanstalk"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -193,8 +193,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticbeanstalk"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/elasticbeanstalk"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -268,19 +268,38 @@ const tfenvtest = new aws.elasticbeanstalk.Environment("tfenvtest", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Environment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EnvironmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Environment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EnvironmentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Environment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cname_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">platform_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">poll_interval</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[EnvironmentSettingArgs]]</span> = None<span class="p">, </span><span class="nx">solution_stack_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">template_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_for_ready_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Environment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                <span class="nx">application</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">cname_prefix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">platform_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">poll_interval</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[EnvironmentSettingArgs]]]]</span> = None<span class="p">,</span>
+                <span class="nx">solution_stack_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                <span class="nx">template_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">wait_for_ready_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Environment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EnvironmentArgs</a></span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEnvironment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EnvironmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Environment</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEnvironment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EnvironmentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Environment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Environment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">EnvironmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Environment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">EnvironmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -315,22 +334,32 @@ const tfenvtest = new aws.elasticbeanstalk.Environment("tfenvtest", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">EnvironmentArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -339,7 +368,7 @@ const tfenvtest = new aws.elasticbeanstalk.Environment("tfenvtest", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -363,7 +392,7 @@ const tfenvtest = new aws.elasticbeanstalk.Environment("tfenvtest", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -692,7 +721,7 @@ out.
 <a href="#application_nodejs" style="color: inherit; text-decoration: inherit;">application</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Application</span>
+        <span class="property-type">pulumi.<wbr>Input<string> | pulumi.<wbr>Input<Application></span>
     </dt>
     <dd>{{% md %}}Name of the application that contains the version
 to be deployed
@@ -702,7 +731,7 @@ to be deployed
 <a href="#cnameprefix_nodejs" style="color: inherit; text-decoration: inherit;">cname<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Prefix to use for the fully qualified DNS name of
 the Environment.
@@ -712,7 +741,7 @@ the Environment.
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Short description of the Environment
 {{% /md %}}</dd><dt class="property-optional"
@@ -721,7 +750,7 @@ the Environment.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name for this Environment. This name is used
 in the application URL
@@ -731,7 +760,7 @@ in the application URL
 <a href="#platformarn_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the Elastic Beanstalk [Platform](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html#cfn-beanstalk-environment-platformarn)
 to use in deployment
@@ -741,7 +770,7 @@ to use in deployment
 <a href="#pollinterval_nodejs" style="color: inherit; text-decoration: inherit;">poll<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The time between polling the AWS API to
 check if changes have been applied. Use this to adjust the rate of API calls
@@ -753,7 +782,7 @@ use the default behavior, which is an exponential backoff
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentsetting">Environment<wbr>Setting[]</a></span>
+        <span class="property-type"><a href="#environmentsetting">pulumi.<wbr>Input<pulumi.<wbr>Input<Environment<wbr>Setting<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed
@@ -764,7 +793,7 @@ below in Option Settings
 <a href="#solutionstackname_nodejs" style="color: inherit; text-decoration: inherit;">solution<wbr>Stack<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A solution stack to base your environment
 off of. Example stacks can be found in the [Amazon API documentation](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html)
@@ -774,7 +803,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A set of tags to apply to the Environment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -783,7 +812,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
 <a href="#templatename_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Elastic Beanstalk Configuration
 template to use in deployment
@@ -793,7 +822,7 @@ template to use in deployment
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Elastic Beanstalk Environment tier. Valid values are `Worker`
 or `WebServer`. If tier is left blank `WebServer` will be used.
@@ -803,7 +832,7 @@ or `WebServer`. If tier is left blank `WebServer` will be used.
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Application<wbr>Version</span>
+        <span class="property-type">pulumi.<wbr>Input<Application<wbr>Version></span>
     </dt>
     <dd>{{% md %}}The name of the Elastic Beanstalk Application Version
 to use in deployment.
@@ -813,7 +842,7 @@ to use in deployment.
 <a href="#waitforreadytimeout_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Ready<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The maximum
 [duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
@@ -829,7 +858,7 @@ out.
 <a href="#application_python" style="color: inherit; text-decoration: inherit;">application</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | str</span>
+        <span class="property-type">pulumi.<wbr>Input[str] | Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the application that contains the version
 to be deployed
@@ -839,7 +868,7 @@ to be deployed
 <a href="#cname_prefix_python" style="color: inherit; text-decoration: inherit;">cname_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Prefix to use for the fully qualified DNS name of
 the Environment.
@@ -849,7 +878,7 @@ the Environment.
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Short description of the Environment
 {{% /md %}}</dd><dt class="property-optional"
@@ -858,7 +887,7 @@ the Environment.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name for this Environment. This name is used
 in the application URL
@@ -868,7 +897,7 @@ in the application URL
 <a href="#platform_arn_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the Elastic Beanstalk [Platform](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html#cfn-beanstalk-environment-platformarn)
 to use in deployment
@@ -878,7 +907,7 @@ to use in deployment
 <a href="#poll_interval_python" style="color: inherit; text-decoration: inherit;">poll_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The time between polling the AWS API to
 check if changes have been applied. Use this to adjust the rate of API calls
@@ -890,7 +919,7 @@ use the default behavior, which is an exponential backoff
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentsetting">Sequence[Environment<wbr>Setting<wbr>Args]</a></span>
+        <span class="property-type"><a href="#environmentsetting">Input[Environment<wbr>Setting<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed
@@ -901,7 +930,7 @@ below in Option Settings
 <a href="#solution_stack_name_python" style="color: inherit; text-decoration: inherit;">solution_<wbr>stack_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A solution stack to base your environment
 off of. Example stacks can be found in the [Amazon API documentation](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html)
@@ -911,7 +940,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A set of tags to apply to the Environment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -920,7 +949,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
 <a href="#template_name_python" style="color: inherit; text-decoration: inherit;">template_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Elastic Beanstalk Configuration
 template to use in deployment
@@ -930,7 +959,7 @@ template to use in deployment
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Elastic Beanstalk Environment tier. Valid values are `Worker`
 or `WebServer`. If tier is left blank `WebServer` will be used.
@@ -940,7 +969,7 @@ or `WebServer`. If tier is left blank `WebServer` will be used.
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Elastic Beanstalk Application Version
 to use in deployment.
@@ -950,7 +979,7 @@ to use in deployment.
 <a href="#wait_for_ready_timeout_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>ready_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The maximum
 [duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
@@ -1386,20 +1415,45 @@ Get an existing Environment resource's state with the given name, ID, and option
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">EnvironmentState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Environment</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">EnvironmentState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Environment</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">all_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[EnvironmentAllSettingArgs]]</span> = None<span class="p">, </span><span class="nx">application</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">autoscaling_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">cname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cname_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instances</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">launch_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">platform_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">poll_interval</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">queues</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[EnvironmentSettingArgs]]</span> = None<span class="p">, </span><span class="nx">solution_stack_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">template_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">triggers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_for_ready_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Environment</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">all_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[EnvironmentAllSettingArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">application</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">autoscaling_groups</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">cname</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">cname_prefix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">endpoint_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">instances</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">launch_configurations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">platform_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">poll_interval</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">queues</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[EnvironmentSettingArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">solution_stack_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">template_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">triggers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">wait_for_ready_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Environment</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEnvironment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">EnvironmentState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Environment</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEnvironment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">EnvironmentState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Environment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Environment</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">EnvironmentState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Environment</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">EnvironmentState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1964,7 +2018,7 @@ out.
 <a href="#state_allsettings_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentallsetting">Environment<wbr>All<wbr>Setting[]</a></span>
+        <span class="property-type"><a href="#environmentallsetting">pulumi.<wbr>Input<pulumi.<wbr>Input<Environment<wbr>All<wbr>Setting<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of all option settings configured in this Environment. These
 are a combination of default settings and their overrides from `setting` in
@@ -1975,7 +2029,7 @@ the configuration.
 <a href="#state_application_nodejs" style="color: inherit; text-decoration: inherit;">application</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Application</span>
+        <span class="property-type">pulumi.<wbr>Input<string> | pulumi.<wbr>Input<Application></span>
     </dt>
     <dd>{{% md %}}Name of the application that contains the version
 to be deployed
@@ -1985,7 +2039,7 @@ to be deployed
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1993,7 +2047,7 @@ to be deployed
 <a href="#state_autoscalinggroups_nodejs" style="color: inherit; text-decoration: inherit;">autoscaling<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The autoscaling groups used by this Environment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2002,7 +2056,7 @@ to be deployed
 <a href="#state_cname_nodejs" style="color: inherit; text-decoration: inherit;">cname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Fully qualified DNS name for this Environment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2011,7 +2065,7 @@ to be deployed
 <a href="#state_cnameprefix_nodejs" style="color: inherit; text-decoration: inherit;">cname<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Prefix to use for the fully qualified DNS name of
 the Environment.
@@ -2021,7 +2075,7 @@ the Environment.
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Short description of the Environment
 {{% /md %}}</dd><dt class="property-optional"
@@ -2030,7 +2084,7 @@ the Environment.
 <a href="#state_endpointurl_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The URL to the Load Balancer for this Environment
 {{% /md %}}</dd><dt class="property-optional"
@@ -2039,7 +2093,7 @@ the Environment.
 <a href="#state_instances_nodejs" style="color: inherit; text-decoration: inherit;">instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Instances used by this Environment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2048,7 +2102,7 @@ the Environment.
 <a href="#state_launchconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Launch configurations in use by this Environment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2057,7 +2111,7 @@ the Environment.
 <a href="#state_loadbalancers_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Elastic load balancers in use by this Environment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2066,7 +2120,7 @@ the Environment.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name for this Environment. This name is used
 in the application URL
@@ -2076,7 +2130,7 @@ in the application URL
 <a href="#state_platformarn_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the Elastic Beanstalk [Platform](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html#cfn-beanstalk-environment-platformarn)
 to use in deployment
@@ -2086,7 +2140,7 @@ to use in deployment
 <a href="#state_pollinterval_nodejs" style="color: inherit; text-decoration: inherit;">poll<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The time between polling the AWS API to
 check if changes have been applied. Use this to adjust the rate of API calls
@@ -2098,7 +2152,7 @@ use the default behavior, which is an exponential backoff
 <a href="#state_queues_nodejs" style="color: inherit; text-decoration: inherit;">queues</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}SQS queues in use by this Environment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2107,7 +2161,7 @@ use the default behavior, which is an exponential backoff
 <a href="#state_settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentsetting">Environment<wbr>Setting[]</a></span>
+        <span class="property-type"><a href="#environmentsetting">pulumi.<wbr>Input<pulumi.<wbr>Input<Environment<wbr>Setting<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed
@@ -2118,7 +2172,7 @@ below in Option Settings
 <a href="#state_solutionstackname_nodejs" style="color: inherit; text-decoration: inherit;">solution<wbr>Stack<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A solution stack to base your environment
 off of. Example stacks can be found in the [Amazon API documentation](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html)
@@ -2128,7 +2182,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A set of tags to apply to the Environment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2137,7 +2191,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
 <a href="#state_templatename_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Elastic Beanstalk Configuration
 template to use in deployment
@@ -2147,7 +2201,7 @@ template to use in deployment
 <a href="#state_tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Elastic Beanstalk Environment tier. Valid values are `Worker`
 or `WebServer`. If tier is left blank `WebServer` will be used.
@@ -2157,7 +2211,7 @@ or `WebServer`. If tier is left blank `WebServer` will be used.
 <a href="#state_triggers_nodejs" style="color: inherit; text-decoration: inherit;">triggers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Autoscaling triggers in use by this Environment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2166,7 +2220,7 @@ or `WebServer`. If tier is left blank `WebServer` will be used.
 <a href="#state_version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Application<wbr>Version</span>
+        <span class="property-type">pulumi.<wbr>Input<Application<wbr>Version></span>
     </dt>
     <dd>{{% md %}}The name of the Elastic Beanstalk Application Version
 to use in deployment.
@@ -2176,7 +2230,7 @@ to use in deployment.
 <a href="#state_waitforreadytimeout_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Ready<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The maximum
 [duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
@@ -2192,7 +2246,7 @@ out.
 <a href="#state_all_settings_python" style="color: inherit; text-decoration: inherit;">all_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentallsetting">Sequence[Environment<wbr>All<wbr>Setting<wbr>Args]</a></span>
+        <span class="property-type"><a href="#environmentallsetting">Input[Environment<wbr>All<wbr>Setting<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of all option settings configured in this Environment. These
 are a combination of default settings and their overrides from `setting` in
@@ -2203,7 +2257,7 @@ the configuration.
 <a href="#state_application_python" style="color: inherit; text-decoration: inherit;">application</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | str</span>
+        <span class="property-type">pulumi.<wbr>Input[str] | Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the application that contains the version
 to be deployed
@@ -2213,7 +2267,7 @@ to be deployed
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2221,7 +2275,7 @@ to be deployed
 <a href="#state_autoscaling_groups_python" style="color: inherit; text-decoration: inherit;">autoscaling_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The autoscaling groups used by this Environment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2230,7 +2284,7 @@ to be deployed
 <a href="#state_cname_python" style="color: inherit; text-decoration: inherit;">cname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Fully qualified DNS name for this Environment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2239,7 +2293,7 @@ to be deployed
 <a href="#state_cname_prefix_python" style="color: inherit; text-decoration: inherit;">cname_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Prefix to use for the fully qualified DNS name of
 the Environment.
@@ -2249,7 +2303,7 @@ the Environment.
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Short description of the Environment
 {{% /md %}}</dd><dt class="property-optional"
@@ -2258,7 +2312,7 @@ the Environment.
 <a href="#state_endpoint_url_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The URL to the Load Balancer for this Environment
 {{% /md %}}</dd><dt class="property-optional"
@@ -2267,7 +2321,7 @@ the Environment.
 <a href="#state_instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Instances used by this Environment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2276,7 +2330,7 @@ the Environment.
 <a href="#state_launch_configurations_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Launch configurations in use by this Environment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2285,7 +2339,7 @@ the Environment.
 <a href="#state_load_balancers_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Elastic load balancers in use by this Environment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2294,7 +2348,7 @@ the Environment.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name for this Environment. This name is used
 in the application URL
@@ -2304,7 +2358,7 @@ in the application URL
 <a href="#state_platform_arn_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the Elastic Beanstalk [Platform](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html#cfn-beanstalk-environment-platformarn)
 to use in deployment
@@ -2314,7 +2368,7 @@ to use in deployment
 <a href="#state_poll_interval_python" style="color: inherit; text-decoration: inherit;">poll_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The time between polling the AWS API to
 check if changes have been applied. Use this to adjust the rate of API calls
@@ -2326,7 +2380,7 @@ use the default behavior, which is an exponential backoff
 <a href="#state_queues_python" style="color: inherit; text-decoration: inherit;">queues</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}SQS queues in use by this Environment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2335,7 +2389,7 @@ use the default behavior, which is an exponential backoff
 <a href="#state_settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentsetting">Sequence[Environment<wbr>Setting<wbr>Args]</a></span>
+        <span class="property-type"><a href="#environmentsetting">Input[Environment<wbr>Setting<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed
@@ -2346,7 +2400,7 @@ below in Option Settings
 <a href="#state_solution_stack_name_python" style="color: inherit; text-decoration: inherit;">solution_<wbr>stack_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A solution stack to base your environment
 off of. Example stacks can be found in the [Amazon API documentation](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html)
@@ -2356,7 +2410,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A set of tags to apply to the Environment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2365,7 +2419,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
 <a href="#state_template_name_python" style="color: inherit; text-decoration: inherit;">template_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Elastic Beanstalk Configuration
 template to use in deployment
@@ -2375,7 +2429,7 @@ template to use in deployment
 <a href="#state_tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Elastic Beanstalk Environment tier. Valid values are `Worker`
 or `WebServer`. If tier is left blank `WebServer` will be used.
@@ -2385,7 +2439,7 @@ or `WebServer`. If tier is left blank `WebServer` will be used.
 <a href="#state_triggers_python" style="color: inherit; text-decoration: inherit;">triggers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Autoscaling triggers in use by this Environment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2394,7 +2448,7 @@ or `WebServer`. If tier is left blank `WebServer` will be used.
 <a href="#state_version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Elastic Beanstalk Application Version
 to use in deployment.
@@ -2404,7 +2458,7 @@ to use in deployment.
 <a href="#state_wait_for_ready_timeout_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>ready_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The maximum
 [duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
@@ -2507,7 +2561,7 @@ in the application URL
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name for this Environment. This name is used
 in the application URL
@@ -2517,7 +2571,7 @@ in the application URL
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2525,7 +2579,7 @@ in the application URL
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2533,7 +2587,7 @@ in the application URL
 <a href="#resource_nodejs" style="color: inherit; text-decoration: inherit;">resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2545,7 +2599,7 @@ in the application URL
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name for this Environment. This name is used
 in the application URL
@@ -2555,7 +2609,7 @@ in the application URL
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2563,7 +2617,7 @@ in the application URL
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2571,7 +2625,7 @@ in the application URL
 <a href="#resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2661,7 +2715,7 @@ in the application URL
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name for this Environment. This name is used
 in the application URL
@@ -2671,7 +2725,7 @@ in the application URL
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2679,7 +2733,7 @@ in the application URL
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2687,7 +2741,7 @@ in the application URL
 <a href="#resource_nodejs" style="color: inherit; text-decoration: inherit;">resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2699,7 +2753,7 @@ in the application URL
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name for this Environment. This name is used
 in the application URL
@@ -2709,7 +2763,7 @@ in the application URL
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2717,7 +2771,7 @@ in the application URL
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2725,7 +2779,7 @@ in the application URL
 <a href="#resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
