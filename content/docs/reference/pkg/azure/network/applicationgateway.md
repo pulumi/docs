@@ -168,9 +168,9 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -469,19 +469,52 @@ const network = new azure.network.ApplicationGateway("network", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ApplicationGateway</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApplicationGatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ApplicationGateway</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApplicationGatewayArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ApplicationGateway</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authentication_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationGatewayAuthenticationCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">autoscale_configuration</span><span class="p">:</span> <span class="nx">Optional[ApplicationGatewayAutoscaleConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">backend_address_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationGatewayBackendAddressPoolArgs]]</span> = None<span class="p">, </span><span class="nx">backend_http_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationGatewayBackendHttpSettingArgs]]</span> = None<span class="p">, </span><span class="nx">custom_error_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationGatewayCustomErrorConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">enable_http2</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">firewall_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">frontend_ip_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationGatewayFrontendIpConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">frontend_ports</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationGatewayFrontendPortArgs]]</span> = None<span class="p">, </span><span class="nx">gateway_ip_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationGatewayGatewayIpConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">http_listeners</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationGatewayHttpListenerArgs]]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ApplicationGatewayIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">probes</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationGatewayProbeArgs]]</span> = None<span class="p">, </span><span class="nx">redirect_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationGatewayRedirectConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">request_routing_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationGatewayRequestRoutingRuleArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rewrite_rule_sets</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationGatewayRewriteRuleSetArgs]]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[ApplicationGatewaySkuArgs]</span> = None<span class="p">, </span><span class="nx">ssl_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationGatewaySslCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">ssl_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationGatewaySslPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">trusted_root_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationGatewayTrustedRootCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">url_path_maps</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationGatewayUrlPathMapArgs]]</span> = None<span class="p">, </span><span class="nx">waf_configuration</span><span class="p">:</span> <span class="nx">Optional[ApplicationGatewayWafConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ApplicationGateway</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                       <span class="nx">authentication_certificates</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApplicationGatewayAuthenticationCertificateArgs]]]]</span> = None<span class="p">,</span>
+                       <span class="nx">autoscale_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ApplicationGatewayAutoscaleConfigurationArgs]]</span> = None<span class="p">,</span>
+                       <span class="nx">backend_address_pools</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApplicationGatewayBackendAddressPoolArgs]]]]</span> = None<span class="p">,</span>
+                       <span class="nx">backend_http_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApplicationGatewayBackendHttpSettingArgs]]]]</span> = None<span class="p">,</span>
+                       <span class="nx">custom_error_configurations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApplicationGatewayCustomErrorConfigurationArgs]]]]</span> = None<span class="p">,</span>
+                       <span class="nx">enable_http2</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                       <span class="nx">firewall_policy_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                       <span class="nx">frontend_ip_configurations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApplicationGatewayFrontendIpConfigurationArgs]]]]</span> = None<span class="p">,</span>
+                       <span class="nx">frontend_ports</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApplicationGatewayFrontendPortArgs]]]]</span> = None<span class="p">,</span>
+                       <span class="nx">gateway_ip_configurations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApplicationGatewayGatewayIpConfigurationArgs]]]]</span> = None<span class="p">,</span>
+                       <span class="nx">http_listeners</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApplicationGatewayHttpListenerArgs]]]]</span> = None<span class="p">,</span>
+                       <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ApplicationGatewayIdentityArgs]]</span> = None<span class="p">,</span>
+                       <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                       <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                       <span class="nx">probes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApplicationGatewayProbeArgs]]]]</span> = None<span class="p">,</span>
+                       <span class="nx">redirect_configurations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApplicationGatewayRedirectConfigurationArgs]]]]</span> = None<span class="p">,</span>
+                       <span class="nx">request_routing_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApplicationGatewayRequestRoutingRuleArgs]]]]</span> = None<span class="p">,</span>
+                       <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                       <span class="nx">rewrite_rule_sets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApplicationGatewayRewriteRuleSetArgs]]]]</span> = None<span class="p">,</span>
+                       <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ApplicationGatewaySkuArgs]]</span> = None<span class="p">,</span>
+                       <span class="nx">ssl_certificates</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApplicationGatewaySslCertificateArgs]]]]</span> = None<span class="p">,</span>
+                       <span class="nx">ssl_policies</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApplicationGatewaySslPolicyArgs]]]]</span> = None<span class="p">,</span>
+                       <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                       <span class="nx">trusted_root_certificates</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApplicationGatewayTrustedRootCertificateArgs]]]]</span> = None<span class="p">,</span>
+                       <span class="nx">url_path_maps</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApplicationGatewayUrlPathMapArgs]]]]</span> = None<span class="p">,</span>
+                       <span class="nx">waf_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ApplicationGatewayWafConfigurationArgs]]</span> = None<span class="p">,</span>
+                       <span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ApplicationGateway</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                       <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApplicationGatewayArgs</a></span><span class="p">,</span>
+                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApplicationGateway</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ApplicationGatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ApplicationGateway</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApplicationGateway</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ApplicationGatewayArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ApplicationGateway</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ApplicationGateway</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ApplicationGatewayArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ApplicationGateway</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ApplicationGatewayArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -516,22 +549,32 @@ const network = new azure.network.ApplicationGateway("network", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ApplicationGatewayArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -540,7 +583,7 @@ const network = new azure.network.ApplicationGateway("network", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -564,7 +607,7 @@ const network = new azure.network.ApplicationGateway("network", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1113,7 +1156,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#backendaddresspools_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Address<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaybackendaddresspool">Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool[]</a></span>
+        <span class="property-type"><a href="#applicationgatewaybackendaddresspool">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `backend_address_pool` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1122,7 +1165,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#backendhttpsettings_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Http<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaybackendhttpsetting">Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Setting[]</a></span>
+        <span class="property-type"><a href="#applicationgatewaybackendhttpsetting">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Setting<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `backend_http_settings` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1131,7 +1174,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#frontendipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayfrontendipconfiguration">Application<wbr>Gateway<wbr>Frontend<wbr>Ip<wbr>Configuration[]</a></span>
+        <span class="property-type"><a href="#applicationgatewayfrontendipconfiguration">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Frontend<wbr>Ip<wbr>Configuration<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `frontend_ip_configuration` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1140,7 +1183,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#frontendports_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayfrontendport">Application<wbr>Gateway<wbr>Frontend<wbr>Port[]</a></span>
+        <span class="property-type"><a href="#applicationgatewayfrontendport">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Frontend<wbr>Port<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `frontend_port` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1149,7 +1192,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#gatewayipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaygatewayipconfiguration">Application<wbr>Gateway<wbr>Gateway<wbr>Ip<wbr>Configuration[]</a></span>
+        <span class="property-type"><a href="#applicationgatewaygatewayipconfiguration">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Gateway<wbr>Ip<wbr>Configuration<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `gateway_ip_configuration` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1158,7 +1201,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#httplisteners_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Listeners</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayhttplistener">Application<wbr>Gateway<wbr>Http<wbr>Listener[]</a></span>
+        <span class="property-type"><a href="#applicationgatewayhttplistener">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Http<wbr>Listener<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `http_listener` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1167,7 +1210,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#requestroutingrules_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Routing<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrequestroutingrule">Application<wbr>Gateway<wbr>Request<wbr>Routing<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#applicationgatewayrequestroutingrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Request<wbr>Routing<wbr>Rule<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `request_routing_rule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1176,7 +1219,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to the Application Gateway should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -1185,7 +1228,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaysku">Application<wbr>Gateway<wbr>Sku</a></span>
+        <span class="property-type"><a href="#applicationgatewaysku">pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Sku<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `sku` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1194,7 +1237,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#authenticationcertificates_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayauthenticationcertificate">Application<wbr>Gateway<wbr>Authentication<wbr>Certificate[]</a></span>
+        <span class="property-type"><a href="#applicationgatewayauthenticationcertificate">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Authentication<wbr>Certificate<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `authentication_certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1203,7 +1246,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#autoscaleconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayautoscaleconfiguration">Application<wbr>Gateway<wbr>Autoscale<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#applicationgatewayautoscaleconfiguration">pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Autoscale<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `autoscale_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1212,7 +1255,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#customerrorconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Error<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaycustomerrorconfiguration">Application<wbr>Gateway<wbr>Custom<wbr>Error<wbr>Configuration[]</a></span>
+        <span class="property-type"><a href="#applicationgatewaycustomerrorconfiguration">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Custom<wbr>Error<wbr>Configuration<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `custom_error_configuration` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1221,7 +1264,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#enablehttp2_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Http2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Is HTTP2 enabled on the application gateway resource? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1230,7 +1273,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#firewallpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Web Application Firewall Policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1239,7 +1282,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayidentity">Application<wbr>Gateway<wbr>Identity</a></span>
+        <span class="property-type"><a href="#applicationgatewayidentity">pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Identity<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `identity` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1248,7 +1291,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure region where the Application Gateway should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1257,7 +1300,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Application Gateway. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1266,7 +1309,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#probes_nodejs" style="color: inherit; text-decoration: inherit;">probes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayprobe">Application<wbr>Gateway<wbr>Probe[]</a></span>
+        <span class="property-type"><a href="#applicationgatewayprobe">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Probe<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `probe` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1275,7 +1318,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#redirectconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayredirectconfiguration">Application<wbr>Gateway<wbr>Redirect<wbr>Configuration[]</a></span>
+        <span class="property-type"><a href="#applicationgatewayredirectconfiguration">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Redirect<wbr>Configuration<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A `redirect_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1284,7 +1327,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#rewriterulesets_nodejs" style="color: inherit; text-decoration: inherit;">rewrite<wbr>Rule<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriteruleset">Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set[]</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriteruleset">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `rewrite_rule_set` blocks as defined below. Only valid for v2 SKUs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1293,7 +1336,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#sslcertificates_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaysslcertificate">Application<wbr>Gateway<wbr>Ssl<wbr>Certificate[]</a></span>
+        <span class="property-type"><a href="#applicationgatewaysslcertificate">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Ssl<wbr>Certificate<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `ssl_certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1302,7 +1345,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#sslpolicies_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaysslpolicy">Application<wbr>Gateway<wbr>Ssl<wbr>Policy[]</a></span>
+        <span class="property-type"><a href="#applicationgatewaysslpolicy">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Ssl<wbr>Policy<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}a `ssl policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1311,7 +1354,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1320,7 +1363,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#trustedrootcertificates_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Root<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaytrustedrootcertificate">Application<wbr>Gateway<wbr>Trusted<wbr>Root<wbr>Certificate[]</a></span>
+        <span class="property-type"><a href="#applicationgatewaytrustedrootcertificate">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Trusted<wbr>Root<wbr>Certificate<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `trusted_root_certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1329,7 +1372,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#urlpathmaps_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Path<wbr>Maps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayurlpathmap">Application<wbr>Gateway<wbr>Url<wbr>Path<wbr>Map[]</a></span>
+        <span class="property-type"><a href="#applicationgatewayurlpathmap">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Url<wbr>Path<wbr>Map<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `url_path_map` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1338,7 +1381,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#wafconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">waf<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaywafconfiguration">Application<wbr>Gateway<wbr>Waf<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#applicationgatewaywafconfiguration">pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Waf<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `waf_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1347,7 +1390,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A collection of availability zones to spread the Application Gateway over.
 {{% /md %}}</dd></dl>
@@ -1360,7 +1403,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#backend_address_pools_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>address_<wbr>pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaybackendaddresspool">Sequence[Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewaybackendaddresspool">Input[Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `backend_address_pool` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1369,7 +1412,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#backend_http_settings_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>http_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaybackendhttpsetting">Sequence[Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Setting<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewaybackendhttpsetting">Input[Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Setting<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `backend_http_settings` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1378,7 +1421,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#frontend_ip_configurations_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>ip_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayfrontendipconfiguration">Sequence[Application<wbr>Gateway<wbr>Frontend<wbr>Ip<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayfrontendipconfiguration">Input[Application<wbr>Gateway<wbr>Frontend<wbr>Ip<wbr>Configuration<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `frontend_ip_configuration` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1387,7 +1430,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#frontend_ports_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayfrontendport">Sequence[Application<wbr>Gateway<wbr>Frontend<wbr>Port<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayfrontendport">Input[Application<wbr>Gateway<wbr>Frontend<wbr>Port<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `frontend_port` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1396,7 +1439,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#gateway_ip_configurations_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>ip_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaygatewayipconfiguration">Sequence[Application<wbr>Gateway<wbr>Gateway<wbr>Ip<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewaygatewayipconfiguration">Input[Application<wbr>Gateway<wbr>Gateway<wbr>Ip<wbr>Configuration<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `gateway_ip_configuration` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1405,7 +1448,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#http_listeners_python" style="color: inherit; text-decoration: inherit;">http_<wbr>listeners</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayhttplistener">Sequence[Application<wbr>Gateway<wbr>Http<wbr>Listener<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayhttplistener">Input[Application<wbr>Gateway<wbr>Http<wbr>Listener<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `http_listener` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1414,7 +1457,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#request_routing_rules_python" style="color: inherit; text-decoration: inherit;">request_<wbr>routing_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrequestroutingrule">Sequence[Application<wbr>Gateway<wbr>Request<wbr>Routing<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayrequestroutingrule">Input[Application<wbr>Gateway<wbr>Request<wbr>Routing<wbr>Rule<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `request_routing_rule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1423,7 +1466,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to the Application Gateway should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -1432,7 +1475,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaysku">Application<wbr>Gateway<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewaysku">Input[Application<wbr>Gateway<wbr>Sku<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `sku` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1441,7 +1484,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#authentication_certificates_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayauthenticationcertificate">Sequence[Application<wbr>Gateway<wbr>Authentication<wbr>Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayauthenticationcertificate">Input[Application<wbr>Gateway<wbr>Authentication<wbr>Certificate<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `authentication_certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1450,7 +1493,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#autoscale_configuration_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayautoscaleconfiguration">Application<wbr>Gateway<wbr>Autoscale<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewayautoscaleconfiguration">Input[Application<wbr>Gateway<wbr>Autoscale<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `autoscale_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1459,7 +1502,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#custom_error_configurations_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>error_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaycustomerrorconfiguration">Sequence[Application<wbr>Gateway<wbr>Custom<wbr>Error<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewaycustomerrorconfiguration">Input[Application<wbr>Gateway<wbr>Custom<wbr>Error<wbr>Configuration<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `custom_error_configuration` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1468,7 +1511,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#enable_http2_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>http2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Is HTTP2 enabled on the application gateway resource? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1477,7 +1520,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#firewall_policy_id_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Web Application Firewall Policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1486,7 +1529,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayidentity">Application<wbr>Gateway<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewayidentity">Input[Application<wbr>Gateway<wbr>Identity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1495,7 +1538,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure region where the Application Gateway should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1504,7 +1547,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Application Gateway. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1513,7 +1556,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#probes_python" style="color: inherit; text-decoration: inherit;">probes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayprobe">Sequence[Application<wbr>Gateway<wbr>Probe<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayprobe">Input[Application<wbr>Gateway<wbr>Probe<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `probe` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1522,7 +1565,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#redirect_configurations_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayredirectconfiguration">Sequence[Application<wbr>Gateway<wbr>Redirect<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayredirectconfiguration">Input[Application<wbr>Gateway<wbr>Redirect<wbr>Configuration<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A `redirect_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1531,7 +1574,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#rewrite_rule_sets_python" style="color: inherit; text-decoration: inherit;">rewrite_<wbr>rule_<wbr>sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriteruleset">Sequence[Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriteruleset">Input[Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `rewrite_rule_set` blocks as defined below. Only valid for v2 SKUs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1540,7 +1583,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#ssl_certificates_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaysslcertificate">Sequence[Application<wbr>Gateway<wbr>Ssl<wbr>Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewaysslcertificate">Input[Application<wbr>Gateway<wbr>Ssl<wbr>Certificate<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `ssl_certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1549,7 +1592,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#ssl_policies_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaysslpolicy">Sequence[Application<wbr>Gateway<wbr>Ssl<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewaysslpolicy">Input[Application<wbr>Gateway<wbr>Ssl<wbr>Policy<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}a `ssl policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1558,7 +1601,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1567,7 +1610,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#trusted_root_certificates_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>root_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaytrustedrootcertificate">Sequence[Application<wbr>Gateway<wbr>Trusted<wbr>Root<wbr>Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewaytrustedrootcertificate">Input[Application<wbr>Gateway<wbr>Trusted<wbr>Root<wbr>Certificate<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `trusted_root_certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1576,7 +1619,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#url_path_maps_python" style="color: inherit; text-decoration: inherit;">url_<wbr>path_<wbr>maps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayurlpathmap">Sequence[Application<wbr>Gateway<wbr>Url<wbr>Path<wbr>Map<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayurlpathmap">Input[Application<wbr>Gateway<wbr>Url<wbr>Path<wbr>Map<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `url_path_map` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1585,7 +1628,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#waf_configuration_python" style="color: inherit; text-decoration: inherit;">waf_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaywafconfiguration">Application<wbr>Gateway<wbr>Waf<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewaywafconfiguration">Input[Application<wbr>Gateway<wbr>Waf<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `waf_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1594,7 +1637,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A collection of availability zones to spread the Application Gateway over.
 {{% /md %}}</dd></dl>
@@ -1663,20 +1706,49 @@ Get an existing ApplicationGateway resource's state with the given name, ID, and
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ApplicationGatewayState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ApplicationGateway</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ApplicationGatewayState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ApplicationGateway</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authentication_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationGatewayAuthenticationCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">autoscale_configuration</span><span class="p">:</span> <span class="nx">Optional[ApplicationGatewayAutoscaleConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">backend_address_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationGatewayBackendAddressPoolArgs]]</span> = None<span class="p">, </span><span class="nx">backend_http_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationGatewayBackendHttpSettingArgs]]</span> = None<span class="p">, </span><span class="nx">custom_error_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationGatewayCustomErrorConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">enable_http2</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">firewall_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">frontend_ip_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationGatewayFrontendIpConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">frontend_ports</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationGatewayFrontendPortArgs]]</span> = None<span class="p">, </span><span class="nx">gateway_ip_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationGatewayGatewayIpConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">http_listeners</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationGatewayHttpListenerArgs]]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ApplicationGatewayIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">probes</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationGatewayProbeArgs]]</span> = None<span class="p">, </span><span class="nx">redirect_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationGatewayRedirectConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">request_routing_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationGatewayRequestRoutingRuleArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rewrite_rule_sets</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationGatewayRewriteRuleSetArgs]]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[ApplicationGatewaySkuArgs]</span> = None<span class="p">, </span><span class="nx">ssl_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationGatewaySslCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">ssl_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationGatewaySslPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">trusted_root_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationGatewayTrustedRootCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">url_path_maps</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationGatewayUrlPathMapArgs]]</span> = None<span class="p">, </span><span class="nx">waf_configuration</span><span class="p">:</span> <span class="nx">Optional[ApplicationGatewayWafConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> ApplicationGateway</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">authentication_certificates</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApplicationGatewayAuthenticationCertificateArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">autoscale_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ApplicationGatewayAutoscaleConfigurationArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">backend_address_pools</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApplicationGatewayBackendAddressPoolArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">backend_http_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApplicationGatewayBackendHttpSettingArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">custom_error_configurations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApplicationGatewayCustomErrorConfigurationArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">enable_http2</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">firewall_policy_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">frontend_ip_configurations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApplicationGatewayFrontendIpConfigurationArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">frontend_ports</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApplicationGatewayFrontendPortArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">gateway_ip_configurations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApplicationGatewayGatewayIpConfigurationArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">http_listeners</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApplicationGatewayHttpListenerArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ApplicationGatewayIdentityArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">probes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApplicationGatewayProbeArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">redirect_configurations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApplicationGatewayRedirectConfigurationArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">request_routing_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApplicationGatewayRequestRoutingRuleArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">rewrite_rule_sets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApplicationGatewayRewriteRuleSetArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ApplicationGatewaySkuArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">ssl_certificates</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApplicationGatewaySslCertificateArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">ssl_policies</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApplicationGatewaySslPolicyArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">trusted_root_certificates</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApplicationGatewayTrustedRootCertificateArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">url_path_maps</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApplicationGatewayUrlPathMapArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">waf_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ApplicationGatewayWafConfigurationArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> ApplicationGateway</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetApplicationGateway<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ApplicationGatewayState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ApplicationGateway</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetApplicationGateway<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ApplicationGatewayState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ApplicationGateway</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ApplicationGateway</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ApplicationGatewayState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ApplicationGateway</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ApplicationGatewayState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2279,7 +2351,7 @@ The following state arguments are supported:
 <a href="#state_authenticationcertificates_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayauthenticationcertificate">Application<wbr>Gateway<wbr>Authentication<wbr>Certificate[]</a></span>
+        <span class="property-type"><a href="#applicationgatewayauthenticationcertificate">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Authentication<wbr>Certificate<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `authentication_certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2288,7 +2360,7 @@ The following state arguments are supported:
 <a href="#state_autoscaleconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayautoscaleconfiguration">Application<wbr>Gateway<wbr>Autoscale<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#applicationgatewayautoscaleconfiguration">pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Autoscale<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `autoscale_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2297,7 +2369,7 @@ The following state arguments are supported:
 <a href="#state_backendaddresspools_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Address<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaybackendaddresspool">Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool[]</a></span>
+        <span class="property-type"><a href="#applicationgatewaybackendaddresspool">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `backend_address_pool` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2306,7 +2378,7 @@ The following state arguments are supported:
 <a href="#state_backendhttpsettings_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Http<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaybackendhttpsetting">Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Setting[]</a></span>
+        <span class="property-type"><a href="#applicationgatewaybackendhttpsetting">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Setting<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `backend_http_settings` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2315,7 +2387,7 @@ The following state arguments are supported:
 <a href="#state_customerrorconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Error<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaycustomerrorconfiguration">Application<wbr>Gateway<wbr>Custom<wbr>Error<wbr>Configuration[]</a></span>
+        <span class="property-type"><a href="#applicationgatewaycustomerrorconfiguration">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Custom<wbr>Error<wbr>Configuration<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `custom_error_configuration` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2324,7 +2396,7 @@ The following state arguments are supported:
 <a href="#state_enablehttp2_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Http2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Is HTTP2 enabled on the application gateway resource? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2333,7 +2405,7 @@ The following state arguments are supported:
 <a href="#state_firewallpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Web Application Firewall Policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2342,7 +2414,7 @@ The following state arguments are supported:
 <a href="#state_frontendipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayfrontendipconfiguration">Application<wbr>Gateway<wbr>Frontend<wbr>Ip<wbr>Configuration[]</a></span>
+        <span class="property-type"><a href="#applicationgatewayfrontendipconfiguration">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Frontend<wbr>Ip<wbr>Configuration<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `frontend_ip_configuration` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2351,7 +2423,7 @@ The following state arguments are supported:
 <a href="#state_frontendports_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayfrontendport">Application<wbr>Gateway<wbr>Frontend<wbr>Port[]</a></span>
+        <span class="property-type"><a href="#applicationgatewayfrontendport">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Frontend<wbr>Port<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `frontend_port` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2360,7 +2432,7 @@ The following state arguments are supported:
 <a href="#state_gatewayipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaygatewayipconfiguration">Application<wbr>Gateway<wbr>Gateway<wbr>Ip<wbr>Configuration[]</a></span>
+        <span class="property-type"><a href="#applicationgatewaygatewayipconfiguration">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Gateway<wbr>Ip<wbr>Configuration<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `gateway_ip_configuration` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2369,7 +2441,7 @@ The following state arguments are supported:
 <a href="#state_httplisteners_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Listeners</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayhttplistener">Application<wbr>Gateway<wbr>Http<wbr>Listener[]</a></span>
+        <span class="property-type"><a href="#applicationgatewayhttplistener">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Http<wbr>Listener<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `http_listener` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2378,7 +2450,7 @@ The following state arguments are supported:
 <a href="#state_identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayidentity">Application<wbr>Gateway<wbr>Identity</a></span>
+        <span class="property-type"><a href="#applicationgatewayidentity">pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Identity<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `identity` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2387,7 +2459,7 @@ The following state arguments are supported:
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure region where the Application Gateway should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2396,7 +2468,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Application Gateway. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2405,7 +2477,7 @@ The following state arguments are supported:
 <a href="#state_probes_nodejs" style="color: inherit; text-decoration: inherit;">probes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayprobe">Application<wbr>Gateway<wbr>Probe[]</a></span>
+        <span class="property-type"><a href="#applicationgatewayprobe">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Probe<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `probe` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2414,7 +2486,7 @@ The following state arguments are supported:
 <a href="#state_redirectconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayredirectconfiguration">Application<wbr>Gateway<wbr>Redirect<wbr>Configuration[]</a></span>
+        <span class="property-type"><a href="#applicationgatewayredirectconfiguration">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Redirect<wbr>Configuration<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A `redirect_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2423,7 +2495,7 @@ The following state arguments are supported:
 <a href="#state_requestroutingrules_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Routing<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrequestroutingrule">Application<wbr>Gateway<wbr>Request<wbr>Routing<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#applicationgatewayrequestroutingrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Request<wbr>Routing<wbr>Rule<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `request_routing_rule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2432,7 +2504,7 @@ The following state arguments are supported:
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to the Application Gateway should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2441,7 +2513,7 @@ The following state arguments are supported:
 <a href="#state_rewriterulesets_nodejs" style="color: inherit; text-decoration: inherit;">rewrite<wbr>Rule<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriteruleset">Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set[]</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriteruleset">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `rewrite_rule_set` blocks as defined below. Only valid for v2 SKUs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2450,7 +2522,7 @@ The following state arguments are supported:
 <a href="#state_sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaysku">Application<wbr>Gateway<wbr>Sku</a></span>
+        <span class="property-type"><a href="#applicationgatewaysku">pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Sku<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `sku` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2459,7 +2531,7 @@ The following state arguments are supported:
 <a href="#state_sslcertificates_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaysslcertificate">Application<wbr>Gateway<wbr>Ssl<wbr>Certificate[]</a></span>
+        <span class="property-type"><a href="#applicationgatewaysslcertificate">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Ssl<wbr>Certificate<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `ssl_certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2468,7 +2540,7 @@ The following state arguments are supported:
 <a href="#state_sslpolicies_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaysslpolicy">Application<wbr>Gateway<wbr>Ssl<wbr>Policy[]</a></span>
+        <span class="property-type"><a href="#applicationgatewaysslpolicy">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Ssl<wbr>Policy<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}a `ssl policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2477,7 +2549,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2486,7 +2558,7 @@ The following state arguments are supported:
 <a href="#state_trustedrootcertificates_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Root<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaytrustedrootcertificate">Application<wbr>Gateway<wbr>Trusted<wbr>Root<wbr>Certificate[]</a></span>
+        <span class="property-type"><a href="#applicationgatewaytrustedrootcertificate">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Trusted<wbr>Root<wbr>Certificate<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `trusted_root_certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2495,7 +2567,7 @@ The following state arguments are supported:
 <a href="#state_urlpathmaps_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Path<wbr>Maps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayurlpathmap">Application<wbr>Gateway<wbr>Url<wbr>Path<wbr>Map[]</a></span>
+        <span class="property-type"><a href="#applicationgatewayurlpathmap">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Url<wbr>Path<wbr>Map<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `url_path_map` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2504,7 +2576,7 @@ The following state arguments are supported:
 <a href="#state_wafconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">waf<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaywafconfiguration">Application<wbr>Gateway<wbr>Waf<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#applicationgatewaywafconfiguration">pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Waf<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `waf_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2513,7 +2585,7 @@ The following state arguments are supported:
 <a href="#state_zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A collection of availability zones to spread the Application Gateway over.
 {{% /md %}}</dd></dl>
@@ -2526,7 +2598,7 @@ The following state arguments are supported:
 <a href="#state_authentication_certificates_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayauthenticationcertificate">Sequence[Application<wbr>Gateway<wbr>Authentication<wbr>Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayauthenticationcertificate">Input[Application<wbr>Gateway<wbr>Authentication<wbr>Certificate<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `authentication_certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2535,7 +2607,7 @@ The following state arguments are supported:
 <a href="#state_autoscale_configuration_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayautoscaleconfiguration">Application<wbr>Gateway<wbr>Autoscale<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewayautoscaleconfiguration">Input[Application<wbr>Gateway<wbr>Autoscale<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `autoscale_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2544,7 +2616,7 @@ The following state arguments are supported:
 <a href="#state_backend_address_pools_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>address_<wbr>pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaybackendaddresspool">Sequence[Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewaybackendaddresspool">Input[Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `backend_address_pool` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2553,7 +2625,7 @@ The following state arguments are supported:
 <a href="#state_backend_http_settings_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>http_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaybackendhttpsetting">Sequence[Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Setting<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewaybackendhttpsetting">Input[Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Setting<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `backend_http_settings` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2562,7 +2634,7 @@ The following state arguments are supported:
 <a href="#state_custom_error_configurations_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>error_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaycustomerrorconfiguration">Sequence[Application<wbr>Gateway<wbr>Custom<wbr>Error<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewaycustomerrorconfiguration">Input[Application<wbr>Gateway<wbr>Custom<wbr>Error<wbr>Configuration<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `custom_error_configuration` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2571,7 +2643,7 @@ The following state arguments are supported:
 <a href="#state_enable_http2_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>http2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Is HTTP2 enabled on the application gateway resource? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2580,7 +2652,7 @@ The following state arguments are supported:
 <a href="#state_firewall_policy_id_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Web Application Firewall Policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2589,7 +2661,7 @@ The following state arguments are supported:
 <a href="#state_frontend_ip_configurations_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>ip_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayfrontendipconfiguration">Sequence[Application<wbr>Gateway<wbr>Frontend<wbr>Ip<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayfrontendipconfiguration">Input[Application<wbr>Gateway<wbr>Frontend<wbr>Ip<wbr>Configuration<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `frontend_ip_configuration` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2598,7 +2670,7 @@ The following state arguments are supported:
 <a href="#state_frontend_ports_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayfrontendport">Sequence[Application<wbr>Gateway<wbr>Frontend<wbr>Port<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayfrontendport">Input[Application<wbr>Gateway<wbr>Frontend<wbr>Port<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `frontend_port` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2607,7 +2679,7 @@ The following state arguments are supported:
 <a href="#state_gateway_ip_configurations_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>ip_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaygatewayipconfiguration">Sequence[Application<wbr>Gateway<wbr>Gateway<wbr>Ip<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewaygatewayipconfiguration">Input[Application<wbr>Gateway<wbr>Gateway<wbr>Ip<wbr>Configuration<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `gateway_ip_configuration` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2616,7 +2688,7 @@ The following state arguments are supported:
 <a href="#state_http_listeners_python" style="color: inherit; text-decoration: inherit;">http_<wbr>listeners</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayhttplistener">Sequence[Application<wbr>Gateway<wbr>Http<wbr>Listener<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayhttplistener">Input[Application<wbr>Gateway<wbr>Http<wbr>Listener<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `http_listener` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2625,7 +2697,7 @@ The following state arguments are supported:
 <a href="#state_identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayidentity">Application<wbr>Gateway<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewayidentity">Input[Application<wbr>Gateway<wbr>Identity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2634,7 +2706,7 @@ The following state arguments are supported:
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure region where the Application Gateway should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2643,7 +2715,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Application Gateway. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2652,7 +2724,7 @@ The following state arguments are supported:
 <a href="#state_probes_python" style="color: inherit; text-decoration: inherit;">probes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayprobe">Sequence[Application<wbr>Gateway<wbr>Probe<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayprobe">Input[Application<wbr>Gateway<wbr>Probe<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `probe` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2661,7 +2733,7 @@ The following state arguments are supported:
 <a href="#state_redirect_configurations_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayredirectconfiguration">Sequence[Application<wbr>Gateway<wbr>Redirect<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayredirectconfiguration">Input[Application<wbr>Gateway<wbr>Redirect<wbr>Configuration<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A `redirect_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2670,7 +2742,7 @@ The following state arguments are supported:
 <a href="#state_request_routing_rules_python" style="color: inherit; text-decoration: inherit;">request_<wbr>routing_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrequestroutingrule">Sequence[Application<wbr>Gateway<wbr>Request<wbr>Routing<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayrequestroutingrule">Input[Application<wbr>Gateway<wbr>Request<wbr>Routing<wbr>Rule<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `request_routing_rule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2679,7 +2751,7 @@ The following state arguments are supported:
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to the Application Gateway should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2688,7 +2760,7 @@ The following state arguments are supported:
 <a href="#state_rewrite_rule_sets_python" style="color: inherit; text-decoration: inherit;">rewrite_<wbr>rule_<wbr>sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriteruleset">Sequence[Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriteruleset">Input[Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `rewrite_rule_set` blocks as defined below. Only valid for v2 SKUs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2697,7 +2769,7 @@ The following state arguments are supported:
 <a href="#state_sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaysku">Application<wbr>Gateway<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewaysku">Input[Application<wbr>Gateway<wbr>Sku<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `sku` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2706,7 +2778,7 @@ The following state arguments are supported:
 <a href="#state_ssl_certificates_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaysslcertificate">Sequence[Application<wbr>Gateway<wbr>Ssl<wbr>Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewaysslcertificate">Input[Application<wbr>Gateway<wbr>Ssl<wbr>Certificate<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `ssl_certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2715,7 +2787,7 @@ The following state arguments are supported:
 <a href="#state_ssl_policies_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaysslpolicy">Sequence[Application<wbr>Gateway<wbr>Ssl<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewaysslpolicy">Input[Application<wbr>Gateway<wbr>Ssl<wbr>Policy<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}a `ssl policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2724,7 +2796,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2733,7 +2805,7 @@ The following state arguments are supported:
 <a href="#state_trusted_root_certificates_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>root_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaytrustedrootcertificate">Sequence[Application<wbr>Gateway<wbr>Trusted<wbr>Root<wbr>Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewaytrustedrootcertificate">Input[Application<wbr>Gateway<wbr>Trusted<wbr>Root<wbr>Certificate<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `trusted_root_certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2742,7 +2814,7 @@ The following state arguments are supported:
 <a href="#state_url_path_maps_python" style="color: inherit; text-decoration: inherit;">url_<wbr>path_<wbr>maps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayurlpathmap">Sequence[Application<wbr>Gateway<wbr>Url<wbr>Path<wbr>Map<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayurlpathmap">Input[Application<wbr>Gateway<wbr>Url<wbr>Path<wbr>Map<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `url_path_map` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2751,7 +2823,7 @@ The following state arguments are supported:
 <a href="#state_waf_configuration_python" style="color: inherit; text-decoration: inherit;">waf_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaywafconfiguration">Application<wbr>Gateway<wbr>Waf<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewaywafconfiguration">Input[Application<wbr>Gateway<wbr>Waf<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `waf_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2760,7 +2832,7 @@ The following state arguments are supported:
 <a href="#state_zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A collection of availability zones to spread the Application Gateway over.
 {{% /md %}}</dd></dl>
@@ -2846,7 +2918,7 @@ The following state arguments are supported:
 <a href="#data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The contents of the Authentication Certificate which should be used.
 {{% /md %}}</dd><dt class="property-required"
@@ -2855,7 +2927,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Authentication Certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2864,7 +2936,7 @@ The following state arguments are supported:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Rewrite Rule Set
 {{% /md %}}</dd></dl>
@@ -2877,7 +2949,7 @@ The following state arguments are supported:
 <a href="#data_python" style="color: inherit; text-decoration: inherit;">data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The contents of the Authentication Certificate which should be used.
 {{% /md %}}</dd><dt class="property-required"
@@ -2886,7 +2958,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Authentication Certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2895,7 +2967,7 @@ The following state arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Rewrite Rule Set
 {{% /md %}}</dd></dl>
@@ -2954,7 +3026,7 @@ The following state arguments are supported:
 <a href="#mincapacity_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Minimum capacity for autoscaling. Accepted values are in the range `0` to `100`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2963,7 +3035,7 @@ The following state arguments are supported:
 <a href="#maxcapacity_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Maximum capacity for autoscaling. Accepted values are in the range `2` to `125`.
 {{% /md %}}</dd></dl>
@@ -2976,7 +3048,7 @@ The following state arguments are supported:
 <a href="#min_capacity_python" style="color: inherit; text-decoration: inherit;">min_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Minimum capacity for autoscaling. Accepted values are in the range `0` to `100`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2985,7 +3057,7 @@ The following state arguments are supported:
 <a href="#max_capacity_python" style="color: inherit; text-decoration: inherit;">max_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Maximum capacity for autoscaling. Accepted values are in the range `2` to `125`.
 {{% /md %}}</dd></dl>
@@ -3080,7 +3152,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Backend Address Pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3089,7 +3161,7 @@ The following state arguments are supported:
 <a href="#fqdns_nodejs" style="color: inherit; text-decoration: inherit;">fqdns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of FQDN's which should be part of the Backend Address Pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3098,7 +3170,7 @@ The following state arguments are supported:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Rewrite Rule Set
 {{% /md %}}</dd><dt class="property-optional"
@@ -3107,7 +3179,7 @@ The following state arguments are supported:
 <a href="#ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of IP Addresses which should be part of the Backend Address Pool.
 {{% /md %}}</dd></dl>
@@ -3120,7 +3192,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Backend Address Pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3129,7 +3201,7 @@ The following state arguments are supported:
 <a href="#fqdns_python" style="color: inherit; text-decoration: inherit;">fqdns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of FQDN's which should be part of the Backend Address Pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3138,7 +3210,7 @@ The following state arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Rewrite Rule Set
 {{% /md %}}</dd><dt class="property-optional"
@@ -3147,7 +3219,7 @@ The following state arguments are supported:
 <a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of IP Addresses which should be part of the Backend Address Pool.
 {{% /md %}}</dd></dl>
@@ -3440,7 +3512,7 @@ The following state arguments are supported:
 <a href="#cookiebasedaffinity_nodejs" style="color: inherit; text-decoration: inherit;">cookie<wbr>Based<wbr>Affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Is Cookie-Based Affinity enabled? Possible values are `Enabled` and `Disabled`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3449,7 +3521,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Backend HTTP Settings Collection.
 {{% /md %}}</dd><dt class="property-required"
@@ -3458,7 +3530,7 @@ The following state arguments are supported:
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The port which should be used for this Backend HTTP Settings Collection.
 {{% /md %}}</dd><dt class="property-required"
@@ -3467,7 +3539,7 @@ The following state arguments are supported:
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Protocol which should be used. Possible values are `Http` and `Https`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3476,7 +3548,7 @@ The following state arguments are supported:
 <a href="#affinitycookiename_nodejs" style="color: inherit; text-decoration: inherit;">affinity<wbr>Cookie<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the affinity cookie.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3485,7 +3557,7 @@ The following state arguments are supported:
 <a href="#authenticationcertificates_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaybackendhttpsettingauthenticationcertificate">Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Setting<wbr>Authentication<wbr>Certificate[]</a></span>
+        <span class="property-type"><a href="#applicationgatewaybackendhttpsettingauthenticationcertificate">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Setting<wbr>Authentication<wbr>Certificate<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `authentication_certificate` blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3494,7 +3566,7 @@ The following state arguments are supported:
 <a href="#connectiondraining_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Draining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaybackendhttpsettingconnectiondraining">Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Setting<wbr>Connection<wbr>Draining</a></span>
+        <span class="property-type"><a href="#applicationgatewaybackendhttpsettingconnectiondraining">pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Setting<wbr>Connection<wbr>Draining<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `connection_draining` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3503,7 +3575,7 @@ The following state arguments are supported:
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Host header to be sent to the backend servers. Cannot be set if `pick_host_name_from_backend_address` is set to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3512,7 +3584,7 @@ The following state arguments are supported:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Rewrite Rule Set
 {{% /md %}}</dd><dt class="property-optional"
@@ -3521,7 +3593,7 @@ The following state arguments are supported:
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Path which should be used as a prefix for all HTTP requests.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3530,7 +3602,7 @@ The following state arguments are supported:
 <a href="#pickhostnamefrombackendaddress_nodejs" style="color: inherit; text-decoration: inherit;">pick<wbr>Host<wbr>Name<wbr>From<wbr>Backend<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether host header should be picked from the host name of the backend server. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3539,7 +3611,7 @@ The following state arguments are supported:
 <a href="#probeid_nodejs" style="color: inherit; text-decoration: inherit;">probe<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the associated Probe.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3548,7 +3620,7 @@ The following state arguments are supported:
 <a href="#probename_nodejs" style="color: inherit; text-decoration: inherit;">probe<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of an associated HTTP Probe.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3557,7 +3629,7 @@ The following state arguments are supported:
 <a href="#requesttimeout_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The request timeout in seconds, which must be between 1 and 86400 seconds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3566,7 +3638,7 @@ The following state arguments are supported:
 <a href="#trustedrootcertificatenames_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Root<wbr>Certificate<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of `trusted_root_certificate` names.
 {{% /md %}}</dd></dl>
@@ -3579,7 +3651,7 @@ The following state arguments are supported:
 <a href="#cookie_based_affinity_python" style="color: inherit; text-decoration: inherit;">cookie_<wbr>based_<wbr>affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Is Cookie-Based Affinity enabled? Possible values are `Enabled` and `Disabled`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3588,7 +3660,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Backend HTTP Settings Collection.
 {{% /md %}}</dd><dt class="property-required"
@@ -3597,7 +3669,7 @@ The following state arguments are supported:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The port which should be used for this Backend HTTP Settings Collection.
 {{% /md %}}</dd><dt class="property-required"
@@ -3606,7 +3678,7 @@ The following state arguments are supported:
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Protocol which should be used. Possible values are `Http` and `Https`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3615,7 +3687,7 @@ The following state arguments are supported:
 <a href="#affinity_cookie_name_python" style="color: inherit; text-decoration: inherit;">affinity_<wbr>cookie_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the affinity cookie.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3624,7 +3696,7 @@ The following state arguments are supported:
 <a href="#authentication_certificates_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaybackendhttpsettingauthenticationcertificate">Sequence[Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Setting<wbr>Authentication<wbr>Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewaybackendhttpsettingauthenticationcertificate">Input[Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Setting<wbr>Authentication<wbr>Certificate<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `authentication_certificate` blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3633,7 +3705,7 @@ The following state arguments are supported:
 <a href="#connection_draining_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>draining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaybackendhttpsettingconnectiondraining">Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Setting<wbr>Connection<wbr>Draining<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewaybackendhttpsettingconnectiondraining">Input[Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Setting<wbr>Connection<wbr>Draining<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `connection_draining` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3642,7 +3714,7 @@ The following state arguments are supported:
 <a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Host header to be sent to the backend servers. Cannot be set if `pick_host_name_from_backend_address` is set to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3651,7 +3723,7 @@ The following state arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Rewrite Rule Set
 {{% /md %}}</dd><dt class="property-optional"
@@ -3660,7 +3732,7 @@ The following state arguments are supported:
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Path which should be used as a prefix for all HTTP requests.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3669,7 +3741,7 @@ The following state arguments are supported:
 <a href="#pick_host_name_from_backend_address_python" style="color: inherit; text-decoration: inherit;">pick_<wbr>host_<wbr>name_<wbr>from_<wbr>backend_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether host header should be picked from the host name of the backend server. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3678,7 +3750,7 @@ The following state arguments are supported:
 <a href="#probe_id_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the associated Probe.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3687,7 +3759,7 @@ The following state arguments are supported:
 <a href="#probe_name_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of an associated HTTP Probe.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3696,7 +3768,7 @@ The following state arguments are supported:
 <a href="#request_timeout_python" style="color: inherit; text-decoration: inherit;">request_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The request timeout in seconds, which must be between 1 and 86400 seconds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3705,7 +3777,7 @@ The following state arguments are supported:
 <a href="#trusted_root_certificate_names_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>root_<wbr>certificate_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of `trusted_root_certificate` names.
 {{% /md %}}</dd></dl>
@@ -3764,7 +3836,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Authentication Certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3773,7 +3845,7 @@ The following state arguments are supported:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Rewrite Rule Set
 {{% /md %}}</dd></dl>
@@ -3786,7 +3858,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Authentication Certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3795,7 +3867,7 @@ The following state arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Rewrite Rule Set
 {{% /md %}}</dd></dl>
@@ -3854,7 +3926,7 @@ The following state arguments are supported:
 <a href="#draintimeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">drain<wbr>Timeout<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of seconds connection draining is active. Acceptable values are from `1` second to `3600` seconds.
 {{% /md %}}</dd><dt class="property-required"
@@ -3863,7 +3935,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If connection draining is enabled or not.
 {{% /md %}}</dd></dl>
@@ -3876,7 +3948,7 @@ The following state arguments are supported:
 <a href="#drain_timeout_sec_python" style="color: inherit; text-decoration: inherit;">drain_<wbr>timeout_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of seconds connection draining is active. Acceptable values are from `1` second to `3600` seconds.
 {{% /md %}}</dd><dt class="property-required"
@@ -3885,7 +3957,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If connection draining is enabled or not.
 {{% /md %}}</dd></dl>
@@ -3962,7 +4034,7 @@ The following state arguments are supported:
 <a href="#customerrorpageurl_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Error<wbr>Page<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Error page URL of the application gateway customer error.
 {{% /md %}}</dd><dt class="property-required"
@@ -3971,7 +4043,7 @@ The following state arguments are supported:
 <a href="#statuscode_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status code of the application gateway customer error. Possible values are `HttpStatus403` and `HttpStatus502`
 {{% /md %}}</dd><dt class="property-optional"
@@ -3980,7 +4052,7 @@ The following state arguments are supported:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Rewrite Rule Set
 {{% /md %}}</dd></dl>
@@ -3993,7 +4065,7 @@ The following state arguments are supported:
 <a href="#custom_error_page_url_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>error_<wbr>page_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Error page URL of the application gateway customer error.
 {{% /md %}}</dd><dt class="property-required"
@@ -4002,7 +4074,7 @@ The following state arguments are supported:
 <a href="#status_code_python" style="color: inherit; text-decoration: inherit;">status_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status code of the application gateway customer error. Possible values are `HttpStatus403` and `HttpStatus502`
 {{% /md %}}</dd><dt class="property-optional"
@@ -4011,7 +4083,7 @@ The following state arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Rewrite Rule Set
 {{% /md %}}</dd></dl>
@@ -4142,7 +4214,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Frontend IP Configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4151,7 +4223,7 @@ The following state arguments are supported:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Rewrite Rule Set
 {{% /md %}}</dd><dt class="property-optional"
@@ -4160,7 +4232,7 @@ The following state arguments are supported:
 <a href="#privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Private IP Address to use for the Application Gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4169,7 +4241,7 @@ The following state arguments are supported:
 <a href="#privateipaddressallocation_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address<wbr>Allocation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Allocation Method for the Private IP Address. Possible values are `Dynamic` and `Static`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4178,7 +4250,7 @@ The following state arguments are supported:
 <a href="#publicipaddressid_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Address<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of a Public IP Address which the Application Gateway should use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4187,7 +4259,7 @@ The following state arguments are supported:
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet.
 {{% /md %}}</dd></dl>
@@ -4200,7 +4272,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Frontend IP Configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4209,7 +4281,7 @@ The following state arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Rewrite Rule Set
 {{% /md %}}</dd><dt class="property-optional"
@@ -4218,7 +4290,7 @@ The following state arguments are supported:
 <a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Private IP Address to use for the Application Gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4227,7 +4299,7 @@ The following state arguments are supported:
 <a href="#private_ip_address_allocation_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address_<wbr>allocation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Allocation Method for the Private IP Address. Possible values are `Dynamic` and `Static`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4236,7 +4308,7 @@ The following state arguments are supported:
 <a href="#public_ip_address_id_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of a Public IP Address which the Application Gateway should use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4245,7 +4317,7 @@ The following state arguments are supported:
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet.
 {{% /md %}}</dd></dl>
@@ -4322,7 +4394,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Frontend Port.
 {{% /md %}}</dd><dt class="property-required"
@@ -4331,7 +4403,7 @@ The following state arguments are supported:
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The port used for this Frontend Port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4340,7 +4412,7 @@ The following state arguments are supported:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Rewrite Rule Set
 {{% /md %}}</dd></dl>
@@ -4353,7 +4425,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Frontend Port.
 {{% /md %}}</dd><dt class="property-required"
@@ -4362,7 +4434,7 @@ The following state arguments are supported:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The port used for this Frontend Port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4371,7 +4443,7 @@ The following state arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Rewrite Rule Set
 {{% /md %}}</dd></dl>
@@ -4448,7 +4520,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Name of this Gateway IP Configuration.
 {{% /md %}}</dd><dt class="property-required"
@@ -4457,7 +4529,7 @@ The following state arguments are supported:
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet which the Application Gateway should be connected to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4466,7 +4538,7 @@ The following state arguments are supported:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Rewrite Rule Set
 {{% /md %}}</dd></dl>
@@ -4479,7 +4551,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Name of this Gateway IP Configuration.
 {{% /md %}}</dd><dt class="property-required"
@@ -4488,7 +4560,7 @@ The following state arguments are supported:
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet which the Application Gateway should be connected to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4497,7 +4569,7 @@ The following state arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Rewrite Rule Set
 {{% /md %}}</dd></dl>
@@ -4772,7 +4844,7 @@ The following state arguments are supported:
 <a href="#frontendipconfigurationname_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>Ip<wbr>Configuration<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Name of the Frontend IP Configuration used for this HTTP Listener.
 {{% /md %}}</dd><dt class="property-required"
@@ -4781,7 +4853,7 @@ The following state arguments are supported:
 <a href="#frontendportname_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>Port<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Name of the Frontend Port use for this HTTP Listener.
 {{% /md %}}</dd><dt class="property-required"
@@ -4790,7 +4862,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Name of the HTTP Listener.
 {{% /md %}}</dd><dt class="property-required"
@@ -4799,7 +4871,7 @@ The following state arguments are supported:
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Protocol to use for this HTTP Listener. Possible values are `Http` and `Https`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4808,7 +4880,7 @@ The following state arguments are supported:
 <a href="#customerrorconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Error<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayhttplistenercustomerrorconfiguration">Application<wbr>Gateway<wbr>Http<wbr>Listener<wbr>Custom<wbr>Error<wbr>Configuration[]</a></span>
+        <span class="property-type"><a href="#applicationgatewayhttplistenercustomerrorconfiguration">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Http<wbr>Listener<wbr>Custom<wbr>Error<wbr>Configuration<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `custom_error_configuration` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4817,7 +4889,7 @@ The following state arguments are supported:
 <a href="#firewallpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Web Application Firewall Policy which should be used as a HTTP Listener.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4826,7 +4898,7 @@ The following state arguments are supported:
 <a href="#frontendipconfigurationid_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>Ip<wbr>Configuration<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the associated Frontend Configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4835,7 +4907,7 @@ The following state arguments are supported:
 <a href="#frontendportid_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>Port<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the associated Frontend Port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4844,7 +4916,7 @@ The following state arguments are supported:
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Hostname which should be used for this HTTP Listener. Setting this value changes Listener Type to 'Multi site'.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4853,7 +4925,7 @@ The following state arguments are supported:
 <a href="#hostnames_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of Hostname(s) should be used for this HTTP Listener. It allows special wildcard characters.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4862,7 +4934,7 @@ The following state arguments are supported:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Rewrite Rule Set
 {{% /md %}}</dd><dt class="property-optional"
@@ -4871,7 +4943,7 @@ The following state arguments are supported:
 <a href="#requiresni_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Sni</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Should Server Name Indication be Required? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4880,7 +4952,7 @@ The following state arguments are supported:
 <a href="#sslcertificateid_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Certificate<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the associated SSL Certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4889,7 +4961,7 @@ The following state arguments are supported:
 <a href="#sslcertificatename_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Certificate<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the associated SSL Certificate which should be used for this HTTP Listener.
 {{% /md %}}</dd></dl>
@@ -4902,7 +4974,7 @@ The following state arguments are supported:
 <a href="#frontend_ip_configuration_name_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>ip_<wbr>configuration_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Name of the Frontend IP Configuration used for this HTTP Listener.
 {{% /md %}}</dd><dt class="property-required"
@@ -4911,7 +4983,7 @@ The following state arguments are supported:
 <a href="#frontend_port_name_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>port_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Name of the Frontend Port use for this HTTP Listener.
 {{% /md %}}</dd><dt class="property-required"
@@ -4920,7 +4992,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Name of the HTTP Listener.
 {{% /md %}}</dd><dt class="property-required"
@@ -4929,7 +5001,7 @@ The following state arguments are supported:
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Protocol to use for this HTTP Listener. Possible values are `Http` and `Https`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4938,7 +5010,7 @@ The following state arguments are supported:
 <a href="#custom_error_configurations_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>error_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayhttplistenercustomerrorconfiguration">Sequence[Application<wbr>Gateway<wbr>Http<wbr>Listener<wbr>Custom<wbr>Error<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayhttplistenercustomerrorconfiguration">Input[Application<wbr>Gateway<wbr>Http<wbr>Listener<wbr>Custom<wbr>Error<wbr>Configuration<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `custom_error_configuration` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4947,7 +5019,7 @@ The following state arguments are supported:
 <a href="#firewall_policy_id_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Web Application Firewall Policy which should be used as a HTTP Listener.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4956,7 +5028,7 @@ The following state arguments are supported:
 <a href="#frontend_ip_configuration_id_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>ip_<wbr>configuration_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the associated Frontend Configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4965,7 +5037,7 @@ The following state arguments are supported:
 <a href="#frontend_port_id_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>port_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the associated Frontend Port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4974,7 +5046,7 @@ The following state arguments are supported:
 <a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Hostname which should be used for this HTTP Listener. Setting this value changes Listener Type to 'Multi site'.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4983,7 +5055,7 @@ The following state arguments are supported:
 <a href="#host_names_python" style="color: inherit; text-decoration: inherit;">host_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of Hostname(s) should be used for this HTTP Listener. It allows special wildcard characters.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4992,7 +5064,7 @@ The following state arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Rewrite Rule Set
 {{% /md %}}</dd><dt class="property-optional"
@@ -5001,7 +5073,7 @@ The following state arguments are supported:
 <a href="#require_sni_python" style="color: inherit; text-decoration: inherit;">require_<wbr>sni</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Should Server Name Indication be Required? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5010,7 +5082,7 @@ The following state arguments are supported:
 <a href="#ssl_certificate_id_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>certificate_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the associated SSL Certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5019,7 +5091,7 @@ The following state arguments are supported:
 <a href="#ssl_certificate_name_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>certificate_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the associated SSL Certificate which should be used for this HTTP Listener.
 {{% /md %}}</dd></dl>
@@ -5096,7 +5168,7 @@ The following state arguments are supported:
 <a href="#customerrorpageurl_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Error<wbr>Page<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Error page URL of the application gateway customer error.
 {{% /md %}}</dd><dt class="property-required"
@@ -5105,7 +5177,7 @@ The following state arguments are supported:
 <a href="#statuscode_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status code of the application gateway customer error. Possible values are `HttpStatus403` and `HttpStatus502`
 {{% /md %}}</dd><dt class="property-optional"
@@ -5114,7 +5186,7 @@ The following state arguments are supported:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Rewrite Rule Set
 {{% /md %}}</dd></dl>
@@ -5127,7 +5199,7 @@ The following state arguments are supported:
 <a href="#custom_error_page_url_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>error_<wbr>page_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Error page URL of the application gateway customer error.
 {{% /md %}}</dd><dt class="property-required"
@@ -5136,7 +5208,7 @@ The following state arguments are supported:
 <a href="#status_code_python" style="color: inherit; text-decoration: inherit;">status_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status code of the application gateway customer error. Possible values are `HttpStatus403` and `HttpStatus502`
 {{% /md %}}</dd><dt class="property-optional"
@@ -5145,7 +5217,7 @@ The following state arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Rewrite Rule Set
 {{% /md %}}</dd></dl>
@@ -5204,7 +5276,7 @@ The following state arguments are supported:
 <a href="#identityids_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies a list with a single user managed identity id to be assigned to the Application Gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5213,7 +5285,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Managed Service Identity Type of this Application Gateway. The only possible value is `UserAssigned`. Defaults to `UserAssigned`.
 {{% /md %}}</dd></dl>
@@ -5226,7 +5298,7 @@ The following state arguments are supported:
 <a href="#identity_ids_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a list with a single user managed identity id to be assigned to the Application Gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5235,7 +5307,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Managed Service Identity Type of this Application Gateway. The only possible value is `UserAssigned`. Defaults to `UserAssigned`.
 {{% /md %}}</dd></dl>
@@ -5474,7 +5546,7 @@ The following state arguments are supported:
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The Interval between two consecutive probes in seconds. Possible values range from 1 second to a maximum of 86,400 seconds.
 {{% /md %}}</dd><dt class="property-required"
@@ -5483,7 +5555,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Name of the Probe.
 {{% /md %}}</dd><dt class="property-required"
@@ -5492,7 +5564,7 @@ The following state arguments are supported:
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Path used for this Probe.
 {{% /md %}}</dd><dt class="property-required"
@@ -5501,7 +5573,7 @@ The following state arguments are supported:
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Protocol used for this Probe. Possible values are `Http` and `Https`.
 {{% /md %}}</dd><dt class="property-required"
@@ -5510,7 +5582,7 @@ The following state arguments are supported:
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The Timeout used for this Probe, which indicates when a probe becomes unhealthy. Possible values range from 1 second to a maximum of 86,400 seconds.
 {{% /md %}}</dd><dt class="property-required"
@@ -5519,7 +5591,7 @@ The following state arguments are supported:
 <a href="#unhealthythreshold_nodejs" style="color: inherit; text-decoration: inherit;">unhealthy<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The Unhealthy Threshold for this Probe, which indicates the amount of retries which should be attempted before a node is deemed unhealthy. Possible values are from 1 - 20 seconds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5528,7 +5600,7 @@ The following state arguments are supported:
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Hostname used for this Probe. If the Application Gateway is configured for a single site, by default the Host name should be specified as ‘127.0.0.1’, unless otherwise configured in custom probe. Cannot be set if `pick_host_name_from_backend_http_settings` is set to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5537,7 +5609,7 @@ The following state arguments are supported:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Rewrite Rule Set
 {{% /md %}}</dd><dt class="property-optional"
@@ -5546,7 +5618,7 @@ The following state arguments are supported:
 <a href="#match_nodejs" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayprobematch">Application<wbr>Gateway<wbr>Probe<wbr>Match</a></span>
+        <span class="property-type"><a href="#applicationgatewayprobematch">pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Probe<wbr>Match<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `match` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5555,7 +5627,7 @@ The following state arguments are supported:
 <a href="#minimumservers_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The minimum number of servers that are always marked as healthy. Defaults to `0`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5564,7 +5636,7 @@ The following state arguments are supported:
 <a href="#pickhostnamefrombackendhttpsettings_nodejs" style="color: inherit; text-decoration: inherit;">pick<wbr>Host<wbr>Name<wbr>From<wbr>Backend<wbr>Http<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the host header should be picked from the backend http settings. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5573,7 +5645,7 @@ The following state arguments are supported:
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Custom port which will be used for probing the backend servers. The valid value ranges from 1 to 65535. In case not set, port from http settings will be used. This property is valid for Standard_v2 and WAF_v2 only.
 {{% /md %}}</dd></dl>
@@ -5586,7 +5658,7 @@ The following state arguments are supported:
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The Interval between two consecutive probes in seconds. Possible values range from 1 second to a maximum of 86,400 seconds.
 {{% /md %}}</dd><dt class="property-required"
@@ -5595,7 +5667,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Name of the Probe.
 {{% /md %}}</dd><dt class="property-required"
@@ -5604,7 +5676,7 @@ The following state arguments are supported:
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Path used for this Probe.
 {{% /md %}}</dd><dt class="property-required"
@@ -5613,7 +5685,7 @@ The following state arguments are supported:
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Protocol used for this Probe. Possible values are `Http` and `Https`.
 {{% /md %}}</dd><dt class="property-required"
@@ -5622,7 +5694,7 @@ The following state arguments are supported:
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The Timeout used for this Probe, which indicates when a probe becomes unhealthy. Possible values range from 1 second to a maximum of 86,400 seconds.
 {{% /md %}}</dd><dt class="property-required"
@@ -5631,7 +5703,7 @@ The following state arguments are supported:
 <a href="#unhealthy_threshold_python" style="color: inherit; text-decoration: inherit;">unhealthy_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The Unhealthy Threshold for this Probe, which indicates the amount of retries which should be attempted before a node is deemed unhealthy. Possible values are from 1 - 20 seconds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5640,7 +5712,7 @@ The following state arguments are supported:
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Hostname used for this Probe. If the Application Gateway is configured for a single site, by default the Host name should be specified as ‘127.0.0.1’, unless otherwise configured in custom probe. Cannot be set if `pick_host_name_from_backend_http_settings` is set to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5649,7 +5721,7 @@ The following state arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Rewrite Rule Set
 {{% /md %}}</dd><dt class="property-optional"
@@ -5658,7 +5730,7 @@ The following state arguments are supported:
 <a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayprobematch">Application<wbr>Gateway<wbr>Probe<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewayprobematch">Input[Application<wbr>Gateway<wbr>Probe<wbr>Match<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `match` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5667,7 +5739,7 @@ The following state arguments are supported:
 <a href="#minimum_servers_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The minimum number of servers that are always marked as healthy. Defaults to `0`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5676,7 +5748,7 @@ The following state arguments are supported:
 <a href="#pick_host_name_from_backend_http_settings_python" style="color: inherit; text-decoration: inherit;">pick_<wbr>host_<wbr>name_<wbr>from_<wbr>backend_<wbr>http_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the host header should be picked from the backend http settings. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5685,7 +5757,7 @@ The following state arguments are supported:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Custom port which will be used for probing the backend servers. The valid value ranges from 1 to 65535. In case not set, port from http settings will be used. This property is valid for Standard_v2 and WAF_v2 only.
 {{% /md %}}</dd></dl>
@@ -5744,7 +5816,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A snippet from the Response Body which must be present in the Response..
 {{% /md %}}</dd><dt class="property-optional"
@@ -5753,7 +5825,7 @@ The following state arguments are supported:
 <a href="#statuscodes_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of allowed status codes for this Health Probe.
 {{% /md %}}</dd></dl>
@@ -5766,7 +5838,7 @@ The following state arguments are supported:
 <a href="#body_python" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A snippet from the Response Body which must be present in the Response..
 {{% /md %}}</dd><dt class="property-optional"
@@ -5775,7 +5847,7 @@ The following state arguments are supported:
 <a href="#status_codes_python" style="color: inherit; text-decoration: inherit;">status_<wbr>codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of allowed status codes for this Health Probe.
 {{% /md %}}</dd></dl>
@@ -5940,7 +6012,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique name of the redirect configuration block
 {{% /md %}}</dd><dt class="property-required"
@@ -5949,7 +6021,7 @@ The following state arguments are supported:
 <a href="#redirecttype_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of redirect. Possible values are `Permanent`, `Temporary`, `Found` and `SeeOther`
 {{% /md %}}</dd><dt class="property-optional"
@@ -5958,7 +6030,7 @@ The following state arguments are supported:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Rewrite Rule Set
 {{% /md %}}</dd><dt class="property-optional"
@@ -5967,7 +6039,7 @@ The following state arguments are supported:
 <a href="#includepath_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether or not to include the path in the redirected Url. Defaults to `false`
 {{% /md %}}</dd><dt class="property-optional"
@@ -5976,7 +6048,7 @@ The following state arguments are supported:
 <a href="#includequerystring_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether or not to include the query string in the redirected Url. Default to `false`
 {{% /md %}}</dd><dt class="property-optional"
@@ -5985,7 +6057,7 @@ The following state arguments are supported:
 <a href="#targetlistenerid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Listener<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5993,7 +6065,7 @@ The following state arguments are supported:
 <a href="#targetlistenername_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Listener<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the listener to redirect to. Cannot be set if `target_url` is set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6002,7 +6074,7 @@ The following state arguments are supported:
 <a href="#targeturl_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Url to redirect the request to. Cannot be set if `target_listener_name` is set.
 {{% /md %}}</dd></dl>
@@ -6015,7 +6087,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique name of the redirect configuration block
 {{% /md %}}</dd><dt class="property-required"
@@ -6024,7 +6096,7 @@ The following state arguments are supported:
 <a href="#redirect_type_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of redirect. Possible values are `Permanent`, `Temporary`, `Found` and `SeeOther`
 {{% /md %}}</dd><dt class="property-optional"
@@ -6033,7 +6105,7 @@ The following state arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Rewrite Rule Set
 {{% /md %}}</dd><dt class="property-optional"
@@ -6042,7 +6114,7 @@ The following state arguments are supported:
 <a href="#include_path_python" style="color: inherit; text-decoration: inherit;">include_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether or not to include the path in the redirected Url. Defaults to `false`
 {{% /md %}}</dd><dt class="property-optional"
@@ -6051,7 +6123,7 @@ The following state arguments are supported:
 <a href="#include_query_string_python" style="color: inherit; text-decoration: inherit;">include_<wbr>query_<wbr>string</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether or not to include the query string in the redirected Url. Default to `false`
 {{% /md %}}</dd><dt class="property-optional"
@@ -6060,7 +6132,7 @@ The following state arguments are supported:
 <a href="#target_listener_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>listener_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6068,7 +6140,7 @@ The following state arguments are supported:
 <a href="#target_listener_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>listener_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the listener to redirect to. Cannot be set if `target_url` is set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6077,7 +6149,7 @@ The following state arguments are supported:
 <a href="#target_url_python" style="color: inherit; text-decoration: inherit;">target_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Url to redirect the request to. Cannot be set if `target_listener_name` is set.
 {{% /md %}}</dd></dl>
@@ -6370,7 +6442,7 @@ The following state arguments are supported:
 <a href="#httplistenername_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Listener<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Name of the HTTP Listener which should be used for this Routing Rule.
 {{% /md %}}</dd><dt class="property-required"
@@ -6379,7 +6451,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Name of this Request Routing Rule.
 {{% /md %}}</dd><dt class="property-required"
@@ -6388,7 +6460,7 @@ The following state arguments are supported:
 <a href="#ruletype_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Type of Routing that should be used for this Rule. Possible values are `Basic` and `PathBasedRouting`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6397,7 +6469,7 @@ The following state arguments are supported:
 <a href="#backendaddresspoolid_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Address<wbr>Pool<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the associated Backend Address Pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6406,7 +6478,7 @@ The following state arguments are supported:
 <a href="#backendaddresspoolname_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Address<wbr>Pool<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Name of the Backend Address Pool which should be used for this Routing Rule. Cannot be set if `redirect_configuration_name` is set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6415,7 +6487,7 @@ The following state arguments are supported:
 <a href="#backendhttpsettingsid_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Http<wbr>Settings<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the associated Backend HTTP Settings Configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6424,7 +6496,7 @@ The following state arguments are supported:
 <a href="#backendhttpsettingsname_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Http<wbr>Settings<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Name of the Backend HTTP Settings Collection which should be used for this Routing Rule. Cannot be set if `redirect_configuration_name` is set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6433,7 +6505,7 @@ The following state arguments are supported:
 <a href="#httplistenerid_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Listener<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the associated HTTP Listener.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6442,7 +6514,7 @@ The following state arguments are supported:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Rewrite Rule Set
 {{% /md %}}</dd><dt class="property-optional"
@@ -6451,7 +6523,7 @@ The following state arguments are supported:
 <a href="#redirectconfigurationid_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Configuration<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the associated Redirect Configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6460,7 +6532,7 @@ The following state arguments are supported:
 <a href="#redirectconfigurationname_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Configuration<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Name of the Redirect Configuration which should be used for this Routing Rule. Cannot be set if either `backend_address_pool_name` or `backend_http_settings_name` is set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6469,7 +6541,7 @@ The following state arguments are supported:
 <a href="#rewriterulesetid_nodejs" style="color: inherit; text-decoration: inherit;">rewrite<wbr>Rule<wbr>Set<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the associated Rewrite Rule Set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6478,7 +6550,7 @@ The following state arguments are supported:
 <a href="#rewriterulesetname_nodejs" style="color: inherit; text-decoration: inherit;">rewrite<wbr>Rule<wbr>Set<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Name of the Rewrite Rule Set which should be used for this Routing Rule. Only valid for v2 SKUs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6487,7 +6559,7 @@ The following state arguments are supported:
 <a href="#urlpathmapid_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Path<wbr>Map<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the associated URL Path Map.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6496,7 +6568,7 @@ The following state arguments are supported:
 <a href="#urlpathmapname_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Path<wbr>Map<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Name of the URL Path Map which should be associated with this Routing Rule.
 {{% /md %}}</dd></dl>
@@ -6509,7 +6581,7 @@ The following state arguments are supported:
 <a href="#http_listener_name_python" style="color: inherit; text-decoration: inherit;">http_<wbr>listener_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Name of the HTTP Listener which should be used for this Routing Rule.
 {{% /md %}}</dd><dt class="property-required"
@@ -6518,7 +6590,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Name of this Request Routing Rule.
 {{% /md %}}</dd><dt class="property-required"
@@ -6527,7 +6599,7 @@ The following state arguments are supported:
 <a href="#rule_type_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Type of Routing that should be used for this Rule. Possible values are `Basic` and `PathBasedRouting`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6536,7 +6608,7 @@ The following state arguments are supported:
 <a href="#backend_address_pool_id_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>address_<wbr>pool_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the associated Backend Address Pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6545,7 +6617,7 @@ The following state arguments are supported:
 <a href="#backend_address_pool_name_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>address_<wbr>pool_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Name of the Backend Address Pool which should be used for this Routing Rule. Cannot be set if `redirect_configuration_name` is set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6554,7 +6626,7 @@ The following state arguments are supported:
 <a href="#backend_http_settings_id_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>http_<wbr>settings_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the associated Backend HTTP Settings Configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6563,7 +6635,7 @@ The following state arguments are supported:
 <a href="#backend_http_settings_name_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>http_<wbr>settings_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Name of the Backend HTTP Settings Collection which should be used for this Routing Rule. Cannot be set if `redirect_configuration_name` is set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6572,7 +6644,7 @@ The following state arguments are supported:
 <a href="#http_listener_id_python" style="color: inherit; text-decoration: inherit;">http_<wbr>listener_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the associated HTTP Listener.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6581,7 +6653,7 @@ The following state arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Rewrite Rule Set
 {{% /md %}}</dd><dt class="property-optional"
@@ -6590,7 +6662,7 @@ The following state arguments are supported:
 <a href="#redirect_configuration_id_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>configuration_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the associated Redirect Configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6599,7 +6671,7 @@ The following state arguments are supported:
 <a href="#redirect_configuration_name_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>configuration_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Name of the Redirect Configuration which should be used for this Routing Rule. Cannot be set if either `backend_address_pool_name` or `backend_http_settings_name` is set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6608,7 +6680,7 @@ The following state arguments are supported:
 <a href="#rewrite_rule_set_id_python" style="color: inherit; text-decoration: inherit;">rewrite_<wbr>rule_<wbr>set_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the associated Rewrite Rule Set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6617,7 +6689,7 @@ The following state arguments are supported:
 <a href="#rewrite_rule_set_name_python" style="color: inherit; text-decoration: inherit;">rewrite_<wbr>rule_<wbr>set_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Name of the Rewrite Rule Set which should be used for this Routing Rule. Only valid for v2 SKUs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6626,7 +6698,7 @@ The following state arguments are supported:
 <a href="#url_path_map_id_python" style="color: inherit; text-decoration: inherit;">url_<wbr>path_<wbr>map_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the associated URL Path Map.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6635,7 +6707,7 @@ The following state arguments are supported:
 <a href="#url_path_map_name_python" style="color: inherit; text-decoration: inherit;">url_<wbr>path_<wbr>map_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Name of the URL Path Map which should be associated with this Routing Rule.
 {{% /md %}}</dd></dl>
@@ -6712,7 +6784,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique name of the rewrite rule set block
 {{% /md %}}</dd><dt class="property-optional"
@@ -6721,7 +6793,7 @@ The following state arguments are supported:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Rewrite Rule Set
 {{% /md %}}</dd><dt class="property-optional"
@@ -6730,7 +6802,7 @@ The following state arguments are supported:
 <a href="#rewriterules_nodejs" style="color: inherit; text-decoration: inherit;">rewrite<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriterule">Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriterule">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `rewrite_rule` blocks as defined above.
 {{% /md %}}</dd></dl>
@@ -6743,7 +6815,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique name of the rewrite rule set block
 {{% /md %}}</dd><dt class="property-optional"
@@ -6752,7 +6824,7 @@ The following state arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Rewrite Rule Set
 {{% /md %}}</dd><dt class="property-optional"
@@ -6761,7 +6833,7 @@ The following state arguments are supported:
 <a href="#rewrite_rules_python" style="color: inherit; text-decoration: inherit;">rewrite_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriterule">Sequence[Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriterule">Input[Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `rewrite_rule` blocks as defined above.
 {{% /md %}}</dd></dl>
@@ -6894,7 +6966,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique name of the rewrite rule block
 {{% /md %}}</dd><dt class="property-required"
@@ -6903,7 +6975,7 @@ The following state arguments are supported:
 <a href="#rulesequence_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Sequence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Rule sequence of the rewrite rule that determines the order of execution in a set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6912,7 +6984,7 @@ The following state arguments are supported:
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriterulecondition">Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Condition[]</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriterulecondition">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Condition<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `condition` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6921,7 +6993,7 @@ The following state arguments are supported:
 <a href="#requestheaderconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Header<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriterulerequestheaderconfiguration">Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Request<wbr>Header<wbr>Configuration[]</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriterulerequestheaderconfiguration">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Request<wbr>Header<wbr>Configuration<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `request_header_configuration` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6930,7 +7002,7 @@ The following state arguments are supported:
 <a href="#responseheaderconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Header<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriteruleresponseheaderconfiguration">Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Response<wbr>Header<wbr>Configuration[]</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriteruleresponseheaderconfiguration">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Response<wbr>Header<wbr>Configuration<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `response_header_configuration` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6939,7 +7011,7 @@ The following state arguments are supported:
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriteruleurl">Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Url</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriteruleurl">pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Url<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}One `url` block as defined above
 ---
@@ -6953,7 +7025,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique name of the rewrite rule block
 {{% /md %}}</dd><dt class="property-required"
@@ -6962,7 +7034,7 @@ The following state arguments are supported:
 <a href="#rule_sequence_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>sequence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Rule sequence of the rewrite rule that determines the order of execution in a set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6971,7 +7043,7 @@ The following state arguments are supported:
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriterulecondition">Sequence[Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriterulecondition">Input[Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Condition<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `condition` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6980,7 +7052,7 @@ The following state arguments are supported:
 <a href="#request_header_configurations_python" style="color: inherit; text-decoration: inherit;">request_<wbr>header_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriterulerequestheaderconfiguration">Sequence[Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Request<wbr>Header<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriterulerequestheaderconfiguration">Input[Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Request<wbr>Header<wbr>Configuration<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `request_header_configuration` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6989,7 +7061,7 @@ The following state arguments are supported:
 <a href="#response_header_configurations_python" style="color: inherit; text-decoration: inherit;">response_<wbr>header_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriteruleresponseheaderconfiguration">Sequence[Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Response<wbr>Header<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriteruleresponseheaderconfiguration">Input[Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Response<wbr>Header<wbr>Configuration<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `response_header_configuration` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6998,7 +7070,7 @@ The following state arguments are supported:
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriteruleurl">Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Url<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriteruleurl">Input[Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Url<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One `url` block as defined above
 ---
@@ -7094,7 +7166,7 @@ The following state arguments are supported:
 <a href="#pattern_nodejs" style="color: inherit; text-decoration: inherit;">pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The pattern, either fixed string or regular expression, that evaluates the truthfulness of the condition.
 {{% /md %}}</dd><dt class="property-required"
@@ -7103,7 +7175,7 @@ The following state arguments are supported:
 <a href="#variable_nodejs" style="color: inherit; text-decoration: inherit;">variable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The [variable](https://docs.microsoft.com/en-us/azure/application-gateway/rewrite-http-headers#server-variables) of the condition.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7112,7 +7184,7 @@ The following state arguments are supported:
 <a href="#ignorecase_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Case</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Perform a case in-sensitive comparison. Defaults to `false`
 {{% /md %}}</dd><dt class="property-optional"
@@ -7121,7 +7193,7 @@ The following state arguments are supported:
 <a href="#negate_nodejs" style="color: inherit; text-decoration: inherit;">negate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Negate the result of the condition evaluation. Defaults to `false`
 {{% /md %}}</dd></dl>
@@ -7134,7 +7206,7 @@ The following state arguments are supported:
 <a href="#pattern_python" style="color: inherit; text-decoration: inherit;">pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The pattern, either fixed string or regular expression, that evaluates the truthfulness of the condition.
 {{% /md %}}</dd><dt class="property-required"
@@ -7143,7 +7215,7 @@ The following state arguments are supported:
 <a href="#variable_python" style="color: inherit; text-decoration: inherit;">variable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The [variable](https://docs.microsoft.com/en-us/azure/application-gateway/rewrite-http-headers#server-variables) of the condition.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7152,7 +7224,7 @@ The following state arguments are supported:
 <a href="#ignore_case_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>case</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Perform a case in-sensitive comparison. Defaults to `false`
 {{% /md %}}</dd><dt class="property-optional"
@@ -7161,7 +7233,7 @@ The following state arguments are supported:
 <a href="#negate_python" style="color: inherit; text-decoration: inherit;">negate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Negate the result of the condition evaluation. Defaults to `false`
 {{% /md %}}</dd></dl>
@@ -7220,7 +7292,7 @@ The following state arguments are supported:
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Header name of the header configuration.
 {{% /md %}}</dd><dt class="property-required"
@@ -7229,7 +7301,7 @@ The following state arguments are supported:
 <a href="#headervalue_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Header value of the header configuration. To delete a request header set this property to an empty string.
 {{% /md %}}</dd></dl>
@@ -7242,7 +7314,7 @@ The following state arguments are supported:
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Header name of the header configuration.
 {{% /md %}}</dd><dt class="property-required"
@@ -7251,7 +7323,7 @@ The following state arguments are supported:
 <a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Header value of the header configuration. To delete a request header set this property to an empty string.
 {{% /md %}}</dd></dl>
@@ -7310,7 +7382,7 @@ The following state arguments are supported:
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Header name of the header configuration.
 {{% /md %}}</dd><dt class="property-required"
@@ -7319,7 +7391,7 @@ The following state arguments are supported:
 <a href="#headervalue_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Header value of the header configuration. To delete a response header set this property to an empty string.
 {{% /md %}}</dd></dl>
@@ -7332,7 +7404,7 @@ The following state arguments are supported:
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Header name of the header configuration.
 {{% /md %}}</dd><dt class="property-required"
@@ -7341,7 +7413,7 @@ The following state arguments are supported:
 <a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Header value of the header configuration. To delete a response header set this property to an empty string.
 {{% /md %}}</dd></dl>
@@ -7418,7 +7490,7 @@ The following state arguments are supported:
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The URL path to rewrite.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7427,7 +7499,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The query string to rewrite.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7436,7 +7508,7 @@ The following state arguments are supported:
 <a href="#reroute_nodejs" style="color: inherit; text-decoration: inherit;">reroute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the URL path map should be reevaluated after this rewrite has been applied. [More info on rewrite configutation](https://docs.microsoft.com/en-us/azure/application-gateway/rewrite-http-headers-url#rewrite-configuration)
 {{% /md %}}</dd></dl>
@@ -7449,7 +7521,7 @@ The following state arguments are supported:
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The URL path to rewrite.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7458,7 +7530,7 @@ The following state arguments are supported:
 <a href="#query_string_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The query string to rewrite.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7467,7 +7539,7 @@ The following state arguments are supported:
 <a href="#reroute_python" style="color: inherit; text-decoration: inherit;">reroute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the URL path map should be reevaluated after this rewrite has been applied. [More info on rewrite configutation](https://docs.microsoft.com/en-us/azure/application-gateway/rewrite-http-headers-url#rewrite-configuration)
 {{% /md %}}</dd></dl>
@@ -7544,7 +7616,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Name of the SKU to use for this Application Gateway. Possible values are `Standard_Small`, `Standard_Medium`, `Standard_Large`, `Standard_v2`, `WAF_Medium`, `WAF_Large`, and `WAF_v2`.
 {{% /md %}}</dd><dt class="property-required"
@@ -7553,7 +7625,7 @@ The following state arguments are supported:
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Tier of the SKU to use for this Application Gateway. Possible values are `Standard`, `Standard_v2`, `WAF` and `WAF_v2`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7562,7 +7634,7 @@ The following state arguments are supported:
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The Capacity of the SKU to use for this Application Gateway. When using a V1 SKU this value must be between 1 and 32, and 1 to 125 for a V2 SKU. This property is optional if `autoscale_configuration` is set.
 {{% /md %}}</dd></dl>
@@ -7575,7 +7647,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Name of the SKU to use for this Application Gateway. Possible values are `Standard_Small`, `Standard_Medium`, `Standard_Large`, `Standard_v2`, `WAF_Medium`, `WAF_Large`, and `WAF_v2`.
 {{% /md %}}</dd><dt class="property-required"
@@ -7584,7 +7656,7 @@ The following state arguments are supported:
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Tier of the SKU to use for this Application Gateway. Possible values are `Standard`, `Standard_v2`, `WAF` and `WAF_v2`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7593,7 +7665,7 @@ The following state arguments are supported:
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The Capacity of the SKU to use for this Application Gateway. When using a V1 SKU this value must be between 1 and 32, and 1 to 125 for a V2 SKU. This property is optional if `autoscale_configuration` is set.
 {{% /md %}}</dd></dl>
@@ -7724,7 +7796,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Name of the SSL certificate that is unique within this Application Gateway
 {{% /md %}}</dd><dt class="property-optional"
@@ -7733,7 +7805,7 @@ The following state arguments are supported:
 <a href="#data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}PFX certificate. Required if `key_vault_secret_id` is not set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7742,7 +7814,7 @@ The following state arguments are supported:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Rewrite Rule Set
 {{% /md %}}</dd><dt class="property-optional"
@@ -7751,7 +7823,7 @@ The following state arguments are supported:
 <a href="#keyvaultsecretid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Secret<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Secret Id of (base-64 encoded unencrypted pfx) `Secret` or `Certificate` object stored in Azure KeyVault. You need to enable soft delete for keyvault to use this feature. Required if `data` is not set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7760,7 +7832,7 @@ The following state arguments are supported:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Password for the pfx file specified in data.  Required if `data` is set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7769,7 +7841,7 @@ The following state arguments are supported:
 <a href="#publiccertdata_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Cert<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Public Certificate Data associated with the SSL Certificate.
 {{% /md %}}</dd></dl>
@@ -7782,7 +7854,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Name of the SSL certificate that is unique within this Application Gateway
 {{% /md %}}</dd><dt class="property-optional"
@@ -7791,7 +7863,7 @@ The following state arguments are supported:
 <a href="#data_python" style="color: inherit; text-decoration: inherit;">data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}PFX certificate. Required if `key_vault_secret_id` is not set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7800,7 +7872,7 @@ The following state arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Rewrite Rule Set
 {{% /md %}}</dd><dt class="property-optional"
@@ -7809,7 +7881,7 @@ The following state arguments are supported:
 <a href="#key_vault_secret_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>secret_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Secret Id of (base-64 encoded unencrypted pfx) `Secret` or `Certificate` object stored in Azure KeyVault. You need to enable soft delete for keyvault to use this feature. Required if `data` is not set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7818,7 +7890,7 @@ The following state arguments are supported:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Password for the pfx file specified in data.  Required if `data` is set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7827,7 +7899,7 @@ The following state arguments are supported:
 <a href="#public_cert_data_python" style="color: inherit; text-decoration: inherit;">public_<wbr>cert_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Public Certificate Data associated with the SSL Certificate.
 {{% /md %}}</dd></dl>
@@ -7942,7 +8014,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#ciphersuites_nodejs" style="color: inherit; text-decoration: inherit;">cipher<wbr>Suites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A List of accepted cipher suites. Possible values are: `TLS_DHE_DSS_WITH_AES_128_CBC_SHA`, `TLS_DHE_DSS_WITH_AES_128_CBC_SHA256`, `TLS_DHE_DSS_WITH_AES_256_CBC_SHA`, `TLS_DHE_DSS_WITH_AES_256_CBC_SHA256`, `TLS_DHE_RSA_WITH_AES_128_CBC_SHA`, `TLS_DHE_RSA_WITH_AES_128_GCM_SHA256`, `TLS_DHE_RSA_WITH_AES_256_CBC_SHA`, `TLS_DHE_RSA_WITH_AES_256_GCM_SHA384`, `TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA`, `TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256`, `TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256`, `TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA`, `TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384`, `TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384`, `TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA`, `TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256`, `TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA`, `TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384`, `TLS_RSA_WITH_3DES_EDE_CBC_SHA`, `TLS_RSA_WITH_AES_128_CBC_SHA`, `TLS_RSA_WITH_AES_128_CBC_SHA256`, `TLS_RSA_WITH_AES_128_GCM_SHA256`, `TLS_RSA_WITH_AES_256_CBC_SHA`, `TLS_RSA_WITH_AES_256_CBC_SHA256` and `TLS_RSA_WITH_AES_256_GCM_SHA384`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7951,7 +8023,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#disabledprotocols_nodejs" style="color: inherit; text-decoration: inherit;">disabled<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of SSL Protocols which should be disabled on this Application Gateway. Possible values are `TLSv1_0`, `TLSv1_1` and `TLSv1_2`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7960,7 +8032,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#minprotocolversion_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Protocol<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The minimal TLS version. Possible values are `TLSv1_0`, `TLSv1_1` and `TLSv1_2`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7969,7 +8041,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#policyname_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Name of the Policy e.g AppGwSslPolicy20170401S. Required if `policy_type` is set to `Predefined`. Possible values can change over time and
 are published here https://docs.microsoft.com/en-us/azure/application-gateway/application-gateway-ssl-policy-overview. Not compatible with `disabled_protocols`.
@@ -7979,7 +8051,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#policytype_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Type of the Policy. Possible values are `Predefined` and `Custom`.
 {{% /md %}}</dd></dl>
@@ -7992,7 +8064,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#cipher_suites_python" style="color: inherit; text-decoration: inherit;">cipher_<wbr>suites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A List of accepted cipher suites. Possible values are: `TLS_DHE_DSS_WITH_AES_128_CBC_SHA`, `TLS_DHE_DSS_WITH_AES_128_CBC_SHA256`, `TLS_DHE_DSS_WITH_AES_256_CBC_SHA`, `TLS_DHE_DSS_WITH_AES_256_CBC_SHA256`, `TLS_DHE_RSA_WITH_AES_128_CBC_SHA`, `TLS_DHE_RSA_WITH_AES_128_GCM_SHA256`, `TLS_DHE_RSA_WITH_AES_256_CBC_SHA`, `TLS_DHE_RSA_WITH_AES_256_GCM_SHA384`, `TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA`, `TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256`, `TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256`, `TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA`, `TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384`, `TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384`, `TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA`, `TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256`, `TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA`, `TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384`, `TLS_RSA_WITH_3DES_EDE_CBC_SHA`, `TLS_RSA_WITH_AES_128_CBC_SHA`, `TLS_RSA_WITH_AES_128_CBC_SHA256`, `TLS_RSA_WITH_AES_128_GCM_SHA256`, `TLS_RSA_WITH_AES_256_CBC_SHA`, `TLS_RSA_WITH_AES_256_CBC_SHA256` and `TLS_RSA_WITH_AES_256_GCM_SHA384`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8001,7 +8073,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#disabled_protocols_python" style="color: inherit; text-decoration: inherit;">disabled_<wbr>protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of SSL Protocols which should be disabled on this Application Gateway. Possible values are `TLSv1_0`, `TLSv1_1` and `TLSv1_2`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8010,7 +8082,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#min_protocol_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>protocol_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The minimal TLS version. Possible values are `TLSv1_0`, `TLSv1_1` and `TLSv1_2`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8019,7 +8091,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#policy_name_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Name of the Policy e.g AppGwSslPolicy20170401S. Required if `policy_type` is set to `Predefined`. Possible values can change over time and
 are published here https://docs.microsoft.com/en-us/azure/application-gateway/application-gateway-ssl-policy-overview. Not compatible with `disabled_protocols`.
@@ -8029,7 +8101,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#policy_type_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Type of the Policy. Possible values are `Predefined` and `Custom`.
 {{% /md %}}</dd></dl>
@@ -8106,7 +8178,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The contents of the Trusted Root Certificate which should be used.
 {{% /md %}}</dd><dt class="property-required"
@@ -8115,7 +8187,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Name of the Trusted Root Certificate to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8124,7 +8196,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Rewrite Rule Set
 {{% /md %}}</dd></dl>
@@ -8137,7 +8209,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#data_python" style="color: inherit; text-decoration: inherit;">data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The contents of the Trusted Root Certificate which should be used.
 {{% /md %}}</dd><dt class="property-required"
@@ -8146,7 +8218,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Name of the Trusted Root Certificate to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8155,7 +8227,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Rewrite Rule Set
 {{% /md %}}</dd></dl>
@@ -8374,7 +8446,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Name of the URL Path Map.
 {{% /md %}}</dd><dt class="property-required"
@@ -8383,7 +8455,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#pathrules_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayurlpathmappathrule">Application<wbr>Gateway<wbr>Url<wbr>Path<wbr>Map<wbr>Path<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#applicationgatewayurlpathmappathrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Url<wbr>Path<wbr>Map<wbr>Path<wbr>Rule<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `path_rule` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8392,7 +8464,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#defaultbackendaddresspoolid_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Backend<wbr>Address<wbr>Pool<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Default Backend Address Pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8401,7 +8473,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#defaultbackendaddresspoolname_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Backend<wbr>Address<wbr>Pool<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Name of the Default Backend Address Pool which should be used for this URL Path Map. Cannot be set if `default_redirect_configuration_name` is set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8410,7 +8482,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#defaultbackendhttpsettingsid_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Backend<wbr>Http<wbr>Settings<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Default Backend HTTP Settings Collection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8419,7 +8491,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#defaultbackendhttpsettingsname_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Backend<wbr>Http<wbr>Settings<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Name of the Default Backend HTTP Settings Collection which should be used for this URL Path Map. Cannot be set if `default_redirect_configuration_name` is set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8428,7 +8500,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#defaultredirectconfigurationid_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Redirect<wbr>Configuration<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Default Redirect Configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8437,7 +8509,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#defaultredirectconfigurationname_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Redirect<wbr>Configuration<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Name of the Default Redirect Configuration which should be used for this URL Path Map. Cannot be set if either `default_backend_address_pool_name` or `default_backend_http_settings_name` is set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8446,7 +8518,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#defaultrewriterulesetid_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8454,7 +8526,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#defaultrewriterulesetname_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Name of the Default Rewrite Rule Set which should be used for this URL Path Map. Only valid for v2 SKUs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8463,7 +8535,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Rewrite Rule Set
 {{% /md %}}</dd></dl>
@@ -8476,7 +8548,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Name of the URL Path Map.
 {{% /md %}}</dd><dt class="property-required"
@@ -8485,7 +8557,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#path_rules_python" style="color: inherit; text-decoration: inherit;">path_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayurlpathmappathrule">Sequence[Application<wbr>Gateway<wbr>Url<wbr>Path<wbr>Map<wbr>Path<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayurlpathmappathrule">Input[Application<wbr>Gateway<wbr>Url<wbr>Path<wbr>Map<wbr>Path<wbr>Rule<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `path_rule` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8494,7 +8566,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#default_backend_address_pool_id_python" style="color: inherit; text-decoration: inherit;">default_<wbr>backend_<wbr>address_<wbr>pool_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Default Backend Address Pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8503,7 +8575,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#default_backend_address_pool_name_python" style="color: inherit; text-decoration: inherit;">default_<wbr>backend_<wbr>address_<wbr>pool_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Name of the Default Backend Address Pool which should be used for this URL Path Map. Cannot be set if `default_redirect_configuration_name` is set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8512,7 +8584,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#default_backend_http_settings_id_python" style="color: inherit; text-decoration: inherit;">default_<wbr>backend_<wbr>http_<wbr>settings_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Default Backend HTTP Settings Collection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8521,7 +8593,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#default_backend_http_settings_name_python" style="color: inherit; text-decoration: inherit;">default_<wbr>backend_<wbr>http_<wbr>settings_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Name of the Default Backend HTTP Settings Collection which should be used for this URL Path Map. Cannot be set if `default_redirect_configuration_name` is set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8530,7 +8602,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#default_redirect_configuration_id_python" style="color: inherit; text-decoration: inherit;">default_<wbr>redirect_<wbr>configuration_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Default Redirect Configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8539,7 +8611,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#default_redirect_configuration_name_python" style="color: inherit; text-decoration: inherit;">default_<wbr>redirect_<wbr>configuration_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Name of the Default Redirect Configuration which should be used for this URL Path Map. Cannot be set if either `default_backend_address_pool_name` or `default_backend_http_settings_name` is set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8548,7 +8620,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#default_rewrite_rule_set_id_python" style="color: inherit; text-decoration: inherit;">default_<wbr>rewrite_<wbr>rule_<wbr>set_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8556,7 +8628,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#default_rewrite_rule_set_name_python" style="color: inherit; text-decoration: inherit;">default_<wbr>rewrite_<wbr>rule_<wbr>set_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Name of the Default Rewrite Rule Set which should be used for this URL Path Map. Only valid for v2 SKUs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8565,7 +8637,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Rewrite Rule Set
 {{% /md %}}</dd></dl>
@@ -8628,6 +8700,15 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the Backend HTTP Settings Collection to use for this Path Rule. Cannot be set if `redirect_configuration_name` is set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="firewallpolicyid_csharp">
+<a href="#firewallpolicyid_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Web Application Firewall Policy which should be used as a HTTP Listener.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
@@ -8733,6 +8814,15 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
     <dd>{{% md %}}The Name of the Backend HTTP Settings Collection to use for this Path Rule. Cannot be set if `redirect_configuration_name` is set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="firewallpolicyid_go">
+<a href="#firewallpolicyid_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Web Application Firewall Policy which should be used as a HTTP Listener.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -8786,7 +8876,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Name of the Path Rule.
 {{% /md %}}</dd><dt class="property-required"
@@ -8795,7 +8885,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#paths_nodejs" style="color: inherit; text-decoration: inherit;">paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of Paths used in this Path Rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8804,7 +8894,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#backendaddresspoolid_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Address<wbr>Pool<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the associated Backend Address Pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8813,7 +8903,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#backendaddresspoolname_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Address<wbr>Pool<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Name of the Backend Address Pool to use for this Path Rule. Cannot be set if `redirect_configuration_name` is set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8822,7 +8912,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#backendhttpsettingsid_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Http<wbr>Settings<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the associated Backend HTTP Settings Configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8831,16 +8921,25 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#backendhttpsettingsname_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Http<wbr>Settings<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Name of the Backend HTTP Settings Collection to use for this Path Rule. Cannot be set if `redirect_configuration_name` is set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="firewallpolicyid_nodejs">
+<a href="#firewallpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Web Application Firewall Policy which should be used as a HTTP Listener.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Rewrite Rule Set
 {{% /md %}}</dd><dt class="property-optional"
@@ -8849,7 +8948,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#redirectconfigurationid_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Configuration<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the associated Redirect Configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8858,7 +8957,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#redirectconfigurationname_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Configuration<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Name of a Redirect Configuration to use for this Path Rule. Cannot be set if `backend_address_pool_name` or `backend_http_settings_name` is set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8867,7 +8966,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#rewriterulesetid_nodejs" style="color: inherit; text-decoration: inherit;">rewrite<wbr>Rule<wbr>Set<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the associated Rewrite Rule Set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8876,7 +8975,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#rewriterulesetname_nodejs" style="color: inherit; text-decoration: inherit;">rewrite<wbr>Rule<wbr>Set<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Name of the Rewrite Rule Set which should be used for this URL Path Map. Only valid for v2 SKUs.
 {{% /md %}}</dd></dl>
@@ -8889,7 +8988,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Name of the Path Rule.
 {{% /md %}}</dd><dt class="property-required"
@@ -8898,7 +8997,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#paths_python" style="color: inherit; text-decoration: inherit;">paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of Paths used in this Path Rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8907,7 +9006,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#backend_address_pool_id_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>address_<wbr>pool_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the associated Backend Address Pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8916,7 +9015,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#backend_address_pool_name_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>address_<wbr>pool_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Name of the Backend Address Pool to use for this Path Rule. Cannot be set if `redirect_configuration_name` is set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8925,7 +9024,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#backend_http_settings_id_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>http_<wbr>settings_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the associated Backend HTTP Settings Configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8934,16 +9033,25 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#backend_http_settings_name_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>http_<wbr>settings_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Name of the Backend HTTP Settings Collection to use for this Path Rule. Cannot be set if `redirect_configuration_name` is set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="firewall_policy_id_python">
+<a href="#firewall_policy_id_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>policy_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Web Application Firewall Policy which should be used as a HTTP Listener.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Rewrite Rule Set
 {{% /md %}}</dd><dt class="property-optional"
@@ -8952,7 +9060,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#redirect_configuration_id_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>configuration_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the associated Redirect Configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8961,7 +9069,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#redirect_configuration_name_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>configuration_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Name of a Redirect Configuration to use for this Path Rule. Cannot be set if `backend_address_pool_name` or `backend_http_settings_name` is set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8970,7 +9078,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#rewrite_rule_set_id_python" style="color: inherit; text-decoration: inherit;">rewrite_<wbr>rule_<wbr>set_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the associated Rewrite Rule Set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8979,7 +9087,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#rewrite_rule_set_name_python" style="color: inherit; text-decoration: inherit;">rewrite_<wbr>rule_<wbr>set_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Name of the Rewrite Rule Set which should be used for this URL Path Map. Only valid for v2 SKUs.
 {{% /md %}}</dd></dl>
@@ -9164,7 +9272,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Is the Web Application Firewall be enabled?
 {{% /md %}}</dd><dt class="property-required"
@@ -9173,7 +9281,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#firewallmode_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Web Application Firewall Mode. Possible values are `Detection` and `Prevention`.
 {{% /md %}}</dd><dt class="property-required"
@@ -9182,7 +9290,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#rulesetversion_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Set<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Version of the Rule Set used for this Web Application Firewall. Possible values are `2.2.9`, `3.0`, and `3.1`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9191,7 +9299,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#disabledrulegroups_nodejs" style="color: inherit; text-decoration: inherit;">disabled<wbr>Rule<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaywafconfigurationdisabledrulegroup">Application<wbr>Gateway<wbr>Waf<wbr>Configuration<wbr>Disabled<wbr>Rule<wbr>Group[]</a></span>
+        <span class="property-type"><a href="#applicationgatewaywafconfigurationdisabledrulegroup">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Waf<wbr>Configuration<wbr>Disabled<wbr>Rule<wbr>Group<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}one or more `disabled_rule_group` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9200,7 +9308,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#exclusions_nodejs" style="color: inherit; text-decoration: inherit;">exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaywafconfigurationexclusion">Application<wbr>Gateway<wbr>Waf<wbr>Configuration<wbr>Exclusion[]</a></span>
+        <span class="property-type"><a href="#applicationgatewaywafconfigurationexclusion">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Gateway<wbr>Waf<wbr>Configuration<wbr>Exclusion<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}one or more `exclusion` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9209,7 +9317,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#fileuploadlimitmb_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Upload<wbr>Limit<wbr>Mb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The File Upload Limit in MB. Accepted values are in the range `1`MB to `750`MB for the `WAF_v2` SKU, and `1`MB to `500`MB for all other SKUs. Defaults to `100`MB.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9218,7 +9326,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#maxrequestbodysizekb_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Request<wbr>Body<wbr>Size<wbr>Kb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The Maximum Request Body Size in KB.  Accepted values are in the range `1`KB to `128`KB.  Defaults to `128`KB.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9227,7 +9335,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#requestbodycheck_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Body<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Is Request Body Inspection enabled?  Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9236,7 +9344,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#rulesettype_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Set<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Type of the Rule Set used for this Web Application Firewall. Currently, only `OWASP` is supported.
 {{% /md %}}</dd></dl>
@@ -9249,7 +9357,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Is the Web Application Firewall be enabled?
 {{% /md %}}</dd><dt class="property-required"
@@ -9258,7 +9366,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#firewall_mode_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Web Application Firewall Mode. Possible values are `Detection` and `Prevention`.
 {{% /md %}}</dd><dt class="property-required"
@@ -9267,7 +9375,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#rule_set_version_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>set_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Version of the Rule Set used for this Web Application Firewall. Possible values are `2.2.9`, `3.0`, and `3.1`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9276,7 +9384,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#disabled_rule_groups_python" style="color: inherit; text-decoration: inherit;">disabled_<wbr>rule_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaywafconfigurationdisabledrulegroup">Sequence[Application<wbr>Gateway<wbr>Waf<wbr>Configuration<wbr>Disabled<wbr>Rule<wbr>Group<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewaywafconfigurationdisabledrulegroup">Input[Application<wbr>Gateway<wbr>Waf<wbr>Configuration<wbr>Disabled<wbr>Rule<wbr>Group<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}one or more `disabled_rule_group` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9285,7 +9393,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#exclusions_python" style="color: inherit; text-decoration: inherit;">exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaywafconfigurationexclusion">Sequence[Application<wbr>Gateway<wbr>Waf<wbr>Configuration<wbr>Exclusion<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewaywafconfigurationexclusion">Input[Application<wbr>Gateway<wbr>Waf<wbr>Configuration<wbr>Exclusion<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}one or more `exclusion` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9294,7 +9402,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#file_upload_limit_mb_python" style="color: inherit; text-decoration: inherit;">file_<wbr>upload_<wbr>limit_<wbr>mb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The File Upload Limit in MB. Accepted values are in the range `1`MB to `750`MB for the `WAF_v2` SKU, and `1`MB to `500`MB for all other SKUs. Defaults to `100`MB.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9303,7 +9411,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#max_request_body_size_kb_python" style="color: inherit; text-decoration: inherit;">max_<wbr>request_<wbr>body_<wbr>size_<wbr>kb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The Maximum Request Body Size in KB.  Accepted values are in the range `1`KB to `128`KB.  Defaults to `128`KB.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9312,7 +9420,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#request_body_check_python" style="color: inherit; text-decoration: inherit;">request_<wbr>body_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Is Request Body Inspection enabled?  Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9321,7 +9429,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#rule_set_type_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>set_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Type of the Rule Set used for this Web Application Firewall. Currently, only `OWASP` is supported.
 {{% /md %}}</dd></dl>
@@ -9380,7 +9488,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#rulegroupname_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The rule group where specific rules should be disabled. Accepted values are:  `crs_20_protocol_violations`, `crs_21_protocol_anomalies`, `crs_23_request_limits`, `crs_30_http_policy`, `crs_35_bad_robots`, `crs_40_generic_attacks`, `crs_41_sql_injection_attacks`, `crs_41_xss_attacks`, `crs_42_tight_security`, `crs_45_trojans`, `General`, `REQUEST-911-METHOD-ENFORCEMENT`, `REQUEST-913-SCANNER-DETECTION`, `REQUEST-920-PROTOCOL-ENFORCEMENT`, `REQUEST-921-PROTOCOL-ATTACK`, `REQUEST-930-APPLICATION-ATTACK-LFI`, `REQUEST-931-APPLICATION-ATTACK-RFI`, `REQUEST-932-APPLICATION-ATTACK-RCE`, `REQUEST-933-APPLICATION-ATTACK-PHP`, `REQUEST-941-APPLICATION-ATTACK-XSS`, `REQUEST-942-APPLICATION-ATTACK-SQLI`, `REQUEST-943-APPLICATION-ATTACK-SESSION-FIXATION`
 {{% /md %}}</dd><dt class="property-optional"
@@ -9389,7 +9497,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
     </dt>
     <dd>{{% md %}}A list of rules which should be disabled in that group. Disables all rules in the specified group if `rules` is not specified.
 {{% /md %}}</dd></dl>
@@ -9402,7 +9510,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#rule_group_name_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The rule group where specific rules should be disabled. Accepted values are:  `crs_20_protocol_violations`, `crs_21_protocol_anomalies`, `crs_23_request_limits`, `crs_30_http_policy`, `crs_35_bad_robots`, `crs_40_generic_attacks`, `crs_41_sql_injection_attacks`, `crs_41_xss_attacks`, `crs_42_tight_security`, `crs_45_trojans`, `General`, `REQUEST-911-METHOD-ENFORCEMENT`, `REQUEST-913-SCANNER-DETECTION`, `REQUEST-920-PROTOCOL-ENFORCEMENT`, `REQUEST-921-PROTOCOL-ATTACK`, `REQUEST-930-APPLICATION-ATTACK-LFI`, `REQUEST-931-APPLICATION-ATTACK-RFI`, `REQUEST-932-APPLICATION-ATTACK-RCE`, `REQUEST-933-APPLICATION-ATTACK-PHP`, `REQUEST-941-APPLICATION-ATTACK-XSS`, `REQUEST-942-APPLICATION-ATTACK-SQLI`, `REQUEST-943-APPLICATION-ATTACK-SESSION-FIXATION`
 {{% /md %}}</dd><dt class="property-optional"
@@ -9411,7 +9519,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[int]</span>
+        <span class="property-type">Input[int]]]</span>
     </dt>
     <dd>{{% md %}}A list of rules which should be disabled in that group. Disables all rules in the specified group if `rules` is not specified.
 {{% /md %}}</dd></dl>
@@ -9488,7 +9596,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#matchvariable_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Variable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Match variable of the exclusion rule to exclude header, cookie or GET arguments. Possible values are `RequestHeaderNames`, `RequestArgNames` and `RequestCookieNames`
 {{% /md %}}</dd><dt class="property-optional"
@@ -9497,7 +9605,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#selector_nodejs" style="color: inherit; text-decoration: inherit;">selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String value which will be used for the filter operation. If empty will exclude all traffic on this `match_variable`
 {{% /md %}}</dd><dt class="property-optional"
@@ -9506,7 +9614,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#selectormatchoperator_nodejs" style="color: inherit; text-decoration: inherit;">selector<wbr>Match<wbr>Operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Operator which will be used to search in the variable content. Possible values are `Equals`, `StartsWith`, `EndsWith`, `Contains`. If empty will exclude all traffic on this `match_variable`
 {{% /md %}}</dd></dl>
@@ -9519,7 +9627,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#match_variable_python" style="color: inherit; text-decoration: inherit;">match_<wbr>variable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Match variable of the exclusion rule to exclude header, cookie or GET arguments. Possible values are `RequestHeaderNames`, `RequestArgNames` and `RequestCookieNames`
 {{% /md %}}</dd><dt class="property-optional"
@@ -9528,7 +9636,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String value which will be used for the filter operation. If empty will exclude all traffic on this `match_variable`
 {{% /md %}}</dd><dt class="property-optional"
@@ -9537,7 +9645,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#selector_match_operator_python" style="color: inherit; text-decoration: inherit;">selector_<wbr>match_<wbr>operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Operator which will be used to search in the variable content. Possible values are `Equals`, `StartsWith`, `EndsWith`, `Contains`. If empty will exclude all traffic on this `match_variable`
 {{% /md %}}</dd></dl>

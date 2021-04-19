@@ -209,10 +209,10 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/netapp"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/netapp"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -307,19 +307,39 @@ func main() {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VolumeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VolumeArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">create_from_snapshot_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_protection_replication</span><span class="p">:</span> <span class="nx">Optional[VolumeDataProtectionReplicationArgs]</span> = None<span class="p">, </span><span class="nx">export_policy_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[VolumeExportPolicyRuleArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocols</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_quota_in_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">volume_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+           <span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">create_from_snapshot_resource_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">data_protection_replication</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VolumeDataProtectionReplicationArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">export_policy_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[VolumeExportPolicyRuleArgs]]]]</span> = None<span class="p">,</span>
+           <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">protocols</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+           <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">service_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">storage_quota_in_gb</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+           <span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+           <span class="nx">volume_path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VolumeArgs</a></span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVolume</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VolumeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Volume</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVolume</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VolumeArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Volume</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VolumeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">VolumeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -354,22 +374,32 @@ func main() {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">VolumeArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -378,7 +408,7 @@ func main() {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -402,7 +432,7 @@ func main() {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -715,7 +745,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the NetApp account in which the NetApp Pool should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -724,7 +754,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#poolname_nodejs" style="color: inherit; text-decoration: inherit;">pool<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the NetApp pool in which the NetApp Volume should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -733,7 +763,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group where the NetApp Volume should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -742,7 +772,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#servicelevel_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The target performance of the file system. Valid values include `Premium`, `Standard`, or `Ultra`.
 {{% /md %}}</dd><dt class="property-required"
@@ -751,7 +781,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#storagequotaingb_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Quota<wbr>In<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum Storage Quota allowed for a file system in Gigabytes.
 {{% /md %}}</dd><dt class="property-required"
@@ -760,7 +790,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet the NetApp Volume resides in, which must have the `Microsoft.NetApp/volumes` delegation. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -769,7 +799,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#volumepath_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique file path for the volume. Used when creating mount targets. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -778,7 +808,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#createfromsnapshotresourceid_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>From<wbr>Snapshot<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Creates volume from snapshot. Following properties must be the same as the original volume where the snapshot was taken from: `protocols`, `subnet_id`, `location`, `service_level`, `resource_group_name`, `account_name` and `pool_name`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -787,7 +817,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#dataprotectionreplication_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Protection<wbr>Replication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumedataprotectionreplication">Volume<wbr>Data<wbr>Protection<wbr>Replication</a></span>
+        <span class="property-type"><a href="#volumedataprotectionreplication">pulumi.<wbr>Input<Volume<wbr>Data<wbr>Protection<wbr>Replication<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -795,7 +825,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#exportpolicyrules_nodejs" style="color: inherit; text-decoration: inherit;">export<wbr>Policy<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumeexportpolicyrule">Volume<wbr>Export<wbr>Policy<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#volumeexportpolicyrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Volume<wbr>Export<wbr>Policy<wbr>Rule<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `export_policy_rule` block defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -804,7 +834,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -813,7 +843,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the NetApp Volume. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -822,7 +852,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#protocols_nodejs" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The target volume protocol expressed as a list. Supported single value include `CIFS`, `NFSv3`, or `NFSv4.1`. If argument is not defined it will default to `NFSv3`. Changing this forces a new resource to be created and data will be lost. Dual protocol scenario is supported for CIFS and NFSv3, for more information, please refer to [Create a dual-protocol volume for Azure NetApp Files](https://docs.microsoft.com/en-us/azure/azure-netapp-files/create-volumes-dual-protocol) document.
 {{% /md %}}</dd><dt class="property-optional"
@@ -831,7 +861,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -844,7 +874,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the NetApp account in which the NetApp Pool should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -853,7 +883,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#pool_name_python" style="color: inherit; text-decoration: inherit;">pool_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the NetApp pool in which the NetApp Volume should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -862,7 +892,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group where the NetApp Volume should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -871,7 +901,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#service_level_python" style="color: inherit; text-decoration: inherit;">service_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The target performance of the file system. Valid values include `Premium`, `Standard`, or `Ultra`.
 {{% /md %}}</dd><dt class="property-required"
@@ -880,7 +910,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#storage_quota_in_gb_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>quota_<wbr>in_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum Storage Quota allowed for a file system in Gigabytes.
 {{% /md %}}</dd><dt class="property-required"
@@ -889,7 +919,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet the NetApp Volume resides in, which must have the `Microsoft.NetApp/volumes` delegation. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -898,7 +928,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#volume_path_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique file path for the volume. Used when creating mount targets. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -907,7 +937,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#create_from_snapshot_resource_id_python" style="color: inherit; text-decoration: inherit;">create_<wbr>from_<wbr>snapshot_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Creates volume from snapshot. Following properties must be the same as the original volume where the snapshot was taken from: `protocols`, `subnet_id`, `location`, `service_level`, `resource_group_name`, `account_name` and `pool_name`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -916,7 +946,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#data_protection_replication_python" style="color: inherit; text-decoration: inherit;">data_<wbr>protection_<wbr>replication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumedataprotectionreplication">Volume<wbr>Data<wbr>Protection<wbr>Replication<wbr>Args</a></span>
+        <span class="property-type"><a href="#volumedataprotectionreplication">Input[Volume<wbr>Data<wbr>Protection<wbr>Replication<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -924,7 +954,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#export_policy_rules_python" style="color: inherit; text-decoration: inherit;">export_<wbr>policy_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumeexportpolicyrule">Sequence[Volume<wbr>Export<wbr>Policy<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#volumeexportpolicyrule">Input[Volume<wbr>Export<wbr>Policy<wbr>Rule<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `export_policy_rule` block defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -933,7 +963,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -942,7 +972,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the NetApp Volume. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -951,7 +981,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#protocols_python" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The target volume protocol expressed as a list. Supported single value include `CIFS`, `NFSv3`, or `NFSv4.1`. If argument is not defined it will default to `NFSv3`. Changing this forces a new resource to be created and data will be lost. Dual protocol scenario is supported for CIFS and NFSv3, for more information, please refer to [Create a dual-protocol volume for Azure NetApp Files](https://docs.microsoft.com/en-us/azure/azure-netapp-files/create-volumes-dual-protocol) document.
 {{% /md %}}</dd><dt class="property-optional"
@@ -960,7 +990,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -1065,20 +1095,37 @@ Get an existing Volume resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">VolumeState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Volume</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">VolumeState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Volume</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">create_from_snapshot_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_protection_replication</span><span class="p">:</span> <span class="nx">Optional[VolumeDataProtectionReplicationArgs]</span> = None<span class="p">, </span><span class="nx">export_policy_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[VolumeExportPolicyRuleArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mount_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocols</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_quota_in_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">volume_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Volume</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">create_from_snapshot_resource_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">data_protection_replication</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VolumeDataProtectionReplicationArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">export_policy_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[VolumeExportPolicyRuleArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">mount_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">protocols</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">service_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">storage_quota_in_gb</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">volume_path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Volume</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVolume<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">VolumeState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Volume</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVolume<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">VolumeState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Volume</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Volume</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">VolumeState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Volume</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">VolumeState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1463,7 +1510,7 @@ The following state arguments are supported:
 <a href="#state_accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the NetApp account in which the NetApp Pool should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1472,7 +1519,7 @@ The following state arguments are supported:
 <a href="#state_createfromsnapshotresourceid_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>From<wbr>Snapshot<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Creates volume from snapshot. Following properties must be the same as the original volume where the snapshot was taken from: `protocols`, `subnet_id`, `location`, `service_level`, `resource_group_name`, `account_name` and `pool_name`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1481,7 +1528,7 @@ The following state arguments are supported:
 <a href="#state_dataprotectionreplication_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Protection<wbr>Replication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumedataprotectionreplication">Volume<wbr>Data<wbr>Protection<wbr>Replication</a></span>
+        <span class="property-type"><a href="#volumedataprotectionreplication">pulumi.<wbr>Input<Volume<wbr>Data<wbr>Protection<wbr>Replication<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1489,7 +1536,7 @@ The following state arguments are supported:
 <a href="#state_exportpolicyrules_nodejs" style="color: inherit; text-decoration: inherit;">export<wbr>Policy<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumeexportpolicyrule">Volume<wbr>Export<wbr>Policy<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#volumeexportpolicyrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Volume<wbr>Export<wbr>Policy<wbr>Rule<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `export_policy_rule` block defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1498,7 +1545,7 @@ The following state arguments are supported:
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1507,7 +1554,7 @@ The following state arguments are supported:
 <a href="#state_mountipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of IPv4 Addresses which should be used to mount the volume.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1516,7 +1563,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the NetApp Volume. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1525,7 +1572,7 @@ The following state arguments are supported:
 <a href="#state_poolname_nodejs" style="color: inherit; text-decoration: inherit;">pool<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the NetApp pool in which the NetApp Volume should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1534,7 +1581,7 @@ The following state arguments are supported:
 <a href="#state_protocols_nodejs" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The target volume protocol expressed as a list. Supported single value include `CIFS`, `NFSv3`, or `NFSv4.1`. If argument is not defined it will default to `NFSv3`. Changing this forces a new resource to be created and data will be lost. Dual protocol scenario is supported for CIFS and NFSv3, for more information, please refer to [Create a dual-protocol volume for Azure NetApp Files](https://docs.microsoft.com/en-us/azure/azure-netapp-files/create-volumes-dual-protocol) document.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1543,7 +1590,7 @@ The following state arguments are supported:
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group where the NetApp Volume should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1552,7 +1599,7 @@ The following state arguments are supported:
 <a href="#state_servicelevel_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The target performance of the file system. Valid values include `Premium`, `Standard`, or `Ultra`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1561,7 +1608,7 @@ The following state arguments are supported:
 <a href="#state_storagequotaingb_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Quota<wbr>In<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum Storage Quota allowed for a file system in Gigabytes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1570,7 +1617,7 @@ The following state arguments are supported:
 <a href="#state_subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet the NetApp Volume resides in, which must have the `Microsoft.NetApp/volumes` delegation. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1579,7 +1626,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1588,7 +1635,7 @@ The following state arguments are supported:
 <a href="#state_volumepath_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique file path for the volume. Used when creating mount targets. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -1601,7 +1648,7 @@ The following state arguments are supported:
 <a href="#state_account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the NetApp account in which the NetApp Pool should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1610,7 +1657,7 @@ The following state arguments are supported:
 <a href="#state_create_from_snapshot_resource_id_python" style="color: inherit; text-decoration: inherit;">create_<wbr>from_<wbr>snapshot_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Creates volume from snapshot. Following properties must be the same as the original volume where the snapshot was taken from: `protocols`, `subnet_id`, `location`, `service_level`, `resource_group_name`, `account_name` and `pool_name`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1619,7 +1666,7 @@ The following state arguments are supported:
 <a href="#state_data_protection_replication_python" style="color: inherit; text-decoration: inherit;">data_<wbr>protection_<wbr>replication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumedataprotectionreplication">Volume<wbr>Data<wbr>Protection<wbr>Replication<wbr>Args</a></span>
+        <span class="property-type"><a href="#volumedataprotectionreplication">Input[Volume<wbr>Data<wbr>Protection<wbr>Replication<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1627,7 +1674,7 @@ The following state arguments are supported:
 <a href="#state_export_policy_rules_python" style="color: inherit; text-decoration: inherit;">export_<wbr>policy_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumeexportpolicyrule">Sequence[Volume<wbr>Export<wbr>Policy<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#volumeexportpolicyrule">Input[Volume<wbr>Export<wbr>Policy<wbr>Rule<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `export_policy_rule` block defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1636,7 +1683,7 @@ The following state arguments are supported:
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1645,7 +1692,7 @@ The following state arguments are supported:
 <a href="#state_mount_ip_addresses_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>ip_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of IPv4 Addresses which should be used to mount the volume.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1654,7 +1701,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the NetApp Volume. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1663,7 +1710,7 @@ The following state arguments are supported:
 <a href="#state_pool_name_python" style="color: inherit; text-decoration: inherit;">pool_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the NetApp pool in which the NetApp Volume should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1672,7 +1719,7 @@ The following state arguments are supported:
 <a href="#state_protocols_python" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The target volume protocol expressed as a list. Supported single value include `CIFS`, `NFSv3`, or `NFSv4.1`. If argument is not defined it will default to `NFSv3`. Changing this forces a new resource to be created and data will be lost. Dual protocol scenario is supported for CIFS and NFSv3, for more information, please refer to [Create a dual-protocol volume for Azure NetApp Files](https://docs.microsoft.com/en-us/azure/azure-netapp-files/create-volumes-dual-protocol) document.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1681,7 +1728,7 @@ The following state arguments are supported:
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group where the NetApp Volume should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1690,7 +1737,7 @@ The following state arguments are supported:
 <a href="#state_service_level_python" style="color: inherit; text-decoration: inherit;">service_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The target performance of the file system. Valid values include `Premium`, `Standard`, or `Ultra`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1699,7 +1746,7 @@ The following state arguments are supported:
 <a href="#state_storage_quota_in_gb_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>quota_<wbr>in_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum Storage Quota allowed for a file system in Gigabytes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1708,7 +1755,7 @@ The following state arguments are supported:
 <a href="#state_subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet the NetApp Volume resides in, which must have the `Microsoft.NetApp/volumes` delegation. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1717,7 +1764,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1726,7 +1773,7 @@ The following state arguments are supported:
 <a href="#state_volume_path_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique file path for the volume. Used when creating mount targets. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -1830,7 +1877,7 @@ The following state arguments are supported:
 <a href="#remotevolumelocation_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Volume<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Primary volume's location.
 {{% /md %}}</dd><dt class="property-required"
@@ -1839,7 +1886,7 @@ The following state arguments are supported:
 <a href="#remotevolumeresourceid_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Volume<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Primary volume's resource id.
 {{% /md %}}</dd><dt class="property-required"
@@ -1848,7 +1895,7 @@ The following state arguments are supported:
 <a href="#replicationfrequency_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Replication frequency, supported values are '10minutes', 'hourly', 'daily', values are case sensitive.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1857,7 +1904,7 @@ The following state arguments are supported:
 <a href="#endpointtype_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The endpoint type, default value is `dst` for destination.
 {{% /md %}}</dd></dl>
@@ -1870,7 +1917,7 @@ The following state arguments are supported:
 <a href="#remote_volume_location_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>volume_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Primary volume's location.
 {{% /md %}}</dd><dt class="property-required"
@@ -1879,7 +1926,7 @@ The following state arguments are supported:
 <a href="#remote_volume_resource_id_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>volume_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Primary volume's resource id.
 {{% /md %}}</dd><dt class="property-required"
@@ -1888,7 +1935,7 @@ The following state arguments are supported:
 <a href="#replication_frequency_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Replication frequency, supported values are '10minutes', 'hourly', 'daily', values are case sensitive.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1897,7 +1944,7 @@ The following state arguments are supported:
 <a href="#endpoint_type_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The endpoint type, default value is `dst` for destination.
 {{% /md %}}</dd></dl>
@@ -2080,7 +2127,7 @@ The following state arguments are supported:
 <a href="#allowedclients_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Clients</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of allowed clients IPv4 addresses.
 {{% /md %}}</dd><dt class="property-required"
@@ -2089,7 +2136,7 @@ The following state arguments are supported:
 <a href="#ruleindex_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Index</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The index number of the rule.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -2098,7 +2145,7 @@ The following state arguments are supported:
 <a href="#cifsenabled_nodejs" style="color: inherit; text-decoration: inherit;">cifs<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Is the CIFS protocol allowed?
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `protocols_enabled`{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -2107,7 +2154,7 @@ The following state arguments are supported:
 <a href="#nfsv3enabled_nodejs" style="color: inherit; text-decoration: inherit;">nfsv3Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Is the NFSv3 protocol allowed?
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `protocols_enabled`{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -2116,7 +2163,7 @@ The following state arguments are supported:
 <a href="#nfsv4enabled_nodejs" style="color: inherit; text-decoration: inherit;">nfsv4Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Is the NFSv4 protocol allowed?
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `protocols_enabled`{{% /md %}}</p></dd><dt class="property-optional"
@@ -2125,7 +2172,7 @@ The following state arguments are supported:
 <a href="#protocolsenabled_nodejs" style="color: inherit; text-decoration: inherit;">protocols<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A list of allowed protocols. Valid values include `CIFS`, `NFSv3`, or `NFSv4.1`. Only one value is supported at this time. This replaces the previous arguments: `cifs_enabled`, `nfsv3_enabled` and `nfsv4_enabled`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2134,7 +2181,7 @@ The following state arguments are supported:
 <a href="#rootaccessenabled_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Access<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2142,7 +2189,7 @@ The following state arguments are supported:
 <a href="#unixreadonly_nodejs" style="color: inherit; text-decoration: inherit;">unix<wbr>Read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Is the file system on unix read only?
 {{% /md %}}</dd><dt class="property-optional"
@@ -2151,7 +2198,7 @@ The following state arguments are supported:
 <a href="#unixreadwrite_nodejs" style="color: inherit; text-decoration: inherit;">unix<wbr>Read<wbr>Write</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Is the file system on unix read and write?
 {{% /md %}}</dd></dl>
@@ -2164,7 +2211,7 @@ The following state arguments are supported:
 <a href="#allowed_clients_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>clients</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of allowed clients IPv4 addresses.
 {{% /md %}}</dd><dt class="property-required"
@@ -2173,7 +2220,7 @@ The following state arguments are supported:
 <a href="#rule_index_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>index</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The index number of the rule.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -2182,7 +2229,7 @@ The following state arguments are supported:
 <a href="#cifs_enabled_python" style="color: inherit; text-decoration: inherit;">cifs_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Is the CIFS protocol allowed?
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `protocols_enabled`{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -2191,7 +2238,7 @@ The following state arguments are supported:
 <a href="#nfsv3_enabled_python" style="color: inherit; text-decoration: inherit;">nfsv3_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Is the NFSv3 protocol allowed?
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `protocols_enabled`{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -2200,7 +2247,7 @@ The following state arguments are supported:
 <a href="#nfsv4_enabled_python" style="color: inherit; text-decoration: inherit;">nfsv4_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Is the NFSv4 protocol allowed?
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `protocols_enabled`{{% /md %}}</p></dd><dt class="property-optional"
@@ -2209,7 +2256,7 @@ The following state arguments are supported:
 <a href="#protocols_enabled_python" style="color: inherit; text-decoration: inherit;">protocols_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A list of allowed protocols. Valid values include `CIFS`, `NFSv3`, or `NFSv4.1`. Only one value is supported at this time. This replaces the previous arguments: `cifs_enabled`, `nfsv3_enabled` and `nfsv4_enabled`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2218,7 +2265,7 @@ The following state arguments are supported:
 <a href="#root_access_enabled_python" style="color: inherit; text-decoration: inherit;">root_<wbr>access_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2226,7 +2273,7 @@ The following state arguments are supported:
 <a href="#unix_read_only_python" style="color: inherit; text-decoration: inherit;">unix_<wbr>read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Is the file system on unix read only?
 {{% /md %}}</dd><dt class="property-optional"
@@ -2235,7 +2282,7 @@ The following state arguments are supported:
 <a href="#unix_read_write_python" style="color: inherit; text-decoration: inherit;">unix_<wbr>read_<wbr>write</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Is the file system on unix read and write?
 {{% /md %}}</dd></dl>

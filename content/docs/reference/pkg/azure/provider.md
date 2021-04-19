@@ -23,19 +23,44 @@ construction to achieve fine-grained programmatic control over provider settings
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auxiliary_tenant_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">client_certificate_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_certificate_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disable_correlation_request_id</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">disable_terraform_partner_id</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">environment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">features</span><span class="p">:</span> <span class="nx">Optional[ProviderFeaturesArgs]</span> = None<span class="p">, </span><span class="nx">metadata_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">msi_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">skip_credentials_validation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">skip_provider_registration</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">storage_use_azuread</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">subscription_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_msi</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">auxiliary_tenant_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+             <span class="nx">client_certificate_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">client_certificate_path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">disable_correlation_request_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+             <span class="nx">disable_terraform_partner_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+             <span class="nx">environment</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">features</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ProviderFeaturesArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">metadata_host</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">metadata_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">msi_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">partner_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">skip_credentials_validation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+             <span class="nx">skip_provider_registration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+             <span class="nx">storage_use_azuread</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+             <span class="nx">subscription_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">use_msi</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[ProviderArgs]</a></span> = None<span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProvider</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Provider</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProvider</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Provider</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -70,22 +95,32 @@ construction to achieve fine-grained programmatic control over provider settings
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ProviderArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -94,7 +129,7 @@ construction to achieve fine-grained programmatic control over provider settings
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -118,7 +153,7 @@ construction to achieve fine-grained programmatic control over provider settings
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -529,7 +564,7 @@ registered?
 <a href="#auxiliarytenantids_nodejs" style="color: inherit; text-decoration: inherit;">auxiliary<wbr>Tenant<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -537,7 +572,7 @@ registered?
 <a href="#clientcertificatepassword_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The password associated with the Client Certificate. For use when authenticating as a Service Principal using a Client
 Certificate
@@ -547,7 +582,7 @@ Certificate
 <a href="#clientcertificatepath_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path to the Client Certificate associated with the Service Principal for use when authenticating as a Service
 Principal using a Client Certificate.
@@ -557,7 +592,7 @@ Principal using a Client Certificate.
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Client ID which should be used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -566,7 +601,7 @@ Principal using a Client Certificate.
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Client Secret which should be used. For use When authenticating as a Service Principal using a Client Secret.
 {{% /md %}}</dd><dt class="property-optional"
@@ -575,7 +610,7 @@ Principal using a Client Certificate.
 <a href="#disablecorrelationrequestid_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Correlation<wbr>Request<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}This will disable the x-ms-correlation-request-id header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -584,7 +619,7 @@ Principal using a Client Certificate.
 <a href="#disableterraformpartnerid_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Terraform<wbr>Partner<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}This will disable the Terraform Partner ID which is used if a custom `partner_id` isn't specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -593,7 +628,7 @@ Principal using a Client Certificate.
 <a href="#environment_nodejs" style="color: inherit; text-decoration: inherit;">environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Cloud Environment which should be used. Possible values are public, usgovernment, german, and china. Defaults to
 public.
@@ -603,7 +638,7 @@ public.
 <a href="#features_nodejs" style="color: inherit; text-decoration: inherit;">features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerfeatures">Provider<wbr>Features</a></span>
+        <span class="property-type"><a href="#providerfeatures">pulumi<wbr>Input<Provider<wbr>Features<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -611,7 +646,7 @@ public.
 <a href="#metadatahost_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Hostname which should be used for the Azure Metadata Service.
  It can also be sourced from the following environment variable: `ARM_METADATA_HOSTNAME`{{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -620,7 +655,7 @@ public.
 <a href="#metadataurl_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Deprecated - replaced by `metadata_host`.
  It can also be sourced from the following environment variable: `ARM_METADATA_URL`{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `metadata_host` instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -629,7 +664,7 @@ public.
 <a href="#msiendpoint_nodejs" style="color: inherit; text-decoration: inherit;">msi<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path to a custom endpoint for Managed Service Identity - in most circumstances this should be detected
 automatically.
@@ -639,7 +674,7 @@ automatically.
 <a href="#partnerid_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -648,7 +683,7 @@ automatically.
 <a href="#skipcredentialsvalidation_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Credentials<wbr>Validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}[DEPRECATED] This will cause the AzureRM Provider to skip verifying the credentials being used are valid.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is deprecated and will be removed in version 3.0 of the Azure Provider{{% /md %}}</p></dd><dt class="property-optional"
@@ -657,7 +692,7 @@ automatically.
 <a href="#skipproviderregistration_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Provider<wbr>Registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Should the AzureRM Provider skip registering all of the Resource Providers that it supports, if they're not already
 registered?
@@ -667,7 +702,7 @@ registered?
 <a href="#storageuseazuread_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Use<wbr>Azuread</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Should the AzureRM Provider use AzureAD to access the Storage Data Plane API's?
  It can also be sourced from the following environment variable: `ARM_STORAGE_USE_AZUREAD`{{% /md %}}</dd><dt class="property-optional"
@@ -676,7 +711,7 @@ registered?
 <a href="#subscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Subscription ID which should be used.
  It can also be sourced from the following environment variable: `ARM_SUBSCRIPTION_ID`{{% /md %}}</dd><dt class="property-optional"
@@ -685,7 +720,7 @@ registered?
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Tenant ID which should be used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -694,7 +729,7 @@ registered?
 <a href="#usemsi_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Msi</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Allowed Managed Service Identity be used for Authentication.
 {{% /md %}}</dd></dl>
@@ -707,7 +742,7 @@ registered?
 <a href="#auxiliary_tenant_ids_python" style="color: inherit; text-decoration: inherit;">auxiliary_<wbr>tenant_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -715,7 +750,7 @@ registered?
 <a href="#client_certificate_password_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The password associated with the Client Certificate. For use when authenticating as a Service Principal using a Client
 Certificate
@@ -725,7 +760,7 @@ Certificate
 <a href="#client_certificate_path_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path to the Client Certificate associated with the Service Principal for use when authenticating as a Service
 Principal using a Client Certificate.
@@ -735,7 +770,7 @@ Principal using a Client Certificate.
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Client ID which should be used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -744,7 +779,7 @@ Principal using a Client Certificate.
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Client Secret which should be used. For use When authenticating as a Service Principal using a Client Secret.
 {{% /md %}}</dd><dt class="property-optional"
@@ -753,7 +788,7 @@ Principal using a Client Certificate.
 <a href="#disable_correlation_request_id_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>correlation_<wbr>request_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}This will disable the x-ms-correlation-request-id header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -762,7 +797,7 @@ Principal using a Client Certificate.
 <a href="#disable_terraform_partner_id_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>terraform_<wbr>partner_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}This will disable the Terraform Partner ID which is used if a custom `partner_id` isn't specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -771,7 +806,7 @@ Principal using a Client Certificate.
 <a href="#environment_python" style="color: inherit; text-decoration: inherit;">environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Cloud Environment which should be used. Possible values are public, usgovernment, german, and china. Defaults to
 public.
@@ -781,7 +816,7 @@ public.
 <a href="#features_python" style="color: inherit; text-decoration: inherit;">features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerfeatures">Provider<wbr>Features<wbr>Args</a></span>
+        <span class="property-type"><a href="#providerfeatures">Input[Provider<wbr>Features<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -789,7 +824,7 @@ public.
 <a href="#metadata_host_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Hostname which should be used for the Azure Metadata Service.
  It can also be sourced from the following environment variable: `ARM_METADATA_HOSTNAME`{{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -798,7 +833,7 @@ public.
 <a href="#metadata_url_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Deprecated - replaced by `metadata_host`.
  It can also be sourced from the following environment variable: `ARM_METADATA_URL`{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `metadata_host` instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -807,7 +842,7 @@ public.
 <a href="#msi_endpoint_python" style="color: inherit; text-decoration: inherit;">msi_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path to a custom endpoint for Managed Service Identity - in most circumstances this should be detected
 automatically.
@@ -817,7 +852,7 @@ automatically.
 <a href="#partner_id_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -826,7 +861,7 @@ automatically.
 <a href="#skip_credentials_validation_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>credentials_<wbr>validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}[DEPRECATED] This will cause the AzureRM Provider to skip verifying the credentials being used are valid.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is deprecated and will be removed in version 3.0 of the Azure Provider{{% /md %}}</p></dd><dt class="property-optional"
@@ -835,7 +870,7 @@ automatically.
 <a href="#skip_provider_registration_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>provider_<wbr>registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Should the AzureRM Provider skip registering all of the Resource Providers that it supports, if they're not already
 registered?
@@ -845,7 +880,7 @@ registered?
 <a href="#storage_use_azuread_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>use_<wbr>azuread</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Should the AzureRM Provider use AzureAD to access the Storage Data Plane API's?
  It can also be sourced from the following environment variable: `ARM_STORAGE_USE_AZUREAD`{{% /md %}}</dd><dt class="property-optional"
@@ -854,7 +889,7 @@ registered?
 <a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Subscription ID which should be used.
  It can also be sourced from the following environment variable: `ARM_SUBSCRIPTION_ID`{{% /md %}}</dd><dt class="property-optional"
@@ -863,7 +898,7 @@ registered?
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Tenant ID which should be used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -872,7 +907,7 @@ registered?
 <a href="#use_msi_python" style="color: inherit; text-decoration: inherit;">use_<wbr>msi</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Allowed Managed Service Identity be used for Authentication.
 {{% /md %}}</dd></dl>
@@ -1056,7 +1091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvault_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerfeatureskeyvault">Provider<wbr>Features<wbr>Key<wbr>Vault</a></span>
+        <span class="property-type"><a href="#providerfeatureskeyvault">pulumi<wbr>Input<Provider<wbr>Features<wbr>Key<wbr>Vault<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1064,7 +1099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loganalyticsworkspace_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Analytics<wbr>Workspace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerfeaturesloganalyticsworkspace">Provider<wbr>Features<wbr>Log<wbr>Analytics<wbr>Workspace</a></span>
+        <span class="property-type"><a href="#providerfeaturesloganalyticsworkspace">pulumi<wbr>Input<Provider<wbr>Features<wbr>Log<wbr>Analytics<wbr>Workspace<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1072,7 +1107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerfeaturesnetwork">Provider<wbr>Features<wbr>Network</a></span>
+        <span class="property-type"><a href="#providerfeaturesnetwork">pulumi<wbr>Input<Provider<wbr>Features<wbr>Network<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1080,7 +1115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#templatedeployment_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerfeaturestemplatedeployment">Provider<wbr>Features<wbr>Template<wbr>Deployment</a></span>
+        <span class="property-type"><a href="#providerfeaturestemplatedeployment">pulumi<wbr>Input<Provider<wbr>Features<wbr>Template<wbr>Deployment<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1088,7 +1123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualmachine_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerfeaturesvirtualmachine">Provider<wbr>Features<wbr>Virtual<wbr>Machine</a></span>
+        <span class="property-type"><a href="#providerfeaturesvirtualmachine">pulumi<wbr>Input<Provider<wbr>Features<wbr>Virtual<wbr>Machine<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1096,7 +1131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualmachinescaleset_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Scale<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerfeaturesvirtualmachinescaleset">Provider<wbr>Features<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set</a></span>
+        <span class="property-type"><a href="#providerfeaturesvirtualmachinescaleset">pulumi<wbr>Input<Provider<wbr>Features<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1108,7 +1143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_vault_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerfeatureskeyvault">Provider<wbr>Features<wbr>Key<wbr>Vault<wbr>Args</a></span>
+        <span class="property-type"><a href="#providerfeatureskeyvault">Input[Provider<wbr>Features<wbr>Key<wbr>Vault<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1116,7 +1151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#log_analytics_workspace_python" style="color: inherit; text-decoration: inherit;">log_<wbr>analytics_<wbr>workspace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerfeaturesloganalyticsworkspace">Provider<wbr>Features<wbr>Log<wbr>Analytics<wbr>Workspace<wbr>Args</a></span>
+        <span class="property-type"><a href="#providerfeaturesloganalyticsworkspace">Input[Provider<wbr>Features<wbr>Log<wbr>Analytics<wbr>Workspace<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1124,7 +1159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerfeaturesnetwork">Provider<wbr>Features<wbr>Network<wbr>Args</a></span>
+        <span class="property-type"><a href="#providerfeaturesnetwork">Input[Provider<wbr>Features<wbr>Network<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1132,7 +1167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#template_deployment_python" style="color: inherit; text-decoration: inherit;">template_<wbr>deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerfeaturestemplatedeployment">Provider<wbr>Features<wbr>Template<wbr>Deployment<wbr>Args</a></span>
+        <span class="property-type"><a href="#providerfeaturestemplatedeployment">Input[Provider<wbr>Features<wbr>Template<wbr>Deployment<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1140,7 +1175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_machine_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerfeaturesvirtualmachine">Provider<wbr>Features<wbr>Virtual<wbr>Machine<wbr>Args</a></span>
+        <span class="property-type"><a href="#providerfeaturesvirtualmachine">Input[Provider<wbr>Features<wbr>Virtual<wbr>Machine<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1148,7 +1183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_machine_scale_set_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>scale_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerfeaturesvirtualmachinescaleset">Provider<wbr>Features<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Args</a></span>
+        <span class="property-type"><a href="#providerfeaturesvirtualmachinescaleset">Input[Provider<wbr>Features<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1202,7 +1237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#purgesoftdeleteondestroy_nodejs" style="color: inherit; text-decoration: inherit;">purge<wbr>Soft<wbr>Delete<wbr>On<wbr>Destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1210,7 +1245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoversoftdeletedkeyvaults_nodejs" style="color: inherit; text-decoration: inherit;">recover<wbr>Soft<wbr>Deleted<wbr>Key<wbr>Vaults</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1222,7 +1257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#purge_soft_delete_on_destroy_python" style="color: inherit; text-decoration: inherit;">purge_<wbr>soft_<wbr>delete_<wbr>on_<wbr>destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1230,7 +1265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recover_soft_deleted_key_vaults_python" style="color: inherit; text-decoration: inherit;">recover_<wbr>soft_<wbr>deleted_<wbr>key_<wbr>vaults</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1268,7 +1303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#permanentlydeleteondestroy_nodejs" style="color: inherit; text-decoration: inherit;">permanently<wbr>Delete<wbr>On<wbr>Destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1280,7 +1315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#permanently_delete_on_destroy_python" style="color: inherit; text-decoration: inherit;">permanently_<wbr>delete_<wbr>on_<wbr>destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1318,7 +1353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relaxedlocking_nodejs" style="color: inherit; text-decoration: inherit;">relaxed<wbr>Locking</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1330,7 +1365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relaxed_locking_python" style="color: inherit; text-decoration: inherit;">relaxed_<wbr>locking</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1368,7 +1403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deletenesteditemsduringdeletion_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Nested<wbr>Items<wbr>During<wbr>Deletion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1380,7 +1415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delete_nested_items_during_deletion_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>nested_<wbr>items_<wbr>during_<wbr>deletion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1434,7 +1469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deleteosdiskondeletion_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Os<wbr>Disk<wbr>On<wbr>Deletion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1442,7 +1477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gracefulshutdown_nodejs" style="color: inherit; text-decoration: inherit;">graceful<wbr>Shutdown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1454,7 +1489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delete_os_disk_on_deletion_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>os_<wbr>disk_<wbr>on_<wbr>deletion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1462,7 +1497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#graceful_shutdown_python" style="color: inherit; text-decoration: inherit;">graceful_<wbr>shutdown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1500,7 +1535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rollinstanceswhenrequired_nodejs" style="color: inherit; text-decoration: inherit;">roll<wbr>Instances<wbr>When<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1512,7 +1547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#roll_instances_when_required_python" style="color: inherit; text-decoration: inherit;">roll_<wbr>instances_<wbr>when_<wbr>required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

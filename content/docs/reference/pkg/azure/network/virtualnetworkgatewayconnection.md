@@ -113,9 +113,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -449,9 +449,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -761,19 +761,45 @@ const europeToUs = new azure.network.VirtualNetworkGatewayConnection("europeToUs
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualNetworkGatewayConnection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualNetworkGatewayConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualNetworkGatewayConnection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualNetworkGatewayConnectionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VirtualNetworkGatewayConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authorization_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dpd_timeout_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">enable_bgp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">express_route_circuit_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">express_route_gateway_bypass</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ipsec_policy</span><span class="p">:</span> <span class="nx">Optional[VirtualNetworkGatewayConnectionIpsecPolicyArgs]</span> = None<span class="p">, </span><span class="nx">local_azure_ip_address_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">local_network_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_virtual_network_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing_weight</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">shared_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">traffic_selector_policy</span><span class="p">:</span> <span class="nx">Optional[VirtualNetworkGatewayConnectionTrafficSelectorPolicyArgs]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_policy_based_traffic_selectors</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">virtual_network_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">VirtualNetworkGatewayConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                                    <span class="nx">authorization_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                    <span class="nx">connection_protocol</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                    <span class="nx">dpd_timeout_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                                    <span class="nx">enable_bgp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                                    <span class="nx">express_route_circuit_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                    <span class="nx">express_route_gateway_bypass</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                                    <span class="nx">ipsec_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VirtualNetworkGatewayConnectionIpsecPolicyArgs]]</span> = None<span class="p">,</span>
+                                    <span class="nx">local_azure_ip_address_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                                    <span class="nx">local_network_gateway_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                    <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                    <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                    <span class="nx">peer_virtual_network_gateway_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                    <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                    <span class="nx">routing_weight</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                                    <span class="nx">shared_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                    <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                                    <span class="nx">traffic_selector_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VirtualNetworkGatewayConnectionTrafficSelectorPolicyArgs]]</span> = None<span class="p">,</span>
+                                    <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                    <span class="nx">use_policy_based_traffic_selectors</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                                    <span class="nx">virtual_network_gateway_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">VirtualNetworkGatewayConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualNetworkGatewayConnectionArgs</a></span><span class="p">,</span>
+                                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualNetworkGatewayConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VirtualNetworkGatewayConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualNetworkGatewayConnection</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualNetworkGatewayConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VirtualNetworkGatewayConnectionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualNetworkGatewayConnection</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualNetworkGatewayConnection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VirtualNetworkGatewayConnectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualNetworkGatewayConnection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">VirtualNetworkGatewayConnectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -808,22 +834,32 @@ const europeToUs = new azure.network.VirtualNetworkGatewayConnection("europeToUs
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">VirtualNetworkGatewayConnectionArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -832,7 +868,7 @@ const europeToUs = new azure.network.VirtualNetworkGatewayConnection("europeToUs
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -856,7 +892,7 @@ const europeToUs = new azure.network.VirtualNetworkGatewayConnection("europeToUs
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1335,7 +1371,7 @@ selectors requires an `ipsec_policy` block. Defaults to `false`.
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the connection Changing the name forces a new resource to be created.
@@ -1345,7 +1381,7 @@ create the connection Changing the name forces a new resource to be created.
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of connection. Valid options are `IPsec`
 (Site-to-Site), `ExpressRoute` (ExpressRoute), and `Vnet2Vnet` (VNet-to-VNet).
@@ -1358,7 +1394,7 @@ to be created.
 <a href="#virtualnetworkgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Gateway<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Network Gateway
 in which the connection will be created. Changing the gateway forces a new
@@ -1369,7 +1405,7 @@ resource to be created.
 <a href="#authorizationkey_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The authorization key associated with the
 Express Route Circuit. This field is required only if the type is an
@@ -1380,7 +1416,7 @@ ExpressRoute connection.
 <a href="#connectionprotocol_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IKE protocol version to use. Possible
 values are `IKEv1` and `IKEv2`. Defaults to `IKEv2`.
@@ -1392,7 +1428,7 @@ Changing this value will force a resource to be created.
 <a href="#dpdtimeoutseconds_nodejs" style="color: inherit; text-decoration: inherit;">dpd<wbr>Timeout<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The dead peer detection timeout of this connection in seconds. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1401,7 +1437,7 @@ Changing this value will force a resource to be created.
 <a href="#enablebgp_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Bgp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If `true`, BGP (Border Gateway Protocol) is enabled
 for this connection. Defaults to `false`.
@@ -1411,7 +1447,7 @@ for this connection. Defaults to `false`.
 <a href="#expressroutecircuitid_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Route<wbr>Circuit<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Express Route Circuit
 when creating an ExpressRoute connection (i.e. when `type` is `ExpressRoute`).
@@ -1422,7 +1458,7 @@ The Express Route Circuit can be in the same or in a different subscription.
 <a href="#expressroutegatewaybypass_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Route<wbr>Gateway<wbr>Bypass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If `true`, data packets will bypass ExpressRoute Gateway for data forwarding This is only valid for ExpressRoute connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1431,7 +1467,7 @@ The Express Route Circuit can be in the same or in a different subscription.
 <a href="#ipsecpolicy_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayconnectionipsecpolicy">Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Ipsec<wbr>Policy</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayconnectionipsecpolicy">pulumi.<wbr>Input<Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Ipsec<wbr>Policy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `ipsec_policy` block which is documented below.
 Only a single policy can be defined for a connection. For details on
@@ -1442,7 +1478,7 @@ custom policies refer to [the relevant section in the Azure documentation](https
 <a href="#localazureipaddressenabled_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Azure<wbr>Ip<wbr>Address<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Use private local Azure IP for the connection. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1451,7 +1487,7 @@ custom policies refer to [the relevant section in the Azure documentation](https
 <a href="#localnetworkgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Network<wbr>Gateway<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the local network gateway
 when creating Site-to-Site connection (i.e. when `type` is `IPsec`).
@@ -1461,7 +1497,7 @@ when creating Site-to-Site connection (i.e. when `type` is `IPsec`).
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The location/region where the connection is
 located. Changing this forces a new resource to be created.
@@ -1471,7 +1507,7 @@ located. Changing this forces a new resource to be created.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the connection. Changing the name forces a
 new resource to be created.
@@ -1481,7 +1517,7 @@ new resource to be created.
 <a href="#peervirtualnetworkgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the peer virtual
 network gateway when creating a VNet-to-VNet connection (i.e. when `type`
@@ -1493,7 +1529,7 @@ in a different subscription.
 <a href="#routingweight_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The routing weight. Defaults to `10`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1502,7 +1538,7 @@ in a different subscription.
 <a href="#sharedkey_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The shared IPSec key. A key could be provided if a
 Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
@@ -1512,7 +1548,7 @@ Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1521,7 +1557,7 @@ Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
 <a href="#trafficselectorpolicy_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Selector<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayconnectiontrafficselectorpolicy">Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Traffic<wbr>Selector<wbr>Policy</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayconnectiontrafficselectorpolicy">pulumi.<wbr>Input<Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Traffic<wbr>Selector<wbr>Policy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `traffic_selector_policy` which allows to specify traffic selector policy proposal to be used in a virtual network gateway connection.
 Only one block can be defined for a connection.
@@ -1532,7 +1568,7 @@ For details about traffic selectors refer to [the relevant section in the Azure 
 <a href="#usepolicybasedtrafficselectors_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Policy<wbr>Based<wbr>Traffic<wbr>Selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If `true`, policy-based traffic
 selectors are enabled for this connection. Enabling policy-based traffic
@@ -1547,7 +1583,7 @@ selectors requires an `ipsec_policy` block. Defaults to `false`.
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the connection Changing the name forces a new resource to be created.
@@ -1557,7 +1593,7 @@ create the connection Changing the name forces a new resource to be created.
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of connection. Valid options are `IPsec`
 (Site-to-Site), `ExpressRoute` (ExpressRoute), and `Vnet2Vnet` (VNet-to-VNet).
@@ -1570,7 +1606,7 @@ to be created.
 <a href="#virtual_network_gateway_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>gateway_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Network Gateway
 in which the connection will be created. Changing the gateway forces a new
@@ -1581,7 +1617,7 @@ resource to be created.
 <a href="#authorization_key_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The authorization key associated with the
 Express Route Circuit. This field is required only if the type is an
@@ -1592,7 +1628,7 @@ ExpressRoute connection.
 <a href="#connection_protocol_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IKE protocol version to use. Possible
 values are `IKEv1` and `IKEv2`. Defaults to `IKEv2`.
@@ -1604,7 +1640,7 @@ Changing this value will force a resource to be created.
 <a href="#dpd_timeout_seconds_python" style="color: inherit; text-decoration: inherit;">dpd_<wbr>timeout_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The dead peer detection timeout of this connection in seconds. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1613,7 +1649,7 @@ Changing this value will force a resource to be created.
 <a href="#enable_bgp_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>bgp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If `true`, BGP (Border Gateway Protocol) is enabled
 for this connection. Defaults to `false`.
@@ -1623,7 +1659,7 @@ for this connection. Defaults to `false`.
 <a href="#express_route_circuit_id_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>circuit_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Express Route Circuit
 when creating an ExpressRoute connection (i.e. when `type` is `ExpressRoute`).
@@ -1634,7 +1670,7 @@ The Express Route Circuit can be in the same or in a different subscription.
 <a href="#express_route_gateway_bypass_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>gateway_<wbr>bypass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If `true`, data packets will bypass ExpressRoute Gateway for data forwarding This is only valid for ExpressRoute connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1643,7 +1679,7 @@ The Express Route Circuit can be in the same or in a different subscription.
 <a href="#ipsec_policy_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayconnectionipsecpolicy">Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Ipsec<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayconnectionipsecpolicy">Input[Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Ipsec<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `ipsec_policy` block which is documented below.
 Only a single policy can be defined for a connection. For details on
@@ -1654,7 +1690,7 @@ custom policies refer to [the relevant section in the Azure documentation](https
 <a href="#local_azure_ip_address_enabled_python" style="color: inherit; text-decoration: inherit;">local_<wbr>azure_<wbr>ip_<wbr>address_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Use private local Azure IP for the connection. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1663,7 +1699,7 @@ custom policies refer to [the relevant section in the Azure documentation](https
 <a href="#local_network_gateway_id_python" style="color: inherit; text-decoration: inherit;">local_<wbr>network_<wbr>gateway_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the local network gateway
 when creating Site-to-Site connection (i.e. when `type` is `IPsec`).
@@ -1673,7 +1709,7 @@ when creating Site-to-Site connection (i.e. when `type` is `IPsec`).
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The location/region where the connection is
 located. Changing this forces a new resource to be created.
@@ -1683,7 +1719,7 @@ located. Changing this forces a new resource to be created.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the connection. Changing the name forces a
 new resource to be created.
@@ -1693,7 +1729,7 @@ new resource to be created.
 <a href="#peer_virtual_network_gateway_id_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>virtual_<wbr>network_<wbr>gateway_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the peer virtual
 network gateway when creating a VNet-to-VNet connection (i.e. when `type`
@@ -1705,7 +1741,7 @@ in a different subscription.
 <a href="#routing_weight_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The routing weight. Defaults to `10`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1714,7 +1750,7 @@ in a different subscription.
 <a href="#shared_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The shared IPSec key. A key could be provided if a
 Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
@@ -1724,7 +1760,7 @@ Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1733,7 +1769,7 @@ Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
 <a href="#traffic_selector_policy_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>selector_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayconnectiontrafficselectorpolicy">Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Traffic<wbr>Selector<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayconnectiontrafficselectorpolicy">Input[Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Traffic<wbr>Selector<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `traffic_selector_policy` which allows to specify traffic selector policy proposal to be used in a virtual network gateway connection.
 Only one block can be defined for a connection.
@@ -1744,7 +1780,7 @@ For details about traffic selectors refer to [the relevant section in the Azure 
 <a href="#use_policy_based_traffic_selectors_python" style="color: inherit; text-decoration: inherit;">use_<wbr>policy_<wbr>based_<wbr>traffic_<wbr>selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If `true`, policy-based traffic
 selectors are enabled for this connection. Enabling policy-based traffic
@@ -1815,20 +1851,42 @@ Get an existing VirtualNetworkGatewayConnection resource's state with the given 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">VirtualNetworkGatewayConnectionState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">VirtualNetworkGatewayConnection</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">VirtualNetworkGatewayConnectionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">VirtualNetworkGatewayConnection</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authorization_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dpd_timeout_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">enable_bgp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">express_route_circuit_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">express_route_gateway_bypass</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ipsec_policy</span><span class="p">:</span> <span class="nx">Optional[VirtualNetworkGatewayConnectionIpsecPolicyArgs]</span> = None<span class="p">, </span><span class="nx">local_azure_ip_address_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">local_network_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_virtual_network_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing_weight</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">shared_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">traffic_selector_policy</span><span class="p">:</span> <span class="nx">Optional[VirtualNetworkGatewayConnectionTrafficSelectorPolicyArgs]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_policy_based_traffic_selectors</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">virtual_network_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> VirtualNetworkGatewayConnection</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">authorization_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">connection_protocol</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">dpd_timeout_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">enable_bgp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">express_route_circuit_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">express_route_gateway_bypass</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">ipsec_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VirtualNetworkGatewayConnectionIpsecPolicyArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">local_azure_ip_address_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">local_network_gateway_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">peer_virtual_network_gateway_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">routing_weight</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">shared_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">traffic_selector_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VirtualNetworkGatewayConnectionTrafficSelectorPolicyArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">use_policy_based_traffic_selectors</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">virtual_network_gateway_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> VirtualNetworkGatewayConnection</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVirtualNetworkGatewayConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">VirtualNetworkGatewayConnectionState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualNetworkGatewayConnection</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVirtualNetworkGatewayConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">VirtualNetworkGatewayConnectionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualNetworkGatewayConnection</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">VirtualNetworkGatewayConnection</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">VirtualNetworkGatewayConnectionState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">VirtualNetworkGatewayConnection</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">VirtualNetworkGatewayConnectionState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2361,7 +2419,7 @@ resource to be created.
 <a href="#state_authorizationkey_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The authorization key associated with the
 Express Route Circuit. This field is required only if the type is an
@@ -2372,7 +2430,7 @@ ExpressRoute connection.
 <a href="#state_connectionprotocol_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IKE protocol version to use. Possible
 values are `IKEv1` and `IKEv2`. Defaults to `IKEv2`.
@@ -2384,7 +2442,7 @@ Changing this value will force a resource to be created.
 <a href="#state_dpdtimeoutseconds_nodejs" style="color: inherit; text-decoration: inherit;">dpd<wbr>Timeout<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The dead peer detection timeout of this connection in seconds. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2393,7 +2451,7 @@ Changing this value will force a resource to be created.
 <a href="#state_enablebgp_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Bgp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If `true`, BGP (Border Gateway Protocol) is enabled
 for this connection. Defaults to `false`.
@@ -2403,7 +2461,7 @@ for this connection. Defaults to `false`.
 <a href="#state_expressroutecircuitid_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Route<wbr>Circuit<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Express Route Circuit
 when creating an ExpressRoute connection (i.e. when `type` is `ExpressRoute`).
@@ -2414,7 +2472,7 @@ The Express Route Circuit can be in the same or in a different subscription.
 <a href="#state_expressroutegatewaybypass_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Route<wbr>Gateway<wbr>Bypass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If `true`, data packets will bypass ExpressRoute Gateway for data forwarding This is only valid for ExpressRoute connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2423,7 +2481,7 @@ The Express Route Circuit can be in the same or in a different subscription.
 <a href="#state_ipsecpolicy_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayconnectionipsecpolicy">Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Ipsec<wbr>Policy</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayconnectionipsecpolicy">pulumi.<wbr>Input<Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Ipsec<wbr>Policy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `ipsec_policy` block which is documented below.
 Only a single policy can be defined for a connection. For details on
@@ -2434,7 +2492,7 @@ custom policies refer to [the relevant section in the Azure documentation](https
 <a href="#state_localazureipaddressenabled_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Azure<wbr>Ip<wbr>Address<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Use private local Azure IP for the connection. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2443,7 +2501,7 @@ custom policies refer to [the relevant section in the Azure documentation](https
 <a href="#state_localnetworkgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Network<wbr>Gateway<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the local network gateway
 when creating Site-to-Site connection (i.e. when `type` is `IPsec`).
@@ -2453,7 +2511,7 @@ when creating Site-to-Site connection (i.e. when `type` is `IPsec`).
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The location/region where the connection is
 located. Changing this forces a new resource to be created.
@@ -2463,7 +2521,7 @@ located. Changing this forces a new resource to be created.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the connection. Changing the name forces a
 new resource to be created.
@@ -2473,7 +2531,7 @@ new resource to be created.
 <a href="#state_peervirtualnetworkgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the peer virtual
 network gateway when creating a VNet-to-VNet connection (i.e. when `type`
@@ -2485,7 +2543,7 @@ in a different subscription.
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the connection Changing the name forces a new resource to be created.
@@ -2495,7 +2553,7 @@ create the connection Changing the name forces a new resource to be created.
 <a href="#state_routingweight_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The routing weight. Defaults to `10`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2504,7 +2562,7 @@ create the connection Changing the name forces a new resource to be created.
 <a href="#state_sharedkey_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The shared IPSec key. A key could be provided if a
 Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
@@ -2514,7 +2572,7 @@ Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2523,7 +2581,7 @@ Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
 <a href="#state_trafficselectorpolicy_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Selector<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayconnectiontrafficselectorpolicy">Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Traffic<wbr>Selector<wbr>Policy</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayconnectiontrafficselectorpolicy">pulumi.<wbr>Input<Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Traffic<wbr>Selector<wbr>Policy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `traffic_selector_policy` which allows to specify traffic selector policy proposal to be used in a virtual network gateway connection.
 Only one block can be defined for a connection.
@@ -2534,7 +2592,7 @@ For details about traffic selectors refer to [the relevant section in the Azure 
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of connection. Valid options are `IPsec`
 (Site-to-Site), `ExpressRoute` (ExpressRoute), and `Vnet2Vnet` (VNet-to-VNet).
@@ -2547,7 +2605,7 @@ to be created.
 <a href="#state_usepolicybasedtrafficselectors_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Policy<wbr>Based<wbr>Traffic<wbr>Selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If `true`, policy-based traffic
 selectors are enabled for this connection. Enabling policy-based traffic
@@ -2558,7 +2616,7 @@ selectors requires an `ipsec_policy` block. Defaults to `false`.
 <a href="#state_virtualnetworkgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Gateway<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Network Gateway
 in which the connection will be created. Changing the gateway forces a new
@@ -2573,7 +2631,7 @@ resource to be created.
 <a href="#state_authorization_key_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The authorization key associated with the
 Express Route Circuit. This field is required only if the type is an
@@ -2584,7 +2642,7 @@ ExpressRoute connection.
 <a href="#state_connection_protocol_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IKE protocol version to use. Possible
 values are `IKEv1` and `IKEv2`. Defaults to `IKEv2`.
@@ -2596,7 +2654,7 @@ Changing this value will force a resource to be created.
 <a href="#state_dpd_timeout_seconds_python" style="color: inherit; text-decoration: inherit;">dpd_<wbr>timeout_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The dead peer detection timeout of this connection in seconds. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2605,7 +2663,7 @@ Changing this value will force a resource to be created.
 <a href="#state_enable_bgp_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>bgp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If `true`, BGP (Border Gateway Protocol) is enabled
 for this connection. Defaults to `false`.
@@ -2615,7 +2673,7 @@ for this connection. Defaults to `false`.
 <a href="#state_express_route_circuit_id_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>circuit_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Express Route Circuit
 when creating an ExpressRoute connection (i.e. when `type` is `ExpressRoute`).
@@ -2626,7 +2684,7 @@ The Express Route Circuit can be in the same or in a different subscription.
 <a href="#state_express_route_gateway_bypass_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>gateway_<wbr>bypass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If `true`, data packets will bypass ExpressRoute Gateway for data forwarding This is only valid for ExpressRoute connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2635,7 +2693,7 @@ The Express Route Circuit can be in the same or in a different subscription.
 <a href="#state_ipsec_policy_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayconnectionipsecpolicy">Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Ipsec<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayconnectionipsecpolicy">Input[Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Ipsec<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `ipsec_policy` block which is documented below.
 Only a single policy can be defined for a connection. For details on
@@ -2646,7 +2704,7 @@ custom policies refer to [the relevant section in the Azure documentation](https
 <a href="#state_local_azure_ip_address_enabled_python" style="color: inherit; text-decoration: inherit;">local_<wbr>azure_<wbr>ip_<wbr>address_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Use private local Azure IP for the connection. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2655,7 +2713,7 @@ custom policies refer to [the relevant section in the Azure documentation](https
 <a href="#state_local_network_gateway_id_python" style="color: inherit; text-decoration: inherit;">local_<wbr>network_<wbr>gateway_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the local network gateway
 when creating Site-to-Site connection (i.e. when `type` is `IPsec`).
@@ -2665,7 +2723,7 @@ when creating Site-to-Site connection (i.e. when `type` is `IPsec`).
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The location/region where the connection is
 located. Changing this forces a new resource to be created.
@@ -2675,7 +2733,7 @@ located. Changing this forces a new resource to be created.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the connection. Changing the name forces a
 new resource to be created.
@@ -2685,7 +2743,7 @@ new resource to be created.
 <a href="#state_peer_virtual_network_gateway_id_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>virtual_<wbr>network_<wbr>gateway_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the peer virtual
 network gateway when creating a VNet-to-VNet connection (i.e. when `type`
@@ -2697,7 +2755,7 @@ in a different subscription.
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the connection Changing the name forces a new resource to be created.
@@ -2707,7 +2765,7 @@ create the connection Changing the name forces a new resource to be created.
 <a href="#state_routing_weight_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The routing weight. Defaults to `10`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2716,7 +2774,7 @@ create the connection Changing the name forces a new resource to be created.
 <a href="#state_shared_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The shared IPSec key. A key could be provided if a
 Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
@@ -2726,7 +2784,7 @@ Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2735,7 +2793,7 @@ Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
 <a href="#state_traffic_selector_policy_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>selector_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayconnectiontrafficselectorpolicy">Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Traffic<wbr>Selector<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayconnectiontrafficselectorpolicy">Input[Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Traffic<wbr>Selector<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `traffic_selector_policy` which allows to specify traffic selector policy proposal to be used in a virtual network gateway connection.
 Only one block can be defined for a connection.
@@ -2746,7 +2804,7 @@ For details about traffic selectors refer to [the relevant section in the Azure 
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of connection. Valid options are `IPsec`
 (Site-to-Site), `ExpressRoute` (ExpressRoute), and `Vnet2Vnet` (VNet-to-VNet).
@@ -2759,7 +2817,7 @@ to be created.
 <a href="#state_use_policy_based_traffic_selectors_python" style="color: inherit; text-decoration: inherit;">use_<wbr>policy_<wbr>based_<wbr>traffic_<wbr>selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If `true`, policy-based traffic
 selectors are enabled for this connection. Enabling policy-based traffic
@@ -2770,7 +2828,7 @@ selectors requires an `ipsec_policy` block. Defaults to `false`.
 <a href="#state_virtual_network_gateway_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>gateway_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Network Gateway
 in which the connection will be created. Changing the gateway forces a new
@@ -2968,7 +3026,7 @@ or `None`.
 <a href="#dhgroup_nodejs" style="color: inherit; text-decoration: inherit;">dh<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The DH group used in IKE phase 1 for initial SA. Valid
 options are `DHGroup1`, `DHGroup14`, `DHGroup2`, `DHGroup2048`, `DHGroup24`,
@@ -2979,7 +3037,7 @@ options are `DHGroup1`, `DHGroup14`, `DHGroup2`, `DHGroup2048`, `DHGroup24`,
 <a href="#ikeencryption_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IKE encryption algorithm. Valid
 options are `AES128`, `AES192`, `AES256`, `DES`, or `DES3`.
@@ -2989,7 +3047,7 @@ options are `AES128`, `AES192`, `AES256`, `DES`, or `DES3`.
 <a href="#ikeintegrity_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Integrity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IKE integrity algorithm. Valid
 options are `MD5`, `SHA1`, `SHA256`, or `SHA384`.
@@ -2999,7 +3057,7 @@ options are `MD5`, `SHA1`, `SHA256`, or `SHA384`.
 <a href="#ipsecencryption_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IPSec encryption algorithm. Valid
 options are `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, `GCMAES192`, `GCMAES256`, or `None`.
@@ -3009,7 +3067,7 @@ options are `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, `GCMAES192
 <a href="#ipsecintegrity_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Integrity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IPSec integrity algorithm. Valid
 options are `GCMAES128`, `GCMAES192`, `GCMAES256`, `MD5`, `SHA1`, or `SHA256`.
@@ -3019,7 +3077,7 @@ options are `GCMAES128`, `GCMAES192`, `GCMAES256`, `MD5`, `SHA1`, or `SHA256`.
 <a href="#pfsgroup_nodejs" style="color: inherit; text-decoration: inherit;">pfs<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The DH group used in IKE phase 2 for new child SA.
 Valid options are `ECP256`, `ECP384`, `PFS1`, `PFS2`, `PFS2048`, `PFS24`,
@@ -3030,7 +3088,7 @@ or `None`.
 <a href="#sadatasize_nodejs" style="color: inherit; text-decoration: inherit;">sa<wbr>Datasize</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The IPSec SA payload size in KB. Must be at least
 `1024` KB. Defaults to `102400000` KB.
@@ -3040,7 +3098,7 @@ or `None`.
 <a href="#salifetime_nodejs" style="color: inherit; text-decoration: inherit;">sa<wbr>Lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The IPSec SA lifetime in seconds. Must be at least
 `300` seconds. Defaults to `27000` seconds.
@@ -3054,7 +3112,7 @@ or `None`.
 <a href="#dh_group_python" style="color: inherit; text-decoration: inherit;">dh_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The DH group used in IKE phase 1 for initial SA. Valid
 options are `DHGroup1`, `DHGroup14`, `DHGroup2`, `DHGroup2048`, `DHGroup24`,
@@ -3065,7 +3123,7 @@ options are `DHGroup1`, `DHGroup14`, `DHGroup2`, `DHGroup2048`, `DHGroup24`,
 <a href="#ike_encryption_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IKE encryption algorithm. Valid
 options are `AES128`, `AES192`, `AES256`, `DES`, or `DES3`.
@@ -3075,7 +3133,7 @@ options are `AES128`, `AES192`, `AES256`, `DES`, or `DES3`.
 <a href="#ike_integrity_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>integrity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IKE integrity algorithm. Valid
 options are `MD5`, `SHA1`, `SHA256`, or `SHA384`.
@@ -3085,7 +3143,7 @@ options are `MD5`, `SHA1`, `SHA256`, or `SHA384`.
 <a href="#ipsec_encryption_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IPSec encryption algorithm. Valid
 options are `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, `GCMAES192`, `GCMAES256`, or `None`.
@@ -3095,7 +3153,7 @@ options are `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, `GCMAES192
 <a href="#ipsec_integrity_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>integrity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IPSec integrity algorithm. Valid
 options are `GCMAES128`, `GCMAES192`, `GCMAES256`, `MD5`, `SHA1`, or `SHA256`.
@@ -3105,7 +3163,7 @@ options are `GCMAES128`, `GCMAES192`, `GCMAES256`, `MD5`, `SHA1`, or `SHA256`.
 <a href="#pfs_group_python" style="color: inherit; text-decoration: inherit;">pfs_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The DH group used in IKE phase 2 for new child SA.
 Valid options are `ECP256`, `ECP384`, `PFS1`, `PFS2`, `PFS2048`, `PFS24`,
@@ -3116,7 +3174,7 @@ or `None`.
 <a href="#sa_datasize_python" style="color: inherit; text-decoration: inherit;">sa_<wbr>datasize</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The IPSec SA payload size in KB. Must be at least
 `1024` KB. Defaults to `102400000` KB.
@@ -3126,7 +3184,7 @@ or `None`.
 <a href="#sa_lifetime_python" style="color: inherit; text-decoration: inherit;">sa_<wbr>lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The IPSec SA lifetime in seconds. Must be at least
 `300` seconds. Defaults to `27000` seconds.
@@ -3182,7 +3240,7 @@ or `None`.
 <a href="#localaddresscidrs_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Address<wbr>Cidrs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3190,7 +3248,7 @@ or `None`.
 <a href="#remoteaddresscidrs_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Address<wbr>Cidrs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3202,7 +3260,7 @@ or `None`.
 <a href="#local_address_cidrs_python" style="color: inherit; text-decoration: inherit;">local_<wbr>address_<wbr>cidrs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3210,7 +3268,7 @@ or `None`.
 <a href="#remote_address_cidrs_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>address_<wbr>cidrs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -83,10 +83,10 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/network"
 	"github.com/pulumi/pulumi-random/sdk/v2/go/random"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -227,19 +227,34 @@ const exampleTrafficManagerProfile = new azure.network.TrafficManagerProfile("ex
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">TrafficManagerProfile</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TrafficManagerProfileArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">TrafficManagerProfile</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TrafficManagerProfileArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">TrafficManagerProfile</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dns_config</span><span class="p">:</span> <span class="nx">Optional[TrafficManagerProfileDnsConfigArgs]</span> = None<span class="p">, </span><span class="nx">max_return</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">monitor_config</span><span class="p">:</span> <span class="nx">Optional[TrafficManagerProfileMonitorConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">traffic_routing_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">traffic_view_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">TrafficManagerProfile</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                          <span class="nx">dns_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TrafficManagerProfileDnsConfigArgs]]</span> = None<span class="p">,</span>
+                          <span class="nx">max_return</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                          <span class="nx">monitor_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TrafficManagerProfileMonitorConfigArgs]]</span> = None<span class="p">,</span>
+                          <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                          <span class="nx">profile_status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                          <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                          <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                          <span class="nx">traffic_routing_method</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                          <span class="nx">traffic_view_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">TrafficManagerProfile</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TrafficManagerProfileArgs</a></span><span class="p">,</span>
+                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTrafficManagerProfile</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TrafficManagerProfileArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">TrafficManagerProfile</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTrafficManagerProfile</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TrafficManagerProfileArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">TrafficManagerProfile</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">TrafficManagerProfile</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">TrafficManagerProfileArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">TrafficManagerProfile</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">TrafficManagerProfileArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -274,22 +289,32 @@ const exampleTrafficManagerProfile = new azure.network.TrafficManagerProfile("ex
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">TrafficManagerProfileArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -298,7 +323,7 @@ const exampleTrafficManagerProfile = new azure.network.TrafficManagerProfile("ex
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -322,7 +347,7 @@ const exampleTrafficManagerProfile = new azure.network.TrafficManagerProfile("ex
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -547,7 +572,7 @@ The TrafficManagerProfile resource accepts the following [input]({{< relref "/do
 <a href="#dnsconfig_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trafficmanagerprofilednsconfig">Traffic<wbr>Manager<wbr>Profile<wbr>Dns<wbr>Config</a></span>
+        <span class="property-type"><a href="#trafficmanagerprofilednsconfig">pulumi.<wbr>Input<Traffic<wbr>Manager<wbr>Profile<wbr>Dns<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}This block specifies the DNS configuration of the Profile, it supports the fields documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -556,7 +581,7 @@ The TrafficManagerProfile resource accepts the following [input]({{< relref "/do
 <a href="#monitorconfig_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trafficmanagerprofilemonitorconfig">Traffic<wbr>Manager<wbr>Profile<wbr>Monitor<wbr>Config</a></span>
+        <span class="property-type"><a href="#trafficmanagerprofilemonitorconfig">pulumi.<wbr>Input<Traffic<wbr>Manager<wbr>Profile<wbr>Monitor<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}This block specifies the Endpoint monitoring configuration for the Profile, it supports the fields documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -565,7 +590,7 @@ The TrafficManagerProfile resource accepts the following [input]({{< relref "/do
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Traffic Manager profile.
 {{% /md %}}</dd><dt class="property-required"
@@ -574,7 +599,7 @@ The TrafficManagerProfile resource accepts the following [input]({{< relref "/do
 <a href="#trafficroutingmethod_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Routing<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the algorithm used to route traffic, possible values are:
 {{% /md %}}</dd><dt class="property-optional"
@@ -583,7 +608,7 @@ The TrafficManagerProfile resource accepts the following [input]({{< relref "/do
 <a href="#maxreturn_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Return</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of endpoints to return for DNS queries to this Profile. Possible values range from `1` to `8`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -592,7 +617,7 @@ The TrafficManagerProfile resource accepts the following [input]({{< relref "/do
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Traffic Manager profile. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -601,7 +626,7 @@ The TrafficManagerProfile resource accepts the following [input]({{< relref "/do
 <a href="#profilestatus_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The status of the profile, can be set to either `Enabled` or `Disabled`. Defaults to `Enabled`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -610,7 +635,7 @@ The TrafficManagerProfile resource accepts the following [input]({{< relref "/do
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -619,7 +644,7 @@ The TrafficManagerProfile resource accepts the following [input]({{< relref "/do
 <a href="#trafficviewenabled_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>View<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether Traffic View is enabled for the Traffic Manager profile.
 {{% /md %}}</dd></dl>
@@ -632,7 +657,7 @@ The TrafficManagerProfile resource accepts the following [input]({{< relref "/do
 <a href="#dns_config_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trafficmanagerprofilednsconfig">Traffic<wbr>Manager<wbr>Profile<wbr>Dns<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#trafficmanagerprofilednsconfig">Input[Traffic<wbr>Manager<wbr>Profile<wbr>Dns<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}This block specifies the DNS configuration of the Profile, it supports the fields documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -641,7 +666,7 @@ The TrafficManagerProfile resource accepts the following [input]({{< relref "/do
 <a href="#monitor_config_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trafficmanagerprofilemonitorconfig">Traffic<wbr>Manager<wbr>Profile<wbr>Monitor<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#trafficmanagerprofilemonitorconfig">Input[Traffic<wbr>Manager<wbr>Profile<wbr>Monitor<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}This block specifies the Endpoint monitoring configuration for the Profile, it supports the fields documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -650,7 +675,7 @@ The TrafficManagerProfile resource accepts the following [input]({{< relref "/do
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Traffic Manager profile.
 {{% /md %}}</dd><dt class="property-required"
@@ -659,7 +684,7 @@ The TrafficManagerProfile resource accepts the following [input]({{< relref "/do
 <a href="#traffic_routing_method_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>routing_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the algorithm used to route traffic, possible values are:
 {{% /md %}}</dd><dt class="property-optional"
@@ -668,7 +693,7 @@ The TrafficManagerProfile resource accepts the following [input]({{< relref "/do
 <a href="#max_return_python" style="color: inherit; text-decoration: inherit;">max_<wbr>return</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The amount of endpoints to return for DNS queries to this Profile. Possible values range from `1` to `8`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -677,7 +702,7 @@ The TrafficManagerProfile resource accepts the following [input]({{< relref "/do
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Traffic Manager profile. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -686,7 +711,7 @@ The TrafficManagerProfile resource accepts the following [input]({{< relref "/do
 <a href="#profile_status_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The status of the profile, can be set to either `Enabled` or `Disabled`. Defaults to `Enabled`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -695,7 +720,7 @@ The TrafficManagerProfile resource accepts the following [input]({{< relref "/do
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -704,7 +729,7 @@ The TrafficManagerProfile resource accepts the following [input]({{< relref "/do
 <a href="#traffic_view_enabled_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>view_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether Traffic View is enabled for the Traffic Manager profile.
 {{% /md %}}</dd></dl>
@@ -809,20 +834,32 @@ Get an existing TrafficManagerProfile resource's state with the given name, ID, 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">TrafficManagerProfileState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">TrafficManagerProfile</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">TrafficManagerProfileState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">TrafficManagerProfile</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dns_config</span><span class="p">:</span> <span class="nx">Optional[TrafficManagerProfileDnsConfigArgs]</span> = None<span class="p">, </span><span class="nx">fqdn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_return</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">monitor_config</span><span class="p">:</span> <span class="nx">Optional[TrafficManagerProfileMonitorConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">traffic_routing_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">traffic_view_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> TrafficManagerProfile</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">dns_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TrafficManagerProfileDnsConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">fqdn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">max_return</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">monitor_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TrafficManagerProfileMonitorConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">profile_status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">traffic_routing_method</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">traffic_view_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">) -&gt;</span> TrafficManagerProfile</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTrafficManagerProfile<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">TrafficManagerProfileState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">TrafficManagerProfile</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTrafficManagerProfile<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">TrafficManagerProfileState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">TrafficManagerProfile</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">TrafficManagerProfile</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">TrafficManagerProfileState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">TrafficManagerProfile</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">TrafficManagerProfileState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1119,7 +1156,7 @@ The following state arguments are supported:
 <a href="#state_dnsconfig_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trafficmanagerprofilednsconfig">Traffic<wbr>Manager<wbr>Profile<wbr>Dns<wbr>Config</a></span>
+        <span class="property-type"><a href="#trafficmanagerprofilednsconfig">pulumi.<wbr>Input<Traffic<wbr>Manager<wbr>Profile<wbr>Dns<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}This block specifies the DNS configuration of the Profile, it supports the fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1128,7 +1165,7 @@ The following state arguments are supported:
 <a href="#state_fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The FQDN of the created Profile.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1137,7 +1174,7 @@ The following state arguments are supported:
 <a href="#state_maxreturn_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Return</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of endpoints to return for DNS queries to this Profile. Possible values range from `1` to `8`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1146,7 +1183,7 @@ The following state arguments are supported:
 <a href="#state_monitorconfig_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trafficmanagerprofilemonitorconfig">Traffic<wbr>Manager<wbr>Profile<wbr>Monitor<wbr>Config</a></span>
+        <span class="property-type"><a href="#trafficmanagerprofilemonitorconfig">pulumi.<wbr>Input<Traffic<wbr>Manager<wbr>Profile<wbr>Monitor<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}This block specifies the Endpoint monitoring configuration for the Profile, it supports the fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1155,7 +1192,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Traffic Manager profile. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1164,7 +1201,7 @@ The following state arguments are supported:
 <a href="#state_profilestatus_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The status of the profile, can be set to either `Enabled` or `Disabled`. Defaults to `Enabled`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1173,7 +1210,7 @@ The following state arguments are supported:
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Traffic Manager profile.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1182,7 +1219,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1191,7 +1228,7 @@ The following state arguments are supported:
 <a href="#state_trafficroutingmethod_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Routing<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the algorithm used to route traffic, possible values are:
 {{% /md %}}</dd><dt class="property-optional"
@@ -1200,7 +1237,7 @@ The following state arguments are supported:
 <a href="#state_trafficviewenabled_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>View<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether Traffic View is enabled for the Traffic Manager profile.
 {{% /md %}}</dd></dl>
@@ -1213,7 +1250,7 @@ The following state arguments are supported:
 <a href="#state_dns_config_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trafficmanagerprofilednsconfig">Traffic<wbr>Manager<wbr>Profile<wbr>Dns<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#trafficmanagerprofilednsconfig">Input[Traffic<wbr>Manager<wbr>Profile<wbr>Dns<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}This block specifies the DNS configuration of the Profile, it supports the fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1222,7 +1259,7 @@ The following state arguments are supported:
 <a href="#state_fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The FQDN of the created Profile.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1231,7 +1268,7 @@ The following state arguments are supported:
 <a href="#state_max_return_python" style="color: inherit; text-decoration: inherit;">max_<wbr>return</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The amount of endpoints to return for DNS queries to this Profile. Possible values range from `1` to `8`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1240,7 +1277,7 @@ The following state arguments are supported:
 <a href="#state_monitor_config_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trafficmanagerprofilemonitorconfig">Traffic<wbr>Manager<wbr>Profile<wbr>Monitor<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#trafficmanagerprofilemonitorconfig">Input[Traffic<wbr>Manager<wbr>Profile<wbr>Monitor<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}This block specifies the Endpoint monitoring configuration for the Profile, it supports the fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1249,7 +1286,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Traffic Manager profile. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1258,7 +1295,7 @@ The following state arguments are supported:
 <a href="#state_profile_status_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The status of the profile, can be set to either `Enabled` or `Disabled`. Defaults to `Enabled`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1267,7 +1304,7 @@ The following state arguments are supported:
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Traffic Manager profile.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1276,7 +1313,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1285,7 +1322,7 @@ The following state arguments are supported:
 <a href="#state_traffic_routing_method_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>routing_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the algorithm used to route traffic, possible values are:
 {{% /md %}}</dd><dt class="property-optional"
@@ -1294,7 +1331,7 @@ The following state arguments are supported:
 <a href="#state_traffic_view_enabled_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>view_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether Traffic View is enabled for the Traffic Manager profile.
 {{% /md %}}</dd></dl>
@@ -1362,7 +1399,7 @@ The following state arguments are supported:
 <a href="#relativename_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The relative domain name, this is combined with the domain name used by Traffic Manager to form the FQDN which is exported as documented below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -1371,7 +1408,7 @@ The following state arguments are supported:
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The TTL value of the Profile used by Local DNS resolvers and clients.
 {{% /md %}}</dd></dl>
@@ -1384,7 +1421,7 @@ The following state arguments are supported:
 <a href="#relative_name_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The relative domain name, this is combined with the domain name used by Traffic Manager to form the FQDN which is exported as documented below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -1393,7 +1430,7 @@ The following state arguments are supported:
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The TTL value of the Profile used by Local DNS resolvers and clients.
 {{% /md %}}</dd></dl>
@@ -1560,7 +1597,7 @@ The following state arguments are supported:
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The port number used by the monitoring checks.
 {{% /md %}}</dd><dt class="property-required"
@@ -1569,7 +1606,7 @@ The following state arguments are supported:
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The protocol used by the monitoring checks, supported values are `HTTP`, `HTTPS` and `TCP`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1578,7 +1615,7 @@ The following state arguments are supported:
 <a href="#customheaders_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trafficmanagerprofilemonitorconfigcustomheader">Traffic<wbr>Manager<wbr>Profile<wbr>Monitor<wbr>Config<wbr>Custom<wbr>Header[]</a></span>
+        <span class="property-type"><a href="#trafficmanagerprofilemonitorconfigcustomheader">pulumi.<wbr>Input<pulumi.<wbr>Input<Traffic<wbr>Manager<wbr>Profile<wbr>Monitor<wbr>Config<wbr>Custom<wbr>Header<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `custom_header` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1587,7 +1624,7 @@ The following state arguments are supported:
 <a href="#expectedstatuscoderanges_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Status<wbr>Code<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of status code ranges in the format of `100-101`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1596,7 +1633,7 @@ The following state arguments are supported:
 <a href="#intervalinseconds_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The interval used to check the endpoint health from a Traffic Manager probing agent. You can specify two values here: `30` (normal probing) and `10` (fast probing). The default value is `30`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1605,7 +1642,7 @@ The following state arguments are supported:
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path used by the monitoring checks. Required when `protocol` is set to `HTTP` or `HTTPS` - cannot be set when `protocol` is set to `TCP`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1614,7 +1651,7 @@ The following state arguments are supported:
 <a href="#timeoutinseconds_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of time the Traffic Manager probing agent should wait before considering that check a failure when a health check probe is sent to the endpoint. If `interval_in_seconds` is set to `30`, then `timeout_in_seconds` can be between `5` and `10`. The default value is `10`. If `interval_in_seconds` is set to `10`, then valid values are between `5` and `9` and `timeout_in_seconds` is required.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1623,7 +1660,7 @@ The following state arguments are supported:
 <a href="#toleratednumberoffailures_nodejs" style="color: inherit; text-decoration: inherit;">tolerated<wbr>Number<wbr>Of<wbr>Failures</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of failures a Traffic Manager probing agent tolerates before marking that endpoint as unhealthy. Valid values are between `0` and `9`. The default value is `3`
 {{% /md %}}</dd></dl>
@@ -1636,7 +1673,7 @@ The following state arguments are supported:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The port number used by the monitoring checks.
 {{% /md %}}</dd><dt class="property-required"
@@ -1645,7 +1682,7 @@ The following state arguments are supported:
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The protocol used by the monitoring checks, supported values are `HTTP`, `HTTPS` and `TCP`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1654,7 +1691,7 @@ The following state arguments are supported:
 <a href="#custom_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trafficmanagerprofilemonitorconfigcustomheader">Sequence[Traffic<wbr>Manager<wbr>Profile<wbr>Monitor<wbr>Config<wbr>Custom<wbr>Header<wbr>Args]</a></span>
+        <span class="property-type"><a href="#trafficmanagerprofilemonitorconfigcustomheader">Input[Traffic<wbr>Manager<wbr>Profile<wbr>Monitor<wbr>Config<wbr>Custom<wbr>Header<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `custom_header` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1663,7 +1700,7 @@ The following state arguments are supported:
 <a href="#expected_status_code_ranges_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>status_<wbr>code_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of status code ranges in the format of `100-101`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1672,7 +1709,7 @@ The following state arguments are supported:
 <a href="#interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The interval used to check the endpoint health from a Traffic Manager probing agent. You can specify two values here: `30` (normal probing) and `10` (fast probing). The default value is `30`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1681,7 +1718,7 @@ The following state arguments are supported:
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path used by the monitoring checks. Required when `protocol` is set to `HTTP` or `HTTPS` - cannot be set when `protocol` is set to `TCP`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1690,7 +1727,7 @@ The following state arguments are supported:
 <a href="#timeout_in_seconds_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The amount of time the Traffic Manager probing agent should wait before considering that check a failure when a health check probe is sent to the endpoint. If `interval_in_seconds` is set to `30`, then `timeout_in_seconds` can be between `5` and `10`. The default value is `10`. If `interval_in_seconds` is set to `10`, then valid values are between `5` and `9` and `timeout_in_seconds` is required.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1699,7 +1736,7 @@ The following state arguments are supported:
 <a href="#tolerated_number_of_failures_python" style="color: inherit; text-decoration: inherit;">tolerated_<wbr>number_<wbr>of_<wbr>failures</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of failures a Traffic Manager probing agent tolerates before marking that endpoint as unhealthy. Valid values are between `0` and `9`. The default value is `3`
 {{% /md %}}</dd></dl>
@@ -1758,7 +1795,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the custom header.
 {{% /md %}}</dd><dt class="property-required"
@@ -1767,7 +1804,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value of custom header. Applicable for Http and Https protocol.
 {{% /md %}}</dd></dl>
@@ -1780,7 +1817,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the custom header.
 {{% /md %}}</dd><dt class="property-required"
@@ -1789,7 +1826,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value of custom header. Applicable for Http and Https protocol.
 {{% /md %}}</dd></dl>

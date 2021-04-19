@@ -89,11 +89,11 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mssql"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/sql"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/mssql"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/sql"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -252,19 +252,50 @@ const test = new azure.mssql.Database("test", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Database</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatabaseArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Database</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatabaseArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Database</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_pause_delay_in_minutes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">collation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">create_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">creation_source_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">elastic_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extended_auditing_policy</span><span class="p">:</span> <span class="nx">Optional[DatabaseExtendedAuditingPolicyArgs]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">long_term_retention_policy</span><span class="p">:</span> <span class="nx">Optional[DatabaseLongTermRetentionPolicyArgs]</span> = None<span class="p">, </span><span class="nx">max_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">read_replica_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">read_scale</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">recover_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restore_dropped_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restore_point_in_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sample_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">short_term_retention_policy</span><span class="p">:</span> <span class="nx">Optional[DatabaseShortTermRetentionPolicyArgs]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">threat_detection_policy</span><span class="p">:</span> <span class="nx">Optional[DatabaseThreatDetectionPolicyArgs]</span> = None<span class="p">, </span><span class="nx">zone_redundant</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Database</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">auto_pause_delay_in_minutes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+             <span class="nx">collation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">create_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">creation_source_database_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">elastic_pool_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">extended_auditing_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DatabaseExtendedAuditingPolicyArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">geo_backup_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+             <span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">long_term_retention_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DatabaseLongTermRetentionPolicyArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">max_size_gb</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+             <span class="nx">min_capacity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
+             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">read_replica_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+             <span class="nx">read_scale</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+             <span class="nx">recover_database_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">restore_dropped_database_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">restore_point_in_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">sample_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">server_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">short_term_retention_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DatabaseShortTermRetentionPolicyArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">storage_account_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+             <span class="nx">threat_detection_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DatabaseThreatDetectionPolicyArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">zone_redundant</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Database</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatabaseArgs</a></span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDatabase</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DatabaseArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Database</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDatabase</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DatabaseArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Database</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Database</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DatabaseArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Database</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DatabaseArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -299,22 +330,32 @@ const test = new azure.mssql.Database("test", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">DatabaseArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -323,7 +364,7 @@ const test = new azure.mssql.Database("test", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -347,7 +388,7 @@ const test = new azure.mssql.Database("test", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -460,6 +501,15 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}A `extended_auditing_policy` block as defined below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}the `extended_auditing_policy` block has been moved to `azurerm_mssql_server_extended_auditing_policy` and `azurerm_mssql_database_extended_auditing_policy`. This block will be removed in version 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="geobackupenabled_csharp">
+<a href="#geobackupenabled_csharp" style="color: inherit; text-decoration: inherit;">Geo<wbr>Backup<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A boolean that specifies if the Geo Backup Policy is enabled.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="licensetype_csharp">
 <a href="#licensetype_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
@@ -681,6 +731,15 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}A `extended_auditing_policy` block as defined below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}the `extended_auditing_policy` block has been moved to `azurerm_mssql_server_extended_auditing_policy` and `azurerm_mssql_database_extended_auditing_policy`. This block will be removed in version 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
+        <span id="geobackupenabled_go">
+<a href="#geobackupenabled_go" style="color: inherit; text-decoration: inherit;">Geo<wbr>Backup<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A boolean that specifies if the Geo Backup Policy is enabled.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="licensetype_go">
 <a href="#licensetype_go" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
 </span>
@@ -842,7 +901,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#serverid_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The id of the Ms SQL Server on which to create the database. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -851,7 +910,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#autopausedelayinminutes_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Pause<wbr>Delay<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Time in minutes after which database is automatically paused. A value of `-1` means that automatic pause is disabled. This property is only settable for General Purpose Serverless databases.
 {{% /md %}}</dd><dt class="property-optional"
@@ -860,7 +919,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#collation_nodejs" style="color: inherit; text-decoration: inherit;">collation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the collation of the database. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -869,7 +928,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The create mode of the database. Possible values are `Copy`, `Default`, `OnlineSecondary`, `PointInTimeRestore`, `Recovery`, `Restore`, `RestoreExternalBackup`, `RestoreExternalBackupSecondary`, `RestoreLongTermRetentionBackup` and `Secondary`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -878,7 +937,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#creationsourcedatabaseid_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Source<wbr>Database<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The id of the source database to be referred to create the new database. This should only be used for databases with `create_mode` values that use another database as reference. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -887,7 +946,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#elasticpoolid_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Pool<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the elastic pool containing this database.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -896,16 +955,25 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#extendedauditingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Auditing<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseextendedauditingpolicy">Database<wbr>Extended<wbr>Auditing<wbr>Policy</a></span>
+        <span class="property-type"><a href="#databaseextendedauditingpolicy">pulumi.<wbr>Input<Database<wbr>Extended<wbr>Auditing<wbr>Policy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `extended_auditing_policy` block as defined below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}the `extended_auditing_policy` block has been moved to `azurerm_mssql_server_extended_auditing_policy` and `azurerm_mssql_database_extended_auditing_policy`. This block will be removed in version 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="geobackupenabled_nodejs">
+<a href="#geobackupenabled_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Backup<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+    </dt>
+    <dd>{{% md %}}A boolean that specifies if the Geo Backup Policy is enabled.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="licensetype_nodejs">
 <a href="#licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the license type applied to this database. Possible values are `LicenseIncluded` and `BasePrice`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -914,7 +982,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#longtermretentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">long<wbr>Term<wbr>Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaselongtermretentionpolicy">Database<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy</a></span>
+        <span class="property-type"><a href="#databaselongtermretentionpolicy">pulumi.<wbr>Input<Database<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `long_term_retention_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -923,7 +991,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#maxsizegb_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Size<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The max size of the database in gigabytes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -932,7 +1000,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#mincapacity_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Minimal capacity that database will always have allocated, if not paused. This property is only settable for General Purpose Serverless databases.
 {{% /md %}}</dd><dt class="property-optional"
@@ -941,7 +1009,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Ms SQL Database. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -950,7 +1018,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#readreplicacount_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Replica<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of readonly secondary replicas associated with the database to which readonly application intent connections may be routed. This property is only settable for Hyperscale edition databases.
 {{% /md %}}</dd><dt class="property-optional"
@@ -959,7 +1027,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#readscale_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If enabled, connections that have application intent set to readonly in their connection string may be routed to a readonly secondary replica. This property is only settable for Premium and Business Critical databases.
 {{% /md %}}</dd><dt class="property-optional"
@@ -968,7 +1036,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#recoverdatabaseid_nodejs" style="color: inherit; text-decoration: inherit;">recover<wbr>Database<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the database to be recovered. This property is only applicable when the `create_mode` is `Recovery`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -977,7 +1045,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#restoredroppeddatabaseid_nodejs" style="color: inherit; text-decoration: inherit;">restore<wbr>Dropped<wbr>Database<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the database to be restored. This property is only applicable when the `create_mode` is `Restore`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -986,7 +1054,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#restorepointintime_nodejs" style="color: inherit; text-decoration: inherit;">restore<wbr>Point<wbr>In<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database. This property is only settable for `create_mode`= `PointInTimeRestore`  databases.
 {{% /md %}}</dd><dt class="property-optional"
@@ -995,7 +1063,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#samplename_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the sample schema to apply when creating this database. Possible value is `AdventureWorksLT`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1004,7 +1072,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#shorttermretentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">short<wbr>Term<wbr>Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseshorttermretentionpolicy">Database<wbr>Short<wbr>Term<wbr>Retention<wbr>Policy</a></span>
+        <span class="property-type"><a href="#databaseshorttermretentionpolicy">pulumi.<wbr>Input<Database<wbr>Short<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `short_term_retention_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1013,7 +1081,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#skuname_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the sku used by the database. Changing this forces a new resource to be created. For example, `GP_S_Gen5_2`,`HS_Gen4_1`,`BC_Gen5_2`, `ElasticPool`, `Basic`,`S0`, `P2` ,`DW100c`, `DS100`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1022,7 +1090,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#storageaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the storage account type used to store backups for this database. Changing this forces a new resource to be created.  Possible values are `GRS`, `LRS` and `ZRS`.  The default value is `GRS`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1031,7 +1099,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1040,7 +1108,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#threatdetectionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">threat<wbr>Detection<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databasethreatdetectionpolicy">Database<wbr>Threat<wbr>Detection<wbr>Policy</a></span>
+        <span class="property-type"><a href="#databasethreatdetectionpolicy">pulumi.<wbr>Input<Database<wbr>Threat<wbr>Detection<wbr>Policy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Threat detection policy configuration. The `threat_detection_policy` block supports fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1049,7 +1117,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#zoneredundant_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Redundant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones. This property is only settable for Premium and Business Critical databases.
 {{% /md %}}</dd></dl>
@@ -1062,7 +1130,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#server_id_python" style="color: inherit; text-decoration: inherit;">server_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The id of the Ms SQL Server on which to create the database. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1071,7 +1139,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#auto_pause_delay_in_minutes_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>pause_<wbr>delay_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Time in minutes after which database is automatically paused. A value of `-1` means that automatic pause is disabled. This property is only settable for General Purpose Serverless databases.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1080,7 +1148,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#collation_python" style="color: inherit; text-decoration: inherit;">collation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the collation of the database. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1089,7 +1157,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The create mode of the database. Possible values are `Copy`, `Default`, `OnlineSecondary`, `PointInTimeRestore`, `Recovery`, `Restore`, `RestoreExternalBackup`, `RestoreExternalBackupSecondary`, `RestoreLongTermRetentionBackup` and `Secondary`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1098,7 +1166,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#creation_source_database_id_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>source_<wbr>database_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The id of the source database to be referred to create the new database. This should only be used for databases with `create_mode` values that use another database as reference. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1107,7 +1175,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#elastic_pool_id_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>pool_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the elastic pool containing this database.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1116,16 +1184,25 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#extended_auditing_policy_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>auditing_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseextendedauditingpolicy">Database<wbr>Extended<wbr>Auditing<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#databaseextendedauditingpolicy">Input[Database<wbr>Extended<wbr>Auditing<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `extended_auditing_policy` block as defined below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}the `extended_auditing_policy` block has been moved to `azurerm_mssql_server_extended_auditing_policy` and `azurerm_mssql_database_extended_auditing_policy`. This block will be removed in version 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="geo_backup_enabled_python">
+<a href="#geo_backup_enabled_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>backup_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+    </dt>
+    <dd>{{% md %}}A boolean that specifies if the Geo Backup Policy is enabled.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="license_type_python">
 <a href="#license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the license type applied to this database. Possible values are `LicenseIncluded` and `BasePrice`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1134,7 +1211,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#long_term_retention_policy_python" style="color: inherit; text-decoration: inherit;">long_<wbr>term_<wbr>retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaselongtermretentionpolicy">Database<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#databaselongtermretentionpolicy">Input[Database<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `long_term_retention_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1143,7 +1220,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#max_size_gb_python" style="color: inherit; text-decoration: inherit;">max_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The max size of the database in gigabytes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1152,7 +1229,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#min_capacity_python" style="color: inherit; text-decoration: inherit;">min_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Minimal capacity that database will always have allocated, if not paused. This property is only settable for General Purpose Serverless databases.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1161,7 +1238,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Ms SQL Database. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1170,7 +1247,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#read_replica_count_python" style="color: inherit; text-decoration: inherit;">read_<wbr>replica_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of readonly secondary replicas associated with the database to which readonly application intent connections may be routed. This property is only settable for Hyperscale edition databases.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1179,7 +1256,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#read_scale_python" style="color: inherit; text-decoration: inherit;">read_<wbr>scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If enabled, connections that have application intent set to readonly in their connection string may be routed to a readonly secondary replica. This property is only settable for Premium and Business Critical databases.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1188,7 +1265,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#recover_database_id_python" style="color: inherit; text-decoration: inherit;">recover_<wbr>database_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the database to be recovered. This property is only applicable when the `create_mode` is `Recovery`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1197,7 +1274,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#restore_dropped_database_id_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>dropped_<wbr>database_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the database to be restored. This property is only applicable when the `create_mode` is `Restore`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1206,7 +1283,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#restore_point_in_time_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>point_<wbr>in_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database. This property is only settable for `create_mode`= `PointInTimeRestore`  databases.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1215,7 +1292,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#sample_name_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the sample schema to apply when creating this database. Possible value is `AdventureWorksLT`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1224,7 +1301,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#short_term_retention_policy_python" style="color: inherit; text-decoration: inherit;">short_<wbr>term_<wbr>retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseshorttermretentionpolicy">Database<wbr>Short<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#databaseshorttermretentionpolicy">Input[Database<wbr>Short<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `short_term_retention_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1233,7 +1310,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#sku_name_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the sku used by the database. Changing this forces a new resource to be created. For example, `GP_S_Gen5_2`,`HS_Gen4_1`,`BC_Gen5_2`, `ElasticPool`, `Basic`,`S0`, `P2` ,`DW100c`, `DS100`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1242,7 +1319,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#storage_account_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the storage account type used to store backups for this database. Changing this forces a new resource to be created.  Possible values are `GRS`, `LRS` and `ZRS`.  The default value is `GRS`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1251,7 +1328,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1260,7 +1337,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#threat_detection_policy_python" style="color: inherit; text-decoration: inherit;">threat_<wbr>detection_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databasethreatdetectionpolicy">Database<wbr>Threat<wbr>Detection<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#databasethreatdetectionpolicy">Input[Database<wbr>Threat<wbr>Detection<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Threat detection policy configuration. The `threat_detection_policy` block supports fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1269,7 +1346,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#zone_redundant_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>redundant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones. This property is only settable for Premium and Business Critical databases.
 {{% /md %}}</dd></dl>
@@ -1338,20 +1415,47 @@ Get an existing Database resource's state with the given name, ID, and optional 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">DatabaseState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Database</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">DatabaseState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Database</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_pause_delay_in_minutes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">collation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">create_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">creation_source_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">elastic_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extended_auditing_policy</span><span class="p">:</span> <span class="nx">Optional[DatabaseExtendedAuditingPolicyArgs]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">long_term_retention_policy</span><span class="p">:</span> <span class="nx">Optional[DatabaseLongTermRetentionPolicyArgs]</span> = None<span class="p">, </span><span class="nx">max_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">read_replica_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">read_scale</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">recover_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restore_dropped_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restore_point_in_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sample_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">short_term_retention_policy</span><span class="p">:</span> <span class="nx">Optional[DatabaseShortTermRetentionPolicyArgs]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">threat_detection_policy</span><span class="p">:</span> <span class="nx">Optional[DatabaseThreatDetectionPolicyArgs]</span> = None<span class="p">, </span><span class="nx">zone_redundant</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Database</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">auto_pause_delay_in_minutes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">collation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">create_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">creation_source_database_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">elastic_pool_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">extended_auditing_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DatabaseExtendedAuditingPolicyArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">geo_backup_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">long_term_retention_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DatabaseLongTermRetentionPolicyArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">max_size_gb</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">min_capacity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">read_replica_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">read_scale</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">recover_database_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">restore_dropped_database_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">restore_point_in_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">sample_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">server_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">short_term_retention_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DatabaseShortTermRetentionPolicyArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">storage_account_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">threat_detection_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DatabaseThreatDetectionPolicyArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">zone_redundant</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">) -&gt;</span> Database</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDatabase<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">DatabaseState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Database</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDatabase<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">DatabaseState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Database</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Database</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">DatabaseState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Database</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">DatabaseState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1509,6 +1613,15 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A `extended_auditing_policy` block as defined below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}the `extended_auditing_policy` block has been moved to `azurerm_mssql_server_extended_auditing_policy` and `azurerm_mssql_database_extended_auditing_policy`. This block will be removed in version 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_geobackupenabled_csharp">
+<a href="#state_geobackupenabled_csharp" style="color: inherit; text-decoration: inherit;">Geo<wbr>Backup<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A boolean that specifies if the Geo Backup Policy is enabled.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_licensetype_csharp">
 <a href="#state_licensetype_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
@@ -1730,6 +1843,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A `extended_auditing_policy` block as defined below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}the `extended_auditing_policy` block has been moved to `azurerm_mssql_server_extended_auditing_policy` and `azurerm_mssql_database_extended_auditing_policy`. This block will be removed in version 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
+        <span id="state_geobackupenabled_go">
+<a href="#state_geobackupenabled_go" style="color: inherit; text-decoration: inherit;">Geo<wbr>Backup<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A boolean that specifies if the Geo Backup Policy is enabled.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_licensetype_go">
 <a href="#state_licensetype_go" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
 </span>
@@ -1900,7 +2022,7 @@ The following state arguments are supported:
 <a href="#state_autopausedelayinminutes_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Pause<wbr>Delay<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Time in minutes after which database is automatically paused. A value of `-1` means that automatic pause is disabled. This property is only settable for General Purpose Serverless databases.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1909,7 +2031,7 @@ The following state arguments are supported:
 <a href="#state_collation_nodejs" style="color: inherit; text-decoration: inherit;">collation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the collation of the database. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1918,7 +2040,7 @@ The following state arguments are supported:
 <a href="#state_createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The create mode of the database. Possible values are `Copy`, `Default`, `OnlineSecondary`, `PointInTimeRestore`, `Recovery`, `Restore`, `RestoreExternalBackup`, `RestoreExternalBackupSecondary`, `RestoreLongTermRetentionBackup` and `Secondary`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1927,7 +2049,7 @@ The following state arguments are supported:
 <a href="#state_creationsourcedatabaseid_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Source<wbr>Database<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The id of the source database to be referred to create the new database. This should only be used for databases with `create_mode` values that use another database as reference. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1936,7 +2058,7 @@ The following state arguments are supported:
 <a href="#state_elasticpoolid_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Pool<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the elastic pool containing this database.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1945,16 +2067,25 @@ The following state arguments are supported:
 <a href="#state_extendedauditingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Auditing<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseextendedauditingpolicy">Database<wbr>Extended<wbr>Auditing<wbr>Policy</a></span>
+        <span class="property-type"><a href="#databaseextendedauditingpolicy">pulumi.<wbr>Input<Database<wbr>Extended<wbr>Auditing<wbr>Policy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `extended_auditing_policy` block as defined below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}the `extended_auditing_policy` block has been moved to `azurerm_mssql_server_extended_auditing_policy` and `azurerm_mssql_database_extended_auditing_policy`. This block will be removed in version 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_geobackupenabled_nodejs">
+<a href="#state_geobackupenabled_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Backup<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+    </dt>
+    <dd>{{% md %}}A boolean that specifies if the Geo Backup Policy is enabled.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_licensetype_nodejs">
 <a href="#state_licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the license type applied to this database. Possible values are `LicenseIncluded` and `BasePrice`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1963,7 +2094,7 @@ The following state arguments are supported:
 <a href="#state_longtermretentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">long<wbr>Term<wbr>Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaselongtermretentionpolicy">Database<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy</a></span>
+        <span class="property-type"><a href="#databaselongtermretentionpolicy">pulumi.<wbr>Input<Database<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `long_term_retention_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1972,7 +2103,7 @@ The following state arguments are supported:
 <a href="#state_maxsizegb_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Size<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The max size of the database in gigabytes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1981,7 +2112,7 @@ The following state arguments are supported:
 <a href="#state_mincapacity_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Minimal capacity that database will always have allocated, if not paused. This property is only settable for General Purpose Serverless databases.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1990,7 +2121,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Ms SQL Database. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1999,7 +2130,7 @@ The following state arguments are supported:
 <a href="#state_readreplicacount_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Replica<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of readonly secondary replicas associated with the database to which readonly application intent connections may be routed. This property is only settable for Hyperscale edition databases.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2008,7 +2139,7 @@ The following state arguments are supported:
 <a href="#state_readscale_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If enabled, connections that have application intent set to readonly in their connection string may be routed to a readonly secondary replica. This property is only settable for Premium and Business Critical databases.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2017,7 +2148,7 @@ The following state arguments are supported:
 <a href="#state_recoverdatabaseid_nodejs" style="color: inherit; text-decoration: inherit;">recover<wbr>Database<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the database to be recovered. This property is only applicable when the `create_mode` is `Recovery`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2026,7 +2157,7 @@ The following state arguments are supported:
 <a href="#state_restoredroppeddatabaseid_nodejs" style="color: inherit; text-decoration: inherit;">restore<wbr>Dropped<wbr>Database<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the database to be restored. This property is only applicable when the `create_mode` is `Restore`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2035,7 +2166,7 @@ The following state arguments are supported:
 <a href="#state_restorepointintime_nodejs" style="color: inherit; text-decoration: inherit;">restore<wbr>Point<wbr>In<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database. This property is only settable for `create_mode`= `PointInTimeRestore`  databases.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2044,7 +2175,7 @@ The following state arguments are supported:
 <a href="#state_samplename_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the sample schema to apply when creating this database. Possible value is `AdventureWorksLT`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2053,7 +2184,7 @@ The following state arguments are supported:
 <a href="#state_serverid_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The id of the Ms SQL Server on which to create the database. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2062,7 +2193,7 @@ The following state arguments are supported:
 <a href="#state_shorttermretentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">short<wbr>Term<wbr>Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseshorttermretentionpolicy">Database<wbr>Short<wbr>Term<wbr>Retention<wbr>Policy</a></span>
+        <span class="property-type"><a href="#databaseshorttermretentionpolicy">pulumi.<wbr>Input<Database<wbr>Short<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `short_term_retention_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2071,7 +2202,7 @@ The following state arguments are supported:
 <a href="#state_skuname_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the sku used by the database. Changing this forces a new resource to be created. For example, `GP_S_Gen5_2`,`HS_Gen4_1`,`BC_Gen5_2`, `ElasticPool`, `Basic`,`S0`, `P2` ,`DW100c`, `DS100`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2080,7 +2211,7 @@ The following state arguments are supported:
 <a href="#state_storageaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the storage account type used to store backups for this database. Changing this forces a new resource to be created.  Possible values are `GRS`, `LRS` and `ZRS`.  The default value is `GRS`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2089,7 +2220,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2098,7 +2229,7 @@ The following state arguments are supported:
 <a href="#state_threatdetectionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">threat<wbr>Detection<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databasethreatdetectionpolicy">Database<wbr>Threat<wbr>Detection<wbr>Policy</a></span>
+        <span class="property-type"><a href="#databasethreatdetectionpolicy">pulumi.<wbr>Input<Database<wbr>Threat<wbr>Detection<wbr>Policy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Threat detection policy configuration. The `threat_detection_policy` block supports fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2107,7 +2238,7 @@ The following state arguments are supported:
 <a href="#state_zoneredundant_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Redundant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones. This property is only settable for Premium and Business Critical databases.
 {{% /md %}}</dd></dl>
@@ -2120,7 +2251,7 @@ The following state arguments are supported:
 <a href="#state_auto_pause_delay_in_minutes_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>pause_<wbr>delay_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Time in minutes after which database is automatically paused. A value of `-1` means that automatic pause is disabled. This property is only settable for General Purpose Serverless databases.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2129,7 +2260,7 @@ The following state arguments are supported:
 <a href="#state_collation_python" style="color: inherit; text-decoration: inherit;">collation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the collation of the database. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2138,7 +2269,7 @@ The following state arguments are supported:
 <a href="#state_create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The create mode of the database. Possible values are `Copy`, `Default`, `OnlineSecondary`, `PointInTimeRestore`, `Recovery`, `Restore`, `RestoreExternalBackup`, `RestoreExternalBackupSecondary`, `RestoreLongTermRetentionBackup` and `Secondary`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2147,7 +2278,7 @@ The following state arguments are supported:
 <a href="#state_creation_source_database_id_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>source_<wbr>database_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The id of the source database to be referred to create the new database. This should only be used for databases with `create_mode` values that use another database as reference. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2156,7 +2287,7 @@ The following state arguments are supported:
 <a href="#state_elastic_pool_id_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>pool_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the elastic pool containing this database.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -2165,16 +2296,25 @@ The following state arguments are supported:
 <a href="#state_extended_auditing_policy_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>auditing_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseextendedauditingpolicy">Database<wbr>Extended<wbr>Auditing<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#databaseextendedauditingpolicy">Input[Database<wbr>Extended<wbr>Auditing<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `extended_auditing_policy` block as defined below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}the `extended_auditing_policy` block has been moved to `azurerm_mssql_server_extended_auditing_policy` and `azurerm_mssql_database_extended_auditing_policy`. This block will be removed in version 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_geo_backup_enabled_python">
+<a href="#state_geo_backup_enabled_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>backup_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+    </dt>
+    <dd>{{% md %}}A boolean that specifies if the Geo Backup Policy is enabled.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_license_type_python">
 <a href="#state_license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the license type applied to this database. Possible values are `LicenseIncluded` and `BasePrice`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2183,7 +2323,7 @@ The following state arguments are supported:
 <a href="#state_long_term_retention_policy_python" style="color: inherit; text-decoration: inherit;">long_<wbr>term_<wbr>retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaselongtermretentionpolicy">Database<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#databaselongtermretentionpolicy">Input[Database<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `long_term_retention_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2192,7 +2332,7 @@ The following state arguments are supported:
 <a href="#state_max_size_gb_python" style="color: inherit; text-decoration: inherit;">max_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The max size of the database in gigabytes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2201,7 +2341,7 @@ The following state arguments are supported:
 <a href="#state_min_capacity_python" style="color: inherit; text-decoration: inherit;">min_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Minimal capacity that database will always have allocated, if not paused. This property is only settable for General Purpose Serverless databases.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2210,7 +2350,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Ms SQL Database. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2219,7 +2359,7 @@ The following state arguments are supported:
 <a href="#state_read_replica_count_python" style="color: inherit; text-decoration: inherit;">read_<wbr>replica_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of readonly secondary replicas associated with the database to which readonly application intent connections may be routed. This property is only settable for Hyperscale edition databases.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2228,7 +2368,7 @@ The following state arguments are supported:
 <a href="#state_read_scale_python" style="color: inherit; text-decoration: inherit;">read_<wbr>scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If enabled, connections that have application intent set to readonly in their connection string may be routed to a readonly secondary replica. This property is only settable for Premium and Business Critical databases.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2237,7 +2377,7 @@ The following state arguments are supported:
 <a href="#state_recover_database_id_python" style="color: inherit; text-decoration: inherit;">recover_<wbr>database_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the database to be recovered. This property is only applicable when the `create_mode` is `Recovery`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2246,7 +2386,7 @@ The following state arguments are supported:
 <a href="#state_restore_dropped_database_id_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>dropped_<wbr>database_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the database to be restored. This property is only applicable when the `create_mode` is `Restore`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2255,7 +2395,7 @@ The following state arguments are supported:
 <a href="#state_restore_point_in_time_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>point_<wbr>in_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database. This property is only settable for `create_mode`= `PointInTimeRestore`  databases.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2264,7 +2404,7 @@ The following state arguments are supported:
 <a href="#state_sample_name_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the sample schema to apply when creating this database. Possible value is `AdventureWorksLT`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2273,7 +2413,7 @@ The following state arguments are supported:
 <a href="#state_server_id_python" style="color: inherit; text-decoration: inherit;">server_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The id of the Ms SQL Server on which to create the database. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2282,7 +2422,7 @@ The following state arguments are supported:
 <a href="#state_short_term_retention_policy_python" style="color: inherit; text-decoration: inherit;">short_<wbr>term_<wbr>retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseshorttermretentionpolicy">Database<wbr>Short<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#databaseshorttermretentionpolicy">Input[Database<wbr>Short<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `short_term_retention_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2291,7 +2431,7 @@ The following state arguments are supported:
 <a href="#state_sku_name_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the sku used by the database. Changing this forces a new resource to be created. For example, `GP_S_Gen5_2`,`HS_Gen4_1`,`BC_Gen5_2`, `ElasticPool`, `Basic`,`S0`, `P2` ,`DW100c`, `DS100`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2300,7 +2440,7 @@ The following state arguments are supported:
 <a href="#state_storage_account_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the storage account type used to store backups for this database. Changing this forces a new resource to be created.  Possible values are `GRS`, `LRS` and `ZRS`.  The default value is `GRS`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2309,7 +2449,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2318,7 +2458,7 @@ The following state arguments are supported:
 <a href="#state_threat_detection_policy_python" style="color: inherit; text-decoration: inherit;">threat_<wbr>detection_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databasethreatdetectionpolicy">Database<wbr>Threat<wbr>Detection<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#databasethreatdetectionpolicy">Input[Database<wbr>Threat<wbr>Detection<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Threat detection policy configuration. The `threat_detection_policy` block supports fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2327,7 +2467,7 @@ The following state arguments are supported:
 <a href="#state_zone_redundant_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>redundant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones. This property is only settable for Premium and Business Critical databases.
 {{% /md %}}</dd></dl>
@@ -2447,7 +2587,7 @@ The following state arguments are supported:
 <a href="#logmonitoringenabled_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Monitoring<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2455,7 +2595,7 @@ The following state arguments are supported:
 <a href="#retentionindays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>In<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Specifies the number of days to retain logs for in the storage account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2464,7 +2604,7 @@ The following state arguments are supported:
 <a href="#storageaccountaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Access<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the access key to use for the auditing storage account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2473,7 +2613,7 @@ The following state arguments are supported:
 <a href="#storageaccountaccesskeyissecondary_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Access<wbr>Key<wbr>Is<wbr>Secondary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies whether `storage_account_access_key` value is the storage's secondary key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2482,7 +2622,7 @@ The following state arguments are supported:
 <a href="#storageendpoint_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net).
 {{% /md %}}</dd></dl>
@@ -2495,7 +2635,7 @@ The following state arguments are supported:
 <a href="#log_monitoring_enabled_python" style="color: inherit; text-decoration: inherit;">log_<wbr>monitoring_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2503,7 +2643,7 @@ The following state arguments are supported:
 <a href="#retention_in_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>in_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days to retain logs for in the storage account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2512,7 +2652,7 @@ The following state arguments are supported:
 <a href="#storage_account_access_key_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>access_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the access key to use for the auditing storage account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2521,7 +2661,7 @@ The following state arguments are supported:
 <a href="#storage_account_access_key_is_secondary_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>access_<wbr>key_<wbr>is_<wbr>secondary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies whether `storage_account_access_key` value is the storage's secondary key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2530,7 +2670,7 @@ The following state arguments are supported:
 <a href="#storage_endpoint_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net).
 {{% /md %}}</dd></dl>
@@ -2625,7 +2765,7 @@ The following state arguments are supported:
 <a href="#monthlyretention_nodejs" style="color: inherit; text-decoration: inherit;">monthly<wbr>Retention</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The monthly retention policy for an LTR backup in an ISO 8601 format. Valid value is between 1 to 120 months. e.g. `P1Y`, `P1M`, `P4W` or `P30D`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2634,7 +2774,7 @@ The following state arguments are supported:
 <a href="#weekofyear_nodejs" style="color: inherit; text-decoration: inherit;">week<wbr>Of<wbr>Year</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The week of year to take the yearly backup in an ISO 8601 format. Value has to be between `1` and `52`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2643,7 +2783,7 @@ The following state arguments are supported:
 <a href="#weeklyretention_nodejs" style="color: inherit; text-decoration: inherit;">weekly<wbr>Retention</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The weekly retention policy for an LTR backup in an ISO 8601 format. Valid value is between 1 to 520 weeks. e.g. `P1Y`, `P1M`, `P1W` or `P7D`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2652,7 +2792,7 @@ The following state arguments are supported:
 <a href="#yearlyretention_nodejs" style="color: inherit; text-decoration: inherit;">yearly<wbr>Retention</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The yearly retention policy for an LTR backup in an ISO 8601 format. Valid value is between 1 to 10 years. e.g. `P1Y`, `P12M`, `P52W` or `P365D`.
 {{% /md %}}</dd></dl>
@@ -2665,7 +2805,7 @@ The following state arguments are supported:
 <a href="#monthly_retention_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>retention</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The monthly retention policy for an LTR backup in an ISO 8601 format. Valid value is between 1 to 120 months. e.g. `P1Y`, `P1M`, `P4W` or `P30D`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2674,7 +2814,7 @@ The following state arguments are supported:
 <a href="#week_of_year_python" style="color: inherit; text-decoration: inherit;">week_<wbr>of_<wbr>year</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The week of year to take the yearly backup in an ISO 8601 format. Value has to be between `1` and `52`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2683,7 +2823,7 @@ The following state arguments are supported:
 <a href="#weekly_retention_python" style="color: inherit; text-decoration: inherit;">weekly_<wbr>retention</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The weekly retention policy for an LTR backup in an ISO 8601 format. Valid value is between 1 to 520 weeks. e.g. `P1Y`, `P1M`, `P1W` or `P7D`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2692,7 +2832,7 @@ The following state arguments are supported:
 <a href="#yearly_retention_python" style="color: inherit; text-decoration: inherit;">yearly_<wbr>retention</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The yearly retention policy for an LTR backup in an ISO 8601 format. Valid value is between 1 to 10 years. e.g. `P1Y`, `P12M`, `P52W` or `P365D`.
 {{% /md %}}</dd></dl>
@@ -2733,7 +2873,7 @@ The following state arguments are supported:
 <a href="#retentiondays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Point In Time Restore configuration. Value has to be between `7` and `35`.
 {{% /md %}}</dd></dl>
@@ -2746,7 +2886,7 @@ The following state arguments are supported:
 <a href="#retention_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Point In Time Restore configuration. Value has to be between `7` and `35`.
 {{% /md %}}</dd></dl>
@@ -2913,7 +3053,7 @@ The following state arguments are supported:
 <a href="#disabledalerts_nodejs" style="color: inherit; text-decoration: inherit;">disabled<wbr>Alerts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Specifies a list of alerts which should be disabled. Possible values include `Access_Anomaly`, `Sql_Injection` and `Sql_Injection_Vulnerability`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2922,7 +3062,7 @@ The following state arguments are supported:
 <a href="#emailaccountadmins_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Account<wbr>Admins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Should the account administrators be emailed when this alert is triggered?
 {{% /md %}}</dd><dt class="property-optional"
@@ -2931,7 +3071,7 @@ The following state arguments are supported:
 <a href="#emailaddresses_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of email addresses which alerts should be sent to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2940,7 +3080,7 @@ The following state arguments are supported:
 <a href="#retentiondays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Specifies the number of days to keep in the Threat Detection audit logs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2949,7 +3089,7 @@ The following state arguments are supported:
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The State of the Policy. Possible values are `Enabled`, `Disabled` or `New`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2958,7 +3098,7 @@ The following state arguments are supported:
 <a href="#storageaccountaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Access<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the identifier key of the Threat Detection audit storage account. Required if `state` is `Enabled`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2967,7 +3107,7 @@ The following state arguments are supported:
 <a href="#storageendpoint_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs. Required if `state` is `Enabled`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2976,7 +3116,7 @@ The following state arguments are supported:
 <a href="#useserverdefault_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Server<wbr>Default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Should the default server policy be used? Defaults to `Disabled`.
 {{% /md %}}</dd></dl>
@@ -2989,7 +3129,7 @@ The following state arguments are supported:
 <a href="#disabled_alerts_python" style="color: inherit; text-decoration: inherit;">disabled_<wbr>alerts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of alerts which should be disabled. Possible values include `Access_Anomaly`, `Sql_Injection` and `Sql_Injection_Vulnerability`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2998,7 +3138,7 @@ The following state arguments are supported:
 <a href="#email_account_admins_python" style="color: inherit; text-decoration: inherit;">email_<wbr>account_<wbr>admins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Should the account administrators be emailed when this alert is triggered?
 {{% /md %}}</dd><dt class="property-optional"
@@ -3007,7 +3147,7 @@ The following state arguments are supported:
 <a href="#email_addresses_python" style="color: inherit; text-decoration: inherit;">email_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of email addresses which alerts should be sent to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3016,7 +3156,7 @@ The following state arguments are supported:
 <a href="#retention_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days to keep in the Threat Detection audit logs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3025,7 +3165,7 @@ The following state arguments are supported:
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The State of the Policy. Possible values are `Enabled`, `Disabled` or `New`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3034,7 +3174,7 @@ The following state arguments are supported:
 <a href="#storage_account_access_key_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>access_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the identifier key of the Threat Detection audit storage account. Required if `state` is `Enabled`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3043,7 +3183,7 @@ The following state arguments are supported:
 <a href="#storage_endpoint_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs. Required if `state` is `Enabled`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3052,7 +3192,7 @@ The following state arguments are supported:
 <a href="#use_server_default_python" style="color: inherit; text-decoration: inherit;">use_<wbr>server_<wbr>default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Should the default server policy be used? Defaults to `Disabled`.
 {{% /md %}}</dd></dl>

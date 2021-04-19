@@ -129,11 +129,11 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/compute"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
 )
 
 func main() {
@@ -364,19 +364,49 @@ const mainVirtualMachine = new azure.compute.VirtualMachine("mainVirtualMachine"
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualMachineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualMachineArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_capabilities</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineAdditionalCapabilitiesArgs]</span> = None<span class="p">, </span><span class="nx">availability_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">boot_diagnostics</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineBootDiagnosticsArgs]</span> = None<span class="p">, </span><span class="nx">delete_data_disks_on_termination</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">delete_os_disk_on_termination</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineIdentityArgs]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interface_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">os_profile</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineOsProfileArgs]</span> = None<span class="p">, </span><span class="nx">os_profile_linux_config</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineOsProfileLinuxConfigArgs]</span> = None<span class="p">, </span><span class="nx">os_profile_secrets</span><span class="p">:</span> <span class="nx">Optional[Sequence[VirtualMachineOsProfileSecretArgs]]</span> = None<span class="p">, </span><span class="nx">os_profile_windows_config</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineOsProfileWindowsConfigArgs]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[VirtualMachinePlanArgs]</span> = None<span class="p">, </span><span class="nx">primary_network_interface_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proximity_placement_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_data_disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[VirtualMachineStorageDataDiskArgs]]</span> = None<span class="p">, </span><span class="nx">storage_image_reference</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineStorageImageReferenceArgs]</span> = None<span class="p">, </span><span class="nx">storage_os_disk</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineStorageOsDiskArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vm_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                   <span class="nx">additional_capabilities</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VirtualMachineAdditionalCapabilitiesArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">availability_set_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">boot_diagnostics</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VirtualMachineBootDiagnosticsArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">delete_data_disks_on_termination</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                   <span class="nx">delete_os_disk_on_termination</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                   <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VirtualMachineIdentityArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">network_interface_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">os_profile</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VirtualMachineOsProfileArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">os_profile_linux_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VirtualMachineOsProfileLinuxConfigArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">os_profile_secrets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[VirtualMachineOsProfileSecretArgs]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">os_profile_windows_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VirtualMachineOsProfileWindowsConfigArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VirtualMachinePlanArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">primary_network_interface_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">proximity_placement_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">storage_data_disks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[VirtualMachineStorageDataDiskArgs]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">storage_image_reference</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VirtualMachineStorageImageReferenceArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">storage_os_disk</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VirtualMachineStorageOsDiskArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">vm_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualMachineArgs</a></span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualMachine</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VirtualMachineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualMachine</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualMachine</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VirtualMachineArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualMachine</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VirtualMachineArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">VirtualMachineArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -411,22 +441,32 @@ const mainVirtualMachine = new azure.compute.VirtualMachine("mainVirtualMachine"
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">VirtualMachineArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -435,7 +475,7 @@ const mainVirtualMachine = new azure.compute.VirtualMachine("mainVirtualMachine"
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -459,7 +499,7 @@ const mainVirtualMachine = new azure.compute.VirtualMachine("mainVirtualMachine"
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -954,7 +994,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#networkinterfaceids_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interface<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of Network Interface ID's which should be associated with the Virtual Machine.
 {{% /md %}}</dd><dt class="property-required"
@@ -963,7 +1003,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group in which the Virtual Machine should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -972,7 +1012,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#storageosdisk_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Os<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinestorageosdisk">Virtual<wbr>Machine<wbr>Storage<wbr>Os<wbr>Disk</a></span>
+        <span class="property-type"><a href="#virtualmachinestorageosdisk">pulumi.<wbr>Input<Virtual<wbr>Machine<wbr>Storage<wbr>Os<wbr>Disk<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `storage_os_disk` block.
 {{% /md %}}</dd><dt class="property-required"
@@ -981,7 +1021,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the [size of the Virtual Machine](https://docs.microsoft.com/azure/virtual-machines/sizes-general). See also [Azure VM Naming Conventions](https://docs.microsoft.com/azure/virtual-machines/vm-naming-conventions).
 {{% /md %}}</dd><dt class="property-optional"
@@ -990,7 +1030,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#additionalcapabilities_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineadditionalcapabilities">Virtual<wbr>Machine<wbr>Additional<wbr>Capabilities</a></span>
+        <span class="property-type"><a href="#virtualmachineadditionalcapabilities">pulumi.<wbr>Input<Virtual<wbr>Machine<wbr>Additional<wbr>Capabilities<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `additional_capabilities` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -999,7 +1039,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#availabilitysetid_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Set<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Availability Set in which the Virtual Machine should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1008,7 +1048,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#bootdiagnostics_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinebootdiagnostics">Virtual<wbr>Machine<wbr>Boot<wbr>Diagnostics</a></span>
+        <span class="property-type"><a href="#virtualmachinebootdiagnostics">pulumi.<wbr>Input<Virtual<wbr>Machine<wbr>Boot<wbr>Diagnostics<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `boot_diagnostics` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1017,7 +1057,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#deletedatadisksontermination_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Data<wbr>Disks<wbr>On<wbr>Termination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Should the Data Disks (either the Managed Disks / VHD Blobs) be deleted when the Virtual Machine is destroyed? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1026,7 +1066,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#deleteosdiskontermination_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Os<wbr>Disk<wbr>On<wbr>Termination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Should the OS Disk (either the Managed Disk / VHD Blob) be deleted when the Virtual Machine is destroyed? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1035,7 +1075,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineidentity">Virtual<wbr>Machine<wbr>Identity</a></span>
+        <span class="property-type"><a href="#virtualmachineidentity">pulumi.<wbr>Input<Virtual<wbr>Machine<wbr>Identity<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `identity` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1044,7 +1084,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the BYOL Type for this Virtual Machine. This is only applicable to Windows Virtual Machines. Possible values are `Windows_Client` and `Windows_Server`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1053,7 +1093,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region where the Virtual Machine exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1062,7 +1102,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Virtual Machine. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1071,7 +1111,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#osprofile_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofile">Virtual<wbr>Machine<wbr>Os<wbr>Profile</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofile">pulumi.<wbr>Input<Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}An `os_profile` block. Required when `create_option` in the `storage_os_disk` block is set to `FromImage`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1080,7 +1120,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#osprofilelinuxconfig_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile<wbr>Linux<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofilelinuxconfig">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofilelinuxconfig">pulumi.<wbr>Input<Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `os_profile_linux_config` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1089,7 +1129,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#osprofilesecrets_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile<wbr>Secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofilesecret">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Secret[]</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofilesecret">pulumi.<wbr>Input<pulumi.<wbr>Input<Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Secret<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `os_profile_secrets` blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1098,7 +1138,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#osprofilewindowsconfig_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile<wbr>Windows<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofilewindowsconfig">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofilewindowsconfig">pulumi.<wbr>Input<Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `os_profile_windows_config` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1107,7 +1147,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineplan">Virtual<wbr>Machine<wbr>Plan</a></span>
+        <span class="property-type"><a href="#virtualmachineplan">pulumi.<wbr>Input<Virtual<wbr>Machine<wbr>Plan<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `plan` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1116,7 +1156,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#primarynetworkinterfaceid_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Network<wbr>Interface<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Network Interface (which must be attached to the Virtual Machine) which should be the Primary Network Interface for this Virtual Machine.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1125,7 +1165,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#proximityplacementgroupid_nodejs" style="color: inherit; text-decoration: inherit;">proximity<wbr>Placement<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created
 {{% /md %}}</dd><dt class="property-optional"
@@ -1134,7 +1174,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#storagedatadisks_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Data<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinestoragedatadisk">Virtual<wbr>Machine<wbr>Storage<wbr>Data<wbr>Disk[]</a></span>
+        <span class="property-type"><a href="#virtualmachinestoragedatadisk">pulumi.<wbr>Input<pulumi.<wbr>Input<Virtual<wbr>Machine<wbr>Storage<wbr>Data<wbr>Disk<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_data_disk` blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1143,7 +1183,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#storageimagereference_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinestorageimagereference">Virtual<wbr>Machine<wbr>Storage<wbr>Image<wbr>Reference</a></span>
+        <span class="property-type"><a href="#virtualmachinestorageimagereference">pulumi.<wbr>Input<Virtual<wbr>Machine<wbr>Storage<wbr>Image<wbr>Reference<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `storage_image_reference` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1152,7 +1192,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the Virtual Machine.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1161,7 +1201,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A list of a single item of the Availability Zone which the Virtual Machine should be allocated in.
 {{% /md %}}</dd></dl>
@@ -1174,7 +1214,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#network_interface_ids_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interface_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of Network Interface ID's which should be associated with the Virtual Machine.
 {{% /md %}}</dd><dt class="property-required"
@@ -1183,7 +1223,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group in which the Virtual Machine should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -1192,7 +1232,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#storage_os_disk_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>os_<wbr>disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinestorageosdisk">Virtual<wbr>Machine<wbr>Storage<wbr>Os<wbr>Disk<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinestorageosdisk">Input[Virtual<wbr>Machine<wbr>Storage<wbr>Os<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `storage_os_disk` block.
 {{% /md %}}</dd><dt class="property-required"
@@ -1201,7 +1241,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the [size of the Virtual Machine](https://docs.microsoft.com/azure/virtual-machines/sizes-general). See also [Azure VM Naming Conventions](https://docs.microsoft.com/azure/virtual-machines/vm-naming-conventions).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1210,7 +1250,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#additional_capabilities_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineadditionalcapabilities">Virtual<wbr>Machine<wbr>Additional<wbr>Capabilities<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineadditionalcapabilities">Input[Virtual<wbr>Machine<wbr>Additional<wbr>Capabilities<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `additional_capabilities` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1219,7 +1259,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#availability_set_id_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>set_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Availability Set in which the Virtual Machine should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1228,7 +1268,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#boot_diagnostics_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinebootdiagnostics">Virtual<wbr>Machine<wbr>Boot<wbr>Diagnostics<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinebootdiagnostics">Input[Virtual<wbr>Machine<wbr>Boot<wbr>Diagnostics<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `boot_diagnostics` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1237,7 +1277,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#delete_data_disks_on_termination_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>data_<wbr>disks_<wbr>on_<wbr>termination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Should the Data Disks (either the Managed Disks / VHD Blobs) be deleted when the Virtual Machine is destroyed? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1246,7 +1286,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#delete_os_disk_on_termination_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>os_<wbr>disk_<wbr>on_<wbr>termination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Should the OS Disk (either the Managed Disk / VHD Blob) be deleted when the Virtual Machine is destroyed? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1255,7 +1295,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineidentity">Virtual<wbr>Machine<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineidentity">Input[Virtual<wbr>Machine<wbr>Identity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1264,7 +1304,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the BYOL Type for this Virtual Machine. This is only applicable to Windows Virtual Machines. Possible values are `Windows_Client` and `Windows_Server`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1273,7 +1313,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region where the Virtual Machine exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1282,7 +1322,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Virtual Machine. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1291,7 +1331,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#os_profile_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofile">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofile">Input[Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An `os_profile` block. Required when `create_option` in the `storage_os_disk` block is set to `FromImage`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1300,7 +1340,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#os_profile_linux_config_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile_<wbr>linux_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofilelinuxconfig">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofilelinuxconfig">Input[Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `os_profile_linux_config` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1309,7 +1349,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#os_profile_secrets_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile_<wbr>secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofilesecret">Sequence[Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Secret<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofilesecret">Input[Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Secret<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `os_profile_secrets` blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1318,7 +1358,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#os_profile_windows_config_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile_<wbr>windows_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofilewindowsconfig">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofilewindowsconfig">Input[Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `os_profile_windows_config` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1327,7 +1367,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineplan">Virtual<wbr>Machine<wbr>Plan<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineplan">Input[Virtual<wbr>Machine<wbr>Plan<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `plan` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1336,7 +1376,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#primary_network_interface_id_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>network_<wbr>interface_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Network Interface (which must be attached to the Virtual Machine) which should be the Primary Network Interface for this Virtual Machine.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1345,7 +1385,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#proximity_placement_group_id_python" style="color: inherit; text-decoration: inherit;">proximity_<wbr>placement_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created
 {{% /md %}}</dd><dt class="property-optional"
@@ -1354,7 +1394,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#storage_data_disks_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>data_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinestoragedatadisk">Sequence[Virtual<wbr>Machine<wbr>Storage<wbr>Data<wbr>Disk<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachinestoragedatadisk">Input[Virtual<wbr>Machine<wbr>Storage<wbr>Data<wbr>Disk<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_data_disk` blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1363,7 +1403,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#storage_image_reference_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>image_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinestorageimagereference">Virtual<wbr>Machine<wbr>Storage<wbr>Image<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinestorageimagereference">Input[Virtual<wbr>Machine<wbr>Storage<wbr>Image<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `storage_image_reference` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1372,7 +1412,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the Virtual Machine.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1381,7 +1421,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A list of a single item of the Availability Zone which the Virtual Machine should be allocated in.
 {{% /md %}}</dd></dl>
@@ -1450,20 +1490,46 @@ Get an existing VirtualMachine resource's state with the given name, ID, and opt
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">VirtualMachineState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">VirtualMachine</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">VirtualMachineState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">VirtualMachine</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_capabilities</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineAdditionalCapabilitiesArgs]</span> = None<span class="p">, </span><span class="nx">availability_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">boot_diagnostics</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineBootDiagnosticsArgs]</span> = None<span class="p">, </span><span class="nx">delete_data_disks_on_termination</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">delete_os_disk_on_termination</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineIdentityArgs]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interface_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">os_profile</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineOsProfileArgs]</span> = None<span class="p">, </span><span class="nx">os_profile_linux_config</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineOsProfileLinuxConfigArgs]</span> = None<span class="p">, </span><span class="nx">os_profile_secrets</span><span class="p">:</span> <span class="nx">Optional[Sequence[VirtualMachineOsProfileSecretArgs]]</span> = None<span class="p">, </span><span class="nx">os_profile_windows_config</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineOsProfileWindowsConfigArgs]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[VirtualMachinePlanArgs]</span> = None<span class="p">, </span><span class="nx">primary_network_interface_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proximity_placement_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_data_disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[VirtualMachineStorageDataDiskArgs]]</span> = None<span class="p">, </span><span class="nx">storage_image_reference</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineStorageImageReferenceArgs]</span> = None<span class="p">, </span><span class="nx">storage_os_disk</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineStorageOsDiskArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vm_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> VirtualMachine</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">additional_capabilities</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VirtualMachineAdditionalCapabilitiesArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">availability_set_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">boot_diagnostics</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VirtualMachineBootDiagnosticsArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">delete_data_disks_on_termination</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">delete_os_disk_on_termination</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VirtualMachineIdentityArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">network_interface_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">os_profile</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VirtualMachineOsProfileArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">os_profile_linux_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VirtualMachineOsProfileLinuxConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">os_profile_secrets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[VirtualMachineOsProfileSecretArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">os_profile_windows_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VirtualMachineOsProfileWindowsConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VirtualMachinePlanArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">primary_network_interface_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">proximity_placement_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">storage_data_disks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[VirtualMachineStorageDataDiskArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">storage_image_reference</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VirtualMachineStorageImageReferenceArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">storage_os_disk</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VirtualMachineStorageOsDiskArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">vm_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> VirtualMachine</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVirtualMachine<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">VirtualMachineState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualMachine</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVirtualMachine<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">VirtualMachineState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualMachine</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">VirtualMachine</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">VirtualMachineState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">VirtualMachine</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">VirtualMachineState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2012,7 +2078,7 @@ The following state arguments are supported:
 <a href="#state_additionalcapabilities_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineadditionalcapabilities">Virtual<wbr>Machine<wbr>Additional<wbr>Capabilities</a></span>
+        <span class="property-type"><a href="#virtualmachineadditionalcapabilities">pulumi.<wbr>Input<Virtual<wbr>Machine<wbr>Additional<wbr>Capabilities<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `additional_capabilities` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2021,7 +2087,7 @@ The following state arguments are supported:
 <a href="#state_availabilitysetid_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Set<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Availability Set in which the Virtual Machine should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2030,7 +2096,7 @@ The following state arguments are supported:
 <a href="#state_bootdiagnostics_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinebootdiagnostics">Virtual<wbr>Machine<wbr>Boot<wbr>Diagnostics</a></span>
+        <span class="property-type"><a href="#virtualmachinebootdiagnostics">pulumi.<wbr>Input<Virtual<wbr>Machine<wbr>Boot<wbr>Diagnostics<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `boot_diagnostics` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2039,7 +2105,7 @@ The following state arguments are supported:
 <a href="#state_deletedatadisksontermination_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Data<wbr>Disks<wbr>On<wbr>Termination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Should the Data Disks (either the Managed Disks / VHD Blobs) be deleted when the Virtual Machine is destroyed? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2048,7 +2114,7 @@ The following state arguments are supported:
 <a href="#state_deleteosdiskontermination_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Os<wbr>Disk<wbr>On<wbr>Termination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Should the OS Disk (either the Managed Disk / VHD Blob) be deleted when the Virtual Machine is destroyed? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2057,7 +2123,7 @@ The following state arguments are supported:
 <a href="#state_identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineidentity">Virtual<wbr>Machine<wbr>Identity</a></span>
+        <span class="property-type"><a href="#virtualmachineidentity">pulumi.<wbr>Input<Virtual<wbr>Machine<wbr>Identity<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `identity` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2066,7 +2132,7 @@ The following state arguments are supported:
 <a href="#state_licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the BYOL Type for this Virtual Machine. This is only applicable to Windows Virtual Machines. Possible values are `Windows_Client` and `Windows_Server`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2075,7 +2141,7 @@ The following state arguments are supported:
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region where the Virtual Machine exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2084,7 +2150,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Virtual Machine. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2093,7 +2159,7 @@ The following state arguments are supported:
 <a href="#state_networkinterfaceids_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interface<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of Network Interface ID's which should be associated with the Virtual Machine.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2102,7 +2168,7 @@ The following state arguments are supported:
 <a href="#state_osprofile_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofile">Virtual<wbr>Machine<wbr>Os<wbr>Profile</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofile">pulumi.<wbr>Input<Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}An `os_profile` block. Required when `create_option` in the `storage_os_disk` block is set to `FromImage`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2111,7 +2177,7 @@ The following state arguments are supported:
 <a href="#state_osprofilelinuxconfig_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile<wbr>Linux<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofilelinuxconfig">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofilelinuxconfig">pulumi.<wbr>Input<Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `os_profile_linux_config` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2120,7 +2186,7 @@ The following state arguments are supported:
 <a href="#state_osprofilesecrets_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile<wbr>Secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofilesecret">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Secret[]</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofilesecret">pulumi.<wbr>Input<pulumi.<wbr>Input<Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Secret<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `os_profile_secrets` blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2129,7 +2195,7 @@ The following state arguments are supported:
 <a href="#state_osprofilewindowsconfig_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile<wbr>Windows<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofilewindowsconfig">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofilewindowsconfig">pulumi.<wbr>Input<Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `os_profile_windows_config` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2138,7 +2204,7 @@ The following state arguments are supported:
 <a href="#state_plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineplan">Virtual<wbr>Machine<wbr>Plan</a></span>
+        <span class="property-type"><a href="#virtualmachineplan">pulumi.<wbr>Input<Virtual<wbr>Machine<wbr>Plan<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `plan` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2147,7 +2213,7 @@ The following state arguments are supported:
 <a href="#state_primarynetworkinterfaceid_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Network<wbr>Interface<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Network Interface (which must be attached to the Virtual Machine) which should be the Primary Network Interface for this Virtual Machine.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2156,7 +2222,7 @@ The following state arguments are supported:
 <a href="#state_proximityplacementgroupid_nodejs" style="color: inherit; text-decoration: inherit;">proximity<wbr>Placement<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created
 {{% /md %}}</dd><dt class="property-optional"
@@ -2165,7 +2231,7 @@ The following state arguments are supported:
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group in which the Virtual Machine should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2174,7 +2240,7 @@ The following state arguments are supported:
 <a href="#state_storagedatadisks_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Data<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinestoragedatadisk">Virtual<wbr>Machine<wbr>Storage<wbr>Data<wbr>Disk[]</a></span>
+        <span class="property-type"><a href="#virtualmachinestoragedatadisk">pulumi.<wbr>Input<pulumi.<wbr>Input<Virtual<wbr>Machine<wbr>Storage<wbr>Data<wbr>Disk<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_data_disk` blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2183,7 +2249,7 @@ The following state arguments are supported:
 <a href="#state_storageimagereference_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinestorageimagereference">Virtual<wbr>Machine<wbr>Storage<wbr>Image<wbr>Reference</a></span>
+        <span class="property-type"><a href="#virtualmachinestorageimagereference">pulumi.<wbr>Input<Virtual<wbr>Machine<wbr>Storage<wbr>Image<wbr>Reference<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `storage_image_reference` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2192,7 +2258,7 @@ The following state arguments are supported:
 <a href="#state_storageosdisk_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Os<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinestorageosdisk">Virtual<wbr>Machine<wbr>Storage<wbr>Os<wbr>Disk</a></span>
+        <span class="property-type"><a href="#virtualmachinestorageosdisk">pulumi.<wbr>Input<Virtual<wbr>Machine<wbr>Storage<wbr>Os<wbr>Disk<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `storage_os_disk` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2201,7 +2267,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the Virtual Machine.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2210,7 +2276,7 @@ The following state arguments are supported:
 <a href="#state_vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the [size of the Virtual Machine](https://docs.microsoft.com/azure/virtual-machines/sizes-general). See also [Azure VM Naming Conventions](https://docs.microsoft.com/azure/virtual-machines/vm-naming-conventions).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2219,7 +2285,7 @@ The following state arguments are supported:
 <a href="#state_zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A list of a single item of the Availability Zone which the Virtual Machine should be allocated in.
 {{% /md %}}</dd></dl>
@@ -2232,7 +2298,7 @@ The following state arguments are supported:
 <a href="#state_additional_capabilities_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineadditionalcapabilities">Virtual<wbr>Machine<wbr>Additional<wbr>Capabilities<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineadditionalcapabilities">Input[Virtual<wbr>Machine<wbr>Additional<wbr>Capabilities<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `additional_capabilities` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2241,7 +2307,7 @@ The following state arguments are supported:
 <a href="#state_availability_set_id_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>set_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Availability Set in which the Virtual Machine should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2250,7 +2316,7 @@ The following state arguments are supported:
 <a href="#state_boot_diagnostics_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinebootdiagnostics">Virtual<wbr>Machine<wbr>Boot<wbr>Diagnostics<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinebootdiagnostics">Input[Virtual<wbr>Machine<wbr>Boot<wbr>Diagnostics<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `boot_diagnostics` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2259,7 +2325,7 @@ The following state arguments are supported:
 <a href="#state_delete_data_disks_on_termination_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>data_<wbr>disks_<wbr>on_<wbr>termination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Should the Data Disks (either the Managed Disks / VHD Blobs) be deleted when the Virtual Machine is destroyed? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2268,7 +2334,7 @@ The following state arguments are supported:
 <a href="#state_delete_os_disk_on_termination_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>os_<wbr>disk_<wbr>on_<wbr>termination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Should the OS Disk (either the Managed Disk / VHD Blob) be deleted when the Virtual Machine is destroyed? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2277,7 +2343,7 @@ The following state arguments are supported:
 <a href="#state_identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineidentity">Virtual<wbr>Machine<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineidentity">Input[Virtual<wbr>Machine<wbr>Identity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2286,7 +2352,7 @@ The following state arguments are supported:
 <a href="#state_license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the BYOL Type for this Virtual Machine. This is only applicable to Windows Virtual Machines. Possible values are `Windows_Client` and `Windows_Server`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2295,7 +2361,7 @@ The following state arguments are supported:
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region where the Virtual Machine exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2304,7 +2370,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Virtual Machine. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2313,7 +2379,7 @@ The following state arguments are supported:
 <a href="#state_network_interface_ids_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interface_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of Network Interface ID's which should be associated with the Virtual Machine.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2322,7 +2388,7 @@ The following state arguments are supported:
 <a href="#state_os_profile_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofile">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofile">Input[Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An `os_profile` block. Required when `create_option` in the `storage_os_disk` block is set to `FromImage`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2331,7 +2397,7 @@ The following state arguments are supported:
 <a href="#state_os_profile_linux_config_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile_<wbr>linux_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofilelinuxconfig">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofilelinuxconfig">Input[Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `os_profile_linux_config` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2340,7 +2406,7 @@ The following state arguments are supported:
 <a href="#state_os_profile_secrets_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile_<wbr>secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofilesecret">Sequence[Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Secret<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofilesecret">Input[Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Secret<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `os_profile_secrets` blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2349,7 +2415,7 @@ The following state arguments are supported:
 <a href="#state_os_profile_windows_config_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile_<wbr>windows_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofilewindowsconfig">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofilewindowsconfig">Input[Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `os_profile_windows_config` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2358,7 +2424,7 @@ The following state arguments are supported:
 <a href="#state_plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineplan">Virtual<wbr>Machine<wbr>Plan<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineplan">Input[Virtual<wbr>Machine<wbr>Plan<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `plan` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2367,7 +2433,7 @@ The following state arguments are supported:
 <a href="#state_primary_network_interface_id_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>network_<wbr>interface_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Network Interface (which must be attached to the Virtual Machine) which should be the Primary Network Interface for this Virtual Machine.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2376,7 +2442,7 @@ The following state arguments are supported:
 <a href="#state_proximity_placement_group_id_python" style="color: inherit; text-decoration: inherit;">proximity_<wbr>placement_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created
 {{% /md %}}</dd><dt class="property-optional"
@@ -2385,7 +2451,7 @@ The following state arguments are supported:
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group in which the Virtual Machine should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2394,7 +2460,7 @@ The following state arguments are supported:
 <a href="#state_storage_data_disks_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>data_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinestoragedatadisk">Sequence[Virtual<wbr>Machine<wbr>Storage<wbr>Data<wbr>Disk<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachinestoragedatadisk">Input[Virtual<wbr>Machine<wbr>Storage<wbr>Data<wbr>Disk<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_data_disk` blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2403,7 +2469,7 @@ The following state arguments are supported:
 <a href="#state_storage_image_reference_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>image_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinestorageimagereference">Virtual<wbr>Machine<wbr>Storage<wbr>Image<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinestorageimagereference">Input[Virtual<wbr>Machine<wbr>Storage<wbr>Image<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `storage_image_reference` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2412,7 +2478,7 @@ The following state arguments are supported:
 <a href="#state_storage_os_disk_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>os_<wbr>disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinestorageosdisk">Virtual<wbr>Machine<wbr>Storage<wbr>Os<wbr>Disk<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinestorageosdisk">Input[Virtual<wbr>Machine<wbr>Storage<wbr>Os<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `storage_os_disk` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2421,7 +2487,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the Virtual Machine.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2430,7 +2496,7 @@ The following state arguments are supported:
 <a href="#state_vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the [size of the Virtual Machine](https://docs.microsoft.com/azure/virtual-machines/sizes-general). See also [Azure VM Naming Conventions](https://docs.microsoft.com/azure/virtual-machines/vm-naming-conventions).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2439,7 +2505,7 @@ The following state arguments are supported:
 <a href="#state_zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A list of a single item of the Availability Zone which the Virtual Machine should be allocated in.
 {{% /md %}}</dd></dl>
@@ -2489,7 +2555,7 @@ The following state arguments are supported:
 <a href="#ultrassdenabled_nodejs" style="color: inherit; text-decoration: inherit;">ultra<wbr>Ssd<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Should Ultra SSD disk be enabled for this Virtual Machine?
 {{% /md %}}</dd></dl>
@@ -2502,7 +2568,7 @@ The following state arguments are supported:
 <a href="#ultra_ssd_enabled_python" style="color: inherit; text-decoration: inherit;">ultra_<wbr>ssd_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Should Ultra SSD disk be enabled for this Virtual Machine?
 {{% /md %}}</dd></dl>
@@ -2561,7 +2627,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Should Boot Diagnostics be enabled for this Virtual Machine?
 {{% /md %}}</dd><dt class="property-required"
@@ -2570,7 +2636,7 @@ The following state arguments are supported:
 <a href="#storageuri_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Storage Account's Blob Endpoint which should hold the virtual machine's diagnostic files.
 {{% /md %}}</dd></dl>
@@ -2583,7 +2649,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Should Boot Diagnostics be enabled for this Virtual Machine?
 {{% /md %}}</dd><dt class="property-required"
@@ -2592,7 +2658,7 @@ The following state arguments are supported:
 <a href="#storage_uri_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Storage Account's Blob Endpoint which should hold the virtual machine's diagnostic files.
 {{% /md %}}</dd></dl>
@@ -2669,7 +2735,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Managed Service Identity Type of this Virtual Machine. Possible values are `SystemAssigned` (where Azure will generate a Service Principal for you), `UserAssigned` (where you can specify the Service Principal ID's) to be used by this Virtual Machine using the `identity_ids` field, and `SystemAssigned, UserAssigned` which assigns both a system managed identity as well as the specified user assigned identities.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2678,7 +2744,7 @@ The following state arguments are supported:
 <a href="#identityids_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Specifies a list of user managed identity ids to be assigned to the VM. Required if `type` is `UserAssigned`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2687,7 +2753,7 @@ The following state arguments are supported:
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Principal ID for the Service Principal associated with the Managed Service Identity of this Virtual Machine.
 {{% /md %}}</dd></dl>
@@ -2700,7 +2766,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Managed Service Identity Type of this Virtual Machine. Possible values are `SystemAssigned` (where Azure will generate a Service Principal for you), `UserAssigned` (where you can specify the Service Principal ID's) to be used by this Virtual Machine using the `identity_ids` field, and `SystemAssigned, UserAssigned` which assigns both a system managed identity as well as the specified user assigned identities.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2709,7 +2775,7 @@ The following state arguments are supported:
 <a href="#identity_ids_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of user managed identity ids to be assigned to the VM. Required if `type` is `UserAssigned`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2718,7 +2784,7 @@ The following state arguments are supported:
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Principal ID for the Service Principal associated with the Managed Service Identity of this Virtual Machine.
 {{% /md %}}</dd></dl>
@@ -2813,7 +2879,7 @@ The following state arguments are supported:
 <a href="#adminusername_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the local administrator account.
 {{% /md %}}</dd><dt class="property-required"
@@ -2822,7 +2888,7 @@ The following state arguments are supported:
 <a href="#computername_nodejs" style="color: inherit; text-decoration: inherit;">computer<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Virtual Machine.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2831,7 +2897,7 @@ The following state arguments are supported:
 <a href="#adminpassword_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The password associated with the local administrator account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2840,7 +2906,7 @@ The following state arguments are supported:
 <a href="#customdata_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies custom data to supply to the machine. On Linux-based systems, this can be used as a cloud-init script. On other systems, this will be copied as a file on disk. Internally, this provider will base64 encode this value before sending it to the API. The maximum length of the binary array is 65535 bytes.
 {{% /md %}}</dd></dl>
@@ -2853,7 +2919,7 @@ The following state arguments are supported:
 <a href="#admin_username_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the local administrator account.
 {{% /md %}}</dd><dt class="property-required"
@@ -2862,7 +2928,7 @@ The following state arguments are supported:
 <a href="#computer_name_python" style="color: inherit; text-decoration: inherit;">computer_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Virtual Machine.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2871,7 +2937,7 @@ The following state arguments are supported:
 <a href="#admin_password_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The password associated with the local administrator account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2880,7 +2946,7 @@ The following state arguments are supported:
 <a href="#custom_data_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies custom data to supply to the machine. On Linux-based systems, this can be used as a cloud-init script. On other systems, this will be copied as a file on disk. Internally, this provider will base64 encode this value before sending it to the API. The maximum length of the binary array is 65535 bytes.
 {{% /md %}}</dd></dl>
@@ -2939,7 +3005,7 @@ The following state arguments are supported:
 <a href="#disablepasswordauthentication_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Password<wbr>Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies whether password authentication should be disabled. If set to `false`, an `admin_password` must be specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2948,7 +3014,7 @@ The following state arguments are supported:
 <a href="#sshkeys_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofilelinuxconfigsshkey">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Ssh<wbr>Key[]</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofilelinuxconfigsshkey">pulumi.<wbr>Input<pulumi.<wbr>Input<Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Ssh<wbr>Key<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `ssh_keys` blocks. This field is required if `disable_password_authentication` is set to `true`.
 {{% /md %}}</dd></dl>
@@ -2961,7 +3027,7 @@ The following state arguments are supported:
 <a href="#disable_password_authentication_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>password_<wbr>authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies whether password authentication should be disabled. If set to `false`, an `admin_password` must be specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2970,7 +3036,7 @@ The following state arguments are supported:
 <a href="#ssh_keys_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofilelinuxconfigsshkey">Sequence[Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Ssh<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofilelinuxconfigsshkey">Input[Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Ssh<wbr>Key<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `ssh_keys` blocks. This field is required if `disable_password_authentication` is set to `true`.
 {{% /md %}}</dd></dl>
@@ -3029,7 +3095,7 @@ The following state arguments are supported:
 <a href="#keydata_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Public SSH Key which should be written to the `path` defined above.
 {{% /md %}}</dd><dt class="property-required"
@@ -3038,7 +3104,7 @@ The following state arguments are supported:
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path of the destination file on the virtual machine
 {{% /md %}}</dd></dl>
@@ -3051,7 +3117,7 @@ The following state arguments are supported:
 <a href="#key_data_python" style="color: inherit; text-decoration: inherit;">key_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Public SSH Key which should be written to the `path` defined above.
 {{% /md %}}</dd><dt class="property-required"
@@ -3060,7 +3126,7 @@ The following state arguments are supported:
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path of the destination file on the virtual machine
 {{% /md %}}</dd></dl>
@@ -3119,7 +3185,7 @@ The following state arguments are supported:
 <a href="#sourcevaultid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the Key Vault to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3128,7 +3194,7 @@ The following state arguments are supported:
 <a href="#vaultcertificates_nodejs" style="color: inherit; text-decoration: inherit;">vault<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofilesecretvaultcertificate">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Secret<wbr>Vault<wbr>Certificate[]</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofilesecretvaultcertificate">pulumi.<wbr>Input<pulumi.<wbr>Input<Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Secret<wbr>Vault<wbr>Certificate<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `vault_certificates` blocks.
 {{% /md %}}</dd></dl>
@@ -3141,7 +3207,7 @@ The following state arguments are supported:
 <a href="#source_vault_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the Key Vault to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3150,7 +3216,7 @@ The following state arguments are supported:
 <a href="#vault_certificates_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofilesecretvaultcertificate">Sequence[Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Secret<wbr>Vault<wbr>Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofilesecretvaultcertificate">Input[Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Secret<wbr>Vault<wbr>Certificate<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `vault_certificates` blocks.
 {{% /md %}}</dd></dl>
@@ -3209,7 +3275,7 @@ The following state arguments are supported:
 <a href="#certificateurl_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret. Stored secret is the Base64 encoding of a JSON Object that which is encoded in UTF-8 of which the contents need to be:
 {{% /md %}}</dd><dt class="property-optional"
@@ -3218,7 +3284,7 @@ The following state arguments are supported:
 <a href="#certificatestore_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the certificate store on the Virtual Machine where the certificate should be added to, such as `My`.
 {{% /md %}}</dd></dl>
@@ -3231,7 +3297,7 @@ The following state arguments are supported:
 <a href="#certificate_url_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret. Stored secret is the Base64 encoding of a JSON Object that which is encoded in UTF-8 of which the contents need to be:
 {{% /md %}}</dd><dt class="property-optional"
@@ -3240,7 +3306,7 @@ The following state arguments are supported:
 <a href="#certificate_store_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the certificate store on the Virtual Machine where the certificate should be added to, such as `My`.
 {{% /md %}}</dd></dl>
@@ -3353,7 +3419,7 @@ The following state arguments are supported:
 <a href="#additionalunattendconfigs_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Unattend<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofilewindowsconfigadditionalunattendconfig">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Additional<wbr>Unattend<wbr>Config[]</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofilewindowsconfigadditionalunattendconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Additional<wbr>Unattend<wbr>Config<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A `additional_unattend_config` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3362,7 +3428,7 @@ The following state arguments are supported:
 <a href="#enableautomaticupgrades_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Automatic<wbr>Upgrades</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Are automatic updates enabled on this Virtual Machine? Defaults to `false.`
 {{% /md %}}</dd><dt class="property-optional"
@@ -3371,7 +3437,7 @@ The following state arguments are supported:
 <a href="#provisionvmagent_nodejs" style="color: inherit; text-decoration: inherit;">provision<wbr>Vm<wbr>Agent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Should the Azure Virtual Machine Guest Agent be installed on this Virtual Machine? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3380,7 +3446,7 @@ The following state arguments are supported:
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">timezone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the time zone of the virtual machine, [the possible values are defined here](http://jackstromberg.com/2017/01/list-of-time-zones-consumed-by-azure/).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3389,7 +3455,7 @@ The following state arguments are supported:
 <a href="#winrms_nodejs" style="color: inherit; text-decoration: inherit;">winrms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofilewindowsconfigwinrm">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Winrm[]</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofilewindowsconfigwinrm">pulumi.<wbr>Input<pulumi.<wbr>Input<Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Winrm<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `winrm` block.
 {{% /md %}}</dd></dl>
@@ -3402,7 +3468,7 @@ The following state arguments are supported:
 <a href="#additional_unattend_configs_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>unattend_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofilewindowsconfigadditionalunattendconfig">Sequence[Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Additional<wbr>Unattend<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofilewindowsconfigadditionalunattendconfig">Input[Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Additional<wbr>Unattend<wbr>Config<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A `additional_unattend_config` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3411,7 +3477,7 @@ The following state arguments are supported:
 <a href="#enable_automatic_upgrades_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>automatic_<wbr>upgrades</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Are automatic updates enabled on this Virtual Machine? Defaults to `false.`
 {{% /md %}}</dd><dt class="property-optional"
@@ -3420,7 +3486,7 @@ The following state arguments are supported:
 <a href="#provision_vm_agent_python" style="color: inherit; text-decoration: inherit;">provision_<wbr>vm_<wbr>agent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Should the Azure Virtual Machine Guest Agent be installed on this Virtual Machine? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3429,7 +3495,7 @@ The following state arguments are supported:
 <a href="#timezone_python" style="color: inherit; text-decoration: inherit;">timezone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the time zone of the virtual machine, [the possible values are defined here](http://jackstromberg.com/2017/01/list-of-time-zones-consumed-by-azure/).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3438,7 +3504,7 @@ The following state arguments are supported:
 <a href="#winrms_python" style="color: inherit; text-decoration: inherit;">winrms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofilewindowsconfigwinrm">Sequence[Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Winrm<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofilewindowsconfigwinrm">Input[Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Winrm<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `winrm` block.
 {{% /md %}}</dd></dl>
@@ -3533,7 +3599,7 @@ The following state arguments are supported:
 <a href="#component_nodejs" style="color: inherit; text-decoration: inherit;">component</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the component to configure with the added content. The only allowable value is `Microsoft-Windows-Shell-Setup`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3542,7 +3608,7 @@ The following state arguments are supported:
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the base-64 encoded XML formatted content that is added to the unattend.xml file for the specified path and component.
 {{% /md %}}</dd><dt class="property-required"
@@ -3551,7 +3617,7 @@ The following state arguments are supported:
 <a href="#pass_nodejs" style="color: inherit; text-decoration: inherit;">pass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the pass that the content applies to. The only allowable value is `oobeSystem`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3560,7 +3626,7 @@ The following state arguments are supported:
 <a href="#settingname_nodejs" style="color: inherit; text-decoration: inherit;">setting<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the setting to which the content applies. Possible values are: `FirstLogonCommands` and `AutoLogon`.
 {{% /md %}}</dd></dl>
@@ -3573,7 +3639,7 @@ The following state arguments are supported:
 <a href="#component_python" style="color: inherit; text-decoration: inherit;">component</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the component to configure with the added content. The only allowable value is `Microsoft-Windows-Shell-Setup`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3582,7 +3648,7 @@ The following state arguments are supported:
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the base-64 encoded XML formatted content that is added to the unattend.xml file for the specified path and component.
 {{% /md %}}</dd><dt class="property-required"
@@ -3591,7 +3657,7 @@ The following state arguments are supported:
 <a href="#pass__python" style="color: inherit; text-decoration: inherit;">pass_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the pass that the content applies to. The only allowable value is `oobeSystem`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3600,7 +3666,7 @@ The following state arguments are supported:
 <a href="#setting_name_python" style="color: inherit; text-decoration: inherit;">setting_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the setting to which the content applies. Possible values are: `FirstLogonCommands` and `AutoLogon`.
 {{% /md %}}</dd></dl>
@@ -3659,7 +3725,7 @@ The following state arguments are supported:
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the protocol of listener. Possible values are `HTTP` or `HTTPS`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3668,7 +3734,7 @@ The following state arguments are supported:
 <a href="#certificateurl_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret which contains the encrypted Certificate which should be installed on the Virtual Machine. This certificate must also be specified in the `vault_certificates` block within the `os_profile_secrets` block.
 {{% /md %}}</dd></dl>
@@ -3681,7 +3747,7 @@ The following state arguments are supported:
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the protocol of listener. Possible values are `HTTP` or `HTTPS`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3690,7 +3756,7 @@ The following state arguments are supported:
 <a href="#certificate_url_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret which contains the encrypted Certificate which should be installed on the Virtual Machine. This certificate must also be specified in the `vault_certificates` block within the `os_profile_secrets` block.
 {{% /md %}}</dd></dl>
@@ -3767,7 +3833,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the image from the marketplace.
 {{% /md %}}</dd><dt class="property-required"
@@ -3776,7 +3842,7 @@ The following state arguments are supported:
 <a href="#product_nodejs" style="color: inherit; text-decoration: inherit;">product</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the product of the image from the marketplace.
 {{% /md %}}</dd><dt class="property-required"
@@ -3785,7 +3851,7 @@ The following state arguments are supported:
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the publisher of the image.
 {{% /md %}}</dd></dl>
@@ -3798,7 +3864,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the image from the marketplace.
 {{% /md %}}</dd><dt class="property-required"
@@ -3807,7 +3873,7 @@ The following state arguments are supported:
 <a href="#product_python" style="color: inherit; text-decoration: inherit;">product</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the product of the image from the marketplace.
 {{% /md %}}</dd><dt class="property-required"
@@ -3816,7 +3882,7 @@ The following state arguments are supported:
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the publisher of the image.
 {{% /md %}}</dd></dl>
@@ -4001,7 +4067,7 @@ The following state arguments are supported:
 <a href="#createoption_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies how the data disk should be created. Possible values are `Attach`, `FromImage` and `Empty`.
 {{% /md %}}</dd><dt class="property-required"
@@ -4010,7 +4076,7 @@ The following state arguments are supported:
 <a href="#lun_nodejs" style="color: inherit; text-decoration: inherit;">lun</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Specifies the logical unit number of the data disk. This needs to be unique within all the Data Disks on the Virtual Machine.
 {{% /md %}}</dd><dt class="property-required"
@@ -4019,7 +4085,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Data Disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4028,7 +4094,7 @@ The following state arguments are supported:
 <a href="#caching_nodejs" style="color: inherit; text-decoration: inherit;">caching</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements for the Data Disk. Possible values include `None`, `ReadOnly` and `ReadWrite`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4037,7 +4103,7 @@ The following state arguments are supported:
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Specifies the size of the data disk in gigabytes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4046,7 +4112,7 @@ The following state arguments are supported:
 <a href="#manageddiskid_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Disk<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the ID of an Existing Managed Disk which should be attached to this Virtual Machine. When this field is set `create_option` must be set to `Attach`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4055,7 +4121,7 @@ The following state arguments are supported:
 <a href="#manageddisktype_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the type of managed disk to create. Possible values are either `Standard_LRS`, `StandardSSD_LRS`, `Premium_LRS` or `UltraSSD_LRS`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4064,7 +4130,7 @@ The following state arguments are supported:
 <a href="#vhduri_nodejs" style="color: inherit; text-decoration: inherit;">vhd<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the URI of the VHD file backing this Unmanaged Data Disk. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4073,7 +4139,7 @@ The following state arguments are supported:
 <a href="#writeacceleratorenabled_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Accelerator<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies if Write Accelerator is enabled on the disk. This can only be enabled on `Premium_LRS` managed disks with no caching and [M-Series VMs](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/how-to-enable-write-accelerator). Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -4086,7 +4152,7 @@ The following state arguments are supported:
 <a href="#create_option_python" style="color: inherit; text-decoration: inherit;">create_<wbr>option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies how the data disk should be created. Possible values are `Attach`, `FromImage` and `Empty`.
 {{% /md %}}</dd><dt class="property-required"
@@ -4095,7 +4161,7 @@ The following state arguments are supported:
 <a href="#lun_python" style="color: inherit; text-decoration: inherit;">lun</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Specifies the logical unit number of the data disk. This needs to be unique within all the Data Disks on the Virtual Machine.
 {{% /md %}}</dd><dt class="property-required"
@@ -4104,7 +4170,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Data Disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4113,7 +4179,7 @@ The following state arguments are supported:
 <a href="#caching_python" style="color: inherit; text-decoration: inherit;">caching</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements for the Data Disk. Possible values include `None`, `ReadOnly` and `ReadWrite`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4122,7 +4188,7 @@ The following state arguments are supported:
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Specifies the size of the data disk in gigabytes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4131,7 +4197,7 @@ The following state arguments are supported:
 <a href="#managed_disk_id_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of an Existing Managed Disk which should be attached to this Virtual Machine. When this field is set `create_option` must be set to `Attach`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4140,7 +4206,7 @@ The following state arguments are supported:
 <a href="#managed_disk_type_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the type of managed disk to create. Possible values are either `Standard_LRS`, `StandardSSD_LRS`, `Premium_LRS` or `UltraSSD_LRS`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4149,7 +4215,7 @@ The following state arguments are supported:
 <a href="#vhd_uri_python" style="color: inherit; text-decoration: inherit;">vhd_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the URI of the VHD file backing this Unmanaged Data Disk. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4158,7 +4224,7 @@ The following state arguments are supported:
 <a href="#write_accelerator_enabled_python" style="color: inherit; text-decoration: inherit;">write_<wbr>accelerator_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies if Write Accelerator is enabled on the disk. This can only be enabled on `Premium_LRS` managed disks with no caching and [M-Series VMs](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/how-to-enable-write-accelerator). Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -4271,7 +4337,7 @@ The following state arguments are supported:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the Custom Image which the Virtual Machine should be created from. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4280,7 +4346,7 @@ The following state arguments are supported:
 <a href="#offer_nodejs" style="color: inherit; text-decoration: inherit;">offer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the offer of the image used to create the virtual machine. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4289,7 +4355,7 @@ The following state arguments are supported:
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the publisher of the image used to create the virtual machine. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4298,7 +4364,7 @@ The following state arguments are supported:
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the SKU of the image used to create the virtual machine. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4307,7 +4373,7 @@ The following state arguments are supported:
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the version of the image used to create the virtual machine. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -4320,7 +4386,7 @@ The following state arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the Custom Image which the Virtual Machine should be created from. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4329,7 +4395,7 @@ The following state arguments are supported:
 <a href="#offer_python" style="color: inherit; text-decoration: inherit;">offer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the offer of the image used to create the virtual machine. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4338,7 +4404,7 @@ The following state arguments are supported:
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the publisher of the image used to create the virtual machine. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4347,7 +4413,7 @@ The following state arguments are supported:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the SKU of the image used to create the virtual machine. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4356,7 +4422,7 @@ The following state arguments are supported:
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the image used to create the virtual machine. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -4559,7 +4625,7 @@ The following state arguments are supported:
 <a href="#createoption_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies how the OS Disk should be created. Possible values are `Attach` (managed disks only) and `FromImage`.
 {{% /md %}}</dd><dt class="property-required"
@@ -4568,7 +4634,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the OS Disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4577,7 +4643,7 @@ The following state arguments are supported:
 <a href="#caching_nodejs" style="color: inherit; text-decoration: inherit;">caching</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements for the OS Disk. Possible values include `None`, `ReadOnly` and `ReadWrite`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4586,7 +4652,7 @@ The following state arguments are supported:
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Specifies the size of the OS Disk in gigabytes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4595,7 +4661,7 @@ The following state arguments are supported:
 <a href="#imageuri_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the Image URI in the format `publisherName:offer:skus:version`. This field can also specify the [VHD uri](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-linux-cli-deploy-templates/#create-a-custom-vm-image) of a custom VM image to clone. When cloning a Custom (Unmanaged) Disk Image the `os_type` field must be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4604,7 +4670,7 @@ The following state arguments are supported:
 <a href="#manageddiskid_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Disk<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the ID of an existing Managed Disk which should be attached as the OS Disk of this Virtual Machine. If this is set then the `create_option` must be set to `Attach`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4613,7 +4679,7 @@ The following state arguments are supported:
 <a href="#manageddisktype_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the type of Managed Disk which should be created. Possible values are `Standard_LRS`, `StandardSSD_LRS` or `Premium_LRS`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4622,7 +4688,7 @@ The following state arguments are supported:
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the Operating System on the OS Disk. Possible values are `Linux` and `Windows`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4631,7 +4697,7 @@ The following state arguments are supported:
 <a href="#vhduri_nodejs" style="color: inherit; text-decoration: inherit;">vhd<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the URI of the VHD file backing this Unmanaged OS Disk. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4640,7 +4706,7 @@ The following state arguments are supported:
 <a href="#writeacceleratorenabled_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Accelerator<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies if Write Accelerator is enabled on the disk. This can only be enabled on `Premium_LRS` managed disks with no caching and [M-Series VMs](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/how-to-enable-write-accelerator). Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -4653,7 +4719,7 @@ The following state arguments are supported:
 <a href="#create_option_python" style="color: inherit; text-decoration: inherit;">create_<wbr>option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies how the OS Disk should be created. Possible values are `Attach` (managed disks only) and `FromImage`.
 {{% /md %}}</dd><dt class="property-required"
@@ -4662,7 +4728,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the OS Disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4671,7 +4737,7 @@ The following state arguments are supported:
 <a href="#caching_python" style="color: inherit; text-decoration: inherit;">caching</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements for the OS Disk. Possible values include `None`, `ReadOnly` and `ReadWrite`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4680,7 +4746,7 @@ The following state arguments are supported:
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Specifies the size of the OS Disk in gigabytes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4689,7 +4755,7 @@ The following state arguments are supported:
 <a href="#image_uri_python" style="color: inherit; text-decoration: inherit;">image_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the Image URI in the format `publisherName:offer:skus:version`. This field can also specify the [VHD uri](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-linux-cli-deploy-templates/#create-a-custom-vm-image) of a custom VM image to clone. When cloning a Custom (Unmanaged) Disk Image the `os_type` field must be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4698,7 +4764,7 @@ The following state arguments are supported:
 <a href="#managed_disk_id_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of an existing Managed Disk which should be attached as the OS Disk of this Virtual Machine. If this is set then the `create_option` must be set to `Attach`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4707,7 +4773,7 @@ The following state arguments are supported:
 <a href="#managed_disk_type_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the type of Managed Disk which should be created. Possible values are `Standard_LRS`, `StandardSSD_LRS` or `Premium_LRS`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4716,7 +4782,7 @@ The following state arguments are supported:
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the Operating System on the OS Disk. Possible values are `Linux` and `Windows`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4725,7 +4791,7 @@ The following state arguments are supported:
 <a href="#vhd_uri_python" style="color: inherit; text-decoration: inherit;">vhd_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the URI of the VHD file backing this Unmanaged OS Disk. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4734,7 +4800,7 @@ The following state arguments are supported:
 <a href="#write_accelerator_enabled_python" style="color: inherit; text-decoration: inherit;">write_<wbr>accelerator_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies if Write Accelerator is enabled on the disk. This can only be enabled on `Premium_LRS` managed disks with no caching and [M-Series VMs](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/how-to-enable-write-accelerator). Defaults to `false`.
 {{% /md %}}</dd></dl>

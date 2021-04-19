@@ -113,10 +113,10 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/backup"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/recoveryservices"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/backup"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/recoveryservices"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -315,19 +315,36 @@ const examplePolicyVM = new azure.backup.PolicyVM("examplePolicyVM", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PolicyVM</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PolicyVMArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PolicyVM</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PolicyVMArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PolicyVM</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backup</span><span class="p">:</span> <span class="nx">Optional[PolicyVMBackupArgs]</span> = None<span class="p">, </span><span class="nx">instant_restore_retention_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recovery_vault_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_daily</span><span class="p">:</span> <span class="nx">Optional[PolicyVMRetentionDailyArgs]</span> = None<span class="p">, </span><span class="nx">retention_monthly</span><span class="p">:</span> <span class="nx">Optional[PolicyVMRetentionMonthlyArgs]</span> = None<span class="p">, </span><span class="nx">retention_weekly</span><span class="p">:</span> <span class="nx">Optional[PolicyVMRetentionWeeklyArgs]</span> = None<span class="p">, </span><span class="nx">retention_yearly</span><span class="p">:</span> <span class="nx">Optional[PolicyVMRetentionYearlyArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">timezone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">PolicyVM</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">backup</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PolicyVMBackupArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">instant_restore_retention_days</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">recovery_vault_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">retention_daily</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PolicyVMRetentionDailyArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">retention_monthly</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PolicyVMRetentionMonthlyArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">retention_weekly</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PolicyVMRetentionWeeklyArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">retention_yearly</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PolicyVMRetentionYearlyArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+             <span class="nx">timezone</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">PolicyVM</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PolicyVMArgs</a></span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPolicyVM</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PolicyVMArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PolicyVM</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPolicyVM</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PolicyVMArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PolicyVM</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PolicyVM</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PolicyVMArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PolicyVM</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">PolicyVMArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -362,22 +379,32 @@ const examplePolicyVM = new azure.backup.PolicyVM("examplePolicyVM", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">PolicyVMArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -386,7 +413,7 @@ const examplePolicyVM = new azure.backup.PolicyVM("examplePolicyVM", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -410,7 +437,7 @@ const examplePolicyVM = new azure.backup.PolicyVM("examplePolicyVM", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -671,7 +698,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#backup_nodejs" style="color: inherit; text-decoration: inherit;">backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyvmbackup">Policy<wbr>VMBackup</a></span>
+        <span class="property-type"><a href="#policyvmbackup">pulumi.<wbr>Input<Policy<wbr>VMBackup<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configures the Policy backup frequency, times & days as documented in the `backup` block below.
 {{% /md %}}</dd><dt class="property-required"
@@ -680,7 +707,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#recoveryvaultname_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Vault<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Recovery Services Vault to use. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -689,7 +716,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the policy. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -698,7 +725,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#instantrestoreretentiondays_nodejs" style="color: inherit; text-decoration: inherit;">instant<wbr>Restore<wbr>Retention<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Specifies the instant restore retention range in days.
 {{% /md %}}</dd><dt class="property-optional"
@@ -707,7 +734,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Backup Policy. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -716,7 +743,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#retentiondaily_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Daily</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyvmretentiondaily">Policy<wbr>VMRetention<wbr>Daily</a></span>
+        <span class="property-type"><a href="#policyvmretentiondaily">pulumi.<wbr>Input<Policy<wbr>VMRetention<wbr>Daily<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configures the policy daily retention as documented in the `retention_daily` block below. Required when backup frequency is `Daily`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -725,7 +752,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#retentionmonthly_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Monthly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyvmretentionmonthly">Policy<wbr>VMRetention<wbr>Monthly</a></span>
+        <span class="property-type"><a href="#policyvmretentionmonthly">pulumi.<wbr>Input<Policy<wbr>VMRetention<wbr>Monthly<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configures the policy monthly retention as documented in the `retention_monthly` block below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -734,7 +761,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#retentionweekly_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Weekly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyvmretentionweekly">Policy<wbr>VMRetention<wbr>Weekly</a></span>
+        <span class="property-type"><a href="#policyvmretentionweekly">pulumi.<wbr>Input<Policy<wbr>VMRetention<wbr>Weekly<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configures the policy weekly retention as documented in the `retention_weekly` block below. Required when backup frequency is `Weekly`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -743,7 +770,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#retentionyearly_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Yearly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyvmretentionyearly">Policy<wbr>VMRetention<wbr>Yearly</a></span>
+        <span class="property-type"><a href="#policyvmretentionyearly">pulumi.<wbr>Input<Policy<wbr>VMRetention<wbr>Yearly<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configures the policy yearly retention as documented in the `retention_yearly` block below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -752,7 +779,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -761,7 +788,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">timezone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the timezone. [the possible values are defined here](http://jackstromberg.com/2017/01/list-of-time-zones-consumed-by-azure/). Defaults to `UTC`
 {{% /md %}}</dd></dl>
@@ -774,7 +801,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#backup_python" style="color: inherit; text-decoration: inherit;">backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyvmbackup">Policy<wbr>VMBackup<wbr>Args</a></span>
+        <span class="property-type"><a href="#policyvmbackup">Input[Policy<wbr>VMBackup<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configures the Policy backup frequency, times & days as documented in the `backup` block below.
 {{% /md %}}</dd><dt class="property-required"
@@ -783,7 +810,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#recovery_vault_name_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>vault_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Recovery Services Vault to use. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -792,7 +819,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the policy. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -801,7 +828,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#instant_restore_retention_days_python" style="color: inherit; text-decoration: inherit;">instant_<wbr>restore_<wbr>retention_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Specifies the instant restore retention range in days.
 {{% /md %}}</dd><dt class="property-optional"
@@ -810,7 +837,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Backup Policy. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -819,7 +846,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#retention_daily_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>daily</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyvmretentiondaily">Policy<wbr>VMRetention<wbr>Daily<wbr>Args</a></span>
+        <span class="property-type"><a href="#policyvmretentiondaily">Input[Policy<wbr>VMRetention<wbr>Daily<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy daily retention as documented in the `retention_daily` block below. Required when backup frequency is `Daily`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -828,7 +855,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#retention_monthly_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>monthly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyvmretentionmonthly">Policy<wbr>VMRetention<wbr>Monthly<wbr>Args</a></span>
+        <span class="property-type"><a href="#policyvmretentionmonthly">Input[Policy<wbr>VMRetention<wbr>Monthly<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy monthly retention as documented in the `retention_monthly` block below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -837,7 +864,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#retention_weekly_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>weekly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyvmretentionweekly">Policy<wbr>VMRetention<wbr>Weekly<wbr>Args</a></span>
+        <span class="property-type"><a href="#policyvmretentionweekly">Input[Policy<wbr>VMRetention<wbr>Weekly<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy weekly retention as documented in the `retention_weekly` block below. Required when backup frequency is `Weekly`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -846,7 +873,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#retention_yearly_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>yearly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyvmretentionyearly">Policy<wbr>VMRetention<wbr>Yearly<wbr>Args</a></span>
+        <span class="property-type"><a href="#policyvmretentionyearly">Input[Policy<wbr>VMRetention<wbr>Yearly<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy yearly retention as documented in the `retention_yearly` block below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -855,7 +882,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -864,7 +891,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#timezone_python" style="color: inherit; text-decoration: inherit;">timezone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the timezone. [the possible values are defined here](http://jackstromberg.com/2017/01/list-of-time-zones-consumed-by-azure/). Defaults to `UTC`
 {{% /md %}}</dd></dl>
@@ -933,20 +960,33 @@ Get an existing PolicyVM resource's state with the given name, ID, and optional 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">PolicyVMState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">PolicyVM</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">PolicyVMState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">PolicyVM</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backup</span><span class="p">:</span> <span class="nx">Optional[PolicyVMBackupArgs]</span> = None<span class="p">, </span><span class="nx">instant_restore_retention_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recovery_vault_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_daily</span><span class="p">:</span> <span class="nx">Optional[PolicyVMRetentionDailyArgs]</span> = None<span class="p">, </span><span class="nx">retention_monthly</span><span class="p">:</span> <span class="nx">Optional[PolicyVMRetentionMonthlyArgs]</span> = None<span class="p">, </span><span class="nx">retention_weekly</span><span class="p">:</span> <span class="nx">Optional[PolicyVMRetentionWeeklyArgs]</span> = None<span class="p">, </span><span class="nx">retention_yearly</span><span class="p">:</span> <span class="nx">Optional[PolicyVMRetentionYearlyArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">timezone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> PolicyVM</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">backup</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PolicyVMBackupArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">instant_restore_retention_days</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">recovery_vault_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">retention_daily</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PolicyVMRetentionDailyArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">retention_monthly</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PolicyVMRetentionMonthlyArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">retention_weekly</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PolicyVMRetentionWeeklyArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">retention_yearly</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PolicyVMRetentionYearlyArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">timezone</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> PolicyVM</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPolicyVM<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">PolicyVMState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PolicyVM</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPolicyVM<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">PolicyVMState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PolicyVM</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">PolicyVM</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">PolicyVMState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">PolicyVM</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">PolicyVMState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1261,7 +1301,7 @@ The following state arguments are supported:
 <a href="#state_backup_nodejs" style="color: inherit; text-decoration: inherit;">backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyvmbackup">Policy<wbr>VMBackup</a></span>
+        <span class="property-type"><a href="#policyvmbackup">pulumi.<wbr>Input<Policy<wbr>VMBackup<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configures the Policy backup frequency, times & days as documented in the `backup` block below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1270,7 +1310,7 @@ The following state arguments are supported:
 <a href="#state_instantrestoreretentiondays_nodejs" style="color: inherit; text-decoration: inherit;">instant<wbr>Restore<wbr>Retention<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Specifies the instant restore retention range in days.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1279,7 +1319,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Backup Policy. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1288,7 +1328,7 @@ The following state arguments are supported:
 <a href="#state_recoveryvaultname_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Vault<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Recovery Services Vault to use. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1297,7 +1337,7 @@ The following state arguments are supported:
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the policy. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1306,7 +1346,7 @@ The following state arguments are supported:
 <a href="#state_retentiondaily_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Daily</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyvmretentiondaily">Policy<wbr>VMRetention<wbr>Daily</a></span>
+        <span class="property-type"><a href="#policyvmretentiondaily">pulumi.<wbr>Input<Policy<wbr>VMRetention<wbr>Daily<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configures the policy daily retention as documented in the `retention_daily` block below. Required when backup frequency is `Daily`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1315,7 +1355,7 @@ The following state arguments are supported:
 <a href="#state_retentionmonthly_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Monthly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyvmretentionmonthly">Policy<wbr>VMRetention<wbr>Monthly</a></span>
+        <span class="property-type"><a href="#policyvmretentionmonthly">pulumi.<wbr>Input<Policy<wbr>VMRetention<wbr>Monthly<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configures the policy monthly retention as documented in the `retention_monthly` block below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1324,7 +1364,7 @@ The following state arguments are supported:
 <a href="#state_retentionweekly_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Weekly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyvmretentionweekly">Policy<wbr>VMRetention<wbr>Weekly</a></span>
+        <span class="property-type"><a href="#policyvmretentionweekly">pulumi.<wbr>Input<Policy<wbr>VMRetention<wbr>Weekly<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configures the policy weekly retention as documented in the `retention_weekly` block below. Required when backup frequency is `Weekly`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1333,7 +1373,7 @@ The following state arguments are supported:
 <a href="#state_retentionyearly_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Yearly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyvmretentionyearly">Policy<wbr>VMRetention<wbr>Yearly</a></span>
+        <span class="property-type"><a href="#policyvmretentionyearly">pulumi.<wbr>Input<Policy<wbr>VMRetention<wbr>Yearly<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configures the policy yearly retention as documented in the `retention_yearly` block below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1342,7 +1382,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1351,7 +1391,7 @@ The following state arguments are supported:
 <a href="#state_timezone_nodejs" style="color: inherit; text-decoration: inherit;">timezone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the timezone. [the possible values are defined here](http://jackstromberg.com/2017/01/list-of-time-zones-consumed-by-azure/). Defaults to `UTC`
 {{% /md %}}</dd></dl>
@@ -1364,7 +1404,7 @@ The following state arguments are supported:
 <a href="#state_backup_python" style="color: inherit; text-decoration: inherit;">backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyvmbackup">Policy<wbr>VMBackup<wbr>Args</a></span>
+        <span class="property-type"><a href="#policyvmbackup">Input[Policy<wbr>VMBackup<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configures the Policy backup frequency, times & days as documented in the `backup` block below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1373,7 +1413,7 @@ The following state arguments are supported:
 <a href="#state_instant_restore_retention_days_python" style="color: inherit; text-decoration: inherit;">instant_<wbr>restore_<wbr>retention_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Specifies the instant restore retention range in days.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1382,7 +1422,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Backup Policy. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1391,7 +1431,7 @@ The following state arguments are supported:
 <a href="#state_recovery_vault_name_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>vault_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Recovery Services Vault to use. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1400,7 +1440,7 @@ The following state arguments are supported:
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the policy. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1409,7 +1449,7 @@ The following state arguments are supported:
 <a href="#state_retention_daily_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>daily</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyvmretentiondaily">Policy<wbr>VMRetention<wbr>Daily<wbr>Args</a></span>
+        <span class="property-type"><a href="#policyvmretentiondaily">Input[Policy<wbr>VMRetention<wbr>Daily<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy daily retention as documented in the `retention_daily` block below. Required when backup frequency is `Daily`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1418,7 +1458,7 @@ The following state arguments are supported:
 <a href="#state_retention_monthly_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>monthly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyvmretentionmonthly">Policy<wbr>VMRetention<wbr>Monthly<wbr>Args</a></span>
+        <span class="property-type"><a href="#policyvmretentionmonthly">Input[Policy<wbr>VMRetention<wbr>Monthly<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy monthly retention as documented in the `retention_monthly` block below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1427,7 +1467,7 @@ The following state arguments are supported:
 <a href="#state_retention_weekly_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>weekly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyvmretentionweekly">Policy<wbr>VMRetention<wbr>Weekly<wbr>Args</a></span>
+        <span class="property-type"><a href="#policyvmretentionweekly">Input[Policy<wbr>VMRetention<wbr>Weekly<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy weekly retention as documented in the `retention_weekly` block below. Required when backup frequency is `Weekly`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1436,7 +1476,7 @@ The following state arguments are supported:
 <a href="#state_retention_yearly_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>yearly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyvmretentionyearly">Policy<wbr>VMRetention<wbr>Yearly<wbr>Args</a></span>
+        <span class="property-type"><a href="#policyvmretentionyearly">Input[Policy<wbr>VMRetention<wbr>Yearly<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy yearly retention as documented in the `retention_yearly` block below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1445,7 +1485,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1454,7 +1494,7 @@ The following state arguments are supported:
 <a href="#state_timezone_python" style="color: inherit; text-decoration: inherit;">timezone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the timezone. [the possible values are defined here](http://jackstromberg.com/2017/01/list-of-time-zones-consumed-by-azure/). Defaults to `UTC`
 {{% /md %}}</dd></dl>
@@ -1540,7 +1580,7 @@ The following state arguments are supported:
 <a href="#frequency_nodejs" style="color: inherit; text-decoration: inherit;">frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Sets the backup frequency. Must be either `Daily` or`Weekly`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1549,7 +1589,7 @@ The following state arguments are supported:
 <a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The time of day to perform the backup in 24hour format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1558,7 +1598,7 @@ The following state arguments are supported:
 <a href="#weekdays_nodejs" style="color: inherit; text-decoration: inherit;">weekdays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The weekday backups to retain . Must be one of `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday` or `Saturday`.
 {{% /md %}}</dd></dl>
@@ -1571,7 +1611,7 @@ The following state arguments are supported:
 <a href="#frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Sets the backup frequency. Must be either `Daily` or`Weekly`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1580,7 +1620,7 @@ The following state arguments are supported:
 <a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The time of day to perform the backup in 24hour format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1589,7 +1629,7 @@ The following state arguments are supported:
 <a href="#weekdays_python" style="color: inherit; text-decoration: inherit;">weekdays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The weekday backups to retain . Must be one of `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday` or `Saturday`.
 {{% /md %}}</dd></dl>
@@ -1630,7 +1670,7 @@ The following state arguments are supported:
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of yearly backups to keep. Must be between `1` and `9999`
 {{% /md %}}</dd></dl>
@@ -1643,7 +1683,7 @@ The following state arguments are supported:
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of yearly backups to keep. Must be between `1` and `9999`
 {{% /md %}}</dd></dl>
@@ -1720,7 +1760,7 @@ The following state arguments are supported:
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of yearly backups to keep. Must be between `1` and `9999`
 {{% /md %}}</dd><dt class="property-required"
@@ -1729,7 +1769,7 @@ The following state arguments are supported:
 <a href="#weekdays_nodejs" style="color: inherit; text-decoration: inherit;">weekdays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The weekday backups to retain . Must be one of `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday` or `Saturday`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1738,7 +1778,7 @@ The following state arguments are supported:
 <a href="#weeks_nodejs" style="color: inherit; text-decoration: inherit;">weeks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The weeks of the month to retain backups of. Must be one of `First`, `Second`, `Third`, `Fourth`, `Last`.
 {{% /md %}}</dd></dl>
@@ -1751,7 +1791,7 @@ The following state arguments are supported:
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of yearly backups to keep. Must be between `1` and `9999`
 {{% /md %}}</dd><dt class="property-required"
@@ -1760,7 +1800,7 @@ The following state arguments are supported:
 <a href="#weekdays_python" style="color: inherit; text-decoration: inherit;">weekdays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The weekday backups to retain . Must be one of `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday` or `Saturday`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1769,7 +1809,7 @@ The following state arguments are supported:
 <a href="#weeks_python" style="color: inherit; text-decoration: inherit;">weeks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The weeks of the month to retain backups of. Must be one of `First`, `Second`, `Third`, `Fourth`, `Last`.
 {{% /md %}}</dd></dl>
@@ -1828,7 +1868,7 @@ The following state arguments are supported:
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of yearly backups to keep. Must be between `1` and `9999`
 {{% /md %}}</dd><dt class="property-required"
@@ -1837,7 +1877,7 @@ The following state arguments are supported:
 <a href="#weekdays_nodejs" style="color: inherit; text-decoration: inherit;">weekdays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The weekday backups to retain . Must be one of `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday` or `Saturday`.
 {{% /md %}}</dd></dl>
@@ -1850,7 +1890,7 @@ The following state arguments are supported:
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of yearly backups to keep. Must be between `1` and `9999`
 {{% /md %}}</dd><dt class="property-required"
@@ -1859,7 +1899,7 @@ The following state arguments are supported:
 <a href="#weekdays_python" style="color: inherit; text-decoration: inherit;">weekdays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The weekday backups to retain . Must be one of `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday` or `Saturday`.
 {{% /md %}}</dd></dl>
@@ -1954,7 +1994,7 @@ The following state arguments are supported:
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of yearly backups to keep. Must be between `1` and `9999`
 {{% /md %}}</dd><dt class="property-required"
@@ -1963,7 +2003,7 @@ The following state arguments are supported:
 <a href="#months_nodejs" style="color: inherit; text-decoration: inherit;">months</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The months of the year to retain backups of. Must be one of `January`, `February`, `March`, `April`, `May`, `June`, `July`, `Augest`, `September`, `October`, `November` and `December`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1972,7 +2012,7 @@ The following state arguments are supported:
 <a href="#weekdays_nodejs" style="color: inherit; text-decoration: inherit;">weekdays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The weekday backups to retain . Must be one of `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday` or `Saturday`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1981,7 +2021,7 @@ The following state arguments are supported:
 <a href="#weeks_nodejs" style="color: inherit; text-decoration: inherit;">weeks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The weeks of the month to retain backups of. Must be one of `First`, `Second`, `Third`, `Fourth`, `Last`.
 {{% /md %}}</dd></dl>
@@ -1994,7 +2034,7 @@ The following state arguments are supported:
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of yearly backups to keep. Must be between `1` and `9999`
 {{% /md %}}</dd><dt class="property-required"
@@ -2003,7 +2043,7 @@ The following state arguments are supported:
 <a href="#months_python" style="color: inherit; text-decoration: inherit;">months</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The months of the year to retain backups of. Must be one of `January`, `February`, `March`, `April`, `May`, `June`, `July`, `Augest`, `September`, `October`, `November` and `December`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2012,7 +2052,7 @@ The following state arguments are supported:
 <a href="#weekdays_python" style="color: inherit; text-decoration: inherit;">weekdays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The weekday backups to retain . Must be one of `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday` or `Saturday`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2021,7 +2061,7 @@ The following state arguments are supported:
 <a href="#weeks_python" style="color: inherit; text-decoration: inherit;">weeks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The weeks of the month to retain backups of. Must be one of `First`, `Second`, `Third`, `Fourth`, `Last`.
 {{% /md %}}</dd></dl>

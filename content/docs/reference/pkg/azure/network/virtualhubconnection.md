@@ -77,9 +77,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -206,19 +206,32 @@ const exampleVirtualHubConnection = new azure.network.VirtualHubConnection("exam
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualHubConnection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualHubConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualHubConnection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualHubConnectionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VirtualHubConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">hub_to_vitual_network_traffic_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">internet_security_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remote_virtual_network_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing</span><span class="p">:</span> <span class="nx">Optional[VirtualHubConnectionRoutingArgs]</span> = None<span class="p">, </span><span class="nx">virtual_hub_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vitual_network_to_hub_gateways_traffic_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">VirtualHubConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                         <span class="nx">hub_to_vitual_network_traffic_allowed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                         <span class="nx">internet_security_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                         <span class="nx">remote_virtual_network_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                         <span class="nx">routing</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VirtualHubConnectionRoutingArgs]]</span> = None<span class="p">,</span>
+                         <span class="nx">virtual_hub_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                         <span class="nx">vitual_network_to_hub_gateways_traffic_allowed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">VirtualHubConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualHubConnectionArgs</a></span><span class="p">,</span>
+                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualHubConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VirtualHubConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualHubConnection</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualHubConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VirtualHubConnectionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualHubConnection</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualHubConnection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VirtualHubConnectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualHubConnection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">VirtualHubConnectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -253,22 +266,32 @@ const exampleVirtualHubConnection = new azure.network.VirtualHubConnection("exam
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">VirtualHubConnectionArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -277,7 +300,7 @@ const exampleVirtualHubConnection = new azure.network.VirtualHubConnection("exam
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -301,7 +324,7 @@ const exampleVirtualHubConnection = new azure.network.VirtualHubConnection("exam
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -486,7 +509,7 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
 <a href="#remotevirtualnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Virtual<wbr>Network<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Network which the Virtual Hub should be connected to. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -495,7 +518,7 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
 <a href="#virtualhubid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Hub<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Hub within which this connection should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -504,7 +527,7 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
 <a href="#hubtovitualnetworktrafficallowed_nodejs" style="color: inherit; text-decoration: inherit;">hub<wbr>To<wbr>Vitual<wbr>Network<wbr>Traffic<wbr>Allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -512,7 +535,7 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
 <a href="#internetsecurityenabled_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Security<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Should Internet Security be enabled to secure internet traffic? Changing this forces a new resource to be created. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -521,7 +544,7 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this Connection, which must be unique within the Virtual Hub. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -530,7 +553,7 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
 <a href="#routing_nodejs" style="color: inherit; text-decoration: inherit;">routing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualhubconnectionrouting">Virtual<wbr>Hub<wbr>Connection<wbr>Routing</a></span>
+        <span class="property-type"><a href="#virtualhubconnectionrouting">pulumi.<wbr>Input<Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `routing` block as defined below.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -539,7 +562,7 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
 <a href="#vitualnetworktohubgatewaystrafficallowed_nodejs" style="color: inherit; text-decoration: inherit;">vitual<wbr>Network<wbr>To<wbr>Hub<wbr>Gateways<wbr>Traffic<wbr>Allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
@@ -551,7 +574,7 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
 <a href="#remote_virtual_network_id_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>virtual_<wbr>network_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Network which the Virtual Hub should be connected to. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -560,7 +583,7 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
 <a href="#virtual_hub_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>hub_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Hub within which this connection should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -569,7 +592,7 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
 <a href="#hub_to_vitual_network_traffic_allowed_python" style="color: inherit; text-decoration: inherit;">hub_<wbr>to_<wbr>vitual_<wbr>network_<wbr>traffic_<wbr>allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -577,7 +600,7 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
 <a href="#internet_security_enabled_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>security_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Should Internet Security be enabled to secure internet traffic? Changing this forces a new resource to be created. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -586,7 +609,7 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this Connection, which must be unique within the Virtual Hub. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -595,7 +618,7 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
 <a href="#routing_python" style="color: inherit; text-decoration: inherit;">routing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualhubconnectionrouting">Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualhubconnectionrouting">Input[Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `routing` block as defined below.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -604,7 +627,7 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
 <a href="#vitual_network_to_hub_gateways_traffic_allowed_python" style="color: inherit; text-decoration: inherit;">vitual_<wbr>network_<wbr>to_<wbr>hub_<wbr>gateways_<wbr>traffic_<wbr>allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
@@ -672,20 +695,29 @@ Get an existing VirtualHubConnection resource's state with the given name, ID, a
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">VirtualHubConnectionState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">VirtualHubConnection</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">VirtualHubConnectionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">VirtualHubConnection</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">hub_to_vitual_network_traffic_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">internet_security_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remote_virtual_network_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing</span><span class="p">:</span> <span class="nx">Optional[VirtualHubConnectionRoutingArgs]</span> = None<span class="p">, </span><span class="nx">virtual_hub_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vitual_network_to_hub_gateways_traffic_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> VirtualHubConnection</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">hub_to_vitual_network_traffic_allowed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">internet_security_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">remote_virtual_network_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">routing</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VirtualHubConnectionRoutingArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">virtual_hub_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">vitual_network_to_hub_gateways_traffic_allowed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">) -&gt;</span> VirtualHubConnection</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVirtualHubConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">VirtualHubConnectionState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualHubConnection</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVirtualHubConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">VirtualHubConnectionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualHubConnection</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">VirtualHubConnection</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">VirtualHubConnectionState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">VirtualHubConnection</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">VirtualHubConnectionState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -924,7 +956,7 @@ The following state arguments are supported:
 <a href="#state_hubtovitualnetworktrafficallowed_nodejs" style="color: inherit; text-decoration: inherit;">hub<wbr>To<wbr>Vitual<wbr>Network<wbr>Traffic<wbr>Allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -932,7 +964,7 @@ The following state arguments are supported:
 <a href="#state_internetsecurityenabled_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Security<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Should Internet Security be enabled to secure internet traffic? Changing this forces a new resource to be created. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -941,7 +973,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this Connection, which must be unique within the Virtual Hub. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -950,7 +982,7 @@ The following state arguments are supported:
 <a href="#state_remotevirtualnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Virtual<wbr>Network<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Network which the Virtual Hub should be connected to. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -959,7 +991,7 @@ The following state arguments are supported:
 <a href="#state_routing_nodejs" style="color: inherit; text-decoration: inherit;">routing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualhubconnectionrouting">Virtual<wbr>Hub<wbr>Connection<wbr>Routing</a></span>
+        <span class="property-type"><a href="#virtualhubconnectionrouting">pulumi.<wbr>Input<Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `routing` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -968,7 +1000,7 @@ The following state arguments are supported:
 <a href="#state_virtualhubid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Hub<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Hub within which this connection should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -977,7 +1009,7 @@ The following state arguments are supported:
 <a href="#state_vitualnetworktohubgatewaystrafficallowed_nodejs" style="color: inherit; text-decoration: inherit;">vitual<wbr>Network<wbr>To<wbr>Hub<wbr>Gateways<wbr>Traffic<wbr>Allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
@@ -989,7 +1021,7 @@ The following state arguments are supported:
 <a href="#state_hub_to_vitual_network_traffic_allowed_python" style="color: inherit; text-decoration: inherit;">hub_<wbr>to_<wbr>vitual_<wbr>network_<wbr>traffic_<wbr>allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -997,7 +1029,7 @@ The following state arguments are supported:
 <a href="#state_internet_security_enabled_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>security_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Should Internet Security be enabled to secure internet traffic? Changing this forces a new resource to be created. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1006,7 +1038,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this Connection, which must be unique within the Virtual Hub. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1015,7 +1047,7 @@ The following state arguments are supported:
 <a href="#state_remote_virtual_network_id_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>virtual_<wbr>network_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Network which the Virtual Hub should be connected to. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1024,7 +1056,7 @@ The following state arguments are supported:
 <a href="#state_routing_python" style="color: inherit; text-decoration: inherit;">routing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualhubconnectionrouting">Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualhubconnectionrouting">Input[Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `routing` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1033,7 +1065,7 @@ The following state arguments are supported:
 <a href="#state_virtual_hub_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>hub_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Hub within which this connection should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1042,7 +1074,7 @@ The following state arguments are supported:
 <a href="#state_vitual_network_to_hub_gateways_traffic_allowed_python" style="color: inherit; text-decoration: inherit;">vitual_<wbr>network_<wbr>to_<wbr>hub_<wbr>gateways_<wbr>traffic_<wbr>allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
@@ -1127,7 +1159,7 @@ The following state arguments are supported:
 <a href="#associatedroutetableid_nodejs" style="color: inherit; text-decoration: inherit;">associated<wbr>Route<wbr>Table<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the route table associated with this Virtual Hub connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1136,7 +1168,7 @@ The following state arguments are supported:
 <a href="#propagatedroutetable_nodejs" style="color: inherit; text-decoration: inherit;">propagated<wbr>Route<wbr>Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualhubconnectionroutingpropagatedroutetable">Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Propagated<wbr>Route<wbr>Table</a></span>
+        <span class="property-type"><a href="#virtualhubconnectionroutingpropagatedroutetable">pulumi.<wbr>Input<Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Propagated<wbr>Route<wbr>Table<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `propagated_route_table` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1145,7 +1177,7 @@ The following state arguments are supported:
 <a href="#staticvnetroutes_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Vnet<wbr>Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualhubconnectionroutingstaticvnetroute">Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Static<wbr>Vnet<wbr>Route[]</a></span>
+        <span class="property-type"><a href="#virtualhubconnectionroutingstaticvnetroute">pulumi.<wbr>Input<pulumi.<wbr>Input<Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Static<wbr>Vnet<wbr>Route<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A `static_vnet_route` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1158,7 +1190,7 @@ The following state arguments are supported:
 <a href="#associated_route_table_id_python" style="color: inherit; text-decoration: inherit;">associated_<wbr>route_<wbr>table_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the route table associated with this Virtual Hub connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1167,7 +1199,7 @@ The following state arguments are supported:
 <a href="#propagated_route_table_python" style="color: inherit; text-decoration: inherit;">propagated_<wbr>route_<wbr>table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualhubconnectionroutingpropagatedroutetable">Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Propagated<wbr>Route<wbr>Table<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualhubconnectionroutingpropagatedroutetable">Input[Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Propagated<wbr>Route<wbr>Table<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `propagated_route_table` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1176,7 +1208,7 @@ The following state arguments are supported:
 <a href="#static_vnet_routes_python" style="color: inherit; text-decoration: inherit;">static_<wbr>vnet_<wbr>routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualhubconnectionroutingstaticvnetroute">Sequence[Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Static<wbr>Vnet<wbr>Route<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualhubconnectionroutingstaticvnetroute">Input[Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Static<wbr>Vnet<wbr>Route<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A `static_vnet_route` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1235,7 +1267,7 @@ The following state arguments are supported:
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The list of labels to assign to this route table.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1244,7 +1276,7 @@ The following state arguments are supported:
 <a href="#routetableids_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Table<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of Route Table ID's to associated with this Virtual Hub Connection.
 {{% /md %}}</dd></dl>
@@ -1257,7 +1289,7 @@ The following state arguments are supported:
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The list of labels to assign to this route table.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1266,7 +1298,7 @@ The following state arguments are supported:
 <a href="#route_table_ids_python" style="color: inherit; text-decoration: inherit;">route_<wbr>table_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of Route Table ID's to associated with this Virtual Hub Connection.
 {{% /md %}}</dd></dl>
@@ -1343,7 +1375,7 @@ The following state arguments are supported:
 <a href="#addressprefixes_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of CIDR Ranges which should be used as Address Prefixes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1352,7 +1384,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Static Route.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1361,7 +1393,7 @@ The following state arguments are supported:
 <a href="#nexthopipaddress_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IP Address which should be used for the Next Hop.
 {{% /md %}}</dd></dl>
@@ -1374,7 +1406,7 @@ The following state arguments are supported:
 <a href="#address_prefixes_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of CIDR Ranges which should be used as Address Prefixes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1383,7 +1415,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Static Route.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1392,7 +1424,7 @@ The following state arguments are supported:
 <a href="#next_hop_ip_address_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IP Address which should be used for the Next Hop.
 {{% /md %}}</dd></dl>

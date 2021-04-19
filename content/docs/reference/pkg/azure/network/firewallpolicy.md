@@ -52,8 +52,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -119,19 +119,34 @@ const example = new azure.network.FirewallPolicy("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">FirewallPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FirewallPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">FirewallPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FirewallPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">FirewallPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">base_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns</span><span class="p">:</span> <span class="nx">Optional[FirewallPolicyDnsArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">threat_intelligence_allowlist</span><span class="p">:</span> <span class="nx">Optional[FirewallPolicyThreatIntelligenceAllowlistArgs]</span> = None<span class="p">, </span><span class="nx">threat_intelligence_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">FirewallPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                   <span class="nx">base_policy_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">dns</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[FirewallPolicyDnsArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">threat_intelligence_allowlist</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[FirewallPolicyThreatIntelligenceAllowlistArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">threat_intelligence_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">FirewallPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FirewallPolicyArgs</a></span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFirewallPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FirewallPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FirewallPolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFirewallPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FirewallPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FirewallPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">FirewallPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">FirewallPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">FirewallPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">FirewallPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -166,22 +181,32 @@ const example = new azure.network.FirewallPolicy("example", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">FirewallPolicyArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -190,7 +215,7 @@ const example = new azure.network.FirewallPolicy("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -214,7 +239,7 @@ const example = new azure.network.FirewallPolicy("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -439,7 +464,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Firewall Policy should exist. Changing this forces a new Firewall Policy to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -448,7 +473,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#basepolicyid_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the base Firewall Policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -457,7 +482,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#dns_nodejs" style="color: inherit; text-decoration: inherit;">dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicydns">Firewall<wbr>Policy<wbr>Dns</a></span>
+        <span class="property-type"><a href="#firewallpolicydns">pulumi.<wbr>Input<Firewall<wbr>Policy<wbr>Dns<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `dns` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -466,7 +491,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Firewall Policy should exist. Changing this forces a new Firewall Policy to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -475,7 +500,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Firewall Policy. Changing this forces a new Firewall Policy to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -484,7 +509,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The SKU Tier of the Firewall Policy. Possible values are `Standard`, `Premium`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -493,7 +518,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Firewall Policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -502,7 +527,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#threatintelligenceallowlist_nodejs" style="color: inherit; text-decoration: inherit;">threat<wbr>Intelligence<wbr>Allowlist</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicythreatintelligenceallowlist">Firewall<wbr>Policy<wbr>Threat<wbr>Intelligence<wbr>Allowlist</a></span>
+        <span class="property-type"><a href="#firewallpolicythreatintelligenceallowlist">pulumi.<wbr>Input<Firewall<wbr>Policy<wbr>Threat<wbr>Intelligence<wbr>Allowlist<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `threat_intelligence_allowlist` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -511,7 +536,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#threatintelligencemode_nodejs" style="color: inherit; text-decoration: inherit;">threat<wbr>Intelligence<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The operation mode for Threat Intelligence. Possible values are `Alert`, `Deny` and `Off`. Defaults to `Alert`.
 {{% /md %}}</dd></dl>
@@ -524,7 +549,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Firewall Policy should exist. Changing this forces a new Firewall Policy to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -533,7 +558,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#base_policy_id_python" style="color: inherit; text-decoration: inherit;">base_<wbr>policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the base Firewall Policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -542,7 +567,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#dns_python" style="color: inherit; text-decoration: inherit;">dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicydns">Firewall<wbr>Policy<wbr>Dns<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicydns">Input[Firewall<wbr>Policy<wbr>Dns<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `dns` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -551,7 +576,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Firewall Policy should exist. Changing this forces a new Firewall Policy to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -560,7 +585,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Firewall Policy. Changing this forces a new Firewall Policy to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -569,7 +594,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The SKU Tier of the Firewall Policy. Possible values are `Standard`, `Premium`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -578,7 +603,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Firewall Policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -587,7 +612,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#threat_intelligence_allowlist_python" style="color: inherit; text-decoration: inherit;">threat_<wbr>intelligence_<wbr>allowlist</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicythreatintelligenceallowlist">Firewall<wbr>Policy<wbr>Threat<wbr>Intelligence<wbr>Allowlist<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicythreatintelligenceallowlist">Input[Firewall<wbr>Policy<wbr>Threat<wbr>Intelligence<wbr>Allowlist<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `threat_intelligence_allowlist` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -596,7 +621,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#threat_intelligence_mode_python" style="color: inherit; text-decoration: inherit;">threat_<wbr>intelligence_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The operation mode for Threat Intelligence. Possible values are `Alert`, `Deny` and `Off`. Defaults to `Alert`.
 {{% /md %}}</dd></dl>
@@ -773,20 +798,34 @@ Get an existing FirewallPolicy resource's state with the given name, ID, and opt
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">FirewallPolicyState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">FirewallPolicy</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">FirewallPolicyState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">FirewallPolicy</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">base_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">child_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">dns</span><span class="p">:</span> <span class="nx">Optional[FirewallPolicyDnsArgs]</span> = None<span class="p">, </span><span class="nx">firewalls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_collection_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">threat_intelligence_allowlist</span><span class="p">:</span> <span class="nx">Optional[FirewallPolicyThreatIntelligenceAllowlistArgs]</span> = None<span class="p">, </span><span class="nx">threat_intelligence_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> FirewallPolicy</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">base_policy_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">child_policies</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">dns</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[FirewallPolicyDnsArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">firewalls</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">rule_collection_groups</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">threat_intelligence_allowlist</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[FirewallPolicyThreatIntelligenceAllowlistArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">threat_intelligence_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> FirewallPolicy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFirewallPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">FirewallPolicyState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FirewallPolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFirewallPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">FirewallPolicyState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FirewallPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">FirewallPolicy</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">FirewallPolicyState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">FirewallPolicy</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">FirewallPolicyState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1119,7 +1158,7 @@ The following state arguments are supported:
 <a href="#state_basepolicyid_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the base Firewall Policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1128,7 +1167,7 @@ The following state arguments are supported:
 <a href="#state_childpolicies_nodejs" style="color: inherit; text-decoration: inherit;">child<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of reference to child Firewall Policies of this Firewall Policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1137,7 +1176,7 @@ The following state arguments are supported:
 <a href="#state_dns_nodejs" style="color: inherit; text-decoration: inherit;">dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicydns">Firewall<wbr>Policy<wbr>Dns</a></span>
+        <span class="property-type"><a href="#firewallpolicydns">pulumi.<wbr>Input<Firewall<wbr>Policy<wbr>Dns<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `dns` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1146,7 +1185,7 @@ The following state arguments are supported:
 <a href="#state_firewalls_nodejs" style="color: inherit; text-decoration: inherit;">firewalls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of references to Azure Firewalls that this Firewall Policy is associated with.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1155,7 +1194,7 @@ The following state arguments are supported:
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Firewall Policy should exist. Changing this forces a new Firewall Policy to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1164,7 +1203,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Firewall Policy. Changing this forces a new Firewall Policy to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1173,7 +1212,7 @@ The following state arguments are supported:
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Firewall Policy should exist. Changing this forces a new Firewall Policy to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1182,7 +1221,7 @@ The following state arguments are supported:
 <a href="#state_rulecollectiongroups_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Collection<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of references to Firewall Policy Rule Collection Groups that belongs to this Firewall Policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1191,7 +1230,7 @@ The following state arguments are supported:
 <a href="#state_sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The SKU Tier of the Firewall Policy. Possible values are `Standard`, `Premium`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1200,7 +1239,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Firewall Policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1209,7 +1248,7 @@ The following state arguments are supported:
 <a href="#state_threatintelligenceallowlist_nodejs" style="color: inherit; text-decoration: inherit;">threat<wbr>Intelligence<wbr>Allowlist</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicythreatintelligenceallowlist">Firewall<wbr>Policy<wbr>Threat<wbr>Intelligence<wbr>Allowlist</a></span>
+        <span class="property-type"><a href="#firewallpolicythreatintelligenceallowlist">pulumi.<wbr>Input<Firewall<wbr>Policy<wbr>Threat<wbr>Intelligence<wbr>Allowlist<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `threat_intelligence_allowlist` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1218,7 +1257,7 @@ The following state arguments are supported:
 <a href="#state_threatintelligencemode_nodejs" style="color: inherit; text-decoration: inherit;">threat<wbr>Intelligence<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The operation mode for Threat Intelligence. Possible values are `Alert`, `Deny` and `Off`. Defaults to `Alert`.
 {{% /md %}}</dd></dl>
@@ -1231,7 +1270,7 @@ The following state arguments are supported:
 <a href="#state_base_policy_id_python" style="color: inherit; text-decoration: inherit;">base_<wbr>policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the base Firewall Policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1240,7 +1279,7 @@ The following state arguments are supported:
 <a href="#state_child_policies_python" style="color: inherit; text-decoration: inherit;">child_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of reference to child Firewall Policies of this Firewall Policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1249,7 +1288,7 @@ The following state arguments are supported:
 <a href="#state_dns_python" style="color: inherit; text-decoration: inherit;">dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicydns">Firewall<wbr>Policy<wbr>Dns<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicydns">Input[Firewall<wbr>Policy<wbr>Dns<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `dns` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1258,7 +1297,7 @@ The following state arguments are supported:
 <a href="#state_firewalls_python" style="color: inherit; text-decoration: inherit;">firewalls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of references to Azure Firewalls that this Firewall Policy is associated with.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1267,7 +1306,7 @@ The following state arguments are supported:
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Firewall Policy should exist. Changing this forces a new Firewall Policy to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1276,7 +1315,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Firewall Policy. Changing this forces a new Firewall Policy to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1285,7 +1324,7 @@ The following state arguments are supported:
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Firewall Policy should exist. Changing this forces a new Firewall Policy to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1294,7 +1333,7 @@ The following state arguments are supported:
 <a href="#state_rule_collection_groups_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>collection_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of references to Firewall Policy Rule Collection Groups that belongs to this Firewall Policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1303,7 +1342,7 @@ The following state arguments are supported:
 <a href="#state_sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The SKU Tier of the Firewall Policy. Possible values are `Standard`, `Premium`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1312,7 +1351,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Firewall Policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1321,7 +1360,7 @@ The following state arguments are supported:
 <a href="#state_threat_intelligence_allowlist_python" style="color: inherit; text-decoration: inherit;">threat_<wbr>intelligence_<wbr>allowlist</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicythreatintelligenceallowlist">Firewall<wbr>Policy<wbr>Threat<wbr>Intelligence<wbr>Allowlist<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicythreatintelligenceallowlist">Input[Firewall<wbr>Policy<wbr>Threat<wbr>Intelligence<wbr>Allowlist<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `threat_intelligence_allowlist` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1330,7 +1369,7 @@ The following state arguments are supported:
 <a href="#state_threat_intelligence_mode_python" style="color: inherit; text-decoration: inherit;">threat_<wbr>intelligence_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The operation mode for Threat Intelligence. Possible values are `Alert`, `Deny` and `Off`. Defaults to `Alert`.
 {{% /md %}}</dd></dl>
@@ -1414,7 +1453,7 @@ The following state arguments are supported:
 <a href="#networkrulefqdnenabled_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Rule<wbr>Fqdn<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been deprecated as the service team has removed it from all API versions and is no longer supported by Azure. It will be removed in v3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -1422,7 +1461,7 @@ The following state arguments are supported:
 <a href="#proxyenabled_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to enable DNS proxy on Firewalls attached to this Firewall Policy? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1431,7 +1470,7 @@ The following state arguments are supported:
 <a href="#servers_nodejs" style="color: inherit; text-decoration: inherit;">servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of custom DNS servers' IP addresses.
 {{% /md %}}</dd></dl>
@@ -1444,7 +1483,7 @@ The following state arguments are supported:
 <a href="#network_rule_fqdn_enabled_python" style="color: inherit; text-decoration: inherit;">network_<wbr>rule_<wbr>fqdn_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been deprecated as the service team has removed it from all API versions and is no longer supported by Azure. It will be removed in v3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -1452,7 +1491,7 @@ The following state arguments are supported:
 <a href="#proxy_enabled_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to enable DNS proxy on Firewalls attached to this Firewall Policy? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1461,7 +1500,7 @@ The following state arguments are supported:
 <a href="#servers_python" style="color: inherit; text-decoration: inherit;">servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of custom DNS servers' IP addresses.
 {{% /md %}}</dd></dl>
@@ -1520,7 +1559,7 @@ The following state arguments are supported:
 <a href="#fqdns_nodejs" style="color: inherit; text-decoration: inherit;">fqdns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of FQDNs that will be skipped for threat detection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1529,7 +1568,7 @@ The following state arguments are supported:
 <a href="#ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of IP addresses or IP address ranges that will be skipped for threat detection.
 {{% /md %}}</dd></dl>
@@ -1542,7 +1581,7 @@ The following state arguments are supported:
 <a href="#fqdns_python" style="color: inherit; text-decoration: inherit;">fqdns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of FQDNs that will be skipped for threat detection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1551,7 +1590,7 @@ The following state arguments are supported:
 <a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of IP addresses or IP address ranges that will be skipped for threat detection.
 {{% /md %}}</dd></dl>

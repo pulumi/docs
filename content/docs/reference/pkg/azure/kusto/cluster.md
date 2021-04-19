@@ -65,9 +65,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/kusto"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/kusto"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -162,19 +162,41 @@ const example = new azure.kusto.Cluster("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">double_encryption_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_disk_encryption</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_purge</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_streaming_ingest</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ClusterIdentityArgs]</span> = None<span class="p">, </span><span class="nx">language_extensions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">optimized_auto_scale</span><span class="p">:</span> <span class="nx">Optional[ClusterOptimizedAutoScaleArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[ClusterSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">trusted_external_tenants</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">virtual_network_configuration</span><span class="p">:</span> <span class="nx">Optional[ClusterVirtualNetworkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">double_encryption_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+            <span class="nx">enable_disk_encryption</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+            <span class="nx">enable_purge</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+            <span class="nx">enable_streaming_ingest</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+            <span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterIdentityArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">language_extensions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+            <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">optimized_auto_scale</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterOptimizedAutoScaleArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterSkuArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+            <span class="nx">trusted_external_tenants</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+            <span class="nx">virtual_network_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterVirtualNetworkConfigurationArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -209,22 +231,32 @@ const example = new azure.kusto.Cluster("example", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -233,7 +265,7 @@ const example = new azure.kusto.Cluster("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -257,7 +289,7 @@ const example = new azure.kusto.Cluster("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -608,7 +640,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the Resource Group where the Kusto Cluster should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -617,7 +649,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustersku">Cluster<wbr>Sku</a></span>
+        <span class="property-type"><a href="#clustersku">pulumi.<wbr>Input<Cluster<wbr>Sku<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `sku` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -626,7 +658,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#doubleencryptionenabled_nodejs" style="color: inherit; text-decoration: inherit;">double<wbr>Encryption<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Is the cluster's double encryption enabled? Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -635,7 +667,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#enablediskencryption_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Disk<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies if the cluster's disks are encrypted.
 {{% /md %}}</dd><dt class="property-optional"
@@ -644,7 +676,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#enablepurge_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Purge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies if the purge operations are enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -653,7 +685,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#enablestreamingingest_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Streaming<wbr>Ingest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies if the streaming ingest is enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -662,7 +694,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#engine_nodejs" style="color: inherit; text-decoration: inherit;">engine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}. The engine type that should be used. Possible values are `V2` and `V3`. Defaults to `V2`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -671,7 +703,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteridentity">Cluster<wbr>Identity</a></span>
+        <span class="property-type"><a href="#clusteridentity">pulumi.<wbr>Input<Cluster<wbr>Identity<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}An identity block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -680,7 +712,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#languageextensions_nodejs" style="color: inherit; text-decoration: inherit;">language<wbr>Extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}An list of `language_extensions` to enable. Valid values are: `PYTHON` and `R`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -689,7 +721,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The location where the Kusto Cluster should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -698,7 +730,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Kusto Cluster to create. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -707,7 +739,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#optimizedautoscale_nodejs" style="color: inherit; text-decoration: inherit;">optimized<wbr>Auto<wbr>Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteroptimizedautoscale">Cluster<wbr>Optimized<wbr>Auto<wbr>Scale</a></span>
+        <span class="property-type"><a href="#clusteroptimizedautoscale">pulumi.<wbr>Input<Cluster<wbr>Optimized<wbr>Auto<wbr>Scale<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}An `optimized_auto_scale` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -716,7 +748,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -725,7 +757,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#trustedexternaltenants_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>External<wbr>Tenants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Specifies a list of tenant IDs that are trusted by the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -734,7 +766,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#virtualnetworkconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustervirtualnetworkconfiguration">Cluster<wbr>Virtual<wbr>Network<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#clustervirtualnetworkconfiguration">pulumi.<wbr>Input<Cluster<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `virtual_network_configuration` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -743,7 +775,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of Availability Zones in which the cluster instances should be created in. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -756,7 +788,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the Resource Group where the Kusto Cluster should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -765,7 +797,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustersku">Cluster<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustersku">Input[Cluster<wbr>Sku<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `sku` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -774,7 +806,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#double_encryption_enabled_python" style="color: inherit; text-decoration: inherit;">double_<wbr>encryption_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Is the cluster's double encryption enabled? Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -783,7 +815,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#enable_disk_encryption_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>disk_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies if the cluster's disks are encrypted.
 {{% /md %}}</dd><dt class="property-optional"
@@ -792,7 +824,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#enable_purge_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>purge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies if the purge operations are enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -801,7 +833,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#enable_streaming_ingest_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>streaming_<wbr>ingest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies if the streaming ingest is enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -810,7 +842,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#engine_python" style="color: inherit; text-decoration: inherit;">engine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}. The engine type that should be used. Possible values are `V2` and `V3`. Defaults to `V2`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -819,7 +851,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteridentity">Cluster<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteridentity">Input[Cluster<wbr>Identity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An identity block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -828,7 +860,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#language_extensions_python" style="color: inherit; text-decoration: inherit;">language_<wbr>extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}An list of `language_extensions` to enable. Valid values are: `PYTHON` and `R`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -837,7 +869,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The location where the Kusto Cluster should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -846,7 +878,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Kusto Cluster to create. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -855,7 +887,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#optimized_auto_scale_python" style="color: inherit; text-decoration: inherit;">optimized_<wbr>auto_<wbr>scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteroptimizedautoscale">Cluster<wbr>Optimized<wbr>Auto<wbr>Scale<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteroptimizedautoscale">Input[Cluster<wbr>Optimized<wbr>Auto<wbr>Scale<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An `optimized_auto_scale` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -864,7 +896,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -873,7 +905,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#trusted_external_tenants_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>external_<wbr>tenants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of tenant IDs that are trusted by the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -882,7 +914,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#virtual_network_configuration_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustervirtualnetworkconfiguration">Cluster<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustervirtualnetworkconfiguration">Input[Cluster<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `virtual_network_configuration` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -891,7 +923,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of Availability Zones in which the cluster instances should be created in. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -1032,20 +1064,40 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ClusterState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Cluster</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ClusterState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Cluster</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">data_ingestion_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">double_encryption_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_disk_encryption</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_purge</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_streaming_ingest</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ClusterIdentityArgs]</span> = None<span class="p">, </span><span class="nx">language_extensions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">optimized_auto_scale</span><span class="p">:</span> <span class="nx">Optional[ClusterOptimizedAutoScaleArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[ClusterSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">trusted_external_tenants</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">virtual_network_configuration</span><span class="p">:</span> <span class="nx">Optional[ClusterVirtualNetworkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">data_ingestion_uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">double_encryption_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">enable_disk_encryption</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">enable_purge</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">enable_streaming_ingest</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterIdentityArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">language_extensions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">optimized_auto_scale</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterOptimizedAutoScaleArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterSkuArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">trusted_external_tenants</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">virtual_network_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterVirtualNetworkConfigurationArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ClusterState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ClusterState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Cluster</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ClusterState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Cluster</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ClusterState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1486,7 +1538,7 @@ The following state arguments are supported:
 <a href="#state_dataingestionuri_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Ingestion<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Kusto Cluster URI to be used for data ingestion.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1495,7 +1547,7 @@ The following state arguments are supported:
 <a href="#state_doubleencryptionenabled_nodejs" style="color: inherit; text-decoration: inherit;">double<wbr>Encryption<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Is the cluster's double encryption enabled? Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1504,7 +1556,7 @@ The following state arguments are supported:
 <a href="#state_enablediskencryption_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Disk<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies if the cluster's disks are encrypted.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1513,7 +1565,7 @@ The following state arguments are supported:
 <a href="#state_enablepurge_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Purge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies if the purge operations are enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1522,7 +1574,7 @@ The following state arguments are supported:
 <a href="#state_enablestreamingingest_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Streaming<wbr>Ingest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies if the streaming ingest is enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1531,7 +1583,7 @@ The following state arguments are supported:
 <a href="#state_engine_nodejs" style="color: inherit; text-decoration: inherit;">engine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}. The engine type that should be used. Possible values are `V2` and `V3`. Defaults to `V2`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1540,7 +1592,7 @@ The following state arguments are supported:
 <a href="#state_identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteridentity">Cluster<wbr>Identity</a></span>
+        <span class="property-type"><a href="#clusteridentity">pulumi.<wbr>Input<Cluster<wbr>Identity<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}An identity block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1549,7 +1601,7 @@ The following state arguments are supported:
 <a href="#state_languageextensions_nodejs" style="color: inherit; text-decoration: inherit;">language<wbr>Extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}An list of `language_extensions` to enable. Valid values are: `PYTHON` and `R`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1558,7 +1610,7 @@ The following state arguments are supported:
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The location where the Kusto Cluster should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1567,7 +1619,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Kusto Cluster to create. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1576,7 +1628,7 @@ The following state arguments are supported:
 <a href="#state_optimizedautoscale_nodejs" style="color: inherit; text-decoration: inherit;">optimized<wbr>Auto<wbr>Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteroptimizedautoscale">Cluster<wbr>Optimized<wbr>Auto<wbr>Scale</a></span>
+        <span class="property-type"><a href="#clusteroptimizedautoscale">pulumi.<wbr>Input<Cluster<wbr>Optimized<wbr>Auto<wbr>Scale<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}An `optimized_auto_scale` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1585,7 +1637,7 @@ The following state arguments are supported:
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the Resource Group where the Kusto Cluster should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1594,7 +1646,7 @@ The following state arguments are supported:
 <a href="#state_sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustersku">Cluster<wbr>Sku</a></span>
+        <span class="property-type"><a href="#clustersku">pulumi.<wbr>Input<Cluster<wbr>Sku<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `sku` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1603,7 +1655,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1612,7 +1664,7 @@ The following state arguments are supported:
 <a href="#state_trustedexternaltenants_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>External<wbr>Tenants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Specifies a list of tenant IDs that are trusted by the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1621,7 +1673,7 @@ The following state arguments are supported:
 <a href="#state_uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The FQDN of the Azure Kusto Cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1630,7 +1682,7 @@ The following state arguments are supported:
 <a href="#state_virtualnetworkconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustervirtualnetworkconfiguration">Cluster<wbr>Virtual<wbr>Network<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#clustervirtualnetworkconfiguration">pulumi.<wbr>Input<Cluster<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `virtual_network_configuration` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1639,7 +1691,7 @@ The following state arguments are supported:
 <a href="#state_zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of Availability Zones in which the cluster instances should be created in. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -1652,7 +1704,7 @@ The following state arguments are supported:
 <a href="#state_data_ingestion_uri_python" style="color: inherit; text-decoration: inherit;">data_<wbr>ingestion_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Kusto Cluster URI to be used for data ingestion.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1661,7 +1713,7 @@ The following state arguments are supported:
 <a href="#state_double_encryption_enabled_python" style="color: inherit; text-decoration: inherit;">double_<wbr>encryption_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Is the cluster's double encryption enabled? Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1670,7 +1722,7 @@ The following state arguments are supported:
 <a href="#state_enable_disk_encryption_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>disk_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies if the cluster's disks are encrypted.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1679,7 +1731,7 @@ The following state arguments are supported:
 <a href="#state_enable_purge_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>purge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies if the purge operations are enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1688,7 +1740,7 @@ The following state arguments are supported:
 <a href="#state_enable_streaming_ingest_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>streaming_<wbr>ingest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies if the streaming ingest is enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1697,7 +1749,7 @@ The following state arguments are supported:
 <a href="#state_engine_python" style="color: inherit; text-decoration: inherit;">engine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}. The engine type that should be used. Possible values are `V2` and `V3`. Defaults to `V2`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1706,7 +1758,7 @@ The following state arguments are supported:
 <a href="#state_identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteridentity">Cluster<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteridentity">Input[Cluster<wbr>Identity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An identity block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1715,7 +1767,7 @@ The following state arguments are supported:
 <a href="#state_language_extensions_python" style="color: inherit; text-decoration: inherit;">language_<wbr>extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}An list of `language_extensions` to enable. Valid values are: `PYTHON` and `R`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1724,7 +1776,7 @@ The following state arguments are supported:
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The location where the Kusto Cluster should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1733,7 +1785,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Kusto Cluster to create. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1742,7 +1794,7 @@ The following state arguments are supported:
 <a href="#state_optimized_auto_scale_python" style="color: inherit; text-decoration: inherit;">optimized_<wbr>auto_<wbr>scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteroptimizedautoscale">Cluster<wbr>Optimized<wbr>Auto<wbr>Scale<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteroptimizedautoscale">Input[Cluster<wbr>Optimized<wbr>Auto<wbr>Scale<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An `optimized_auto_scale` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1751,7 +1803,7 @@ The following state arguments are supported:
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the Resource Group where the Kusto Cluster should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1760,7 +1812,7 @@ The following state arguments are supported:
 <a href="#state_sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustersku">Cluster<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustersku">Input[Cluster<wbr>Sku<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `sku` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1769,7 +1821,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1778,7 +1830,7 @@ The following state arguments are supported:
 <a href="#state_trusted_external_tenants_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>external_<wbr>tenants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of tenant IDs that are trusted by the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1787,7 +1839,7 @@ The following state arguments are supported:
 <a href="#state_uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The FQDN of the Azure Kusto Cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1796,7 +1848,7 @@ The following state arguments are supported:
 <a href="#state_virtual_network_configuration_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustervirtualnetworkconfiguration">Cluster<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustervirtualnetworkconfiguration">Input[Cluster<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `virtual_network_configuration` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1805,7 +1857,7 @@ The following state arguments are supported:
 <a href="#state_zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of Availability Zones in which the cluster instances should be created in. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -1909,7 +1961,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the type of Managed Service Identity that is configured on this Kusto Cluster. Possible values are: `SystemAssigned`, `UserAssigned` and `SystemAssigned, UserAssigned`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1918,7 +1970,7 @@ The following state arguments are supported:
 <a href="#identityids_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of IDs for User Assigned Managed Identity resources to be assigned.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1927,7 +1979,7 @@ The following state arguments are supported:
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Principal ID associated with this System Assigned Managed Service Identity.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1936,7 +1988,7 @@ The following state arguments are supported:
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Tenant ID associated with this System Assigned Managed Service Identity.
 {{% /md %}}</dd></dl>
@@ -1949,7 +2001,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the type of Managed Service Identity that is configured on this Kusto Cluster. Possible values are: `SystemAssigned`, `UserAssigned` and `SystemAssigned, UserAssigned`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1958,7 +2010,7 @@ The following state arguments are supported:
 <a href="#identity_ids_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of IDs for User Assigned Managed Identity resources to be assigned.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1967,7 +2019,7 @@ The following state arguments are supported:
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Principal ID associated with this System Assigned Managed Service Identity.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1976,7 +2028,7 @@ The following state arguments are supported:
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Tenant ID associated with this System Assigned Managed Service Identity.
 {{% /md %}}</dd></dl>
@@ -2035,7 +2087,7 @@ The following state arguments are supported:
 <a href="#maximuminstances_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of allowed instances. Must between `0` and `1000`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2044,7 +2096,7 @@ The following state arguments are supported:
 <a href="#minimuminstances_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The minimum number of allowed instances. Must between `0` and `1000`.
 {{% /md %}}</dd></dl>
@@ -2057,7 +2109,7 @@ The following state arguments are supported:
 <a href="#maximum_instances_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of allowed instances. Must between `0` and `1000`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2066,7 +2118,7 @@ The following state arguments are supported:
 <a href="#minimum_instances_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The minimum number of allowed instances. Must between `0` and `1000`.
 {{% /md %}}</dd></dl>
@@ -2125,7 +2177,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the SKU. Valid values are: `Dev(No SLA)_Standard_D11_v2`, `Dev(No SLA)_Standard_E2a_v4`, `Standard_D11_v2`, `Standard_D12_v2`, `Standard_D13_v2`, `Standard_D14_v2`, `Standard_DS13_v2+1TB_PS`, `Standard_DS13_v2+2TB_PS`, `Standard_DS14_v2+3TB_PS`, `Standard_DS14_v2+4TB_PS`, `Standard_E16as_v4+3TB_PS`, `Standard_E16as_v4+4TB_PS`, `Standard_E16a_v4`, `Standard_E2a_v4`, `Standard_E4a_v4`, `Standard_E64i_v3`, `Standard_E8as_v4+1TB_PS`, `Standard_E8as_v4+2TB_PS`, `Standard_E8a_v4`, `Standard_L16s`, `Standard_L4s` and `Standard_L8s`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2134,7 +2186,7 @@ The following state arguments are supported:
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Specifies the node count for the cluster. Boundaries depend on the sku name.
 {{% /md %}}</dd></dl>
@@ -2147,7 +2199,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the SKU. Valid values are: `Dev(No SLA)_Standard_D11_v2`, `Dev(No SLA)_Standard_E2a_v4`, `Standard_D11_v2`, `Standard_D12_v2`, `Standard_D13_v2`, `Standard_D14_v2`, `Standard_DS13_v2+1TB_PS`, `Standard_DS13_v2+2TB_PS`, `Standard_DS14_v2+3TB_PS`, `Standard_DS14_v2+4TB_PS`, `Standard_E16as_v4+3TB_PS`, `Standard_E16as_v4+4TB_PS`, `Standard_E16a_v4`, `Standard_E2a_v4`, `Standard_E4a_v4`, `Standard_E64i_v3`, `Standard_E8as_v4+1TB_PS`, `Standard_E8as_v4+2TB_PS`, `Standard_E8a_v4`, `Standard_L16s`, `Standard_L4s` and `Standard_L8s`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2156,7 +2208,7 @@ The following state arguments are supported:
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Specifies the node count for the cluster. Boundaries depend on the sku name.
 {{% /md %}}</dd></dl>
@@ -2233,7 +2285,7 @@ The following state arguments are supported:
 <a href="#datamanagementpublicipid_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Management<wbr>Public<wbr>Ip<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Data management's service public IP address resource id.
 {{% /md %}}</dd><dt class="property-required"
@@ -2242,7 +2294,7 @@ The following state arguments are supported:
 <a href="#enginepublicipid_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Public<wbr>Ip<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Engine service's public IP address resource id.
 {{% /md %}}</dd><dt class="property-required"
@@ -2251,7 +2303,7 @@ The following state arguments are supported:
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The subnet resource id.
 {{% /md %}}</dd></dl>
@@ -2264,7 +2316,7 @@ The following state arguments are supported:
 <a href="#data_management_public_ip_id_python" style="color: inherit; text-decoration: inherit;">data_<wbr>management_<wbr>public_<wbr>ip_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Data management's service public IP address resource id.
 {{% /md %}}</dd><dt class="property-required"
@@ -2273,7 +2325,7 @@ The following state arguments are supported:
 <a href="#engine_public_ip_id_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>public_<wbr>ip_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Engine service's public IP address resource id.
 {{% /md %}}</dd><dt class="property-required"
@@ -2282,7 +2334,7 @@ The following state arguments are supported:
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The subnet resource id.
 {{% /md %}}</dd></dl>

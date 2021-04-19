@@ -159,9 +159,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/monitoring"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -445,19 +445,40 @@ const exampleActionGroup = new azure.monitoring.ActionGroup("exampleActionGroup"
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ActionGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ActionGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ActionGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ActionGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ActionGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arm_role_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ActionGroupArmRoleReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">automation_runbook_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ActionGroupAutomationRunbookReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">azure_app_push_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ActionGroupAzureAppPushReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">azure_function_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ActionGroupAzureFunctionReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">email_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ActionGroupEmailReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">itsm_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ActionGroupItsmReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">logic_app_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ActionGroupLogicAppReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">short_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sms_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ActionGroupSmsReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">voice_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ActionGroupVoiceReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">webhook_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ActionGroupWebhookReceiverArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ActionGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                <span class="nx">arm_role_receivers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ActionGroupArmRoleReceiverArgs]]]]</span> = None<span class="p">,</span>
+                <span class="nx">automation_runbook_receivers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ActionGroupAutomationRunbookReceiverArgs]]]]</span> = None<span class="p">,</span>
+                <span class="nx">azure_app_push_receivers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ActionGroupAzureAppPushReceiverArgs]]]]</span> = None<span class="p">,</span>
+                <span class="nx">azure_function_receivers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ActionGroupAzureFunctionReceiverArgs]]]]</span> = None<span class="p">,</span>
+                <span class="nx">email_receivers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ActionGroupEmailReceiverArgs]]]]</span> = None<span class="p">,</span>
+                <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                <span class="nx">itsm_receivers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ActionGroupItsmReceiverArgs]]]]</span> = None<span class="p">,</span>
+                <span class="nx">logic_app_receivers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ActionGroupLogicAppReceiverArgs]]]]</span> = None<span class="p">,</span>
+                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">short_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">sms_receivers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ActionGroupSmsReceiverArgs]]]]</span> = None<span class="p">,</span>
+                <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                <span class="nx">voice_receivers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ActionGroupVoiceReceiverArgs]]]]</span> = None<span class="p">,</span>
+                <span class="nx">webhook_receivers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ActionGroupWebhookReceiverArgs]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ActionGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ActionGroupArgs</a></span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewActionGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ActionGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ActionGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewActionGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ActionGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ActionGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ActionGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ActionGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ActionGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ActionGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -492,22 +513,32 @@ const exampleActionGroup = new azure.monitoring.ActionGroup("exampleActionGroup"
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ActionGroupArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -516,7 +547,7 @@ const exampleActionGroup = new azure.monitoring.ActionGroup("exampleActionGroup"
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -540,7 +571,7 @@ const exampleActionGroup = new azure.monitoring.ActionGroup("exampleActionGroup"
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -873,7 +904,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Action Group instance.
 {{% /md %}}</dd><dt class="property-required"
@@ -882,7 +913,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#shortname_nodejs" style="color: inherit; text-decoration: inherit;">short<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The short name of the action group. This will be used in SMS messages.
 {{% /md %}}</dd><dt class="property-optional"
@@ -891,7 +922,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#armrolereceivers_nodejs" style="color: inherit; text-decoration: inherit;">arm<wbr>Role<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongrouparmrolereceiver">Action<wbr>Group<wbr>Arm<wbr>Role<wbr>Receiver[]</a></span>
+        <span class="property-type"><a href="#actiongrouparmrolereceiver">pulumi.<wbr>Input<pulumi.<wbr>Input<Action<wbr>Group<wbr>Arm<wbr>Role<wbr>Receiver<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `arm_role_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -900,7 +931,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#automationrunbookreceivers_nodejs" style="color: inherit; text-decoration: inherit;">automation<wbr>Runbook<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupautomationrunbookreceiver">Action<wbr>Group<wbr>Automation<wbr>Runbook<wbr>Receiver[]</a></span>
+        <span class="property-type"><a href="#actiongroupautomationrunbookreceiver">pulumi.<wbr>Input<pulumi.<wbr>Input<Action<wbr>Group<wbr>Automation<wbr>Runbook<wbr>Receiver<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `automation_runbook_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -909,7 +940,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#azureapppushreceivers_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>App<wbr>Push<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupazureapppushreceiver">Action<wbr>Group<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver[]</a></span>
+        <span class="property-type"><a href="#actiongroupazureapppushreceiver">pulumi.<wbr>Input<pulumi.<wbr>Input<Action<wbr>Group<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `azure_app_push_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -918,7 +949,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#azurefunctionreceivers_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Function<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupazurefunctionreceiver">Action<wbr>Group<wbr>Azure<wbr>Function<wbr>Receiver[]</a></span>
+        <span class="property-type"><a href="#actiongroupazurefunctionreceiver">pulumi.<wbr>Input<pulumi.<wbr>Input<Action<wbr>Group<wbr>Azure<wbr>Function<wbr>Receiver<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `azure_function_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -927,7 +958,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#emailreceivers_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupemailreceiver">Action<wbr>Group<wbr>Email<wbr>Receiver[]</a></span>
+        <span class="property-type"><a href="#actiongroupemailreceiver">pulumi.<wbr>Input<pulumi.<wbr>Input<Action<wbr>Group<wbr>Email<wbr>Receiver<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `email_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -936,7 +967,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -945,7 +976,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#itsmreceivers_nodejs" style="color: inherit; text-decoration: inherit;">itsm<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupitsmreceiver">Action<wbr>Group<wbr>Itsm<wbr>Receiver[]</a></span>
+        <span class="property-type"><a href="#actiongroupitsmreceiver">pulumi.<wbr>Input<pulumi.<wbr>Input<Action<wbr>Group<wbr>Itsm<wbr>Receiver<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `itsm_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -954,7 +985,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#logicappreceivers_nodejs" style="color: inherit; text-decoration: inherit;">logic<wbr>App<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongrouplogicappreceiver">Action<wbr>Group<wbr>Logic<wbr>App<wbr>Receiver[]</a></span>
+        <span class="property-type"><a href="#actiongrouplogicappreceiver">pulumi.<wbr>Input<pulumi.<wbr>Input<Action<wbr>Group<wbr>Logic<wbr>App<wbr>Receiver<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `logic_app_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -963,7 +994,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Action Group. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -972,7 +1003,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#smsreceivers_nodejs" style="color: inherit; text-decoration: inherit;">sms<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupsmsreceiver">Action<wbr>Group<wbr>Sms<wbr>Receiver[]</a></span>
+        <span class="property-type"><a href="#actiongroupsmsreceiver">pulumi.<wbr>Input<pulumi.<wbr>Input<Action<wbr>Group<wbr>Sms<wbr>Receiver<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `sms_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -981,7 +1012,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -990,7 +1021,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#voicereceivers_nodejs" style="color: inherit; text-decoration: inherit;">voice<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupvoicereceiver">Action<wbr>Group<wbr>Voice<wbr>Receiver[]</a></span>
+        <span class="property-type"><a href="#actiongroupvoicereceiver">pulumi.<wbr>Input<pulumi.<wbr>Input<Action<wbr>Group<wbr>Voice<wbr>Receiver<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `voice_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -999,7 +1030,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#webhookreceivers_nodejs" style="color: inherit; text-decoration: inherit;">webhook<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupwebhookreceiver">Action<wbr>Group<wbr>Webhook<wbr>Receiver[]</a></span>
+        <span class="property-type"><a href="#actiongroupwebhookreceiver">pulumi.<wbr>Input<pulumi.<wbr>Input<Action<wbr>Group<wbr>Webhook<wbr>Receiver<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `webhook_receiver` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -1012,7 +1043,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Action Group instance.
 {{% /md %}}</dd><dt class="property-required"
@@ -1021,7 +1052,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#short_name_python" style="color: inherit; text-decoration: inherit;">short_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The short name of the action group. This will be used in SMS messages.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1030,7 +1061,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#arm_role_receivers_python" style="color: inherit; text-decoration: inherit;">arm_<wbr>role_<wbr>receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongrouparmrolereceiver">Sequence[Action<wbr>Group<wbr>Arm<wbr>Role<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#actiongrouparmrolereceiver">Input[Action<wbr>Group<wbr>Arm<wbr>Role<wbr>Receiver<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `arm_role_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1039,7 +1070,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#automation_runbook_receivers_python" style="color: inherit; text-decoration: inherit;">automation_<wbr>runbook_<wbr>receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupautomationrunbookreceiver">Sequence[Action<wbr>Group<wbr>Automation<wbr>Runbook<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#actiongroupautomationrunbookreceiver">Input[Action<wbr>Group<wbr>Automation<wbr>Runbook<wbr>Receiver<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `automation_runbook_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1048,7 +1079,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#azure_app_push_receivers_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>app_<wbr>push_<wbr>receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupazureapppushreceiver">Sequence[Action<wbr>Group<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#actiongroupazureapppushreceiver">Input[Action<wbr>Group<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `azure_app_push_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1057,7 +1088,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#azure_function_receivers_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>function_<wbr>receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupazurefunctionreceiver">Sequence[Action<wbr>Group<wbr>Azure<wbr>Function<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#actiongroupazurefunctionreceiver">Input[Action<wbr>Group<wbr>Azure<wbr>Function<wbr>Receiver<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `azure_function_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1066,7 +1097,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#email_receivers_python" style="color: inherit; text-decoration: inherit;">email_<wbr>receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupemailreceiver">Sequence[Action<wbr>Group<wbr>Email<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#actiongroupemailreceiver">Input[Action<wbr>Group<wbr>Email<wbr>Receiver<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `email_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1075,7 +1106,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1084,7 +1115,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#itsm_receivers_python" style="color: inherit; text-decoration: inherit;">itsm_<wbr>receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupitsmreceiver">Sequence[Action<wbr>Group<wbr>Itsm<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#actiongroupitsmreceiver">Input[Action<wbr>Group<wbr>Itsm<wbr>Receiver<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `itsm_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1093,7 +1124,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#logic_app_receivers_python" style="color: inherit; text-decoration: inherit;">logic_<wbr>app_<wbr>receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongrouplogicappreceiver">Sequence[Action<wbr>Group<wbr>Logic<wbr>App<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#actiongrouplogicappreceiver">Input[Action<wbr>Group<wbr>Logic<wbr>App<wbr>Receiver<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `logic_app_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1102,7 +1133,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Action Group. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1111,7 +1142,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#sms_receivers_python" style="color: inherit; text-decoration: inherit;">sms_<wbr>receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupsmsreceiver">Sequence[Action<wbr>Group<wbr>Sms<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#actiongroupsmsreceiver">Input[Action<wbr>Group<wbr>Sms<wbr>Receiver<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `sms_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1120,7 +1151,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1129,7 +1160,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#voice_receivers_python" style="color: inherit; text-decoration: inherit;">voice_<wbr>receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupvoicereceiver">Sequence[Action<wbr>Group<wbr>Voice<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#actiongroupvoicereceiver">Input[Action<wbr>Group<wbr>Voice<wbr>Receiver<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `voice_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1138,7 +1169,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#webhook_receivers_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupwebhookreceiver">Sequence[Action<wbr>Group<wbr>Webhook<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#actiongroupwebhookreceiver">Input[Action<wbr>Group<wbr>Webhook<wbr>Receiver<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `webhook_receiver` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -1207,20 +1238,37 @@ Get an existing ActionGroup resource's state with the given name, ID, and option
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ActionGroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ActionGroup</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ActionGroupState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ActionGroup</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arm_role_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ActionGroupArmRoleReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">automation_runbook_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ActionGroupAutomationRunbookReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">azure_app_push_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ActionGroupAzureAppPushReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">azure_function_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ActionGroupAzureFunctionReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">email_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ActionGroupEmailReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">itsm_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ActionGroupItsmReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">logic_app_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ActionGroupLogicAppReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">short_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sms_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ActionGroupSmsReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">voice_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ActionGroupVoiceReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">webhook_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ActionGroupWebhookReceiverArgs]]</span> = None<span class="p">) -&gt;</span> ActionGroup</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">arm_role_receivers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ActionGroupArmRoleReceiverArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">automation_runbook_receivers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ActionGroupAutomationRunbookReceiverArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">azure_app_push_receivers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ActionGroupAzureAppPushReceiverArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">azure_function_receivers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ActionGroupAzureFunctionReceiverArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">email_receivers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ActionGroupEmailReceiverArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">itsm_receivers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ActionGroupItsmReceiverArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">logic_app_receivers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ActionGroupLogicAppReceiverArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">short_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">sms_receivers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ActionGroupSmsReceiverArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">voice_receivers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ActionGroupVoiceReceiverArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">webhook_receivers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ActionGroupWebhookReceiverArgs]]]]</span> = None<span class="p">) -&gt;</span> ActionGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetActionGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ActionGroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ActionGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetActionGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ActionGroupState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ActionGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ActionGroup</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ActionGroupState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ActionGroup</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ActionGroupState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1607,7 +1655,7 @@ The following state arguments are supported:
 <a href="#state_armrolereceivers_nodejs" style="color: inherit; text-decoration: inherit;">arm<wbr>Role<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongrouparmrolereceiver">Action<wbr>Group<wbr>Arm<wbr>Role<wbr>Receiver[]</a></span>
+        <span class="property-type"><a href="#actiongrouparmrolereceiver">pulumi.<wbr>Input<pulumi.<wbr>Input<Action<wbr>Group<wbr>Arm<wbr>Role<wbr>Receiver<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `arm_role_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1616,7 +1664,7 @@ The following state arguments are supported:
 <a href="#state_automationrunbookreceivers_nodejs" style="color: inherit; text-decoration: inherit;">automation<wbr>Runbook<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupautomationrunbookreceiver">Action<wbr>Group<wbr>Automation<wbr>Runbook<wbr>Receiver[]</a></span>
+        <span class="property-type"><a href="#actiongroupautomationrunbookreceiver">pulumi.<wbr>Input<pulumi.<wbr>Input<Action<wbr>Group<wbr>Automation<wbr>Runbook<wbr>Receiver<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `automation_runbook_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1625,7 +1673,7 @@ The following state arguments are supported:
 <a href="#state_azureapppushreceivers_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>App<wbr>Push<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupazureapppushreceiver">Action<wbr>Group<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver[]</a></span>
+        <span class="property-type"><a href="#actiongroupazureapppushreceiver">pulumi.<wbr>Input<pulumi.<wbr>Input<Action<wbr>Group<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `azure_app_push_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1634,7 +1682,7 @@ The following state arguments are supported:
 <a href="#state_azurefunctionreceivers_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Function<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupazurefunctionreceiver">Action<wbr>Group<wbr>Azure<wbr>Function<wbr>Receiver[]</a></span>
+        <span class="property-type"><a href="#actiongroupazurefunctionreceiver">pulumi.<wbr>Input<pulumi.<wbr>Input<Action<wbr>Group<wbr>Azure<wbr>Function<wbr>Receiver<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `azure_function_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1643,7 +1691,7 @@ The following state arguments are supported:
 <a href="#state_emailreceivers_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupemailreceiver">Action<wbr>Group<wbr>Email<wbr>Receiver[]</a></span>
+        <span class="property-type"><a href="#actiongroupemailreceiver">pulumi.<wbr>Input<pulumi.<wbr>Input<Action<wbr>Group<wbr>Email<wbr>Receiver<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `email_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1652,7 +1700,7 @@ The following state arguments are supported:
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1661,7 +1709,7 @@ The following state arguments are supported:
 <a href="#state_itsmreceivers_nodejs" style="color: inherit; text-decoration: inherit;">itsm<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupitsmreceiver">Action<wbr>Group<wbr>Itsm<wbr>Receiver[]</a></span>
+        <span class="property-type"><a href="#actiongroupitsmreceiver">pulumi.<wbr>Input<pulumi.<wbr>Input<Action<wbr>Group<wbr>Itsm<wbr>Receiver<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `itsm_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1670,7 +1718,7 @@ The following state arguments are supported:
 <a href="#state_logicappreceivers_nodejs" style="color: inherit; text-decoration: inherit;">logic<wbr>App<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongrouplogicappreceiver">Action<wbr>Group<wbr>Logic<wbr>App<wbr>Receiver[]</a></span>
+        <span class="property-type"><a href="#actiongrouplogicappreceiver">pulumi.<wbr>Input<pulumi.<wbr>Input<Action<wbr>Group<wbr>Logic<wbr>App<wbr>Receiver<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `logic_app_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1679,7 +1727,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Action Group. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1688,7 +1736,7 @@ The following state arguments are supported:
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Action Group instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1697,7 +1745,7 @@ The following state arguments are supported:
 <a href="#state_shortname_nodejs" style="color: inherit; text-decoration: inherit;">short<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The short name of the action group. This will be used in SMS messages.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1706,7 +1754,7 @@ The following state arguments are supported:
 <a href="#state_smsreceivers_nodejs" style="color: inherit; text-decoration: inherit;">sms<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupsmsreceiver">Action<wbr>Group<wbr>Sms<wbr>Receiver[]</a></span>
+        <span class="property-type"><a href="#actiongroupsmsreceiver">pulumi.<wbr>Input<pulumi.<wbr>Input<Action<wbr>Group<wbr>Sms<wbr>Receiver<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `sms_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1715,7 +1763,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1724,7 +1772,7 @@ The following state arguments are supported:
 <a href="#state_voicereceivers_nodejs" style="color: inherit; text-decoration: inherit;">voice<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupvoicereceiver">Action<wbr>Group<wbr>Voice<wbr>Receiver[]</a></span>
+        <span class="property-type"><a href="#actiongroupvoicereceiver">pulumi.<wbr>Input<pulumi.<wbr>Input<Action<wbr>Group<wbr>Voice<wbr>Receiver<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `voice_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1733,7 +1781,7 @@ The following state arguments are supported:
 <a href="#state_webhookreceivers_nodejs" style="color: inherit; text-decoration: inherit;">webhook<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupwebhookreceiver">Action<wbr>Group<wbr>Webhook<wbr>Receiver[]</a></span>
+        <span class="property-type"><a href="#actiongroupwebhookreceiver">pulumi.<wbr>Input<pulumi.<wbr>Input<Action<wbr>Group<wbr>Webhook<wbr>Receiver<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `webhook_receiver` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -1746,7 +1794,7 @@ The following state arguments are supported:
 <a href="#state_arm_role_receivers_python" style="color: inherit; text-decoration: inherit;">arm_<wbr>role_<wbr>receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongrouparmrolereceiver">Sequence[Action<wbr>Group<wbr>Arm<wbr>Role<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#actiongrouparmrolereceiver">Input[Action<wbr>Group<wbr>Arm<wbr>Role<wbr>Receiver<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `arm_role_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1755,7 +1803,7 @@ The following state arguments are supported:
 <a href="#state_automation_runbook_receivers_python" style="color: inherit; text-decoration: inherit;">automation_<wbr>runbook_<wbr>receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupautomationrunbookreceiver">Sequence[Action<wbr>Group<wbr>Automation<wbr>Runbook<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#actiongroupautomationrunbookreceiver">Input[Action<wbr>Group<wbr>Automation<wbr>Runbook<wbr>Receiver<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `automation_runbook_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1764,7 +1812,7 @@ The following state arguments are supported:
 <a href="#state_azure_app_push_receivers_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>app_<wbr>push_<wbr>receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupazureapppushreceiver">Sequence[Action<wbr>Group<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#actiongroupazureapppushreceiver">Input[Action<wbr>Group<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `azure_app_push_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1773,7 +1821,7 @@ The following state arguments are supported:
 <a href="#state_azure_function_receivers_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>function_<wbr>receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupazurefunctionreceiver">Sequence[Action<wbr>Group<wbr>Azure<wbr>Function<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#actiongroupazurefunctionreceiver">Input[Action<wbr>Group<wbr>Azure<wbr>Function<wbr>Receiver<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `azure_function_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1782,7 +1830,7 @@ The following state arguments are supported:
 <a href="#state_email_receivers_python" style="color: inherit; text-decoration: inherit;">email_<wbr>receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupemailreceiver">Sequence[Action<wbr>Group<wbr>Email<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#actiongroupemailreceiver">Input[Action<wbr>Group<wbr>Email<wbr>Receiver<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `email_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1791,7 +1839,7 @@ The following state arguments are supported:
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1800,7 +1848,7 @@ The following state arguments are supported:
 <a href="#state_itsm_receivers_python" style="color: inherit; text-decoration: inherit;">itsm_<wbr>receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupitsmreceiver">Sequence[Action<wbr>Group<wbr>Itsm<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#actiongroupitsmreceiver">Input[Action<wbr>Group<wbr>Itsm<wbr>Receiver<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `itsm_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1809,7 +1857,7 @@ The following state arguments are supported:
 <a href="#state_logic_app_receivers_python" style="color: inherit; text-decoration: inherit;">logic_<wbr>app_<wbr>receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongrouplogicappreceiver">Sequence[Action<wbr>Group<wbr>Logic<wbr>App<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#actiongrouplogicappreceiver">Input[Action<wbr>Group<wbr>Logic<wbr>App<wbr>Receiver<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `logic_app_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1818,7 +1866,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Action Group. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1827,7 +1875,7 @@ The following state arguments are supported:
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Action Group instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1836,7 +1884,7 @@ The following state arguments are supported:
 <a href="#state_short_name_python" style="color: inherit; text-decoration: inherit;">short_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The short name of the action group. This will be used in SMS messages.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1845,7 +1893,7 @@ The following state arguments are supported:
 <a href="#state_sms_receivers_python" style="color: inherit; text-decoration: inherit;">sms_<wbr>receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupsmsreceiver">Sequence[Action<wbr>Group<wbr>Sms<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#actiongroupsmsreceiver">Input[Action<wbr>Group<wbr>Sms<wbr>Receiver<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `sms_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1854,7 +1902,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1863,7 +1911,7 @@ The following state arguments are supported:
 <a href="#state_voice_receivers_python" style="color: inherit; text-decoration: inherit;">voice_<wbr>receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupvoicereceiver">Sequence[Action<wbr>Group<wbr>Voice<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#actiongroupvoicereceiver">Input[Action<wbr>Group<wbr>Voice<wbr>Receiver<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `voice_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1872,7 +1920,7 @@ The following state arguments are supported:
 <a href="#state_webhook_receivers_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupwebhookreceiver">Sequence[Action<wbr>Group<wbr>Webhook<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#actiongroupwebhookreceiver">Input[Action<wbr>Group<wbr>Webhook<wbr>Receiver<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `webhook_receiver` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -1958,7 +2006,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the ARM role receiver.
 {{% /md %}}</dd><dt class="property-required"
@@ -1967,7 +2015,7 @@ The following state arguments are supported:
 <a href="#roleid_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The arm role id.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1976,7 +2024,7 @@ The following state arguments are supported:
 <a href="#usecommonalertschema_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
 {{% /md %}}</dd></dl>
@@ -1989,7 +2037,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the ARM role receiver.
 {{% /md %}}</dd><dt class="property-required"
@@ -1998,7 +2046,7 @@ The following state arguments are supported:
 <a href="#role_id_python" style="color: inherit; text-decoration: inherit;">role_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The arm role id.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2007,7 +2055,7 @@ The following state arguments are supported:
 <a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
 {{% /md %}}</dd></dl>
@@ -2156,7 +2204,7 @@ The following state arguments are supported:
 <a href="#automationaccountid_nodejs" style="color: inherit; text-decoration: inherit;">automation<wbr>Account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The automation account ID which holds this runbook and authenticates to Azure resources.
 {{% /md %}}</dd><dt class="property-required"
@@ -2165,7 +2213,7 @@ The following state arguments are supported:
 <a href="#isglobalrunbook_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Global<wbr>Runbook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether this instance is global runbook.
 {{% /md %}}</dd><dt class="property-required"
@@ -2174,7 +2222,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the automation runbook receiver.
 {{% /md %}}</dd><dt class="property-required"
@@ -2183,7 +2231,7 @@ The following state arguments are supported:
 <a href="#runbookname_nodejs" style="color: inherit; text-decoration: inherit;">runbook<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name for this runbook.
 {{% /md %}}</dd><dt class="property-required"
@@ -2192,7 +2240,7 @@ The following state arguments are supported:
 <a href="#serviceuri_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The URI where webhooks should be sent.
 {{% /md %}}</dd><dt class="property-required"
@@ -2201,7 +2249,7 @@ The following state arguments are supported:
 <a href="#webhookresourceid_nodejs" style="color: inherit; text-decoration: inherit;">webhook<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource id for webhook linked to this runbook.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2210,7 +2258,7 @@ The following state arguments are supported:
 <a href="#usecommonalertschema_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
 {{% /md %}}</dd></dl>
@@ -2223,7 +2271,7 @@ The following state arguments are supported:
 <a href="#automation_account_id_python" style="color: inherit; text-decoration: inherit;">automation_<wbr>account_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The automation account ID which holds this runbook and authenticates to Azure resources.
 {{% /md %}}</dd><dt class="property-required"
@@ -2232,7 +2280,7 @@ The following state arguments are supported:
 <a href="#is_global_runbook_python" style="color: inherit; text-decoration: inherit;">is_<wbr>global_<wbr>runbook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether this instance is global runbook.
 {{% /md %}}</dd><dt class="property-required"
@@ -2241,7 +2289,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the automation runbook receiver.
 {{% /md %}}</dd><dt class="property-required"
@@ -2250,7 +2298,7 @@ The following state arguments are supported:
 <a href="#runbook_name_python" style="color: inherit; text-decoration: inherit;">runbook_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name for this runbook.
 {{% /md %}}</dd><dt class="property-required"
@@ -2259,7 +2307,7 @@ The following state arguments are supported:
 <a href="#service_uri_python" style="color: inherit; text-decoration: inherit;">service_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The URI where webhooks should be sent.
 {{% /md %}}</dd><dt class="property-required"
@@ -2268,7 +2316,7 @@ The following state arguments are supported:
 <a href="#webhook_resource_id_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource id for webhook linked to this runbook.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2277,7 +2325,7 @@ The following state arguments are supported:
 <a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
 {{% /md %}}</dd></dl>
@@ -2336,7 +2384,7 @@ The following state arguments are supported:
 <a href="#emailaddress_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The email address of the user signed into the mobile app who will receive push notifications from this receiver.
 {{% /md %}}</dd><dt class="property-required"
@@ -2345,7 +2393,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Azure app push receiver.
 {{% /md %}}</dd></dl>
@@ -2358,7 +2406,7 @@ The following state arguments are supported:
 <a href="#email_address_python" style="color: inherit; text-decoration: inherit;">email_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The email address of the user signed into the mobile app who will receive push notifications from this receiver.
 {{% /md %}}</dd><dt class="property-required"
@@ -2367,7 +2415,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Azure app push receiver.
 {{% /md %}}</dd></dl>
@@ -2480,7 +2528,7 @@ The following state arguments are supported:
 <a href="#functionappresourceid_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>App<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure resource ID of the function app.
 {{% /md %}}</dd><dt class="property-required"
@@ -2489,7 +2537,7 @@ The following state arguments are supported:
 <a href="#functionname_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The function name in the function app.
 {{% /md %}}</dd><dt class="property-required"
@@ -2498,7 +2546,7 @@ The following state arguments are supported:
 <a href="#httptriggerurl_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Trigger<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The http trigger url where http request sent to.
 {{% /md %}}</dd><dt class="property-required"
@@ -2507,7 +2555,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Azure Function receiver.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2516,7 +2564,7 @@ The following state arguments are supported:
 <a href="#usecommonalertschema_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
 {{% /md %}}</dd></dl>
@@ -2529,7 +2577,7 @@ The following state arguments are supported:
 <a href="#function_app_resource_id_python" style="color: inherit; text-decoration: inherit;">function_<wbr>app_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure resource ID of the function app.
 {{% /md %}}</dd><dt class="property-required"
@@ -2538,7 +2586,7 @@ The following state arguments are supported:
 <a href="#function_name_python" style="color: inherit; text-decoration: inherit;">function_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The function name in the function app.
 {{% /md %}}</dd><dt class="property-required"
@@ -2547,7 +2595,7 @@ The following state arguments are supported:
 <a href="#http_trigger_url_python" style="color: inherit; text-decoration: inherit;">http_<wbr>trigger_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The http trigger url where http request sent to.
 {{% /md %}}</dd><dt class="property-required"
@@ -2556,7 +2604,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Azure Function receiver.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2565,7 +2613,7 @@ The following state arguments are supported:
 <a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
 {{% /md %}}</dd></dl>
@@ -2642,7 +2690,7 @@ The following state arguments are supported:
 <a href="#emailaddress_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The email address of this receiver.
 {{% /md %}}</dd><dt class="property-required"
@@ -2651,7 +2699,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the email receiver. Names must be unique (case-insensitive) across all receivers within an action group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2660,7 +2708,7 @@ The following state arguments are supported:
 <a href="#usecommonalertschema_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
 {{% /md %}}</dd></dl>
@@ -2673,7 +2721,7 @@ The following state arguments are supported:
 <a href="#email_address_python" style="color: inherit; text-decoration: inherit;">email_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The email address of this receiver.
 {{% /md %}}</dd><dt class="property-required"
@@ -2682,7 +2730,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the email receiver. Names must be unique (case-insensitive) across all receivers within an action group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2691,7 +2739,7 @@ The following state arguments are supported:
 <a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
 {{% /md %}}</dd></dl>
@@ -2804,7 +2852,7 @@ The following state arguments are supported:
 <a href="#connectionid_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique connection identifier of the ITSM connection.
 {{% /md %}}</dd><dt class="property-required"
@@ -2813,7 +2861,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the ITSM receiver.
 {{% /md %}}</dd><dt class="property-required"
@@ -2822,7 +2870,7 @@ The following state arguments are supported:
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The region of the workspace.
 {{% /md %}}</dd><dt class="property-required"
@@ -2831,7 +2879,7 @@ The following state arguments are supported:
 <a href="#ticketconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">ticket<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A JSON blob for the configurations of the ITSM action. CreateMultipleWorkItems option will be part of this blob as well.
 {{% /md %}}</dd><dt class="property-required"
@@ -2840,7 +2888,7 @@ The following state arguments are supported:
 <a href="#workspaceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure Log Analytics workspace ID where this connection is defined.
 {{% /md %}}</dd></dl>
@@ -2853,7 +2901,7 @@ The following state arguments are supported:
 <a href="#connection_id_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique connection identifier of the ITSM connection.
 {{% /md %}}</dd><dt class="property-required"
@@ -2862,7 +2910,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the ITSM receiver.
 {{% /md %}}</dd><dt class="property-required"
@@ -2871,7 +2919,7 @@ The following state arguments are supported:
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The region of the workspace.
 {{% /md %}}</dd><dt class="property-required"
@@ -2880,7 +2928,7 @@ The following state arguments are supported:
 <a href="#ticket_configuration_python" style="color: inherit; text-decoration: inherit;">ticket_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A JSON blob for the configurations of the ITSM action. CreateMultipleWorkItems option will be part of this blob as well.
 {{% /md %}}</dd><dt class="property-required"
@@ -2889,7 +2937,7 @@ The following state arguments are supported:
 <a href="#workspace_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure Log Analytics workspace ID where this connection is defined.
 {{% /md %}}</dd></dl>
@@ -2984,7 +3032,7 @@ The following state arguments are supported:
 <a href="#callbackurl_nodejs" style="color: inherit; text-decoration: inherit;">callback<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The callback url where http request sent to.
 {{% /md %}}</dd><dt class="property-required"
@@ -2993,7 +3041,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the logic app receiver.
 {{% /md %}}</dd><dt class="property-required"
@@ -3002,7 +3050,7 @@ The following state arguments are supported:
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure resource ID of the logic app.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3011,7 +3059,7 @@ The following state arguments are supported:
 <a href="#usecommonalertschema_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
 {{% /md %}}</dd></dl>
@@ -3024,7 +3072,7 @@ The following state arguments are supported:
 <a href="#callback_url_python" style="color: inherit; text-decoration: inherit;">callback_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The callback url where http request sent to.
 {{% /md %}}</dd><dt class="property-required"
@@ -3033,7 +3081,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the logic app receiver.
 {{% /md %}}</dd><dt class="property-required"
@@ -3042,7 +3090,7 @@ The following state arguments are supported:
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure resource ID of the logic app.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3051,7 +3099,7 @@ The following state arguments are supported:
 <a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
 {{% /md %}}</dd></dl>
@@ -3128,7 +3176,7 @@ The following state arguments are supported:
 <a href="#countrycode_nodejs" style="color: inherit; text-decoration: inherit;">country<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The country code of the SMS receiver.
 {{% /md %}}</dd><dt class="property-required"
@@ -3137,7 +3185,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the SMS receiver. Names must be unique (case-insensitive) across all receivers within an action group.
 {{% /md %}}</dd><dt class="property-required"
@@ -3146,7 +3194,7 @@ The following state arguments are supported:
 <a href="#phonenumber_nodejs" style="color: inherit; text-decoration: inherit;">phone<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The phone number of the SMS receiver.
 {{% /md %}}</dd></dl>
@@ -3159,7 +3207,7 @@ The following state arguments are supported:
 <a href="#country_code_python" style="color: inherit; text-decoration: inherit;">country_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The country code of the SMS receiver.
 {{% /md %}}</dd><dt class="property-required"
@@ -3168,7 +3216,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the SMS receiver. Names must be unique (case-insensitive) across all receivers within an action group.
 {{% /md %}}</dd><dt class="property-required"
@@ -3177,7 +3225,7 @@ The following state arguments are supported:
 <a href="#phone_number_python" style="color: inherit; text-decoration: inherit;">phone_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The phone number of the SMS receiver.
 {{% /md %}}</dd></dl>
@@ -3254,7 +3302,7 @@ The following state arguments are supported:
 <a href="#countrycode_nodejs" style="color: inherit; text-decoration: inherit;">country<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The country code of the voice receiver.
 {{% /md %}}</dd><dt class="property-required"
@@ -3263,7 +3311,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the voice receiver.
 {{% /md %}}</dd><dt class="property-required"
@@ -3272,7 +3320,7 @@ The following state arguments are supported:
 <a href="#phonenumber_nodejs" style="color: inherit; text-decoration: inherit;">phone<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The phone number of the voice receiver.
 {{% /md %}}</dd></dl>
@@ -3285,7 +3333,7 @@ The following state arguments are supported:
 <a href="#country_code_python" style="color: inherit; text-decoration: inherit;">country_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The country code of the voice receiver.
 {{% /md %}}</dd><dt class="property-required"
@@ -3294,7 +3342,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the voice receiver.
 {{% /md %}}</dd><dt class="property-required"
@@ -3303,7 +3351,7 @@ The following state arguments are supported:
 <a href="#phone_number_python" style="color: inherit; text-decoration: inherit;">phone_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The phone number of the voice receiver.
 {{% /md %}}</dd></dl>
@@ -3398,7 +3446,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.
 {{% /md %}}</dd><dt class="property-required"
@@ -3407,7 +3455,7 @@ The following state arguments are supported:
 <a href="#serviceuri_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The URI where webhooks should be sent.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3416,7 +3464,7 @@ The following state arguments are supported:
 <a href="#aadauth_nodejs" style="color: inherit; text-decoration: inherit;">aad<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupwebhookreceiveraadauth">Action<wbr>Group<wbr>Webhook<wbr>Receiver<wbr>Aad<wbr>Auth</a></span>
+        <span class="property-type"><a href="#actiongroupwebhookreceiveraadauth">pulumi.<wbr>Input<Action<wbr>Group<wbr>Webhook<wbr>Receiver<wbr>Aad<wbr>Auth<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The `aad_auth` block as defined below
 {{% /md %}}</dd><dt class="property-optional"
@@ -3425,7 +3473,7 @@ The following state arguments are supported:
 <a href="#usecommonalertschema_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
 {{% /md %}}</dd></dl>
@@ -3438,7 +3486,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.
 {{% /md %}}</dd><dt class="property-required"
@@ -3447,7 +3495,7 @@ The following state arguments are supported:
 <a href="#service_uri_python" style="color: inherit; text-decoration: inherit;">service_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The URI where webhooks should be sent.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3456,7 +3504,7 @@ The following state arguments are supported:
 <a href="#aad_auth_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupwebhookreceiveraadauth">Action<wbr>Group<wbr>Webhook<wbr>Receiver<wbr>Aad<wbr>Auth<wbr>Args</a></span>
+        <span class="property-type"><a href="#actiongroupwebhookreceiveraadauth">Input[Action<wbr>Group<wbr>Webhook<wbr>Receiver<wbr>Aad<wbr>Auth<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The `aad_auth` block as defined below
 {{% /md %}}</dd><dt class="property-optional"
@@ -3465,7 +3513,7 @@ The following state arguments are supported:
 <a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
 {{% /md %}}</dd></dl>
@@ -3542,7 +3590,7 @@ The following state arguments are supported:
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The webhook application object Id for aad auth.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3551,7 +3599,7 @@ The following state arguments are supported:
 <a href="#identifieruri_nodejs" style="color: inherit; text-decoration: inherit;">identifier<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The identifier uri for aad auth.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3560,7 +3608,7 @@ The following state arguments are supported:
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The tenant id for aad auth.
 {{% /md %}}</dd></dl>
@@ -3573,7 +3621,7 @@ The following state arguments are supported:
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The webhook application object Id for aad auth.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3582,7 +3630,7 @@ The following state arguments are supported:
 <a href="#identifier_uri_python" style="color: inherit; text-decoration: inherit;">identifier_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The identifier uri for aad auth.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3591,7 +3639,7 @@ The following state arguments are supported:
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The tenant id for aad auth.
 {{% /md %}}</dd></dl>

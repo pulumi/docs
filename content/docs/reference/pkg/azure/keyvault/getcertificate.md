@@ -61,8 +61,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/keyvault"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -144,17 +144,20 @@ export const certificateThumbprint = exampleCertificate.then(exampleCertificate 
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCertificate<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetCertificateArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetCertificateResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCertificate<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetCertificateArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetCertificateResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_certificate(</span><span class="nx">key_vault_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetCertificateResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_certificate(</span><span class="nx">key_vault_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetCertificateResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCertificate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupCertificateArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupCertificateResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCertificate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupCertificateArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupCertificateResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupCertificate` in the Go SDK.
 
@@ -163,7 +166,7 @@ export const certificateThumbprint = exampleCertificate.then(exampleCertificate 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetCertificate </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetCertificateResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetCertificateArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetCertificateResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetCertificateArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -694,7 +697,7 @@ The following output properties are available:
 <a href="#issuerparameters_csharp" style="color: inherit; text-decoration: inherit;">Issuer<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificatecertificatepolicyissuerparameter">List&lt;Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Issuer<wbr>Parameter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getcertificatecertificatepolicyissuerparameter">List&lt;Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Issuer<wbr>Parameter&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `issuer_parameters` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -703,7 +706,7 @@ The following output properties are available:
 <a href="#keyproperties_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificatecertificatepolicykeyproperty">List&lt;Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Key<wbr>Property<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getcertificatecertificatepolicykeyproperty">List&lt;Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Key<wbr>Property&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `key_properties` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -712,7 +715,7 @@ The following output properties are available:
 <a href="#secretproperties_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificatecertificatepolicysecretproperty">List&lt;Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Secret<wbr>Property<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getcertificatecertificatepolicysecretproperty">List&lt;Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Secret<wbr>Property&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `secret_properties` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -721,7 +724,7 @@ The following output properties are available:
 <a href="#x509certificateproperties_csharp" style="color: inherit; text-decoration: inherit;">X509Certificate<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificatecertificatepolicyx509certificateproperty">List&lt;Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Property<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getcertificatecertificatepolicyx509certificateproperty">List&lt;Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Property&gt;</a></span>
     </dt>
     <dd>{{% md %}}An `x509_certificate_properties` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -730,7 +733,7 @@ The following output properties are available:
 <a href="#lifetimeactions_csharp" style="color: inherit; text-decoration: inherit;">Lifetime<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificatecertificatepolicylifetimeaction">List&lt;Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getcertificatecertificatepolicylifetimeaction">List&lt;Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `lifetime_action` block as defined below.
 {{% /md %}}</dd></dl>
@@ -841,7 +844,7 @@ The following output properties are available:
 <a href="#issuer_parameters_python" style="color: inherit; text-decoration: inherit;">issuer_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificatecertificatepolicyissuerparameter">Sequence[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Issuer<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getcertificatecertificatepolicyissuerparameter">Sequence[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Issuer<wbr>Parameter]</a></span>
     </dt>
     <dd>{{% md %}}A `issuer_parameters` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -850,7 +853,7 @@ The following output properties are available:
 <a href="#key_properties_python" style="color: inherit; text-decoration: inherit;">key_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificatecertificatepolicykeyproperty">Sequence[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Key<wbr>Property<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getcertificatecertificatepolicykeyproperty">Sequence[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Key<wbr>Property]</a></span>
     </dt>
     <dd>{{% md %}}A `key_properties` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -859,7 +862,7 @@ The following output properties are available:
 <a href="#secret_properties_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificatecertificatepolicysecretproperty">Sequence[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Secret<wbr>Property<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getcertificatecertificatepolicysecretproperty">Sequence[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Secret<wbr>Property]</a></span>
     </dt>
     <dd>{{% md %}}A `secret_properties` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -868,7 +871,7 @@ The following output properties are available:
 <a href="#x509_certificate_properties_python" style="color: inherit; text-decoration: inherit;">x509_<wbr>certificate_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificatecertificatepolicyx509certificateproperty">Sequence[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Property<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getcertificatecertificatepolicyx509certificateproperty">Sequence[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Property]</a></span>
     </dt>
     <dd>{{% md %}}An `x509_certificate_properties` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -877,7 +880,7 @@ The following output properties are available:
 <a href="#lifetime_actions_python" style="color: inherit; text-decoration: inherit;">lifetime_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificatecertificatepolicylifetimeaction">Sequence[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getcertificatecertificatepolicylifetimeaction">Sequence[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action]</a></span>
     </dt>
     <dd>{{% md %}}A `lifetime_action` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1114,7 +1117,7 @@ The following output properties are available:
 <a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificatecertificatepolicylifetimeactionaction">List&lt;Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Action<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getcertificatecertificatepolicylifetimeactionaction">List&lt;Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Action&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `action` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1123,7 +1126,7 @@ The following output properties are available:
 <a href="#triggers_csharp" style="color: inherit; text-decoration: inherit;">Triggers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificatecertificatepolicylifetimeactiontrigger">List&lt;Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Trigger<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getcertificatecertificatepolicylifetimeactiontrigger">List&lt;Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Trigger&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `trigger` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1180,7 +1183,7 @@ The following output properties are available:
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificatecertificatepolicylifetimeactionaction">Sequence[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getcertificatecertificatepolicylifetimeactionaction">Sequence[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Action]</a></span>
     </dt>
     <dd>{{% md %}}A `action` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1189,7 +1192,7 @@ The following output properties are available:
 <a href="#triggers_python" style="color: inherit; text-decoration: inherit;">triggers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificatecertificatepolicylifetimeactiontrigger">Sequence[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Trigger<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getcertificatecertificatepolicylifetimeactiontrigger">Sequence[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Trigger]</a></span>
     </dt>
     <dd>{{% md %}}A `trigger` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1437,7 +1440,7 @@ The following output properties are available:
 <a href="#subjectalternativenames_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Alternative<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificatecertificatepolicyx509certificatepropertysubjectalternativename">List&lt;Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Property<wbr>Subject<wbr>Alternative<wbr>Name<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getcertificatecertificatepolicyx509certificatepropertysubjectalternativename">List&lt;Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Property<wbr>Subject<wbr>Alternative<wbr>Name&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `subject_alternative_names` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1584,7 +1587,7 @@ The following output properties are available:
 <a href="#subject_alternative_names_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>alternative_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificatecertificatepolicyx509certificatepropertysubjectalternativename">Sequence[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Property<wbr>Subject<wbr>Alternative<wbr>Name<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getcertificatecertificatepolicyx509certificatepropertysubjectalternativename">Sequence[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Property<wbr>Subject<wbr>Alternative<wbr>Name]</a></span>
     </dt>
     <dd>{{% md %}}A `subject_alternative_names` block as defined below.
 {{% /md %}}</dd><dt class="property-required"

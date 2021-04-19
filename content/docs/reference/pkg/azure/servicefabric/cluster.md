@@ -72,9 +72,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/servicefabric"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/servicefabric"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -186,19 +186,46 @@ const exampleCluster = new azure.servicefabric.Cluster("exampleCluster", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">add_on_features</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">azure_active_directory</span><span class="p">:</span> <span class="nx">Optional[ClusterAzureActiveDirectoryArgs]</span> = None<span class="p">, </span><span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[ClusterCertificateArgs]</span> = None<span class="p">, </span><span class="nx">certificate_common_names</span><span class="p">:</span> <span class="nx">Optional[ClusterCertificateCommonNamesArgs]</span> = None<span class="p">, </span><span class="nx">client_certificate_common_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterClientCertificateCommonNameArgs]]</span> = None<span class="p">, </span><span class="nx">client_certificate_thumbprints</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterClientCertificateThumbprintArgs]]</span> = None<span class="p">, </span><span class="nx">cluster_code_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">diagnostics_config</span><span class="p">:</span> <span class="nx">Optional[ClusterDiagnosticsConfigArgs]</span> = None<span class="p">, </span><span class="nx">fabric_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterFabricSettingArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterNodeTypeArgs]]</span> = None<span class="p">, </span><span class="nx">reliability_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reverse_proxy_certificate</span><span class="p">:</span> <span class="nx">Optional[ClusterReverseProxyCertificateArgs]</span> = None<span class="p">, </span><span class="nx">reverse_proxy_certificate_common_names</span><span class="p">:</span> <span class="nx">Optional[ClusterReverseProxyCertificateCommonNamesArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">upgrade_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">upgrade_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterUpgradePolicyArgs]</span> = None<span class="p">, </span><span class="nx">vm_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">add_on_features</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+            <span class="nx">azure_active_directory</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterAzureActiveDirectoryArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterCertificateArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">certificate_common_names</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterCertificateCommonNamesArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">client_certificate_common_names</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ClusterClientCertificateCommonNameArgs]]]]</span> = None<span class="p">,</span>
+            <span class="nx">client_certificate_thumbprints</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ClusterClientCertificateThumbprintArgs]]]]</span> = None<span class="p">,</span>
+            <span class="nx">cluster_code_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">diagnostics_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterDiagnosticsConfigArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">fabric_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ClusterFabricSettingArgs]]]]</span> = None<span class="p">,</span>
+            <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">management_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">node_types</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ClusterNodeTypeArgs]]]]</span> = None<span class="p">,</span>
+            <span class="nx">reliability_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">reverse_proxy_certificate</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterReverseProxyCertificateArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">reverse_proxy_certificate_common_names</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterReverseProxyCertificateCommonNamesArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+            <span class="nx">upgrade_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">upgrade_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterUpgradePolicyArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">vm_image</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -233,22 +260,32 @@ const exampleCluster = new azure.servicefabric.Cluster("exampleCluster", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -257,7 +294,7 @@ const exampleCluster = new azure.servicefabric.Cluster("exampleCluster", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -281,7 +318,7 @@ const exampleCluster = new azure.servicefabric.Cluster("exampleCluster", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -720,7 +757,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#managementendpoint_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the Management Endpoint of the cluster such as `http://example.com`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -729,7 +766,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#nodetypes_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodetype">Cluster<wbr>Node<wbr>Type[]</a></span>
+        <span class="property-type"><a href="#clusternodetype">pulumi.<wbr>Input<pulumi.<wbr>Input<Cluster<wbr>Node<wbr>Type<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `node_type` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -738,7 +775,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#reliabilitylevel_nodejs" style="color: inherit; text-decoration: inherit;">reliability<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the Reliability Level of the Cluster. Possible values include `None`, `Bronze`, `Silver`, `Gold` and `Platinum`.
 {{% /md %}}</dd><dt class="property-required"
@@ -747,7 +784,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the Service Fabric Cluster exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -756,7 +793,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#upgrademode_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the Upgrade Mode of the cluster. Possible values are `Automatic` or `Manual`.
 {{% /md %}}</dd><dt class="property-required"
@@ -765,7 +802,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#vmimage_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the Image expected for the Service Fabric Cluster, such as `Windows`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -774,7 +811,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#addonfeatures_nodejs" style="color: inherit; text-decoration: inherit;">add<wbr>On<wbr>Features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A List of one or more features which should be enabled, such as `DnsService`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -783,7 +820,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#azureactivedirectory_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Active<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterazureactivedirectory">Cluster<wbr>Azure<wbr>Active<wbr>Directory</a></span>
+        <span class="property-type"><a href="#clusterazureactivedirectory">pulumi.<wbr>Input<Cluster<wbr>Azure<wbr>Active<wbr>Directory<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}An `azure_active_directory` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -792,7 +829,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercertificate">Cluster<wbr>Certificate</a></span>
+        <span class="property-type"><a href="#clustercertificate">pulumi.<wbr>Input<Cluster<wbr>Certificate<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `certificate` block as defined below. Conflicts with `certificate_common_names`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -801,7 +838,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#certificatecommonnames_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Common<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercertificatecommonnames">Cluster<wbr>Certificate<wbr>Common<wbr>Names</a></span>
+        <span class="property-type"><a href="#clustercertificatecommonnames">pulumi.<wbr>Input<Cluster<wbr>Certificate<wbr>Common<wbr>Names<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `certificate_common_names` block as defined below. Conflicts with `certificate`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -810,7 +847,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#clientcertificatecommonnames_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate<wbr>Common<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclientcertificatecommonname">Cluster<wbr>Client<wbr>Certificate<wbr>Common<wbr>Name[]</a></span>
+        <span class="property-type"><a href="#clusterclientcertificatecommonname">pulumi.<wbr>Input<pulumi.<wbr>Input<Cluster<wbr>Client<wbr>Certificate<wbr>Common<wbr>Name<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A `client_certificate_common_name` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -819,7 +856,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#clientcertificatethumbprints_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate<wbr>Thumbprints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclientcertificatethumbprint">Cluster<wbr>Client<wbr>Certificate<wbr>Thumbprint[]</a></span>
+        <span class="property-type"><a href="#clusterclientcertificatethumbprint">pulumi.<wbr>Input<pulumi.<wbr>Input<Cluster<wbr>Client<wbr>Certificate<wbr>Thumbprint<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `client_certificate_thumbprint` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -828,7 +865,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#clustercodeversion_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Code<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Required if Upgrade Mode set to `Manual`, Specifies the Version of the Cluster Code of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -837,7 +874,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#diagnosticsconfig_nodejs" style="color: inherit; text-decoration: inherit;">diagnostics<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterdiagnosticsconfig">Cluster<wbr>Diagnostics<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusterdiagnosticsconfig">pulumi.<wbr>Input<Cluster<wbr>Diagnostics<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `diagnostics_config` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -846,7 +883,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#fabricsettings_nodejs" style="color: inherit; text-decoration: inherit;">fabric<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterfabricsetting">Cluster<wbr>Fabric<wbr>Setting[]</a></span>
+        <span class="property-type"><a href="#clusterfabricsetting">pulumi.<wbr>Input<pulumi.<wbr>Input<Cluster<wbr>Fabric<wbr>Setting<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `fabric_settings` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -855,7 +892,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region where the Service Fabric Cluster should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -864,7 +901,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Service Fabric Cluster. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -873,7 +910,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#reverseproxycertificate_nodejs" style="color: inherit; text-decoration: inherit;">reverse<wbr>Proxy<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterreverseproxycertificate">Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate</a></span>
+        <span class="property-type"><a href="#clusterreverseproxycertificate">pulumi.<wbr>Input<Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `reverse_proxy_certificate` block as defined below. Conflicts with `reverse_proxy_certificate_common_names`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -882,7 +919,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#reverseproxycertificatecommonnames_nodejs" style="color: inherit; text-decoration: inherit;">reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterreverseproxycertificatecommonnames">Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names</a></span>
+        <span class="property-type"><a href="#clusterreverseproxycertificatecommonnames">pulumi.<wbr>Input<Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `reverse_proxy_certificate_common_names` block as defined below. Conflicts with `reverse_proxy_certificate`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -891,7 +928,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -900,7 +937,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#upgradepolicy_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterupgradepolicy">Cluster<wbr>Upgrade<wbr>Policy</a></span>
+        <span class="property-type"><a href="#clusterupgradepolicy">pulumi.<wbr>Input<Cluster<wbr>Upgrade<wbr>Policy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -912,7 +949,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#management_endpoint_python" style="color: inherit; text-decoration: inherit;">management_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the Management Endpoint of the cluster such as `http://example.com`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -921,7 +958,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#node_types_python" style="color: inherit; text-decoration: inherit;">node_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodetype">Sequence[Cluster<wbr>Node<wbr>Type<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusternodetype">Input[Cluster<wbr>Node<wbr>Type<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `node_type` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -930,7 +967,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#reliability_level_python" style="color: inherit; text-decoration: inherit;">reliability_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the Reliability Level of the Cluster. Possible values include `None`, `Bronze`, `Silver`, `Gold` and `Platinum`.
 {{% /md %}}</dd><dt class="property-required"
@@ -939,7 +976,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the Service Fabric Cluster exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -948,7 +985,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#upgrade_mode_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the Upgrade Mode of the cluster. Possible values are `Automatic` or `Manual`.
 {{% /md %}}</dd><dt class="property-required"
@@ -957,7 +994,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#vm_image_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the Image expected for the Service Fabric Cluster, such as `Windows`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -966,7 +1003,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#add_on_features_python" style="color: inherit; text-decoration: inherit;">add_<wbr>on_<wbr>features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A List of one or more features which should be enabled, such as `DnsService`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -975,7 +1012,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#azure_active_directory_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>active_<wbr>directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterazureactivedirectory">Cluster<wbr>Azure<wbr>Active<wbr>Directory<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterazureactivedirectory">Input[Cluster<wbr>Azure<wbr>Active<wbr>Directory<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An `azure_active_directory` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -984,7 +1021,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercertificate">Cluster<wbr>Certificate<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustercertificate">Input[Cluster<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `certificate` block as defined below. Conflicts with `certificate_common_names`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -993,7 +1030,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#certificate_common_names_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>common_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercertificatecommonnames">Cluster<wbr>Certificate<wbr>Common<wbr>Names<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustercertificatecommonnames">Input[Cluster<wbr>Certificate<wbr>Common<wbr>Names<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `certificate_common_names` block as defined below. Conflicts with `certificate`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1002,7 +1039,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#client_certificate_common_names_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate_<wbr>common_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclientcertificatecommonname">Sequence[Cluster<wbr>Client<wbr>Certificate<wbr>Common<wbr>Name<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterclientcertificatecommonname">Input[Cluster<wbr>Client<wbr>Certificate<wbr>Common<wbr>Name<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A `client_certificate_common_name` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1011,7 +1048,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#client_certificate_thumbprints_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate_<wbr>thumbprints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclientcertificatethumbprint">Sequence[Cluster<wbr>Client<wbr>Certificate<wbr>Thumbprint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterclientcertificatethumbprint">Input[Cluster<wbr>Client<wbr>Certificate<wbr>Thumbprint<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_certificate_thumbprint` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1020,7 +1057,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#cluster_code_version_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>code_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Required if Upgrade Mode set to `Manual`, Specifies the Version of the Cluster Code of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1029,7 +1066,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#diagnostics_config_python" style="color: inherit; text-decoration: inherit;">diagnostics_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterdiagnosticsconfig">Cluster<wbr>Diagnostics<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterdiagnosticsconfig">Input[Cluster<wbr>Diagnostics<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `diagnostics_config` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1038,7 +1075,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#fabric_settings_python" style="color: inherit; text-decoration: inherit;">fabric_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterfabricsetting">Sequence[Cluster<wbr>Fabric<wbr>Setting<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterfabricsetting">Input[Cluster<wbr>Fabric<wbr>Setting<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `fabric_settings` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1047,7 +1084,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region where the Service Fabric Cluster should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1056,7 +1093,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Service Fabric Cluster. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1065,7 +1102,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#reverse_proxy_certificate_python" style="color: inherit; text-decoration: inherit;">reverse_<wbr>proxy_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterreverseproxycertificate">Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterreverseproxycertificate">Input[Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `reverse_proxy_certificate` block as defined below. Conflicts with `reverse_proxy_certificate_common_names`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1074,7 +1111,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#reverse_proxy_certificate_common_names_python" style="color: inherit; text-decoration: inherit;">reverse_<wbr>proxy_<wbr>certificate_<wbr>common_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterreverseproxycertificatecommonnames">Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterreverseproxycertificatecommonnames">Input[Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `reverse_proxy_certificate_common_names` block as defined below. Conflicts with `reverse_proxy_certificate`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1083,7 +1120,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1092,7 +1129,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#upgrade_policy_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterupgradepolicy">Cluster<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterupgradepolicy">Input[Cluster<wbr>Upgrade<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1196,20 +1233,44 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ClusterState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Cluster</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ClusterState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Cluster</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">add_on_features</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">azure_active_directory</span><span class="p">:</span> <span class="nx">Optional[ClusterAzureActiveDirectoryArgs]</span> = None<span class="p">, </span><span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[ClusterCertificateArgs]</span> = None<span class="p">, </span><span class="nx">certificate_common_names</span><span class="p">:</span> <span class="nx">Optional[ClusterCertificateCommonNamesArgs]</span> = None<span class="p">, </span><span class="nx">client_certificate_common_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterClientCertificateCommonNameArgs]]</span> = None<span class="p">, </span><span class="nx">client_certificate_thumbprints</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterClientCertificateThumbprintArgs]]</span> = None<span class="p">, </span><span class="nx">cluster_code_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">diagnostics_config</span><span class="p">:</span> <span class="nx">Optional[ClusterDiagnosticsConfigArgs]</span> = None<span class="p">, </span><span class="nx">fabric_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterFabricSettingArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterNodeTypeArgs]]</span> = None<span class="p">, </span><span class="nx">reliability_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reverse_proxy_certificate</span><span class="p">:</span> <span class="nx">Optional[ClusterReverseProxyCertificateArgs]</span> = None<span class="p">, </span><span class="nx">reverse_proxy_certificate_common_names</span><span class="p">:</span> <span class="nx">Optional[ClusterReverseProxyCertificateCommonNamesArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">upgrade_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">upgrade_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterUpgradePolicyArgs]</span> = None<span class="p">, </span><span class="nx">vm_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">add_on_features</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">azure_active_directory</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterAzureActiveDirectoryArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterCertificateArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">certificate_common_names</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterCertificateCommonNamesArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">client_certificate_common_names</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ClusterClientCertificateCommonNameArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">client_certificate_thumbprints</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ClusterClientCertificateThumbprintArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">cluster_code_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">cluster_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">diagnostics_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterDiagnosticsConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">fabric_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ClusterFabricSettingArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">management_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">node_types</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ClusterNodeTypeArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">reliability_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">reverse_proxy_certificate</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterReverseProxyCertificateArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">reverse_proxy_certificate_common_names</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterReverseProxyCertificateCommonNamesArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">upgrade_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">upgrade_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterUpgradePolicyArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">vm_image</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ClusterState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ClusterState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Cluster</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ClusterState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Cluster</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ClusterState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1720,7 +1781,7 @@ The following state arguments are supported:
 <a href="#state_addonfeatures_nodejs" style="color: inherit; text-decoration: inherit;">add<wbr>On<wbr>Features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A List of one or more features which should be enabled, such as `DnsService`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1729,7 +1790,7 @@ The following state arguments are supported:
 <a href="#state_azureactivedirectory_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Active<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterazureactivedirectory">Cluster<wbr>Azure<wbr>Active<wbr>Directory</a></span>
+        <span class="property-type"><a href="#clusterazureactivedirectory">pulumi.<wbr>Input<Cluster<wbr>Azure<wbr>Active<wbr>Directory<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}An `azure_active_directory` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1738,7 +1799,7 @@ The following state arguments are supported:
 <a href="#state_certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercertificate">Cluster<wbr>Certificate</a></span>
+        <span class="property-type"><a href="#clustercertificate">pulumi.<wbr>Input<Cluster<wbr>Certificate<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `certificate` block as defined below. Conflicts with `certificate_common_names`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1747,7 +1808,7 @@ The following state arguments are supported:
 <a href="#state_certificatecommonnames_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Common<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercertificatecommonnames">Cluster<wbr>Certificate<wbr>Common<wbr>Names</a></span>
+        <span class="property-type"><a href="#clustercertificatecommonnames">pulumi.<wbr>Input<Cluster<wbr>Certificate<wbr>Common<wbr>Names<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `certificate_common_names` block as defined below. Conflicts with `certificate`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1756,7 +1817,7 @@ The following state arguments are supported:
 <a href="#state_clientcertificatecommonnames_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate<wbr>Common<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclientcertificatecommonname">Cluster<wbr>Client<wbr>Certificate<wbr>Common<wbr>Name[]</a></span>
+        <span class="property-type"><a href="#clusterclientcertificatecommonname">pulumi.<wbr>Input<pulumi.<wbr>Input<Cluster<wbr>Client<wbr>Certificate<wbr>Common<wbr>Name<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A `client_certificate_common_name` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1765,7 +1826,7 @@ The following state arguments are supported:
 <a href="#state_clientcertificatethumbprints_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate<wbr>Thumbprints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclientcertificatethumbprint">Cluster<wbr>Client<wbr>Certificate<wbr>Thumbprint[]</a></span>
+        <span class="property-type"><a href="#clusterclientcertificatethumbprint">pulumi.<wbr>Input<pulumi.<wbr>Input<Cluster<wbr>Client<wbr>Certificate<wbr>Thumbprint<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `client_certificate_thumbprint` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1774,7 +1835,7 @@ The following state arguments are supported:
 <a href="#state_clustercodeversion_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Code<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Required if Upgrade Mode set to `Manual`, Specifies the Version of the Cluster Code of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1783,7 +1844,7 @@ The following state arguments are supported:
 <a href="#state_clusterendpoint_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Cluster Endpoint for this Service Fabric Cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1792,7 +1853,7 @@ The following state arguments are supported:
 <a href="#state_diagnosticsconfig_nodejs" style="color: inherit; text-decoration: inherit;">diagnostics<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterdiagnosticsconfig">Cluster<wbr>Diagnostics<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusterdiagnosticsconfig">pulumi.<wbr>Input<Cluster<wbr>Diagnostics<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `diagnostics_config` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1801,7 +1862,7 @@ The following state arguments are supported:
 <a href="#state_fabricsettings_nodejs" style="color: inherit; text-decoration: inherit;">fabric<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterfabricsetting">Cluster<wbr>Fabric<wbr>Setting[]</a></span>
+        <span class="property-type"><a href="#clusterfabricsetting">pulumi.<wbr>Input<pulumi.<wbr>Input<Cluster<wbr>Fabric<wbr>Setting<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `fabric_settings` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1810,7 +1871,7 @@ The following state arguments are supported:
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region where the Service Fabric Cluster should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1819,7 +1880,7 @@ The following state arguments are supported:
 <a href="#state_managementendpoint_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the Management Endpoint of the cluster such as `http://example.com`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1828,7 +1889,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Service Fabric Cluster. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1837,7 +1898,7 @@ The following state arguments are supported:
 <a href="#state_nodetypes_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodetype">Cluster<wbr>Node<wbr>Type[]</a></span>
+        <span class="property-type"><a href="#clusternodetype">pulumi.<wbr>Input<pulumi.<wbr>Input<Cluster<wbr>Node<wbr>Type<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `node_type` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1846,7 +1907,7 @@ The following state arguments are supported:
 <a href="#state_reliabilitylevel_nodejs" style="color: inherit; text-decoration: inherit;">reliability<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the Reliability Level of the Cluster. Possible values include `None`, `Bronze`, `Silver`, `Gold` and `Platinum`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1855,7 +1916,7 @@ The following state arguments are supported:
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the Service Fabric Cluster exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1864,7 +1925,7 @@ The following state arguments are supported:
 <a href="#state_reverseproxycertificate_nodejs" style="color: inherit; text-decoration: inherit;">reverse<wbr>Proxy<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterreverseproxycertificate">Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate</a></span>
+        <span class="property-type"><a href="#clusterreverseproxycertificate">pulumi.<wbr>Input<Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `reverse_proxy_certificate` block as defined below. Conflicts with `reverse_proxy_certificate_common_names`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1873,7 +1934,7 @@ The following state arguments are supported:
 <a href="#state_reverseproxycertificatecommonnames_nodejs" style="color: inherit; text-decoration: inherit;">reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterreverseproxycertificatecommonnames">Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names</a></span>
+        <span class="property-type"><a href="#clusterreverseproxycertificatecommonnames">pulumi.<wbr>Input<Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `reverse_proxy_certificate_common_names` block as defined below. Conflicts with `reverse_proxy_certificate`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1882,7 +1943,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1891,7 +1952,7 @@ The following state arguments are supported:
 <a href="#state_upgrademode_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the Upgrade Mode of the cluster. Possible values are `Automatic` or `Manual`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1900,7 +1961,7 @@ The following state arguments are supported:
 <a href="#state_upgradepolicy_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterupgradepolicy">Cluster<wbr>Upgrade<wbr>Policy</a></span>
+        <span class="property-type"><a href="#clusterupgradepolicy">pulumi.<wbr>Input<Cluster<wbr>Upgrade<wbr>Policy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1908,7 +1969,7 @@ The following state arguments are supported:
 <a href="#state_vmimage_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the Image expected for the Service Fabric Cluster, such as `Windows`. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -1921,7 +1982,7 @@ The following state arguments are supported:
 <a href="#state_add_on_features_python" style="color: inherit; text-decoration: inherit;">add_<wbr>on_<wbr>features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A List of one or more features which should be enabled, such as `DnsService`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1930,7 +1991,7 @@ The following state arguments are supported:
 <a href="#state_azure_active_directory_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>active_<wbr>directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterazureactivedirectory">Cluster<wbr>Azure<wbr>Active<wbr>Directory<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterazureactivedirectory">Input[Cluster<wbr>Azure<wbr>Active<wbr>Directory<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An `azure_active_directory` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1939,7 +2000,7 @@ The following state arguments are supported:
 <a href="#state_certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercertificate">Cluster<wbr>Certificate<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustercertificate">Input[Cluster<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `certificate` block as defined below. Conflicts with `certificate_common_names`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1948,7 +2009,7 @@ The following state arguments are supported:
 <a href="#state_certificate_common_names_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>common_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercertificatecommonnames">Cluster<wbr>Certificate<wbr>Common<wbr>Names<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustercertificatecommonnames">Input[Cluster<wbr>Certificate<wbr>Common<wbr>Names<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `certificate_common_names` block as defined below. Conflicts with `certificate`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1957,7 +2018,7 @@ The following state arguments are supported:
 <a href="#state_client_certificate_common_names_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate_<wbr>common_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclientcertificatecommonname">Sequence[Cluster<wbr>Client<wbr>Certificate<wbr>Common<wbr>Name<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterclientcertificatecommonname">Input[Cluster<wbr>Client<wbr>Certificate<wbr>Common<wbr>Name<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A `client_certificate_common_name` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1966,7 +2027,7 @@ The following state arguments are supported:
 <a href="#state_client_certificate_thumbprints_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate_<wbr>thumbprints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclientcertificatethumbprint">Sequence[Cluster<wbr>Client<wbr>Certificate<wbr>Thumbprint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterclientcertificatethumbprint">Input[Cluster<wbr>Client<wbr>Certificate<wbr>Thumbprint<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_certificate_thumbprint` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1975,7 +2036,7 @@ The following state arguments are supported:
 <a href="#state_cluster_code_version_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>code_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Required if Upgrade Mode set to `Manual`, Specifies the Version of the Cluster Code of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1984,7 +2045,7 @@ The following state arguments are supported:
 <a href="#state_cluster_endpoint_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Cluster Endpoint for this Service Fabric Cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1993,7 +2054,7 @@ The following state arguments are supported:
 <a href="#state_diagnostics_config_python" style="color: inherit; text-decoration: inherit;">diagnostics_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterdiagnosticsconfig">Cluster<wbr>Diagnostics<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterdiagnosticsconfig">Input[Cluster<wbr>Diagnostics<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `diagnostics_config` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2002,7 +2063,7 @@ The following state arguments are supported:
 <a href="#state_fabric_settings_python" style="color: inherit; text-decoration: inherit;">fabric_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterfabricsetting">Sequence[Cluster<wbr>Fabric<wbr>Setting<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterfabricsetting">Input[Cluster<wbr>Fabric<wbr>Setting<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `fabric_settings` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2011,7 +2072,7 @@ The following state arguments are supported:
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region where the Service Fabric Cluster should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2020,7 +2081,7 @@ The following state arguments are supported:
 <a href="#state_management_endpoint_python" style="color: inherit; text-decoration: inherit;">management_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the Management Endpoint of the cluster such as `http://example.com`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2029,7 +2090,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Service Fabric Cluster. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2038,7 +2099,7 @@ The following state arguments are supported:
 <a href="#state_node_types_python" style="color: inherit; text-decoration: inherit;">node_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodetype">Sequence[Cluster<wbr>Node<wbr>Type<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusternodetype">Input[Cluster<wbr>Node<wbr>Type<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `node_type` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2047,7 +2108,7 @@ The following state arguments are supported:
 <a href="#state_reliability_level_python" style="color: inherit; text-decoration: inherit;">reliability_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the Reliability Level of the Cluster. Possible values include `None`, `Bronze`, `Silver`, `Gold` and `Platinum`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2056,7 +2117,7 @@ The following state arguments are supported:
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the Service Fabric Cluster exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2065,7 +2126,7 @@ The following state arguments are supported:
 <a href="#state_reverse_proxy_certificate_python" style="color: inherit; text-decoration: inherit;">reverse_<wbr>proxy_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterreverseproxycertificate">Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterreverseproxycertificate">Input[Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `reverse_proxy_certificate` block as defined below. Conflicts with `reverse_proxy_certificate_common_names`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2074,7 +2135,7 @@ The following state arguments are supported:
 <a href="#state_reverse_proxy_certificate_common_names_python" style="color: inherit; text-decoration: inherit;">reverse_<wbr>proxy_<wbr>certificate_<wbr>common_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterreverseproxycertificatecommonnames">Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterreverseproxycertificatecommonnames">Input[Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `reverse_proxy_certificate_common_names` block as defined below. Conflicts with `reverse_proxy_certificate`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2083,7 +2144,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2092,7 +2153,7 @@ The following state arguments are supported:
 <a href="#state_upgrade_mode_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the Upgrade Mode of the cluster. Possible values are `Automatic` or `Manual`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2101,7 +2162,7 @@ The following state arguments are supported:
 <a href="#state_upgrade_policy_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterupgradepolicy">Cluster<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterupgradepolicy">Input[Cluster<wbr>Upgrade<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2109,7 +2170,7 @@ The following state arguments are supported:
 <a href="#state_vm_image_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the Image expected for the Service Fabric Cluster, such as `Windows`. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2195,7 +2256,7 @@ The following state arguments are supported:
 <a href="#clientapplicationid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Application<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory Client ID which should be used for the Client Application.
 {{% /md %}}</dd><dt class="property-required"
@@ -2204,7 +2265,7 @@ The following state arguments are supported:
 <a href="#clusterapplicationid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Application<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory Cluster Application ID.
 {{% /md %}}</dd><dt class="property-required"
@@ -2213,7 +2274,7 @@ The following state arguments are supported:
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory Tenant ID.
 {{% /md %}}</dd></dl>
@@ -2226,7 +2287,7 @@ The following state arguments are supported:
 <a href="#client_application_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>application_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory Client ID which should be used for the Client Application.
 {{% /md %}}</dd><dt class="property-required"
@@ -2235,7 +2296,7 @@ The following state arguments are supported:
 <a href="#cluster_application_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>application_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory Cluster Application ID.
 {{% /md %}}</dd><dt class="property-required"
@@ -2244,7 +2305,7 @@ The following state arguments are supported:
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory Tenant ID.
 {{% /md %}}</dd></dl>
@@ -2321,7 +2382,7 @@ The following state arguments are supported:
 <a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Thumbprint of the Certificate.
 {{% /md %}}</dd><dt class="property-required"
@@ -2330,7 +2391,7 @@ The following state arguments are supported:
 <a href="#x509storename_nodejs" style="color: inherit; text-decoration: inherit;">x509Store<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The X509 Store where the Certificate Exists, such as `My`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2339,7 +2400,7 @@ The following state arguments are supported:
 <a href="#thumbprintsecondary_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint<wbr>Secondary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Secondary Thumbprint of the Certificate.
 {{% /md %}}</dd></dl>
@@ -2352,7 +2413,7 @@ The following state arguments are supported:
 <a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Thumbprint of the Certificate.
 {{% /md %}}</dd><dt class="property-required"
@@ -2361,7 +2422,7 @@ The following state arguments are supported:
 <a href="#x509_store_name_python" style="color: inherit; text-decoration: inherit;">x509_<wbr>store_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The X509 Store where the Certificate Exists, such as `My`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2370,7 +2431,7 @@ The following state arguments are supported:
 <a href="#thumbprint_secondary_python" style="color: inherit; text-decoration: inherit;">thumbprint_<wbr>secondary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Secondary Thumbprint of the Certificate.
 {{% /md %}}</dd></dl>
@@ -2429,7 +2490,7 @@ The following state arguments are supported:
 <a href="#commonnames_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercertificatecommonnamescommonname">Cluster<wbr>Certificate<wbr>Common<wbr>Names<wbr>Common<wbr>Name[]</a></span>
+        <span class="property-type"><a href="#clustercertificatecommonnamescommonname">pulumi.<wbr>Input<pulumi.<wbr>Input<Cluster<wbr>Certificate<wbr>Common<wbr>Names<wbr>Common<wbr>Name<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A `common_names` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -2438,7 +2499,7 @@ The following state arguments are supported:
 <a href="#x509storename_nodejs" style="color: inherit; text-decoration: inherit;">x509Store<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The X509 Store where the Certificate Exists, such as `My`.
 {{% /md %}}</dd></dl>
@@ -2451,7 +2512,7 @@ The following state arguments are supported:
 <a href="#common_names_python" style="color: inherit; text-decoration: inherit;">common_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercertificatecommonnamescommonname">Sequence[Cluster<wbr>Certificate<wbr>Common<wbr>Names<wbr>Common<wbr>Name<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustercertificatecommonnamescommonname">Input[Cluster<wbr>Certificate<wbr>Common<wbr>Names<wbr>Common<wbr>Name<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A `common_names` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -2460,7 +2521,7 @@ The following state arguments are supported:
 <a href="#x509_store_name_python" style="color: inherit; text-decoration: inherit;">x509_<wbr>store_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The X509 Store where the Certificate Exists, such as `My`.
 {{% /md %}}</dd></dl>
@@ -2519,7 +2580,7 @@ The following state arguments are supported:
 <a href="#certificatecommonname_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Common<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The common or subject name of the certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2528,7 +2589,7 @@ The following state arguments are supported:
 <a href="#certificateissuerthumbprint_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Issuer<wbr>Thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Issuer Thumbprint of the Certificate.
 {{% /md %}}</dd></dl>
@@ -2541,7 +2602,7 @@ The following state arguments are supported:
 <a href="#certificate_common_name_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>common_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The common or subject name of the certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2550,7 +2611,7 @@ The following state arguments are supported:
 <a href="#certificate_issuer_thumbprint_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>issuer_<wbr>thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Issuer Thumbprint of the Certificate.
 {{% /md %}}</dd></dl>
@@ -2625,7 +2686,7 @@ The following state arguments are supported:
 <a href="#commonname_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The common or subject name of the certificate.
 {{% /md %}}</dd><dt class="property-required"
@@ -2634,7 +2695,7 @@ The following state arguments are supported:
 <a href="#isadmin_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Admin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Does the Client Certificate have Admin Access to the cluster? Non-admin clients can only perform read only operations on the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2643,7 +2704,7 @@ The following state arguments are supported:
 <a href="#issuerthumbprint_nodejs" style="color: inherit; text-decoration: inherit;">issuer<wbr>Thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2655,7 +2716,7 @@ The following state arguments are supported:
 <a href="#common_name_python" style="color: inherit; text-decoration: inherit;">common_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The common or subject name of the certificate.
 {{% /md %}}</dd><dt class="property-required"
@@ -2664,7 +2725,7 @@ The following state arguments are supported:
 <a href="#is_admin_python" style="color: inherit; text-decoration: inherit;">is_<wbr>admin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Does the Client Certificate have Admin Access to the cluster? Non-admin clients can only perform read only operations on the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2673,7 +2734,7 @@ The following state arguments are supported:
 <a href="#issuer_thumbprint_python" style="color: inherit; text-decoration: inherit;">issuer_<wbr>thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2731,7 +2792,7 @@ The following state arguments are supported:
 <a href="#isadmin_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Admin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Does the Client Certificate have Admin Access to the cluster? Non-admin clients can only perform read only operations on the cluster.
 {{% /md %}}</dd><dt class="property-required"
@@ -2740,7 +2801,7 @@ The following state arguments are supported:
 <a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Thumbprint associated with the Client Certificate.
 {{% /md %}}</dd></dl>
@@ -2753,7 +2814,7 @@ The following state arguments are supported:
 <a href="#is_admin_python" style="color: inherit; text-decoration: inherit;">is_<wbr>admin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Does the Client Certificate have Admin Access to the cluster? Non-admin clients can only perform read only operations on the cluster.
 {{% /md %}}</dd><dt class="property-required"
@@ -2762,7 +2823,7 @@ The following state arguments are supported:
 <a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Thumbprint associated with the Client Certificate.
 {{% /md %}}</dd></dl>
@@ -2875,7 +2936,7 @@ The following state arguments are supported:
 <a href="#blobendpoint_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Blob Endpoint of the Storage Account.
 {{% /md %}}</dd><dt class="property-required"
@@ -2884,7 +2945,7 @@ The following state arguments are supported:
 <a href="#protectedaccountkeyname_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Account<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The protected diagnostics storage key name, such as `StorageAccountKey1`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2893,7 +2954,7 @@ The following state arguments are supported:
 <a href="#queueendpoint_nodejs" style="color: inherit; text-decoration: inherit;">queue<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Queue Endpoint of the Storage Account.
 {{% /md %}}</dd><dt class="property-required"
@@ -2902,7 +2963,7 @@ The following state arguments are supported:
 <a href="#storageaccountname_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Storage Account where the Diagnostics should be sent to.
 {{% /md %}}</dd><dt class="property-required"
@@ -2911,7 +2972,7 @@ The following state arguments are supported:
 <a href="#tableendpoint_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Table Endpoint of the Storage Account.
 {{% /md %}}</dd></dl>
@@ -2924,7 +2985,7 @@ The following state arguments are supported:
 <a href="#blob_endpoint_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Blob Endpoint of the Storage Account.
 {{% /md %}}</dd><dt class="property-required"
@@ -2933,7 +2994,7 @@ The following state arguments are supported:
 <a href="#protected_account_key_name_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>account_<wbr>key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The protected diagnostics storage key name, such as `StorageAccountKey1`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2942,7 +3003,7 @@ The following state arguments are supported:
 <a href="#queue_endpoint_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Queue Endpoint of the Storage Account.
 {{% /md %}}</dd><dt class="property-required"
@@ -2951,7 +3012,7 @@ The following state arguments are supported:
 <a href="#storage_account_name_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Storage Account where the Diagnostics should be sent to.
 {{% /md %}}</dd><dt class="property-required"
@@ -2960,7 +3021,7 @@ The following state arguments are supported:
 <a href="#table_endpoint_python" style="color: inherit; text-decoration: inherit;">table_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Table Endpoint of the Storage Account.
 {{% /md %}}</dd></dl>
@@ -3019,7 +3080,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Fabric Setting, such as `Security` or `Federation`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3028,7 +3089,7 @@ The following state arguments are supported:
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A map containing settings for the specified Fabric Setting.
 {{% /md %}}</dd></dl>
@@ -3041,7 +3102,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Fabric Setting, such as `Security` or `Federation`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3050,7 +3111,7 @@ The following state arguments are supported:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A map containing settings for the specified Fabric Setting.
 {{% /md %}}</dd></dl>
@@ -3271,7 +3332,7 @@ The following state arguments are supported:
 <a href="#clientendpointport_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Endpoint<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The Port used for the Client Endpoint for this Node Type. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -3280,7 +3341,7 @@ The following state arguments are supported:
 <a href="#httpendpointport_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Endpoint<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The Port used for the HTTP Endpoint for this Node Type. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -3289,7 +3350,7 @@ The following state arguments are supported:
 <a href="#instancecount_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of nodes for this Node Type.
 {{% /md %}}</dd><dt class="property-required"
@@ -3298,7 +3359,7 @@ The following state arguments are supported:
 <a href="#isprimary_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Primary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Is this the Primary Node Type? Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -3307,7 +3368,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Node Type. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3316,7 +3377,7 @@ The following state arguments are supported:
 <a href="#applicationports_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodetypeapplicationports">Cluster<wbr>Node<wbr>Type<wbr>Application<wbr>Ports</a></span>
+        <span class="property-type"><a href="#clusternodetypeapplicationports">pulumi.<wbr>Input<Cluster<wbr>Node<wbr>Type<wbr>Application<wbr>Ports<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `application_ports` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3325,7 +3386,7 @@ The following state arguments are supported:
 <a href="#capacities_nodejs" style="color: inherit; text-decoration: inherit;">capacities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much resource a node has.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3334,7 +3395,7 @@ The following state arguments are supported:
 <a href="#durabilitylevel_nodejs" style="color: inherit; text-decoration: inherit;">durability<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Durability Level for this Node Type. Possible values include `Bronze`, `Gold` and `Silver`. Defaults to `Bronze`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3343,7 +3404,7 @@ The following state arguments are supported:
 <a href="#ephemeralports_nodejs" style="color: inherit; text-decoration: inherit;">ephemeral<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodetypeephemeralports">Cluster<wbr>Node<wbr>Type<wbr>Ephemeral<wbr>Ports</a></span>
+        <span class="property-type"><a href="#clusternodetypeephemeralports">pulumi.<wbr>Input<Cluster<wbr>Node<wbr>Type<wbr>Ephemeral<wbr>Ports<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `ephemeral_ports` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3352,7 +3413,7 @@ The following state arguments are supported:
 <a href="#placementproperties_nodejs" style="color: inherit; text-decoration: inherit;">placement<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3361,7 +3422,7 @@ The following state arguments are supported:
 <a href="#reverseproxyendpointport_nodejs" style="color: inherit; text-decoration: inherit;">reverse<wbr>Proxy<wbr>Endpoint<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The Port used for the Reverse Proxy Endpoint  for this Node Type. Changing this will upgrade the cluster.
 {{% /md %}}</dd></dl>
@@ -3374,7 +3435,7 @@ The following state arguments are supported:
 <a href="#client_endpoint_port_python" style="color: inherit; text-decoration: inherit;">client_<wbr>endpoint_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The Port used for the Client Endpoint for this Node Type. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -3383,7 +3444,7 @@ The following state arguments are supported:
 <a href="#http_endpoint_port_python" style="color: inherit; text-decoration: inherit;">http_<wbr>endpoint_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The Port used for the HTTP Endpoint for this Node Type. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -3392,7 +3453,7 @@ The following state arguments are supported:
 <a href="#instance_count_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of nodes for this Node Type.
 {{% /md %}}</dd><dt class="property-required"
@@ -3401,7 +3462,7 @@ The following state arguments are supported:
 <a href="#is_primary_python" style="color: inherit; text-decoration: inherit;">is_<wbr>primary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Is this the Primary Node Type? Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -3410,7 +3471,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Node Type. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3419,7 +3480,7 @@ The following state arguments are supported:
 <a href="#application_ports_python" style="color: inherit; text-decoration: inherit;">application_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodetypeapplicationports">Cluster<wbr>Node<wbr>Type<wbr>Application<wbr>Ports<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodetypeapplicationports">Input[Cluster<wbr>Node<wbr>Type<wbr>Application<wbr>Ports<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `application_ports` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3428,7 +3489,7 @@ The following state arguments are supported:
 <a href="#capacities_python" style="color: inherit; text-decoration: inherit;">capacities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much resource a node has.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3437,7 +3498,7 @@ The following state arguments are supported:
 <a href="#durability_level_python" style="color: inherit; text-decoration: inherit;">durability_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Durability Level for this Node Type. Possible values include `Bronze`, `Gold` and `Silver`. Defaults to `Bronze`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3446,7 +3507,7 @@ The following state arguments are supported:
 <a href="#ephemeral_ports_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodetypeephemeralports">Cluster<wbr>Node<wbr>Type<wbr>Ephemeral<wbr>Ports<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodetypeephemeralports">Input[Cluster<wbr>Node<wbr>Type<wbr>Ephemeral<wbr>Ports<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `ephemeral_ports` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3455,7 +3516,7 @@ The following state arguments are supported:
 <a href="#placement_properties_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3464,7 +3525,7 @@ The following state arguments are supported:
 <a href="#reverse_proxy_endpoint_port_python" style="color: inherit; text-decoration: inherit;">reverse_<wbr>proxy_<wbr>endpoint_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The Port used for the Reverse Proxy Endpoint  for this Node Type. Changing this will upgrade the cluster.
 {{% /md %}}</dd></dl>
@@ -3523,7 +3584,7 @@ The following state arguments are supported:
 <a href="#endport_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The end of the Application Port Range on this Node Type.
 {{% /md %}}</dd><dt class="property-required"
@@ -3532,7 +3593,7 @@ The following state arguments are supported:
 <a href="#startport_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The start of the Application Port Range on this Node Type.
 {{% /md %}}</dd></dl>
@@ -3545,7 +3606,7 @@ The following state arguments are supported:
 <a href="#end_port_python" style="color: inherit; text-decoration: inherit;">end_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The end of the Application Port Range on this Node Type.
 {{% /md %}}</dd><dt class="property-required"
@@ -3554,7 +3615,7 @@ The following state arguments are supported:
 <a href="#start_port_python" style="color: inherit; text-decoration: inherit;">start_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The start of the Application Port Range on this Node Type.
 {{% /md %}}</dd></dl>
@@ -3613,7 +3674,7 @@ The following state arguments are supported:
 <a href="#endport_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The end of the Ephemeral Port Range on this Node Type.
 {{% /md %}}</dd><dt class="property-required"
@@ -3622,7 +3683,7 @@ The following state arguments are supported:
 <a href="#startport_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The start of the Ephemeral Port Range on this Node Type.
 {{% /md %}}</dd></dl>
@@ -3635,7 +3696,7 @@ The following state arguments are supported:
 <a href="#end_port_python" style="color: inherit; text-decoration: inherit;">end_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The end of the Ephemeral Port Range on this Node Type.
 {{% /md %}}</dd><dt class="property-required"
@@ -3644,7 +3705,7 @@ The following state arguments are supported:
 <a href="#start_port_python" style="color: inherit; text-decoration: inherit;">start_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The start of the Ephemeral Port Range on this Node Type.
 {{% /md %}}</dd></dl>
@@ -3721,7 +3782,7 @@ The following state arguments are supported:
 <a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Thumbprint of the Certificate.
 {{% /md %}}</dd><dt class="property-required"
@@ -3730,7 +3791,7 @@ The following state arguments are supported:
 <a href="#x509storename_nodejs" style="color: inherit; text-decoration: inherit;">x509Store<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The X509 Store where the Certificate Exists, such as `My`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3739,7 +3800,7 @@ The following state arguments are supported:
 <a href="#thumbprintsecondary_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint<wbr>Secondary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Secondary Thumbprint of the Certificate.
 {{% /md %}}</dd></dl>
@@ -3752,7 +3813,7 @@ The following state arguments are supported:
 <a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Thumbprint of the Certificate.
 {{% /md %}}</dd><dt class="property-required"
@@ -3761,7 +3822,7 @@ The following state arguments are supported:
 <a href="#x509_store_name_python" style="color: inherit; text-decoration: inherit;">x509_<wbr>store_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The X509 Store where the Certificate Exists, such as `My`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3770,7 +3831,7 @@ The following state arguments are supported:
 <a href="#thumbprint_secondary_python" style="color: inherit; text-decoration: inherit;">thumbprint_<wbr>secondary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Secondary Thumbprint of the Certificate.
 {{% /md %}}</dd></dl>
@@ -3829,7 +3890,7 @@ The following state arguments are supported:
 <a href="#commonnames_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterreverseproxycertificatecommonnamescommonname">Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names<wbr>Common<wbr>Name[]</a></span>
+        <span class="property-type"><a href="#clusterreverseproxycertificatecommonnamescommonname">pulumi.<wbr>Input<pulumi.<wbr>Input<Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names<wbr>Common<wbr>Name<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A `common_names` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -3838,7 +3899,7 @@ The following state arguments are supported:
 <a href="#x509storename_nodejs" style="color: inherit; text-decoration: inherit;">x509Store<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The X509 Store where the Certificate Exists, such as `My`.
 {{% /md %}}</dd></dl>
@@ -3851,7 +3912,7 @@ The following state arguments are supported:
 <a href="#common_names_python" style="color: inherit; text-decoration: inherit;">common_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterreverseproxycertificatecommonnamescommonname">Sequence[Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names<wbr>Common<wbr>Name<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterreverseproxycertificatecommonnamescommonname">Input[Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names<wbr>Common<wbr>Name<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A `common_names` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -3860,7 +3921,7 @@ The following state arguments are supported:
 <a href="#x509_store_name_python" style="color: inherit; text-decoration: inherit;">x509_<wbr>store_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The X509 Store where the Certificate Exists, such as `My`.
 {{% /md %}}</dd></dl>
@@ -3919,7 +3980,7 @@ The following state arguments are supported:
 <a href="#certificatecommonname_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Common<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The common or subject name of the certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3928,7 +3989,7 @@ The following state arguments are supported:
 <a href="#certificateissuerthumbprint_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Issuer<wbr>Thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Issuer Thumbprint of the Certificate.
 {{% /md %}}</dd></dl>
@@ -3941,7 +4002,7 @@ The following state arguments are supported:
 <a href="#certificate_common_name_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>common_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The common or subject name of the certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3950,7 +4011,7 @@ The following state arguments are supported:
 <a href="#certificate_issuer_thumbprint_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>issuer_<wbr>thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Issuer Thumbprint of the Certificate.
 {{% /md %}}</dd></dl>
@@ -4133,7 +4194,7 @@ The following state arguments are supported:
 <a href="#deltahealthpolicy_nodejs" style="color: inherit; text-decoration: inherit;">delta<wbr>Health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterupgradepolicydeltahealthpolicy">Cluster<wbr>Upgrade<wbr>Policy<wbr>Delta<wbr>Health<wbr>Policy</a></span>
+        <span class="property-type"><a href="#clusterupgradepolicydeltahealthpolicy">pulumi.<wbr>Input<Cluster<wbr>Upgrade<wbr>Policy<wbr>Delta<wbr>Health<wbr>Policy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `delta_health_policy` block as defined below
 {{% /md %}}</dd><dt class="property-optional"
@@ -4142,7 +4203,7 @@ The following state arguments are supported:
 <a href="#forcerestartenabled_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Restart<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4150,7 +4211,7 @@ The following state arguments are supported:
 <a href="#healthcheckretrytimeout_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Retry<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the duration, in "hh:mm:ss" string format, after which Service Fabric retries the health check if the previous health check fails. Defaults to `00:45:00`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4159,7 +4220,7 @@ The following state arguments are supported:
 <a href="#healthcheckstableduration_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Stable<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the duration, in "hh:mm:ss" string format, that Service Fabric waits in order to verify that the cluster is stable before it continues to the next upgrade domain or completes the upgrade. This wait duration prevents undetected changes of health right after the health check is performed. Defaults to `00:01:00`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4168,7 +4229,7 @@ The following state arguments are supported:
 <a href="#healthcheckwaitduration_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Wait<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the duration, in "hh:mm:ss" string format, that Service Fabric waits before it performs the initial health check after it finishes the upgrade on the upgrade domain. Defaults to `00:00:30`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4177,7 +4238,7 @@ The following state arguments are supported:
 <a href="#healthpolicy_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterupgradepolicyhealthpolicy">Cluster<wbr>Upgrade<wbr>Policy<wbr>Health<wbr>Policy</a></span>
+        <span class="property-type"><a href="#clusterupgradepolicyhealthpolicy">pulumi.<wbr>Input<Cluster<wbr>Upgrade<wbr>Policy<wbr>Health<wbr>Policy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `health_policy` block as defined below
 {{% /md %}}</dd><dt class="property-optional"
@@ -4186,7 +4247,7 @@ The following state arguments are supported:
 <a href="#upgradedomaintimeout_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Domain<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the duration, in "hh:mm:ss" string format, that Service Fabric takes to upgrade a single upgrade domain. After this period, the upgrade fails. Defaults to `02:00:00`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4195,7 +4256,7 @@ The following state arguments are supported:
 <a href="#upgradereplicasetchecktimeout_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Replica<wbr>Set<wbr>Check<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the duration, in "hh:mm:ss" string format, that Service Fabric waits for a replica set to reconfigure into a safe state, if it is not already in a safe state, before Service Fabric proceeds with the upgrade. Defaults to `10675199.02:48:05.4775807`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4204,7 +4265,7 @@ The following state arguments are supported:
 <a href="#upgradetimeout_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the duration, in "hh:mm:ss" string format, that Service Fabric takes for the entire upgrade. After this period, the upgrade fails. Defaults to `12:00:00`.
 {{% /md %}}</dd></dl>
@@ -4217,7 +4278,7 @@ The following state arguments are supported:
 <a href="#delta_health_policy_python" style="color: inherit; text-decoration: inherit;">delta_<wbr>health_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterupgradepolicydeltahealthpolicy">Cluster<wbr>Upgrade<wbr>Policy<wbr>Delta<wbr>Health<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterupgradepolicydeltahealthpolicy">Input[Cluster<wbr>Upgrade<wbr>Policy<wbr>Delta<wbr>Health<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `delta_health_policy` block as defined below
 {{% /md %}}</dd><dt class="property-optional"
@@ -4226,7 +4287,7 @@ The following state arguments are supported:
 <a href="#force_restart_enabled_python" style="color: inherit; text-decoration: inherit;">force_<wbr>restart_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4234,7 +4295,7 @@ The following state arguments are supported:
 <a href="#health_check_retry_timeout_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>retry_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the duration, in "hh:mm:ss" string format, after which Service Fabric retries the health check if the previous health check fails. Defaults to `00:45:00`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4243,7 +4304,7 @@ The following state arguments are supported:
 <a href="#health_check_stable_duration_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>stable_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the duration, in "hh:mm:ss" string format, that Service Fabric waits in order to verify that the cluster is stable before it continues to the next upgrade domain or completes the upgrade. This wait duration prevents undetected changes of health right after the health check is performed. Defaults to `00:01:00`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4252,7 +4313,7 @@ The following state arguments are supported:
 <a href="#health_check_wait_duration_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>wait_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the duration, in "hh:mm:ss" string format, that Service Fabric waits before it performs the initial health check after it finishes the upgrade on the upgrade domain. Defaults to `00:00:30`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4261,7 +4322,7 @@ The following state arguments are supported:
 <a href="#health_policy_python" style="color: inherit; text-decoration: inherit;">health_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterupgradepolicyhealthpolicy">Cluster<wbr>Upgrade<wbr>Policy<wbr>Health<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterupgradepolicyhealthpolicy">Input[Cluster<wbr>Upgrade<wbr>Policy<wbr>Health<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `health_policy` block as defined below
 {{% /md %}}</dd><dt class="property-optional"
@@ -4270,7 +4331,7 @@ The following state arguments are supported:
 <a href="#upgrade_domain_timeout_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>domain_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the duration, in "hh:mm:ss" string format, that Service Fabric takes to upgrade a single upgrade domain. After this period, the upgrade fails. Defaults to `02:00:00`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4279,7 +4340,7 @@ The following state arguments are supported:
 <a href="#upgrade_replica_set_check_timeout_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>replica_<wbr>set_<wbr>check_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the duration, in "hh:mm:ss" string format, that Service Fabric waits for a replica set to reconfigure into a safe state, if it is not already in a safe state, before Service Fabric proceeds with the upgrade. Defaults to `10675199.02:48:05.4775807`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4288,7 +4349,7 @@ The following state arguments are supported:
 <a href="#upgrade_timeout_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the duration, in "hh:mm:ss" string format, that Service Fabric takes for the entire upgrade. After this period, the upgrade fails. Defaults to `12:00:00`.
 {{% /md %}}</dd></dl>
@@ -4359,7 +4420,7 @@ The following state arguments are supported:
 <a href="#maxdeltaunhealthyapplicationspercent_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Delta<wbr>Unhealthy<wbr>Applications<wbr>Percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4367,7 +4428,7 @@ The following state arguments are supported:
 <a href="#maxdeltaunhealthynodespercent_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Delta<wbr>Unhealthy<wbr>Nodes<wbr>Percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4375,7 +4436,7 @@ The following state arguments are supported:
 <a href="#maxupgradedomaindeltaunhealthynodespercent_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Upgrade<wbr>Domain<wbr>Delta<wbr>Unhealthy<wbr>Nodes<wbr>Percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4387,7 +4448,7 @@ The following state arguments are supported:
 <a href="#max_delta_unhealthy_applications_percent_python" style="color: inherit; text-decoration: inherit;">max_<wbr>delta_<wbr>unhealthy_<wbr>applications_<wbr>percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4395,7 +4456,7 @@ The following state arguments are supported:
 <a href="#max_delta_unhealthy_nodes_percent_python" style="color: inherit; text-decoration: inherit;">max_<wbr>delta_<wbr>unhealthy_<wbr>nodes_<wbr>percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4403,7 +4464,7 @@ The following state arguments are supported:
 <a href="#max_upgrade_domain_delta_unhealthy_nodes_percent_python" style="color: inherit; text-decoration: inherit;">max_<wbr>upgrade_<wbr>domain_<wbr>delta_<wbr>unhealthy_<wbr>nodes_<wbr>percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4457,7 +4518,7 @@ The following state arguments are supported:
 <a href="#maxunhealthyapplicationspercent_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Unhealthy<wbr>Applications<wbr>Percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4465,7 +4526,7 @@ The following state arguments are supported:
 <a href="#maxunhealthynodespercent_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Unhealthy<wbr>Nodes<wbr>Percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4477,7 +4538,7 @@ The following state arguments are supported:
 <a href="#max_unhealthy_applications_percent_python" style="color: inherit; text-decoration: inherit;">max_<wbr>unhealthy_<wbr>applications_<wbr>percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4485,7 +4546,7 @@ The following state arguments are supported:
 <a href="#max_unhealthy_nodes_percent_python" style="color: inherit; text-decoration: inherit;">max_<wbr>unhealthy_<wbr>nodes_<wbr>percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
