@@ -22,17 +22,20 @@ API Version: 2020-03-15-preview.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getIscsiTarget<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetIscsiTargetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetIscsiTargetResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getIscsiTarget<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetIscsiTargetArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetIscsiTargetResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_iscsi_target(</span><span class="nx">disk_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iscsi_target_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetIscsiTargetResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_iscsi_target(</span><span class="nx">disk_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">iscsi_target_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetIscsiTargetResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupIscsiTarget<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupIscsiTargetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupIscsiTargetResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupIscsiTarget<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupIscsiTargetArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupIscsiTargetResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupIscsiTarget` in the Go SDK.
 
@@ -41,7 +44,7 @@ API Version: 2020-03-15-preview.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetIscsiTarget </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetIscsiTargetResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetIscsiTargetArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetIscsiTargetResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetIscsiTargetArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -744,7 +747,7 @@ The following output properties are available:
 <a href="#acls_csharp" style="color: inherit; text-decoration: inherit;">Acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aclresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Pool.<wbr>Inputs.<wbr>Acl<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#aclresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Pool.<wbr>Inputs.<wbr>Acl<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Access Control List (ACL) for an iSCSI target portal group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -752,7 +755,7 @@ The following output properties are available:
 <a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attributesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Pool.<wbr>Inputs.<wbr>Attributes<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#attributesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Pool.<wbr>Inputs.<wbr>Attributes<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Attributes of an iSCSI target portal group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -768,7 +771,7 @@ The following output properties are available:
 <a href="#luns_csharp" style="color: inherit; text-decoration: inherit;">Luns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iscsilunresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Pool.<wbr>Inputs.<wbr>Iscsi<wbr>Lun<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#iscsilunresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Pool.<wbr>Inputs.<wbr>Iscsi<wbr>Lun<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of LUNs to be exposed through iSCSI target portal group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -900,7 +903,7 @@ The following output properties are available:
 <a href="#acls_python" style="color: inherit; text-decoration: inherit;">acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aclresponse">Sequence[Acl<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#aclresponse">Sequence[Acl<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Access Control List (ACL) for an iSCSI target portal group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -908,7 +911,7 @@ The following output properties are available:
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attributesresponse">Attributes<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#attributesresponse">Attributes<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Attributes of an iSCSI target portal group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -924,7 +927,7 @@ The following output properties are available:
 <a href="#luns_python" style="color: inherit; text-decoration: inherit;">luns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iscsilunresponse">Sequence[Iscsi<wbr>Lun<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iscsilunresponse">Sequence[Iscsi<wbr>Lun<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of LUNs to be exposed through iSCSI target portal group.{{% /md %}}</dd><dt class="property-required"
             title="Required">

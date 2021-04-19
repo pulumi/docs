@@ -11,286 +11,13 @@ meta_desc: "Documentation for the azure-native.containerservice.ManagedCluster r
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Managed cluster.
-API Version: 2021-02-01.
+API Version: 2021-03-01.
 
 {{% examples %}}
 
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-
-
-### Create Managed Cluster with Azure KeyVault Secrets Provider Addon
-
-
-{{< example csharp >}}
-
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var managedCluster = new AzureNative.ContainerService.ManagedCluster("managedCluster", new AzureNative.ContainerService.ManagedClusterArgs
-        {
-            AddonProfiles = 
-            {
-                { "azureKeyvaultSecretsProvider", new AzureNative.ContainerService.Inputs.ManagedClusterAddonProfileArgs
-                {
-                    Config = 
-                    {
-                        { "enableSecretRotation", "true" },
-                    },
-                    Enabled = true,
-                } },
-            },
-            AgentPoolProfiles = 
-            {
-                new AzureNative.ContainerService.Inputs.ManagedClusterAgentPoolProfileArgs
-                {
-                    Count = 3,
-                    EnableNodePublicIP = true,
-                    Mode = "System",
-                    Name = "nodepool1",
-                    OsType = "Linux",
-                    Type = "VirtualMachineScaleSets",
-                    VmSize = "Standard_DS2_v2",
-                },
-            },
-            AutoScalerProfile = new AzureNative.ContainerService.Inputs.ManagedClusterPropertiesAutoScalerProfileArgs
-            {
-                ScaleDownDelayAfterAdd = "15m",
-                ScanInterval = "20s",
-            },
-            DiskEncryptionSetID = "/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des",
-            DnsPrefix = "dnsprefix1",
-            EnablePodSecurityPolicy = true,
-            EnableRBAC = true,
-            KubernetesVersion = "",
-            LinuxProfile = new AzureNative.ContainerService.Inputs.ContainerServiceLinuxProfileArgs
-            {
-                AdminUsername = "azureuser",
-                Ssh = new AzureNative.ContainerService.Inputs.ContainerServiceSshConfigurationArgs
-                {
-                    PublicKeys = 
-                    {
-                        new AzureNative.ContainerService.Inputs.ContainerServiceSshPublicKeyArgs
-                        {
-                            KeyData = "keydata",
-                        },
-                    },
-                },
-            },
-            Location = "location1",
-            NetworkProfile = new AzureNative.ContainerService.Inputs.ContainerServiceNetworkProfileArgs
-            {
-                LoadBalancerProfile = new AzureNative.ContainerService.Inputs.ManagedClusterLoadBalancerProfileArgs
-                {
-                    ManagedOutboundIPs = new AzureNative.ContainerService.Inputs.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs
-                    {
-                        Count = 2,
-                    },
-                },
-                LoadBalancerSku = "standard",
-                OutboundType = "loadBalancer",
-            },
-            ResourceGroupName = "rg1",
-            ResourceName = "clustername1",
-            ServicePrincipalProfile = new AzureNative.ContainerService.Inputs.ManagedClusterServicePrincipalProfileArgs
-            {
-                ClientId = "clientid",
-                Secret = "secret",
-            },
-            Sku = new AzureNative.ContainerService.Inputs.ManagedClusterSKUArgs
-            {
-                Name = "Basic",
-                Tier = "Free",
-            },
-            Tags = 
-            {
-                { "archv2", "" },
-                { "tier", "production" },
-            },
-            WindowsProfile = new AzureNative.ContainerService.Inputs.ManagedClusterWindowsProfileArgs
-            {
-                AdminPassword = "replacePassword1234$",
-                AdminUsername = "azureuser",
-            },
-        });
-    }
-
-}
-
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-Coming soon!
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-managed_cluster = azure_native.containerservice.ManagedCluster("managedCluster",
-    addon_profiles={
-        "azureKeyvaultSecretsProvider": azure_native.containerservice.ManagedClusterAddonProfileArgs(
-            config={
-                "enableSecretRotation": "true",
-            },
-            enabled=True,
-        ),
-    },
-    agent_pool_profiles=[azure_native.containerservice.ManagedClusterAgentPoolProfileArgs(
-        count=3,
-        enable_node_public_ip=True,
-        mode="System",
-        name="nodepool1",
-        os_type="Linux",
-        type="VirtualMachineScaleSets",
-        vm_size="Standard_DS2_v2",
-    )],
-    auto_scaler_profile=azure_native.containerservice.ManagedClusterPropertiesAutoScalerProfileArgs(
-        scale_down_delay_after_add="15m",
-        scan_interval="20s",
-    ),
-    disk_encryption_set_id="/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des",
-    dns_prefix="dnsprefix1",
-    enable_pod_security_policy=True,
-    enable_rbac=True,
-    kubernetes_version="",
-    linux_profile=azure_native.containerservice.ContainerServiceLinuxProfileArgs(
-        admin_username="azureuser",
-        ssh=azure_native.containerservice.ContainerServiceSshConfigurationArgs(
-            public_keys=[azure_native.containerservice.ContainerServiceSshPublicKeyArgs(
-                key_data="keydata",
-            )],
-        ),
-    ),
-    location="location1",
-    network_profile=azure_native.containerservice.ContainerServiceNetworkProfileArgs(
-        load_balancer_profile=azure_native.containerservice.ManagedClusterLoadBalancerProfileArgs(
-            managed_outbound_ips=azure_native.containerservice.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs(
-                count=2,
-            ),
-        ),
-        load_balancer_sku="standard",
-        outbound_type="loadBalancer",
-    ),
-    resource_group_name="rg1",
-    resource_name="clustername1",
-    service_principal_profile=azure_native.containerservice.ManagedClusterServicePrincipalProfileArgs(
-        client_id="clientid",
-        secret="secret",
-    ),
-    sku=azure_native.containerservice.ManagedClusterSKUArgs(
-        name="Basic",
-        tier="Free",
-    ),
-    tags={
-        "archv2": "",
-        "tier": "production",
-    },
-    windows_profile=azure_native.containerservice.ManagedClusterWindowsProfileArgs(
-        admin_password="replacePassword1234$",
-        admin_username="azureuser",
-    ))
-
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const managedCluster = new azure_native.containerservice.ManagedCluster("managedCluster", {
-    addonProfiles: {
-        azureKeyvaultSecretsProvider: {
-            config: {
-                enableSecretRotation: "true",
-            },
-            enabled: true,
-        },
-    },
-    agentPoolProfiles: [{
-        count: 3,
-        enableNodePublicIP: true,
-        mode: "System",
-        name: "nodepool1",
-        osType: "Linux",
-        type: "VirtualMachineScaleSets",
-        vmSize: "Standard_DS2_v2",
-    }],
-    autoScalerProfile: {
-        scaleDownDelayAfterAdd: "15m",
-        scanInterval: "20s",
-    },
-    diskEncryptionSetID: "/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des",
-    dnsPrefix: "dnsprefix1",
-    enablePodSecurityPolicy: true,
-    enableRBAC: true,
-    kubernetesVersion: "",
-    linuxProfile: {
-        adminUsername: "azureuser",
-        ssh: {
-            publicKeys: [{
-                keyData: "keydata",
-            }],
-        },
-    },
-    location: "location1",
-    networkProfile: {
-        loadBalancerProfile: {
-            managedOutboundIPs: {
-                count: 2,
-            },
-        },
-        loadBalancerSku: "standard",
-        outboundType: "loadBalancer",
-    },
-    resourceGroupName: "rg1",
-    resourceName: "clustername1",
-    servicePrincipalProfile: {
-        clientId: "clientid",
-        secret: "secret",
-    },
-    sku: {
-        name: "Basic",
-        tier: "Free",
-    },
-    tags: {
-        archv2: "",
-        tier: "production",
-    },
-    windowsProfile: {
-        adminPassword: `replacePassword1234$`,
-        adminUsername: "azureuser",
-    },
-});
-
-```
-
-
-{{< /example >}}
-
-
 
 
 ### Create Managed Cluster with EncryptionAtHost enabled
@@ -403,7 +130,7 @@ import (
 	"fmt"
 
 	containerservice "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerservice"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -628,6 +355,1083 @@ const managedCluster = new azure_native.containerservice.ManagedCluster("managed
 
 
 
+### Create Managed Cluster with FIPS enabled OS
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var managedCluster = new AzureNative.ContainerService.ManagedCluster("managedCluster", new AzureNative.ContainerService.ManagedClusterArgs
+        {
+            AddonProfiles = ,
+            AgentPoolProfiles = 
+            {
+                new AzureNative.ContainerService.Inputs.ManagedClusterAgentPoolProfileArgs
+                {
+                    Count = 3,
+                    EnableFIPS = true,
+                    EnableNodePublicIP = true,
+                    Mode = "System",
+                    Name = "nodepool1",
+                    OsType = "Linux",
+                    Type = "VirtualMachineScaleSets",
+                    VmSize = "Standard_DS2_v2",
+                },
+            },
+            AutoScalerProfile = new AzureNative.ContainerService.Inputs.ManagedClusterPropertiesAutoScalerProfileArgs
+            {
+                ScaleDownDelayAfterAdd = "15m",
+                ScanInterval = "20s",
+            },
+            DiskEncryptionSetID = "/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des",
+            DnsPrefix = "dnsprefix1",
+            EnablePodSecurityPolicy = false,
+            EnableRBAC = true,
+            KubernetesVersion = "",
+            LinuxProfile = new AzureNative.ContainerService.Inputs.ContainerServiceLinuxProfileArgs
+            {
+                AdminUsername = "azureuser",
+                Ssh = new AzureNative.ContainerService.Inputs.ContainerServiceSshConfigurationArgs
+                {
+                    PublicKeys = 
+                    {
+                        new AzureNative.ContainerService.Inputs.ContainerServiceSshPublicKeyArgs
+                        {
+                            KeyData = "keydata",
+                        },
+                    },
+                },
+            },
+            Location = "location1",
+            NetworkProfile = new AzureNative.ContainerService.Inputs.ContainerServiceNetworkProfileArgs
+            {
+                LoadBalancerProfile = new AzureNative.ContainerService.Inputs.ManagedClusterLoadBalancerProfileArgs
+                {
+                    ManagedOutboundIPs = new AzureNative.ContainerService.Inputs.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs
+                    {
+                        Count = 2,
+                    },
+                },
+                LoadBalancerSku = "standard",
+                OutboundType = "loadBalancer",
+            },
+            ResourceGroupName = "rg1",
+            ResourceName = "clustername1",
+            ServicePrincipalProfile = new AzureNative.ContainerService.Inputs.ManagedClusterServicePrincipalProfileArgs
+            {
+                ClientId = "clientid",
+                Secret = "secret",
+            },
+            Sku = new AzureNative.ContainerService.Inputs.ManagedClusterSKUArgs
+            {
+                Name = "Basic",
+                Tier = "Free",
+            },
+            Tags = 
+            {
+                { "archv2", "" },
+                { "tier", "production" },
+            },
+            WindowsProfile = new AzureNative.ContainerService.Inputs.ManagedClusterWindowsProfileArgs
+            {
+                AdminPassword = "replacePassword1234$",
+                AdminUsername = "azureuser",
+            },
+        });
+    }
+
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+
+```go
+package main
+
+import (
+	"fmt"
+
+	containerservice "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerservice"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := containerservice.NewManagedCluster(ctx, "managedCluster", &containerservice.ManagedClusterArgs{
+			AddonProfiles: nil,
+			AgentPoolProfiles: containerservice.ManagedClusterAgentPoolProfileArray{
+				&containerservice.ManagedClusterAgentPoolProfileArgs{
+					Count:              pulumi.Int(3),
+					EnableFIPS:         pulumi.Bool(true),
+					EnableNodePublicIP: pulumi.Bool(true),
+					Mode:               pulumi.String("System"),
+					Name:               pulumi.String("nodepool1"),
+					OsType:             pulumi.String("Linux"),
+					Type:               pulumi.String("VirtualMachineScaleSets"),
+					VmSize:             pulumi.String("Standard_DS2_v2"),
+				},
+			},
+			AutoScalerProfile: &containerservice.ManagedClusterPropertiesAutoScalerProfileArgs{
+				ScaleDownDelayAfterAdd: pulumi.String("15m"),
+				ScanInterval:           pulumi.String("20s"),
+			},
+			DiskEncryptionSetID:     pulumi.String("/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des"),
+			DnsPrefix:               pulumi.String("dnsprefix1"),
+			EnablePodSecurityPolicy: pulumi.Bool(false),
+			EnableRBAC:              pulumi.Bool(true),
+			KubernetesVersion:       pulumi.String(""),
+			LinuxProfile: &containerservice.ContainerServiceLinuxProfileArgs{
+				AdminUsername: pulumi.String("azureuser"),
+				Ssh: &containerservice.ContainerServiceSshConfigurationArgs{
+					PublicKeys: containerservice.ContainerServiceSshPublicKeyArray{
+						&containerservice.ContainerServiceSshPublicKeyArgs{
+							KeyData: pulumi.String("keydata"),
+						},
+					},
+				},
+			},
+			Location: pulumi.String("location1"),
+			NetworkProfile: &containerservice.ContainerServiceNetworkProfileArgs{
+				LoadBalancerProfile: &containerservice.ManagedClusterLoadBalancerProfileArgs{
+					ManagedOutboundIPs: &containerservice.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs{
+						Count: pulumi.Int(2),
+					},
+				},
+				LoadBalancerSku: pulumi.String("standard"),
+				OutboundType:    pulumi.String("loadBalancer"),
+			},
+			ResourceGroupName: pulumi.String("rg1"),
+			ResourceName:      pulumi.String("clustername1"),
+			ServicePrincipalProfile: &containerservice.ManagedClusterServicePrincipalProfileArgs{
+				ClientId: pulumi.String("clientid"),
+				Secret:   pulumi.String("secret"),
+			},
+			Sku: &containerservice.ManagedClusterSKUArgs{
+				Name: pulumi.String("Basic"),
+				Tier: pulumi.String("Free"),
+			},
+			Tags: pulumi.StringMap{
+				"archv2": pulumi.String(""),
+				"tier":   pulumi.String("production"),
+			},
+			WindowsProfile: &containerservice.ManagedClusterWindowsProfileArgs{
+				AdminPassword: pulumi.String(fmt.Sprintf("%v%v", "replacePassword1234", "$")),
+				AdminUsername: pulumi.String("azureuser"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+managed_cluster = azure_native.containerservice.ManagedCluster("managedCluster",
+    addon_profiles={},
+    agent_pool_profiles=[azure_native.containerservice.ManagedClusterAgentPoolProfileArgs(
+        count=3,
+        enable_fips=True,
+        enable_node_public_ip=True,
+        mode="System",
+        name="nodepool1",
+        os_type="Linux",
+        type="VirtualMachineScaleSets",
+        vm_size="Standard_DS2_v2",
+    )],
+    auto_scaler_profile=azure_native.containerservice.ManagedClusterPropertiesAutoScalerProfileArgs(
+        scale_down_delay_after_add="15m",
+        scan_interval="20s",
+    ),
+    disk_encryption_set_id="/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des",
+    dns_prefix="dnsprefix1",
+    enable_pod_security_policy=False,
+    enable_rbac=True,
+    kubernetes_version="",
+    linux_profile=azure_native.containerservice.ContainerServiceLinuxProfileArgs(
+        admin_username="azureuser",
+        ssh=azure_native.containerservice.ContainerServiceSshConfigurationArgs(
+            public_keys=[azure_native.containerservice.ContainerServiceSshPublicKeyArgs(
+                key_data="keydata",
+            )],
+        ),
+    ),
+    location="location1",
+    network_profile=azure_native.containerservice.ContainerServiceNetworkProfileArgs(
+        load_balancer_profile=azure_native.containerservice.ManagedClusterLoadBalancerProfileArgs(
+            managed_outbound_ips=azure_native.containerservice.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs(
+                count=2,
+            ),
+        ),
+        load_balancer_sku="standard",
+        outbound_type="loadBalancer",
+    ),
+    resource_group_name="rg1",
+    resource_name="clustername1",
+    service_principal_profile=azure_native.containerservice.ManagedClusterServicePrincipalProfileArgs(
+        client_id="clientid",
+        secret="secret",
+    ),
+    sku=azure_native.containerservice.ManagedClusterSKUArgs(
+        name="Basic",
+        tier="Free",
+    ),
+    tags={
+        "archv2": "",
+        "tier": "production",
+    },
+    windows_profile=azure_native.containerservice.ManagedClusterWindowsProfileArgs(
+        admin_password="replacePassword1234$",
+        admin_username="azureuser",
+    ))
+
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const managedCluster = new azure_native.containerservice.ManagedCluster("managedCluster", {
+    addonProfiles: {},
+    agentPoolProfiles: [{
+        count: 3,
+        enableFIPS: true,
+        enableNodePublicIP: true,
+        mode: "System",
+        name: "nodepool1",
+        osType: "Linux",
+        type: "VirtualMachineScaleSets",
+        vmSize: "Standard_DS2_v2",
+    }],
+    autoScalerProfile: {
+        scaleDownDelayAfterAdd: "15m",
+        scanInterval: "20s",
+    },
+    diskEncryptionSetID: "/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des",
+    dnsPrefix: "dnsprefix1",
+    enablePodSecurityPolicy: false,
+    enableRBAC: true,
+    kubernetesVersion: "",
+    linuxProfile: {
+        adminUsername: "azureuser",
+        ssh: {
+            publicKeys: [{
+                keyData: "keydata",
+            }],
+        },
+    },
+    location: "location1",
+    networkProfile: {
+        loadBalancerProfile: {
+            managedOutboundIPs: {
+                count: 2,
+            },
+        },
+        loadBalancerSku: "standard",
+        outboundType: "loadBalancer",
+    },
+    resourceGroupName: "rg1",
+    resourceName: "clustername1",
+    servicePrincipalProfile: {
+        clientId: "clientid",
+        secret: "secret",
+    },
+    sku: {
+        name: "Basic",
+        tier: "Free",
+    },
+    tags: {
+        archv2: "",
+        tier: "production",
+    },
+    windowsProfile: {
+        adminPassword: `replacePassword1234$`,
+        adminUsername: "azureuser",
+    },
+});
+
+```
+
+
+{{< /example >}}
+
+
+
+
+### Create Managed Cluster with GPUMIG
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var managedCluster = new AzureNative.ContainerService.ManagedCluster("managedCluster", new AzureNative.ContainerService.ManagedClusterArgs
+        {
+            AddonProfiles = ,
+            AgentPoolProfiles = 
+            {
+                new AzureNative.ContainerService.Inputs.ManagedClusterAgentPoolProfileArgs
+                {
+                    Count = 3,
+                    EnableNodePublicIP = true,
+                    GpuInstanceProfile = "MIG3g",
+                    Mode = "System",
+                    Name = "nodepool1",
+                    OsType = "Linux",
+                    Type = "VirtualMachineScaleSets",
+                    VmSize = "Standard_ND96asr_v4",
+                },
+            },
+            AutoScalerProfile = new AzureNative.ContainerService.Inputs.ManagedClusterPropertiesAutoScalerProfileArgs
+            {
+                ScaleDownDelayAfterAdd = "15m",
+                ScanInterval = "20s",
+            },
+            DiskEncryptionSetID = "/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des",
+            DnsPrefix = "dnsprefix1",
+            EnablePodSecurityPolicy = true,
+            EnableRBAC = true,
+            HttpProxyConfig = new AzureNative.ContainerService.Inputs.ManagedClusterHTTPProxyConfigArgs
+            {
+                HttpProxy = "http://myproxy.server.com:8080",
+                HttpsProxy = "https://myproxy.server.com:8080",
+                NoProxy = 
+                {
+                    "localhost",
+                    "127.0.0.1",
+                },
+                TrustedCa = "Q29uZ3JhdHMhIFlvdSBoYXZlIGZvdW5kIGEgaGlkZGVuIG1lc3NhZ2U=",
+            },
+            KubernetesVersion = "",
+            LinuxProfile = new AzureNative.ContainerService.Inputs.ContainerServiceLinuxProfileArgs
+            {
+                AdminUsername = "azureuser",
+                Ssh = new AzureNative.ContainerService.Inputs.ContainerServiceSshConfigurationArgs
+                {
+                    PublicKeys = 
+                    {
+                        new AzureNative.ContainerService.Inputs.ContainerServiceSshPublicKeyArgs
+                        {
+                            KeyData = "keydata",
+                        },
+                    },
+                },
+            },
+            Location = "location1",
+            NetworkProfile = new AzureNative.ContainerService.Inputs.ContainerServiceNetworkProfileArgs
+            {
+                LoadBalancerProfile = new AzureNative.ContainerService.Inputs.ManagedClusterLoadBalancerProfileArgs
+                {
+                    ManagedOutboundIPs = new AzureNative.ContainerService.Inputs.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs
+                    {
+                        Count = 2,
+                    },
+                },
+                LoadBalancerSku = "standard",
+                OutboundType = "loadBalancer",
+            },
+            ResourceGroupName = "rg1",
+            ResourceName = "clustername1",
+            ServicePrincipalProfile = new AzureNative.ContainerService.Inputs.ManagedClusterServicePrincipalProfileArgs
+            {
+                ClientId = "clientid",
+                Secret = "secret",
+            },
+            Sku = new AzureNative.ContainerService.Inputs.ManagedClusterSKUArgs
+            {
+                Name = "Basic",
+                Tier = "Free",
+            },
+            Tags = 
+            {
+                { "archv2", "" },
+                { "tier", "production" },
+            },
+            WindowsProfile = new AzureNative.ContainerService.Inputs.ManagedClusterWindowsProfileArgs
+            {
+                AdminPassword = "replacePassword1234$",
+                AdminUsername = "azureuser",
+            },
+        });
+    }
+
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+
+```go
+package main
+
+import (
+	"fmt"
+
+	containerservice "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerservice"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := containerservice.NewManagedCluster(ctx, "managedCluster", &containerservice.ManagedClusterArgs{
+			AddonProfiles: nil,
+			AgentPoolProfiles: containerservice.ManagedClusterAgentPoolProfileArray{
+				&containerservice.ManagedClusterAgentPoolProfileArgs{
+					Count:              pulumi.Int(3),
+					EnableNodePublicIP: pulumi.Bool(true),
+					GpuInstanceProfile: pulumi.String("MIG3g"),
+					Mode:               pulumi.String("System"),
+					Name:               pulumi.String("nodepool1"),
+					OsType:             pulumi.String("Linux"),
+					Type:               pulumi.String("VirtualMachineScaleSets"),
+					VmSize:             pulumi.String("Standard_ND96asr_v4"),
+				},
+			},
+			AutoScalerProfile: &containerservice.ManagedClusterPropertiesAutoScalerProfileArgs{
+				ScaleDownDelayAfterAdd: pulumi.String("15m"),
+				ScanInterval:           pulumi.String("20s"),
+			},
+			DiskEncryptionSetID:     pulumi.String("/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des"),
+			DnsPrefix:               pulumi.String("dnsprefix1"),
+			EnablePodSecurityPolicy: pulumi.Bool(true),
+			EnableRBAC:              pulumi.Bool(true),
+			HttpProxyConfig: &containerservice.ManagedClusterHTTPProxyConfigArgs{
+				HttpProxy:  pulumi.String("http://myproxy.server.com:8080"),
+				HttpsProxy: pulumi.String("https://myproxy.server.com:8080"),
+				NoProxy: pulumi.StringArray{
+					pulumi.String("localhost"),
+					pulumi.String("127.0.0.1"),
+				},
+				TrustedCa: pulumi.String("Q29uZ3JhdHMhIFlvdSBoYXZlIGZvdW5kIGEgaGlkZGVuIG1lc3NhZ2U="),
+			},
+			KubernetesVersion: pulumi.String(""),
+			LinuxProfile: &containerservice.ContainerServiceLinuxProfileArgs{
+				AdminUsername: pulumi.String("azureuser"),
+				Ssh: &containerservice.ContainerServiceSshConfigurationArgs{
+					PublicKeys: containerservice.ContainerServiceSshPublicKeyArray{
+						&containerservice.ContainerServiceSshPublicKeyArgs{
+							KeyData: pulumi.String("keydata"),
+						},
+					},
+				},
+			},
+			Location: pulumi.String("location1"),
+			NetworkProfile: &containerservice.ContainerServiceNetworkProfileArgs{
+				LoadBalancerProfile: &containerservice.ManagedClusterLoadBalancerProfileArgs{
+					ManagedOutboundIPs: &containerservice.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs{
+						Count: pulumi.Int(2),
+					},
+				},
+				LoadBalancerSku: pulumi.String("standard"),
+				OutboundType:    pulumi.String("loadBalancer"),
+			},
+			ResourceGroupName: pulumi.String("rg1"),
+			ResourceName:      pulumi.String("clustername1"),
+			ServicePrincipalProfile: &containerservice.ManagedClusterServicePrincipalProfileArgs{
+				ClientId: pulumi.String("clientid"),
+				Secret:   pulumi.String("secret"),
+			},
+			Sku: &containerservice.ManagedClusterSKUArgs{
+				Name: pulumi.String("Basic"),
+				Tier: pulumi.String("Free"),
+			},
+			Tags: pulumi.StringMap{
+				"archv2": pulumi.String(""),
+				"tier":   pulumi.String("production"),
+			},
+			WindowsProfile: &containerservice.ManagedClusterWindowsProfileArgs{
+				AdminPassword: pulumi.String(fmt.Sprintf("%v%v", "replacePassword1234", "$")),
+				AdminUsername: pulumi.String("azureuser"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+managed_cluster = azure_native.containerservice.ManagedCluster("managedCluster",
+    addon_profiles={},
+    agent_pool_profiles=[azure_native.containerservice.ManagedClusterAgentPoolProfileArgs(
+        count=3,
+        enable_node_public_ip=True,
+        gpu_instance_profile="MIG3g",
+        mode="System",
+        name="nodepool1",
+        os_type="Linux",
+        type="VirtualMachineScaleSets",
+        vm_size="Standard_ND96asr_v4",
+    )],
+    auto_scaler_profile=azure_native.containerservice.ManagedClusterPropertiesAutoScalerProfileArgs(
+        scale_down_delay_after_add="15m",
+        scan_interval="20s",
+    ),
+    disk_encryption_set_id="/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des",
+    dns_prefix="dnsprefix1",
+    enable_pod_security_policy=True,
+    enable_rbac=True,
+    http_proxy_config=azure_native.containerservice.ManagedClusterHTTPProxyConfigArgs(
+        http_proxy="http://myproxy.server.com:8080",
+        https_proxy="https://myproxy.server.com:8080",
+        no_proxy=[
+            "localhost",
+            "127.0.0.1",
+        ],
+        trusted_ca="Q29uZ3JhdHMhIFlvdSBoYXZlIGZvdW5kIGEgaGlkZGVuIG1lc3NhZ2U=",
+    ),
+    kubernetes_version="",
+    linux_profile=azure_native.containerservice.ContainerServiceLinuxProfileArgs(
+        admin_username="azureuser",
+        ssh=azure_native.containerservice.ContainerServiceSshConfigurationArgs(
+            public_keys=[azure_native.containerservice.ContainerServiceSshPublicKeyArgs(
+                key_data="keydata",
+            )],
+        ),
+    ),
+    location="location1",
+    network_profile=azure_native.containerservice.ContainerServiceNetworkProfileArgs(
+        load_balancer_profile=azure_native.containerservice.ManagedClusterLoadBalancerProfileArgs(
+            managed_outbound_ips=azure_native.containerservice.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs(
+                count=2,
+            ),
+        ),
+        load_balancer_sku="standard",
+        outbound_type="loadBalancer",
+    ),
+    resource_group_name="rg1",
+    resource_name="clustername1",
+    service_principal_profile=azure_native.containerservice.ManagedClusterServicePrincipalProfileArgs(
+        client_id="clientid",
+        secret="secret",
+    ),
+    sku=azure_native.containerservice.ManagedClusterSKUArgs(
+        name="Basic",
+        tier="Free",
+    ),
+    tags={
+        "archv2": "",
+        "tier": "production",
+    },
+    windows_profile=azure_native.containerservice.ManagedClusterWindowsProfileArgs(
+        admin_password="replacePassword1234$",
+        admin_username="azureuser",
+    ))
+
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const managedCluster = new azure_native.containerservice.ManagedCluster("managedCluster", {
+    addonProfiles: {},
+    agentPoolProfiles: [{
+        count: 3,
+        enableNodePublicIP: true,
+        gpuInstanceProfile: "MIG3g",
+        mode: "System",
+        name: "nodepool1",
+        osType: "Linux",
+        type: "VirtualMachineScaleSets",
+        vmSize: "Standard_ND96asr_v4",
+    }],
+    autoScalerProfile: {
+        scaleDownDelayAfterAdd: "15m",
+        scanInterval: "20s",
+    },
+    diskEncryptionSetID: "/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des",
+    dnsPrefix: "dnsprefix1",
+    enablePodSecurityPolicy: true,
+    enableRBAC: true,
+    httpProxyConfig: {
+        httpProxy: "http://myproxy.server.com:8080",
+        httpsProxy: "https://myproxy.server.com:8080",
+        noProxy: [
+            "localhost",
+            "127.0.0.1",
+        ],
+        trustedCa: "Q29uZ3JhdHMhIFlvdSBoYXZlIGZvdW5kIGEgaGlkZGVuIG1lc3NhZ2U=",
+    },
+    kubernetesVersion: "",
+    linuxProfile: {
+        adminUsername: "azureuser",
+        ssh: {
+            publicKeys: [{
+                keyData: "keydata",
+            }],
+        },
+    },
+    location: "location1",
+    networkProfile: {
+        loadBalancerProfile: {
+            managedOutboundIPs: {
+                count: 2,
+            },
+        },
+        loadBalancerSku: "standard",
+        outboundType: "loadBalancer",
+    },
+    resourceGroupName: "rg1",
+    resourceName: "clustername1",
+    servicePrincipalProfile: {
+        clientId: "clientid",
+        secret: "secret",
+    },
+    sku: {
+        name: "Basic",
+        tier: "Free",
+    },
+    tags: {
+        archv2: "",
+        tier: "production",
+    },
+    windowsProfile: {
+        adminPassword: `replacePassword1234$`,
+        adminUsername: "azureuser",
+    },
+});
+
+```
+
+
+{{< /example >}}
+
+
+
+
+### Create Managed Cluster with HTTP proxy configured
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var managedCluster = new AzureNative.ContainerService.ManagedCluster("managedCluster", new AzureNative.ContainerService.ManagedClusterArgs
+        {
+            AddonProfiles = ,
+            AgentPoolProfiles = 
+            {
+                new AzureNative.ContainerService.Inputs.ManagedClusterAgentPoolProfileArgs
+                {
+                    Count = 3,
+                    EnableNodePublicIP = true,
+                    Mode = "System",
+                    Name = "nodepool1",
+                    OsType = "Linux",
+                    Type = "VirtualMachineScaleSets",
+                    VmSize = "Standard_DS2_v2",
+                },
+            },
+            AutoScalerProfile = new AzureNative.ContainerService.Inputs.ManagedClusterPropertiesAutoScalerProfileArgs
+            {
+                ScaleDownDelayAfterAdd = "15m",
+                ScanInterval = "20s",
+            },
+            DiskEncryptionSetID = "/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des",
+            DnsPrefix = "dnsprefix1",
+            EnablePodSecurityPolicy = true,
+            EnableRBAC = true,
+            HttpProxyConfig = new AzureNative.ContainerService.Inputs.ManagedClusterHTTPProxyConfigArgs
+            {
+                HttpProxy = "http://myproxy.server.com:8080",
+                HttpsProxy = "https://myproxy.server.com:8080",
+                NoProxy = 
+                {
+                    "localhost",
+                    "127.0.0.1",
+                },
+                TrustedCa = "Q29uZ3JhdHMhIFlvdSBoYXZlIGZvdW5kIGEgaGlkZGVuIG1lc3NhZ2U=",
+            },
+            KubernetesVersion = "",
+            LinuxProfile = new AzureNative.ContainerService.Inputs.ContainerServiceLinuxProfileArgs
+            {
+                AdminUsername = "azureuser",
+                Ssh = new AzureNative.ContainerService.Inputs.ContainerServiceSshConfigurationArgs
+                {
+                    PublicKeys = 
+                    {
+                        new AzureNative.ContainerService.Inputs.ContainerServiceSshPublicKeyArgs
+                        {
+                            KeyData = "keydata",
+                        },
+                    },
+                },
+            },
+            Location = "location1",
+            NetworkProfile = new AzureNative.ContainerService.Inputs.ContainerServiceNetworkProfileArgs
+            {
+                LoadBalancerProfile = new AzureNative.ContainerService.Inputs.ManagedClusterLoadBalancerProfileArgs
+                {
+                    ManagedOutboundIPs = new AzureNative.ContainerService.Inputs.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs
+                    {
+                        Count = 2,
+                    },
+                },
+                LoadBalancerSku = "standard",
+                OutboundType = "loadBalancer",
+            },
+            ResourceGroupName = "rg1",
+            ResourceName = "clustername1",
+            ServicePrincipalProfile = new AzureNative.ContainerService.Inputs.ManagedClusterServicePrincipalProfileArgs
+            {
+                ClientId = "clientid",
+                Secret = "secret",
+            },
+            Sku = new AzureNative.ContainerService.Inputs.ManagedClusterSKUArgs
+            {
+                Name = "Basic",
+                Tier = "Free",
+            },
+            Tags = 
+            {
+                { "archv2", "" },
+                { "tier", "production" },
+            },
+            WindowsProfile = new AzureNative.ContainerService.Inputs.ManagedClusterWindowsProfileArgs
+            {
+                AdminPassword = "replacePassword1234$",
+                AdminUsername = "azureuser",
+            },
+        });
+    }
+
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+
+```go
+package main
+
+import (
+	"fmt"
+
+	containerservice "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerservice"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := containerservice.NewManagedCluster(ctx, "managedCluster", &containerservice.ManagedClusterArgs{
+			AddonProfiles: nil,
+			AgentPoolProfiles: containerservice.ManagedClusterAgentPoolProfileArray{
+				&containerservice.ManagedClusterAgentPoolProfileArgs{
+					Count:              pulumi.Int(3),
+					EnableNodePublicIP: pulumi.Bool(true),
+					Mode:               pulumi.String("System"),
+					Name:               pulumi.String("nodepool1"),
+					OsType:             pulumi.String("Linux"),
+					Type:               pulumi.String("VirtualMachineScaleSets"),
+					VmSize:             pulumi.String("Standard_DS2_v2"),
+				},
+			},
+			AutoScalerProfile: &containerservice.ManagedClusterPropertiesAutoScalerProfileArgs{
+				ScaleDownDelayAfterAdd: pulumi.String("15m"),
+				ScanInterval:           pulumi.String("20s"),
+			},
+			DiskEncryptionSetID:     pulumi.String("/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des"),
+			DnsPrefix:               pulumi.String("dnsprefix1"),
+			EnablePodSecurityPolicy: pulumi.Bool(true),
+			EnableRBAC:              pulumi.Bool(true),
+			HttpProxyConfig: &containerservice.ManagedClusterHTTPProxyConfigArgs{
+				HttpProxy:  pulumi.String("http://myproxy.server.com:8080"),
+				HttpsProxy: pulumi.String("https://myproxy.server.com:8080"),
+				NoProxy: pulumi.StringArray{
+					pulumi.String("localhost"),
+					pulumi.String("127.0.0.1"),
+				},
+				TrustedCa: pulumi.String("Q29uZ3JhdHMhIFlvdSBoYXZlIGZvdW5kIGEgaGlkZGVuIG1lc3NhZ2U="),
+			},
+			KubernetesVersion: pulumi.String(""),
+			LinuxProfile: &containerservice.ContainerServiceLinuxProfileArgs{
+				AdminUsername: pulumi.String("azureuser"),
+				Ssh: &containerservice.ContainerServiceSshConfigurationArgs{
+					PublicKeys: containerservice.ContainerServiceSshPublicKeyArray{
+						&containerservice.ContainerServiceSshPublicKeyArgs{
+							KeyData: pulumi.String("keydata"),
+						},
+					},
+				},
+			},
+			Location: pulumi.String("location1"),
+			NetworkProfile: &containerservice.ContainerServiceNetworkProfileArgs{
+				LoadBalancerProfile: &containerservice.ManagedClusterLoadBalancerProfileArgs{
+					ManagedOutboundIPs: &containerservice.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs{
+						Count: pulumi.Int(2),
+					},
+				},
+				LoadBalancerSku: pulumi.String("standard"),
+				OutboundType:    pulumi.String("loadBalancer"),
+			},
+			ResourceGroupName: pulumi.String("rg1"),
+			ResourceName:      pulumi.String("clustername1"),
+			ServicePrincipalProfile: &containerservice.ManagedClusterServicePrincipalProfileArgs{
+				ClientId: pulumi.String("clientid"),
+				Secret:   pulumi.String("secret"),
+			},
+			Sku: &containerservice.ManagedClusterSKUArgs{
+				Name: pulumi.String("Basic"),
+				Tier: pulumi.String("Free"),
+			},
+			Tags: pulumi.StringMap{
+				"archv2": pulumi.String(""),
+				"tier":   pulumi.String("production"),
+			},
+			WindowsProfile: &containerservice.ManagedClusterWindowsProfileArgs{
+				AdminPassword: pulumi.String(fmt.Sprintf("%v%v", "replacePassword1234", "$")),
+				AdminUsername: pulumi.String("azureuser"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+managed_cluster = azure_native.containerservice.ManagedCluster("managedCluster",
+    addon_profiles={},
+    agent_pool_profiles=[azure_native.containerservice.ManagedClusterAgentPoolProfileArgs(
+        count=3,
+        enable_node_public_ip=True,
+        mode="System",
+        name="nodepool1",
+        os_type="Linux",
+        type="VirtualMachineScaleSets",
+        vm_size="Standard_DS2_v2",
+    )],
+    auto_scaler_profile=azure_native.containerservice.ManagedClusterPropertiesAutoScalerProfileArgs(
+        scale_down_delay_after_add="15m",
+        scan_interval="20s",
+    ),
+    disk_encryption_set_id="/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des",
+    dns_prefix="dnsprefix1",
+    enable_pod_security_policy=True,
+    enable_rbac=True,
+    http_proxy_config=azure_native.containerservice.ManagedClusterHTTPProxyConfigArgs(
+        http_proxy="http://myproxy.server.com:8080",
+        https_proxy="https://myproxy.server.com:8080",
+        no_proxy=[
+            "localhost",
+            "127.0.0.1",
+        ],
+        trusted_ca="Q29uZ3JhdHMhIFlvdSBoYXZlIGZvdW5kIGEgaGlkZGVuIG1lc3NhZ2U=",
+    ),
+    kubernetes_version="",
+    linux_profile=azure_native.containerservice.ContainerServiceLinuxProfileArgs(
+        admin_username="azureuser",
+        ssh=azure_native.containerservice.ContainerServiceSshConfigurationArgs(
+            public_keys=[azure_native.containerservice.ContainerServiceSshPublicKeyArgs(
+                key_data="keydata",
+            )],
+        ),
+    ),
+    location="location1",
+    network_profile=azure_native.containerservice.ContainerServiceNetworkProfileArgs(
+        load_balancer_profile=azure_native.containerservice.ManagedClusterLoadBalancerProfileArgs(
+            managed_outbound_ips=azure_native.containerservice.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs(
+                count=2,
+            ),
+        ),
+        load_balancer_sku="standard",
+        outbound_type="loadBalancer",
+    ),
+    resource_group_name="rg1",
+    resource_name="clustername1",
+    service_principal_profile=azure_native.containerservice.ManagedClusterServicePrincipalProfileArgs(
+        client_id="clientid",
+        secret="secret",
+    ),
+    sku=azure_native.containerservice.ManagedClusterSKUArgs(
+        name="Basic",
+        tier="Free",
+    ),
+    tags={
+        "archv2": "",
+        "tier": "production",
+    },
+    windows_profile=azure_native.containerservice.ManagedClusterWindowsProfileArgs(
+        admin_password="replacePassword1234$",
+        admin_username="azureuser",
+    ))
+
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const managedCluster = new azure_native.containerservice.ManagedCluster("managedCluster", {
+    addonProfiles: {},
+    agentPoolProfiles: [{
+        count: 3,
+        enableNodePublicIP: true,
+        mode: "System",
+        name: "nodepool1",
+        osType: "Linux",
+        type: "VirtualMachineScaleSets",
+        vmSize: "Standard_DS2_v2",
+    }],
+    autoScalerProfile: {
+        scaleDownDelayAfterAdd: "15m",
+        scanInterval: "20s",
+    },
+    diskEncryptionSetID: "/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des",
+    dnsPrefix: "dnsprefix1",
+    enablePodSecurityPolicy: true,
+    enableRBAC: true,
+    httpProxyConfig: {
+        httpProxy: "http://myproxy.server.com:8080",
+        httpsProxy: "https://myproxy.server.com:8080",
+        noProxy: [
+            "localhost",
+            "127.0.0.1",
+        ],
+        trustedCa: "Q29uZ3JhdHMhIFlvdSBoYXZlIGZvdW5kIGEgaGlkZGVuIG1lc3NhZ2U=",
+    },
+    kubernetesVersion: "",
+    linuxProfile: {
+        adminUsername: "azureuser",
+        ssh: {
+            publicKeys: [{
+                keyData: "keydata",
+            }],
+        },
+    },
+    location: "location1",
+    networkProfile: {
+        loadBalancerProfile: {
+            managedOutboundIPs: {
+                count: 2,
+            },
+        },
+        loadBalancerSku: "standard",
+        outboundType: "loadBalancer",
+    },
+    resourceGroupName: "rg1",
+    resourceName: "clustername1",
+    servicePrincipalProfile: {
+        clientId: "clientid",
+        secret: "secret",
+    },
+    sku: {
+        name: "Basic",
+        tier: "Free",
+    },
+    tags: {
+        archv2: "",
+        tier: "production",
+    },
+    windowsProfile: {
+        adminPassword: `replacePassword1234$`,
+        adminUsername: "azureuser",
+    },
+});
+
+```
+
+
+{{< /example >}}
+
+
+
+
 ### Create Managed Cluster with Node Public IP Prefix
 
 
@@ -738,7 +1542,7 @@ import (
 	"fmt"
 
 	containerservice "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerservice"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -963,6 +1767,379 @@ const managedCluster = new azure_native.containerservice.ManagedCluster("managed
 
 
 
+### Create Managed Cluster with OSSKU
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var managedCluster = new AzureNative.ContainerService.ManagedCluster("managedCluster", new AzureNative.ContainerService.ManagedClusterArgs
+        {
+            AddonProfiles = ,
+            AgentPoolProfiles = 
+            {
+                new AzureNative.ContainerService.Inputs.ManagedClusterAgentPoolProfileArgs
+                {
+                    Count = 3,
+                    EnableNodePublicIP = true,
+                    Mode = "System",
+                    Name = "nodepool1",
+                    OsSKU = "CBLMariner",
+                    OsType = "Linux",
+                    Type = "VirtualMachineScaleSets",
+                    VmSize = "Standard_DS2_v2",
+                },
+            },
+            AutoScalerProfile = new AzureNative.ContainerService.Inputs.ManagedClusterPropertiesAutoScalerProfileArgs
+            {
+                ScaleDownDelayAfterAdd = "15m",
+                ScanInterval = "20s",
+            },
+            DiskEncryptionSetID = "/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des",
+            DnsPrefix = "dnsprefix1",
+            EnablePodSecurityPolicy = true,
+            EnableRBAC = true,
+            HttpProxyConfig = new AzureNative.ContainerService.Inputs.ManagedClusterHTTPProxyConfigArgs
+            {
+                HttpProxy = "http://myproxy.server.com:8080",
+                HttpsProxy = "https://myproxy.server.com:8080",
+                NoProxy = 
+                {
+                    "localhost",
+                    "127.0.0.1",
+                },
+                TrustedCa = "Q29uZ3JhdHMhIFlvdSBoYXZlIGZvdW5kIGEgaGlkZGVuIG1lc3NhZ2U=",
+            },
+            KubernetesVersion = "",
+            LinuxProfile = new AzureNative.ContainerService.Inputs.ContainerServiceLinuxProfileArgs
+            {
+                AdminUsername = "azureuser",
+                Ssh = new AzureNative.ContainerService.Inputs.ContainerServiceSshConfigurationArgs
+                {
+                    PublicKeys = 
+                    {
+                        new AzureNative.ContainerService.Inputs.ContainerServiceSshPublicKeyArgs
+                        {
+                            KeyData = "keydata",
+                        },
+                    },
+                },
+            },
+            Location = "location1",
+            NetworkProfile = new AzureNative.ContainerService.Inputs.ContainerServiceNetworkProfileArgs
+            {
+                LoadBalancerProfile = new AzureNative.ContainerService.Inputs.ManagedClusterLoadBalancerProfileArgs
+                {
+                    ManagedOutboundIPs = new AzureNative.ContainerService.Inputs.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs
+                    {
+                        Count = 2,
+                    },
+                },
+                LoadBalancerSku = "standard",
+                OutboundType = "loadBalancer",
+            },
+            ResourceGroupName = "rg1",
+            ResourceName = "clustername1",
+            ServicePrincipalProfile = new AzureNative.ContainerService.Inputs.ManagedClusterServicePrincipalProfileArgs
+            {
+                ClientId = "clientid",
+                Secret = "secret",
+            },
+            Sku = new AzureNative.ContainerService.Inputs.ManagedClusterSKUArgs
+            {
+                Name = "Basic",
+                Tier = "Free",
+            },
+            Tags = 
+            {
+                { "archv2", "" },
+                { "tier", "production" },
+            },
+            WindowsProfile = new AzureNative.ContainerService.Inputs.ManagedClusterWindowsProfileArgs
+            {
+                AdminPassword = "replacePassword1234$",
+                AdminUsername = "azureuser",
+            },
+        });
+    }
+
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+
+```go
+package main
+
+import (
+	"fmt"
+
+	containerservice "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerservice"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := containerservice.NewManagedCluster(ctx, "managedCluster", &containerservice.ManagedClusterArgs{
+			AddonProfiles: nil,
+			AgentPoolProfiles: containerservice.ManagedClusterAgentPoolProfileArray{
+				&containerservice.ManagedClusterAgentPoolProfileArgs{
+					Count:              pulumi.Int(3),
+					EnableNodePublicIP: pulumi.Bool(true),
+					Mode:               pulumi.String("System"),
+					Name:               pulumi.String("nodepool1"),
+					OsSKU:              pulumi.String("CBLMariner"),
+					OsType:             pulumi.String("Linux"),
+					Type:               pulumi.String("VirtualMachineScaleSets"),
+					VmSize:             pulumi.String("Standard_DS2_v2"),
+				},
+			},
+			AutoScalerProfile: &containerservice.ManagedClusterPropertiesAutoScalerProfileArgs{
+				ScaleDownDelayAfterAdd: pulumi.String("15m"),
+				ScanInterval:           pulumi.String("20s"),
+			},
+			DiskEncryptionSetID:     pulumi.String("/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des"),
+			DnsPrefix:               pulumi.String("dnsprefix1"),
+			EnablePodSecurityPolicy: pulumi.Bool(true),
+			EnableRBAC:              pulumi.Bool(true),
+			HttpProxyConfig: &containerservice.ManagedClusterHTTPProxyConfigArgs{
+				HttpProxy:  pulumi.String("http://myproxy.server.com:8080"),
+				HttpsProxy: pulumi.String("https://myproxy.server.com:8080"),
+				NoProxy: pulumi.StringArray{
+					pulumi.String("localhost"),
+					pulumi.String("127.0.0.1"),
+				},
+				TrustedCa: pulumi.String("Q29uZ3JhdHMhIFlvdSBoYXZlIGZvdW5kIGEgaGlkZGVuIG1lc3NhZ2U="),
+			},
+			KubernetesVersion: pulumi.String(""),
+			LinuxProfile: &containerservice.ContainerServiceLinuxProfileArgs{
+				AdminUsername: pulumi.String("azureuser"),
+				Ssh: &containerservice.ContainerServiceSshConfigurationArgs{
+					PublicKeys: containerservice.ContainerServiceSshPublicKeyArray{
+						&containerservice.ContainerServiceSshPublicKeyArgs{
+							KeyData: pulumi.String("keydata"),
+						},
+					},
+				},
+			},
+			Location: pulumi.String("location1"),
+			NetworkProfile: &containerservice.ContainerServiceNetworkProfileArgs{
+				LoadBalancerProfile: &containerservice.ManagedClusterLoadBalancerProfileArgs{
+					ManagedOutboundIPs: &containerservice.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs{
+						Count: pulumi.Int(2),
+					},
+				},
+				LoadBalancerSku: pulumi.String("standard"),
+				OutboundType:    pulumi.String("loadBalancer"),
+			},
+			ResourceGroupName: pulumi.String("rg1"),
+			ResourceName:      pulumi.String("clustername1"),
+			ServicePrincipalProfile: &containerservice.ManagedClusterServicePrincipalProfileArgs{
+				ClientId: pulumi.String("clientid"),
+				Secret:   pulumi.String("secret"),
+			},
+			Sku: &containerservice.ManagedClusterSKUArgs{
+				Name: pulumi.String("Basic"),
+				Tier: pulumi.String("Free"),
+			},
+			Tags: pulumi.StringMap{
+				"archv2": pulumi.String(""),
+				"tier":   pulumi.String("production"),
+			},
+			WindowsProfile: &containerservice.ManagedClusterWindowsProfileArgs{
+				AdminPassword: pulumi.String(fmt.Sprintf("%v%v", "replacePassword1234", "$")),
+				AdminUsername: pulumi.String("azureuser"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+managed_cluster = azure_native.containerservice.ManagedCluster("managedCluster",
+    addon_profiles={},
+    agent_pool_profiles=[azure_native.containerservice.ManagedClusterAgentPoolProfileArgs(
+        count=3,
+        enable_node_public_ip=True,
+        mode="System",
+        name="nodepool1",
+        os_sku="CBLMariner",
+        os_type="Linux",
+        type="VirtualMachineScaleSets",
+        vm_size="Standard_DS2_v2",
+    )],
+    auto_scaler_profile=azure_native.containerservice.ManagedClusterPropertiesAutoScalerProfileArgs(
+        scale_down_delay_after_add="15m",
+        scan_interval="20s",
+    ),
+    disk_encryption_set_id="/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des",
+    dns_prefix="dnsprefix1",
+    enable_pod_security_policy=True,
+    enable_rbac=True,
+    http_proxy_config=azure_native.containerservice.ManagedClusterHTTPProxyConfigArgs(
+        http_proxy="http://myproxy.server.com:8080",
+        https_proxy="https://myproxy.server.com:8080",
+        no_proxy=[
+            "localhost",
+            "127.0.0.1",
+        ],
+        trusted_ca="Q29uZ3JhdHMhIFlvdSBoYXZlIGZvdW5kIGEgaGlkZGVuIG1lc3NhZ2U=",
+    ),
+    kubernetes_version="",
+    linux_profile=azure_native.containerservice.ContainerServiceLinuxProfileArgs(
+        admin_username="azureuser",
+        ssh=azure_native.containerservice.ContainerServiceSshConfigurationArgs(
+            public_keys=[azure_native.containerservice.ContainerServiceSshPublicKeyArgs(
+                key_data="keydata",
+            )],
+        ),
+    ),
+    location="location1",
+    network_profile=azure_native.containerservice.ContainerServiceNetworkProfileArgs(
+        load_balancer_profile=azure_native.containerservice.ManagedClusterLoadBalancerProfileArgs(
+            managed_outbound_ips=azure_native.containerservice.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs(
+                count=2,
+            ),
+        ),
+        load_balancer_sku="standard",
+        outbound_type="loadBalancer",
+    ),
+    resource_group_name="rg1",
+    resource_name="clustername1",
+    service_principal_profile=azure_native.containerservice.ManagedClusterServicePrincipalProfileArgs(
+        client_id="clientid",
+        secret="secret",
+    ),
+    sku=azure_native.containerservice.ManagedClusterSKUArgs(
+        name="Basic",
+        tier="Free",
+    ),
+    tags={
+        "archv2": "",
+        "tier": "production",
+    },
+    windows_profile=azure_native.containerservice.ManagedClusterWindowsProfileArgs(
+        admin_password="replacePassword1234$",
+        admin_username="azureuser",
+    ))
+
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const managedCluster = new azure_native.containerservice.ManagedCluster("managedCluster", {
+    addonProfiles: {},
+    agentPoolProfiles: [{
+        count: 3,
+        enableNodePublicIP: true,
+        mode: "System",
+        name: "nodepool1",
+        osSKU: "CBLMariner",
+        osType: "Linux",
+        type: "VirtualMachineScaleSets",
+        vmSize: "Standard_DS2_v2",
+    }],
+    autoScalerProfile: {
+        scaleDownDelayAfterAdd: "15m",
+        scanInterval: "20s",
+    },
+    diskEncryptionSetID: "/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des",
+    dnsPrefix: "dnsprefix1",
+    enablePodSecurityPolicy: true,
+    enableRBAC: true,
+    httpProxyConfig: {
+        httpProxy: "http://myproxy.server.com:8080",
+        httpsProxy: "https://myproxy.server.com:8080",
+        noProxy: [
+            "localhost",
+            "127.0.0.1",
+        ],
+        trustedCa: "Q29uZ3JhdHMhIFlvdSBoYXZlIGZvdW5kIGEgaGlkZGVuIG1lc3NhZ2U=",
+    },
+    kubernetesVersion: "",
+    linuxProfile: {
+        adminUsername: "azureuser",
+        ssh: {
+            publicKeys: [{
+                keyData: "keydata",
+            }],
+        },
+    },
+    location: "location1",
+    networkProfile: {
+        loadBalancerProfile: {
+            managedOutboundIPs: {
+                count: 2,
+            },
+        },
+        loadBalancerSku: "standard",
+        outboundType: "loadBalancer",
+    },
+    resourceGroupName: "rg1",
+    resourceName: "clustername1",
+    servicePrincipalProfile: {
+        clientId: "clientid",
+        secret: "secret",
+    },
+    sku: {
+        name: "Basic",
+        tier: "Free",
+    },
+    tags: {
+        archv2: "",
+        tier: "production",
+    },
+    windowsProfile: {
+        adminPassword: `replacePassword1234$`,
+        adminUsername: "azureuser",
+    },
+});
+
+```
+
+
+{{< /example >}}
+
+
+
+
 ### Create Managed Cluster with PPG
 
 
@@ -1073,7 +2250,7 @@ import (
 	"fmt"
 
 	containerservice "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerservice"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -1404,7 +2581,93 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	"fmt"
+
+	containerservice "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerservice"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := containerservice.NewManagedCluster(ctx, "managedCluster", &containerservice.ManagedClusterArgs{
+			AddonProfiles: nil,
+			AgentPoolProfiles: containerservice.ManagedClusterAgentPoolProfileArray{
+				&containerservice.ManagedClusterAgentPoolProfileArgs{
+					Count:              pulumi.Int(3),
+					EnableNodePublicIP: pulumi.Bool(true),
+					Mode:               pulumi.String("System"),
+					Name:               pulumi.String("nodepool1"),
+					OsType:             pulumi.String("Linux"),
+					Type:               pulumi.String("VirtualMachineScaleSets"),
+					VmSize:             pulumi.String("Standard_DS2_v2"),
+				},
+			},
+			AutoScalerProfile: &containerservice.ManagedClusterPropertiesAutoScalerProfileArgs{
+				ScaleDownDelayAfterAdd: pulumi.String("15m"),
+				ScanInterval:           pulumi.String("20s"),
+			},
+			DiskEncryptionSetID:     pulumi.String("/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des"),
+			DnsPrefix:               pulumi.String("dnsprefix1"),
+			EnablePodSecurityPolicy: pulumi.Bool(true),
+			EnableRBAC:              pulumi.Bool(true),
+			KubernetesVersion:       pulumi.String(""),
+			LinuxProfile: &containerservice.ContainerServiceLinuxProfileArgs{
+				AdminUsername: pulumi.String("azureuser"),
+				Ssh: &containerservice.ContainerServiceSshConfigurationArgs{
+					PublicKeys: containerservice.ContainerServiceSshPublicKeyArray{
+						&containerservice.ContainerServiceSshPublicKeyArgs{
+							KeyData: pulumi.String("keydata"),
+						},
+					},
+				},
+			},
+			Location: pulumi.String("location1"),
+			NetworkProfile: &containerservice.ContainerServiceNetworkProfileArgs{
+				LoadBalancerProfile: &containerservice.ManagedClusterLoadBalancerProfileArgs{
+					ManagedOutboundIPs: &containerservice.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs{
+						Count: pulumi.Int(2),
+					},
+				},
+				LoadBalancerSku: pulumi.String("standard"),
+				OutboundType:    pulumi.String("loadBalancer"),
+			},
+			PodIdentityProfile: &containerservice.ManagedClusterPodIdentityProfileArgs{
+				AllowNetworkPluginKubenet: pulumi.Bool(true),
+				Enabled:                   pulumi.Bool(true),
+			},
+			ResourceGroupName: pulumi.String("rg1"),
+			ResourceName:      pulumi.String("clustername1"),
+			ServicePrincipalProfile: &containerservice.ManagedClusterServicePrincipalProfileArgs{
+				ClientId: pulumi.String("clientid"),
+				Secret:   pulumi.String("secret"),
+			},
+			Sku: &containerservice.ManagedClusterSKUArgs{
+				Name: pulumi.String("Basic"),
+				Tier: pulumi.String("Free"),
+			},
+			Tags: pulumi.StringMap{
+				"archv2": pulumi.String(""),
+				"tier":   pulumi.String("production"),
+			},
+			WindowsProfile: &containerservice.ManagedClusterWindowsProfileArgs{
+				AdminPassword: pulumi.String(fmt.Sprintf("%v%v", "replacePassword1234", "$")),
+				AdminUsername: pulumi.String("azureuser"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -1674,7 +2937,7 @@ import (
 	"fmt"
 
 	containerservice "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerservice"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -2028,7 +3291,7 @@ import (
 	"fmt"
 
 	containerservice "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerservice"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -2405,7 +3668,7 @@ import (
 	"fmt"
 
 	containerservice "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerservice"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -2799,7 +4062,7 @@ import (
 	"fmt"
 
 	containerservice "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerservice"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -3068,19 +4331,54 @@ const managedCluster = new azure_native.containerservice.ManagedCluster("managed
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ManagedCluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ManagedClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ManagedCluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ManagedClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagedCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aad_profile</span><span class="p">:</span> <span class="nx">Optional[ManagedClusterAADProfileArgs]</span> = None<span class="p">, </span><span class="nx">addon_profiles</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, ManagedClusterAddonProfileArgs]]</span> = None<span class="p">, </span><span class="nx">agent_pool_profiles</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedClusterAgentPoolProfileArgs]]</span> = None<span class="p">, </span><span class="nx">api_server_access_profile</span><span class="p">:</span> <span class="nx">Optional[ManagedClusterAPIServerAccessProfileArgs]</span> = None<span class="p">, </span><span class="nx">auto_scaler_profile</span><span class="p">:</span> <span class="nx">Optional[ManagedClusterPropertiesAutoScalerProfileArgs]</span> = None<span class="p">, </span><span class="nx">auto_upgrade_profile</span><span class="p">:</span> <span class="nx">Optional[ManagedClusterAutoUpgradeProfileArgs]</span> = None<span class="p">, </span><span class="nx">disk_encryption_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_pod_security_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_rbac</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">fqdn_subdomain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ManagedClusterIdentityArgs]</span> = None<span class="p">, </span><span class="nx">identity_profile</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, ManagedClusterPropertiesIdentityProfileArgs]]</span> = None<span class="p">, </span><span class="nx">kubernetes_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">linux_profile</span><span class="p">:</span> <span class="nx">Optional[ContainerServiceLinuxProfileArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_profile</span><span class="p">:</span> <span class="nx">Optional[ContainerServiceNetworkProfileArgs]</span> = None<span class="p">, </span><span class="nx">node_resource_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pod_identity_profile</span><span class="p">:</span> <span class="nx">Optional[ManagedClusterPodIdentityProfileArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_principal_profile</span><span class="p">:</span> <span class="nx">Optional[ManagedClusterServicePrincipalProfileArgs]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[ManagedClusterSKUArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">windows_profile</span><span class="p">:</span> <span class="nx">Optional[ManagedClusterWindowsProfileArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ManagedCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                   <span class="nx">aad_profile</span><span class="p">:</span> <span class="nx">Optional[ManagedClusterAADProfileArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">addon_profiles</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, ManagedClusterAddonProfileArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">agent_pool_profiles</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedClusterAgentPoolProfileArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">api_server_access_profile</span><span class="p">:</span> <span class="nx">Optional[ManagedClusterAPIServerAccessProfileArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">auto_scaler_profile</span><span class="p">:</span> <span class="nx">Optional[ManagedClusterPropertiesAutoScalerProfileArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">auto_upgrade_profile</span><span class="p">:</span> <span class="nx">Optional[ManagedClusterAutoUpgradeProfileArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">disable_local_accounts</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                   <span class="nx">disk_encryption_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">dns_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">enable_pod_security_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                   <span class="nx">enable_rbac</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                   <span class="nx">extended_location</span><span class="p">:</span> <span class="nx">Optional[ExtendedLocationArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">fqdn_subdomain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">http_proxy_config</span><span class="p">:</span> <span class="nx">Optional[ManagedClusterHTTPProxyConfigArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ManagedClusterIdentityArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">identity_profile</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, ManagedClusterPropertiesIdentityProfileArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">kubernetes_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">linux_profile</span><span class="p">:</span> <span class="nx">Optional[ContainerServiceLinuxProfileArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">network_profile</span><span class="p">:</span> <span class="nx">Optional[ContainerServiceNetworkProfileArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">node_resource_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">pod_identity_profile</span><span class="p">:</span> <span class="nx">Optional[ManagedClusterPodIdentityProfileArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">private_link_resources</span><span class="p">:</span> <span class="nx">Optional[Sequence[PrivateLinkResourceArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">service_principal_profile</span><span class="p">:</span> <span class="nx">Optional[ManagedClusterServicePrincipalProfileArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[ManagedClusterSKUArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                   <span class="nx">windows_profile</span><span class="p">:</span> <span class="nx">Optional[ManagedClusterWindowsProfileArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ManagedCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ManagedClusterArgs</a></span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewManagedCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ManagedClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ManagedCluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewManagedCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ManagedClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ManagedCluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ManagedCluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ManagedClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ManagedCluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ManagedClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3115,22 +4413,32 @@ const managedCluster = new azure_native.containerservice.ManagedCluster("managed
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ManagedClusterArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3270,6 +4578,14 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}Profile of auto upgrade configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablelocalaccounts_csharp">
+<a href="#disablelocalaccounts_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Local<wbr>Accounts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to true, getting static credential will be disabled for this cluster. Expected to only be used for AAD clusters.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="diskencryptionsetid_csharp">
 <a href="#diskencryptionsetid_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set<wbr>ID</a>
 </span>
@@ -3302,6 +4618,14 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}Whether to enable Kubernetes Role-Based Access Control.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="extendedlocation_csharp">
+<a href="#extendedlocation_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Extended<wbr>Location<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location of the Virtual Machine.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="fqdnsubdomain_csharp">
 <a href="#fqdnsubdomain_csharp" style="color: inherit; text-decoration: inherit;">Fqdn<wbr>Subdomain</a>
 </span>
@@ -3309,6 +4633,14 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}FQDN subdomain specified when creating private cluster with custom private dns zone.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httpproxyconfig_csharp">
+<a href="#httpproxyconfig_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Proxy<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedclusterhttpproxyconfig">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>HTTPProxy<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configurations for provisioning the cluster with HTTP proxy servers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_csharp">
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -3373,6 +4705,14 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#managedclusterpodidentityprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Profile of managed cluster pod identity.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkresources_csharp">
+<a href="#privatelinkresources_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privatelinkresource">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Resource<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Private link resources associated with the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcename_csharp">
 <a href="#resourcename_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -3474,6 +4814,14 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}Profile of auto upgrade configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablelocalaccounts_go">
+<a href="#disablelocalaccounts_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Local<wbr>Accounts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to true, getting static credential will be disabled for this cluster. Expected to only be used for AAD clusters.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="diskencryptionsetid_go">
 <a href="#diskencryptionsetid_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set<wbr>ID</a>
 </span>
@@ -3506,6 +4854,14 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}Whether to enable Kubernetes Role-Based Access Control.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="extendedlocation_go">
+<a href="#extendedlocation_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocation">Extended<wbr>Location</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location of the Virtual Machine.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="fqdnsubdomain_go">
 <a href="#fqdnsubdomain_go" style="color: inherit; text-decoration: inherit;">Fqdn<wbr>Subdomain</a>
 </span>
@@ -3513,6 +4869,14 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}FQDN subdomain specified when creating private cluster with custom private dns zone.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httpproxyconfig_go">
+<a href="#httpproxyconfig_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Proxy<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedclusterhttpproxyconfig">Managed<wbr>Cluster<wbr>HTTPProxy<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Configurations for provisioning the cluster with HTTP proxy servers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_go">
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -3578,6 +4942,14 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}Profile of managed cluster pod identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="privatelinkresources_go">
+<a href="#privatelinkresources_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privatelinkresource">[]Private<wbr>Link<wbr>Resource</a></span>
+    </dt>
+    <dd>{{% md %}}Private link resources associated with the cluster.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="resourcename_go">
 <a href="#resourcename_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
 </span>
@@ -3634,7 +5006,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#aadprofile_nodejs" style="color: inherit; text-decoration: inherit;">aad<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusteraadprofile">Managed<wbr>Cluster<wbr>AADProfile</a></span>
+        <span class="property-type"><a href="#managedclusteraadprofile">Managed<wbr>Cluster<wbr>AADProfile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Profile of Azure Active Directory configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3642,7 +5014,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#addonprofiles_nodejs" style="color: inherit; text-decoration: inherit;">addon<wbr>Profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Managed<wbr>Cluster<wbr>Addon<wbr>Profile}</span>
+        <span class="property-type">{[key: string]: Managed<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Profile of managed cluster add-on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3650,7 +5022,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#agentpoolprofiles_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Pool<wbr>Profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusteragentpoolprofile">Managed<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile[]</a></span>
+        <span class="property-type"><a href="#managedclusteragentpoolprofile">Managed<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Properties of the agent pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3658,7 +5030,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#apiserveraccessprofile_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Server<wbr>Access<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterapiserveraccessprofile">Managed<wbr>Cluster<wbr>APIServer<wbr>Access<wbr>Profile</a></span>
+        <span class="property-type"><a href="#managedclusterapiserveraccessprofile">Managed<wbr>Cluster<wbr>APIServer<wbr>Access<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Access profile for managed cluster API server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3666,7 +5038,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#autoscalerprofile_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scaler<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterpropertiesautoscalerprofile">Managed<wbr>Cluster<wbr>Properties<wbr>Auto<wbr>Scaler<wbr>Profile</a></span>
+        <span class="property-type"><a href="#managedclusterpropertiesautoscalerprofile">Managed<wbr>Cluster<wbr>Properties<wbr>Auto<wbr>Scaler<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters to be applied to the cluster-autoscaler when enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3674,9 +5046,17 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#autoupgradeprofile_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Upgrade<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterautoupgradeprofile">Managed<wbr>Cluster<wbr>Auto<wbr>Upgrade<wbr>Profile</a></span>
+        <span class="property-type"><a href="#managedclusterautoupgradeprofile">Managed<wbr>Cluster<wbr>Auto<wbr>Upgrade<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Profile of auto upgrade configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablelocalaccounts_nodejs">
+<a href="#disablelocalaccounts_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Local<wbr>Accounts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If set to true, getting static credential will be disabled for this cluster. Expected to only be used for AAD clusters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionsetid_nodejs">
 <a href="#diskencryptionsetid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Set<wbr>ID</a>
@@ -3710,6 +5090,14 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}Whether to enable Kubernetes Role-Based Access Control.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="extendedlocation_nodejs">
+<a href="#extendedlocation_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocation">Extended<wbr>Location<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location of the Virtual Machine.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="fqdnsubdomain_nodejs">
 <a href="#fqdnsubdomain_nodejs" style="color: inherit; text-decoration: inherit;">fqdn<wbr>Subdomain</a>
 </span>
@@ -3718,11 +5106,19 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}FQDN subdomain specified when creating private cluster with custom private dns zone.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="httpproxyconfig_nodejs">
+<a href="#httpproxyconfig_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Proxy<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedclusterhttpproxyconfig">Managed<wbr>Cluster<wbr>HTTPProxy<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configurations for provisioning the cluster with HTTP proxy servers.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="identity_nodejs">
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusteridentity">Managed<wbr>Cluster<wbr>Identity</a></span>
+        <span class="property-type"><a href="#managedclusteridentity">Managed<wbr>Cluster<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the managed cluster, if configured.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3730,7 +5126,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#identityprofile_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Managed<wbr>Cluster<wbr>Properties<wbr>Identity<wbr>Profile}</span>
+        <span class="property-type">{[key: string]: Managed<wbr>Cluster<wbr>Properties<wbr>Identity<wbr>Profile<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Identities associated with the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3746,7 +5142,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#linuxprofile_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicelinuxprofile">Container<wbr>Service<wbr>Linux<wbr>Profile</a></span>
+        <span class="property-type"><a href="#containerservicelinuxprofile">Container<wbr>Service<wbr>Linux<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Profile for Linux VMs in the container service cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3762,7 +5158,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#networkprofile_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicenetworkprofile">Container<wbr>Service<wbr>Network<wbr>Profile</a></span>
+        <span class="property-type"><a href="#containerservicenetworkprofile">Container<wbr>Service<wbr>Network<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Profile of network configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3778,9 +5174,17 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#podidentityprofile_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Identity<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterpodidentityprofile">Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Profile</a></span>
+        <span class="property-type"><a href="#managedclusterpodidentityprofile">Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Profile of managed cluster pod identity.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkresources_nodejs">
+<a href="#privatelinkresources_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privatelinkresource">Private<wbr>Link<wbr>Resource<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}Private link resources associated with the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcename_nodejs">
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
@@ -3794,7 +5198,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#serviceprincipalprofile_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterserviceprincipalprofile">Managed<wbr>Cluster<wbr>Service<wbr>Principal<wbr>Profile</a></span>
+        <span class="property-type"><a href="#managedclusterserviceprincipalprofile">Managed<wbr>Cluster<wbr>Service<wbr>Principal<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about a service principal identity for the cluster to use for manipulating Azure APIs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3802,7 +5206,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclustersku">Managed<wbr>Cluster<wbr>SKU</a></span>
+        <span class="property-type"><a href="#managedclustersku">Managed<wbr>Cluster<wbr>SKUArgs</a></span>
     </dt>
     <dd>{{% md %}}The managed cluster SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3818,7 +5222,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#windowsprofile_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterwindowsprofile">Managed<wbr>Cluster<wbr>Windows<wbr>Profile</a></span>
+        <span class="property-type"><a href="#managedclusterwindowsprofile">Managed<wbr>Cluster<wbr>Windows<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Profile for Windows VMs in the container service cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3882,6 +5286,14 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}Profile of auto upgrade configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disable_local_accounts_python">
+<a href="#disable_local_accounts_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>local_<wbr>accounts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to true, getting static credential will be disabled for this cluster. Expected to only be used for AAD clusters.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="disk_encryption_set_id_python">
 <a href="#disk_encryption_set_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>set_<wbr>id</a>
 </span>
@@ -3914,6 +5326,14 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}Whether to enable Kubernetes Role-Based Access Control.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="extended_location_python">
+<a href="#extended_location_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocation">Extended<wbr>Location<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location of the Virtual Machine.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="fqdn_subdomain_python">
 <a href="#fqdn_subdomain_python" style="color: inherit; text-decoration: inherit;">fqdn_<wbr>subdomain</a>
 </span>
@@ -3921,6 +5341,14 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}FQDN subdomain specified when creating private cluster with custom private dns zone.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="http_proxy_config_python">
+<a href="#http_proxy_config_python" style="color: inherit; text-decoration: inherit;">http_<wbr>proxy_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedclusterhttpproxyconfig">Managed<wbr>Cluster<wbr>HTTPProxy<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configurations for provisioning the cluster with HTTP proxy servers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_python">
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -3985,6 +5413,14 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#managedclusterpodidentityprofile">Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Profile of managed cluster pod identity.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="private_link_resources_python">
+<a href="#private_link_resources_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privatelinkresource">Sequence[Private<wbr>Link<wbr>Resource<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Private link resources associated with the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_name_python">
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
@@ -4589,7 +6025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorbodyresponse">Cloud<wbr>Error<wbr>Body<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#clouderrorbodyresponse">Cloud<wbr>Error<wbr>Body<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4679,7 +6115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorbodyresponse">Cloud<wbr>Error<wbr>Body<wbr>Response</a></span>
+        <span class="property-type"><a href="#clouderrorbodyresponse">Cloud<wbr>Error<wbr>Body<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details about the error.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4753,7 +6189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssh_nodejs" style="color: inherit; text-decoration: inherit;">ssh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicesshconfiguration">Container<wbr>Service<wbr>Ssh<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#containerservicesshconfiguration">Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSH configuration for Linux-based VMs running on Azure.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4835,7 +6271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssh_nodejs" style="color: inherit; text-decoration: inherit;">ssh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicesshconfigurationresponse">Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#containerservicesshconfigurationresponse">Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSH configuration for Linux-based VMs running on Azure.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5053,7 +6489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loadbalancerprofile_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofile">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofile">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Profile of the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5391,7 +6827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loadbalancerprofile_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponse">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponse">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Profile of the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5569,7 +7005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publickeys_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicesshpublickey">Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key[]</a></span>
+        <span class="property-type"><a href="#containerservicesshpublickey">Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5619,7 +7055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publickeys_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicesshpublickeyresponse">Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#containerservicesshpublickeyresponse">Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5736,720 +7172,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Certificate public key used to authenticate with VMs through SSH. The certificate must be in PEM format with or without headers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="containerservicevmsizetypes">Container<wbr>Service<wbr>VMSize<wbr>Types</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>Standard_A1</dt>
-    <dd>Standard_A1</dd><dt>Standard_A10</dt>
-    <dd>Standard_A10</dd><dt>Standard_A11</dt>
-    <dd>Standard_A11</dd><dt>Standard_A1_<wbr>v2</dt>
-    <dd>Standard_A1_v2</dd><dt>Standard_A2</dt>
-    <dd>Standard_A2</dd><dt>Standard_A2_<wbr>v2</dt>
-    <dd>Standard_A2_v2</dd><dt>Standard_A2m_<wbr>v2</dt>
-    <dd>Standard_A2m_v2</dd><dt>Standard_A3</dt>
-    <dd>Standard_A3</dd><dt>Standard_A4</dt>
-    <dd>Standard_A4</dd><dt>Standard_A4_<wbr>v2</dt>
-    <dd>Standard_A4_v2</dd><dt>Standard_A4m_<wbr>v2</dt>
-    <dd>Standard_A4m_v2</dd><dt>Standard_A5</dt>
-    <dd>Standard_A5</dd><dt>Standard_A6</dt>
-    <dd>Standard_A6</dd><dt>Standard_A7</dt>
-    <dd>Standard_A7</dd><dt>Standard_A8</dt>
-    <dd>Standard_A8</dd><dt>Standard_A8_<wbr>v2</dt>
-    <dd>Standard_A8_v2</dd><dt>Standard_A8m_<wbr>v2</dt>
-    <dd>Standard_A8m_v2</dd><dt>Standard_A9</dt>
-    <dd>Standard_A9</dd><dt>Standard_B2ms</dt>
-    <dd>Standard_B2ms</dd><dt>Standard_B2s</dt>
-    <dd>Standard_B2s</dd><dt>Standard_B4ms</dt>
-    <dd>Standard_B4ms</dd><dt>Standard_B8ms</dt>
-    <dd>Standard_B8ms</dd><dt>Standard_D1</dt>
-    <dd>Standard_D1</dd><dt>Standard_D11</dt>
-    <dd>Standard_D11</dd><dt>Standard_D11_<wbr>v2</dt>
-    <dd>Standard_D11_v2</dd><dt>Standard_D11_<wbr>v2_Promo</dt>
-    <dd>Standard_D11_v2_Promo</dd><dt>Standard_D12</dt>
-    <dd>Standard_D12</dd><dt>Standard_D12_<wbr>v2</dt>
-    <dd>Standard_D12_v2</dd><dt>Standard_D12_<wbr>v2_Promo</dt>
-    <dd>Standard_D12_v2_Promo</dd><dt>Standard_D13</dt>
-    <dd>Standard_D13</dd><dt>Standard_D13_<wbr>v2</dt>
-    <dd>Standard_D13_v2</dd><dt>Standard_D13_<wbr>v2_Promo</dt>
-    <dd>Standard_D13_v2_Promo</dd><dt>Standard_D14</dt>
-    <dd>Standard_D14</dd><dt>Standard_D14_<wbr>v2</dt>
-    <dd>Standard_D14_v2</dd><dt>Standard_D14_<wbr>v2_Promo</dt>
-    <dd>Standard_D14_v2_Promo</dd><dt>Standard_D15_<wbr>v2</dt>
-    <dd>Standard_D15_v2</dd><dt>Standard_D16_<wbr>v3</dt>
-    <dd>Standard_D16_v3</dd><dt>Standard_D16s_<wbr>v3</dt>
-    <dd>Standard_D16s_v3</dd><dt>Standard_D1_<wbr>v2</dt>
-    <dd>Standard_D1_v2</dd><dt>Standard_D2</dt>
-    <dd>Standard_D2</dd><dt>Standard_D2_<wbr>v2</dt>
-    <dd>Standard_D2_v2</dd><dt>Standard_D2_<wbr>v2_Promo</dt>
-    <dd>Standard_D2_v2_Promo</dd><dt>Standard_D2_<wbr>v3</dt>
-    <dd>Standard_D2_v3</dd><dt>Standard_D2s_<wbr>v3</dt>
-    <dd>Standard_D2s_v3</dd><dt>Standard_D3</dt>
-    <dd>Standard_D3</dd><dt>Standard_D32_<wbr>v3</dt>
-    <dd>Standard_D32_v3</dd><dt>Standard_D32s_<wbr>v3</dt>
-    <dd>Standard_D32s_v3</dd><dt>Standard_D3_<wbr>v2</dt>
-    <dd>Standard_D3_v2</dd><dt>Standard_D3_<wbr>v2_Promo</dt>
-    <dd>Standard_D3_v2_Promo</dd><dt>Standard_D4</dt>
-    <dd>Standard_D4</dd><dt>Standard_D4_<wbr>v2</dt>
-    <dd>Standard_D4_v2</dd><dt>Standard_D4_<wbr>v2_Promo</dt>
-    <dd>Standard_D4_v2_Promo</dd><dt>Standard_D4_<wbr>v3</dt>
-    <dd>Standard_D4_v3</dd><dt>Standard_D4s_<wbr>v3</dt>
-    <dd>Standard_D4s_v3</dd><dt>Standard_D5_<wbr>v2</dt>
-    <dd>Standard_D5_v2</dd><dt>Standard_D5_<wbr>v2_Promo</dt>
-    <dd>Standard_D5_v2_Promo</dd><dt>Standard_D64_<wbr>v3</dt>
-    <dd>Standard_D64_v3</dd><dt>Standard_D64s_<wbr>v3</dt>
-    <dd>Standard_D64s_v3</dd><dt>Standard_D8_<wbr>v3</dt>
-    <dd>Standard_D8_v3</dd><dt>Standard_D8s_<wbr>v3</dt>
-    <dd>Standard_D8s_v3</dd><dt>Standard_DS1</dt>
-    <dd>Standard_DS1</dd><dt>Standard_DS11</dt>
-    <dd>Standard_DS11</dd><dt>Standard_DS11_<wbr>v2</dt>
-    <dd>Standard_DS11_v2</dd><dt>Standard_DS11_<wbr>v2_Promo</dt>
-    <dd>Standard_DS11_v2_Promo</dd><dt>Standard_DS12</dt>
-    <dd>Standard_DS12</dd><dt>Standard_DS12_<wbr>v2</dt>
-    <dd>Standard_DS12_v2</dd><dt>Standard_DS12_<wbr>v2_Promo</dt>
-    <dd>Standard_DS12_v2_Promo</dd><dt>Standard_DS13</dt>
-    <dd>Standard_DS13</dd><dt>Standard_DS13_2_<wbr>v2</dt>
-    <dd>Standard_DS13-2_v2</dd><dt>Standard_DS13_4_<wbr>v2</dt>
-    <dd>Standard_DS13-4_v2</dd><dt>Standard_DS13_<wbr>v2</dt>
-    <dd>Standard_DS13_v2</dd><dt>Standard_DS13_<wbr>v2_Promo</dt>
-    <dd>Standard_DS13_v2_Promo</dd><dt>Standard_DS14</dt>
-    <dd>Standard_DS14</dd><dt>Standard_DS14_4_<wbr>v2</dt>
-    <dd>Standard_DS14-4_v2</dd><dt>Standard_DS14_8_<wbr>v2</dt>
-    <dd>Standard_DS14-8_v2</dd><dt>Standard_DS14_<wbr>v2</dt>
-    <dd>Standard_DS14_v2</dd><dt>Standard_DS14_<wbr>v2_Promo</dt>
-    <dd>Standard_DS14_v2_Promo</dd><dt>Standard_DS15_<wbr>v2</dt>
-    <dd>Standard_DS15_v2</dd><dt>Standard_DS1_<wbr>v2</dt>
-    <dd>Standard_DS1_v2</dd><dt>Standard_DS2</dt>
-    <dd>Standard_DS2</dd><dt>Standard_DS2_<wbr>v2</dt>
-    <dd>Standard_DS2_v2</dd><dt>Standard_DS2_<wbr>v2_Promo</dt>
-    <dd>Standard_DS2_v2_Promo</dd><dt>Standard_DS3</dt>
-    <dd>Standard_DS3</dd><dt>Standard_DS3_<wbr>v2</dt>
-    <dd>Standard_DS3_v2</dd><dt>Standard_DS3_<wbr>v2_Promo</dt>
-    <dd>Standard_DS3_v2_Promo</dd><dt>Standard_DS4</dt>
-    <dd>Standard_DS4</dd><dt>Standard_DS4_<wbr>v2</dt>
-    <dd>Standard_DS4_v2</dd><dt>Standard_DS4_<wbr>v2_Promo</dt>
-    <dd>Standard_DS4_v2_Promo</dd><dt>Standard_DS5_<wbr>v2</dt>
-    <dd>Standard_DS5_v2</dd><dt>Standard_DS5_<wbr>v2_Promo</dt>
-    <dd>Standard_DS5_v2_Promo</dd><dt>Standard_E16_<wbr>v3</dt>
-    <dd>Standard_E16_v3</dd><dt>Standard_E16s_<wbr>v3</dt>
-    <dd>Standard_E16s_v3</dd><dt>Standard_E2_<wbr>v3</dt>
-    <dd>Standard_E2_v3</dd><dt>Standard_E2s_<wbr>v3</dt>
-    <dd>Standard_E2s_v3</dd><dt>Standard_E32_16s_<wbr>v3</dt>
-    <dd>Standard_E32-16s_v3</dd><dt>Standard_E32_8s_<wbr>v3</dt>
-    <dd>Standard_E32-8s_v3</dd><dt>Standard_E32_<wbr>v3</dt>
-    <dd>Standard_E32_v3</dd><dt>Standard_E32s_<wbr>v3</dt>
-    <dd>Standard_E32s_v3</dd><dt>Standard_E4_<wbr>v3</dt>
-    <dd>Standard_E4_v3</dd><dt>Standard_E4s_<wbr>v3</dt>
-    <dd>Standard_E4s_v3</dd><dt>Standard_E64_16s_<wbr>v3</dt>
-    <dd>Standard_E64-16s_v3</dd><dt>Standard_E64_32s_<wbr>v3</dt>
-    <dd>Standard_E64-32s_v3</dd><dt>Standard_E64_<wbr>v3</dt>
-    <dd>Standard_E64_v3</dd><dt>Standard_E64s_<wbr>v3</dt>
-    <dd>Standard_E64s_v3</dd><dt>Standard_E8_<wbr>v3</dt>
-    <dd>Standard_E8_v3</dd><dt>Standard_E8s_<wbr>v3</dt>
-    <dd>Standard_E8s_v3</dd><dt>Standard_F1</dt>
-    <dd>Standard_F1</dd><dt>Standard_F16</dt>
-    <dd>Standard_F16</dd><dt>Standard_F16s</dt>
-    <dd>Standard_F16s</dd><dt>Standard_F16s_<wbr>v2</dt>
-    <dd>Standard_F16s_v2</dd><dt>Standard_F1s</dt>
-    <dd>Standard_F1s</dd><dt>Standard_F2</dt>
-    <dd>Standard_F2</dd><dt>Standard_F2s</dt>
-    <dd>Standard_F2s</dd><dt>Standard_F2s_<wbr>v2</dt>
-    <dd>Standard_F2s_v2</dd><dt>Standard_F32s_<wbr>v2</dt>
-    <dd>Standard_F32s_v2</dd><dt>Standard_F4</dt>
-    <dd>Standard_F4</dd><dt>Standard_F4s</dt>
-    <dd>Standard_F4s</dd><dt>Standard_F4s_<wbr>v2</dt>
-    <dd>Standard_F4s_v2</dd><dt>Standard_F64s_<wbr>v2</dt>
-    <dd>Standard_F64s_v2</dd><dt>Standard_F72s_<wbr>v2</dt>
-    <dd>Standard_F72s_v2</dd><dt>Standard_F8</dt>
-    <dd>Standard_F8</dd><dt>Standard_F8s</dt>
-    <dd>Standard_F8s</dd><dt>Standard_F8s_<wbr>v2</dt>
-    <dd>Standard_F8s_v2</dd><dt>Standard_G1</dt>
-    <dd>Standard_G1</dd><dt>Standard_G2</dt>
-    <dd>Standard_G2</dd><dt>Standard_G3</dt>
-    <dd>Standard_G3</dd><dt>Standard_G4</dt>
-    <dd>Standard_G4</dd><dt>Standard_G5</dt>
-    <dd>Standard_G5</dd><dt>Standard_GS1</dt>
-    <dd>Standard_GS1</dd><dt>Standard_GS2</dt>
-    <dd>Standard_GS2</dd><dt>Standard_GS3</dt>
-    <dd>Standard_GS3</dd><dt>Standard_GS4</dt>
-    <dd>Standard_GS4</dd><dt>Standard_GS4_4</dt>
-    <dd>Standard_GS4-4</dd><dt>Standard_GS4_8</dt>
-    <dd>Standard_GS4-8</dd><dt>Standard_GS5</dt>
-    <dd>Standard_GS5</dd><dt>Standard_GS5_16</dt>
-    <dd>Standard_GS5-16</dd><dt>Standard_GS5_8</dt>
-    <dd>Standard_GS5-8</dd><dt>Standard_H16</dt>
-    <dd>Standard_H16</dd><dt>Standard_H16m</dt>
-    <dd>Standard_H16m</dd><dt>Standard_H16mr</dt>
-    <dd>Standard_H16mr</dd><dt>Standard_H16r</dt>
-    <dd>Standard_H16r</dd><dt>Standard_H8</dt>
-    <dd>Standard_H8</dd><dt>Standard_H8m</dt>
-    <dd>Standard_H8m</dd><dt>Standard_L16s</dt>
-    <dd>Standard_L16s</dd><dt>Standard_L32s</dt>
-    <dd>Standard_L32s</dd><dt>Standard_L4s</dt>
-    <dd>Standard_L4s</dd><dt>Standard_L8s</dt>
-    <dd>Standard_L8s</dd><dt>Standard_M128_32ms</dt>
-    <dd>Standard_M128-32ms</dd><dt>Standard_M128_64ms</dt>
-    <dd>Standard_M128-64ms</dd><dt>Standard_M128ms</dt>
-    <dd>Standard_M128ms</dd><dt>Standard_M128s</dt>
-    <dd>Standard_M128s</dd><dt>Standard_M64_16ms</dt>
-    <dd>Standard_M64-16ms</dd><dt>Standard_M64_32ms</dt>
-    <dd>Standard_M64-32ms</dd><dt>Standard_M64ms</dt>
-    <dd>Standard_M64ms</dd><dt>Standard_M64s</dt>
-    <dd>Standard_M64s</dd><dt>Standard_NC12</dt>
-    <dd>Standard_NC12</dd><dt>Standard_NC12s_<wbr>v2</dt>
-    <dd>Standard_NC12s_v2</dd><dt>Standard_NC12s_<wbr>v3</dt>
-    <dd>Standard_NC12s_v3</dd><dt>Standard_NC24</dt>
-    <dd>Standard_NC24</dd><dt>Standard_NC24r</dt>
-    <dd>Standard_NC24r</dd><dt>Standard_NC24rs_<wbr>v2</dt>
-    <dd>Standard_NC24rs_v2</dd><dt>Standard_NC24rs_<wbr>v3</dt>
-    <dd>Standard_NC24rs_v3</dd><dt>Standard_NC24s_<wbr>v2</dt>
-    <dd>Standard_NC24s_v2</dd><dt>Standard_NC24s_<wbr>v3</dt>
-    <dd>Standard_NC24s_v3</dd><dt>Standard_NC6</dt>
-    <dd>Standard_NC6</dd><dt>Standard_NC6s_<wbr>v2</dt>
-    <dd>Standard_NC6s_v2</dd><dt>Standard_NC6s_<wbr>v3</dt>
-    <dd>Standard_NC6s_v3</dd><dt>Standard_ND12s</dt>
-    <dd>Standard_ND12s</dd><dt>Standard_ND24rs</dt>
-    <dd>Standard_ND24rs</dd><dt>Standard_ND24s</dt>
-    <dd>Standard_ND24s</dd><dt>Standard_ND6s</dt>
-    <dd>Standard_ND6s</dd><dt>Standard_NV12</dt>
-    <dd>Standard_NV12</dd><dt>Standard_NV24</dt>
-    <dd>Standard_NV24</dd><dt>Standard_NV6</dt>
-    <dd>Standard_NV6</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_A1</dt>
-    <dd>Standard_A1</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_A10</dt>
-    <dd>Standard_A10</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_A11</dt>
-    <dd>Standard_A11</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_A1_<wbr>v2</dt>
-    <dd>Standard_A1_v2</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_A2</dt>
-    <dd>Standard_A2</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_A2_<wbr>v2</dt>
-    <dd>Standard_A2_v2</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_A2m_<wbr>v2</dt>
-    <dd>Standard_A2m_v2</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_A3</dt>
-    <dd>Standard_A3</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_A4</dt>
-    <dd>Standard_A4</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_A4_<wbr>v2</dt>
-    <dd>Standard_A4_v2</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_A4m_<wbr>v2</dt>
-    <dd>Standard_A4m_v2</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_A5</dt>
-    <dd>Standard_A5</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_A6</dt>
-    <dd>Standard_A6</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_A7</dt>
-    <dd>Standard_A7</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_A8</dt>
-    <dd>Standard_A8</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_A8_<wbr>v2</dt>
-    <dd>Standard_A8_v2</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_A8m_<wbr>v2</dt>
-    <dd>Standard_A8m_v2</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_A9</dt>
-    <dd>Standard_A9</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_B2ms</dt>
-    <dd>Standard_B2ms</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_B2s</dt>
-    <dd>Standard_B2s</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_B4ms</dt>
-    <dd>Standard_B4ms</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_B8ms</dt>
-    <dd>Standard_B8ms</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D1</dt>
-    <dd>Standard_D1</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D11</dt>
-    <dd>Standard_D11</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D11_<wbr>v2</dt>
-    <dd>Standard_D11_v2</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D11_<wbr>v2_Promo</dt>
-    <dd>Standard_D11_v2_Promo</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D12</dt>
-    <dd>Standard_D12</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D12_<wbr>v2</dt>
-    <dd>Standard_D12_v2</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D12_<wbr>v2_Promo</dt>
-    <dd>Standard_D12_v2_Promo</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D13</dt>
-    <dd>Standard_D13</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D13_<wbr>v2</dt>
-    <dd>Standard_D13_v2</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D13_<wbr>v2_Promo</dt>
-    <dd>Standard_D13_v2_Promo</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D14</dt>
-    <dd>Standard_D14</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D14_<wbr>v2</dt>
-    <dd>Standard_D14_v2</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D14_<wbr>v2_Promo</dt>
-    <dd>Standard_D14_v2_Promo</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D15_<wbr>v2</dt>
-    <dd>Standard_D15_v2</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D16_<wbr>v3</dt>
-    <dd>Standard_D16_v3</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D16s_<wbr>v3</dt>
-    <dd>Standard_D16s_v3</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D1_<wbr>v2</dt>
-    <dd>Standard_D1_v2</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D2</dt>
-    <dd>Standard_D2</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D2_<wbr>v2</dt>
-    <dd>Standard_D2_v2</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D2_<wbr>v2_Promo</dt>
-    <dd>Standard_D2_v2_Promo</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D2_<wbr>v3</dt>
-    <dd>Standard_D2_v3</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D2s_<wbr>v3</dt>
-    <dd>Standard_D2s_v3</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D3</dt>
-    <dd>Standard_D3</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D32_<wbr>v3</dt>
-    <dd>Standard_D32_v3</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D32s_<wbr>v3</dt>
-    <dd>Standard_D32s_v3</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D3_<wbr>v2</dt>
-    <dd>Standard_D3_v2</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D3_<wbr>v2_Promo</dt>
-    <dd>Standard_D3_v2_Promo</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D4</dt>
-    <dd>Standard_D4</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D4_<wbr>v2</dt>
-    <dd>Standard_D4_v2</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D4_<wbr>v2_Promo</dt>
-    <dd>Standard_D4_v2_Promo</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D4_<wbr>v3</dt>
-    <dd>Standard_D4_v3</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D4s_<wbr>v3</dt>
-    <dd>Standard_D4s_v3</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D5_<wbr>v2</dt>
-    <dd>Standard_D5_v2</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D5_<wbr>v2_Promo</dt>
-    <dd>Standard_D5_v2_Promo</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D64_<wbr>v3</dt>
-    <dd>Standard_D64_v3</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D64s_<wbr>v3</dt>
-    <dd>Standard_D64s_v3</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D8_<wbr>v3</dt>
-    <dd>Standard_D8_v3</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D8s_<wbr>v3</dt>
-    <dd>Standard_D8s_v3</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS1</dt>
-    <dd>Standard_DS1</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS11</dt>
-    <dd>Standard_DS11</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS11_<wbr>v2</dt>
-    <dd>Standard_DS11_v2</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS11_<wbr>v2_Promo</dt>
-    <dd>Standard_DS11_v2_Promo</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS12</dt>
-    <dd>Standard_DS12</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS12_<wbr>v2</dt>
-    <dd>Standard_DS12_v2</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS12_<wbr>v2_Promo</dt>
-    <dd>Standard_DS12_v2_Promo</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS13</dt>
-    <dd>Standard_DS13</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS13_2_<wbr>v2</dt>
-    <dd>Standard_DS13-2_v2</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS13_4_<wbr>v2</dt>
-    <dd>Standard_DS13-4_v2</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS13_<wbr>v2</dt>
-    <dd>Standard_DS13_v2</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS13_<wbr>v2_Promo</dt>
-    <dd>Standard_DS13_v2_Promo</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS14</dt>
-    <dd>Standard_DS14</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS14_4_<wbr>v2</dt>
-    <dd>Standard_DS14-4_v2</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS14_8_<wbr>v2</dt>
-    <dd>Standard_DS14-8_v2</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS14_<wbr>v2</dt>
-    <dd>Standard_DS14_v2</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS14_<wbr>v2_Promo</dt>
-    <dd>Standard_DS14_v2_Promo</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS15_<wbr>v2</dt>
-    <dd>Standard_DS15_v2</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS1_<wbr>v2</dt>
-    <dd>Standard_DS1_v2</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS2</dt>
-    <dd>Standard_DS2</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS2_<wbr>v2</dt>
-    <dd>Standard_DS2_v2</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS2_<wbr>v2_Promo</dt>
-    <dd>Standard_DS2_v2_Promo</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS3</dt>
-    <dd>Standard_DS3</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS3_<wbr>v2</dt>
-    <dd>Standard_DS3_v2</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS3_<wbr>v2_Promo</dt>
-    <dd>Standard_DS3_v2_Promo</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS4</dt>
-    <dd>Standard_DS4</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS4_<wbr>v2</dt>
-    <dd>Standard_DS4_v2</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS4_<wbr>v2_Promo</dt>
-    <dd>Standard_DS4_v2_Promo</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS5_<wbr>v2</dt>
-    <dd>Standard_DS5_v2</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS5_<wbr>v2_Promo</dt>
-    <dd>Standard_DS5_v2_Promo</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_E16_<wbr>v3</dt>
-    <dd>Standard_E16_v3</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_E16s_<wbr>v3</dt>
-    <dd>Standard_E16s_v3</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_E2_<wbr>v3</dt>
-    <dd>Standard_E2_v3</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_E2s_<wbr>v3</dt>
-    <dd>Standard_E2s_v3</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_E32_16s_<wbr>v3</dt>
-    <dd>Standard_E32-16s_v3</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_E32_8s_<wbr>v3</dt>
-    <dd>Standard_E32-8s_v3</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_E32_<wbr>v3</dt>
-    <dd>Standard_E32_v3</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_E32s_<wbr>v3</dt>
-    <dd>Standard_E32s_v3</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_E4_<wbr>v3</dt>
-    <dd>Standard_E4_v3</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_E4s_<wbr>v3</dt>
-    <dd>Standard_E4s_v3</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_E64_16s_<wbr>v3</dt>
-    <dd>Standard_E64-16s_v3</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_E64_32s_<wbr>v3</dt>
-    <dd>Standard_E64-32s_v3</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_E64_<wbr>v3</dt>
-    <dd>Standard_E64_v3</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_E64s_<wbr>v3</dt>
-    <dd>Standard_E64s_v3</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_E8_<wbr>v3</dt>
-    <dd>Standard_E8_v3</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_E8s_<wbr>v3</dt>
-    <dd>Standard_E8s_v3</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_F1</dt>
-    <dd>Standard_F1</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_F16</dt>
-    <dd>Standard_F16</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_F16s</dt>
-    <dd>Standard_F16s</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_F16s_<wbr>v2</dt>
-    <dd>Standard_F16s_v2</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_F1s</dt>
-    <dd>Standard_F1s</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_F2</dt>
-    <dd>Standard_F2</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_F2s</dt>
-    <dd>Standard_F2s</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_F2s_<wbr>v2</dt>
-    <dd>Standard_F2s_v2</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_F32s_<wbr>v2</dt>
-    <dd>Standard_F32s_v2</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_F4</dt>
-    <dd>Standard_F4</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_F4s</dt>
-    <dd>Standard_F4s</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_F4s_<wbr>v2</dt>
-    <dd>Standard_F4s_v2</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_F64s_<wbr>v2</dt>
-    <dd>Standard_F64s_v2</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_F72s_<wbr>v2</dt>
-    <dd>Standard_F72s_v2</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_F8</dt>
-    <dd>Standard_F8</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_F8s</dt>
-    <dd>Standard_F8s</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_F8s_<wbr>v2</dt>
-    <dd>Standard_F8s_v2</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_G1</dt>
-    <dd>Standard_G1</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_G2</dt>
-    <dd>Standard_G2</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_G3</dt>
-    <dd>Standard_G3</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_G4</dt>
-    <dd>Standard_G4</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_G5</dt>
-    <dd>Standard_G5</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_GS1</dt>
-    <dd>Standard_GS1</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_GS2</dt>
-    <dd>Standard_GS2</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_GS3</dt>
-    <dd>Standard_GS3</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_GS4</dt>
-    <dd>Standard_GS4</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_GS4_4</dt>
-    <dd>Standard_GS4-4</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_GS4_8</dt>
-    <dd>Standard_GS4-8</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_GS5</dt>
-    <dd>Standard_GS5</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_GS5_16</dt>
-    <dd>Standard_GS5-16</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_GS5_8</dt>
-    <dd>Standard_GS5-8</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_H16</dt>
-    <dd>Standard_H16</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_H16m</dt>
-    <dd>Standard_H16m</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_H16mr</dt>
-    <dd>Standard_H16mr</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_H16r</dt>
-    <dd>Standard_H16r</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_H8</dt>
-    <dd>Standard_H8</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_H8m</dt>
-    <dd>Standard_H8m</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_L16s</dt>
-    <dd>Standard_L16s</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_L32s</dt>
-    <dd>Standard_L32s</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_L4s</dt>
-    <dd>Standard_L4s</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_L8s</dt>
-    <dd>Standard_L8s</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_M128_32ms</dt>
-    <dd>Standard_M128-32ms</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_M128_64ms</dt>
-    <dd>Standard_M128-64ms</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_M128ms</dt>
-    <dd>Standard_M128ms</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_M128s</dt>
-    <dd>Standard_M128s</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_M64_16ms</dt>
-    <dd>Standard_M64-16ms</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_M64_32ms</dt>
-    <dd>Standard_M64-32ms</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_M64ms</dt>
-    <dd>Standard_M64ms</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_M64s</dt>
-    <dd>Standard_M64s</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_NC12</dt>
-    <dd>Standard_NC12</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_NC12s_<wbr>v2</dt>
-    <dd>Standard_NC12s_v2</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_NC12s_<wbr>v3</dt>
-    <dd>Standard_NC12s_v3</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_NC24</dt>
-    <dd>Standard_NC24</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_NC24r</dt>
-    <dd>Standard_NC24r</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_NC24rs_<wbr>v2</dt>
-    <dd>Standard_NC24rs_v2</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_NC24rs_<wbr>v3</dt>
-    <dd>Standard_NC24rs_v3</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_NC24s_<wbr>v2</dt>
-    <dd>Standard_NC24s_v2</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_NC24s_<wbr>v3</dt>
-    <dd>Standard_NC24s_v3</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_NC6</dt>
-    <dd>Standard_NC6</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_NC6s_<wbr>v2</dt>
-    <dd>Standard_NC6s_v2</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_NC6s_<wbr>v3</dt>
-    <dd>Standard_NC6s_v3</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_ND12s</dt>
-    <dd>Standard_ND12s</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_ND24rs</dt>
-    <dd>Standard_ND24rs</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_ND24s</dt>
-    <dd>Standard_ND24s</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_ND6s</dt>
-    <dd>Standard_ND6s</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_NV12</dt>
-    <dd>Standard_NV12</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_NV24</dt>
-    <dd>Standard_NV24</dd><dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_NV6</dt>
-    <dd>Standard_NV6</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>Standard_A1</dt>
-    <dd>Standard_A1</dd><dt>Standard_A10</dt>
-    <dd>Standard_A10</dd><dt>Standard_A11</dt>
-    <dd>Standard_A11</dd><dt>Standard_A1_<wbr>v2</dt>
-    <dd>Standard_A1_v2</dd><dt>Standard_A2</dt>
-    <dd>Standard_A2</dd><dt>Standard_A2_<wbr>v2</dt>
-    <dd>Standard_A2_v2</dd><dt>Standard_A2m_<wbr>v2</dt>
-    <dd>Standard_A2m_v2</dd><dt>Standard_A3</dt>
-    <dd>Standard_A3</dd><dt>Standard_A4</dt>
-    <dd>Standard_A4</dd><dt>Standard_A4_<wbr>v2</dt>
-    <dd>Standard_A4_v2</dd><dt>Standard_A4m_<wbr>v2</dt>
-    <dd>Standard_A4m_v2</dd><dt>Standard_A5</dt>
-    <dd>Standard_A5</dd><dt>Standard_A6</dt>
-    <dd>Standard_A6</dd><dt>Standard_A7</dt>
-    <dd>Standard_A7</dd><dt>Standard_A8</dt>
-    <dd>Standard_A8</dd><dt>Standard_A8_<wbr>v2</dt>
-    <dd>Standard_A8_v2</dd><dt>Standard_A8m_<wbr>v2</dt>
-    <dd>Standard_A8m_v2</dd><dt>Standard_A9</dt>
-    <dd>Standard_A9</dd><dt>Standard_B2ms</dt>
-    <dd>Standard_B2ms</dd><dt>Standard_B2s</dt>
-    <dd>Standard_B2s</dd><dt>Standard_B4ms</dt>
-    <dd>Standard_B4ms</dd><dt>Standard_B8ms</dt>
-    <dd>Standard_B8ms</dd><dt>Standard_D1</dt>
-    <dd>Standard_D1</dd><dt>Standard_D11</dt>
-    <dd>Standard_D11</dd><dt>Standard_D11_<wbr>v2</dt>
-    <dd>Standard_D11_v2</dd><dt>Standard_D11_<wbr>v2_Promo</dt>
-    <dd>Standard_D11_v2_Promo</dd><dt>Standard_D12</dt>
-    <dd>Standard_D12</dd><dt>Standard_D12_<wbr>v2</dt>
-    <dd>Standard_D12_v2</dd><dt>Standard_D12_<wbr>v2_Promo</dt>
-    <dd>Standard_D12_v2_Promo</dd><dt>Standard_D13</dt>
-    <dd>Standard_D13</dd><dt>Standard_D13_<wbr>v2</dt>
-    <dd>Standard_D13_v2</dd><dt>Standard_D13_<wbr>v2_Promo</dt>
-    <dd>Standard_D13_v2_Promo</dd><dt>Standard_D14</dt>
-    <dd>Standard_D14</dd><dt>Standard_D14_<wbr>v2</dt>
-    <dd>Standard_D14_v2</dd><dt>Standard_D14_<wbr>v2_Promo</dt>
-    <dd>Standard_D14_v2_Promo</dd><dt>Standard_D15_<wbr>v2</dt>
-    <dd>Standard_D15_v2</dd><dt>Standard_D16_<wbr>v3</dt>
-    <dd>Standard_D16_v3</dd><dt>Standard_D16s_<wbr>v3</dt>
-    <dd>Standard_D16s_v3</dd><dt>Standard_D1_<wbr>v2</dt>
-    <dd>Standard_D1_v2</dd><dt>Standard_D2</dt>
-    <dd>Standard_D2</dd><dt>Standard_D2_<wbr>v2</dt>
-    <dd>Standard_D2_v2</dd><dt>Standard_D2_<wbr>v2_Promo</dt>
-    <dd>Standard_D2_v2_Promo</dd><dt>Standard_D2_<wbr>v3</dt>
-    <dd>Standard_D2_v3</dd><dt>Standard_D2s_<wbr>v3</dt>
-    <dd>Standard_D2s_v3</dd><dt>Standard_D3</dt>
-    <dd>Standard_D3</dd><dt>Standard_D32_<wbr>v3</dt>
-    <dd>Standard_D32_v3</dd><dt>Standard_D32s_<wbr>v3</dt>
-    <dd>Standard_D32s_v3</dd><dt>Standard_D3_<wbr>v2</dt>
-    <dd>Standard_D3_v2</dd><dt>Standard_D3_<wbr>v2_Promo</dt>
-    <dd>Standard_D3_v2_Promo</dd><dt>Standard_D4</dt>
-    <dd>Standard_D4</dd><dt>Standard_D4_<wbr>v2</dt>
-    <dd>Standard_D4_v2</dd><dt>Standard_D4_<wbr>v2_Promo</dt>
-    <dd>Standard_D4_v2_Promo</dd><dt>Standard_D4_<wbr>v3</dt>
-    <dd>Standard_D4_v3</dd><dt>Standard_D4s_<wbr>v3</dt>
-    <dd>Standard_D4s_v3</dd><dt>Standard_D5_<wbr>v2</dt>
-    <dd>Standard_D5_v2</dd><dt>Standard_D5_<wbr>v2_Promo</dt>
-    <dd>Standard_D5_v2_Promo</dd><dt>Standard_D64_<wbr>v3</dt>
-    <dd>Standard_D64_v3</dd><dt>Standard_D64s_<wbr>v3</dt>
-    <dd>Standard_D64s_v3</dd><dt>Standard_D8_<wbr>v3</dt>
-    <dd>Standard_D8_v3</dd><dt>Standard_D8s_<wbr>v3</dt>
-    <dd>Standard_D8s_v3</dd><dt>Standard_DS1</dt>
-    <dd>Standard_DS1</dd><dt>Standard_DS11</dt>
-    <dd>Standard_DS11</dd><dt>Standard_DS11_<wbr>v2</dt>
-    <dd>Standard_DS11_v2</dd><dt>Standard_DS11_<wbr>v2_Promo</dt>
-    <dd>Standard_DS11_v2_Promo</dd><dt>Standard_DS12</dt>
-    <dd>Standard_DS12</dd><dt>Standard_DS12_<wbr>v2</dt>
-    <dd>Standard_DS12_v2</dd><dt>Standard_DS12_<wbr>v2_Promo</dt>
-    <dd>Standard_DS12_v2_Promo</dd><dt>Standard_DS13</dt>
-    <dd>Standard_DS13</dd><dt>Standard_DS13_2_<wbr>v2</dt>
-    <dd>Standard_DS13-2_v2</dd><dt>Standard_DS13_4_<wbr>v2</dt>
-    <dd>Standard_DS13-4_v2</dd><dt>Standard_DS13_<wbr>v2</dt>
-    <dd>Standard_DS13_v2</dd><dt>Standard_DS13_<wbr>v2_Promo</dt>
-    <dd>Standard_DS13_v2_Promo</dd><dt>Standard_DS14</dt>
-    <dd>Standard_DS14</dd><dt>Standard_DS14_4_<wbr>v2</dt>
-    <dd>Standard_DS14-4_v2</dd><dt>Standard_DS14_8_<wbr>v2</dt>
-    <dd>Standard_DS14-8_v2</dd><dt>Standard_DS14_<wbr>v2</dt>
-    <dd>Standard_DS14_v2</dd><dt>Standard_DS14_<wbr>v2_Promo</dt>
-    <dd>Standard_DS14_v2_Promo</dd><dt>Standard_DS15_<wbr>v2</dt>
-    <dd>Standard_DS15_v2</dd><dt>Standard_DS1_<wbr>v2</dt>
-    <dd>Standard_DS1_v2</dd><dt>Standard_DS2</dt>
-    <dd>Standard_DS2</dd><dt>Standard_DS2_<wbr>v2</dt>
-    <dd>Standard_DS2_v2</dd><dt>Standard_DS2_<wbr>v2_Promo</dt>
-    <dd>Standard_DS2_v2_Promo</dd><dt>Standard_DS3</dt>
-    <dd>Standard_DS3</dd><dt>Standard_DS3_<wbr>v2</dt>
-    <dd>Standard_DS3_v2</dd><dt>Standard_DS3_<wbr>v2_Promo</dt>
-    <dd>Standard_DS3_v2_Promo</dd><dt>Standard_DS4</dt>
-    <dd>Standard_DS4</dd><dt>Standard_DS4_<wbr>v2</dt>
-    <dd>Standard_DS4_v2</dd><dt>Standard_DS4_<wbr>v2_Promo</dt>
-    <dd>Standard_DS4_v2_Promo</dd><dt>Standard_DS5_<wbr>v2</dt>
-    <dd>Standard_DS5_v2</dd><dt>Standard_DS5_<wbr>v2_Promo</dt>
-    <dd>Standard_DS5_v2_Promo</dd><dt>Standard_E16_<wbr>v3</dt>
-    <dd>Standard_E16_v3</dd><dt>Standard_E16s_<wbr>v3</dt>
-    <dd>Standard_E16s_v3</dd><dt>Standard_E2_<wbr>v3</dt>
-    <dd>Standard_E2_v3</dd><dt>Standard_E2s_<wbr>v3</dt>
-    <dd>Standard_E2s_v3</dd><dt>Standard_E32_16s_<wbr>v3</dt>
-    <dd>Standard_E32-16s_v3</dd><dt>Standard_E32_8s_<wbr>v3</dt>
-    <dd>Standard_E32-8s_v3</dd><dt>Standard_E32_<wbr>v3</dt>
-    <dd>Standard_E32_v3</dd><dt>Standard_E32s_<wbr>v3</dt>
-    <dd>Standard_E32s_v3</dd><dt>Standard_E4_<wbr>v3</dt>
-    <dd>Standard_E4_v3</dd><dt>Standard_E4s_<wbr>v3</dt>
-    <dd>Standard_E4s_v3</dd><dt>Standard_E64_16s_<wbr>v3</dt>
-    <dd>Standard_E64-16s_v3</dd><dt>Standard_E64_32s_<wbr>v3</dt>
-    <dd>Standard_E64-32s_v3</dd><dt>Standard_E64_<wbr>v3</dt>
-    <dd>Standard_E64_v3</dd><dt>Standard_E64s_<wbr>v3</dt>
-    <dd>Standard_E64s_v3</dd><dt>Standard_E8_<wbr>v3</dt>
-    <dd>Standard_E8_v3</dd><dt>Standard_E8s_<wbr>v3</dt>
-    <dd>Standard_E8s_v3</dd><dt>Standard_F1</dt>
-    <dd>Standard_F1</dd><dt>Standard_F16</dt>
-    <dd>Standard_F16</dd><dt>Standard_F16s</dt>
-    <dd>Standard_F16s</dd><dt>Standard_F16s_<wbr>v2</dt>
-    <dd>Standard_F16s_v2</dd><dt>Standard_F1s</dt>
-    <dd>Standard_F1s</dd><dt>Standard_F2</dt>
-    <dd>Standard_F2</dd><dt>Standard_F2s</dt>
-    <dd>Standard_F2s</dd><dt>Standard_F2s_<wbr>v2</dt>
-    <dd>Standard_F2s_v2</dd><dt>Standard_F32s_<wbr>v2</dt>
-    <dd>Standard_F32s_v2</dd><dt>Standard_F4</dt>
-    <dd>Standard_F4</dd><dt>Standard_F4s</dt>
-    <dd>Standard_F4s</dd><dt>Standard_F4s_<wbr>v2</dt>
-    <dd>Standard_F4s_v2</dd><dt>Standard_F64s_<wbr>v2</dt>
-    <dd>Standard_F64s_v2</dd><dt>Standard_F72s_<wbr>v2</dt>
-    <dd>Standard_F72s_v2</dd><dt>Standard_F8</dt>
-    <dd>Standard_F8</dd><dt>Standard_F8s</dt>
-    <dd>Standard_F8s</dd><dt>Standard_F8s_<wbr>v2</dt>
-    <dd>Standard_F8s_v2</dd><dt>Standard_G1</dt>
-    <dd>Standard_G1</dd><dt>Standard_G2</dt>
-    <dd>Standard_G2</dd><dt>Standard_G3</dt>
-    <dd>Standard_G3</dd><dt>Standard_G4</dt>
-    <dd>Standard_G4</dd><dt>Standard_G5</dt>
-    <dd>Standard_G5</dd><dt>Standard_GS1</dt>
-    <dd>Standard_GS1</dd><dt>Standard_GS2</dt>
-    <dd>Standard_GS2</dd><dt>Standard_GS3</dt>
-    <dd>Standard_GS3</dd><dt>Standard_GS4</dt>
-    <dd>Standard_GS4</dd><dt>Standard_GS4_4</dt>
-    <dd>Standard_GS4-4</dd><dt>Standard_GS4_8</dt>
-    <dd>Standard_GS4-8</dd><dt>Standard_GS5</dt>
-    <dd>Standard_GS5</dd><dt>Standard_GS5_16</dt>
-    <dd>Standard_GS5-16</dd><dt>Standard_GS5_8</dt>
-    <dd>Standard_GS5-8</dd><dt>Standard_H16</dt>
-    <dd>Standard_H16</dd><dt>Standard_H16m</dt>
-    <dd>Standard_H16m</dd><dt>Standard_H16mr</dt>
-    <dd>Standard_H16mr</dd><dt>Standard_H16r</dt>
-    <dd>Standard_H16r</dd><dt>Standard_H8</dt>
-    <dd>Standard_H8</dd><dt>Standard_H8m</dt>
-    <dd>Standard_H8m</dd><dt>Standard_L16s</dt>
-    <dd>Standard_L16s</dd><dt>Standard_L32s</dt>
-    <dd>Standard_L32s</dd><dt>Standard_L4s</dt>
-    <dd>Standard_L4s</dd><dt>Standard_L8s</dt>
-    <dd>Standard_L8s</dd><dt>Standard_M128_32ms</dt>
-    <dd>Standard_M128-32ms</dd><dt>Standard_M128_64ms</dt>
-    <dd>Standard_M128-64ms</dd><dt>Standard_M128ms</dt>
-    <dd>Standard_M128ms</dd><dt>Standard_M128s</dt>
-    <dd>Standard_M128s</dd><dt>Standard_M64_16ms</dt>
-    <dd>Standard_M64-16ms</dd><dt>Standard_M64_32ms</dt>
-    <dd>Standard_M64-32ms</dd><dt>Standard_M64ms</dt>
-    <dd>Standard_M64ms</dd><dt>Standard_M64s</dt>
-    <dd>Standard_M64s</dd><dt>Standard_NC12</dt>
-    <dd>Standard_NC12</dd><dt>Standard_NC12s_<wbr>v2</dt>
-    <dd>Standard_NC12s_v2</dd><dt>Standard_NC12s_<wbr>v3</dt>
-    <dd>Standard_NC12s_v3</dd><dt>Standard_NC24</dt>
-    <dd>Standard_NC24</dd><dt>Standard_NC24r</dt>
-    <dd>Standard_NC24r</dd><dt>Standard_NC24rs_<wbr>v2</dt>
-    <dd>Standard_NC24rs_v2</dd><dt>Standard_NC24rs_<wbr>v3</dt>
-    <dd>Standard_NC24rs_v3</dd><dt>Standard_NC24s_<wbr>v2</dt>
-    <dd>Standard_NC24s_v2</dd><dt>Standard_NC24s_<wbr>v3</dt>
-    <dd>Standard_NC24s_v3</dd><dt>Standard_NC6</dt>
-    <dd>Standard_NC6</dd><dt>Standard_NC6s_<wbr>v2</dt>
-    <dd>Standard_NC6s_v2</dd><dt>Standard_NC6s_<wbr>v3</dt>
-    <dd>Standard_NC6s_v3</dd><dt>Standard_ND12s</dt>
-    <dd>Standard_ND12s</dd><dt>Standard_ND24rs</dt>
-    <dd>Standard_ND24rs</dd><dt>Standard_ND24s</dt>
-    <dd>Standard_ND24s</dd><dt>Standard_ND6s</dt>
-    <dd>Standard_ND6s</dd><dt>Standard_NV12</dt>
-    <dd>Standard_NV12</dd><dt>Standard_NV24</dt>
-    <dd>Standard_NV24</dd><dt>Standard_NV6</dt>
-    <dd>Standard_NV6</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>STANDARD_A1</dt>
-    <dd>Standard_A1</dd><dt>STANDARD_A10</dt>
-    <dd>Standard_A10</dd><dt>STANDARD_A11</dt>
-    <dd>Standard_A11</dd><dt>STANDARD_A1_V2</dt>
-    <dd>Standard_A1_v2</dd><dt>STANDARD_A2</dt>
-    <dd>Standard_A2</dd><dt>STANDARD_A2_V2</dt>
-    <dd>Standard_A2_v2</dd><dt>STANDARD_A2M_V2</dt>
-    <dd>Standard_A2m_v2</dd><dt>STANDARD_A3</dt>
-    <dd>Standard_A3</dd><dt>STANDARD_A4</dt>
-    <dd>Standard_A4</dd><dt>STANDARD_A4_V2</dt>
-    <dd>Standard_A4_v2</dd><dt>STANDARD_A4M_V2</dt>
-    <dd>Standard_A4m_v2</dd><dt>STANDARD_A5</dt>
-    <dd>Standard_A5</dd><dt>STANDARD_A6</dt>
-    <dd>Standard_A6</dd><dt>STANDARD_A7</dt>
-    <dd>Standard_A7</dd><dt>STANDARD_A8</dt>
-    <dd>Standard_A8</dd><dt>STANDARD_A8_V2</dt>
-    <dd>Standard_A8_v2</dd><dt>STANDARD_A8M_V2</dt>
-    <dd>Standard_A8m_v2</dd><dt>STANDARD_A9</dt>
-    <dd>Standard_A9</dd><dt>STANDARD_B2MS</dt>
-    <dd>Standard_B2ms</dd><dt>STANDARD_B2S</dt>
-    <dd>Standard_B2s</dd><dt>STANDARD_B4MS</dt>
-    <dd>Standard_B4ms</dd><dt>STANDARD_B8MS</dt>
-    <dd>Standard_B8ms</dd><dt>STANDARD_D1</dt>
-    <dd>Standard_D1</dd><dt>STANDARD_D11</dt>
-    <dd>Standard_D11</dd><dt>STANDARD_D11_V2</dt>
-    <dd>Standard_D11_v2</dd><dt>STANDARD_D11_V2_PROMO</dt>
-    <dd>Standard_D11_v2_Promo</dd><dt>STANDARD_D12</dt>
-    <dd>Standard_D12</dd><dt>STANDARD_D12_V2</dt>
-    <dd>Standard_D12_v2</dd><dt>STANDARD_D12_V2_PROMO</dt>
-    <dd>Standard_D12_v2_Promo</dd><dt>STANDARD_D13</dt>
-    <dd>Standard_D13</dd><dt>STANDARD_D13_V2</dt>
-    <dd>Standard_D13_v2</dd><dt>STANDARD_D13_V2_PROMO</dt>
-    <dd>Standard_D13_v2_Promo</dd><dt>STANDARD_D14</dt>
-    <dd>Standard_D14</dd><dt>STANDARD_D14_V2</dt>
-    <dd>Standard_D14_v2</dd><dt>STANDARD_D14_V2_PROMO</dt>
-    <dd>Standard_D14_v2_Promo</dd><dt>STANDARD_D15_V2</dt>
-    <dd>Standard_D15_v2</dd><dt>STANDARD_D16_V3</dt>
-    <dd>Standard_D16_v3</dd><dt>STANDARD_D16S_V3</dt>
-    <dd>Standard_D16s_v3</dd><dt>STANDARD_D1_V2</dt>
-    <dd>Standard_D1_v2</dd><dt>STANDARD_D2</dt>
-    <dd>Standard_D2</dd><dt>STANDARD_D2_V2</dt>
-    <dd>Standard_D2_v2</dd><dt>STANDARD_D2_V2_PROMO</dt>
-    <dd>Standard_D2_v2_Promo</dd><dt>STANDARD_D2_V3</dt>
-    <dd>Standard_D2_v3</dd><dt>STANDARD_D2S_V3</dt>
-    <dd>Standard_D2s_v3</dd><dt>STANDARD_D3</dt>
-    <dd>Standard_D3</dd><dt>STANDARD_D32_V3</dt>
-    <dd>Standard_D32_v3</dd><dt>STANDARD_D32S_V3</dt>
-    <dd>Standard_D32s_v3</dd><dt>STANDARD_D3_V2</dt>
-    <dd>Standard_D3_v2</dd><dt>STANDARD_D3_V2_PROMO</dt>
-    <dd>Standard_D3_v2_Promo</dd><dt>STANDARD_D4</dt>
-    <dd>Standard_D4</dd><dt>STANDARD_D4_V2</dt>
-    <dd>Standard_D4_v2</dd><dt>STANDARD_D4_V2_PROMO</dt>
-    <dd>Standard_D4_v2_Promo</dd><dt>STANDARD_D4_V3</dt>
-    <dd>Standard_D4_v3</dd><dt>STANDARD_D4S_V3</dt>
-    <dd>Standard_D4s_v3</dd><dt>STANDARD_D5_V2</dt>
-    <dd>Standard_D5_v2</dd><dt>STANDARD_D5_V2_PROMO</dt>
-    <dd>Standard_D5_v2_Promo</dd><dt>STANDARD_D64_V3</dt>
-    <dd>Standard_D64_v3</dd><dt>STANDARD_D64S_V3</dt>
-    <dd>Standard_D64s_v3</dd><dt>STANDARD_D8_V3</dt>
-    <dd>Standard_D8_v3</dd><dt>STANDARD_D8S_V3</dt>
-    <dd>Standard_D8s_v3</dd><dt>STANDARD_DS1</dt>
-    <dd>Standard_DS1</dd><dt>STANDARD_DS11</dt>
-    <dd>Standard_DS11</dd><dt>STANDARD_DS11_V2</dt>
-    <dd>Standard_DS11_v2</dd><dt>STANDARD_DS11_V2_PROMO</dt>
-    <dd>Standard_DS11_v2_Promo</dd><dt>STANDARD_DS12</dt>
-    <dd>Standard_DS12</dd><dt>STANDARD_DS12_V2</dt>
-    <dd>Standard_DS12_v2</dd><dt>STANDARD_DS12_V2_PROMO</dt>
-    <dd>Standard_DS12_v2_Promo</dd><dt>STANDARD_DS13</dt>
-    <dd>Standard_DS13</dd><dt>STANDARD_DS13_2_V2</dt>
-    <dd>Standard_DS13-2_v2</dd><dt>STANDARD_DS13_4_V2</dt>
-    <dd>Standard_DS13-4_v2</dd><dt>STANDARD_DS13_V2</dt>
-    <dd>Standard_DS13_v2</dd><dt>STANDARD_DS13_V2_PROMO</dt>
-    <dd>Standard_DS13_v2_Promo</dd><dt>STANDARD_DS14</dt>
-    <dd>Standard_DS14</dd><dt>STANDARD_DS14_4_V2</dt>
-    <dd>Standard_DS14-4_v2</dd><dt>STANDARD_DS14_8_V2</dt>
-    <dd>Standard_DS14-8_v2</dd><dt>STANDARD_DS14_V2</dt>
-    <dd>Standard_DS14_v2</dd><dt>STANDARD_DS14_V2_PROMO</dt>
-    <dd>Standard_DS14_v2_Promo</dd><dt>STANDARD_DS15_V2</dt>
-    <dd>Standard_DS15_v2</dd><dt>STANDARD_DS1_V2</dt>
-    <dd>Standard_DS1_v2</dd><dt>STANDARD_DS2</dt>
-    <dd>Standard_DS2</dd><dt>STANDARD_DS2_V2</dt>
-    <dd>Standard_DS2_v2</dd><dt>STANDARD_DS2_V2_PROMO</dt>
-    <dd>Standard_DS2_v2_Promo</dd><dt>STANDARD_DS3</dt>
-    <dd>Standard_DS3</dd><dt>STANDARD_DS3_V2</dt>
-    <dd>Standard_DS3_v2</dd><dt>STANDARD_DS3_V2_PROMO</dt>
-    <dd>Standard_DS3_v2_Promo</dd><dt>STANDARD_DS4</dt>
-    <dd>Standard_DS4</dd><dt>STANDARD_DS4_V2</dt>
-    <dd>Standard_DS4_v2</dd><dt>STANDARD_DS4_V2_PROMO</dt>
-    <dd>Standard_DS4_v2_Promo</dd><dt>STANDARD_DS5_V2</dt>
-    <dd>Standard_DS5_v2</dd><dt>STANDARD_DS5_V2_PROMO</dt>
-    <dd>Standard_DS5_v2_Promo</dd><dt>STANDARD_E16_V3</dt>
-    <dd>Standard_E16_v3</dd><dt>STANDARD_E16S_V3</dt>
-    <dd>Standard_E16s_v3</dd><dt>STANDARD_E2_V3</dt>
-    <dd>Standard_E2_v3</dd><dt>STANDARD_E2S_V3</dt>
-    <dd>Standard_E2s_v3</dd><dt>STANDARD_E32_16S_V3</dt>
-    <dd>Standard_E32-16s_v3</dd><dt>STANDARD_E32_8S_V3</dt>
-    <dd>Standard_E32-8s_v3</dd><dt>STANDARD_E32_V3</dt>
-    <dd>Standard_E32_v3</dd><dt>STANDARD_E32S_V3</dt>
-    <dd>Standard_E32s_v3</dd><dt>STANDARD_E4_V3</dt>
-    <dd>Standard_E4_v3</dd><dt>STANDARD_E4S_V3</dt>
-    <dd>Standard_E4s_v3</dd><dt>STANDARD_E64_16S_V3</dt>
-    <dd>Standard_E64-16s_v3</dd><dt>STANDARD_E64_32S_V3</dt>
-    <dd>Standard_E64-32s_v3</dd><dt>STANDARD_E64_V3</dt>
-    <dd>Standard_E64_v3</dd><dt>STANDARD_E64S_V3</dt>
-    <dd>Standard_E64s_v3</dd><dt>STANDARD_E8_V3</dt>
-    <dd>Standard_E8_v3</dd><dt>STANDARD_E8S_V3</dt>
-    <dd>Standard_E8s_v3</dd><dt>STANDARD_F1</dt>
-    <dd>Standard_F1</dd><dt>STANDARD_F16</dt>
-    <dd>Standard_F16</dd><dt>STANDARD_F16S</dt>
-    <dd>Standard_F16s</dd><dt>STANDARD_F16S_V2</dt>
-    <dd>Standard_F16s_v2</dd><dt>STANDARD_F1S</dt>
-    <dd>Standard_F1s</dd><dt>STANDARD_F2</dt>
-    <dd>Standard_F2</dd><dt>STANDARD_F2S</dt>
-    <dd>Standard_F2s</dd><dt>STANDARD_F2S_V2</dt>
-    <dd>Standard_F2s_v2</dd><dt>STANDARD_F32S_V2</dt>
-    <dd>Standard_F32s_v2</dd><dt>STANDARD_F4</dt>
-    <dd>Standard_F4</dd><dt>STANDARD_F4S</dt>
-    <dd>Standard_F4s</dd><dt>STANDARD_F4S_V2</dt>
-    <dd>Standard_F4s_v2</dd><dt>STANDARD_F64S_V2</dt>
-    <dd>Standard_F64s_v2</dd><dt>STANDARD_F72S_V2</dt>
-    <dd>Standard_F72s_v2</dd><dt>STANDARD_F8</dt>
-    <dd>Standard_F8</dd><dt>STANDARD_F8S</dt>
-    <dd>Standard_F8s</dd><dt>STANDARD_F8S_V2</dt>
-    <dd>Standard_F8s_v2</dd><dt>STANDARD_G1</dt>
-    <dd>Standard_G1</dd><dt>STANDARD_G2</dt>
-    <dd>Standard_G2</dd><dt>STANDARD_G3</dt>
-    <dd>Standard_G3</dd><dt>STANDARD_G4</dt>
-    <dd>Standard_G4</dd><dt>STANDARD_G5</dt>
-    <dd>Standard_G5</dd><dt>STANDARD_GS1</dt>
-    <dd>Standard_GS1</dd><dt>STANDARD_GS2</dt>
-    <dd>Standard_GS2</dd><dt>STANDARD_GS3</dt>
-    <dd>Standard_GS3</dd><dt>STANDARD_GS4</dt>
-    <dd>Standard_GS4</dd><dt>STANDARD_GS4_4</dt>
-    <dd>Standard_GS4-4</dd><dt>STANDARD_GS4_8</dt>
-    <dd>Standard_GS4-8</dd><dt>STANDARD_GS5</dt>
-    <dd>Standard_GS5</dd><dt>STANDARD_GS5_16</dt>
-    <dd>Standard_GS5-16</dd><dt>STANDARD_GS5_8</dt>
-    <dd>Standard_GS5-8</dd><dt>STANDARD_H16</dt>
-    <dd>Standard_H16</dd><dt>STANDARD_H16M</dt>
-    <dd>Standard_H16m</dd><dt>STANDARD_H16MR</dt>
-    <dd>Standard_H16mr</dd><dt>STANDARD_H16R</dt>
-    <dd>Standard_H16r</dd><dt>STANDARD_H8</dt>
-    <dd>Standard_H8</dd><dt>STANDARD_H8M</dt>
-    <dd>Standard_H8m</dd><dt>STANDARD_L16S</dt>
-    <dd>Standard_L16s</dd><dt>STANDARD_L32S</dt>
-    <dd>Standard_L32s</dd><dt>STANDARD_L4S</dt>
-    <dd>Standard_L4s</dd><dt>STANDARD_L8S</dt>
-    <dd>Standard_L8s</dd><dt>STANDARD_M128_32MS</dt>
-    <dd>Standard_M128-32ms</dd><dt>STANDARD_M128_64MS</dt>
-    <dd>Standard_M128-64ms</dd><dt>STANDARD_M128MS</dt>
-    <dd>Standard_M128ms</dd><dt>STANDARD_M128S</dt>
-    <dd>Standard_M128s</dd><dt>STANDARD_M64_16MS</dt>
-    <dd>Standard_M64-16ms</dd><dt>STANDARD_M64_32MS</dt>
-    <dd>Standard_M64-32ms</dd><dt>STANDARD_M64MS</dt>
-    <dd>Standard_M64ms</dd><dt>STANDARD_M64S</dt>
-    <dd>Standard_M64s</dd><dt>STANDARD_NC12</dt>
-    <dd>Standard_NC12</dd><dt>STANDARD_NC12S_V2</dt>
-    <dd>Standard_NC12s_v2</dd><dt>STANDARD_NC12S_V3</dt>
-    <dd>Standard_NC12s_v3</dd><dt>STANDARD_NC24</dt>
-    <dd>Standard_NC24</dd><dt>STANDARD_NC24R</dt>
-    <dd>Standard_NC24r</dd><dt>STANDARD_NC24RS_V2</dt>
-    <dd>Standard_NC24rs_v2</dd><dt>STANDARD_NC24RS_V3</dt>
-    <dd>Standard_NC24rs_v3</dd><dt>STANDARD_NC24S_V2</dt>
-    <dd>Standard_NC24s_v2</dd><dt>STANDARD_NC24S_V3</dt>
-    <dd>Standard_NC24s_v3</dd><dt>STANDARD_NC6</dt>
-    <dd>Standard_NC6</dd><dt>STANDARD_NC6S_V2</dt>
-    <dd>Standard_NC6s_v2</dd><dt>STANDARD_NC6S_V3</dt>
-    <dd>Standard_NC6s_v3</dd><dt>STANDARD_ND12S</dt>
-    <dd>Standard_ND12s</dd><dt>STANDARD_ND24RS</dt>
-    <dd>Standard_ND24rs</dd><dt>STANDARD_ND24S</dt>
-    <dd>Standard_ND24s</dd><dt>STANDARD_ND6S</dt>
-    <dd>Standard_ND6s</dd><dt>STANDARD_NV12</dt>
-    <dd>Standard_NV12</dd><dt>STANDARD_NV24</dt>
-    <dd>Standard_NV24</dd><dt>STANDARD_NV6</dt>
-    <dd>Standard_NV6</dd></dl>
-{{% /choosable %}}
-
 <h4 id="expander">Expander</h4>
 
 {{% choosable language csharp %}}
@@ -6482,6 +7204,230 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>most-pods</dd><dt>PRIORITY</dt>
     <dd>priority</dd><dt>RANDOM</dt>
     <dd>random</dd></dl>
+{{% /choosable %}}
+
+<h4 id="extendedlocation">Extended<wbr>Location</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#extendedlocationtypes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Extended<wbr>Location<wbr>Types</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#extendedlocationtypes">Extended<wbr>Location<wbr>Types</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#extendedlocationtypes">Extended<wbr>Location<wbr>Types</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#extendedlocationtypes">Extended<wbr>Location<wbr>Types</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="extendedlocationresponse">Extended<wbr>Location<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="extendedlocationtypes">Extended<wbr>Location<wbr>Types</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Edge<wbr>Zone</dt>
+    <dd>EdgeZone</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Extended<wbr>Location<wbr>Types<wbr>Edge<wbr>Zone</dt>
+    <dd>EdgeZone</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Edge<wbr>Zone</dt>
+    <dd>EdgeZone</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>EDGE_ZONE</dt>
+    <dd>EdgeZone</dd></dl>
+{{% /choosable %}}
+
+<h4 id="gpuinstanceprofile">GPUInstance<wbr>Profile</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>MIG1g</dt>
+    <dd>MIG1g</dd><dt>MIG2g</dt>
+    <dd>MIG2g</dd><dt>MIG3g</dt>
+    <dd>MIG3g</dd><dt>MIG4g</dt>
+    <dd>MIG4g</dd><dt>MIG7g</dt>
+    <dd>MIG7g</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>GPUInstance<wbr>Profile<wbr>MIG1g</dt>
+    <dd>MIG1g</dd><dt>GPUInstance<wbr>Profile<wbr>MIG2g</dt>
+    <dd>MIG2g</dd><dt>GPUInstance<wbr>Profile<wbr>MIG3g</dt>
+    <dd>MIG3g</dd><dt>GPUInstance<wbr>Profile<wbr>MIG4g</dt>
+    <dd>MIG4g</dd><dt>GPUInstance<wbr>Profile<wbr>MIG7g</dt>
+    <dd>MIG7g</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>MIG1g</dt>
+    <dd>MIG1g</dd><dt>MIG2g</dt>
+    <dd>MIG2g</dd><dt>MIG3g</dt>
+    <dd>MIG3g</dd><dt>MIG4g</dt>
+    <dd>MIG4g</dd><dt>MIG7g</dt>
+    <dd>MIG7g</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>MIG1G</dt>
+    <dd>MIG1g</dd><dt>MIG2G</dt>
+    <dd>MIG2g</dd><dt>MIG3G</dt>
+    <dd>MIG3g</dd><dt>MIG4G</dt>
+    <dd>MIG4g</dd><dt>MIG7G</dt>
+    <dd>MIG7g</dd></dl>
 {{% /choosable %}}
 
 <h4 id="kubeletconfig">Kubelet<wbr>Config</h4>
@@ -7365,7 +8311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sysctls_nodejs" style="color: inherit; text-decoration: inherit;">sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sysctlconfig">Sysctl<wbr>Config</a></span>
+        <span class="property-type"><a href="#sysctlconfig">Sysctl<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sysctl settings for Linux agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7511,7 +8457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sysctls_nodejs" style="color: inherit; text-decoration: inherit;">sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sysctlconfigresponse">Sysctl<wbr>Config<wbr>Response</a></span>
+        <span class="property-type"><a href="#sysctlconfigresponse">Sysctl<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sysctl settings for Linux agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8461,7 +9407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusteraddonprofileresponseidentity">Managed<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Response<wbr>Identity</a></span>
+        <span class="property-type"><a href="#managedclusteraddonprofileresponseidentity">Managed<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Response<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information of user assigned identity used by this add-on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8661,6 +9607,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Whether to enable EncryptionAtHost{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enablefips_csharp">
+<a href="#enablefips_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>FIPS</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to use FIPS enabled OS{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enablenodepublicip_csharp">
 <a href="#enablenodepublicip_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Node<wbr>Public<wbr>IP</a>
 </span>
@@ -8668,6 +9622,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable public IP for nodes{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gpuinstanceprofile_csharp">
+<a href="#gpuinstanceprofile_csharp" style="color: inherit; text-decoration: inherit;">Gpu<wbr>Instance<wbr>Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#gpuinstanceprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>GPUInstance<wbr>Profile</a></span>
+    </dt>
+    <dd>{{% md %}}GPUInstanceProfile to be used to specify GPU MIG instance profile for supported GPU VM SKU. Supported values are MIG1g, MIG2g, MIG3g, MIG4g and MIG7g.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubeletconfig_csharp">
 <a href="#kubeletconfig_csharp" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Config</a>
@@ -8771,7 +9733,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#osdisktype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>OSDisk<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. Defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. If unspecified, defaults to 'Ephemeral' when the VM supports ephemeral OS and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ossku_csharp">
+<a href="#ossku_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>SKU</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#ossku">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>OSSKU</a></span>
+    </dt>
+    <dd>{{% md %}}OsSKU to be used to specify os sku. Choose from Ubuntu(default) and CBLMariner for Linux OSType. Not applicable to Windows OSType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_csharp">
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -8849,7 +9819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmsize_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#containerservicevmsizetypes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Container<wbr>Service<wbr>VMSize<wbr>Types</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8905,6 +9875,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Whether to enable EncryptionAtHost{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enablefips_go">
+<a href="#enablefips_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>FIPS</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to use FIPS enabled OS{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enablenodepublicip_go">
 <a href="#enablenodepublicip_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Node<wbr>Public<wbr>IP</a>
 </span>
@@ -8912,6 +9890,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable public IP for nodes{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gpuinstanceprofile_go">
+<a href="#gpuinstanceprofile_go" style="color: inherit; text-decoration: inherit;">Gpu<wbr>Instance<wbr>Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#gpuinstanceprofile">GPUInstance<wbr>Profile</a></span>
+    </dt>
+    <dd>{{% md %}}GPUInstanceProfile to be used to specify GPU MIG instance profile for supported GPU VM SKU. Supported values are MIG1g, MIG2g, MIG3g, MIG4g and MIG7g.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubeletconfig_go">
 <a href="#kubeletconfig_go" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Config</a>
@@ -9015,7 +10001,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#osdisktype">OSDisk<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. Defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. If unspecified, defaults to 'Ephemeral' when the VM supports ephemeral OS and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ossku_go">
+<a href="#ossku_go" style="color: inherit; text-decoration: inherit;">Os<wbr>SKU</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#ossku">OSSKU</a></span>
+    </dt>
+    <dd>{{% md %}}OsSKU to be used to specify os sku. Choose from Ubuntu(default) and CBLMariner for Linux OSType. Not applicable to Windows OSType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_go">
 <a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -9093,7 +10087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmsize_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#containerservicevmsizetypes">Container<wbr>Service<wbr>VMSize<wbr>Types</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9149,6 +10143,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Whether to enable EncryptionAtHost{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enablefips_nodejs">
+<a href="#enablefips_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>FIPS</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to use FIPS enabled OS{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enablenodepublicip_nodejs">
 <a href="#enablenodepublicip_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Node<wbr>Public<wbr>IP</a>
 </span>
@@ -9157,11 +10159,19 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Enable public IP for nodes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="gpuinstanceprofile_nodejs">
+<a href="#gpuinstanceprofile_nodejs" style="color: inherit; text-decoration: inherit;">gpu<wbr>Instance<wbr>Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#gpuinstanceprofile">GPUInstance<wbr>Profile</a></span>
+    </dt>
+    <dd>{{% md %}}GPUInstanceProfile to be used to specify GPU MIG instance profile for supported GPU VM SKU. Supported values are MIG1g, MIG2g, MIG3g, MIG4g and MIG7g.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="kubeletconfig_nodejs">
 <a href="#kubeletconfig_nodejs" style="color: inherit; text-decoration: inherit;">kubelet<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubeletconfig">Kubelet<wbr>Config</a></span>
+        <span class="property-type"><a href="#kubeletconfig">Kubelet<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KubeletConfig specifies the configuration of kubelet on agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9177,7 +10187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxosconfig_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>OSConfig</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxosconfig">Linux<wbr>OSConfig</a></span>
+        <span class="property-type"><a href="#linuxosconfig">Linux<wbr>OSConfig<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}LinuxOSConfig specifies the OS configuration of linux agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9259,7 +10269,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#osdisktype">OSDisk<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. Defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. If unspecified, defaults to 'Ephemeral' when the VM supports ephemeral OS and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ossku_nodejs">
+<a href="#ossku_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>SKU</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#ossku">OSSKU</a></span>
+    </dt>
+    <dd>{{% md %}}OsSKU to be used to specify os sku. Choose from Ubuntu(default) and CBLMariner for Linux OSType. Not applicable to Windows OSType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_nodejs">
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
@@ -9329,7 +10347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upgradesettings_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentpoolupgradesettings">Agent<wbr>Pool<wbr>Upgrade<wbr>Settings</a></span>
+        <span class="property-type"><a href="#agentpoolupgradesettings">Agent<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for upgrading the agentpool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9337,7 +10355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#containerservicevmsizetypes">Container<wbr>Service<wbr>VMSize<wbr>Types</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9393,6 +10411,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Whether to enable EncryptionAtHost{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enable_fips_python">
+<a href="#enable_fips_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>fips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to use FIPS enabled OS{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enable_node_public_ip_python">
 <a href="#enable_node_public_ip_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>node_<wbr>public_<wbr>ip</a>
 </span>
@@ -9400,6 +10426,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable public IP for nodes{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gpu_instance_profile_python">
+<a href="#gpu_instance_profile_python" style="color: inherit; text-decoration: inherit;">gpu_<wbr>instance_<wbr>profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#gpuinstanceprofile">GPUInstance<wbr>Profile</a></span>
+    </dt>
+    <dd>{{% md %}}GPUInstanceProfile to be used to specify GPU MIG instance profile for supported GPU VM SKU. Supported values are MIG1g, MIG2g, MIG3g, MIG4g and MIG7g.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubelet_config_python">
 <a href="#kubelet_config_python" style="color: inherit; text-decoration: inherit;">kubelet_<wbr>config</a>
@@ -9503,7 +10537,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#osdisktype">OSDisk<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. Defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. If unspecified, defaults to 'Ephemeral' when the VM supports ephemeral OS and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="os_sku_python">
+<a href="#os_sku_python" style="color: inherit; text-decoration: inherit;">os_<wbr>sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#ossku">OSSKU</a></span>
+    </dt>
+    <dd>{{% md %}}OsSKU to be used to specify os sku. Choose from Ubuntu(default) and CBLMariner for Linux OSType. Not applicable to Windows OSType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="os_type_python">
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
@@ -9581,7 +10623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#containerservicevmsizetypes">Container<wbr>Service<wbr>VMSize<wbr>Types</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9663,6 +10705,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Whether to enable EncryptionAtHost{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enablefips_csharp">
+<a href="#enablefips_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>FIPS</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to use FIPS enabled OS{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enablenodepublicip_csharp">
 <a href="#enablenodepublicip_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Node<wbr>Public<wbr>IP</a>
 </span>
@@ -9670,6 +10720,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable public IP for nodes{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gpuinstanceprofile_csharp">
+<a href="#gpuinstanceprofile_csharp" style="color: inherit; text-decoration: inherit;">Gpu<wbr>Instance<wbr>Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}GPUInstanceProfile to be used to specify GPU MIG instance profile for supported GPU VM SKU. Supported values are MIG1g, MIG2g, MIG3g, MIG4g and MIG7g.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubeletconfig_csharp">
 <a href="#kubeletconfig_csharp" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Config</a>
@@ -9773,7 +10831,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. Defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. If unspecified, defaults to 'Ephemeral' when the VM supports ephemeral OS and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ossku_csharp">
+<a href="#ossku_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>SKU</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}OsSKU to be used to specify os sku. Choose from Ubuntu(default) and CBLMariner for Linux OSType. Not applicable to Windows OSType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_csharp">
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -9931,6 +10997,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Whether to enable EncryptionAtHost{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enablefips_go">
+<a href="#enablefips_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>FIPS</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to use FIPS enabled OS{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enablenodepublicip_go">
 <a href="#enablenodepublicip_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Node<wbr>Public<wbr>IP</a>
 </span>
@@ -9938,6 +11012,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable public IP for nodes{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gpuinstanceprofile_go">
+<a href="#gpuinstanceprofile_go" style="color: inherit; text-decoration: inherit;">Gpu<wbr>Instance<wbr>Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}GPUInstanceProfile to be used to specify GPU MIG instance profile for supported GPU VM SKU. Supported values are MIG1g, MIG2g, MIG3g, MIG4g and MIG7g.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubeletconfig_go">
 <a href="#kubeletconfig_go" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Config</a>
@@ -10041,7 +11123,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. Defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. If unspecified, defaults to 'Ephemeral' when the VM supports ephemeral OS and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ossku_go">
+<a href="#ossku_go" style="color: inherit; text-decoration: inherit;">Os<wbr>SKU</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}OsSKU to be used to specify os sku. Choose from Ubuntu(default) and CBLMariner for Linux OSType. Not applicable to Windows OSType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_go">
 <a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -10155,7 +11245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#powerstate_nodejs" style="color: inherit; text-decoration: inherit;">power<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#powerstateresponse">Power<wbr>State<wbr>Response</a></span>
+        <span class="property-type"><a href="#powerstateresponse">Power<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes whether the Agent Pool is Running or Stopped{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10199,6 +11289,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Whether to enable EncryptionAtHost{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enablefips_nodejs">
+<a href="#enablefips_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>FIPS</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to use FIPS enabled OS{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enablenodepublicip_nodejs">
 <a href="#enablenodepublicip_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Node<wbr>Public<wbr>IP</a>
 </span>
@@ -10207,11 +11305,19 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Enable public IP for nodes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="gpuinstanceprofile_nodejs">
+<a href="#gpuinstanceprofile_nodejs" style="color: inherit; text-decoration: inherit;">gpu<wbr>Instance<wbr>Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}GPUInstanceProfile to be used to specify GPU MIG instance profile for supported GPU VM SKU. Supported values are MIG1g, MIG2g, MIG3g, MIG4g and MIG7g.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="kubeletconfig_nodejs">
 <a href="#kubeletconfig_nodejs" style="color: inherit; text-decoration: inherit;">kubelet<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubeletconfigresponse">Kubelet<wbr>Config<wbr>Response</a></span>
+        <span class="property-type"><a href="#kubeletconfigresponse">Kubelet<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KubeletConfig specifies the configuration of kubelet on agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10227,7 +11333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxosconfig_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>OSConfig</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxosconfigresponse">Linux<wbr>OSConfig<wbr>Response</a></span>
+        <span class="property-type"><a href="#linuxosconfigresponse">Linux<wbr>OSConfig<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}LinuxOSConfig specifies the OS configuration of linux agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10309,7 +11415,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. Defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. If unspecified, defaults to 'Ephemeral' when the VM supports ephemeral OS and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ossku_nodejs">
+<a href="#ossku_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>SKU</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}OsSKU to be used to specify os sku. Choose from Ubuntu(default) and CBLMariner for Linux OSType. Not applicable to Windows OSType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_nodejs">
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
@@ -10379,7 +11493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upgradesettings_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentpoolupgradesettingsresponse">Agent<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#agentpoolupgradesettingsresponse">Agent<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for upgrading the agentpool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10467,6 +11581,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Whether to enable EncryptionAtHost{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enable_fips_python">
+<a href="#enable_fips_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>fips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to use FIPS enabled OS{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enable_node_public_ip_python">
 <a href="#enable_node_public_ip_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>node_<wbr>public_<wbr>ip</a>
 </span>
@@ -10474,6 +11596,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable public IP for nodes{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gpu_instance_profile_python">
+<a href="#gpu_instance_profile_python" style="color: inherit; text-decoration: inherit;">gpu_<wbr>instance_<wbr>profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}GPUInstanceProfile to be used to specify GPU MIG instance profile for supported GPU VM SKU. Supported values are MIG1g, MIG2g, MIG3g, MIG4g and MIG7g.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubelet_config_python">
 <a href="#kubelet_config_python" style="color: inherit; text-decoration: inherit;">kubelet_<wbr>config</a>
@@ -10577,7 +11707,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. Defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. If unspecified, defaults to 'Ephemeral' when the VM supports ephemeral OS and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="os_sku_python">
+<a href="#os_sku_python" style="color: inherit; text-decoration: inherit;">os_<wbr>sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}OsSKU to be used to specify os sku. Choose from Ubuntu(default) and CBLMariner for Linux OSType. Not applicable to Windows OSType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="os_type_python">
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
@@ -10768,6 +11906,298 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}upgrade channel for auto upgrade.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="managedclusterhttpproxyconfig">Managed<wbr>Cluster<wbr>HTTPProxy<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="httpproxy_csharp">
+<a href="#httpproxy_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}HTTP proxy server endpoint to use.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httpsproxy_csharp">
+<a href="#httpsproxy_csharp" style="color: inherit; text-decoration: inherit;">Https<wbr>Proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}HTTPS proxy server endpoint to use.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="noproxy_csharp">
+<a href="#noproxy_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Endpoints that should not go through proxy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trustedca_csharp">
+<a href="#trustedca_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Ca</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Alternative CA cert to use for connecting to proxy servers.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="httpproxy_go">
+<a href="#httpproxy_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}HTTP proxy server endpoint to use.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httpsproxy_go">
+<a href="#httpsproxy_go" style="color: inherit; text-decoration: inherit;">Https<wbr>Proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}HTTPS proxy server endpoint to use.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="noproxy_go">
+<a href="#noproxy_go" style="color: inherit; text-decoration: inherit;">No<wbr>Proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Endpoints that should not go through proxy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trustedca_go">
+<a href="#trustedca_go" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Ca</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Alternative CA cert to use for connecting to proxy servers.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="httpproxy_nodejs">
+<a href="#httpproxy_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}HTTP proxy server endpoint to use.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httpsproxy_nodejs">
+<a href="#httpsproxy_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}HTTPS proxy server endpoint to use.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="noproxy_nodejs">
+<a href="#noproxy_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Endpoints that should not go through proxy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trustedca_nodejs">
+<a href="#trustedca_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Ca</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Alternative CA cert to use for connecting to proxy servers.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="http_proxy_python">
+<a href="#http_proxy_python" style="color: inherit; text-decoration: inherit;">http_<wbr>proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}HTTP proxy server endpoint to use.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="https_proxy_python">
+<a href="#https_proxy_python" style="color: inherit; text-decoration: inherit;">https_<wbr>proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}HTTPS proxy server endpoint to use.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="no_proxy_python">
+<a href="#no_proxy_python" style="color: inherit; text-decoration: inherit;">no_<wbr>proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Endpoints that should not go through proxy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trusted_ca_python">
+<a href="#trusted_ca_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>ca</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Alternative CA cert to use for connecting to proxy servers.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="managedclusterhttpproxyconfigresponse">Managed<wbr>Cluster<wbr>HTTPProxy<wbr>Config<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="httpproxy_csharp">
+<a href="#httpproxy_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}HTTP proxy server endpoint to use.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httpsproxy_csharp">
+<a href="#httpsproxy_csharp" style="color: inherit; text-decoration: inherit;">Https<wbr>Proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}HTTPS proxy server endpoint to use.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="noproxy_csharp">
+<a href="#noproxy_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Endpoints that should not go through proxy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trustedca_csharp">
+<a href="#trustedca_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Ca</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Alternative CA cert to use for connecting to proxy servers.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="httpproxy_go">
+<a href="#httpproxy_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}HTTP proxy server endpoint to use.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httpsproxy_go">
+<a href="#httpsproxy_go" style="color: inherit; text-decoration: inherit;">Https<wbr>Proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}HTTPS proxy server endpoint to use.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="noproxy_go">
+<a href="#noproxy_go" style="color: inherit; text-decoration: inherit;">No<wbr>Proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Endpoints that should not go through proxy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trustedca_go">
+<a href="#trustedca_go" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Ca</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Alternative CA cert to use for connecting to proxy servers.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="httpproxy_nodejs">
+<a href="#httpproxy_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}HTTP proxy server endpoint to use.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httpsproxy_nodejs">
+<a href="#httpsproxy_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}HTTPS proxy server endpoint to use.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="noproxy_nodejs">
+<a href="#noproxy_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Endpoints that should not go through proxy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trustedca_nodejs">
+<a href="#trustedca_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Ca</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Alternative CA cert to use for connecting to proxy servers.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="http_proxy_python">
+<a href="#http_proxy_python" style="color: inherit; text-decoration: inherit;">http_<wbr>proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}HTTP proxy server endpoint to use.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="https_proxy_python">
+<a href="#https_proxy_python" style="color: inherit; text-decoration: inherit;">https_<wbr>proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}HTTPS proxy server endpoint to use.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="no_proxy_python">
+<a href="#no_proxy_python" style="color: inherit; text-decoration: inherit;">no_<wbr>proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Endpoints that should not go through proxy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trusted_ca_python">
+<a href="#trusted_ca_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>ca</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Alternative CA cert to use for connecting to proxy servers.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="managedclusteridentity">Managed<wbr>Cluster<wbr>Identity</h4>
 
 {{% choosable language csharp %}}
@@ -10955,7 +12385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Managed<wbr>Cluster<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities}</span>
+        <span class="property-type">{[key: string]: Managed<wbr>Cluster<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}The user identity associated with the managed cluster. This identity will be used in control plane and only one user assigned identity is allowed. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11199,7 +12629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#effectiveoutboundips_nodejs" style="color: inherit; text-decoration: inherit;">effective<wbr>Outbound<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference[]</a></span>
+        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The effective outbound IP resources of the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11215,7 +12645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managedoutboundips_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Outbound<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofilemanagedoutboundips">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Managed<wbr>Outbound<wbr>IPs</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofilemanagedoutboundips">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Managed<wbr>Outbound<wbr>IPs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Desired managed outbound IPs for the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11223,7 +12653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outboundipprefixes_nodejs" style="color: inherit; text-decoration: inherit;">outbound<wbr>IPPrefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofileoutboundipprefixes">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Outbound<wbr>IPPrefixes</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofileoutboundipprefixes">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Outbound<wbr>IPPrefixes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Desired outbound IP Prefix resources for the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11231,7 +12661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outboundips_nodejs" style="color: inherit; text-decoration: inherit;">outbound<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofileoutboundips">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Outbound<wbr>IPs</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofileoutboundips">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Outbound<wbr>IPs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Desired outbound IP resources for the cluster load balancer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11371,7 +12801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipprefixes_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPPrefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference[]</a></span>
+        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of public IP prefix resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11421,7 +12851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicips_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference[]</a></span>
+        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of public IP resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11559,7 +12989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#effectiveoutboundips_nodejs" style="color: inherit; text-decoration: inherit;">effective<wbr>Outbound<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The effective outbound IP resources of the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11575,7 +13005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managedoutboundips_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Outbound<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponsemanagedoutboundips">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Managed<wbr>Outbound<wbr>IPs</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponsemanagedoutboundips">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Managed<wbr>Outbound<wbr>IPs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Desired managed outbound IPs for the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11583,7 +13013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outboundipprefixes_nodejs" style="color: inherit; text-decoration: inherit;">outbound<wbr>IPPrefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponseoutboundipprefixes">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPPrefixes</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponseoutboundipprefixes">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPPrefixes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Desired outbound IP Prefix resources for the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11591,7 +13021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outboundips_nodejs" style="color: inherit; text-decoration: inherit;">outbound<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponseoutboundips">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPs</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponseoutboundips">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Desired outbound IP resources for the cluster load balancer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11731,7 +13161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipprefixes_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPPrefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of public IP prefix resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11781,7 +13211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicips_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of public IP resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11825,7 +13255,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Namespace of the pod identity.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Namespace of the pod identity.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bindingselector_csharp">
+<a href="#bindingselector_csharp" style="color: inherit; text-decoration: inherit;">Binding<wbr>Selector</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Binding selector to use for the AzureIdentityBinding resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -11853,7 +13291,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Namespace of the pod identity.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Namespace of the pod identity.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bindingselector_go">
+<a href="#bindingselector_go" style="color: inherit; text-decoration: inherit;">Binding<wbr>Selector</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Binding selector to use for the AzureIdentityBinding resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -11863,7 +13309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userassignedidentity">User<wbr>Assigned<wbr>Identity</a></span>
+        <span class="property-type"><a href="#userassignedidentity">User<wbr>Assigned<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information of the user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11881,7 +13327,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Namespace of the pod identity.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Namespace of the pod identity.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bindingselector_nodejs">
+<a href="#bindingselector_nodejs" style="color: inherit; text-decoration: inherit;">binding<wbr>Selector</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Binding selector to use for the AzureIdentityBinding resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -11909,7 +13363,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Namespace of the pod identity.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Namespace of the pod identity.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="binding_selector_python">
+<a href="#binding_selector_python" style="color: inherit; text-decoration: inherit;">binding_<wbr>selector</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Binding selector to use for the AzureIdentityBinding resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedclusterpodidentityexception">Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Exception</h4>
@@ -12237,7 +13699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterpodidentity">Managed<wbr>Cluster<wbr>Pod<wbr>Identity[]</a></span>
+        <span class="property-type"><a href="#managedclusterpodidentity">Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}User assigned pod identity settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12245,7 +13707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentityexceptions_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identity<wbr>Exceptions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterpodidentityexception">Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Exception[]</a></span>
+        <span class="property-type"><a href="#managedclusterpodidentityexception">Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Exception<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}User assigned pod identity exception settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12383,7 +13845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterpodidentityresponse">Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#managedclusterpodidentityresponse">Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}User assigned pod identity settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12391,7 +13853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentityexceptions_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identity<wbr>Exceptions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterpodidentityexceptionresponse">Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Exception<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#managedclusterpodidentityexceptionresponse">Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Exception<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}User assigned pod identity exception settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12475,7 +13937,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current provisioning state of the pod identity.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The current provisioning state of the pod identity.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bindingselector_csharp">
+<a href="#bindingselector_csharp" style="color: inherit; text-decoration: inherit;">Binding<wbr>Selector</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Binding selector to use for the AzureIdentityBinding resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -12519,7 +13989,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current provisioning state of the pod identity.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The current provisioning state of the pod identity.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bindingselector_go">
+<a href="#bindingselector_go" style="color: inherit; text-decoration: inherit;">Binding<wbr>Selector</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Binding selector to use for the AzureIdentityBinding resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -12529,7 +14007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userassignedidentityresponse">User<wbr>Assigned<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#userassignedidentityresponse">User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information of the user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12553,7 +14031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioninginfo_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterpodidentityresponseprovisioninginfo">Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Response<wbr>Provisioning<wbr>Info</a></span>
+        <span class="property-type"><a href="#managedclusterpodidentityresponseprovisioninginfo">Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Response<wbr>Provisioning<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12563,7 +14041,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current provisioning state of the pod identity.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The current provisioning state of the pod identity.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bindingselector_nodejs">
+<a href="#bindingselector_nodejs" style="color: inherit; text-decoration: inherit;">binding<wbr>Selector</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Binding selector to use for the AzureIdentityBinding resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -12607,7 +14093,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The current provisioning state of the pod identity.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The current provisioning state of the pod identity.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="binding_selector_python">
+<a href="#binding_selector_python" style="color: inherit; text-decoration: inherit;">binding_<wbr>selector</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Binding selector to use for the AzureIdentityBinding resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedclusterpodidentityresponseprovisioninginfo">Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Response<wbr>Provisioning<wbr>Info</h4>
@@ -12643,7 +14137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorresponse">Cloud<wbr>Error<wbr>Response</a></span>
+        <span class="property-type"><a href="#clouderrorresponse">Cloud<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pod identity assignment error (if any).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14409,6 +15903,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Specifies the password of the administrator account. <br><br> **Minimum-length:** 8 characters <br><br> **Max-length:** 123 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enablecsiproxy_csharp">
+<a href="#enablecsiproxy_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>CSIProxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable CSI proxy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="licensetype_csharp">
 <a href="#licensetype_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
 </span>
@@ -14436,6 +15938,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the password of the administrator account. <br><br> **Minimum-length:** 8 characters <br><br> **Max-length:** 123 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!"{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enablecsiproxy_go">
+<a href="#enablecsiproxy_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>CSIProxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable CSI proxy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="licensetype_go">
 <a href="#licensetype_go" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
@@ -14465,6 +15975,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Specifies the password of the administrator account. <br><br> **Minimum-length:** 8 characters <br><br> **Max-length:** 123 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enablecsiproxy_nodejs">
+<a href="#enablecsiproxy_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>CSIProxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable CSI proxy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="licensetype_nodejs">
 <a href="#licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
 </span>
@@ -14492,6 +16010,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the password of the administrator account. <br><br> **Minimum-length:** 8 characters <br><br> **Max-length:** 123 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!"{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enable_csi_proxy_python">
+<a href="#enable_csi_proxy_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>csi_<wbr>proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable CSI proxy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="license_type_python">
 <a href="#license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
@@ -14523,6 +16049,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Specifies the password of the administrator account. <br><br> **Minimum-length:** 8 characters <br><br> **Max-length:** 123 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enablecsiproxy_csharp">
+<a href="#enablecsiproxy_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>CSIProxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable CSI proxy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="licensetype_csharp">
 <a href="#licensetype_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
 </span>
@@ -14550,6 +16084,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the password of the administrator account. <br><br> **Minimum-length:** 8 characters <br><br> **Max-length:** 123 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!"{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enablecsiproxy_go">
+<a href="#enablecsiproxy_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>CSIProxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable CSI proxy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="licensetype_go">
 <a href="#licensetype_go" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
@@ -14579,6 +16121,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Specifies the password of the administrator account. <br><br> **Minimum-length:** 8 characters <br><br> **Max-length:** 123 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enablecsiproxy_nodejs">
+<a href="#enablecsiproxy_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>CSIProxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable CSI proxy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="licensetype_nodejs">
 <a href="#licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
 </span>
@@ -14606,6 +16156,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the password of the administrator account. <br><br> **Minimum-length:** 8 characters <br><br> **Max-length:** 123 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!"{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enable_csi_proxy_python">
+<a href="#enable_csi_proxy_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>csi_<wbr>proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable CSI proxy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="license_type_python">
 <a href="#license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
@@ -14720,6 +16278,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Ephemeral</dd></dl>
 {{% /choosable %}}
 
+<h4 id="ossku">OSSKU</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Ubuntu</dt>
+    <dd>Ubuntu</dd><dt>CBLMariner</dt>
+    <dd>CBLMariner</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>OSSKUUbuntu</dt>
+    <dd>Ubuntu</dd><dt>OSSKUCBLMariner</dt>
+    <dd>CBLMariner</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Ubuntu</dt>
+    <dd>Ubuntu</dd><dt>CBLMariner</dt>
+    <dd>CBLMariner</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>UBUNTU</dt>
+    <dd>Ubuntu</dd><dt>CBL_MARINER</dt>
+    <dd>CBLMariner</dd></dl>
+{{% /choosable %}}
+
 <h4 id="ostype">OSType</h4>
 
 {{% choosable language csharp %}}
@@ -14820,6 +16404,394 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Tells whether the cluster is Running or Stopped{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="privatelinkresource">Private<wbr>Link<wbr>Resource</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="groupid_csharp">
+<a href="#groupid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The group ID of the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the private link resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the private link resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requiredmembers_csharp">
+<a href="#requiredmembers_csharp" style="color: inherit; text-decoration: inherit;">Required<wbr>Members</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}RequiredMembers of the resource{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="groupid_go">
+<a href="#groupid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The group ID of the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the private link resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the private link resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requiredmembers_go">
+<a href="#requiredmembers_go" style="color: inherit; text-decoration: inherit;">Required<wbr>Members</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}RequiredMembers of the resource{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="groupid_nodejs">
+<a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The group ID of the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the private link resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the private link resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requiredmembers_nodejs">
+<a href="#requiredmembers_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Members</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}RequiredMembers of the resource{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="group_id_python">
+<a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The group ID of the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the private link resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the private link resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="required_members_python">
+<a href="#required_members_python" style="color: inherit; text-decoration: inherit;">required_<wbr>members</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}RequiredMembers of the resource{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="privatelinkresourceresponse">Private<wbr>Link<wbr>Resource<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="privatelinkserviceid_csharp">
+<a href="#privatelinkserviceid_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>ID</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private link service ID of the resource, this field is exposed only to NRP internally.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="groupid_csharp">
+<a href="#groupid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The group ID of the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the private link resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the private link resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requiredmembers_csharp">
+<a href="#requiredmembers_csharp" style="color: inherit; text-decoration: inherit;">Required<wbr>Members</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}RequiredMembers of the resource{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="privatelinkserviceid_go">
+<a href="#privatelinkserviceid_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>ID</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private link service ID of the resource, this field is exposed only to NRP internally.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="groupid_go">
+<a href="#groupid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The group ID of the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the private link resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the private link resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requiredmembers_go">
+<a href="#requiredmembers_go" style="color: inherit; text-decoration: inherit;">Required<wbr>Members</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}RequiredMembers of the resource{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="privatelinkserviceid_nodejs">
+<a href="#privatelinkserviceid_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>ID</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private link service ID of the resource, this field is exposed only to NRP internally.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="groupid_nodejs">
+<a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The group ID of the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the private link resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the private link resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requiredmembers_nodejs">
+<a href="#requiredmembers_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Members</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}RequiredMembers of the resource{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="private_link_service_id_python">
+<a href="#private_link_service_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The private link service ID of the resource, this field is exposed only to NRP internally.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="group_id_python">
+<a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The group ID of the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the private link resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the private link resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="required_members_python">
+<a href="#required_members_python" style="color: inherit; text-decoration: inherit;">required_<wbr>members</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}RequiredMembers of the resource{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourceidentitytype">Resource<wbr>Identity<wbr>Type</h4>
@@ -16838,7 +18810,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular"><dt>Rapid</dt>
     <dd>rapid</dd><dt>Stable</dt>
     <dd>stable</dd><dt>Patch</dt>
-    <dd>patch</dd><dt>None</dt>
+    <dd>patch</dd><dt>Node_<wbr>image</dt>
+    <dd>node-image</dd><dt>None</dt>
     <dd>none</dd></dl>
 {{% /choosable %}}
 
@@ -16846,7 +18819,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular"><dt>Upgrade<wbr>Channel<wbr>Rapid</dt>
     <dd>rapid</dd><dt>Upgrade<wbr>Channel<wbr>Stable</dt>
     <dd>stable</dd><dt>Upgrade<wbr>Channel<wbr>Patch</dt>
-    <dd>patch</dd><dt>Upgrade<wbr>Channel<wbr>None</dt>
+    <dd>patch</dd><dt>Upgrade<wbr>Channel_Node_<wbr>image</dt>
+    <dd>node-image</dd><dt>Upgrade<wbr>Channel<wbr>None</dt>
     <dd>none</dd></dl>
 {{% /choosable %}}
 
@@ -16854,7 +18828,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular"><dt>Rapid</dt>
     <dd>rapid</dd><dt>Stable</dt>
     <dd>stable</dd><dt>Patch</dt>
-    <dd>patch</dd><dt>None</dt>
+    <dd>patch</dd><dt>Node_<wbr>image</dt>
+    <dd>node-image</dd><dt>None</dt>
     <dd>none</dd></dl>
 {{% /choosable %}}
 
@@ -16862,7 +18837,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular"><dt>RAPID</dt>
     <dd>rapid</dd><dt>STABLE</dt>
     <dd>stable</dd><dt>PATCH</dt>
-    <dd>patch</dd><dt>NONE</dt>
+    <dd>patch</dd><dt>NODE_IMAGE</dt>
+    <dd>node-image</dd><dt>NONE</dt>
     <dd>none</dd></dl>
 {{% /choosable %}}
 

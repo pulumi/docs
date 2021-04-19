@@ -57,8 +57,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -135,17 +135,18 @@ const examplePolicy = azure.storage.getPolicy({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPolicy<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetPolicyResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPolicy<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPolicyArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetPolicyResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_policy(</span><span class="nx">storage_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPolicyResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_policy(</span><span class="nx">storage_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPolicyResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetPolicyResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetPolicyArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetPolicyResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `GetPolicy` in the Go SDK.
 
@@ -154,7 +155,7 @@ const examplePolicy = azure.storage.getPolicy({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetPolicy </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetPolicyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetPolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetPolicyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetPolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -361,7 +362,7 @@ The following output properties are available:
 <a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicyruleaction">List&lt;Get<wbr>Policy<wbr>Rule<wbr>Action<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getpolicyruleaction">List&lt;Get<wbr>Policy<wbr>Rule<wbr>Action&gt;</a></span>
     </dt>
     <dd>{{% md %}}An `actions` block as documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -379,7 +380,7 @@ The following output properties are available:
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicyrulefilter">List&lt;Get<wbr>Policy<wbr>Rule<wbr>Filter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getpolicyrulefilter">List&lt;Get<wbr>Policy<wbr>Rule<wbr>Filter&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `filter` block as documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -481,7 +482,7 @@ The following output properties are available:
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicyruleaction">Sequence[Get<wbr>Policy<wbr>Rule<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getpolicyruleaction">Sequence[Get<wbr>Policy<wbr>Rule<wbr>Action]</a></span>
     </dt>
     <dd>{{% md %}}An `actions` block as documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -499,7 +500,7 @@ The following output properties are available:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicyrulefilter">Sequence[Get<wbr>Policy<wbr>Rule<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getpolicyrulefilter">Sequence[Get<wbr>Policy<wbr>Rule<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}A `filter` block as documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -525,7 +526,7 @@ The following output properties are available:
 <a href="#baseblobs_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Blobs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicyruleactionbaseblob">List&lt;Get<wbr>Policy<wbr>Rule<wbr>Action<wbr>Base<wbr>Blob<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getpolicyruleactionbaseblob">List&lt;Get<wbr>Policy<wbr>Rule<wbr>Action<wbr>Base<wbr>Blob&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `base_blob` block as documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -534,7 +535,7 @@ The following output properties are available:
 <a href="#snapshots_csharp" style="color: inherit; text-decoration: inherit;">Snapshots</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicyruleactionsnapshot">List&lt;Get<wbr>Policy<wbr>Rule<wbr>Action<wbr>Snapshot<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getpolicyruleactionsnapshot">List&lt;Get<wbr>Policy<wbr>Rule<wbr>Action<wbr>Snapshot&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `snapshot` block as documented below.
 {{% /md %}}</dd></dl>
@@ -591,7 +592,7 @@ The following output properties are available:
 <a href="#base_blobs_python" style="color: inherit; text-decoration: inherit;">base_<wbr>blobs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicyruleactionbaseblob">Sequence[Get<wbr>Policy<wbr>Rule<wbr>Action<wbr>Base<wbr>Blob<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getpolicyruleactionbaseblob">Sequence[Get<wbr>Policy<wbr>Rule<wbr>Action<wbr>Base<wbr>Blob]</a></span>
     </dt>
     <dd>{{% md %}}A `base_blob` block as documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -600,7 +601,7 @@ The following output properties are available:
 <a href="#snapshots_python" style="color: inherit; text-decoration: inherit;">snapshots</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicyruleactionsnapshot">Sequence[Get<wbr>Policy<wbr>Rule<wbr>Action<wbr>Snapshot<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getpolicyruleactionsnapshot">Sequence[Get<wbr>Policy<wbr>Rule<wbr>Action<wbr>Snapshot]</a></span>
     </dt>
     <dd>{{% md %}}A `snapshot` block as documented below.
 {{% /md %}}</dd></dl>

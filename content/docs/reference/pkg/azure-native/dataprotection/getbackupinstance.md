@@ -22,17 +22,20 @@ API Version: 2021-01-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getBackupInstance<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetBackupInstanceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetBackupInstanceResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getBackupInstance<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetBackupInstanceArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetBackupInstanceResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_backup_instance(</span><span class="nx">backup_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vault_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetBackupInstanceResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_backup_instance(</span><span class="nx">backup_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">vault_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetBackupInstanceResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBackupInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupBackupInstanceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupBackupInstanceResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBackupInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupBackupInstanceArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupBackupInstanceResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupBackupInstance` in the Go SDK.
 
@@ -41,7 +44,7 @@ API Version: 2021-01-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetBackupInstance </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetBackupInstanceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetBackupInstanceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetBackupInstanceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetBackupInstanceArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -174,30 +177,6 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
-        <span id="currentprotectionstate_csharp">
-<a href="#currentprotectionstate_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Protection<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the current protection state of the resource{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="datasourceinfo_csharp">
-<a href="#datasourceinfo_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Info</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Outputs.<wbr>Datasource<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the data source information.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="friendlyname_csharp">
-<a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the Backup Instance friendly name.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -214,45 +193,13 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource name associated with the resource.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="objecttype_csharp">
-<a href="#objecttype_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Type</a>
+        <span id="properties_csharp">
+<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#backupinstanceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Outputs.<wbr>Backup<wbr>Instance<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="policyinfo_csharp">
-<a href="#policyinfo_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Info</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Outputs.<wbr>Policy<wbr>Info<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the policy information.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="protectionerrordetails_csharp">
-<a href="#protectionerrordetails_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>Error<wbr>Details</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userfacingerrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Outputs.<wbr>User<wbr>Facing<wbr>Error<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the protection error of the resource{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="protectionstatus_csharp">
-<a href="#protectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#protectionstatusdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Outputs.<wbr>Protection<wbr>Status<wbr>Details<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the protection status of the resource{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="provisioningstate_csharp">
-<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the provisioning state of the resource i.e. provisioning/updating/Succeeded/Failed{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}BackupInstanceResource properties{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_csharp">
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -268,43 +215,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="datasourcesetinfo_csharp">
-<a href="#datasourcesetinfo_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Set<wbr>Info</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcesetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Outputs.<wbr>Datasource<wbr>Set<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the data source set information.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
-            title="">
-        <span id="currentprotectionstate_go">
-<a href="#currentprotectionstate_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Protection<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the current protection state of the resource{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="datasourceinfo_go">
-<a href="#datasourceinfo_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Info</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceresponse">Datasource<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the data source information.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="friendlyname_go">
-<a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the Backup Instance friendly name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -322,45 +237,13 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource name associated with the resource.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="objecttype_go">
-<a href="#objecttype_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Type</a>
+        <span id="properties_go">
+<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#backupinstanceresponse">Backup<wbr>Instance<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="policyinfo_go">
-<a href="#policyinfo_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Info</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyinforesponse">Policy<wbr>Info<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the policy information.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="protectionerrordetails_go">
-<a href="#protectionerrordetails_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>Error<wbr>Details</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userfacingerrorresponse">User<wbr>Facing<wbr>Error<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the protection error of the resource{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="protectionstatus_go">
-<a href="#protectionstatus_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#protectionstatusdetailsresponse">Protection<wbr>Status<wbr>Details<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the protection status of the resource{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="provisioningstate_go">
-<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the provisioning state of the resource i.e. provisioning/updating/Succeeded/Failed{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}BackupInstanceResource properties{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_go">
 <a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -376,43 +259,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="datasourcesetinfo_go">
-<a href="#datasourcesetinfo_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Set<wbr>Info</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcesetresponse">Datasource<wbr>Set<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the data source set information.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
-            title="">
-        <span id="currentprotectionstate_nodejs">
-<a href="#currentprotectionstate_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Protection<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the current protection state of the resource{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="datasourceinfo_nodejs">
-<a href="#datasourceinfo_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Info</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceresponse">Datasource<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the data source information.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="friendlyname_nodejs">
-<a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the Backup Instance friendly name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -430,45 +281,13 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource name associated with the resource.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="objecttype_nodejs">
-<a href="#objecttype_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Type</a>
+        <span id="properties_nodejs">
+<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#backupinstanceresponse">Backup<wbr>Instance<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="policyinfo_nodejs">
-<a href="#policyinfo_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Info</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyinforesponse">Policy<wbr>Info<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the policy information.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="protectionerrordetails_nodejs">
-<a href="#protectionerrordetails_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Error<wbr>Details</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userfacingerrorresponse">User<wbr>Facing<wbr>Error<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the protection error of the resource{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="protectionstatus_nodejs">
-<a href="#protectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#protectionstatusdetailsresponse">Protection<wbr>Status<wbr>Details<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the protection status of the resource{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="provisioningstate_nodejs">
-<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the provisioning state of the resource i.e. provisioning/updating/Succeeded/Failed{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}BackupInstanceResource properties{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_nodejs">
 <a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
@@ -484,43 +303,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="datasourcesetinfo_nodejs">
-<a href="#datasourcesetinfo_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Set<wbr>Info</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcesetresponse">Datasource<wbr>Set<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the data source set information.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
-            title="">
-        <span id="current_protection_state_python">
-<a href="#current_protection_state_python" style="color: inherit; text-decoration: inherit;">current_<wbr>protection_<wbr>state</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the current protection state of the resource{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="data_source_info_python">
-<a href="#data_source_info_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>info</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceresponse">Datasource<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the data source information.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="friendly_name_python">
-<a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the Backup Instance friendly name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -538,45 +325,13 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource name associated with the resource.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="object_type_python">
-<a href="#object_type_python" style="color: inherit; text-decoration: inherit;">object_<wbr>type</a>
+        <span id="properties_python">
+<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#backupinstanceresponse">Backup<wbr>Instance<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="policy_info_python">
-<a href="#policy_info_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>info</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyinforesponse">Policy<wbr>Info<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the policy information.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="protection_error_details_python">
-<a href="#protection_error_details_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>error_<wbr>details</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userfacingerrorresponse">User<wbr>Facing<wbr>Error<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the protection error of the resource{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="protection_status_python">
-<a href="#protection_status_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#protectionstatusdetailsresponse">Protection<wbr>Status<wbr>Details<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the protection status of the resource{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="provisioning_state_python">
-<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the provisioning state of the resource i.e. provisioning/updating/Succeeded/Failed{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}BackupInstanceResource properties{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="system_data_python">
 <a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
@@ -592,15 +347,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="data_source_set_info_python">
-<a href="#data_source_set_info_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>set_<wbr>info</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcesetresponse">Datasource<wbr>Set<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the data source set information.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -691,6 +438,314 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the Snapshot Resource Group Uri.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="backupinstanceresponse">Backup<wbr>Instance<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="currentprotectionstate_csharp">
+<a href="#currentprotectionstate_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Protection<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the current protection state of the resource{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="datasourceinfo_csharp">
+<a href="#datasourceinfo_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Datasource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the data source information.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="objecttype_csharp">
+<a href="#objecttype_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="policyinfo_csharp">
+<a href="#policyinfo_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policyinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Policy<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the policy information.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="protectionerrordetails_csharp">
+<a href="#protectionerrordetails_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>Error<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userfacingerrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>User<wbr>Facing<wbr>Error<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the protection error of the resource{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="protectionstatus_csharp">
+<a href="#protectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#protectionstatusdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Protection<wbr>Status<wbr>Details<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the protection status of the resource{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_csharp">
+<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the provisioning state of the resource i.e. provisioning/updating/Succeeded/Failed{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datasourcesetinfo_csharp">
+<a href="#datasourcesetinfo_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Set<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourcesetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Datasource<wbr>Set<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the data source set information.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_csharp">
+<a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the Backup Instance friendly name.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="currentprotectionstate_go">
+<a href="#currentprotectionstate_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Protection<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the current protection state of the resource{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="datasourceinfo_go">
+<a href="#datasourceinfo_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourceresponse">Datasource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the data source information.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="objecttype_go">
+<a href="#objecttype_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="policyinfo_go">
+<a href="#policyinfo_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policyinforesponse">Policy<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the policy information.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="protectionerrordetails_go">
+<a href="#protectionerrordetails_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>Error<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userfacingerrorresponse">User<wbr>Facing<wbr>Error<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the protection error of the resource{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="protectionstatus_go">
+<a href="#protectionstatus_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#protectionstatusdetailsresponse">Protection<wbr>Status<wbr>Details<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the protection status of the resource{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_go">
+<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the provisioning state of the resource i.e. provisioning/updating/Succeeded/Failed{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datasourcesetinfo_go">
+<a href="#datasourcesetinfo_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Set<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourcesetresponse">Datasource<wbr>Set<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the data source set information.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_go">
+<a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the Backup Instance friendly name.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="currentprotectionstate_nodejs">
+<a href="#currentprotectionstate_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Protection<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the current protection state of the resource{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="datasourceinfo_nodejs">
+<a href="#datasourceinfo_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourceresponse">Datasource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the data source information.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="objecttype_nodejs">
+<a href="#objecttype_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="policyinfo_nodejs">
+<a href="#policyinfo_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policyinforesponse">Policy<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the policy information.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="protectionerrordetails_nodejs">
+<a href="#protectionerrordetails_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Error<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userfacingerrorresponse">User<wbr>Facing<wbr>Error<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the protection error of the resource{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="protectionstatus_nodejs">
+<a href="#protectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#protectionstatusdetailsresponse">Protection<wbr>Status<wbr>Details<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the protection status of the resource{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_nodejs">
+<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the provisioning state of the resource i.e. provisioning/updating/Succeeded/Failed{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datasourcesetinfo_nodejs">
+<a href="#datasourcesetinfo_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Set<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourcesetresponse">Datasource<wbr>Set<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the data source set information.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_nodejs">
+<a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the Backup Instance friendly name.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="current_protection_state_python">
+<a href="#current_protection_state_python" style="color: inherit; text-decoration: inherit;">current_<wbr>protection_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the current protection state of the resource{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="data_source_info_python">
+<a href="#data_source_info_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourceresponse">Datasource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the data source information.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="object_type_python">
+<a href="#object_type_python" style="color: inherit; text-decoration: inherit;">object_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="policy_info_python">
+<a href="#policy_info_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policyinforesponse">Policy<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the policy information.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="protection_error_details_python">
+<a href="#protection_error_details_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>error_<wbr>details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userfacingerrorresponse">User<wbr>Facing<wbr>Error<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the protection error of the resource{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="protection_status_python">
+<a href="#protection_status_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#protectionstatusdetailsresponse">Protection<wbr>Status<wbr>Details<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the protection status of the resource{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="provisioning_state_python">
+<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the provisioning state of the resource i.e. provisioning/updating/Succeeded/Failed{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="data_source_set_info_python">
+<a href="#data_source_set_info_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>set_<wbr>info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourcesetresponse">Datasource<wbr>Set<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the data source set information.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="friendly_name_python">
+<a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the Backup Instance friendly name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="datasourceresponse">Datasource<wbr>Response</h4>
@@ -1208,7 +1263,7 @@ The following output properties are available:
 <a href="#embeddedinnererror_csharp" style="color: inherit; text-decoration: inherit;">Embedded<wbr>Inner<wbr>Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innererrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Inner<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#innererrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Inner<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Child Inner Error, to allow Nesting.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1292,7 +1347,7 @@ The following output properties are available:
 <a href="#embedded_inner_error_python" style="color: inherit; text-decoration: inherit;">embedded_<wbr>inner_<wbr>error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innererrorresponse">Inner<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#innererrorresponse">Inner<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Child Inner Error, to allow Nesting.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1324,7 +1379,7 @@ The following output properties are available:
 <a href="#policyparameters_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyparametersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Policy<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#policyparametersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Policy<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Policy parameters for the backup instance{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1408,7 +1463,7 @@ The following output properties are available:
 <a href="#policy_parameters_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyparametersresponse">Policy<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#policyparametersresponse">Policy<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Policy parameters for the backup instance{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1424,7 +1479,7 @@ The following output properties are available:
 <a href="#datastoreparameterslist_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Store<wbr>Parameters<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureoperationalstoreparametersresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Azure<wbr>Operational<wbr>Store<wbr>Parameters<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azureoperationalstoreparametersresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Azure<wbr>Operational<wbr>Store<wbr>Parameters<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the DataStore Parameters{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1460,7 +1515,7 @@ The following output properties are available:
 <a href="#data_store_parameters_list_python" style="color: inherit; text-decoration: inherit;">data_<wbr>store_<wbr>parameters_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureoperationalstoreparametersresponse">Sequence[Azure<wbr>Operational<wbr>Store<wbr>Parameters<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azureoperationalstoreparametersresponse">Sequence[Azure<wbr>Operational<wbr>Store<wbr>Parameters<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the DataStore Parameters{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1476,7 +1531,7 @@ The following output properties are available:
 <a href="#errordetails_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userfacingerrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>User<wbr>Facing<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userfacingerrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>User<wbr>Facing<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the protection status error of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1536,7 +1591,7 @@ The following output properties are available:
 <a href="#error_details_python" style="color: inherit; text-decoration: inherit;">error_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userfacingerrorresponse">User<wbr>Facing<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userfacingerrorresponse">User<wbr>Facing<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the protection status error of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1780,7 +1835,7 @@ The following output properties are available:
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userfacingerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>User<wbr>Facing<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#userfacingerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>User<wbr>Facing<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Additional related Errors{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1788,7 +1843,7 @@ The following output properties are available:
 <a href="#innererror_csharp" style="color: inherit; text-decoration: inherit;">Inner<wbr>Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innererrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Inner<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#innererrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Inner<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Inner Error{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2008,7 +2063,7 @@ The following output properties are available:
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userfacingerrorresponse">Sequence[User<wbr>Facing<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userfacingerrorresponse">Sequence[User<wbr>Facing<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Additional related Errors{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2016,7 +2071,7 @@ The following output properties are available:
 <a href="#inner_error_python" style="color: inherit; text-decoration: inherit;">inner_<wbr>error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innererrorresponse">Inner<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#innererrorresponse">Inner<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Inner Error{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

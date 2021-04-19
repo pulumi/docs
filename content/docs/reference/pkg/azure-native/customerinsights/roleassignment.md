@@ -71,7 +71,7 @@ package main
 
 import (
 	customerinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/customerinsights"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -177,19 +177,45 @@ const roleAssignment = new azure_native.customerinsights.RoleAssignment("roleAss
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RoleAssignment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RoleAssignmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RoleAssignment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RoleAssignmentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RoleAssignment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">assignment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">conflation_policies</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">connectors</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">interactions</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">kpis</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">links</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">principals</span><span class="p">:</span> <span class="nx">Optional[Sequence[AssignmentPrincipalArgs]]</span> = None<span class="p">, </span><span class="nx">profiles</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">relationship_links</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">relationships</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[RoleTypes]</span> = None<span class="p">, </span><span class="nx">role_assignments</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">sas_policies</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">segments</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">views</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">widget_types</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">RoleAssignment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                   <span class="nx">assignment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">conflation_policies</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">connectors</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                   <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                   <span class="nx">hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">interactions</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">kpis</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">links</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">principals</span><span class="p">:</span> <span class="nx">Optional[Sequence[AssignmentPrincipalArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">profiles</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">relationship_links</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">relationships</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[RoleTypes]</span> = None<span class="p">,</span>
+                   <span class="nx">role_assignments</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">sas_policies</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">segments</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">views</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">widget_types</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">RoleAssignment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RoleAssignmentArgs</a></span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRoleAssignment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RoleAssignmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RoleAssignment</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRoleAssignment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RoleAssignmentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RoleAssignment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RoleAssignment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RoleAssignmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RoleAssignment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">RoleAssignmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -224,22 +250,32 @@ const roleAssignment = new azure_native.customerinsights.RoleAssignment("roleAss
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">RoleAssignmentArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -663,7 +699,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#principals_nodejs" style="color: inherit; text-decoration: inherit;">principals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentprincipal">Assignment<wbr>Principal[]</a></span>
+        <span class="property-type"><a href="#assignmentprincipal">Assignment<wbr>Principal<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The principals being assigned to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -695,7 +731,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#conflationpolicies_nodejs" style="color: inherit; text-decoration: inherit;">conflation<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Widget types set for the assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -703,7 +739,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#connectors_nodejs" style="color: inherit; text-decoration: inherit;">connectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connectors set for the assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -727,7 +763,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#interactions_nodejs" style="color: inherit; text-decoration: inherit;">interactions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Interactions set for the assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -735,7 +771,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#kpis_nodejs" style="color: inherit; text-decoration: inherit;">kpis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kpis set for the assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -743,7 +779,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#links_nodejs" style="color: inherit; text-decoration: inherit;">links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Links set for the assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -751,7 +787,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#profiles_nodejs" style="color: inherit; text-decoration: inherit;">profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Profiles set for the assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -759,7 +795,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#relationshiplinks_nodejs" style="color: inherit; text-decoration: inherit;">relationship<wbr>Links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Role assignments set for the relationship links.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -767,7 +803,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#relationships_nodejs" style="color: inherit; text-decoration: inherit;">relationships</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Role assignments set for the relationships.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -775,7 +811,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#roleassignments_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Assignments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Role assignments set for the assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -783,7 +819,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#saspolicies_nodejs" style="color: inherit; text-decoration: inherit;">sas<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sas Policies set for the assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -791,7 +827,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#segments_nodejs" style="color: inherit; text-decoration: inherit;">segments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Role assignments set for the assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -799,7 +835,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#views_nodejs" style="color: inherit; text-decoration: inherit;">views</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Views set for the assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -807,7 +843,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#widgettypes_nodejs" style="color: inherit; text-decoration: inherit;">widget<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Widget types set for the assignment.{{% /md %}}</dd></dl>
 {{% /choosable %}}

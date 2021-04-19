@@ -96,8 +96,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -221,17 +221,24 @@ const politik = Promise.all([source, override]).then(([source, override]) => aws
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPolicyDocument<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPolicyDocumentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetPolicyDocumentResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPolicyDocument<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPolicyDocumentArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetPolicyDocumentResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_policy_document(</span><span class="nx">override_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">override_policy_documents</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_policy_documents</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">statements</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetPolicyDocumentStatementArgs]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPolicyDocumentResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_policy_document(</span><span class="nx">override_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">override_policy_documents</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">source_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">source_policy_documents</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">statements</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetPolicyDocumentStatement]]</span> = None<span class="p">,</span>
+                        <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPolicyDocumentResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPolicyDocument<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetPolicyDocumentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetPolicyDocumentResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPolicyDocument<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetPolicyDocumentArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetPolicyDocumentResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `GetPolicyDocument` in the Go SDK.
 
@@ -240,7 +247,7 @@ const politik = Promise.all([source, override]).then(([source, override]) => aws
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetPolicyDocument </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetPolicyDocumentResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetPolicyDocumentArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetPolicyDocumentResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetPolicyDocumentArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -301,7 +308,7 @@ The following arguments are supported:
 <a href="#statements_csharp" style="color: inherit; text-decoration: inherit;">Statements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicydocumentstatement">List&lt;Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getpolicydocumentstatement">List&lt;Get<wbr>Policy<wbr>Document<wbr>Statement&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for a policy statement. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -502,7 +509,7 @@ The following arguments are supported:
 <a href="#statements_python" style="color: inherit; text-decoration: inherit;">statements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicydocumentstatement">Sequence[Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getpolicydocumentstatement">Sequence[Get<wbr>Policy<wbr>Document<wbr>Statement]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for a policy statement. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -864,7 +871,7 @@ The following output properties are available:
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicydocumentstatementcondition">List&lt;Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getpolicydocumentstatementcondition">List&lt;Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Condition&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for a condition. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -891,7 +898,7 @@ The following output properties are available:
 <a href="#notprincipals_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Principals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicydocumentstatementnotprincipal">List&lt;Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Not<wbr>Principal<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getpolicydocumentstatementnotprincipal">List&lt;Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Not<wbr>Principal&gt;</a></span>
     </dt>
     <dd>{{% md %}}Like `principals` except these are principals that the statement does *not* apply to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -909,7 +916,7 @@ The following output properties are available:
 <a href="#principals_csharp" style="color: inherit; text-decoration: inherit;">Principals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicydocumentstatementprincipal">List&lt;Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Principal<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getpolicydocumentstatementprincipal">List&lt;Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Principal&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for principals. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1119,7 +1126,7 @@ The following output properties are available:
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicydocumentstatementcondition">Sequence[Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getpolicydocumentstatementcondition">Sequence[Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Condition]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for a condition. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1146,7 +1153,7 @@ The following output properties are available:
 <a href="#not_principals_python" style="color: inherit; text-decoration: inherit;">not_<wbr>principals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicydocumentstatementnotprincipal">Sequence[Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Not<wbr>Principal<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getpolicydocumentstatementnotprincipal">Sequence[Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Not<wbr>Principal]</a></span>
     </dt>
     <dd>{{% md %}}Like `principals` except these are principals that the statement does *not* apply to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1164,7 +1171,7 @@ The following output properties are available:
 <a href="#principals_python" style="color: inherit; text-decoration: inherit;">principals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicydocumentstatementprincipal">Sequence[Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Principal<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getpolicydocumentstatementprincipal">Sequence[Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Principal]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for principals. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"

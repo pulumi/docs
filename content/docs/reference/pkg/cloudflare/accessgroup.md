@@ -36,8 +36,9 @@ requests. Example: `everyone = true`
 * `common_name` - (Optional) Use a certificate common name to authenticate with.
 * `auth_method` - (Optional) A string identifying the authentication
 method code. The list of codes are listed here: https://tools.ietf.org/html/rfc8176#section-2.
-Custom values are also supported.
+Custom values are also supported. Example: `auth_method = ["swk"]`
 * `geo` - (Optional) A list of country codes. Example: `geo = ["US"]`
+* `login_method` - (Optional) A list of identity provider ids. Example: `login_method = [cloudflare_access_identity_provider.my_idp.id]`
 * `gsuite` - (Optional) Use GSuite as the authentication mechanism. Example:
   
   ```hcl
@@ -172,8 +173,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-cloudflare/sdk/v3/go/cloudflare"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -296,19 +297,31 @@ const testGroupIndex_accessGroupAccessGroup = new cloudflare.AccessGroup("testGr
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AccessGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccessGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AccessGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccessGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AccessGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">excludes</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessGroupExcludeArgs]]</span> = None<span class="p">, </span><span class="nx">includes</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessGroupIncludeArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">requires</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessGroupRequireArgs]]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AccessGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                <span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">excludes</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessGroupExcludeArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">includes</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessGroupIncludeArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">requires</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessGroupRequireArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AccessGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccessGroupArgs</a></span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccessGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AccessGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AccessGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccessGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AccessGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AccessGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AccessGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AccessGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AccessGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AccessGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -343,22 +356,32 @@ const testGroupIndex_accessGroupAccessGroup = new cloudflare.AccessGroup("testGr
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AccessGroupArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -367,7 +390,7 @@ const testGroupIndex_accessGroupAccessGroup = new cloudflare.AccessGroup("testGr
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -391,7 +414,7 @@ const testGroupIndex_accessGroupAccessGroup = new cloudflare.AccessGroup("testGr
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -568,7 +591,7 @@ full list.
 <a href="#includes_nodejs" style="color: inherit; text-decoration: inherit;">includes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupinclude">Access<wbr>Group<wbr>Include[]</a></span>
+        <span class="property-type"><a href="#accessgroupinclude">Access<wbr>Group<wbr>Include<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see below for
 full list.
@@ -596,7 +619,7 @@ full list.
 <a href="#excludes_nodejs" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupexclude">Access<wbr>Group<wbr>Exclude[]</a></span>
+        <span class="property-type"><a href="#accessgroupexclude">Access<wbr>Group<wbr>Exclude<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see below for
 full list.
@@ -606,7 +629,7 @@ full list.
 <a href="#requires_nodejs" style="color: inherit; text-decoration: inherit;">requires</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgrouprequire">Access<wbr>Group<wbr>Require[]</a></span>
+        <span class="property-type"><a href="#accessgrouprequire">Access<wbr>Group<wbr>Require<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see below for
 full list.
@@ -746,20 +769,28 @@ Get an existing AccessGroup resource's state with the given name, ID, and option
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">AccessGroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">AccessGroup</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">AccessGroupState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">AccessGroup</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">excludes</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessGroupExcludeArgs]]</span> = None<span class="p">, </span><span class="nx">includes</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessGroupIncludeArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">requires</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessGroupRequireArgs]]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AccessGroup</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">excludes</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessGroupExcludeArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">includes</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessGroupIncludeArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">requires</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessGroupRequireArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AccessGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAccessGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">AccessGroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AccessGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAccessGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">AccessGroupState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AccessGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">AccessGroup</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">AccessGroupState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">AccessGroup</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">AccessGroupState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -999,7 +1030,7 @@ full list.
 <a href="#state_excludes_nodejs" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupexclude">Access<wbr>Group<wbr>Exclude[]</a></span>
+        <span class="property-type"><a href="#accessgroupexclude">Access<wbr>Group<wbr>Exclude<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see below for
 full list.
@@ -1009,7 +1040,7 @@ full list.
 <a href="#state_includes_nodejs" style="color: inherit; text-decoration: inherit;">includes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupinclude">Access<wbr>Group<wbr>Include[]</a></span>
+        <span class="property-type"><a href="#accessgroupinclude">Access<wbr>Group<wbr>Include<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see below for
 full list.
@@ -1028,7 +1059,7 @@ full list.
 <a href="#state_requires_nodejs" style="color: inherit; text-decoration: inherit;">requires</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgrouprequire">Access<wbr>Group<wbr>Require[]</a></span>
+        <span class="property-type"><a href="#accessgrouprequire">Access<wbr>Group<wbr>Require<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see below for
 full list.
@@ -1223,6 +1254,14 @@ full list.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="loginmethods_csharp">
+<a href="#loginmethods_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Methods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="oktas_csharp">
 <a href="#oktas_csharp" style="color: inherit; text-decoration: inherit;">Oktas</a>
 </span>
@@ -1355,6 +1394,14 @@ full list.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="loginmethods_go">
+<a href="#loginmethods_go" style="color: inherit; text-decoration: inherit;">Login<wbr>Methods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="oktas_go">
 <a href="#oktas_go" style="color: inherit; text-decoration: inherit;">Oktas</a>
 </span>
@@ -1403,7 +1450,7 @@ full list.
 <a href="#azures_nodejs" style="color: inherit; text-decoration: inherit;">azures</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupexcludeazure">Access<wbr>Group<wbr>Exclude<wbr>Azure[]</a></span>
+        <span class="property-type"><a href="#accessgroupexcludeazure">Access<wbr>Group<wbr>Exclude<wbr>Azure<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1459,7 +1506,7 @@ full list.
 <a href="#githubs_nodejs" style="color: inherit; text-decoration: inherit;">githubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupexcludegithub">Access<wbr>Group<wbr>Exclude<wbr>Github[]</a></span>
+        <span class="property-type"><a href="#accessgroupexcludegithub">Access<wbr>Group<wbr>Exclude<wbr>Github<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1475,7 +1522,7 @@ full list.
 <a href="#gsuites_nodejs" style="color: inherit; text-decoration: inherit;">gsuites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupexcludegsuite">Access<wbr>Group<wbr>Exclude<wbr>Gsuite[]</a></span>
+        <span class="property-type"><a href="#accessgroupexcludegsuite">Access<wbr>Group<wbr>Exclude<wbr>Gsuite<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1487,11 +1534,19 @@ full list.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="loginmethods_nodejs">
+<a href="#loginmethods_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Methods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="oktas_nodejs">
 <a href="#oktas_nodejs" style="color: inherit; text-decoration: inherit;">oktas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupexcludeokta">Access<wbr>Group<wbr>Exclude<wbr>Okta[]</a></span>
+        <span class="property-type"><a href="#accessgroupexcludeokta">Access<wbr>Group<wbr>Exclude<wbr>Okta<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1499,7 +1554,7 @@ full list.
 <a href="#samls_nodejs" style="color: inherit; text-decoration: inherit;">samls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupexcludesaml">Access<wbr>Group<wbr>Exclude<wbr>Saml[]</a></span>
+        <span class="property-type"><a href="#accessgroupexcludesaml">Access<wbr>Group<wbr>Exclude<wbr>Saml<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1613,6 +1668,14 @@ full list.
             title="Optional">
         <span id="ips_python">
 <a href="#ips_python" style="color: inherit; text-decoration: inherit;">ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="login_methods_python">
+<a href="#login_methods_python" style="color: inherit; text-decoration: inherit;">login_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
@@ -2235,6 +2298,14 @@ full list.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="loginmethods_csharp">
+<a href="#loginmethods_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Methods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="oktas_csharp">
 <a href="#oktas_csharp" style="color: inherit; text-decoration: inherit;">Oktas</a>
 </span>
@@ -2367,6 +2438,14 @@ full list.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="loginmethods_go">
+<a href="#loginmethods_go" style="color: inherit; text-decoration: inherit;">Login<wbr>Methods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="oktas_go">
 <a href="#oktas_go" style="color: inherit; text-decoration: inherit;">Oktas</a>
 </span>
@@ -2415,7 +2494,7 @@ full list.
 <a href="#azures_nodejs" style="color: inherit; text-decoration: inherit;">azures</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupincludeazure">Access<wbr>Group<wbr>Include<wbr>Azure[]</a></span>
+        <span class="property-type"><a href="#accessgroupincludeazure">Access<wbr>Group<wbr>Include<wbr>Azure<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2471,7 +2550,7 @@ full list.
 <a href="#githubs_nodejs" style="color: inherit; text-decoration: inherit;">githubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupincludegithub">Access<wbr>Group<wbr>Include<wbr>Github[]</a></span>
+        <span class="property-type"><a href="#accessgroupincludegithub">Access<wbr>Group<wbr>Include<wbr>Github<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2487,7 +2566,7 @@ full list.
 <a href="#gsuites_nodejs" style="color: inherit; text-decoration: inherit;">gsuites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupincludegsuite">Access<wbr>Group<wbr>Include<wbr>Gsuite[]</a></span>
+        <span class="property-type"><a href="#accessgroupincludegsuite">Access<wbr>Group<wbr>Include<wbr>Gsuite<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2499,11 +2578,19 @@ full list.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="loginmethods_nodejs">
+<a href="#loginmethods_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Methods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="oktas_nodejs">
 <a href="#oktas_nodejs" style="color: inherit; text-decoration: inherit;">oktas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupincludeokta">Access<wbr>Group<wbr>Include<wbr>Okta[]</a></span>
+        <span class="property-type"><a href="#accessgroupincludeokta">Access<wbr>Group<wbr>Include<wbr>Okta<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2511,7 +2598,7 @@ full list.
 <a href="#samls_nodejs" style="color: inherit; text-decoration: inherit;">samls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupincludesaml">Access<wbr>Group<wbr>Include<wbr>Saml[]</a></span>
+        <span class="property-type"><a href="#accessgroupincludesaml">Access<wbr>Group<wbr>Include<wbr>Saml<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2625,6 +2712,14 @@ full list.
             title="Optional">
         <span id="ips_python">
 <a href="#ips_python" style="color: inherit; text-decoration: inherit;">ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="login_methods_python">
+<a href="#login_methods_python" style="color: inherit; text-decoration: inherit;">login_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
@@ -3247,6 +3342,14 @@ full list.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="loginmethods_csharp">
+<a href="#loginmethods_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Methods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="oktas_csharp">
 <a href="#oktas_csharp" style="color: inherit; text-decoration: inherit;">Oktas</a>
 </span>
@@ -3379,6 +3482,14 @@ full list.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="loginmethods_go">
+<a href="#loginmethods_go" style="color: inherit; text-decoration: inherit;">Login<wbr>Methods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="oktas_go">
 <a href="#oktas_go" style="color: inherit; text-decoration: inherit;">Oktas</a>
 </span>
@@ -3427,7 +3538,7 @@ full list.
 <a href="#azures_nodejs" style="color: inherit; text-decoration: inherit;">azures</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgrouprequireazure">Access<wbr>Group<wbr>Require<wbr>Azure[]</a></span>
+        <span class="property-type"><a href="#accessgrouprequireazure">Access<wbr>Group<wbr>Require<wbr>Azure<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3483,7 +3594,7 @@ full list.
 <a href="#githubs_nodejs" style="color: inherit; text-decoration: inherit;">githubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgrouprequiregithub">Access<wbr>Group<wbr>Require<wbr>Github[]</a></span>
+        <span class="property-type"><a href="#accessgrouprequiregithub">Access<wbr>Group<wbr>Require<wbr>Github<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3499,7 +3610,7 @@ full list.
 <a href="#gsuites_nodejs" style="color: inherit; text-decoration: inherit;">gsuites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgrouprequiregsuite">Access<wbr>Group<wbr>Require<wbr>Gsuite[]</a></span>
+        <span class="property-type"><a href="#accessgrouprequiregsuite">Access<wbr>Group<wbr>Require<wbr>Gsuite<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3511,11 +3622,19 @@ full list.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="loginmethods_nodejs">
+<a href="#loginmethods_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Methods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="oktas_nodejs">
 <a href="#oktas_nodejs" style="color: inherit; text-decoration: inherit;">oktas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgrouprequireokta">Access<wbr>Group<wbr>Require<wbr>Okta[]</a></span>
+        <span class="property-type"><a href="#accessgrouprequireokta">Access<wbr>Group<wbr>Require<wbr>Okta<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3523,7 +3642,7 @@ full list.
 <a href="#samls_nodejs" style="color: inherit; text-decoration: inherit;">samls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgrouprequiresaml">Access<wbr>Group<wbr>Require<wbr>Saml[]</a></span>
+        <span class="property-type"><a href="#accessgrouprequiresaml">Access<wbr>Group<wbr>Require<wbr>Saml<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3637,6 +3756,14 @@ full list.
             title="Optional">
         <span id="ips_python">
 <a href="#ips_python" style="color: inherit; text-decoration: inherit;">ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="login_methods_python">
+<a href="#login_methods_python" style="color: inherit; text-decoration: inherit;">login_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>

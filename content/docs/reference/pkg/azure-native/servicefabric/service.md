@@ -266,19 +266,41 @@ const service = new azure_native.servicefabric.Service("service", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Service</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Service</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">correlation_scheme</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceCorrelationDescriptionArgs]]</span> = None<span class="p">, </span><span class="nx">default_move_cost</span><span class="p">:</span> <span class="nx">Optional[Union[str, MoveCost]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partition_description</span><span class="p">:</span> <span class="nx">Optional[Union[NamedPartitionSchemeDescriptionArgs, SingletonPartitionSchemeDescriptionArgs, UniformInt64RangePartitionSchemeDescriptionArgs]]</span> = None<span class="p">, </span><span class="nx">placement_constraints</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_dns_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, ServiceKind]]</span> = None<span class="p">, </span><span class="nx">service_load_metrics</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceLoadMetricDescriptionArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_package_activation_mode</span><span class="p">:</span> <span class="nx">Optional[Union[str, ArmServicePackageActivationMode]]</span> = None<span class="p">, </span><span class="nx">service_placement_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServicePlacementPolicyDescriptionArgs]]</span> = None<span class="p">, </span><span class="nx">service_type_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">application_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">correlation_scheme</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceCorrelationDescriptionArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">default_move_cost</span><span class="p">:</span> <span class="nx">Optional[Union[str, MoveCost]]</span> = None<span class="p">,</span>
+            <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">partition_description</span><span class="p">:</span> <span class="nx">Optional[Union[NamedPartitionSchemeDescriptionArgs, SingletonPartitionSchemeDescriptionArgs, UniformInt64RangePartitionSchemeDescriptionArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">placement_constraints</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">service_dns_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">service_kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, ServiceKind]]</span> = None<span class="p">,</span>
+            <span class="nx">service_load_metrics</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceLoadMetricDescriptionArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">service_package_activation_mode</span><span class="p">:</span> <span class="nx">Optional[Union[str, ArmServicePackageActivationMode]]</span> = None<span class="p">,</span>
+            <span class="nx">service_placement_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServicePlacementPolicyDescriptionArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">service_type_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Service</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Service</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -313,22 +335,32 @@ const service = new azure_native.servicefabric.Service("service", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ServiceArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -712,7 +744,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#correlationscheme_nodejs" style="color: inherit; text-decoration: inherit;">correlation<wbr>Scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecorrelationdescription">Service<wbr>Correlation<wbr>Description[]</a></span>
+        <span class="property-type"><a href="#servicecorrelationdescription">Service<wbr>Correlation<wbr>Description<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list that describes the correlation of the service with other services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -736,7 +768,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#partitiondescription_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namedpartitionschemedescription">Named<wbr>Partition<wbr>Scheme<wbr>Description</a> | <a href="#singletonpartitionschemedescription">Singleton<wbr>Partition<wbr>Scheme<wbr>Description</a> | <a href="#uniformint64rangepartitionschemedescription">Uniform<wbr>Int64Range<wbr>Partition<wbr>Scheme<wbr>Description</a></span>
+        <span class="property-type"><a href="#namedpartitionschemedescription">Named<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Args</a> | <a href="#singletonpartitionschemedescription">Singleton<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Args</a> | <a href="#uniformint64rangepartitionschemedescription">Uniform<wbr>Int64Range<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how the service is partitioned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -760,7 +792,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#serviceloadmetrics_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Load<wbr>Metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceloadmetricdescription">Service<wbr>Load<wbr>Metric<wbr>Description[]</a></span>
+        <span class="property-type"><a href="#serviceloadmetricdescription">Service<wbr>Load<wbr>Metric<wbr>Description<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The service load metrics is given as an array of ServiceLoadMetricDescription objects.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -784,7 +816,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#serviceplacementpolicies_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Placement<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceplacementpolicydescription">Service<wbr>Placement<wbr>Policy<wbr>Description[]</a></span>
+        <span class="property-type"><a href="#serviceplacementpolicydescription">Service<wbr>Placement<wbr>Policy<wbr>Description<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list that describes the correlation of the service with other services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

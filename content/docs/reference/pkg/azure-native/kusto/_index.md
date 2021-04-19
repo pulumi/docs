@@ -18,6 +18,7 @@ Explore the resources and functions of the azure-native.kusto module.
     <li><a href="database" title="Database"><span class="symbol resource"></span>Database</a></li>
     <li><a href="databaseprincipalassignment" title="DatabasePrincipalAssignment"><span class="symbol resource"></span>DatabasePrincipalAssignment</a></li>
     <li><a href="eventhubconnection" title="EventHubConnection"><span class="symbol resource"></span>EventHubConnection</a></li>
+    <li><a href="script" title="Script"><span class="symbol resource"></span>Script</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -29,6 +30,7 @@ Explore the resources and functions of the azure-native.kusto module.
     <li><a href="getdatabase" title="GetDatabase"><span class="symbol function"></span>GetDatabase</a></li>
     <li><a href="getdatabaseprincipalassignment" title="GetDatabasePrincipalAssignment"><span class="symbol function"></span>GetDatabasePrincipalAssignment</a></li>
     <li><a href="geteventhubconnection" title="GetEventHubConnection"><span class="symbol function"></span>GetEventHubConnection</a></li>
+    <li><a href="getscript" title="GetScript"><span class="symbol function"></span>GetScript</a></li>
     <li><a href="listclusterfollowerdatabases" title="ListClusterFollowerDatabases"><span class="symbol function"></span>ListClusterFollowerDatabases</a></li>
     <li><a href="listclusterlanguageextensions" title="ListClusterLanguageExtensions"><span class="symbol function"></span>ListClusterLanguageExtensions</a></li>
     <li><a href="listdatabaseprincipals" title="ListDatabasePrincipals"><span class="symbol function"></span>ListDatabasePrincipals</a></li>
@@ -41,6 +43,6 @@ Explore the resources and functions of the azure-native.kusto module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.8.0</dd>
+	<dd>1.0.0-alpha.1618844820+db5e5a54</dd>
 </dl>
 

@@ -28,19 +28,53 @@ $ pulumi import azure-native:web:WebApp myresource1 /subscriptions/{subscription
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WebApp</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WebAppArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WebApp</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WebAppArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">WebApp</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">client_affinity_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">client_cert_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">client_cert_exclusion_paths</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_cert_mode</span><span class="p">:</span> <span class="nx">Optional[ClientCertMode]</span> = None<span class="p">, </span><span class="nx">cloning_info</span><span class="p">:</span> <span class="nx">Optional[CloningInfoArgs]</span> = None<span class="p">, </span><span class="nx">container_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">custom_domain_verification_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">daily_memory_time_quota</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">host_name_ssl_states</span><span class="p">:</span> <span class="nx">Optional[Sequence[HostNameSslStateArgs]]</span> = None<span class="p">, </span><span class="nx">host_names_disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hosting_environment_profile</span><span class="p">:</span> <span class="nx">Optional[HostingEnvironmentProfileArgs]</span> = None<span class="p">, </span><span class="nx">https_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hyper_v</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ManagedServiceIdentityArgs]</span> = None<span class="p">, </span><span class="nx">is_xenon</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_vault_reference_identity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redundancy_mode</span><span class="p">:</span> <span class="nx">Optional[RedundancyMode]</span> = None<span class="p">, </span><span class="nx">reserved</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scm_site_also_stopped</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">server_farm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">site_config</span><span class="p">:</span> <span class="nx">Optional[SiteConfigArgs]</span> = None<span class="p">, </span><span class="nx">storage_account_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">WebApp</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+           <span class="nx">client_affinity_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+           <span class="nx">client_cert_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+           <span class="nx">client_cert_exclusion_paths</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">client_cert_mode</span><span class="p">:</span> <span class="nx">Optional[ClientCertMode]</span> = None<span class="p">,</span>
+           <span class="nx">cloning_info</span><span class="p">:</span> <span class="nx">Optional[CloningInfoArgs]</span> = None<span class="p">,</span>
+           <span class="nx">container_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+           <span class="nx">custom_domain_verification_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">daily_memory_time_quota</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+           <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+           <span class="nx">host_name_ssl_states</span><span class="p">:</span> <span class="nx">Optional[Sequence[HostNameSslStateArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">host_names_disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+           <span class="nx">hosting_environment_profile</span><span class="p">:</span> <span class="nx">Optional[HostingEnvironmentProfileArgs]</span> = None<span class="p">,</span>
+           <span class="nx">https_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+           <span class="nx">hyper_v</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+           <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ManagedServiceIdentityArgs]</span> = None<span class="p">,</span>
+           <span class="nx">is_xenon</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+           <span class="nx">key_vault_reference_identity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">redundancy_mode</span><span class="p">:</span> <span class="nx">Optional[RedundancyMode]</span> = None<span class="p">,</span>
+           <span class="nx">reserved</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+           <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">scm_site_also_stopped</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+           <span class="nx">server_farm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">site_config</span><span class="p">:</span> <span class="nx">Optional[SiteConfigArgs]</span> = None<span class="p">,</span>
+           <span class="nx">storage_account_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+           <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">WebApp</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WebAppArgs</a></span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWebApp</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WebAppArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WebApp</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWebApp</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WebAppArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WebApp</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WebApp</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">WebAppArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WebApp</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">WebAppArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -75,22 +109,32 @@ $ pulumi import azure-native:web:WebApp myresource1 /subscriptions/{subscription
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">WebAppArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -687,7 +731,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#cloninginfo_nodejs" style="color: inherit; text-decoration: inherit;">cloning<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloninginfo">Cloning<wbr>Info</a></span>
+        <span class="property-type"><a href="#cloninginfo">Cloning<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified during app creation, the app is cloned from a source app.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -727,7 +771,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#hostnamesslstates_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name<wbr>Ssl<wbr>States</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostnamesslstate">Host<wbr>Name<wbr>Ssl<wbr>State[]</a></span>
+        <span class="property-type"><a href="#hostnamesslstate">Host<wbr>Name<wbr>Ssl<wbr>State<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Hostname SSL states are used to manage the SSL bindings for app's hostnames.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -744,7 +788,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#hostingenvironmentprofile_nodejs" style="color: inherit; text-decoration: inherit;">hosting<wbr>Environment<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostingenvironmentprofile">Hosting<wbr>Environment<wbr>Profile</a></span>
+        <span class="property-type"><a href="#hostingenvironmentprofile">Hosting<wbr>Environment<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}App Service Environment to use for the app.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -769,7 +813,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentity">Managed<wbr>Service<wbr>Identity</a></span>
+        <span class="property-type"><a href="#managedserviceidentity">Managed<wbr>Service<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Managed service identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -849,7 +893,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#siteconfig_nodejs" style="color: inherit; text-decoration: inherit;">site<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#siteconfig">Site<wbr>Config</a></span>
+        <span class="property-type"><a href="#siteconfig">Site<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the app.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2089,7 +2133,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#customaction_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autohealcustomaction">Auto<wbr>Heal<wbr>Custom<wbr>Action</a></span>
+        <span class="property-type"><a href="#autohealcustomaction">Auto<wbr>Heal<wbr>Custom<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Custom action to be taken.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2207,7 +2251,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#customaction_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autohealcustomactionresponse">Auto<wbr>Heal<wbr>Custom<wbr>Action<wbr>Response</a></span>
+        <span class="property-type"><a href="#autohealcustomactionresponse">Auto<wbr>Heal<wbr>Custom<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Custom action to be taken.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2463,7 +2507,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autohealactions">Auto<wbr>Heal<wbr>Actions</a></span>
+        <span class="property-type"><a href="#autohealactions">Auto<wbr>Heal<wbr>Actions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Actions to be executed when a rule is triggered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2471,7 +2515,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#triggers_nodejs" style="color: inherit; text-decoration: inherit;">triggers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autohealtriggers">Auto<wbr>Heal<wbr>Triggers</a></span>
+        <span class="property-type"><a href="#autohealtriggers">Auto<wbr>Heal<wbr>Triggers<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Conditions that describe when to execute the auto-heal actions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2545,7 +2589,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autohealactionsresponse">Auto<wbr>Heal<wbr>Actions<wbr>Response</a></span>
+        <span class="property-type"><a href="#autohealactionsresponse">Auto<wbr>Heal<wbr>Actions<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Actions to be executed when a rule is triggered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2553,7 +2597,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#triggers_nodejs" style="color: inherit; text-decoration: inherit;">triggers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autohealtriggersresponse">Auto<wbr>Heal<wbr>Triggers<wbr>Response</a></span>
+        <span class="property-type"><a href="#autohealtriggersresponse">Auto<wbr>Heal<wbr>Triggers<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Conditions that describe when to execute the auto-heal actions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2699,7 +2743,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#requests_nodejs" style="color: inherit; text-decoration: inherit;">requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestsbasedtrigger">Requests<wbr>Based<wbr>Trigger</a></span>
+        <span class="property-type"><a href="#requestsbasedtrigger">Requests<wbr>Based<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule based on total requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2707,7 +2751,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#slowrequests_nodejs" style="color: inherit; text-decoration: inherit;">slow<wbr>Requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowrequestsbasedtrigger">Slow<wbr>Requests<wbr>Based<wbr>Trigger</a></span>
+        <span class="property-type"><a href="#slowrequestsbasedtrigger">Slow<wbr>Requests<wbr>Based<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule based on request execution time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2715,7 +2759,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#slowrequestswithpath_nodejs" style="color: inherit; text-decoration: inherit;">slow<wbr>Requests<wbr>With<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowrequestsbasedtrigger">Slow<wbr>Requests<wbr>Based<wbr>Trigger[]</a></span>
+        <span class="property-type"><a href="#slowrequestsbasedtrigger">Slow<wbr>Requests<wbr>Based<wbr>Trigger<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A rule based on multiple Slow Requests Rule with path{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2723,7 +2767,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#statuscodes_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statuscodesbasedtrigger">Status<wbr>Codes<wbr>Based<wbr>Trigger[]</a></span>
+        <span class="property-type"><a href="#statuscodesbasedtrigger">Status<wbr>Codes<wbr>Based<wbr>Trigger<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A rule based on status codes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2731,7 +2775,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#statuscodesrange_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Codes<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statuscodesrangebasedtrigger">Status<wbr>Codes<wbr>Range<wbr>Based<wbr>Trigger[]</a></span>
+        <span class="property-type"><a href="#statuscodesrangebasedtrigger">Status<wbr>Codes<wbr>Range<wbr>Based<wbr>Trigger<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A rule based on status codes ranges.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2909,7 +2953,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#requests_nodejs" style="color: inherit; text-decoration: inherit;">requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestsbasedtriggerresponse">Requests<wbr>Based<wbr>Trigger<wbr>Response</a></span>
+        <span class="property-type"><a href="#requestsbasedtriggerresponse">Requests<wbr>Based<wbr>Trigger<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule based on total requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2917,7 +2961,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#slowrequests_nodejs" style="color: inherit; text-decoration: inherit;">slow<wbr>Requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowrequestsbasedtriggerresponse">Slow<wbr>Requests<wbr>Based<wbr>Trigger<wbr>Response</a></span>
+        <span class="property-type"><a href="#slowrequestsbasedtriggerresponse">Slow<wbr>Requests<wbr>Based<wbr>Trigger<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule based on request execution time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2925,7 +2969,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#slowrequestswithpath_nodejs" style="color: inherit; text-decoration: inherit;">slow<wbr>Requests<wbr>With<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowrequestsbasedtriggerresponse">Slow<wbr>Requests<wbr>Based<wbr>Trigger<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#slowrequestsbasedtriggerresponse">Slow<wbr>Requests<wbr>Based<wbr>Trigger<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A rule based on multiple Slow Requests Rule with path{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2933,7 +2977,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#statuscodes_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statuscodesbasedtriggerresponse">Status<wbr>Codes<wbr>Based<wbr>Trigger<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#statuscodesbasedtriggerresponse">Status<wbr>Codes<wbr>Based<wbr>Trigger<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A rule based on status codes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2941,7 +2985,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#statuscodesrange_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Codes<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statuscodesrangebasedtriggerresponse">Status<wbr>Codes<wbr>Range<wbr>Based<wbr>Trigger<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#statuscodesrangebasedtriggerresponse">Status<wbr>Codes<wbr>Range<wbr>Based<wbr>Trigger<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A rule based on status codes ranges.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4343,7 +4387,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#rampuprules_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Up<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rampuprule">Ramp<wbr>Up<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#rampuprule">Ramp<wbr>Up<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of ramp-up rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4393,7 +4437,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#rampuprules_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Up<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rampupruleresponse">Ramp<wbr>Up<wbr>Rule<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#rampupruleresponse">Ramp<wbr>Up<wbr>Rule<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of ramp-up rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6405,7 +6449,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities}</span>
+        <span class="property-type">{[key: string]: Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9093,7 +9137,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#apidefinition_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apidefinitioninfo">Api<wbr>Definition<wbr>Info</a></span>
+        <span class="property-type"><a href="#apidefinitioninfo">Api<wbr>Definition<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the formal API definition for the app.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9101,7 +9145,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#apimanagementconfig_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Management<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apimanagementconfig">Api<wbr>Management<wbr>Config</a></span>
+        <span class="property-type"><a href="#apimanagementconfig">Api<wbr>Management<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure API management settings linked to the app.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9117,7 +9161,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#appsettings_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namevaluepair">Name<wbr>Value<wbr>Pair[]</a></span>
+        <span class="property-type"><a href="#namevaluepair">Name<wbr>Value<wbr>Pair<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Application settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9133,7 +9177,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#autohealrules_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Heal<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autohealrules">Auto<wbr>Heal<wbr>Rules</a></span>
+        <span class="property-type"><a href="#autohealrules">Auto<wbr>Heal<wbr>Rules<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Auto Heal rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9149,7 +9193,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#azurestorageaccounts_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Azure<wbr>Storage<wbr>Info<wbr>Value}</span>
+        <span class="property-type">{[key: string]: Azure<wbr>Storage<wbr>Info<wbr>Value<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}List of Azure Storage Accounts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9157,7 +9201,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#connectionstrings_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Strings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connstringinfo">Conn<wbr>String<wbr>Info[]</a></span>
+        <span class="property-type"><a href="#connstringinfo">Conn<wbr>String<wbr>Info<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Connection strings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9165,7 +9209,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#cors_nodejs" style="color: inherit; text-decoration: inherit;">cors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corssettings">Cors<wbr>Settings</a></span>
+        <span class="property-type"><a href="#corssettings">Cors<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cross-Origin Resource Sharing (CORS) settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9197,7 +9241,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#experiments_nodejs" style="color: inherit; text-decoration: inherit;">experiments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#experiments">Experiments</a></span>
+        <span class="property-type"><a href="#experiments">Experiments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This is work around for polymorphic types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9232,7 +9276,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#handlermappings_nodejs" style="color: inherit; text-decoration: inherit;">handler<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handlermapping">Handler<wbr>Mapping[]</a></span>
+        <span class="property-type"><a href="#handlermapping">Handler<wbr>Mapping<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Handler mappings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9264,7 +9308,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#ipsecurityrestrictions_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Security<wbr>Restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecurityrestriction">Ip<wbr>Security<wbr>Restriction[]</a></span>
+        <span class="property-type"><a href="#ipsecurityrestriction">Ip<wbr>Security<wbr>Restriction<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}IP security restrictions for main.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9304,7 +9348,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#limits_nodejs" style="color: inherit; text-decoration: inherit;">limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sitelimits">Site<wbr>Limits</a></span>
+        <span class="property-type"><a href="#sitelimits">Site<wbr>Limits<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Site limits.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9434,7 +9478,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#push_nodejs" style="color: inherit; text-decoration: inherit;">push</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pushsettings">Push<wbr>Settings</a></span>
+        <span class="property-type"><a href="#pushsettings">Push<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Push endpoint settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9482,7 +9526,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#scmipsecurityrestrictions_nodejs" style="color: inherit; text-decoration: inherit;">scm<wbr>Ip<wbr>Security<wbr>Restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecurityrestriction">Ip<wbr>Security<wbr>Restriction[]</a></span>
+        <span class="property-type"><a href="#ipsecurityrestriction">Ip<wbr>Security<wbr>Restriction<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}IP security restrictions for scm.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9530,7 +9574,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#virtualapplications_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Applications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualapplication">Virtual<wbr>Application[]</a></span>
+        <span class="property-type"><a href="#virtualapplication">Virtual<wbr>Application<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Virtual applications.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11155,7 +11199,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#machinekey_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sitemachinekeyresponse">Site<wbr>Machine<wbr>Key<wbr>Response</a></span>
+        <span class="property-type"><a href="#sitemachinekeyresponse">Site<wbr>Machine<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Site MachineKey.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11171,7 +11215,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#apidefinition_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apidefinitioninforesponse">Api<wbr>Definition<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#apidefinitioninforesponse">Api<wbr>Definition<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the formal API definition for the app.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11179,7 +11223,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#apimanagementconfig_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Management<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apimanagementconfigresponse">Api<wbr>Management<wbr>Config<wbr>Response</a></span>
+        <span class="property-type"><a href="#apimanagementconfigresponse">Api<wbr>Management<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure API management settings linked to the app.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11195,7 +11239,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#appsettings_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namevaluepairresponse">Name<wbr>Value<wbr>Pair<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#namevaluepairresponse">Name<wbr>Value<wbr>Pair<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Application settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11211,7 +11255,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#autohealrules_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Heal<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autohealrulesresponse">Auto<wbr>Heal<wbr>Rules<wbr>Response</a></span>
+        <span class="property-type"><a href="#autohealrulesresponse">Auto<wbr>Heal<wbr>Rules<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Auto Heal rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11227,7 +11271,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#azurestorageaccounts_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Azure<wbr>Storage<wbr>Info<wbr>Value<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Azure<wbr>Storage<wbr>Info<wbr>Value<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}List of Azure Storage Accounts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11235,7 +11279,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#connectionstrings_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Strings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connstringinforesponse">Conn<wbr>String<wbr>Info<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#connstringinforesponse">Conn<wbr>String<wbr>Info<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Connection strings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11243,7 +11287,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#cors_nodejs" style="color: inherit; text-decoration: inherit;">cors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corssettingsresponse">Cors<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#corssettingsresponse">Cors<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cross-Origin Resource Sharing (CORS) settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11275,7 +11319,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#experiments_nodejs" style="color: inherit; text-decoration: inherit;">experiments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#experimentsresponse">Experiments<wbr>Response</a></span>
+        <span class="property-type"><a href="#experimentsresponse">Experiments<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This is work around for polymorphic types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11310,7 +11354,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#handlermappings_nodejs" style="color: inherit; text-decoration: inherit;">handler<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handlermappingresponse">Handler<wbr>Mapping<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#handlermappingresponse">Handler<wbr>Mapping<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Handler mappings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11342,7 +11386,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#ipsecurityrestrictions_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Security<wbr>Restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecurityrestrictionresponse">Ip<wbr>Security<wbr>Restriction<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#ipsecurityrestrictionresponse">Ip<wbr>Security<wbr>Restriction<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}IP security restrictions for main.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11382,7 +11426,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#limits_nodejs" style="color: inherit; text-decoration: inherit;">limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sitelimitsresponse">Site<wbr>Limits<wbr>Response</a></span>
+        <span class="property-type"><a href="#sitelimitsresponse">Site<wbr>Limits<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Site limits.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11512,7 +11556,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#push_nodejs" style="color: inherit; text-decoration: inherit;">push</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pushsettingsresponse">Push<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#pushsettingsresponse">Push<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Push endpoint settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11560,7 +11604,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#scmipsecurityrestrictions_nodejs" style="color: inherit; text-decoration: inherit;">scm<wbr>Ip<wbr>Security<wbr>Restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecurityrestrictionresponse">Ip<wbr>Security<wbr>Restriction<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#ipsecurityrestrictionresponse">Ip<wbr>Security<wbr>Restriction<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}IP security restrictions for scm.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11608,7 +11652,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#virtualapplications_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Applications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualapplicationresponse">Virtual<wbr>Application<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#virtualapplicationresponse">Virtual<wbr>Application<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Virtual applications.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13881,7 +13925,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#virtualdirectories_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Directories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualdirectory">Virtual<wbr>Directory[]</a></span>
+        <span class="property-type"><a href="#virtualdirectory">Virtual<wbr>Directory<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Virtual directories for virtual application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14027,7 +14071,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#virtualdirectories_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Directories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualdirectoryresponse">Virtual<wbr>Directory<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#virtualdirectoryresponse">Virtual<wbr>Directory<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Virtual directories for virtual application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

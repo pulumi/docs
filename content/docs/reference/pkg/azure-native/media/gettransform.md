@@ -22,17 +22,20 @@ API Version: 2020-05-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getTransform<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetTransformArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetTransformResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getTransform<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetTransformArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetTransformResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_transform(</span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">transform_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetTransformResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_transform(</span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">transform_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetTransformResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupTransform<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupTransformArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupTransformResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupTransform<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupTransformArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupTransformResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupTransform` in the Go SDK.
 
@@ -41,7 +44,7 @@ API Version: 2020-05-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetTransform </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetTransformResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetTransformArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetTransformResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetTransformArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -1504,7 +1507,7 @@ The following output properties are available:
 <a href="#crop_csharp" style="color: inherit; text-decoration: inherit;">Crop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rectangleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Rectangle<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rectangleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Rectangle<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The parameters for the rectangular window with which to crop the input video.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1512,7 +1515,7 @@ The following output properties are available:
 <a href="#deinterlace_csharp" style="color: inherit; text-decoration: inherit;">Deinterlace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deinterlaceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Deinterlace<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#deinterlaceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Deinterlace<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The de-interlacing settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1520,7 +1523,7 @@ The following output properties are available:
 <a href="#overlays_csharp" style="color: inherit; text-decoration: inherit;">Overlays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Audio<wbr>Overlay<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Video<wbr>Overlay<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Audio<wbr>Overlay<wbr>Response, Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Video<wbr>Overlay<wbr>Response&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}The properties of overlays to be applied to the input video. These could be audio, image or video overlays.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1612,7 +1615,7 @@ The following output properties are available:
 <a href="#crop_python" style="color: inherit; text-decoration: inherit;">crop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rectangleresponse">Rectangle<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rectangleresponse">Rectangle<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The parameters for the rectangular window with which to crop the input video.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1620,7 +1623,7 @@ The following output properties are available:
 <a href="#deinterlace_python" style="color: inherit; text-decoration: inherit;">deinterlace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deinterlaceresponse">Deinterlace<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#deinterlaceresponse">Deinterlace<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The de-interlacing settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1628,7 +1631,7 @@ The following output properties are available:
 <a href="#overlays_python" style="color: inherit; text-decoration: inherit;">overlays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Audio<wbr>Overlay<wbr>Response<wbr>Args, Video<wbr>Overlay<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Audio<wbr>Overlay<wbr>Response, Video<wbr>Overlay<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}The properties of overlays to be applied to the input video. These could be audio, image or video overlays.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2144,7 +2147,7 @@ The following output properties are available:
 <a href="#layers_csharp" style="color: inherit; text-decoration: inherit;">Layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#h264layerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>H264Layer<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#h264layerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>H264Layer<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of output H.264 layers to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2324,7 +2327,7 @@ The following output properties are available:
 <a href="#layers_python" style="color: inherit; text-decoration: inherit;">layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#h264layerresponse">Sequence[H264Layer<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#h264layerresponse">Sequence[H264Layer<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The collection of output H.264 layers to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2824,7 +2827,7 @@ The following output properties are available:
 <a href="#layers_csharp" style="color: inherit; text-decoration: inherit;">Layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#h265layerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>H265Layer<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#h265layerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>H265Layer<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of output H.265 layers to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3004,7 +3007,7 @@ The following output properties are available:
 <a href="#layers_python" style="color: inherit; text-decoration: inherit;">layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#h265layerresponse">Sequence[H265Layer<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#h265layerresponse">Sequence[H265Layer<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The collection of output H.265 layers to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3416,7 +3419,7 @@ The following output properties are available:
 <a href="#layers_csharp" style="color: inherit; text-decoration: inherit;">Layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jpglayerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Jpg<wbr>Layer<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#jpglayerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Jpg<wbr>Layer<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of output JPEG image layers to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3644,7 +3647,7 @@ The following output properties are available:
 <a href="#layers_python" style="color: inherit; text-decoration: inherit;">layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jpglayerresponse">Sequence[Jpg<wbr>Layer<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jpglayerresponse">Sequence[Jpg<wbr>Layer<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A collection of output JPEG image layers to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3856,7 +3859,7 @@ The following output properties are available:
 <a href="#outputfiles_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputfileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Output<wbr>File<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#outputfileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Output<wbr>File<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3916,7 +3919,7 @@ The following output properties are available:
 <a href="#output_files_python" style="color: inherit; text-decoration: inherit;">output_<wbr>files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputfileresponse">Sequence[Output<wbr>File<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#outputfileresponse">Sequence[Output<wbr>File<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3940,7 +3943,7 @@ The following output properties are available:
 <a href="#outputfiles_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputfileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Output<wbr>File<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#outputfileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Output<wbr>File<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4000,7 +4003,7 @@ The following output properties are available:
 <a href="#output_files_python" style="color: inherit; text-decoration: inherit;">output_<wbr>files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputfileresponse">Sequence[Output<wbr>File<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#outputfileresponse">Sequence[Output<wbr>File<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4144,7 +4147,7 @@ The following output properties are available:
 <a href="#layers_csharp" style="color: inherit; text-decoration: inherit;">Layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pnglayerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Png<wbr>Layer<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#pnglayerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Png<wbr>Layer<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of output PNG image layers to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4348,7 +4351,7 @@ The following output properties are available:
 <a href="#layers_python" style="color: inherit; text-decoration: inherit;">layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pnglayerresponse">Sequence[Png<wbr>Layer<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pnglayerresponse">Sequence[Png<wbr>Layer<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A collection of output PNG image layers to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4676,7 +4679,7 @@ The following output properties are available:
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filtersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Filters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#filtersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Filters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}One or more filtering operations that are applied to the input media before encoding.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4744,7 +4747,7 @@ The following output properties are available:
 <a href="#codecs_python" style="color: inherit; text-decoration: inherit;">codecs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Aac<wbr>Audio<wbr>Response<wbr>Args, Audio<wbr>Response<wbr>Args, Copy<wbr>Audio<wbr>Response<wbr>Args, Copy<wbr>Video<wbr>Response<wbr>Args, H264Video<wbr>Response<wbr>Args, H265Video<wbr>Response<wbr>Args, Image<wbr>Response<wbr>Args, Jpg<wbr>Image<wbr>Response<wbr>Args, Png<wbr>Image<wbr>Response<wbr>Args, Video<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Aac<wbr>Audio<wbr>Response, Audio<wbr>Response, Copy<wbr>Audio<wbr>Response, Copy<wbr>Video<wbr>Response, H264Video<wbr>Response, H265Video<wbr>Response, Image<wbr>Response, Jpg<wbr>Image<wbr>Response, Png<wbr>Image<wbr>Response, Video<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}The list of codecs to be used when encoding the input video.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4752,7 +4755,7 @@ The following output properties are available:
 <a href="#formats_python" style="color: inherit; text-decoration: inherit;">formats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Image<wbr>Format<wbr>Response<wbr>Args, Jpg<wbr>Format<wbr>Response<wbr>Args, Mp4Format<wbr>Response<wbr>Args, Multi<wbr>Bitrate<wbr>Format<wbr>Response<wbr>Args, Png<wbr>Format<wbr>Response<wbr>Args, Transport<wbr>Stream<wbr>Format<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Image<wbr>Format<wbr>Response, Jpg<wbr>Format<wbr>Response, Mp4Format<wbr>Response, Multi<wbr>Bitrate<wbr>Format<wbr>Response, Png<wbr>Format<wbr>Response, Transport<wbr>Stream<wbr>Format<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}The list of outputs to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4760,7 +4763,7 @@ The following output properties are available:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filtersresponse">Filters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#filtersresponse">Filters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}One or more filtering operations that are applied to the input media before encoding.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4988,7 +4991,7 @@ The following output properties are available:
 <a href="#preset_csharp" style="color: inherit; text-decoration: inherit;">Preset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#audioanalyzerpresetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Audio<wbr>Analyzer<wbr>Preset<wbr>Response<wbr>Args</a> | <a href="#builtinstandardencoderpresetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response<wbr>Args</a> | <a href="#facedetectorpresetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Face<wbr>Detector<wbr>Preset<wbr>Response<wbr>Args</a> | <a href="#standardencoderpresetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response<wbr>Args</a> | <a href="#videoanalyzerpresetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Video<wbr>Analyzer<wbr>Preset<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#audioanalyzerpresetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Audio<wbr>Analyzer<wbr>Preset<wbr>Response</a> | <a href="#builtinstandardencoderpresetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response</a> | <a href="#facedetectorpresetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Face<wbr>Detector<wbr>Preset<wbr>Response</a> | <a href="#standardencoderpresetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response</a> | <a href="#videoanalyzerpresetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Video<wbr>Analyzer<wbr>Preset<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5072,7 +5075,7 @@ The following output properties are available:
 <a href="#preset_python" style="color: inherit; text-decoration: inherit;">preset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#audioanalyzerpresetresponse">Audio<wbr>Analyzer<wbr>Preset<wbr>Response<wbr>Args</a> | <a href="#builtinstandardencoderpresetresponse">Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response<wbr>Args</a> | <a href="#facedetectorpresetresponse">Face<wbr>Detector<wbr>Preset<wbr>Response<wbr>Args</a> | <a href="#standardencoderpresetresponse">Standard<wbr>Encoder<wbr>Preset<wbr>Response<wbr>Args</a> | <a href="#videoanalyzerpresetresponse">Video<wbr>Analyzer<wbr>Preset<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#audioanalyzerpresetresponse">Audio<wbr>Analyzer<wbr>Preset<wbr>Response</a> | <a href="#builtinstandardencoderpresetresponse">Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response</a> | <a href="#facedetectorpresetresponse">Face<wbr>Detector<wbr>Preset<wbr>Response</a> | <a href="#standardencoderpresetresponse">Standard<wbr>Encoder<wbr>Preset<wbr>Response</a> | <a href="#videoanalyzerpresetresponse">Video<wbr>Analyzer<wbr>Preset<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5112,7 +5115,7 @@ The following output properties are available:
 <a href="#outputfiles_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputfileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Output<wbr>File<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#outputfileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Output<wbr>File<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5172,7 +5175,7 @@ The following output properties are available:
 <a href="#output_files_python" style="color: inherit; text-decoration: inherit;">output_<wbr>files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputfileresponse">Sequence[Output<wbr>File<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#outputfileresponse">Sequence[Output<wbr>File<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5352,7 +5355,7 @@ The following output properties are available:
 <a href="#croprectangle_csharp" style="color: inherit; text-decoration: inherit;">Crop<wbr>Rectangle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rectangleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Rectangle<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rectangleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Rectangle<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An optional rectangular window used to crop the overlay image or video.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5392,7 +5395,7 @@ The following output properties are available:
 <a href="#position_csharp" style="color: inherit; text-decoration: inherit;">Position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rectangleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Rectangle<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rectangleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Rectangle<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The location in the input video where the overlay is applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5580,7 +5583,7 @@ The following output properties are available:
 <a href="#crop_rectangle_python" style="color: inherit; text-decoration: inherit;">crop_<wbr>rectangle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rectangleresponse">Rectangle<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rectangleresponse">Rectangle<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An optional rectangular window used to crop the overlay image or video.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5620,7 +5623,7 @@ The following output properties are available:
 <a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rectangleresponse">Rectangle<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rectangleresponse">Rectangle<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The location in the input video where the overlay is applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

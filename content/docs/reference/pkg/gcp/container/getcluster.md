@@ -71,8 +71,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/container"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -157,17 +157,20 @@ export const nodePools = myCluster.then(myCluster => myCluster.nodePools);
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCluster<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetClusterResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCluster<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetClusterArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetClusterResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_cluster(</span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetClusterResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_cluster(</span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetClusterResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupClusterResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupClusterArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupClusterResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupCluster` in the Go SDK.
 
@@ -176,7 +179,7 @@ export const nodePools = myCluster.then(myCluster => myCluster.nodePools);
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetCluster </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetClusterResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetClusterArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetClusterResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetClusterArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -2191,7 +2194,7 @@ The following output properties are available:
 <a href="#cloudrunconfigs_csharp" style="color: inherit; text-decoration: inherit;">Cloudrun<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteraddonsconfigcloudrunconfig">List&lt;Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Cloudrun<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclusteraddonsconfigcloudrunconfig">List&lt;Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Cloudrun<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2199,7 +2202,7 @@ The following output properties are available:
 <a href="#configconnectorconfigs_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Connector<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteraddonsconfigconfigconnectorconfig">List&lt;Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Config<wbr>Connector<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclusteraddonsconfigconfigconnectorconfig">List&lt;Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Config<wbr>Connector<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2207,7 +2210,7 @@ The following output properties are available:
 <a href="#dnscacheconfigs_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Cache<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteraddonsconfigdnscacheconfig">List&lt;Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Dns<wbr>Cache<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclusteraddonsconfigdnscacheconfig">List&lt;Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Dns<wbr>Cache<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2215,7 +2218,7 @@ The following output properties are available:
 <a href="#gcepersistentdiskcsidriverconfigs_csharp" style="color: inherit; text-decoration: inherit;">Gce<wbr>Persistent<wbr>Disk<wbr>Csi<wbr>Driver<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteraddonsconfiggcepersistentdiskcsidriverconfig">List&lt;Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Gce<wbr>Persistent<wbr>Disk<wbr>Csi<wbr>Driver<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclusteraddonsconfiggcepersistentdiskcsidriverconfig">List&lt;Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Gce<wbr>Persistent<wbr>Disk<wbr>Csi<wbr>Driver<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2223,7 +2226,7 @@ The following output properties are available:
 <a href="#horizontalpodautoscalings_csharp" style="color: inherit; text-decoration: inherit;">Horizontal<wbr>Pod<wbr>Autoscalings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteraddonsconfighorizontalpodautoscaling">List&lt;Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Horizontal<wbr>Pod<wbr>Autoscaling<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclusteraddonsconfighorizontalpodautoscaling">List&lt;Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Horizontal<wbr>Pod<wbr>Autoscaling&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2231,7 +2234,7 @@ The following output properties are available:
 <a href="#httploadbalancings_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Load<wbr>Balancings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteraddonsconfighttploadbalancing">List&lt;Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Http<wbr>Load<wbr>Balancing<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclusteraddonsconfighttploadbalancing">List&lt;Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Http<wbr>Load<wbr>Balancing&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2239,7 +2242,7 @@ The following output properties are available:
 <a href="#istioconfigs_csharp" style="color: inherit; text-decoration: inherit;">Istio<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteraddonsconfigistioconfig">List&lt;Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Istio<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclusteraddonsconfigistioconfig">List&lt;Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Istio<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2247,7 +2250,7 @@ The following output properties are available:
 <a href="#kalmconfigs_csharp" style="color: inherit; text-decoration: inherit;">Kalm<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteraddonsconfigkalmconfig">List&lt;Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Kalm<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclusteraddonsconfigkalmconfig">List&lt;Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Kalm<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2255,7 +2258,7 @@ The following output properties are available:
 <a href="#networkpolicyconfigs_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Policy<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteraddonsconfignetworkpolicyconfig">List&lt;Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Network<wbr>Policy<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclusteraddonsconfignetworkpolicyconfig">List&lt;Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Network<wbr>Policy<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2419,7 +2422,7 @@ The following output properties are available:
 <a href="#cloudrun_configs_python" style="color: inherit; text-decoration: inherit;">cloudrun_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteraddonsconfigcloudrunconfig">Sequence[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Cloudrun<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusteraddonsconfigcloudrunconfig">Sequence[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Cloudrun<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2427,7 +2430,7 @@ The following output properties are available:
 <a href="#config_connector_configs_python" style="color: inherit; text-decoration: inherit;">config_<wbr>connector_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteraddonsconfigconfigconnectorconfig">Sequence[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Config<wbr>Connector<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusteraddonsconfigconfigconnectorconfig">Sequence[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Config<wbr>Connector<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2435,7 +2438,7 @@ The following output properties are available:
 <a href="#dns_cache_configs_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>cache_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteraddonsconfigdnscacheconfig">Sequence[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Dns<wbr>Cache<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusteraddonsconfigdnscacheconfig">Sequence[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Dns<wbr>Cache<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2443,7 +2446,7 @@ The following output properties are available:
 <a href="#gce_persistent_disk_csi_driver_configs_python" style="color: inherit; text-decoration: inherit;">gce_<wbr>persistent_<wbr>disk_<wbr>csi_<wbr>driver_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteraddonsconfiggcepersistentdiskcsidriverconfig">Sequence[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Gce<wbr>Persistent<wbr>Disk<wbr>Csi<wbr>Driver<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusteraddonsconfiggcepersistentdiskcsidriverconfig">Sequence[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Gce<wbr>Persistent<wbr>Disk<wbr>Csi<wbr>Driver<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2451,7 +2454,7 @@ The following output properties are available:
 <a href="#horizontal_pod_autoscalings_python" style="color: inherit; text-decoration: inherit;">horizontal_<wbr>pod_<wbr>autoscalings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteraddonsconfighorizontalpodautoscaling">Sequence[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Horizontal<wbr>Pod<wbr>Autoscaling<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusteraddonsconfighorizontalpodautoscaling">Sequence[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Horizontal<wbr>Pod<wbr>Autoscaling]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2459,7 +2462,7 @@ The following output properties are available:
 <a href="#http_load_balancings_python" style="color: inherit; text-decoration: inherit;">http_<wbr>load_<wbr>balancings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteraddonsconfighttploadbalancing">Sequence[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Http<wbr>Load<wbr>Balancing<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusteraddonsconfighttploadbalancing">Sequence[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Http<wbr>Load<wbr>Balancing]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2467,7 +2470,7 @@ The following output properties are available:
 <a href="#istio_configs_python" style="color: inherit; text-decoration: inherit;">istio_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteraddonsconfigistioconfig">Sequence[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Istio<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusteraddonsconfigistioconfig">Sequence[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Istio<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2475,7 +2478,7 @@ The following output properties are available:
 <a href="#kalm_configs_python" style="color: inherit; text-decoration: inherit;">kalm_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteraddonsconfigkalmconfig">Sequence[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Kalm<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusteraddonsconfigkalmconfig">Sequence[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Kalm<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2483,7 +2486,7 @@ The following output properties are available:
 <a href="#network_policy_configs_python" style="color: inherit; text-decoration: inherit;">network_<wbr>policy_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteraddonsconfignetworkpolicyconfig">Sequence[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Network<wbr>Policy<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusteraddonsconfignetworkpolicyconfig">Sequence[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Network<wbr>Policy<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3083,7 +3086,7 @@ The following output properties are available:
 <a href="#autoprovisioningdefaults_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Provisioning<wbr>Defaults</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterclusterautoscalingautoprovisioningdefault">List&lt;Get<wbr>Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Auto<wbr>Provisioning<wbr>Default<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclusterclusterautoscalingautoprovisioningdefault">List&lt;Get<wbr>Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Auto<wbr>Provisioning<wbr>Default&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3107,7 +3110,7 @@ The following output properties are available:
 <a href="#resourcelimits_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterclusterautoscalingresourcelimit">List&lt;Get<wbr>Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Resource<wbr>Limit<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclusterclusterautoscalingresourcelimit">List&lt;Get<wbr>Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Resource<wbr>Limit&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3191,7 +3194,7 @@ The following output properties are available:
 <a href="#auto_provisioning_defaults_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>provisioning_<wbr>defaults</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterclusterautoscalingautoprovisioningdefault">Sequence[Get<wbr>Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Auto<wbr>Provisioning<wbr>Default<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusterclusterautoscalingautoprovisioningdefault">Sequence[Get<wbr>Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Auto<wbr>Provisioning<wbr>Default]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3215,7 +3218,7 @@ The following output properties are available:
 <a href="#resource_limits_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterclusterautoscalingresourcelimit">Sequence[Get<wbr>Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Resource<wbr>Limit<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusterclusterautoscalingresourcelimit">Sequence[Get<wbr>Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Resource<wbr>Limit]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3851,7 +3854,7 @@ The following output properties are available:
 <a href="#dailymaintenancewindows_csharp" style="color: inherit; text-decoration: inherit;">Daily<wbr>Maintenance<wbr>Windows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustermaintenancepolicydailymaintenancewindow">List&lt;Get<wbr>Cluster<wbr>Maintenance<wbr>Policy<wbr>Daily<wbr>Maintenance<wbr>Window<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclustermaintenancepolicydailymaintenancewindow">List&lt;Get<wbr>Cluster<wbr>Maintenance<wbr>Policy<wbr>Daily<wbr>Maintenance<wbr>Window&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3859,7 +3862,7 @@ The following output properties are available:
 <a href="#maintenanceexclusions_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustermaintenancepolicymaintenanceexclusion">List&lt;Get<wbr>Cluster<wbr>Maintenance<wbr>Policy<wbr>Maintenance<wbr>Exclusion<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclustermaintenancepolicymaintenanceexclusion">List&lt;Get<wbr>Cluster<wbr>Maintenance<wbr>Policy<wbr>Maintenance<wbr>Exclusion&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3867,7 +3870,7 @@ The following output properties are available:
 <a href="#recurringwindows_csharp" style="color: inherit; text-decoration: inherit;">Recurring<wbr>Windows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustermaintenancepolicyrecurringwindow">List&lt;Get<wbr>Cluster<wbr>Maintenance<wbr>Policy<wbr>Recurring<wbr>Window<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclustermaintenancepolicyrecurringwindow">List&lt;Get<wbr>Cluster<wbr>Maintenance<wbr>Policy<wbr>Recurring<wbr>Window&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3935,7 +3938,7 @@ The following output properties are available:
 <a href="#daily_maintenance_windows_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>maintenance_<wbr>windows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustermaintenancepolicydailymaintenancewindow">Sequence[Get<wbr>Cluster<wbr>Maintenance<wbr>Policy<wbr>Daily<wbr>Maintenance<wbr>Window<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclustermaintenancepolicydailymaintenancewindow">Sequence[Get<wbr>Cluster<wbr>Maintenance<wbr>Policy<wbr>Daily<wbr>Maintenance<wbr>Window]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3943,7 +3946,7 @@ The following output properties are available:
 <a href="#maintenance_exclusions_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustermaintenancepolicymaintenanceexclusion">Sequence[Get<wbr>Cluster<wbr>Maintenance<wbr>Policy<wbr>Maintenance<wbr>Exclusion<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclustermaintenancepolicymaintenanceexclusion">Sequence[Get<wbr>Cluster<wbr>Maintenance<wbr>Policy<wbr>Maintenance<wbr>Exclusion]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3951,7 +3954,7 @@ The following output properties are available:
 <a href="#recurring_windows_python" style="color: inherit; text-decoration: inherit;">recurring_<wbr>windows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustermaintenancepolicyrecurringwindow">Sequence[Get<wbr>Cluster<wbr>Maintenance<wbr>Policy<wbr>Recurring<wbr>Window<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclustermaintenancepolicyrecurringwindow">Sequence[Get<wbr>Cluster<wbr>Maintenance<wbr>Policy<wbr>Recurring<wbr>Window]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4291,7 +4294,7 @@ The following output properties are available:
 <a href="#clientcertificateconfigs_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustermasterauthclientcertificateconfig">List&lt;Get<wbr>Cluster<wbr>Master<wbr>Auth<wbr>Client<wbr>Certificate<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclustermasterauthclientcertificateconfig">List&lt;Get<wbr>Cluster<wbr>Master<wbr>Auth<wbr>Client<wbr>Certificate<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4447,7 +4450,7 @@ The following output properties are available:
 <a href="#client_certificate_configs_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustermasterauthclientcertificateconfig">Sequence[Get<wbr>Cluster<wbr>Master<wbr>Auth<wbr>Client<wbr>Certificate<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclustermasterauthclientcertificateconfig">Sequence[Get<wbr>Cluster<wbr>Master<wbr>Auth<wbr>Client<wbr>Certificate<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4547,7 +4550,7 @@ The following output properties are available:
 <a href="#cidrblocks_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Blocks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustermasterauthorizednetworksconfigcidrblock">List&lt;Get<wbr>Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Cidr<wbr>Block<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclustermasterauthorizednetworksconfigcidrblock">List&lt;Get<wbr>Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Cidr<wbr>Block&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4583,7 +4586,7 @@ The following output properties are available:
 <a href="#cidr_blocks_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>blocks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustermasterauthorizednetworksconfigcidrblock">Sequence[Get<wbr>Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Cidr<wbr>Block<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclustermasterauthorizednetworksconfigcidrblock">Sequence[Get<wbr>Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Cidr<wbr>Block]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4791,7 +4794,7 @@ The following output properties are available:
 <a href="#ephemeralstorageconfigs_csharp" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Storage<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodeconfigephemeralstorageconfig">List&lt;Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Ephemeral<wbr>Storage<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclusternodeconfigephemeralstorageconfig">List&lt;Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Ephemeral<wbr>Storage<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4799,7 +4802,7 @@ The following output properties are available:
 <a href="#guestaccelerators_csharp" style="color: inherit; text-decoration: inherit;">Guest<wbr>Accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodeconfigguestaccelerator">List&lt;Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclusternodeconfigguestaccelerator">List&lt;Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4815,7 +4818,7 @@ The following output properties are available:
 <a href="#kubeletconfigs_csharp" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodeconfigkubeletconfig">List&lt;Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclusternodeconfigkubeletconfig">List&lt;Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4831,7 +4834,7 @@ The following output properties are available:
 <a href="#linuxnodeconfigs_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Node<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodeconfiglinuxnodeconfig">List&lt;Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclusternodeconfiglinuxnodeconfig">List&lt;Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4887,7 +4890,7 @@ The following output properties are available:
 <a href="#sandboxconfigs_csharp" style="color: inherit; text-decoration: inherit;">Sandbox<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodeconfigsandboxconfig">List&lt;Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclusternodeconfigsandboxconfig">List&lt;Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4903,7 +4906,7 @@ The following output properties are available:
 <a href="#shieldedinstanceconfigs_csharp" style="color: inherit; text-decoration: inherit;">Shielded<wbr>Instance<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodeconfigshieldedinstanceconfig">List&lt;Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclusternodeconfigshieldedinstanceconfig">List&lt;Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4919,7 +4922,7 @@ The following output properties are available:
 <a href="#taints_csharp" style="color: inherit; text-decoration: inherit;">Taints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodeconfigtaint">List&lt;Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Taint<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclusternodeconfigtaint">List&lt;Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Taint&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4927,7 +4930,7 @@ The following output properties are available:
 <a href="#workloadmetadataconfigs_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Metadata<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodeconfigworkloadmetadataconfig">List&lt;Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclusternodeconfigworkloadmetadataconfig">List&lt;Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5307,7 +5310,7 @@ The following output properties are available:
 <a href="#ephemeral_storage_configs_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>storage_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodeconfigephemeralstorageconfig">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Ephemeral<wbr>Storage<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusternodeconfigephemeralstorageconfig">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Ephemeral<wbr>Storage<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5315,7 +5318,7 @@ The following output properties are available:
 <a href="#guest_accelerators_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodeconfigguestaccelerator">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusternodeconfigguestaccelerator">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5331,7 +5334,7 @@ The following output properties are available:
 <a href="#kubelet_configs_python" style="color: inherit; text-decoration: inherit;">kubelet_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodeconfigkubeletconfig">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusternodeconfigkubeletconfig">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5347,7 +5350,7 @@ The following output properties are available:
 <a href="#linux_node_configs_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>node_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodeconfiglinuxnodeconfig">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusternodeconfiglinuxnodeconfig">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5403,7 +5406,7 @@ The following output properties are available:
 <a href="#sandbox_configs_python" style="color: inherit; text-decoration: inherit;">sandbox_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodeconfigsandboxconfig">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusternodeconfigsandboxconfig">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5419,7 +5422,7 @@ The following output properties are available:
 <a href="#shielded_instance_configs_python" style="color: inherit; text-decoration: inherit;">shielded_<wbr>instance_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodeconfigshieldedinstanceconfig">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusternodeconfigshieldedinstanceconfig">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5435,7 +5438,7 @@ The following output properties are available:
 <a href="#taints_python" style="color: inherit; text-decoration: inherit;">taints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodeconfigtaint">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Taint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusternodeconfigtaint">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Taint]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5443,7 +5446,7 @@ The following output properties are available:
 <a href="#workload_metadata_configs_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>metadata_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodeconfigworkloadmetadataconfig">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusternodeconfigworkloadmetadataconfig">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6067,7 +6070,7 @@ The following output properties are available:
 <a href="#autoscalings_csharp" style="color: inherit; text-decoration: inherit;">Autoscalings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodepoolautoscaling">List&lt;Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Autoscaling<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclusternodepoolautoscaling">List&lt;Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Autoscaling&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6091,7 +6094,7 @@ The following output properties are available:
 <a href="#managements_csharp" style="color: inherit; text-decoration: inherit;">Managements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodepoolmanagement">List&lt;Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Management<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclusternodepoolmanagement">List&lt;Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Management&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6124,7 +6127,7 @@ The following output properties are available:
 <a href="#nodeconfigs_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodepoolnodeconfig">List&lt;Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclusternodepoolnodeconfig">List&lt;Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6148,7 +6151,7 @@ The following output properties are available:
 <a href="#upgradesettings_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodepoolupgradesetting">List&lt;Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Setting<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclusternodepoolupgradesetting">List&lt;Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Setting&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6370,7 +6373,7 @@ The following output properties are available:
 <a href="#autoscalings_python" style="color: inherit; text-decoration: inherit;">autoscalings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodepoolautoscaling">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Autoscaling<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusternodepoolautoscaling">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Autoscaling]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6394,7 +6397,7 @@ The following output properties are available:
 <a href="#managements_python" style="color: inherit; text-decoration: inherit;">managements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodepoolmanagement">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Management<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusternodepoolmanagement">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Management]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6427,7 +6430,7 @@ The following output properties are available:
 <a href="#node_configs_python" style="color: inherit; text-decoration: inherit;">node_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodepoolnodeconfig">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusternodepoolnodeconfig">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6451,7 +6454,7 @@ The following output properties are available:
 <a href="#upgrade_settings_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodepoolupgradesetting">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Setting<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusternodepoolupgradesetting">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Setting]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6667,7 +6670,7 @@ The following output properties are available:
 <a href="#ephemeralstorageconfigs_csharp" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Storage<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodepoolnodeconfigephemeralstorageconfig">List&lt;Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Ephemeral<wbr>Storage<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclusternodepoolnodeconfigephemeralstorageconfig">List&lt;Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Ephemeral<wbr>Storage<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6675,7 +6678,7 @@ The following output properties are available:
 <a href="#guestaccelerators_csharp" style="color: inherit; text-decoration: inherit;">Guest<wbr>Accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodepoolnodeconfigguestaccelerator">List&lt;Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclusternodepoolnodeconfigguestaccelerator">List&lt;Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6691,7 +6694,7 @@ The following output properties are available:
 <a href="#kubeletconfigs_csharp" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodepoolnodeconfigkubeletconfig">List&lt;Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclusternodepoolnodeconfigkubeletconfig">List&lt;Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6707,7 +6710,7 @@ The following output properties are available:
 <a href="#linuxnodeconfigs_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Node<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodepoolnodeconfiglinuxnodeconfig">List&lt;Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclusternodepoolnodeconfiglinuxnodeconfig">List&lt;Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6763,7 +6766,7 @@ The following output properties are available:
 <a href="#sandboxconfigs_csharp" style="color: inherit; text-decoration: inherit;">Sandbox<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodepoolnodeconfigsandboxconfig">List&lt;Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclusternodepoolnodeconfigsandboxconfig">List&lt;Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6779,7 +6782,7 @@ The following output properties are available:
 <a href="#shieldedinstanceconfigs_csharp" style="color: inherit; text-decoration: inherit;">Shielded<wbr>Instance<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodepoolnodeconfigshieldedinstanceconfig">List&lt;Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclusternodepoolnodeconfigshieldedinstanceconfig">List&lt;Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6795,7 +6798,7 @@ The following output properties are available:
 <a href="#taints_csharp" style="color: inherit; text-decoration: inherit;">Taints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodepoolnodeconfigtaint">List&lt;Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Taint<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclusternodepoolnodeconfigtaint">List&lt;Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Taint&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6803,7 +6806,7 @@ The following output properties are available:
 <a href="#workloadmetadataconfigs_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Metadata<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodepoolnodeconfigworkloadmetadataconfig">List&lt;Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclusternodepoolnodeconfigworkloadmetadataconfig">List&lt;Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7183,7 +7186,7 @@ The following output properties are available:
 <a href="#ephemeral_storage_configs_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>storage_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodepoolnodeconfigephemeralstorageconfig">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Ephemeral<wbr>Storage<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusternodepoolnodeconfigephemeralstorageconfig">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Ephemeral<wbr>Storage<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7191,7 +7194,7 @@ The following output properties are available:
 <a href="#guest_accelerators_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodepoolnodeconfigguestaccelerator">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusternodepoolnodeconfigguestaccelerator">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7207,7 +7210,7 @@ The following output properties are available:
 <a href="#kubelet_configs_python" style="color: inherit; text-decoration: inherit;">kubelet_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodepoolnodeconfigkubeletconfig">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusternodepoolnodeconfigkubeletconfig">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7223,7 +7226,7 @@ The following output properties are available:
 <a href="#linux_node_configs_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>node_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodepoolnodeconfiglinuxnodeconfig">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusternodepoolnodeconfiglinuxnodeconfig">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7279,7 +7282,7 @@ The following output properties are available:
 <a href="#sandbox_configs_python" style="color: inherit; text-decoration: inherit;">sandbox_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodepoolnodeconfigsandboxconfig">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusternodepoolnodeconfigsandboxconfig">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7295,7 +7298,7 @@ The following output properties are available:
 <a href="#shielded_instance_configs_python" style="color: inherit; text-decoration: inherit;">shielded_<wbr>instance_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodepoolnodeconfigshieldedinstanceconfig">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusternodepoolnodeconfigshieldedinstanceconfig">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7311,7 +7314,7 @@ The following output properties are available:
 <a href="#taints_python" style="color: inherit; text-decoration: inherit;">taints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodepoolnodeconfigtaint">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Taint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusternodepoolnodeconfigtaint">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Taint]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7319,7 +7322,7 @@ The following output properties are available:
 <a href="#workload_metadata_configs_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>metadata_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodepoolnodeconfigworkloadmetadataconfig">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusternodepoolnodeconfigworkloadmetadataconfig">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8027,7 +8030,7 @@ The following output properties are available:
 <a href="#pubsubs_csharp" style="color: inherit; text-decoration: inherit;">Pubsubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternotificationconfigpubsub">List&lt;Get<wbr>Cluster<wbr>Notification<wbr>Config<wbr>Pubsub<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclusternotificationconfigpubsub">List&lt;Get<wbr>Cluster<wbr>Notification<wbr>Config<wbr>Pubsub&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8063,7 +8066,7 @@ The following output properties are available:
 <a href="#pubsubs_python" style="color: inherit; text-decoration: inherit;">pubsubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternotificationconfigpubsub">Sequence[Get<wbr>Cluster<wbr>Notification<wbr>Config<wbr>Pubsub<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusternotificationconfigpubsub">Sequence[Get<wbr>Cluster<wbr>Notification<wbr>Config<wbr>Pubsub]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8231,7 +8234,7 @@ The following output properties are available:
 <a href="#masterglobalaccessconfigs_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Global<wbr>Access<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterprivateclusterconfigmasterglobalaccessconfig">List&lt;Get<wbr>Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Master<wbr>Global<wbr>Access<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclusterprivateclusterconfigmasterglobalaccessconfig">List&lt;Get<wbr>Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Master<wbr>Global<wbr>Access<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8411,7 +8414,7 @@ The following output properties are available:
 <a href="#master_global_access_configs_python" style="color: inherit; text-decoration: inherit;">master_<wbr>global_<wbr>access_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterprivateclusterconfigmasterglobalaccessconfig">Sequence[Get<wbr>Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Master<wbr>Global<wbr>Access<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusterprivateclusterconfigmasterglobalaccessconfig">Sequence[Get<wbr>Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Master<wbr>Global<wbr>Access<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8563,7 +8566,7 @@ The following output properties are available:
 <a href="#bigquerydestinations_csharp" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Destinations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterresourceusageexportconfigbigquerydestination">List&lt;Get<wbr>Cluster<wbr>Resource<wbr>Usage<wbr>Export<wbr>Config<wbr>Bigquery<wbr>Destination<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclusterresourceusageexportconfigbigquerydestination">List&lt;Get<wbr>Cluster<wbr>Resource<wbr>Usage<wbr>Export<wbr>Config<wbr>Bigquery<wbr>Destination&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8647,7 +8650,7 @@ The following output properties are available:
 <a href="#bigquery_destinations_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>destinations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterresourceusageexportconfigbigquerydestination">Sequence[Get<wbr>Cluster<wbr>Resource<wbr>Usage<wbr>Export<wbr>Config<wbr>Bigquery<wbr>Destination<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusterresourceusageexportconfigbigquerydestination">Sequence[Get<wbr>Cluster<wbr>Resource<wbr>Usage<wbr>Export<wbr>Config<wbr>Bigquery<wbr>Destination]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">

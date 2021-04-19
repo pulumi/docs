@@ -27,19 +27,33 @@ $ pulumi import azure-native:web:WebAppAuthSettingsV2 myresource1 /subscriptions
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WebAppAuthSettingsV2</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WebAppAuthSettingsV2Args</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WebAppAuthSettingsV2</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WebAppAuthSettingsV2Args</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">WebAppAuthSettingsV2</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">global_validation</span><span class="p">:</span> <span class="nx">Optional[GlobalValidationArgs]</span> = None<span class="p">, </span><span class="nx">http_settings</span><span class="p">:</span> <span class="nx">Optional[HttpSettingsArgs]</span> = None<span class="p">, </span><span class="nx">identity_providers</span><span class="p">:</span> <span class="nx">Optional[IdentityProvidersArgs]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">login</span><span class="p">:</span> <span class="nx">Optional[LoginArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">platform</span><span class="p">:</span> <span class="nx">Optional[AuthPlatformArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">WebAppAuthSettingsV2</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                         <span class="nx">global_validation</span><span class="p">:</span> <span class="nx">Optional[GlobalValidationArgs]</span> = None<span class="p">,</span>
+                         <span class="nx">http_settings</span><span class="p">:</span> <span class="nx">Optional[HttpSettingsArgs]</span> = None<span class="p">,</span>
+                         <span class="nx">identity_providers</span><span class="p">:</span> <span class="nx">Optional[IdentityProvidersArgs]</span> = None<span class="p">,</span>
+                         <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">login</span><span class="p">:</span> <span class="nx">Optional[LoginArgs]</span> = None<span class="p">,</span>
+                         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">platform</span><span class="p">:</span> <span class="nx">Optional[AuthPlatformArgs]</span> = None<span class="p">,</span>
+                         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">WebAppAuthSettingsV2</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WebAppAuthSettingsV2Args</a></span><span class="p">,</span>
+                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWebAppAuthSettingsV2</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WebAppAuthSettingsV2Args</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WebAppAuthSettingsV2</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWebAppAuthSettingsV2</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WebAppAuthSettingsV2Args</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WebAppAuthSettingsV2</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WebAppAuthSettingsV2</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">WebAppAuthSettingsV2Args</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WebAppAuthSettingsV2</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">WebAppAuthSettingsV2Args</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -74,22 +88,32 @@ $ pulumi import azure-native:web:WebAppAuthSettingsV2 myresource1 /subscriptions
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">WebAppAuthSettingsV2Args</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -329,7 +353,7 @@ The WebAppAuthSettingsV2 resource accepts the following [input]({{< relref "/doc
 <a href="#globalvalidation_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalvalidation">Global<wbr>Validation</a></span>
+        <span class="property-type"><a href="#globalvalidation">Global<wbr>Validation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -337,7 +361,7 @@ The WebAppAuthSettingsV2 resource accepts the following [input]({{< relref "/doc
 <a href="#httpsettings_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpsettings">Http<wbr>Settings</a></span>
+        <span class="property-type"><a href="#httpsettings">Http<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -345,7 +369,7 @@ The WebAppAuthSettingsV2 resource accepts the following [input]({{< relref "/doc
 <a href="#identityproviders_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproviders">Identity<wbr>Providers</a></span>
+        <span class="property-type"><a href="#identityproviders">Identity<wbr>Providers<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -361,7 +385,7 @@ The WebAppAuthSettingsV2 resource accepts the following [input]({{< relref "/doc
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#login">Login</a></span>
+        <span class="property-type"><a href="#login">Login<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -369,7 +393,7 @@ The WebAppAuthSettingsV2 resource accepts the following [input]({{< relref "/doc
 <a href="#platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authplatform">Auth<wbr>Platform</a></span>
+        <span class="property-type"><a href="#authplatform">Auth<wbr>Platform<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1220,7 +1244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginscopes">Login<wbr>Scopes</a></span>
+        <span class="property-type"><a href="#loginscopes">Login<wbr>Scopes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1228,7 +1252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_nodejs" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appleregistration">Apple<wbr>Registration</a></span>
+        <span class="property-type"><a href="#appleregistration">Apple<wbr>Registration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1762,7 +1786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginscopesresponse">Login<wbr>Scopes<wbr>Response</a></span>
+        <span class="property-type"><a href="#loginscopesresponse">Login<wbr>Scopes<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1770,7 +1794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_nodejs" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appleregistrationresponse">Apple<wbr>Registration<wbr>Response</a></span>
+        <span class="property-type"><a href="#appleregistrationresponse">Apple<wbr>Registration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2360,7 +2384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectorylogin">Azure<wbr>Active<wbr>Directory<wbr>Login</a></span>
+        <span class="property-type"><a href="#azureactivedirectorylogin">Azure<wbr>Active<wbr>Directory<wbr>Login<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2368,7 +2392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_nodejs" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryregistration">Azure<wbr>Active<wbr>Directory<wbr>Registration</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryregistration">Azure<wbr>Active<wbr>Directory<wbr>Registration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2376,7 +2400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_nodejs" style="color: inherit; text-decoration: inherit;">validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryvalidation">Azure<wbr>Active<wbr>Directory<wbr>Validation</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryvalidation">Azure<wbr>Active<wbr>Directory<wbr>Validation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3418,7 +3442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryloginresponse">Azure<wbr>Active<wbr>Directory<wbr>Login<wbr>Response</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryloginresponse">Azure<wbr>Active<wbr>Directory<wbr>Login<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3426,7 +3450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_nodejs" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryregistrationresponse">Azure<wbr>Active<wbr>Directory<wbr>Registration<wbr>Response</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryregistrationresponse">Azure<wbr>Active<wbr>Directory<wbr>Registration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3434,7 +3458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_nodejs" style="color: inherit; text-decoration: inherit;">validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryvalidationresponse">Azure<wbr>Active<wbr>Directory<wbr>Validation<wbr>Response</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryvalidationresponse">Azure<wbr>Active<wbr>Directory<wbr>Validation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3588,7 +3612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jwtclaimchecks_nodejs" style="color: inherit; text-decoration: inherit;">jwt<wbr>Claim<wbr>Checks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jwtclaimchecks">Jwt<wbr>Claim<wbr>Checks</a></span>
+        <span class="property-type"><a href="#jwtclaimchecks">Jwt<wbr>Claim<wbr>Checks<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3774,7 +3798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jwtclaimchecks_nodejs" style="color: inherit; text-decoration: inherit;">jwt<wbr>Claim<wbr>Checks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jwtclaimchecksresponse">Jwt<wbr>Claim<wbr>Checks<wbr>Response</a></span>
+        <span class="property-type"><a href="#jwtclaimchecksresponse">Jwt<wbr>Claim<wbr>Checks<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3920,7 +3944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_nodejs" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestaticwebappsregistration">Azure<wbr>Static<wbr>Web<wbr>Apps<wbr>Registration</a></span>
+        <span class="property-type"><a href="#azurestaticwebappsregistration">Azure<wbr>Static<wbr>Web<wbr>Apps<wbr>Registration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4366,7 +4390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_nodejs" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestaticwebappsregistrationresponse">Azure<wbr>Static<wbr>Web<wbr>Apps<wbr>Registration<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurestaticwebappsregistrationresponse">Azure<wbr>Static<wbr>Web<wbr>Apps<wbr>Registration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5476,7 +5500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidconnectlogin">Open<wbr>Id<wbr>Connect<wbr>Login</a></span>
+        <span class="property-type"><a href="#openidconnectlogin">Open<wbr>Id<wbr>Connect<wbr>Login<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5484,7 +5508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_nodejs" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidconnectregistration">Open<wbr>Id<wbr>Connect<wbr>Registration</a></span>
+        <span class="property-type"><a href="#openidconnectregistration">Open<wbr>Id<wbr>Connect<wbr>Registration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5694,7 +5718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidconnectloginresponse">Open<wbr>Id<wbr>Connect<wbr>Login<wbr>Response</a></span>
+        <span class="property-type"><a href="#openidconnectloginresponse">Open<wbr>Id<wbr>Connect<wbr>Login<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5702,7 +5726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_nodejs" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidconnectregistrationresponse">Open<wbr>Id<wbr>Connect<wbr>Registration<wbr>Response</a></span>
+        <span class="property-type"><a href="#openidconnectregistrationresponse">Open<wbr>Id<wbr>Connect<wbr>Registration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5888,7 +5912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginscopes">Login<wbr>Scopes</a></span>
+        <span class="property-type"><a href="#loginscopes">Login<wbr>Scopes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5896,7 +5920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_nodejs" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appregistration">App<wbr>Registration</a></span>
+        <span class="property-type"><a href="#appregistration">App<wbr>Registration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6138,7 +6162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginscopesresponse">Login<wbr>Scopes<wbr>Response</a></span>
+        <span class="property-type"><a href="#loginscopesresponse">Login<wbr>Scopes<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6146,7 +6170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_nodejs" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appregistrationresponse">App<wbr>Registration<wbr>Response</a></span>
+        <span class="property-type"><a href="#appregistrationresponse">App<wbr>Registration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6994,7 +7018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginscopes">Login<wbr>Scopes</a></span>
+        <span class="property-type"><a href="#loginscopes">Login<wbr>Scopes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7002,7 +7026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_nodejs" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientregistration">Client<wbr>Registration</a></span>
+        <span class="property-type"><a href="#clientregistration">Client<wbr>Registration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7212,7 +7236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginscopesresponse">Login<wbr>Scopes<wbr>Response</a></span>
+        <span class="property-type"><a href="#loginscopesresponse">Login<wbr>Scopes<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7220,7 +7244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_nodejs" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientregistrationresponse">Client<wbr>Registration<wbr>Response</a></span>
+        <span class="property-type"><a href="#clientregistrationresponse">Client<wbr>Registration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7850,7 +7874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginscopes">Login<wbr>Scopes</a></span>
+        <span class="property-type"><a href="#loginscopes">Login<wbr>Scopes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7858,7 +7882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_nodejs" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientregistration">Client<wbr>Registration</a></span>
+        <span class="property-type"><a href="#clientregistration">Client<wbr>Registration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7866,7 +7890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_nodejs" style="color: inherit; text-decoration: inherit;">validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allowedaudiencesvalidation">Allowed<wbr>Audiences<wbr>Validation</a></span>
+        <span class="property-type"><a href="#allowedaudiencesvalidation">Allowed<wbr>Audiences<wbr>Validation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8100,7 +8124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginscopesresponse">Login<wbr>Scopes<wbr>Response</a></span>
+        <span class="property-type"><a href="#loginscopesresponse">Login<wbr>Scopes<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8108,7 +8132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_nodejs" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientregistrationresponse">Client<wbr>Registration<wbr>Response</a></span>
+        <span class="property-type"><a href="#clientregistrationresponse">Client<wbr>Registration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8116,7 +8140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_nodejs" style="color: inherit; text-decoration: inherit;">validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allowedaudiencesvalidationresponse">Allowed<wbr>Audiences<wbr>Validation<wbr>Response</a></span>
+        <span class="property-type"><a href="#allowedaudiencesvalidationresponse">Allowed<wbr>Audiences<wbr>Validation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8270,7 +8294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#forwardproxy_nodejs" style="color: inherit; text-decoration: inherit;">forward<wbr>Proxy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardproxy">Forward<wbr>Proxy</a></span>
+        <span class="property-type"><a href="#forwardproxy">Forward<wbr>Proxy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8294,7 +8318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routes_nodejs" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpsettingsroutes">Http<wbr>Settings<wbr>Routes</a></span>
+        <span class="property-type"><a href="#httpsettingsroutes">Http<wbr>Settings<wbr>Routes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8488,7 +8512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#forwardproxy_nodejs" style="color: inherit; text-decoration: inherit;">forward<wbr>Proxy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardproxyresponse">Forward<wbr>Proxy<wbr>Response</a></span>
+        <span class="property-type"><a href="#forwardproxyresponse">Forward<wbr>Proxy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8512,7 +8536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routes_nodejs" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpsettingsroutesresponse">Http<wbr>Settings<wbr>Routes<wbr>Response</a></span>
+        <span class="property-type"><a href="#httpsettingsroutesresponse">Http<wbr>Settings<wbr>Routes<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9014,7 +9038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apple_nodejs" style="color: inherit; text-decoration: inherit;">apple</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apple">Apple</a></span>
+        <span class="property-type"><a href="#apple">Apple<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9022,7 +9046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureactivedirectory_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Active<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectory">Azure<wbr>Active<wbr>Directory</a></span>
+        <span class="property-type"><a href="#azureactivedirectory">Azure<wbr>Active<wbr>Directory<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9030,7 +9054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurestaticwebapps_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Static<wbr>Web<wbr>Apps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestaticwebapps">Azure<wbr>Static<wbr>Web<wbr>Apps</a></span>
+        <span class="property-type"><a href="#azurestaticwebapps">Azure<wbr>Static<wbr>Web<wbr>Apps<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9038,7 +9062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customopenidconnectproviders_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Open<wbr>Id<wbr>Connect<wbr>Providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Custom<wbr>Open<wbr>Id<wbr>Connect<wbr>Provider}</span>
+        <span class="property-type">{[key: string]: Custom<wbr>Open<wbr>Id<wbr>Connect<wbr>Provider<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9046,7 +9070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#facebook_nodejs" style="color: inherit; text-decoration: inherit;">facebook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#facebook">Facebook</a></span>
+        <span class="property-type"><a href="#facebook">Facebook<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9054,7 +9078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#github_nodejs" style="color: inherit; text-decoration: inherit;">git<wbr>Hub</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#github">Git<wbr>Hub</a></span>
+        <span class="property-type"><a href="#github">Git<wbr>Hub<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9062,7 +9086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#google_nodejs" style="color: inherit; text-decoration: inherit;">google</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#google">Google</a></span>
+        <span class="property-type"><a href="#google">Google<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9078,7 +9102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#legacymicrosoftaccount_nodejs" style="color: inherit; text-decoration: inherit;">legacy<wbr>Microsoft<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#legacymicrosoftaccount">Legacy<wbr>Microsoft<wbr>Account</a></span>
+        <span class="property-type"><a href="#legacymicrosoftaccount">Legacy<wbr>Microsoft<wbr>Account<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9086,7 +9110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#twitter_nodejs" style="color: inherit; text-decoration: inherit;">twitter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#twitter">Twitter</a></span>
+        <span class="property-type"><a href="#twitter">Twitter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9424,7 +9448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apple_nodejs" style="color: inherit; text-decoration: inherit;">apple</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appleresponse">Apple<wbr>Response</a></span>
+        <span class="property-type"><a href="#appleresponse">Apple<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9432,7 +9456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureactivedirectory_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Active<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryresponse">Azure<wbr>Active<wbr>Directory<wbr>Response</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryresponse">Azure<wbr>Active<wbr>Directory<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9440,7 +9464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurestaticwebapps_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Static<wbr>Web<wbr>Apps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestaticwebappsresponse">Azure<wbr>Static<wbr>Web<wbr>Apps<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurestaticwebappsresponse">Azure<wbr>Static<wbr>Web<wbr>Apps<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9448,7 +9472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customopenidconnectproviders_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Open<wbr>Id<wbr>Connect<wbr>Providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Custom<wbr>Open<wbr>Id<wbr>Connect<wbr>Provider<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Custom<wbr>Open<wbr>Id<wbr>Connect<wbr>Provider<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9456,7 +9480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#facebook_nodejs" style="color: inherit; text-decoration: inherit;">facebook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#facebookresponse">Facebook<wbr>Response</a></span>
+        <span class="property-type"><a href="#facebookresponse">Facebook<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9464,7 +9488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#github_nodejs" style="color: inherit; text-decoration: inherit;">git<wbr>Hub</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#githubresponse">Git<wbr>Hub<wbr>Response</a></span>
+        <span class="property-type"><a href="#githubresponse">Git<wbr>Hub<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9472,7 +9496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#google_nodejs" style="color: inherit; text-decoration: inherit;">google</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleresponse">Google<wbr>Response</a></span>
+        <span class="property-type"><a href="#googleresponse">Google<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9488,7 +9512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#legacymicrosoftaccount_nodejs" style="color: inherit; text-decoration: inherit;">legacy<wbr>Microsoft<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#legacymicrosoftaccountresponse">Legacy<wbr>Microsoft<wbr>Account<wbr>Response</a></span>
+        <span class="property-type"><a href="#legacymicrosoftaccountresponse">Legacy<wbr>Microsoft<wbr>Account<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9496,7 +9520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#twitter_nodejs" style="color: inherit; text-decoration: inherit;">twitter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#twitterresponse">Twitter<wbr>Response</a></span>
+        <span class="property-type"><a href="#twitterresponse">Twitter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10046,7 +10070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginscopes">Login<wbr>Scopes</a></span>
+        <span class="property-type"><a href="#loginscopes">Login<wbr>Scopes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10054,7 +10078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_nodejs" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientregistration">Client<wbr>Registration</a></span>
+        <span class="property-type"><a href="#clientregistration">Client<wbr>Registration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10062,7 +10086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_nodejs" style="color: inherit; text-decoration: inherit;">validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allowedaudiencesvalidation">Allowed<wbr>Audiences<wbr>Validation</a></span>
+        <span class="property-type"><a href="#allowedaudiencesvalidation">Allowed<wbr>Audiences<wbr>Validation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10296,7 +10320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginscopesresponse">Login<wbr>Scopes<wbr>Response</a></span>
+        <span class="property-type"><a href="#loginscopesresponse">Login<wbr>Scopes<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10304,7 +10328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_nodejs" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientregistrationresponse">Client<wbr>Registration<wbr>Response</a></span>
+        <span class="property-type"><a href="#clientregistrationresponse">Client<wbr>Registration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10312,7 +10336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_nodejs" style="color: inherit; text-decoration: inherit;">validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allowedaudiencesvalidationresponse">Allowed<wbr>Audiences<wbr>Validation<wbr>Response</a></span>
+        <span class="property-type"><a href="#allowedaudiencesvalidationresponse">Allowed<wbr>Audiences<wbr>Validation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10522,7 +10546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cookieexpiration_nodejs" style="color: inherit; text-decoration: inherit;">cookie<wbr>Expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cookieexpiration">Cookie<wbr>Expiration</a></span>
+        <span class="property-type"><a href="#cookieexpiration">Cookie<wbr>Expiration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10538,7 +10562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nonce_nodejs" style="color: inherit; text-decoration: inherit;">nonce</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nonce">Nonce</a></span>
+        <span class="property-type"><a href="#nonce">Nonce<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10554,7 +10578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routes_nodejs" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginroutes">Login<wbr>Routes</a></span>
+        <span class="property-type"><a href="#loginroutes">Login<wbr>Routes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10562,7 +10586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tokenstore_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tokenstore">Token<wbr>Store</a></span>
+        <span class="property-type"><a href="#tokenstore">Token<wbr>Store<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10836,7 +10860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cookieexpiration_nodejs" style="color: inherit; text-decoration: inherit;">cookie<wbr>Expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cookieexpirationresponse">Cookie<wbr>Expiration<wbr>Response</a></span>
+        <span class="property-type"><a href="#cookieexpirationresponse">Cookie<wbr>Expiration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10852,7 +10876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nonce_nodejs" style="color: inherit; text-decoration: inherit;">nonce</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nonceresponse">Nonce<wbr>Response</a></span>
+        <span class="property-type"><a href="#nonceresponse">Nonce<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10868,7 +10892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routes_nodejs" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginroutesresponse">Login<wbr>Routes<wbr>Response</a></span>
+        <span class="property-type"><a href="#loginroutesresponse">Login<wbr>Routes<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10876,7 +10900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tokenstore_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tokenstoreresponse">Token<wbr>Store<wbr>Response</a></span>
+        <span class="property-type"><a href="#tokenstoreresponse">Token<wbr>Store<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13054,7 +13078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientcredential_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidconnectclientcredential">Open<wbr>Id<wbr>Connect<wbr>Client<wbr>Credential</a></span>
+        <span class="property-type"><a href="#openidconnectclientcredential">Open<wbr>Id<wbr>Connect<wbr>Client<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13078,7 +13102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#openidconnectconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">open<wbr>Id<wbr>Connect<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidconnectconfig">Open<wbr>Id<wbr>Connect<wbr>Config</a></span>
+        <span class="property-type"><a href="#openidconnectconfig">Open<wbr>Id<wbr>Connect<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13272,7 +13296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientcredential_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidconnectclientcredentialresponse">Open<wbr>Id<wbr>Connect<wbr>Client<wbr>Credential<wbr>Response</a></span>
+        <span class="property-type"><a href="#openidconnectclientcredentialresponse">Open<wbr>Id<wbr>Connect<wbr>Client<wbr>Credential<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13296,7 +13320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#openidconnectconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">open<wbr>Id<wbr>Connect<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidconnectconfigresponse">Open<wbr>Id<wbr>Connect<wbr>Config<wbr>Response</a></span>
+        <span class="property-type"><a href="#openidconnectconfigresponse">Open<wbr>Id<wbr>Connect<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13458,7 +13482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureblobstorage_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Blob<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobstoragetokenstore">Blob<wbr>Storage<wbr>Token<wbr>Store</a></span>
+        <span class="property-type"><a href="#blobstoragetokenstore">Blob<wbr>Storage<wbr>Token<wbr>Store<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13474,7 +13498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filesystem_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filesystemtokenstore">File<wbr>System<wbr>Token<wbr>Store</a></span>
+        <span class="property-type"><a href="#filesystemtokenstore">File<wbr>System<wbr>Token<wbr>Store<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13708,7 +13732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureblobstorage_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Blob<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobstoragetokenstoreresponse">Blob<wbr>Storage<wbr>Token<wbr>Store<wbr>Response</a></span>
+        <span class="property-type"><a href="#blobstoragetokenstoreresponse">Blob<wbr>Storage<wbr>Token<wbr>Store<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13724,7 +13748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filesystem_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filesystemtokenstoreresponse">File<wbr>System<wbr>Token<wbr>Store<wbr>Response</a></span>
+        <span class="property-type"><a href="#filesystemtokenstoreresponse">File<wbr>System<wbr>Token<wbr>Store<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13894,7 +13918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_nodejs" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#twitterregistration">Twitter<wbr>Registration</a></span>
+        <span class="property-type"><a href="#twitterregistration">Twitter<wbr>Registration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14404,7 +14428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_nodejs" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#twitterregistrationresponse">Twitter<wbr>Registration<wbr>Response</a></span>
+        <span class="property-type"><a href="#twitterregistrationresponse">Twitter<wbr>Registration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

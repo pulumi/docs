@@ -26,19 +26,74 @@ Fastly Service can be imported using their service ID, e.g.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Servicev1</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Servicev1Args</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Servicev1</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Servicev1Args</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Servicev1</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acls</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1AclArgs]]</span> = None<span class="p">, </span><span class="nx">activate</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1BackendArgs]]</span> = None<span class="p">, </span><span class="nx">bigqueryloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1BigqueryloggingArgs]]</span> = None<span class="p">, </span><span class="nx">blobstorageloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1BlobstorageloggingArgs]]</span> = None<span class="p">, </span><span class="nx">cache_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1CacheSettingArgs]]</span> = None<span class="p">, </span><span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">conditions</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1ConditionArgs]]</span> = None<span class="p">, </span><span class="nx">default_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">dictionaries</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1DictionaryArgs]]</span> = None<span class="p">, </span><span class="nx">directors</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1DirectorArgs]]</span> = None<span class="p">, </span><span class="nx">domains</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1DomainArgs]]</span> = None<span class="p">, </span><span class="nx">dynamicsnippets</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1DynamicsnippetArgs]]</span> = None<span class="p">, </span><span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gcsloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1GcsloggingArgs]]</span> = None<span class="p">, </span><span class="nx">gzips</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1GzipArgs]]</span> = None<span class="p">, </span><span class="nx">headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1HeaderArgs]]</span> = None<span class="p">, </span><span class="nx">healthchecks</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1HealthcheckArgs]]</span> = None<span class="p">, </span><span class="nx">httpsloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1HttpsloggingArgs]]</span> = None<span class="p">, </span><span class="nx">logentries</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LogentryArgs]]</span> = None<span class="p">, </span><span class="nx">logging_cloudfiles</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingCloudfileArgs]]</span> = None<span class="p">, </span><span class="nx">logging_datadogs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingDatadogArgs]]</span> = None<span class="p">, </span><span class="nx">logging_digitaloceans</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingDigitaloceanArgs]]</span> = None<span class="p">, </span><span class="nx">logging_elasticsearches</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingElasticsearchArgs]]</span> = None<span class="p">, </span><span class="nx">logging_ftps</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingFtpArgs]]</span> = None<span class="p">, </span><span class="nx">logging_googlepubsubs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingGooglepubsubArgs]]</span> = None<span class="p">, </span><span class="nx">logging_heroku</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingHerokuArgs]]</span> = None<span class="p">, </span><span class="nx">logging_honeycombs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingHoneycombArgs]]</span> = None<span class="p">, </span><span class="nx">logging_kafkas</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingKafkaArgs]]</span> = None<span class="p">, </span><span class="nx">logging_kineses</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingKineseArgs]]</span> = None<span class="p">, </span><span class="nx">logging_logglies</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingLogglyArgs]]</span> = None<span class="p">, </span><span class="nx">logging_logshuttles</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingLogshuttleArgs]]</span> = None<span class="p">, </span><span class="nx">logging_newrelics</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingNewrelicArgs]]</span> = None<span class="p">, </span><span class="nx">logging_openstacks</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingOpenstackArgs]]</span> = None<span class="p">, </span><span class="nx">logging_scalyrs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingScalyrArgs]]</span> = None<span class="p">, </span><span class="nx">logging_sftps</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingSftpArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">papertrails</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1PapertrailArgs]]</span> = None<span class="p">, </span><span class="nx">request_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1RequestSettingArgs]]</span> = None<span class="p">, </span><span class="nx">response_objects</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1ResponseObjectArgs]]</span> = None<span class="p">, </span><span class="nx">s3loggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1S3loggingArgs]]</span> = None<span class="p">, </span><span class="nx">snippets</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SnippetArgs]]</span> = None<span class="p">, </span><span class="nx">splunks</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SplunkArgs]]</span> = None<span class="p">, </span><span class="nx">sumologics</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SumologicArgs]]</span> = None<span class="p">, </span><span class="nx">syslogs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SyslogArgs]]</span> = None<span class="p">, </span><span class="nx">vcls</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1VclArgs]]</span> = None<span class="p">, </span><span class="nx">version_comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">waf</span><span class="p">:</span> <span class="nx">Optional[Servicev1WafArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Servicev1</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+              <span class="nx">acls</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1AclArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">activate</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+              <span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1BackendArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">bigqueryloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1BigqueryloggingArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">blobstorageloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1BlobstorageloggingArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">cache_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1CacheSettingArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">conditions</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1ConditionArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">default_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">default_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+              <span class="nx">dictionaries</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1DictionaryArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">directors</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1DirectorArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">domains</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1DomainArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">dynamicsnippets</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1DynamicsnippetArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+              <span class="nx">gcsloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1GcsloggingArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">gzips</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1GzipArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1HeaderArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">healthchecks</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1HealthcheckArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">httpsloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1HttpsloggingArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">logentries</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LogentryArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">logging_cloudfiles</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingCloudfileArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">logging_datadogs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingDatadogArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">logging_digitaloceans</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingDigitaloceanArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">logging_elasticsearches</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingElasticsearchArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">logging_ftps</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingFtpArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">logging_googlepubsubs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingGooglepubsubArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">logging_heroku</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingHerokuArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">logging_honeycombs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingHoneycombArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">logging_kafkas</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingKafkaArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">logging_kineses</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingKineseArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">logging_logglies</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingLogglyArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">logging_logshuttles</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingLogshuttleArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">logging_newrelics</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingNewrelicArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">logging_openstacks</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingOpenstackArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">logging_scalyrs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingScalyrArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">logging_sftps</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingSftpArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">papertrails</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1PapertrailArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">request_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1RequestSettingArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">response_objects</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1ResponseObjectArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">s3loggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1S3loggingArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">snippets</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SnippetArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">splunks</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SplunkArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">sumologics</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SumologicArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">syslogs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SyslogArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">vcls</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1VclArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">version_comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">waf</span><span class="p">:</span> <span class="nx">Optional[Servicev1WafArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Servicev1</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Servicev1Args</a></span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewServicev1</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">Servicev1Args</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Servicev1</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewServicev1</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">Servicev1Args</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Servicev1</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Servicev1</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">Servicev1Args</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Servicev1</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">Servicev1Args</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -73,22 +128,32 @@ Fastly Service can be imported using their service ID, e.g.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">Servicev1Args</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -97,7 +162,7 @@ Fastly Service can be imported using their service ID, e.g.
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -121,7 +186,7 @@ Fastly Service can be imported using their service ID, e.g.
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1152,7 +1217,7 @@ Defined below.
 <a href="#domains_nodejs" style="color: inherit; text-decoration: inherit;">domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1domain">Servicev1Domain[]</a></span>
+        <span class="property-type"><a href="#servicev1domain">Servicev1Domain<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
 {{% /md %}}</dd><dt class="property-optional"
@@ -1161,7 +1226,7 @@ Defined below.
 <a href="#acls_nodejs" style="color: inherit; text-decoration: inherit;">acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1acl">Servicev1Acl[]</a></span>
+        <span class="property-type"><a href="#servicev1acl">Servicev1Acl<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A set of ACL configuration blocks.
 Defined below.
@@ -1180,7 +1245,7 @@ Defined below.
 <a href="#backends_nodejs" style="color: inherit; text-decoration: inherit;">backends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1backend">Servicev1Backend[]</a></span>
+        <span class="property-type"><a href="#servicev1backend">Servicev1Backend<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A set of Backends to service requests from your Domains.
 Defined below. Backends must be defined in this argument, or defined in the
@@ -1191,7 +1256,7 @@ Defined below. Backends must be defined in this argument, or defined in the
 <a href="#bigqueryloggings_nodejs" style="color: inherit; text-decoration: inherit;">bigqueryloggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1bigquerylogging">Servicev1Bigquerylogging[]</a></span>
+        <span class="property-type"><a href="#servicev1bigquerylogging">Servicev1Bigquerylogging<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A BigQuery endpoint to send streaming logs too.
 Defined below.
@@ -1201,7 +1266,7 @@ Defined below.
 <a href="#blobstorageloggings_nodejs" style="color: inherit; text-decoration: inherit;">blobstorageloggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1blobstoragelogging">Servicev1Blobstoragelogging[]</a></span>
+        <span class="property-type"><a href="#servicev1blobstoragelogging">Servicev1Blobstoragelogging<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}An Azure Blob Storage endpoint to send streaming logs too.
 Defined below.
@@ -1211,7 +1276,7 @@ Defined below.
 <a href="#cachesettings_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1cachesetting">Servicev1Cache<wbr>Setting[]</a></span>
+        <span class="property-type"><a href="#servicev1cachesetting">Servicev1Cache<wbr>Setting<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A set of Cache Settings, allowing you to override.
 Defined below.
@@ -1230,7 +1295,7 @@ Defined below.
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1condition">Servicev1Condition[]</a></span>
+        <span class="property-type"><a href="#servicev1condition">Servicev1Condition<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A set of conditions to add logic to any basic
 configuration object in this service. Defined below.
@@ -1259,7 +1324,7 @@ requests.
 <a href="#dictionaries_nodejs" style="color: inherit; text-decoration: inherit;">dictionaries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1dictionary">Servicev1Dictionary[]</a></span>
+        <span class="property-type"><a href="#servicev1dictionary">Servicev1Dictionary<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A set of dictionaries that allow the storing of key values pair for use within VCL functions.
 Defined below.
@@ -1269,7 +1334,7 @@ Defined below.
 <a href="#directors_nodejs" style="color: inherit; text-decoration: inherit;">directors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1director">Servicev1Director[]</a></span>
+        <span class="property-type"><a href="#servicev1director">Servicev1Director<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A director to allow more control over balancing traffic over backends.
 when an item is not to be cached based on an above `condition`.
@@ -1280,7 +1345,7 @@ Defined below
 <a href="#dynamicsnippets_nodejs" style="color: inherit; text-decoration: inherit;">dynamicsnippets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1dynamicsnippet">Servicev1Dynamicsnippet[]</a></span>
+        <span class="property-type"><a href="#servicev1dynamicsnippet">Servicev1Dynamicsnippet<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A set of custom, "dynamic" VCL Snippet configuration blocks.
 Defined below.
@@ -1300,7 +1365,7 @@ order to destroy the Service, set `force_destroy` to `true`. Default `false`.
 <a href="#gcsloggings_nodejs" style="color: inherit; text-decoration: inherit;">gcsloggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1gcslogging">Servicev1Gcslogging[]</a></span>
+        <span class="property-type"><a href="#servicev1gcslogging">Servicev1Gcslogging<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A gcs endpoint to send streaming logs too.
 Defined below.
@@ -1310,7 +1375,7 @@ Defined below.
 <a href="#gzips_nodejs" style="color: inherit; text-decoration: inherit;">gzips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1gzip">Servicev1Gzip[]</a></span>
+        <span class="property-type"><a href="#servicev1gzip">Servicev1Gzip<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A set of gzip rules to control automatic gzipping of
 content. Defined below.
@@ -1320,7 +1385,7 @@ content. Defined below.
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1header">Servicev1Header[]</a></span>
+        <span class="property-type"><a href="#servicev1header">Servicev1Header<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A set of Headers to manipulate for each request.
 Defined below.
@@ -1330,7 +1395,7 @@ Defined below.
 <a href="#healthchecks_nodejs" style="color: inherit; text-decoration: inherit;">healthchecks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1healthcheck">Servicev1Healthcheck[]</a></span>
+        <span class="property-type"><a href="#servicev1healthcheck">Servicev1Healthcheck<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Name of a defined `healthcheck` to assign to this backend.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1339,7 +1404,7 @@ Defined below.
 <a href="#httpsloggings_nodejs" style="color: inherit; text-decoration: inherit;">httpsloggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1httpslogging">Servicev1Httpslogging[]</a></span>
+        <span class="property-type"><a href="#servicev1httpslogging">Servicev1Httpslogging<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}An HTTPS endpoint to send streaming logs to.
 Defined below.
@@ -1349,7 +1414,7 @@ Defined below.
 <a href="#logentries_nodejs" style="color: inherit; text-decoration: inherit;">logentries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1logentry">Servicev1Logentry[]</a></span>
+        <span class="property-type"><a href="#servicev1logentry">Servicev1Logentry<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A logentries endpoint to send streaming logs too.
 Defined below.
@@ -1359,7 +1424,7 @@ Defined below.
 <a href="#loggingcloudfiles_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Cloudfiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingcloudfile">Servicev1Logging<wbr>Cloudfile[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingcloudfile">Servicev1Logging<wbr>Cloudfile<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A Rackspace Cloud Files endpoint to send streaming logs to.
 Defined below.
@@ -1369,7 +1434,7 @@ Defined below.
 <a href="#loggingdatadogs_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Datadogs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingdatadog">Servicev1Logging<wbr>Datadog[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingdatadog">Servicev1Logging<wbr>Datadog<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A Datadog endpoint to send streaming logs to.
 Defined below.
@@ -1379,7 +1444,7 @@ Defined below.
 <a href="#loggingdigitaloceans_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Digitaloceans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingdigitalocean">Servicev1Logging<wbr>Digitalocean[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingdigitalocean">Servicev1Logging<wbr>Digitalocean<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A DigitalOcean Spaces endpoint to send streaming logs to.
 Defined below.
@@ -1389,7 +1454,7 @@ Defined below.
 <a href="#loggingelasticsearches_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Elasticsearches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingelasticsearch">Servicev1Logging<wbr>Elasticsearch[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingelasticsearch">Servicev1Logging<wbr>Elasticsearch<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}An Elasticsearch endpoint to send streaming logs to.
 Defined below.
@@ -1399,7 +1464,7 @@ Defined below.
 <a href="#loggingftps_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Ftps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingftp">Servicev1Logging<wbr>Ftp[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingftp">Servicev1Logging<wbr>Ftp<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}An FTP endpoint to send streaming logs to.
 Defined below.
@@ -1409,7 +1474,7 @@ Defined below.
 <a href="#logginggooglepubsubs_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Googlepubsubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1logginggooglepubsub">Servicev1Logging<wbr>Googlepubsub[]</a></span>
+        <span class="property-type"><a href="#servicev1logginggooglepubsub">Servicev1Logging<wbr>Googlepubsub<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Pub/Sub endpoint to send streaming logs to.
 Defined below.
@@ -1419,7 +1484,7 @@ Defined below.
 <a href="#loggingheroku_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Heroku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingheroku">Servicev1Logging<wbr>Heroku[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingheroku">Servicev1Logging<wbr>Heroku<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A Heroku endpoint to send streaming logs to.
 Defined below.
@@ -1429,7 +1494,7 @@ Defined below.
 <a href="#logginghoneycombs_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Honeycombs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1logginghoneycomb">Servicev1Logging<wbr>Honeycomb[]</a></span>
+        <span class="property-type"><a href="#servicev1logginghoneycomb">Servicev1Logging<wbr>Honeycomb<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A Honeycomb endpoint to send streaming logs to.
 Defined below.
@@ -1439,7 +1504,7 @@ Defined below.
 <a href="#loggingkafkas_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Kafkas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingkafka">Servicev1Logging<wbr>Kafka[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingkafka">Servicev1Logging<wbr>Kafka<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A Kafka endpoint to send streaming logs to.
 Defined below.
@@ -1449,7 +1514,7 @@ Defined below.
 <a href="#loggingkineses_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Kineses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingkinese">Servicev1Logging<wbr>Kinese[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingkinese">Servicev1Logging<wbr>Kinese<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A Kinesis endpoint to send streaming logs to.
 Defined below.
@@ -1459,7 +1524,7 @@ Defined below.
 <a href="#logginglogglies_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Logglies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingloggly">Servicev1Logging<wbr>Loggly[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingloggly">Servicev1Logging<wbr>Loggly<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A Loggly endpoint to send streaming logs to.
 Defined below.
@@ -1469,7 +1534,7 @@ Defined below.
 <a href="#logginglogshuttles_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Logshuttles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1logginglogshuttle">Servicev1Logging<wbr>Logshuttle[]</a></span>
+        <span class="property-type"><a href="#servicev1logginglogshuttle">Servicev1Logging<wbr>Logshuttle<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A Log Shuttle endpoint to send streaming logs to.
 Defined below.
@@ -1479,7 +1544,7 @@ Defined below.
 <a href="#loggingnewrelics_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Newrelics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingnewrelic">Servicev1Logging<wbr>Newrelic[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingnewrelic">Servicev1Logging<wbr>Newrelic<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A New Relic endpoint to send streaming logs to.
 Defined below.
@@ -1489,7 +1554,7 @@ Defined below.
 <a href="#loggingopenstacks_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Openstacks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingopenstack">Servicev1Logging<wbr>Openstack[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingopenstack">Servicev1Logging<wbr>Openstack<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}An OpenStack endpoint to send streaming logs to.
 Defined below.
@@ -1499,7 +1564,7 @@ Defined below.
 <a href="#loggingscalyrs_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Scalyrs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingscalyr">Servicev1Logging<wbr>Scalyr[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingscalyr">Servicev1Logging<wbr>Scalyr<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A Scalyr endpoint to send streaming logs to.
 Defined below.
@@ -1509,7 +1574,7 @@ Defined below.
 <a href="#loggingsftps_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Sftps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingsftp">Servicev1Logging<wbr>Sftp[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingsftp">Servicev1Logging<wbr>Sftp<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}An SFTP endpoint to send streaming logs to.
 Defined below.
@@ -1528,7 +1593,7 @@ Defined below.
 <a href="#papertrails_nodejs" style="color: inherit; text-decoration: inherit;">papertrails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1papertrail">Servicev1Papertrail[]</a></span>
+        <span class="property-type"><a href="#servicev1papertrail">Servicev1Papertrail<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A Papertrail endpoint to send streaming logs too.
 Defined below.
@@ -1538,7 +1603,7 @@ Defined below.
 <a href="#requestsettings_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1requestsetting">Servicev1Request<wbr>Setting[]</a></span>
+        <span class="property-type"><a href="#servicev1requestsetting">Servicev1Request<wbr>Setting<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A set of Request modifiers.
 Defined below
@@ -1548,7 +1613,7 @@ Defined below
 <a href="#responseobjects_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Objects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1responseobject">Servicev1Response<wbr>Object[]</a></span>
+        <span class="property-type"><a href="#servicev1responseobject">Servicev1Response<wbr>Object<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The name of the response object used by the Web Application Firewall.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1557,7 +1622,7 @@ Defined below
 <a href="#s3loggings_nodejs" style="color: inherit; text-decoration: inherit;">s3loggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1s3logging">Servicev1S3logging[]</a></span>
+        <span class="property-type"><a href="#servicev1s3logging">Servicev1S3logging<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A set of S3 Buckets to send streaming logs too.
 Defined below.
@@ -1567,7 +1632,7 @@ Defined below.
 <a href="#snippets_nodejs" style="color: inherit; text-decoration: inherit;">snippets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1snippet">Servicev1Snippet[]</a></span>
+        <span class="property-type"><a href="#servicev1snippet">Servicev1Snippet<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A set of custom, "regular" (non-dynamic) VCL Snippet configuration blocks.
 Defined below.
@@ -1577,7 +1642,7 @@ Defined below.
 <a href="#splunks_nodejs" style="color: inherit; text-decoration: inherit;">splunks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1splunk">Servicev1Splunk[]</a></span>
+        <span class="property-type"><a href="#servicev1splunk">Servicev1Splunk<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A Splunk endpoint to send streaming logs too.
 Defined below.
@@ -1587,7 +1652,7 @@ Defined below.
 <a href="#sumologics_nodejs" style="color: inherit; text-decoration: inherit;">sumologics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1sumologic">Servicev1Sumologic[]</a></span>
+        <span class="property-type"><a href="#servicev1sumologic">Servicev1Sumologic<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A Sumologic endpoint to send streaming logs too.
 Defined below.
@@ -1597,7 +1662,7 @@ Defined below.
 <a href="#syslogs_nodejs" style="color: inherit; text-decoration: inherit;">syslogs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1syslog">Servicev1Syslog[]</a></span>
+        <span class="property-type"><a href="#servicev1syslog">Servicev1Syslog<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A syslog endpoint to send streaming logs too.
 Defined below.
@@ -1607,7 +1672,7 @@ Defined below.
 <a href="#vcls_nodejs" style="color: inherit; text-decoration: inherit;">vcls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1vcl">Servicev1Vcl[]</a></span>
+        <span class="property-type"><a href="#servicev1vcl">Servicev1Vcl<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A set of custom VCL configuration blocks.
 Defined below. See the [Fastly documentation](https://docs.fastly.com/vcl/custom-vcl/uploading-custom-vcl/) for more information on using custom VCL.
@@ -1626,7 +1691,7 @@ Defined below. See the [Fastly documentation](https://docs.fastly.com/vcl/custom
 <a href="#waf_nodejs" style="color: inherit; text-decoration: inherit;">waf</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1waf">Servicev1Waf</a></span>
+        <span class="property-type"><a href="#servicev1waf">Servicev1Waf<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A WAF configuration block.
 Defined below.
@@ -2256,20 +2321,73 @@ Get an existing Servicev1 resource's state with the given name, ID, and optional
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">Servicev1State</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Servicev1</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">Servicev1State</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Servicev1</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acls</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1AclArgs]]</span> = None<span class="p">, </span><span class="nx">activate</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">active_version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1BackendArgs]]</span> = None<span class="p">, </span><span class="nx">bigqueryloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1BigqueryloggingArgs]]</span> = None<span class="p">, </span><span class="nx">blobstorageloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1BlobstorageloggingArgs]]</span> = None<span class="p">, </span><span class="nx">cache_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1CacheSettingArgs]]</span> = None<span class="p">, </span><span class="nx">cloned_version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">conditions</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1ConditionArgs]]</span> = None<span class="p">, </span><span class="nx">default_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">dictionaries</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1DictionaryArgs]]</span> = None<span class="p">, </span><span class="nx">directors</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1DirectorArgs]]</span> = None<span class="p">, </span><span class="nx">domains</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1DomainArgs]]</span> = None<span class="p">, </span><span class="nx">dynamicsnippets</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1DynamicsnippetArgs]]</span> = None<span class="p">, </span><span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gcsloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1GcsloggingArgs]]</span> = None<span class="p">, </span><span class="nx">gzips</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1GzipArgs]]</span> = None<span class="p">, </span><span class="nx">headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1HeaderArgs]]</span> = None<span class="p">, </span><span class="nx">healthchecks</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1HealthcheckArgs]]</span> = None<span class="p">, </span><span class="nx">httpsloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1HttpsloggingArgs]]</span> = None<span class="p">, </span><span class="nx">logentries</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LogentryArgs]]</span> = None<span class="p">, </span><span class="nx">logging_cloudfiles</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingCloudfileArgs]]</span> = None<span class="p">, </span><span class="nx">logging_datadogs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingDatadogArgs]]</span> = None<span class="p">, </span><span class="nx">logging_digitaloceans</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingDigitaloceanArgs]]</span> = None<span class="p">, </span><span class="nx">logging_elasticsearches</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingElasticsearchArgs]]</span> = None<span class="p">, </span><span class="nx">logging_ftps</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingFtpArgs]]</span> = None<span class="p">, </span><span class="nx">logging_googlepubsubs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingGooglepubsubArgs]]</span> = None<span class="p">, </span><span class="nx">logging_heroku</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingHerokuArgs]]</span> = None<span class="p">, </span><span class="nx">logging_honeycombs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingHoneycombArgs]]</span> = None<span class="p">, </span><span class="nx">logging_kafkas</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingKafkaArgs]]</span> = None<span class="p">, </span><span class="nx">logging_kineses</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingKineseArgs]]</span> = None<span class="p">, </span><span class="nx">logging_logglies</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingLogglyArgs]]</span> = None<span class="p">, </span><span class="nx">logging_logshuttles</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingLogshuttleArgs]]</span> = None<span class="p">, </span><span class="nx">logging_newrelics</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingNewrelicArgs]]</span> = None<span class="p">, </span><span class="nx">logging_openstacks</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingOpenstackArgs]]</span> = None<span class="p">, </span><span class="nx">logging_scalyrs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingScalyrArgs]]</span> = None<span class="p">, </span><span class="nx">logging_sftps</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingSftpArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">papertrails</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1PapertrailArgs]]</span> = None<span class="p">, </span><span class="nx">request_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1RequestSettingArgs]]</span> = None<span class="p">, </span><span class="nx">response_objects</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1ResponseObjectArgs]]</span> = None<span class="p">, </span><span class="nx">s3loggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1S3loggingArgs]]</span> = None<span class="p">, </span><span class="nx">snippets</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SnippetArgs]]</span> = None<span class="p">, </span><span class="nx">splunks</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SplunkArgs]]</span> = None<span class="p">, </span><span class="nx">sumologics</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SumologicArgs]]</span> = None<span class="p">, </span><span class="nx">syslogs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SyslogArgs]]</span> = None<span class="p">, </span><span class="nx">vcls</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1VclArgs]]</span> = None<span class="p">, </span><span class="nx">version_comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">waf</span><span class="p">:</span> <span class="nx">Optional[Servicev1WafArgs]</span> = None<span class="p">) -&gt;</span> Servicev1</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">acls</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1AclArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">activate</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">active_version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1BackendArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">bigqueryloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1BigqueryloggingArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">blobstorageloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1BlobstorageloggingArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">cache_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1CacheSettingArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">cloned_version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">conditions</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1ConditionArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">default_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">default_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">dictionaries</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1DictionaryArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">directors</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1DirectorArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">domains</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1DomainArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">dynamicsnippets</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1DynamicsnippetArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">gcsloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1GcsloggingArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">gzips</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1GzipArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1HeaderArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">healthchecks</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1HealthcheckArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">httpsloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1HttpsloggingArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">logentries</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LogentryArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_cloudfiles</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingCloudfileArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_datadogs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingDatadogArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_digitaloceans</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingDigitaloceanArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_elasticsearches</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingElasticsearchArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_ftps</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingFtpArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_googlepubsubs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingGooglepubsubArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_heroku</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingHerokuArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_honeycombs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingHoneycombArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_kafkas</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingKafkaArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_kineses</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingKineseArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_logglies</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingLogglyArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_logshuttles</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingLogshuttleArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_newrelics</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingNewrelicArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_openstacks</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingOpenstackArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_scalyrs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingScalyrArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_sftps</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingSftpArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">papertrails</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1PapertrailArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">request_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1RequestSettingArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">response_objects</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1ResponseObjectArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">s3loggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1S3loggingArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">snippets</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SnippetArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">splunks</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SplunkArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">sumologics</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SumologicArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">syslogs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SyslogArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">vcls</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1VclArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">version_comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">waf</span><span class="p">:</span> <span class="nx">Optional[Servicev1WafArgs]</span> = None<span class="p">) -&gt;</span> Servicev1</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetServicev1<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">Servicev1State</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Servicev1</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetServicev1<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">Servicev1State</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Servicev1</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Servicev1</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">Servicev1State</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Servicev1</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">Servicev1State</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3390,7 +3508,7 @@ Defined below.
 <a href="#state_acls_nodejs" style="color: inherit; text-decoration: inherit;">acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1acl">Servicev1Acl[]</a></span>
+        <span class="property-type"><a href="#servicev1acl">Servicev1Acl<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A set of ACL configuration blocks.
 Defined below.
@@ -3418,7 +3536,7 @@ Defined below.
 <a href="#state_backends_nodejs" style="color: inherit; text-decoration: inherit;">backends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1backend">Servicev1Backend[]</a></span>
+        <span class="property-type"><a href="#servicev1backend">Servicev1Backend<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A set of Backends to service requests from your Domains.
 Defined below. Backends must be defined in this argument, or defined in the
@@ -3429,7 +3547,7 @@ Defined below. Backends must be defined in this argument, or defined in the
 <a href="#state_bigqueryloggings_nodejs" style="color: inherit; text-decoration: inherit;">bigqueryloggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1bigquerylogging">Servicev1Bigquerylogging[]</a></span>
+        <span class="property-type"><a href="#servicev1bigquerylogging">Servicev1Bigquerylogging<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A BigQuery endpoint to send streaming logs too.
 Defined below.
@@ -3439,7 +3557,7 @@ Defined below.
 <a href="#state_blobstorageloggings_nodejs" style="color: inherit; text-decoration: inherit;">blobstorageloggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1blobstoragelogging">Servicev1Blobstoragelogging[]</a></span>
+        <span class="property-type"><a href="#servicev1blobstoragelogging">Servicev1Blobstoragelogging<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}An Azure Blob Storage endpoint to send streaming logs too.
 Defined below.
@@ -3449,7 +3567,7 @@ Defined below.
 <a href="#state_cachesettings_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1cachesetting">Servicev1Cache<wbr>Setting[]</a></span>
+        <span class="property-type"><a href="#servicev1cachesetting">Servicev1Cache<wbr>Setting<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A set of Cache Settings, allowing you to override.
 Defined below.
@@ -3477,7 +3595,7 @@ Defined below.
 <a href="#state_conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1condition">Servicev1Condition[]</a></span>
+        <span class="property-type"><a href="#servicev1condition">Servicev1Condition<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A set of conditions to add logic to any basic
 configuration object in this service. Defined below.
@@ -3506,7 +3624,7 @@ requests.
 <a href="#state_dictionaries_nodejs" style="color: inherit; text-decoration: inherit;">dictionaries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1dictionary">Servicev1Dictionary[]</a></span>
+        <span class="property-type"><a href="#servicev1dictionary">Servicev1Dictionary<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A set of dictionaries that allow the storing of key values pair for use within VCL functions.
 Defined below.
@@ -3516,7 +3634,7 @@ Defined below.
 <a href="#state_directors_nodejs" style="color: inherit; text-decoration: inherit;">directors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1director">Servicev1Director[]</a></span>
+        <span class="property-type"><a href="#servicev1director">Servicev1Director<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A director to allow more control over balancing traffic over backends.
 when an item is not to be cached based on an above `condition`.
@@ -3527,7 +3645,7 @@ Defined below
 <a href="#state_domains_nodejs" style="color: inherit; text-decoration: inherit;">domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1domain">Servicev1Domain[]</a></span>
+        <span class="property-type"><a href="#servicev1domain">Servicev1Domain<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
 {{% /md %}}</dd><dt class="property-optional"
@@ -3536,7 +3654,7 @@ Defined below
 <a href="#state_dynamicsnippets_nodejs" style="color: inherit; text-decoration: inherit;">dynamicsnippets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1dynamicsnippet">Servicev1Dynamicsnippet[]</a></span>
+        <span class="property-type"><a href="#servicev1dynamicsnippet">Servicev1Dynamicsnippet<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A set of custom, "dynamic" VCL Snippet configuration blocks.
 Defined below.
@@ -3556,7 +3674,7 @@ order to destroy the Service, set `force_destroy` to `true`. Default `false`.
 <a href="#state_gcsloggings_nodejs" style="color: inherit; text-decoration: inherit;">gcsloggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1gcslogging">Servicev1Gcslogging[]</a></span>
+        <span class="property-type"><a href="#servicev1gcslogging">Servicev1Gcslogging<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A gcs endpoint to send streaming logs too.
 Defined below.
@@ -3566,7 +3684,7 @@ Defined below.
 <a href="#state_gzips_nodejs" style="color: inherit; text-decoration: inherit;">gzips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1gzip">Servicev1Gzip[]</a></span>
+        <span class="property-type"><a href="#servicev1gzip">Servicev1Gzip<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A set of gzip rules to control automatic gzipping of
 content. Defined below.
@@ -3576,7 +3694,7 @@ content. Defined below.
 <a href="#state_headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1header">Servicev1Header[]</a></span>
+        <span class="property-type"><a href="#servicev1header">Servicev1Header<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A set of Headers to manipulate for each request.
 Defined below.
@@ -3586,7 +3704,7 @@ Defined below.
 <a href="#state_healthchecks_nodejs" style="color: inherit; text-decoration: inherit;">healthchecks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1healthcheck">Servicev1Healthcheck[]</a></span>
+        <span class="property-type"><a href="#servicev1healthcheck">Servicev1Healthcheck<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Name of a defined `healthcheck` to assign to this backend.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3595,7 +3713,7 @@ Defined below.
 <a href="#state_httpsloggings_nodejs" style="color: inherit; text-decoration: inherit;">httpsloggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1httpslogging">Servicev1Httpslogging[]</a></span>
+        <span class="property-type"><a href="#servicev1httpslogging">Servicev1Httpslogging<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}An HTTPS endpoint to send streaming logs to.
 Defined below.
@@ -3605,7 +3723,7 @@ Defined below.
 <a href="#state_logentries_nodejs" style="color: inherit; text-decoration: inherit;">logentries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1logentry">Servicev1Logentry[]</a></span>
+        <span class="property-type"><a href="#servicev1logentry">Servicev1Logentry<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A logentries endpoint to send streaming logs too.
 Defined below.
@@ -3615,7 +3733,7 @@ Defined below.
 <a href="#state_loggingcloudfiles_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Cloudfiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingcloudfile">Servicev1Logging<wbr>Cloudfile[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingcloudfile">Servicev1Logging<wbr>Cloudfile<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A Rackspace Cloud Files endpoint to send streaming logs to.
 Defined below.
@@ -3625,7 +3743,7 @@ Defined below.
 <a href="#state_loggingdatadogs_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Datadogs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingdatadog">Servicev1Logging<wbr>Datadog[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingdatadog">Servicev1Logging<wbr>Datadog<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A Datadog endpoint to send streaming logs to.
 Defined below.
@@ -3635,7 +3753,7 @@ Defined below.
 <a href="#state_loggingdigitaloceans_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Digitaloceans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingdigitalocean">Servicev1Logging<wbr>Digitalocean[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingdigitalocean">Servicev1Logging<wbr>Digitalocean<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A DigitalOcean Spaces endpoint to send streaming logs to.
 Defined below.
@@ -3645,7 +3763,7 @@ Defined below.
 <a href="#state_loggingelasticsearches_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Elasticsearches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingelasticsearch">Servicev1Logging<wbr>Elasticsearch[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingelasticsearch">Servicev1Logging<wbr>Elasticsearch<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}An Elasticsearch endpoint to send streaming logs to.
 Defined below.
@@ -3655,7 +3773,7 @@ Defined below.
 <a href="#state_loggingftps_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Ftps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingftp">Servicev1Logging<wbr>Ftp[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingftp">Servicev1Logging<wbr>Ftp<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}An FTP endpoint to send streaming logs to.
 Defined below.
@@ -3665,7 +3783,7 @@ Defined below.
 <a href="#state_logginggooglepubsubs_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Googlepubsubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1logginggooglepubsub">Servicev1Logging<wbr>Googlepubsub[]</a></span>
+        <span class="property-type"><a href="#servicev1logginggooglepubsub">Servicev1Logging<wbr>Googlepubsub<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Pub/Sub endpoint to send streaming logs to.
 Defined below.
@@ -3675,7 +3793,7 @@ Defined below.
 <a href="#state_loggingheroku_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Heroku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingheroku">Servicev1Logging<wbr>Heroku[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingheroku">Servicev1Logging<wbr>Heroku<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A Heroku endpoint to send streaming logs to.
 Defined below.
@@ -3685,7 +3803,7 @@ Defined below.
 <a href="#state_logginghoneycombs_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Honeycombs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1logginghoneycomb">Servicev1Logging<wbr>Honeycomb[]</a></span>
+        <span class="property-type"><a href="#servicev1logginghoneycomb">Servicev1Logging<wbr>Honeycomb<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A Honeycomb endpoint to send streaming logs to.
 Defined below.
@@ -3695,7 +3813,7 @@ Defined below.
 <a href="#state_loggingkafkas_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Kafkas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingkafka">Servicev1Logging<wbr>Kafka[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingkafka">Servicev1Logging<wbr>Kafka<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A Kafka endpoint to send streaming logs to.
 Defined below.
@@ -3705,7 +3823,7 @@ Defined below.
 <a href="#state_loggingkineses_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Kineses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingkinese">Servicev1Logging<wbr>Kinese[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingkinese">Servicev1Logging<wbr>Kinese<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A Kinesis endpoint to send streaming logs to.
 Defined below.
@@ -3715,7 +3833,7 @@ Defined below.
 <a href="#state_logginglogglies_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Logglies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingloggly">Servicev1Logging<wbr>Loggly[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingloggly">Servicev1Logging<wbr>Loggly<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A Loggly endpoint to send streaming logs to.
 Defined below.
@@ -3725,7 +3843,7 @@ Defined below.
 <a href="#state_logginglogshuttles_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Logshuttles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1logginglogshuttle">Servicev1Logging<wbr>Logshuttle[]</a></span>
+        <span class="property-type"><a href="#servicev1logginglogshuttle">Servicev1Logging<wbr>Logshuttle<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A Log Shuttle endpoint to send streaming logs to.
 Defined below.
@@ -3735,7 +3853,7 @@ Defined below.
 <a href="#state_loggingnewrelics_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Newrelics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingnewrelic">Servicev1Logging<wbr>Newrelic[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingnewrelic">Servicev1Logging<wbr>Newrelic<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A New Relic endpoint to send streaming logs to.
 Defined below.
@@ -3745,7 +3863,7 @@ Defined below.
 <a href="#state_loggingopenstacks_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Openstacks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingopenstack">Servicev1Logging<wbr>Openstack[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingopenstack">Servicev1Logging<wbr>Openstack<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}An OpenStack endpoint to send streaming logs to.
 Defined below.
@@ -3755,7 +3873,7 @@ Defined below.
 <a href="#state_loggingscalyrs_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Scalyrs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingscalyr">Servicev1Logging<wbr>Scalyr[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingscalyr">Servicev1Logging<wbr>Scalyr<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A Scalyr endpoint to send streaming logs to.
 Defined below.
@@ -3765,7 +3883,7 @@ Defined below.
 <a href="#state_loggingsftps_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Sftps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingsftp">Servicev1Logging<wbr>Sftp[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingsftp">Servicev1Logging<wbr>Sftp<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}An SFTP endpoint to send streaming logs to.
 Defined below.
@@ -3784,7 +3902,7 @@ Defined below.
 <a href="#state_papertrails_nodejs" style="color: inherit; text-decoration: inherit;">papertrails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1papertrail">Servicev1Papertrail[]</a></span>
+        <span class="property-type"><a href="#servicev1papertrail">Servicev1Papertrail<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A Papertrail endpoint to send streaming logs too.
 Defined below.
@@ -3794,7 +3912,7 @@ Defined below.
 <a href="#state_requestsettings_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1requestsetting">Servicev1Request<wbr>Setting[]</a></span>
+        <span class="property-type"><a href="#servicev1requestsetting">Servicev1Request<wbr>Setting<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A set of Request modifiers.
 Defined below
@@ -3804,7 +3922,7 @@ Defined below
 <a href="#state_responseobjects_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Objects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1responseobject">Servicev1Response<wbr>Object[]</a></span>
+        <span class="property-type"><a href="#servicev1responseobject">Servicev1Response<wbr>Object<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The name of the response object used by the Web Application Firewall.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3813,7 +3931,7 @@ Defined below
 <a href="#state_s3loggings_nodejs" style="color: inherit; text-decoration: inherit;">s3loggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1s3logging">Servicev1S3logging[]</a></span>
+        <span class="property-type"><a href="#servicev1s3logging">Servicev1S3logging<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A set of S3 Buckets to send streaming logs too.
 Defined below.
@@ -3823,7 +3941,7 @@ Defined below.
 <a href="#state_snippets_nodejs" style="color: inherit; text-decoration: inherit;">snippets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1snippet">Servicev1Snippet[]</a></span>
+        <span class="property-type"><a href="#servicev1snippet">Servicev1Snippet<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A set of custom, "regular" (non-dynamic) VCL Snippet configuration blocks.
 Defined below.
@@ -3833,7 +3951,7 @@ Defined below.
 <a href="#state_splunks_nodejs" style="color: inherit; text-decoration: inherit;">splunks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1splunk">Servicev1Splunk[]</a></span>
+        <span class="property-type"><a href="#servicev1splunk">Servicev1Splunk<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A Splunk endpoint to send streaming logs too.
 Defined below.
@@ -3843,7 +3961,7 @@ Defined below.
 <a href="#state_sumologics_nodejs" style="color: inherit; text-decoration: inherit;">sumologics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1sumologic">Servicev1Sumologic[]</a></span>
+        <span class="property-type"><a href="#servicev1sumologic">Servicev1Sumologic<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A Sumologic endpoint to send streaming logs too.
 Defined below.
@@ -3853,7 +3971,7 @@ Defined below.
 <a href="#state_syslogs_nodejs" style="color: inherit; text-decoration: inherit;">syslogs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1syslog">Servicev1Syslog[]</a></span>
+        <span class="property-type"><a href="#servicev1syslog">Servicev1Syslog<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A syslog endpoint to send streaming logs too.
 Defined below.
@@ -3863,7 +3981,7 @@ Defined below.
 <a href="#state_vcls_nodejs" style="color: inherit; text-decoration: inherit;">vcls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1vcl">Servicev1Vcl[]</a></span>
+        <span class="property-type"><a href="#servicev1vcl">Servicev1Vcl<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A set of custom VCL configuration blocks.
 Defined below. See the [Fastly documentation](https://docs.fastly.com/vcl/custom-vcl/uploading-custom-vcl/) for more information on using custom VCL.
@@ -3882,7 +4000,7 @@ Defined below. See the [Fastly documentation](https://docs.fastly.com/vcl/custom
 <a href="#state_waf_nodejs" style="color: inherit; text-decoration: inherit;">waf</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1waf">Servicev1Waf</a></span>
+        <span class="property-type"><a href="#servicev1waf">Servicev1Waf<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A WAF configuration block.
 Defined below.

@@ -85,8 +85,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-rancher2/sdk/v3/go/rancher2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -357,8 +357,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-rancher2/sdk/v3/go/rancher2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -752,8 +752,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-rancher2/sdk/v3/go/rancher2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -971,8 +971,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-rancher2/sdk/v3/go/rancher2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -1193,8 +1193,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-rancher2/sdk/v3/go/rancher2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -1417,8 +1417,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-rancher2/sdk/v3/go/rancher2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -1590,8 +1590,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-rancher2/sdk/v3/go/rancher2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -1753,8 +1753,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-rancher2/sdk/v3/go/rancher2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -1967,8 +1967,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-rancher2/sdk/v3/go/rancher2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -2112,19 +2112,52 @@ const fooCluster = new rancher2.Cluster("fooCluster", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aks_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAksConfigArgs]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">cluster_auth_endpoint</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterAuthEndpointArgs]</span> = None<span class="p">, </span><span class="nx">cluster_monitoring_input</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterMonitoringInputArgs]</span> = None<span class="p">, </span><span class="nx">cluster_template_answers</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterTemplateAnswersArgs]</span> = None<span class="p">, </span><span class="nx">cluster_template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_template_questions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterClusterTemplateQuestionArgs]]</span> = None<span class="p">, </span><span class="nx">cluster_template_revision_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_pod_security_policy_template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_agent_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_auth_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">docker_root_dir</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eks_config</span><span class="p">:</span> <span class="nx">Optional[ClusterEksConfigArgs]</span> = None<span class="p">, </span><span class="nx">eks_config_v2</span><span class="p">:</span> <span class="nx">Optional[ClusterEksConfigV2Args]</span> = None<span class="p">, </span><span class="nx">enable_cluster_alerting</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_cluster_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_network_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gke_config</span><span class="p">:</span> <span class="nx">Optional[ClusterGkeConfigArgs]</span> = None<span class="p">, </span><span class="nx">k3s_config</span><span class="p">:</span> <span class="nx">Optional[ClusterK3sConfigArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oke_config</span><span class="p">:</span> <span class="nx">Optional[ClusterOkeConfigArgs]</span> = None<span class="p">, </span><span class="nx">rke_config</span><span class="p">:</span> <span class="nx">Optional[ClusterRkeConfigArgs]</span> = None<span class="p">, </span><span class="nx">scheduled_cluster_scan</span><span class="p">:</span> <span class="nx">Optional[ClusterScheduledClusterScanArgs]</span> = None<span class="p">, </span><span class="nx">windows_prefered_cluster</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">aks_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAksConfigArgs]</span> = None<span class="p">,</span>
+            <span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
+            <span class="nx">cluster_auth_endpoint</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterAuthEndpointArgs]</span> = None<span class="p">,</span>
+            <span class="nx">cluster_monitoring_input</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterMonitoringInputArgs]</span> = None<span class="p">,</span>
+            <span class="nx">cluster_template_answers</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterTemplateAnswersArgs]</span> = None<span class="p">,</span>
+            <span class="nx">cluster_template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">cluster_template_questions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterClusterTemplateQuestionArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">cluster_template_revision_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">default_pod_security_policy_template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">desired_agent_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">desired_auth_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">docker_root_dir</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">eks_config</span><span class="p">:</span> <span class="nx">Optional[ClusterEksConfigArgs]</span> = None<span class="p">,</span>
+            <span class="nx">eks_config_v2</span><span class="p">:</span> <span class="nx">Optional[ClusterEksConfigV2Args]</span> = None<span class="p">,</span>
+            <span class="nx">enable_cluster_alerting</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+            <span class="nx">enable_cluster_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+            <span class="nx">enable_network_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+            <span class="nx">gke_config</span><span class="p">:</span> <span class="nx">Optional[ClusterGkeConfigArgs]</span> = None<span class="p">,</span>
+            <span class="nx">k3s_config</span><span class="p">:</span> <span class="nx">Optional[ClusterK3sConfigArgs]</span> = None<span class="p">,</span>
+            <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
+            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">oke_config</span><span class="p">:</span> <span class="nx">Optional[ClusterOkeConfigArgs]</span> = None<span class="p">,</span>
+            <span class="nx">rke_config</span><span class="p">:</span> <span class="nx">Optional[ClusterRkeConfigArgs]</span> = None<span class="p">,</span>
+            <span class="nx">scheduled_cluster_scan</span><span class="p">:</span> <span class="nx">Optional[ClusterScheduledClusterScanArgs]</span> = None<span class="p">,</span>
+            <span class="nx">windows_prefered_cluster</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[ClusterArgs]</a></span> = None<span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2159,22 +2192,32 @@ const fooCluster = new rancher2.Cluster("fooCluster", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2183,7 +2226,7 @@ const fooCluster = new rancher2.Cluster("fooCluster", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -2207,7 +2250,7 @@ const fooCluster = new rancher2.Cluster("fooCluster", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -2756,7 +2799,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#aksconfig_nodejs" style="color: inherit; text-decoration: inherit;">aks<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraksconfig">Cluster<wbr>Aks<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusteraksconfig">Cluster<wbr>Aks<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure AKS configuration for `aks` Clusters. Conflicts with `eks_config`, `eks_config_v2`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2774,7 +2817,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#clusterauthendpoint_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Auth<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterauthendpoint">Cluster<wbr>Cluster<wbr>Auth<wbr>Endpoint</a></span>
+        <span class="property-type"><a href="#clusterclusterauthendpoint">Cluster<wbr>Cluster<wbr>Auth<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enabling the [local cluster authorized endpoint](https://rancher.com/docs/rancher/v2.x/en/cluster-provisioning/rke-clusters/options/#local-cluster-auth-endpoint) allows direct communication with the cluster, bypassing the Rancher API proxy. (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2783,7 +2826,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#clustermonitoringinput_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Monitoring<wbr>Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclustermonitoringinput">Cluster<wbr>Cluster<wbr>Monitoring<wbr>Input</a></span>
+        <span class="property-type"><a href="#clusterclustermonitoringinput">Cluster<wbr>Cluster<wbr>Monitoring<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cluster monitoring config. Any parameter defined in [rancher-monitoring charts](https://github.com/rancher/system-charts/tree/dev/charts/rancher-monitoring) could be configured  (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2792,7 +2835,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#clustertemplateanswers_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Template<wbr>Answers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclustertemplateanswers">Cluster<wbr>Cluster<wbr>Template<wbr>Answers</a></span>
+        <span class="property-type"><a href="#clusterclustertemplateanswers">Cluster<wbr>Cluster<wbr>Template<wbr>Answers<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cluster template answers. Just for Rancher v2.3.x and above (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2810,7 +2853,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#clustertemplatequestions_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Template<wbr>Questions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclustertemplatequestion">Cluster<wbr>Cluster<wbr>Template<wbr>Question[]</a></span>
+        <span class="property-type"><a href="#clusterclustertemplatequestion">Cluster<wbr>Cluster<wbr>Template<wbr>Question<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Cluster template questions. Just for Rancher v2.3.x and above (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2882,7 +2925,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#eksconfig_nodejs" style="color: inherit; text-decoration: inherit;">eks<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustereksconfig">Cluster<wbr>Eks<wbr>Config</a></span>
+        <span class="property-type"><a href="#clustereksconfig">Cluster<wbr>Eks<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Amazon EKS configuration for `eks` Clusters. Conflicts with `aks_config`, `eks_config_v2`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2891,7 +2934,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#eksconfigv2_nodejs" style="color: inherit; text-decoration: inherit;">eks<wbr>Config<wbr>V2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustereksconfigv2">Cluster<wbr>Eks<wbr>Config<wbr>V2</a></span>
+        <span class="property-type"><a href="#clustereksconfigv2">Cluster<wbr>Eks<wbr>Config<wbr>V2Args</a></span>
     </dt>
     <dd>{{% md %}}The Amazon EKS configuration to create or import `eks` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `oke_config` `k3s_config` and `rke_config`. For Rancher v2.5.x or above (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2927,7 +2970,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#gkeconfig_nodejs" style="color: inherit; text-decoration: inherit;">gke<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustergkeconfig">Cluster<wbr>Gke<wbr>Config</a></span>
+        <span class="property-type"><a href="#clustergkeconfig">Cluster<wbr>Gke<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Google GKE configuration for `gke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_import`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2936,7 +2979,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#k3sconfig_nodejs" style="color: inherit; text-decoration: inherit;">k3s<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterk3sconfig">Cluster<wbr>K3s<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusterk3sconfig">Cluster<wbr>K3s<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The K3S configuration for `k3s` imported Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `oke_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2963,7 +3006,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#okeconfig_nodejs" style="color: inherit; text-decoration: inherit;">oke<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterokeconfig">Cluster<wbr>Oke<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusterokeconfig">Cluster<wbr>Oke<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Oracle OKE configuration for `oke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_import`, `gke_config` `k3s_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2972,7 +3015,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#rkeconfig_nodejs" style="color: inherit; text-decoration: inherit;">rke<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfig">Cluster<wbr>Rke<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusterrkeconfig">Cluster<wbr>Rke<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The RKE configuration for `rke` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `oke_config` and `k3s_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2981,7 +3024,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#scheduledclusterscan_nodejs" style="color: inherit; text-decoration: inherit;">scheduled<wbr>Cluster<wbr>Scan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterscheduledclusterscan">Cluster<wbr>Scheduled<wbr>Cluster<wbr>Scan</a></span>
+        <span class="property-type"><a href="#clusterscheduledclusterscan">Cluster<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cluster scheduled cis scan. For Rancher v2.4.0 or above (List maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3558,20 +3601,56 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ClusterState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Cluster</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ClusterState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Cluster</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aks_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAksConfigArgs]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">ca_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_auth_endpoint</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterAuthEndpointArgs]</span> = None<span class="p">, </span><span class="nx">cluster_monitoring_input</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterMonitoringInputArgs]</span> = None<span class="p">, </span><span class="nx">cluster_registration_token</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterRegistrationTokenArgs]</span> = None<span class="p">, </span><span class="nx">cluster_template_answers</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterTemplateAnswersArgs]</span> = None<span class="p">, </span><span class="nx">cluster_template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_template_questions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterClusterTemplateQuestionArgs]]</span> = None<span class="p">, </span><span class="nx">cluster_template_revision_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_pod_security_policy_template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_agent_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_auth_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">docker_root_dir</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eks_config</span><span class="p">:</span> <span class="nx">Optional[ClusterEksConfigArgs]</span> = None<span class="p">, </span><span class="nx">eks_config_v2</span><span class="p">:</span> <span class="nx">Optional[ClusterEksConfigV2Args]</span> = None<span class="p">, </span><span class="nx">enable_cluster_alerting</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_cluster_istio</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_cluster_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_network_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gke_config</span><span class="p">:</span> <span class="nx">Optional[ClusterGkeConfigArgs]</span> = None<span class="p">, </span><span class="nx">istio_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">k3s_config</span><span class="p">:</span> <span class="nx">Optional[ClusterK3sConfigArgs]</span> = None<span class="p">, </span><span class="nx">kube_config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oke_config</span><span class="p">:</span> <span class="nx">Optional[ClusterOkeConfigArgs]</span> = None<span class="p">, </span><span class="nx">rke_config</span><span class="p">:</span> <span class="nx">Optional[ClusterRkeConfigArgs]</span> = None<span class="p">, </span><span class="nx">scheduled_cluster_scan</span><span class="p">:</span> <span class="nx">Optional[ClusterScheduledClusterScanArgs]</span> = None<span class="p">, </span><span class="nx">system_project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">windows_prefered_cluster</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">aks_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAksConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
+        <span class="nx">ca_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">cluster_auth_endpoint</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterAuthEndpointArgs]</span> = None<span class="p">,</span>
+        <span class="nx">cluster_monitoring_input</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterMonitoringInputArgs]</span> = None<span class="p">,</span>
+        <span class="nx">cluster_registration_token</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterRegistrationTokenArgs]</span> = None<span class="p">,</span>
+        <span class="nx">cluster_template_answers</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterTemplateAnswersArgs]</span> = None<span class="p">,</span>
+        <span class="nx">cluster_template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">cluster_template_questions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterClusterTemplateQuestionArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">cluster_template_revision_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">default_pod_security_policy_template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">default_project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">desired_agent_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">desired_auth_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">docker_root_dir</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">eks_config</span><span class="p">:</span> <span class="nx">Optional[ClusterEksConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">eks_config_v2</span><span class="p">:</span> <span class="nx">Optional[ClusterEksConfigV2Args]</span> = None<span class="p">,</span>
+        <span class="nx">enable_cluster_alerting</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">enable_cluster_istio</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">enable_cluster_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">enable_network_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">gke_config</span><span class="p">:</span> <span class="nx">Optional[ClusterGkeConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">istio_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">k3s_config</span><span class="p">:</span> <span class="nx">Optional[ClusterK3sConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">kube_config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">oke_config</span><span class="p">:</span> <span class="nx">Optional[ClusterOkeConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">rke_config</span><span class="p">:</span> <span class="nx">Optional[ClusterRkeConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">scheduled_cluster_scan</span><span class="p">:</span> <span class="nx">Optional[ClusterScheduledClusterScanArgs]</span> = None<span class="p">,</span>
+        <span class="nx">system_project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">windows_prefered_cluster</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ClusterState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ClusterState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Cluster</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ClusterState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Cluster</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ClusterState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4300,7 +4379,7 @@ The following state arguments are supported:
 <a href="#state_aksconfig_nodejs" style="color: inherit; text-decoration: inherit;">aks<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraksconfig">Cluster<wbr>Aks<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusteraksconfig">Cluster<wbr>Aks<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure AKS configuration for `aks` Clusters. Conflicts with `eks_config`, `eks_config_v2`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4327,7 +4406,7 @@ The following state arguments are supported:
 <a href="#state_clusterauthendpoint_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Auth<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterauthendpoint">Cluster<wbr>Cluster<wbr>Auth<wbr>Endpoint</a></span>
+        <span class="property-type"><a href="#clusterclusterauthendpoint">Cluster<wbr>Cluster<wbr>Auth<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enabling the [local cluster authorized endpoint](https://rancher.com/docs/rancher/v2.x/en/cluster-provisioning/rke-clusters/options/#local-cluster-auth-endpoint) allows direct communication with the cluster, bypassing the Rancher API proxy. (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4336,7 +4415,7 @@ The following state arguments are supported:
 <a href="#state_clustermonitoringinput_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Monitoring<wbr>Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclustermonitoringinput">Cluster<wbr>Cluster<wbr>Monitoring<wbr>Input</a></span>
+        <span class="property-type"><a href="#clusterclustermonitoringinput">Cluster<wbr>Cluster<wbr>Monitoring<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cluster monitoring config. Any parameter defined in [rancher-monitoring charts](https://github.com/rancher/system-charts/tree/dev/charts/rancher-monitoring) could be configured  (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4345,7 +4424,7 @@ The following state arguments are supported:
 <a href="#state_clusterregistrationtoken_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Registration<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterregistrationtoken">Cluster<wbr>Cluster<wbr>Registration<wbr>Token</a></span>
+        <span class="property-type"><a href="#clusterclusterregistrationtoken">Cluster<wbr>Cluster<wbr>Registration<wbr>Token<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Cluster Registration Token generated for the cluster (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4354,7 +4433,7 @@ The following state arguments are supported:
 <a href="#state_clustertemplateanswers_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Template<wbr>Answers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclustertemplateanswers">Cluster<wbr>Cluster<wbr>Template<wbr>Answers</a></span>
+        <span class="property-type"><a href="#clusterclustertemplateanswers">Cluster<wbr>Cluster<wbr>Template<wbr>Answers<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cluster template answers. Just for Rancher v2.3.x and above (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4372,7 +4451,7 @@ The following state arguments are supported:
 <a href="#state_clustertemplatequestions_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Template<wbr>Questions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclustertemplatequestion">Cluster<wbr>Cluster<wbr>Template<wbr>Question[]</a></span>
+        <span class="property-type"><a href="#clusterclustertemplatequestion">Cluster<wbr>Cluster<wbr>Template<wbr>Question<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Cluster template questions. Just for Rancher v2.3.x and above (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4453,7 +4532,7 @@ The following state arguments are supported:
 <a href="#state_eksconfig_nodejs" style="color: inherit; text-decoration: inherit;">eks<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustereksconfig">Cluster<wbr>Eks<wbr>Config</a></span>
+        <span class="property-type"><a href="#clustereksconfig">Cluster<wbr>Eks<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Amazon EKS configuration for `eks` Clusters. Conflicts with `aks_config`, `eks_config_v2`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4462,7 +4541,7 @@ The following state arguments are supported:
 <a href="#state_eksconfigv2_nodejs" style="color: inherit; text-decoration: inherit;">eks<wbr>Config<wbr>V2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustereksconfigv2">Cluster<wbr>Eks<wbr>Config<wbr>V2</a></span>
+        <span class="property-type"><a href="#clustereksconfigv2">Cluster<wbr>Eks<wbr>Config<wbr>V2Args</a></span>
     </dt>
     <dd>{{% md %}}The Amazon EKS configuration to create or import `eks` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `oke_config` `k3s_config` and `rke_config`. For Rancher v2.5.x or above (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4507,7 +4586,7 @@ The following state arguments are supported:
 <a href="#state_gkeconfig_nodejs" style="color: inherit; text-decoration: inherit;">gke<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustergkeconfig">Cluster<wbr>Gke<wbr>Config</a></span>
+        <span class="property-type"><a href="#clustergkeconfig">Cluster<wbr>Gke<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Google GKE configuration for `gke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_import`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4525,7 +4604,7 @@ The following state arguments are supported:
 <a href="#state_k3sconfig_nodejs" style="color: inherit; text-decoration: inherit;">k3s<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterk3sconfig">Cluster<wbr>K3s<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusterk3sconfig">Cluster<wbr>K3s<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The K3S configuration for `k3s` imported Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `oke_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4561,7 +4640,7 @@ The following state arguments are supported:
 <a href="#state_okeconfig_nodejs" style="color: inherit; text-decoration: inherit;">oke<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterokeconfig">Cluster<wbr>Oke<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusterokeconfig">Cluster<wbr>Oke<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Oracle OKE configuration for `oke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_import`, `gke_config` `k3s_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4570,7 +4649,7 @@ The following state arguments are supported:
 <a href="#state_rkeconfig_nodejs" style="color: inherit; text-decoration: inherit;">rke<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfig">Cluster<wbr>Rke<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusterrkeconfig">Cluster<wbr>Rke<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The RKE configuration for `rke` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `oke_config` and `k3s_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4579,7 +4658,7 @@ The following state arguments are supported:
 <a href="#state_scheduledclusterscan_nodejs" style="color: inherit; text-decoration: inherit;">scheduled<wbr>Cluster<wbr>Scan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterscheduledclusterscan">Cluster<wbr>Scheduled<wbr>Cluster<wbr>Scan</a></span>
+        <span class="property-type"><a href="#clusterscheduledclusterscan">Cluster<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cluster scheduled cis scan. For Rancher v2.4.0 or above (List maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8283,7 +8362,7 @@ The following state arguments are supported:
 <a href="#nodegroups_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustereksconfigv2nodegroup">Cluster<wbr>Eks<wbr>Config<wbr>V2Node<wbr>Group[]</a></span>
+        <span class="property-type"><a href="#clustereksconfigv2nodegroup">Cluster<wbr>Eks<wbr>Config<wbr>V2Node<wbr>Group<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The EKS cluster name to import. Required to create a new cluster (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8931,7 +9010,7 @@ The following state arguments are supported:
 <a href="#launchtemplates_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Templates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustereksconfigv2nodegrouplaunchtemplate">Cluster<wbr>Eks<wbr>Config<wbr>V2Node<wbr>Group<wbr>Launch<wbr>Template[]</a></span>
+        <span class="property-type"><a href="#clustereksconfigv2nodegrouplaunchtemplate">Cluster<wbr>Eks<wbr>Config<wbr>V2Node<wbr>Group<wbr>Launch<wbr>Template<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The EKS node groups launch template (list Maxitem: 1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -11289,7 +11368,7 @@ The following state arguments are supported:
 <a href="#upgradestrategy_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterk3sconfigupgradestrategy">Cluster<wbr>K3s<wbr>Config<wbr>Upgrade<wbr>Strategy</a></span>
+        <span class="property-type"><a href="#clusterk3sconfigupgradestrategy">Cluster<wbr>K3s<wbr>Config<wbr>Upgrade<wbr>Strategy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}K3S upgrade strategy (List maxitems: 1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -12918,7 +12997,7 @@ The following state arguments are supported:
 <a href="#authentication_nodejs" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfigauthentication">Cluster<wbr>Rke<wbr>Config<wbr>Authentication</a></span>
+        <span class="property-type"><a href="#clusterrkeconfigauthentication">Cluster<wbr>Rke<wbr>Config<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kubernetes cluster authentication (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -12927,7 +13006,7 @@ The following state arguments are supported:
 <a href="#authorization_nodejs" style="color: inherit; text-decoration: inherit;">authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfigauthorization">Cluster<wbr>Rke<wbr>Config<wbr>Authorization</a></span>
+        <span class="property-type"><a href="#clusterrkeconfigauthorization">Cluster<wbr>Rke<wbr>Config<wbr>Authorization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kubernetes cluster authorization (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -12936,7 +13015,7 @@ The following state arguments are supported:
 <a href="#bastionhost_nodejs" style="color: inherit; text-decoration: inherit;">bastion<wbr>Host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfigbastionhost">Cluster<wbr>Rke<wbr>Config<wbr>Bastion<wbr>Host</a></span>
+        <span class="property-type"><a href="#clusterrkeconfigbastionhost">Cluster<wbr>Rke<wbr>Config<wbr>Bastion<wbr>Host<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}RKE bastion host (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -12945,7 +13024,7 @@ The following state arguments are supported:
 <a href="#cloudprovider_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfigcloudprovider">Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider</a></span>
+        <span class="property-type"><a href="#clusterrkeconfigcloudprovider">Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}RKE options for Calico network provider (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -12954,7 +13033,7 @@ The following state arguments are supported:
 <a href="#dns_nodejs" style="color: inherit; text-decoration: inherit;">dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfigdns">Cluster<wbr>Rke<wbr>Config<wbr>Dns</a></span>
+        <span class="property-type"><a href="#clusterrkeconfigdns">Cluster<wbr>Rke<wbr>Config<wbr>Dns<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}RKE dns add-on. Just for Rancher v2.2.x (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -12972,7 +13051,7 @@ The following state arguments are supported:
 <a href="#ingress_nodejs" style="color: inherit; text-decoration: inherit;">ingress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfigingress">Cluster<wbr>Rke<wbr>Config<wbr>Ingress</a></span>
+        <span class="property-type"><a href="#clusterrkeconfigingress">Cluster<wbr>Rke<wbr>Config<wbr>Ingress<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kubernetes ingress configuration (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -12990,7 +13069,7 @@ The following state arguments are supported:
 <a href="#monitoring_nodejs" style="color: inherit; text-decoration: inherit;">monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfigmonitoring">Cluster<wbr>Rke<wbr>Config<wbr>Monitoring</a></span>
+        <span class="property-type"><a href="#clusterrkeconfigmonitoring">Cluster<wbr>Rke<wbr>Config<wbr>Monitoring<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kubernetes cluster monitoring (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -12999,7 +13078,7 @@ The following state arguments are supported:
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfignetwork">Cluster<wbr>Rke<wbr>Config<wbr>Network</a></span>
+        <span class="property-type"><a href="#clusterrkeconfignetwork">Cluster<wbr>Rke<wbr>Config<wbr>Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network for GKE cluster (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -13008,7 +13087,7 @@ The following state arguments are supported:
 <a href="#nodes_nodejs" style="color: inherit; text-decoration: inherit;">nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfignode">Cluster<wbr>Rke<wbr>Config<wbr>Node[]</a></span>
+        <span class="property-type"><a href="#clusterrkeconfignode">Cluster<wbr>Rke<wbr>Config<wbr>Node<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}RKE cluster nodes (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -13026,7 +13105,7 @@ The following state arguments are supported:
 <a href="#privateregistries_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfigprivateregistry">Cluster<wbr>Rke<wbr>Config<wbr>Private<wbr>Registry[]</a></span>
+        <span class="property-type"><a href="#clusterrkeconfigprivateregistry">Cluster<wbr>Rke<wbr>Config<wbr>Private<wbr>Registry<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}private registries for docker images (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -13035,7 +13114,7 @@ The following state arguments are supported:
 <a href="#services_nodejs" style="color: inherit; text-decoration: inherit;">services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfigservices">Cluster<wbr>Rke<wbr>Config<wbr>Services</a></span>
+        <span class="property-type"><a href="#clusterrkeconfigservices">Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kubernetes cluster services (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -13071,7 +13150,7 @@ The following state arguments are supported:
 <a href="#upgradestrategy_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfigupgradestrategy">Cluster<wbr>Rke<wbr>Config<wbr>Upgrade<wbr>Strategy</a></span>
+        <span class="property-type"><a href="#clusterrkeconfigupgradestrategy">Cluster<wbr>Rke<wbr>Config<wbr>Upgrade<wbr>Strategy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}K3S upgrade strategy (List maxitems: 1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -13827,7 +13906,7 @@ The following state arguments are supported:
 <a href="#awscloudprovider_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Cloud<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfigcloudproviderawscloudprovider">Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider</a></span>
+        <span class="property-type"><a href="#clusterrkeconfigcloudproviderawscloudprovider">Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}RKE AWS Cloud Provider config for Cloud Provider [rke-aws-cloud-provider](https://rancher.com/docs/rke/latest/en/config-options/cloud-providers/aws/) (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -13836,7 +13915,7 @@ The following state arguments are supported:
 <a href="#azurecloudprovider_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Cloud<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfigcloudproviderazurecloudprovider">Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Azure<wbr>Cloud<wbr>Provider</a></span>
+        <span class="property-type"><a href="#clusterrkeconfigcloudproviderazurecloudprovider">Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Azure<wbr>Cloud<wbr>Provider<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}RKE Azure Cloud Provider config for Cloud Provider [rke-azure-cloud-provider](https://rancher.com/docs/rke/latest/en/config-options/cloud-providers/azure/) (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -13863,7 +13942,7 @@ The following state arguments are supported:
 <a href="#openstackcloudprovider_nodejs" style="color: inherit; text-decoration: inherit;">openstack<wbr>Cloud<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfigcloudprovideropenstackcloudprovider">Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider</a></span>
+        <span class="property-type"><a href="#clusterrkeconfigcloudprovideropenstackcloudprovider">Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}RKE Openstack Cloud Provider config for Cloud Provider [rke-openstack-cloud-provider](https://rancher.com/docs/rke/latest/en/config-options/cloud-providers/openstack/) (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -13872,7 +13951,7 @@ The following state arguments are supported:
 <a href="#vspherecloudprovider_nodejs" style="color: inherit; text-decoration: inherit;">vsphere<wbr>Cloud<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfigcloudprovidervspherecloudprovider">Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider</a></span>
+        <span class="property-type"><a href="#clusterrkeconfigcloudprovidervspherecloudprovider">Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}RKE Vsphere Cloud Provider config for Cloud Provider [rke-vsphere-cloud-provider](https://rancher.com/docs/rke/latest/en/config-options/cloud-providers/vsphere/) Extra argument `name` is required on `virtual_center` configuration. (list maxitems:1)
 {{% /md %}}</dd></dl>
@@ -13989,7 +14068,7 @@ The following state arguments are supported:
 <a href="#global_nodejs" style="color: inherit; text-decoration: inherit;">global</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfigcloudproviderawscloudproviderglobal">Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Global</a></span>
+        <span class="property-type"><a href="#clusterrkeconfigcloudproviderawscloudproviderglobal">Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Global<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -13998,7 +14077,7 @@ The following state arguments are supported:
 <a href="#serviceoverrides_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfigcloudproviderawscloudproviderserviceoverride">Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Service<wbr>Override[]</a></span>
+        <span class="property-type"><a href="#clusterrkeconfigcloudproviderawscloudproviderserviceoverride">Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Service<wbr>Override<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd></dl>
@@ -15807,7 +15886,7 @@ The following state arguments are supported:
 <a href="#global_nodejs" style="color: inherit; text-decoration: inherit;">global</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfigcloudprovideropenstackcloudproviderglobal">Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Global</a></span>
+        <span class="property-type"><a href="#clusterrkeconfigcloudprovideropenstackcloudproviderglobal">Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Global<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -15816,7 +15895,7 @@ The following state arguments are supported:
 <a href="#blockstorage_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfigcloudprovideropenstackcloudproviderblockstorage">Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Block<wbr>Storage</a></span>
+        <span class="property-type"><a href="#clusterrkeconfigcloudprovideropenstackcloudproviderblockstorage">Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Block<wbr>Storage<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -15825,7 +15904,7 @@ The following state arguments are supported:
 <a href="#loadbalancer_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfigcloudprovideropenstackcloudproviderloadbalancer">Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Load<wbr>Balancer</a></span>
+        <span class="property-type"><a href="#clusterrkeconfigcloudprovideropenstackcloudproviderloadbalancer">Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Load<wbr>Balancer<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -15834,7 +15913,7 @@ The following state arguments are supported:
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfigcloudprovideropenstackcloudprovidermetadata">Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Metadata</a></span>
+        <span class="property-type"><a href="#clusterrkeconfigcloudprovideropenstackcloudprovidermetadata">Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -15843,7 +15922,7 @@ The following state arguments are supported:
 <a href="#route_nodejs" style="color: inherit; text-decoration: inherit;">route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfigcloudprovideropenstackcloudproviderroute">Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Route</a></span>
+        <span class="property-type"><a href="#clusterrkeconfigcloudprovideropenstackcloudproviderroute">Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Route<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd></dl>
@@ -17067,7 +17146,7 @@ The following state arguments are supported:
 <a href="#virtualcenters_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Centers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfigcloudprovidervspherecloudprovidervirtualcenter">Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Virtual<wbr>Center[]</a></span>
+        <span class="property-type"><a href="#clusterrkeconfigcloudprovidervspherecloudprovidervirtualcenter">Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Virtual<wbr>Center<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}(List)
 {{% /md %}}</dd><dt class="property-required"
@@ -17076,7 +17155,7 @@ The following state arguments are supported:
 <a href="#workspace_nodejs" style="color: inherit; text-decoration: inherit;">workspace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfigcloudprovidervspherecloudproviderworkspace">Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Workspace</a></span>
+        <span class="property-type"><a href="#clusterrkeconfigcloudprovidervspherecloudproviderworkspace">Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Workspace<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -17085,7 +17164,7 @@ The following state arguments are supported:
 <a href="#disk_nodejs" style="color: inherit; text-decoration: inherit;">disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfigcloudprovidervspherecloudproviderdisk">Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Disk</a></span>
+        <span class="property-type"><a href="#clusterrkeconfigcloudprovidervspherecloudproviderdisk">Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -17094,7 +17173,7 @@ The following state arguments are supported:
 <a href="#global_nodejs" style="color: inherit; text-decoration: inherit;">global</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfigcloudprovidervspherecloudproviderglobal">Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Global</a></span>
+        <span class="property-type"><a href="#clusterrkeconfigcloudprovidervspherecloudproviderglobal">Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Global<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -17103,7 +17182,7 @@ The following state arguments are supported:
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfigcloudprovidervspherecloudprovidernetwork">Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Network</a></span>
+        <span class="property-type"><a href="#clusterrkeconfigcloudprovidervspherecloudprovidernetwork">Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network for GKE cluster (string)
 {{% /md %}}</dd></dl>
@@ -18075,7 +18154,7 @@ The following state arguments are supported:
 <a href="#linearautoscalerparams_nodejs" style="color: inherit; text-decoration: inherit;">linear<wbr>Autoscaler<wbr>Params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfigdnslinearautoscalerparams">Cluster<wbr>Rke<wbr>Config<wbr>Dns<wbr>Linear<wbr>Autoscaler<wbr>Params</a></span>
+        <span class="property-type"><a href="#clusterrkeconfigdnslinearautoscalerparams">Cluster<wbr>Rke<wbr>Config<wbr>Dns<wbr>Linear<wbr>Autoscaler<wbr>Params<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}LinearAutoScalerParams dns config (list Maxitem: 1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -18093,7 +18172,7 @@ The following state arguments are supported:
 <a href="#nodelocal_nodejs" style="color: inherit; text-decoration: inherit;">nodelocal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfigdnsnodelocal">Cluster<wbr>Rke<wbr>Config<wbr>Dns<wbr>Nodelocal</a></span>
+        <span class="property-type"><a href="#clusterrkeconfigdnsnodelocal">Cluster<wbr>Rke<wbr>Config<wbr>Dns<wbr>Nodelocal<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nodelocal dns config  (list Maxitem: 1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -18120,7 +18199,7 @@ The following state arguments are supported:
 <a href="#updatestrategy_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfigdnsupdatestrategy">Cluster<wbr>Rke<wbr>Config<wbr>Dns<wbr>Update<wbr>Strategy</a></span>
+        <span class="property-type"><a href="#clusterrkeconfigdnsupdatestrategy">Cluster<wbr>Rke<wbr>Config<wbr>Dns<wbr>Update<wbr>Strategy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}RKE monitoring update strategy (list Maxitems: 1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -18543,7 +18622,7 @@ The following state arguments are supported:
 <a href="#rollingupdate_nodejs" style="color: inherit; text-decoration: inherit;">rolling<wbr>Update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfigdnsupdatestrategyrollingupdate">Cluster<wbr>Rke<wbr>Config<wbr>Dns<wbr>Update<wbr>Strategy<wbr>Rolling<wbr>Update</a></span>
+        <span class="property-type"><a href="#clusterrkeconfigdnsupdatestrategyrollingupdate">Cluster<wbr>Rke<wbr>Config<wbr>Dns<wbr>Update<wbr>Strategy<wbr>Rolling<wbr>Update<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Monitoring deployment rolling update (list Maxitems: 1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -19011,7 +19090,7 @@ The following state arguments are supported:
 <a href="#updatestrategy_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfigmonitoringupdatestrategy">Cluster<wbr>Rke<wbr>Config<wbr>Monitoring<wbr>Update<wbr>Strategy</a></span>
+        <span class="property-type"><a href="#clusterrkeconfigmonitoringupdatestrategy">Cluster<wbr>Rke<wbr>Config<wbr>Monitoring<wbr>Update<wbr>Strategy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}RKE monitoring update strategy (list Maxitems: 1)
 {{% /md %}}</dd></dl>
@@ -19119,7 +19198,7 @@ The following state arguments are supported:
 <a href="#rollingupdate_nodejs" style="color: inherit; text-decoration: inherit;">rolling<wbr>Update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfigmonitoringupdatestrategyrollingupdate">Cluster<wbr>Rke<wbr>Config<wbr>Monitoring<wbr>Update<wbr>Strategy<wbr>Rolling<wbr>Update</a></span>
+        <span class="property-type"><a href="#clusterrkeconfigmonitoringupdatestrategyrollingupdate">Cluster<wbr>Rke<wbr>Config<wbr>Monitoring<wbr>Update<wbr>Strategy<wbr>Rolling<wbr>Update<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Monitoring deployment rolling update (list Maxitems: 1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -19389,7 +19468,7 @@ The following state arguments are supported:
 <a href="#caliconetworkprovider_nodejs" style="color: inherit; text-decoration: inherit;">calico<wbr>Network<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfignetworkcaliconetworkprovider">Cluster<wbr>Rke<wbr>Config<wbr>Network<wbr>Calico<wbr>Network<wbr>Provider</a></span>
+        <span class="property-type"><a href="#clusterrkeconfignetworkcaliconetworkprovider">Cluster<wbr>Rke<wbr>Config<wbr>Network<wbr>Calico<wbr>Network<wbr>Provider<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Calico provider config for RKE network (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -19398,7 +19477,7 @@ The following state arguments are supported:
 <a href="#canalnetworkprovider_nodejs" style="color: inherit; text-decoration: inherit;">canal<wbr>Network<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfignetworkcanalnetworkprovider">Cluster<wbr>Rke<wbr>Config<wbr>Network<wbr>Canal<wbr>Network<wbr>Provider</a></span>
+        <span class="property-type"><a href="#clusterrkeconfignetworkcanalnetworkprovider">Cluster<wbr>Rke<wbr>Config<wbr>Network<wbr>Canal<wbr>Network<wbr>Provider<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Canal provider config for RKE network (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -19407,7 +19486,7 @@ The following state arguments are supported:
 <a href="#flannelnetworkprovider_nodejs" style="color: inherit; text-decoration: inherit;">flannel<wbr>Network<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfignetworkflannelnetworkprovider">Cluster<wbr>Rke<wbr>Config<wbr>Network<wbr>Flannel<wbr>Network<wbr>Provider</a></span>
+        <span class="property-type"><a href="#clusterrkeconfignetworkflannelnetworkprovider">Cluster<wbr>Rke<wbr>Config<wbr>Network<wbr>Flannel<wbr>Network<wbr>Provider<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Flannel provider config for RKE network (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -19443,7 +19522,7 @@ The following state arguments are supported:
 <a href="#weavenetworkprovider_nodejs" style="color: inherit; text-decoration: inherit;">weave<wbr>Network<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfignetworkweavenetworkprovider">Cluster<wbr>Rke<wbr>Config<wbr>Network<wbr>Weave<wbr>Network<wbr>Provider</a></span>
+        <span class="property-type"><a href="#clusterrkeconfignetworkweavenetworkprovider">Cluster<wbr>Rke<wbr>Config<wbr>Network<wbr>Weave<wbr>Network<wbr>Provider<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Weave provider config for RKE network (list maxitems:1)
 {{% /md %}}</dd></dl>
@@ -20469,7 +20548,7 @@ The following state arguments are supported:
 <a href="#etcd_nodejs" style="color: inherit; text-decoration: inherit;">etcd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfigservicesetcd">Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd</a></span>
+        <span class="property-type"><a href="#clusterrkeconfigservicesetcd">Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Etcd options for RKE services (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -20478,7 +20557,7 @@ The following state arguments are supported:
 <a href="#kubeapi_nodejs" style="color: inherit; text-decoration: inherit;">kube<wbr>Api</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfigserviceskubeapi">Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api</a></span>
+        <span class="property-type"><a href="#clusterrkeconfigserviceskubeapi">Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kube API options for RKE services (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -20487,7 +20566,7 @@ The following state arguments are supported:
 <a href="#kubecontroller_nodejs" style="color: inherit; text-decoration: inherit;">kube<wbr>Controller</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfigserviceskubecontroller">Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Controller</a></span>
+        <span class="property-type"><a href="#clusterrkeconfigserviceskubecontroller">Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Controller<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kube Controller options for RKE services (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -20496,7 +20575,7 @@ The following state arguments are supported:
 <a href="#kubelet_nodejs" style="color: inherit; text-decoration: inherit;">kubelet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfigserviceskubelet">Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Kubelet</a></span>
+        <span class="property-type"><a href="#clusterrkeconfigserviceskubelet">Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Kubelet<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kubelet options for RKE services (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -20505,7 +20584,7 @@ The following state arguments are supported:
 <a href="#kubeproxy_nodejs" style="color: inherit; text-decoration: inherit;">kubeproxy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfigserviceskubeproxy">Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Kubeproxy</a></span>
+        <span class="property-type"><a href="#clusterrkeconfigserviceskubeproxy">Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Kubeproxy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kubeproxy options for RKE services (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -20514,7 +20593,7 @@ The following state arguments are supported:
 <a href="#scheduler_nodejs" style="color: inherit; text-decoration: inherit;">scheduler</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfigservicesscheduler">Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Scheduler</a></span>
+        <span class="property-type"><a href="#clusterrkeconfigservicesscheduler">Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Scheduler<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Scheduler options for RKE services (list maxitems:1)
 {{% /md %}}</dd></dl>
@@ -20865,7 +20944,7 @@ The following state arguments are supported:
 <a href="#backupconfig_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfigservicesetcdbackupconfig">Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Backup<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusterrkeconfigservicesetcdbackupconfig">Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Backup<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup options for etcd service. Just for Rancher v2.2.x (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -21288,7 +21367,7 @@ The following state arguments are supported:
 <a href="#s3backupconfig_nodejs" style="color: inherit; text-decoration: inherit;">s3Backup<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfigservicesetcdbackupconfigs3backupconfig">Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Backup<wbr>Config<wbr>S3Backup<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusterrkeconfigservicesetcdbackupconfigs3backupconfig">Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Backup<wbr>Config<wbr>S3Backup<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}S3 config options for etcd backup (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -21891,7 +21970,7 @@ The following state arguments are supported:
 <a href="#auditlog_nodejs" style="color: inherit; text-decoration: inherit;">audit<wbr>Log</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfigserviceskubeapiauditlog">Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Audit<wbr>Log</a></span>
+        <span class="property-type"><a href="#clusterrkeconfigserviceskubeapiauditlog">Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Audit<wbr>Log<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}K8s audit log configuration. (list maxitems: 1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -21900,7 +21979,7 @@ The following state arguments are supported:
 <a href="#eventratelimit_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Rate<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfigserviceskubeapieventratelimit">Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Event<wbr>Rate<wbr>Limit</a></span>
+        <span class="property-type"><a href="#clusterrkeconfigserviceskubeapieventratelimit">Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Event<wbr>Rate<wbr>Limit<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}K8s event rate limit configuration. (list maxitems: 1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -21954,7 +22033,7 @@ The following state arguments are supported:
 <a href="#secretsencryptionconfig_nodejs" style="color: inherit; text-decoration: inherit;">secrets<wbr>Encryption<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfigserviceskubeapisecretsencryptionconfig">Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Secrets<wbr>Encryption<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusterrkeconfigserviceskubeapisecretsencryptionconfig">Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Secrets<wbr>Encryption<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Encrypt k8s secret data configration](https://rancher.com/docs/rke/latest/en/config-options/secrets-encryption/). (list maxitem: 1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -22143,7 +22222,7 @@ The following state arguments are supported:
 <a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfigserviceskubeapiauditlogconfiguration">Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Audit<wbr>Log<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#clusterrkeconfigserviceskubeapiauditlogconfiguration">Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Audit<wbr>Log<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Event rate limit configuration yaml encoded definition. `apiVersion` and `kind: Configuration"` fields are required in the yaml. Ex. `"apiVersion: eventratelimit.admission.k8s.io/v1alpha1\nkind: Configuration\nlimits:\n- type: Server\n  burst: 35000\n  qps: 6000\n"` [More info](https://rancher.com/docs/rke/latest/en/config-options/rate-limiting/) (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -23592,7 +23671,7 @@ The following state arguments are supported:
 <a href="#draininput_nodejs" style="color: inherit; text-decoration: inherit;">drain<wbr>Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfigupgradestrategydraininput">Cluster<wbr>Rke<wbr>Config<wbr>Upgrade<wbr>Strategy<wbr>Drain<wbr>Input</a></span>
+        <span class="property-type"><a href="#clusterrkeconfigupgradestrategydraininput">Cluster<wbr>Rke<wbr>Config<wbr>Upgrade<wbr>Strategy<wbr>Drain<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}RKE drain node input (list Maxitems: 1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -23925,7 +24004,7 @@ The following state arguments are supported:
 <a href="#scanconfig_nodejs" style="color: inherit; text-decoration: inherit;">scan<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterscheduledclusterscanscanconfig">Cluster<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Scan<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusterscheduledclusterscanscanconfig">Cluster<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Scan<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cluster scan config (List maxitems:1)
 {{% /md %}}</dd><dt class="property-required"
@@ -23934,7 +24013,7 @@ The following state arguments are supported:
 <a href="#scheduleconfig_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterscheduledclusterscanscheduleconfig">Cluster<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Schedule<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusterscheduledclusterscanscheduleconfig">Cluster<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Schedule<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cluster scan schedule config (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -24015,7 +24094,7 @@ The following state arguments are supported:
 <a href="#cisscanconfig_nodejs" style="color: inherit; text-decoration: inherit;">cis<wbr>Scan<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterscheduledclusterscanscanconfigcisscanconfig">Cluster<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Scan<wbr>Config<wbr>Cis<wbr>Scan<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusterscheduledclusterscanscanconfigcisscanconfig">Cluster<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Scan<wbr>Config<wbr>Cis<wbr>Scan<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cluster Cis Scan config (List maxitems:1)
 {{% /md %}}</dd></dl>

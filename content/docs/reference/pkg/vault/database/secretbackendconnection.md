@@ -26,19 +26,43 @@ Database secret backend connections can be imported using the `backend`, `/confi
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SecretBackendConnection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SecretBackendConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SecretBackendConnection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SecretBackendConnectionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SecretBackendConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allowed_roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cassandra</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionCassandraArgs]</span> = None<span class="p">, </span><span class="nx">data</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">elasticsearch</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionElasticsearchArgs]</span> = None<span class="p">, </span><span class="nx">hana</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionHanaArgs]</span> = None<span class="p">, </span><span class="nx">mongodb</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMongodbArgs]</span> = None<span class="p">, </span><span class="nx">mongodbatlas</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMongodbatlasArgs]</span> = None<span class="p">, </span><span class="nx">mssql</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMssqlArgs]</span> = None<span class="p">, </span><span class="nx">mysql</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMysqlArgs]</span> = None<span class="p">, </span><span class="nx">mysql_aurora</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMysqlAuroraArgs]</span> = None<span class="p">, </span><span class="nx">mysql_legacy</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMysqlLegacyArgs]</span> = None<span class="p">, </span><span class="nx">mysql_rds</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMysqlRdsArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oracle</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionOracleArgs]</span> = None<span class="p">, </span><span class="nx">postgresql</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionPostgresqlArgs]</span> = None<span class="p">, </span><span class="nx">root_rotation_statements</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">verify_connection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SecretBackendConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                            <span class="nx">allowed_roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                            <span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                            <span class="nx">cassandra</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionCassandraArgs]</span> = None<span class="p">,</span>
+                            <span class="nx">data</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
+                            <span class="nx">elasticsearch</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionElasticsearchArgs]</span> = None<span class="p">,</span>
+                            <span class="nx">hana</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionHanaArgs]</span> = None<span class="p">,</span>
+                            <span class="nx">mongodb</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMongodbArgs]</span> = None<span class="p">,</span>
+                            <span class="nx">mongodbatlas</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMongodbatlasArgs]</span> = None<span class="p">,</span>
+                            <span class="nx">mssql</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMssqlArgs]</span> = None<span class="p">,</span>
+                            <span class="nx">mysql</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMysqlArgs]</span> = None<span class="p">,</span>
+                            <span class="nx">mysql_aurora</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMysqlAuroraArgs]</span> = None<span class="p">,</span>
+                            <span class="nx">mysql_legacy</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMysqlLegacyArgs]</span> = None<span class="p">,</span>
+                            <span class="nx">mysql_rds</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMysqlRdsArgs]</span> = None<span class="p">,</span>
+                            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                            <span class="nx">oracle</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionOracleArgs]</span> = None<span class="p">,</span>
+                            <span class="nx">postgresql</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionPostgresqlArgs]</span> = None<span class="p">,</span>
+                            <span class="nx">root_rotation_statements</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                            <span class="nx">verify_connection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SecretBackendConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SecretBackendConnectionArgs</a></span><span class="p">,</span>
+                            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSecretBackendConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SecretBackendConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecretBackendConnection</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSecretBackendConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SecretBackendConnectionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecretBackendConnection</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SecretBackendConnection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SecretBackendConnectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SecretBackendConnection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SecretBackendConnectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -73,22 +97,32 @@ Database secret backend connections can be imported using the `backend`, `/confi
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">SecretBackendConnectionArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -97,7 +131,7 @@ Database secret backend connections can be imported using the `backend`, `/confi
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -121,7 +155,7 @@ Database secret backend connections can be imported using the `backend`, `/confi
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -531,7 +565,7 @@ connection.
 <a href="#cassandra_nodejs" style="color: inherit; text-decoration: inherit;">cassandra</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectioncassandra">Secret<wbr>Backend<wbr>Connection<wbr>Cassandra</a></span>
+        <span class="property-type"><a href="#secretbackendconnectioncassandra">Secret<wbr>Backend<wbr>Connection<wbr>Cassandra<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Cassandra connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -549,7 +583,7 @@ connection.
 <a href="#elasticsearch_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionelasticsearch">Secret<wbr>Backend<wbr>Connection<wbr>Elasticsearch</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionelasticsearch">Secret<wbr>Backend<wbr>Connection<wbr>Elasticsearch<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Elasticsearch connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -558,7 +592,7 @@ connection.
 <a href="#hana_nodejs" style="color: inherit; text-decoration: inherit;">hana</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionhana">Secret<wbr>Backend<wbr>Connection<wbr>Hana</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionhana">Secret<wbr>Backend<wbr>Connection<wbr>Hana<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for SAP HanaDB connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -567,7 +601,7 @@ connection.
 <a href="#mongodb_nodejs" style="color: inherit; text-decoration: inherit;">mongodb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmongodb">Secret<wbr>Backend<wbr>Connection<wbr>Mongodb</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmongodb">Secret<wbr>Backend<wbr>Connection<wbr>Mongodb<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MongoDB connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -576,7 +610,7 @@ connection.
 <a href="#mongodbatlas_nodejs" style="color: inherit; text-decoration: inherit;">mongodbatlas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmongodbatlas">Secret<wbr>Backend<wbr>Connection<wbr>Mongodbatlas</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmongodbatlas">Secret<wbr>Backend<wbr>Connection<wbr>Mongodbatlas<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection parameters for the mongodbatlas-database-plugin plugin.
 {{% /md %}}</dd><dt class="property-optional"
@@ -585,7 +619,7 @@ connection.
 <a href="#mssql_nodejs" style="color: inherit; text-decoration: inherit;">mssql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmssql">Secret<wbr>Backend<wbr>Connection<wbr>Mssql</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmssql">Secret<wbr>Backend<wbr>Connection<wbr>Mssql<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MSSQL connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -594,7 +628,7 @@ connection.
 <a href="#mysql_nodejs" style="color: inherit; text-decoration: inherit;">mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmysql">Secret<wbr>Backend<wbr>Connection<wbr>Mysql</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmysql">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MySQL connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -603,7 +637,7 @@ connection.
 <a href="#mysqlaurora_nodejs" style="color: inherit; text-decoration: inherit;">mysql<wbr>Aurora</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmysqlaurora">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Aurora</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmysqlaurora">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Aurora<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Aurora MySQL connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -612,7 +646,7 @@ connection.
 <a href="#mysqllegacy_nodejs" style="color: inherit; text-decoration: inherit;">mysql<wbr>Legacy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmysqllegacy">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Legacy</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmysqllegacy">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Legacy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for legacy MySQL connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -621,7 +655,7 @@ connection.
 <a href="#mysqlrds_nodejs" style="color: inherit; text-decoration: inherit;">mysql<wbr>Rds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmysqlrds">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Rds</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmysqlrds">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Rds<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for RDS MySQL connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -639,7 +673,7 @@ connection.
 <a href="#oracle_nodejs" style="color: inherit; text-decoration: inherit;">oracle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionoracle">Secret<wbr>Backend<wbr>Connection<wbr>Oracle</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionoracle">Secret<wbr>Backend<wbr>Connection<wbr>Oracle<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Oracle connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -648,7 +682,7 @@ connection.
 <a href="#postgresql_nodejs" style="color: inherit; text-decoration: inherit;">postgresql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionpostgresql">Secret<wbr>Backend<wbr>Connection<wbr>Postgresql</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionpostgresql">Secret<wbr>Backend<wbr>Connection<wbr>Postgresql<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for PostgreSQL connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -904,20 +938,40 @@ Get an existing SecretBackendConnection resource's state with the given name, ID
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">SecretBackendConnectionState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">SecretBackendConnection</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">SecretBackendConnectionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">SecretBackendConnection</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allowed_roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cassandra</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionCassandraArgs]</span> = None<span class="p">, </span><span class="nx">data</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">elasticsearch</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionElasticsearchArgs]</span> = None<span class="p">, </span><span class="nx">hana</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionHanaArgs]</span> = None<span class="p">, </span><span class="nx">mongodb</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMongodbArgs]</span> = None<span class="p">, </span><span class="nx">mongodbatlas</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMongodbatlasArgs]</span> = None<span class="p">, </span><span class="nx">mssql</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMssqlArgs]</span> = None<span class="p">, </span><span class="nx">mysql</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMysqlArgs]</span> = None<span class="p">, </span><span class="nx">mysql_aurora</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMysqlAuroraArgs]</span> = None<span class="p">, </span><span class="nx">mysql_legacy</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMysqlLegacyArgs]</span> = None<span class="p">, </span><span class="nx">mysql_rds</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMysqlRdsArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oracle</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionOracleArgs]</span> = None<span class="p">, </span><span class="nx">postgresql</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionPostgresqlArgs]</span> = None<span class="p">, </span><span class="nx">root_rotation_statements</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">verify_connection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> SecretBackendConnection</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">allowed_roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">cassandra</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionCassandraArgs]</span> = None<span class="p">,</span>
+        <span class="nx">data</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
+        <span class="nx">elasticsearch</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionElasticsearchArgs]</span> = None<span class="p">,</span>
+        <span class="nx">hana</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionHanaArgs]</span> = None<span class="p">,</span>
+        <span class="nx">mongodb</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMongodbArgs]</span> = None<span class="p">,</span>
+        <span class="nx">mongodbatlas</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMongodbatlasArgs]</span> = None<span class="p">,</span>
+        <span class="nx">mssql</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMssqlArgs]</span> = None<span class="p">,</span>
+        <span class="nx">mysql</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMysqlArgs]</span> = None<span class="p">,</span>
+        <span class="nx">mysql_aurora</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMysqlAuroraArgs]</span> = None<span class="p">,</span>
+        <span class="nx">mysql_legacy</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMysqlLegacyArgs]</span> = None<span class="p">,</span>
+        <span class="nx">mysql_rds</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMysqlRdsArgs]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">oracle</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionOracleArgs]</span> = None<span class="p">,</span>
+        <span class="nx">postgresql</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionPostgresqlArgs]</span> = None<span class="p">,</span>
+        <span class="nx">root_rotation_statements</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">verify_connection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> SecretBackendConnection</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecretBackendConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">SecretBackendConnectionState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecretBackendConnection</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecretBackendConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">SecretBackendConnectionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecretBackendConnection</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">SecretBackendConnection</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">SecretBackendConnectionState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">SecretBackendConnection</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">SecretBackendConnectionState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1381,7 +1435,7 @@ connection.
 <a href="#state_cassandra_nodejs" style="color: inherit; text-decoration: inherit;">cassandra</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectioncassandra">Secret<wbr>Backend<wbr>Connection<wbr>Cassandra</a></span>
+        <span class="property-type"><a href="#secretbackendconnectioncassandra">Secret<wbr>Backend<wbr>Connection<wbr>Cassandra<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Cassandra connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1399,7 +1453,7 @@ connection.
 <a href="#state_elasticsearch_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionelasticsearch">Secret<wbr>Backend<wbr>Connection<wbr>Elasticsearch</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionelasticsearch">Secret<wbr>Backend<wbr>Connection<wbr>Elasticsearch<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Elasticsearch connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1408,7 +1462,7 @@ connection.
 <a href="#state_hana_nodejs" style="color: inherit; text-decoration: inherit;">hana</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionhana">Secret<wbr>Backend<wbr>Connection<wbr>Hana</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionhana">Secret<wbr>Backend<wbr>Connection<wbr>Hana<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for SAP HanaDB connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1417,7 +1471,7 @@ connection.
 <a href="#state_mongodb_nodejs" style="color: inherit; text-decoration: inherit;">mongodb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmongodb">Secret<wbr>Backend<wbr>Connection<wbr>Mongodb</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmongodb">Secret<wbr>Backend<wbr>Connection<wbr>Mongodb<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MongoDB connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1426,7 +1480,7 @@ connection.
 <a href="#state_mongodbatlas_nodejs" style="color: inherit; text-decoration: inherit;">mongodbatlas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmongodbatlas">Secret<wbr>Backend<wbr>Connection<wbr>Mongodbatlas</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmongodbatlas">Secret<wbr>Backend<wbr>Connection<wbr>Mongodbatlas<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection parameters for the mongodbatlas-database-plugin plugin.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1435,7 +1489,7 @@ connection.
 <a href="#state_mssql_nodejs" style="color: inherit; text-decoration: inherit;">mssql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmssql">Secret<wbr>Backend<wbr>Connection<wbr>Mssql</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmssql">Secret<wbr>Backend<wbr>Connection<wbr>Mssql<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MSSQL connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1444,7 +1498,7 @@ connection.
 <a href="#state_mysql_nodejs" style="color: inherit; text-decoration: inherit;">mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmysql">Secret<wbr>Backend<wbr>Connection<wbr>Mysql</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmysql">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MySQL connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1453,7 +1507,7 @@ connection.
 <a href="#state_mysqlaurora_nodejs" style="color: inherit; text-decoration: inherit;">mysql<wbr>Aurora</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmysqlaurora">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Aurora</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmysqlaurora">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Aurora<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Aurora MySQL connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1462,7 +1516,7 @@ connection.
 <a href="#state_mysqllegacy_nodejs" style="color: inherit; text-decoration: inherit;">mysql<wbr>Legacy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmysqllegacy">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Legacy</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmysqllegacy">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Legacy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for legacy MySQL connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1471,7 +1525,7 @@ connection.
 <a href="#state_mysqlrds_nodejs" style="color: inherit; text-decoration: inherit;">mysql<wbr>Rds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmysqlrds">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Rds</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmysqlrds">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Rds<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for RDS MySQL connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1489,7 +1543,7 @@ connection.
 <a href="#state_oracle_nodejs" style="color: inherit; text-decoration: inherit;">oracle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionoracle">Secret<wbr>Backend<wbr>Connection<wbr>Oracle</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionoracle">Secret<wbr>Backend<wbr>Connection<wbr>Oracle<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Oracle connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1498,7 +1552,7 @@ connection.
 <a href="#state_postgresql_nodejs" style="color: inherit; text-decoration: inherit;">postgresql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionpostgresql">Secret<wbr>Backend<wbr>Connection<wbr>Postgresql</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionpostgresql">Secret<wbr>Backend<wbr>Connection<wbr>Postgresql<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for PostgreSQL connections.
 {{% /md %}}</dd><dt class="property-optional"

@@ -54,8 +54,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudidentity"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/cloudidentity"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -118,17 +118,18 @@ const members = pulumi.output(gcp.cloudidentity.getGroupMemberships({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getGroupMemberships<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetGroupMembershipsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetGroupMembershipsResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getGroupMemberships<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetGroupMembershipsArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetGroupMembershipsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_group_memberships(</span><span class="nx">group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetGroupMembershipsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_group_memberships(</span><span class="nx">group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetGroupMembershipsResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGroupMemberships<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetGroupMembershipsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetGroupMembershipsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGroupMemberships<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetGroupMembershipsArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetGroupMembershipsResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `GetGroupMemberships` in the Go SDK.
 
@@ -137,7 +138,7 @@ const members = pulumi.output(gcp.cloudidentity.getGroupMemberships({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetGroupMemberships </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetGroupMembershipsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetGroupMembershipsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetGroupMembershipsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetGroupMembershipsArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -361,7 +362,7 @@ The following output properties are available:
 <a href="#memberkeys_csharp" style="color: inherit; text-decoration: inherit;">Member<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgroupmembershipsmembershipmemberkey">List&lt;Get<wbr>Group<wbr>Memberships<wbr>Membership<wbr>Member<wbr>Key<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getgroupmembershipsmembershipmemberkey">List&lt;Get<wbr>Group<wbr>Memberships<wbr>Membership<wbr>Member<wbr>Key&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -378,7 +379,7 @@ The following output properties are available:
 <a href="#preferredmemberkeys_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Member<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgroupmembershipsmembershippreferredmemberkey">List&lt;Get<wbr>Group<wbr>Memberships<wbr>Membership<wbr>Preferred<wbr>Member<wbr>Key<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getgroupmembershipsmembershippreferredmemberkey">List&lt;Get<wbr>Group<wbr>Memberships<wbr>Membership<wbr>Preferred<wbr>Member<wbr>Key&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -386,7 +387,7 @@ The following output properties are available:
 <a href="#roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgroupmembershipsmembershiprole">List&lt;Get<wbr>Group<wbr>Memberships<wbr>Membership<wbr>Role<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getgroupmembershipsmembershiprole">List&lt;Get<wbr>Group<wbr>Memberships<wbr>Membership<wbr>Role&gt;</a></span>
     </dt>
     <dd>{{% md %}}The MembershipRoles that apply to the Membership. Structure is documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -574,7 +575,7 @@ The following output properties are available:
 <a href="#member_keys_python" style="color: inherit; text-decoration: inherit;">member_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgroupmembershipsmembershipmemberkey">Sequence[Get<wbr>Group<wbr>Memberships<wbr>Membership<wbr>Member<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getgroupmembershipsmembershipmemberkey">Sequence[Get<wbr>Group<wbr>Memberships<wbr>Membership<wbr>Member<wbr>Key]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -591,7 +592,7 @@ The following output properties are available:
 <a href="#preferred_member_keys_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>member_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgroupmembershipsmembershippreferredmemberkey">Sequence[Get<wbr>Group<wbr>Memberships<wbr>Membership<wbr>Preferred<wbr>Member<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getgroupmembershipsmembershippreferredmemberkey">Sequence[Get<wbr>Group<wbr>Memberships<wbr>Membership<wbr>Preferred<wbr>Member<wbr>Key]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -599,7 +600,7 @@ The following output properties are available:
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgroupmembershipsmembershiprole">Sequence[Get<wbr>Group<wbr>Memberships<wbr>Membership<wbr>Role<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getgroupmembershipsmembershiprole">Sequence[Get<wbr>Group<wbr>Memberships<wbr>Membership<wbr>Role]</a></span>
     </dt>
     <dd>{{% md %}}The MembershipRoles that apply to the Membership. Structure is documented below.
 {{% /md %}}</dd><dt class="property-required"

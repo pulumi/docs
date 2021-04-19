@@ -22,17 +22,21 @@ API Version: 2020-05-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getJob<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetJobArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetJobResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getJob<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetJobArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetJobResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_job(</span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">transform_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetJobResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_job(</span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">transform_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetJobResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupJob<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupJobArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupJobResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupJob<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupJobArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupJobResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupJob` in the Go SDK.
 
@@ -41,7 +45,7 @@ API Version: 2020-05-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetJob </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetJobResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetJobArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetJobResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetJobArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -824,7 +828,7 @@ The following output properties are available:
 <a href="#included_tracks_python" style="color: inherit; text-decoration: inherit;">included_<wbr>tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Audio<wbr>Track<wbr>Descriptor<wbr>Response<wbr>Args, Select<wbr>Audio<wbr>Track<wbr>By<wbr>Attribute<wbr>Response<wbr>Args, Select<wbr>Audio<wbr>Track<wbr>By<wbr>Id<wbr>Response<wbr>Args, Select<wbr>Video<wbr>Track<wbr>By<wbr>Attribute<wbr>Response<wbr>Args, Select<wbr>Video<wbr>Track<wbr>By<wbr>Id<wbr>Response<wbr>Args, Video<wbr>Track<wbr>Descriptor<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Audio<wbr>Track<wbr>Descriptor<wbr>Response, Select<wbr>Audio<wbr>Track<wbr>By<wbr>Attribute<wbr>Response, Select<wbr>Audio<wbr>Track<wbr>By<wbr>Id<wbr>Response, Select<wbr>Video<wbr>Track<wbr>By<wbr>Attribute<wbr>Response, Select<wbr>Video<wbr>Track<wbr>By<wbr>Id<wbr>Response, Video<wbr>Track<wbr>Descriptor<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -876,7 +880,7 @@ The following output properties are available:
 <a href="#included_tracks_python" style="color: inherit; text-decoration: inherit;">included_<wbr>tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Audio<wbr>Track<wbr>Descriptor<wbr>Response<wbr>Args, Select<wbr>Audio<wbr>Track<wbr>By<wbr>Attribute<wbr>Response<wbr>Args, Select<wbr>Audio<wbr>Track<wbr>By<wbr>Id<wbr>Response<wbr>Args, Select<wbr>Video<wbr>Track<wbr>By<wbr>Attribute<wbr>Response<wbr>Args, Select<wbr>Video<wbr>Track<wbr>By<wbr>Id<wbr>Response<wbr>Args, Video<wbr>Track<wbr>Descriptor<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Audio<wbr>Track<wbr>Descriptor<wbr>Response, Select<wbr>Audio<wbr>Track<wbr>By<wbr>Attribute<wbr>Response, Select<wbr>Audio<wbr>Track<wbr>By<wbr>Id<wbr>Response, Select<wbr>Video<wbr>Track<wbr>By<wbr>Attribute<wbr>Response, Select<wbr>Video<wbr>Track<wbr>By<wbr>Id<wbr>Response, Video<wbr>Track<wbr>Descriptor<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -960,7 +964,7 @@ The following output properties are available:
 <a href="#included_tracks_python" style="color: inherit; text-decoration: inherit;">included_<wbr>tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Audio<wbr>Track<wbr>Descriptor<wbr>Response<wbr>Args, Select<wbr>Audio<wbr>Track<wbr>By<wbr>Attribute<wbr>Response<wbr>Args, Select<wbr>Audio<wbr>Track<wbr>By<wbr>Id<wbr>Response<wbr>Args, Select<wbr>Video<wbr>Track<wbr>By<wbr>Attribute<wbr>Response<wbr>Args, Select<wbr>Video<wbr>Track<wbr>By<wbr>Id<wbr>Response<wbr>Args, Video<wbr>Track<wbr>Descriptor<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Audio<wbr>Track<wbr>Descriptor<wbr>Response, Select<wbr>Audio<wbr>Track<wbr>By<wbr>Attribute<wbr>Response, Select<wbr>Audio<wbr>Track<wbr>By<wbr>Id<wbr>Response, Select<wbr>Video<wbr>Track<wbr>By<wbr>Attribute<wbr>Response, Select<wbr>Video<wbr>Track<wbr>By<wbr>Id<wbr>Response, Video<wbr>Track<wbr>Descriptor<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1076,7 +1080,7 @@ The following output properties are available:
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#joberrordetailresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Job<wbr>Error<wbr>Detail<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#joberrordetailresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Job<wbr>Error<wbr>Detail<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of details about specific errors that led to this reported error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1208,7 +1212,7 @@ The following output properties are available:
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#joberrordetailresponse">Sequence[Job<wbr>Error<wbr>Detail<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#joberrordetailresponse">Sequence[Job<wbr>Error<wbr>Detail<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}An array of details about specific errors that led to this reported error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1248,7 +1252,7 @@ The following output properties are available:
 <a href="#end_csharp" style="color: inherit; text-decoration: inherit;">End</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#absolutecliptimeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#absolutecliptimeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response</a> | <a href="#utccliptimeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1280,7 +1284,7 @@ The following output properties are available:
 <a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#absolutecliptimeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#absolutecliptimeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response</a> | <a href="#utccliptimeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1404,7 +1408,7 @@ The following output properties are available:
 <a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#absolutecliptimeresponse">Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#absolutecliptimeresponse">Absolute<wbr>Clip<wbr>Time<wbr>Response</a> | <a href="#utccliptimeresponse">Utc<wbr>Clip<wbr>Time<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1420,7 +1424,7 @@ The following output properties are available:
 <a href="#input_definitions_python" style="color: inherit; text-decoration: inherit;">input_<wbr>definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[From<wbr>All<wbr>Input<wbr>File<wbr>Response<wbr>Args, From<wbr>Each<wbr>Input<wbr>File<wbr>Response<wbr>Args, Input<wbr>File<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[From<wbr>All<wbr>Input<wbr>File<wbr>Response, From<wbr>Each<wbr>Input<wbr>File<wbr>Response, Input<wbr>File<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1436,7 +1440,7 @@ The following output properties are available:
 <a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#absolutecliptimeresponse">Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#absolutecliptimeresponse">Absolute<wbr>Clip<wbr>Time<wbr>Response</a> | <a href="#utccliptimeresponse">Utc<wbr>Clip<wbr>Time<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1452,7 +1456,7 @@ The following output properties are available:
 <a href="#end_csharp" style="color: inherit; text-decoration: inherit;">End</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#absolutecliptimeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#absolutecliptimeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response</a> | <a href="#utccliptimeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1484,7 +1488,7 @@ The following output properties are available:
 <a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#absolutecliptimeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#absolutecliptimeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response</a> | <a href="#utccliptimeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1584,7 +1588,7 @@ The following output properties are available:
 <a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#absolutecliptimeresponse">Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#absolutecliptimeresponse">Absolute<wbr>Clip<wbr>Time<wbr>Response</a> | <a href="#utccliptimeresponse">Utc<wbr>Clip<wbr>Time<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1600,7 +1604,7 @@ The following output properties are available:
 <a href="#input_definitions_python" style="color: inherit; text-decoration: inherit;">input_<wbr>definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[From<wbr>All<wbr>Input<wbr>File<wbr>Response<wbr>Args, From<wbr>Each<wbr>Input<wbr>File<wbr>Response<wbr>Args, Input<wbr>File<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[From<wbr>All<wbr>Input<wbr>File<wbr>Response, From<wbr>Each<wbr>Input<wbr>File<wbr>Response, Input<wbr>File<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1616,7 +1620,7 @@ The following output properties are available:
 <a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#absolutecliptimeresponse">Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#absolutecliptimeresponse">Absolute<wbr>Clip<wbr>Time<wbr>Response</a> | <a href="#utccliptimeresponse">Utc<wbr>Clip<wbr>Time<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1640,7 +1644,7 @@ The following output properties are available:
 <a href="#end_csharp" style="color: inherit; text-decoration: inherit;">End</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#absolutecliptimeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#absolutecliptimeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response</a> | <a href="#utccliptimeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1672,7 +1676,7 @@ The following output properties are available:
 <a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#absolutecliptimeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#absolutecliptimeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response</a> | <a href="#utccliptimeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1796,7 +1800,7 @@ The following output properties are available:
 <a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#absolutecliptimeresponse">Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#absolutecliptimeresponse">Absolute<wbr>Clip<wbr>Time<wbr>Response</a> | <a href="#utccliptimeresponse">Utc<wbr>Clip<wbr>Time<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1812,7 +1816,7 @@ The following output properties are available:
 <a href="#input_definitions_python" style="color: inherit; text-decoration: inherit;">input_<wbr>definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[From<wbr>All<wbr>Input<wbr>File<wbr>Response<wbr>Args, From<wbr>Each<wbr>Input<wbr>File<wbr>Response<wbr>Args, Input<wbr>File<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[From<wbr>All<wbr>Input<wbr>File<wbr>Response, From<wbr>Each<wbr>Input<wbr>File<wbr>Response, Input<wbr>File<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1828,7 +1832,7 @@ The following output properties are available:
 <a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#absolutecliptimeresponse">Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#absolutecliptimeresponse">Absolute<wbr>Clip<wbr>Time<wbr>Response</a> | <a href="#utccliptimeresponse">Utc<wbr>Clip<wbr>Time<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1844,7 +1848,7 @@ The following output properties are available:
 <a href="#inputs_csharp" style="color: inherit; text-decoration: inherit;">Inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobinputclipresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Job<wbr>Input<wbr>Clip<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#jobinputclipresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Job<wbr>Input<wbr>Clip<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}JobInputs that make up the timeline.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1880,7 +1884,7 @@ The following output properties are available:
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobinputclipresponse">Sequence[Job<wbr>Input<wbr>Clip<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jobinputclipresponse">Sequence[Job<wbr>Input<wbr>Clip<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}JobInputs that make up the timeline.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1932,7 +1936,7 @@ The following output properties are available:
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Job<wbr>Input<wbr>Asset<wbr>Response<wbr>Args, Job<wbr>Input<wbr>Clip<wbr>Response<wbr>Args, Job<wbr>Input<wbr>Http<wbr>Response<wbr>Args, Job<wbr>Input<wbr>Sequence<wbr>Response<wbr>Args, Job<wbr>Inputs<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Job<wbr>Input<wbr>Asset<wbr>Response, Job<wbr>Input<wbr>Clip<wbr>Response, Job<wbr>Input<wbr>Http<wbr>Response, Job<wbr>Input<wbr>Sequence<wbr>Response, Job<wbr>Inputs<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}List of inputs to a Job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1964,7 +1968,7 @@ The following output properties are available:
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#joberrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Job<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#joberrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Job<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If the JobOutput is in the Error state, it contains the details of the error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2144,7 +2148,7 @@ The following output properties are available:
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#joberrorresponse">Job<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#joberrorresponse">Job<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If the JobOutput is in the Error state, it contains the details of the error.{{% /md %}}</dd><dt class="property-required"
             title="Required">

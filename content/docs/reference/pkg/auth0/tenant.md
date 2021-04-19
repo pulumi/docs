@@ -171,19 +171,42 @@ const tenant = new auth0.Tenant("tenant", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Tenant</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">TenantArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Tenant</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">TenantArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Tenant</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allowed_logout_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">change_password</span><span class="p">:</span> <span class="nx">Optional[TenantChangePasswordArgs]</span> = None<span class="p">, </span><span class="nx">default_audience</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_directory</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_redirection_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled_locales</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">error_page</span><span class="p">:</span> <span class="nx">Optional[TenantErrorPageArgs]</span> = None<span class="p">, </span><span class="nx">flags</span><span class="p">:</span> <span class="nx">Optional[TenantFlagsArgs]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">guardian_mfa_page</span><span class="p">:</span> <span class="nx">Optional[TenantGuardianMfaPageArgs]</span> = None<span class="p">, </span><span class="nx">idle_session_lifetime</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">picture_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sandbox_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_lifetime</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">support_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">support_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">universal_login</span><span class="p">:</span> <span class="nx">Optional[TenantUniversalLoginArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Tenant</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+           <span class="nx">allowed_logout_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+           <span class="nx">change_password</span><span class="p">:</span> <span class="nx">Optional[TenantChangePasswordArgs]</span> = None<span class="p">,</span>
+           <span class="nx">default_audience</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">default_directory</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">default_redirection_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">enabled_locales</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+           <span class="nx">error_page</span><span class="p">:</span> <span class="nx">Optional[TenantErrorPageArgs]</span> = None<span class="p">,</span>
+           <span class="nx">flags</span><span class="p">:</span> <span class="nx">Optional[TenantFlagsArgs]</span> = None<span class="p">,</span>
+           <span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">guardian_mfa_page</span><span class="p">:</span> <span class="nx">Optional[TenantGuardianMfaPageArgs]</span> = None<span class="p">,</span>
+           <span class="nx">idle_session_lifetime</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">,</span>
+           <span class="nx">picture_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">sandbox_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">session_lifetime</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">,</span>
+           <span class="nx">support_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">support_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">universal_login</span><span class="p">:</span> <span class="nx">Optional[TenantUniversalLoginArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Tenant</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[TenantArgs]</a></span> = None<span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTenant</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">TenantArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Tenant</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTenant</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">TenantArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Tenant</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Tenant</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">TenantArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Tenant</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">TenantArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -218,22 +241,32 @@ const tenant = new auth0.Tenant("tenant", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">TenantArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -242,7 +275,7 @@ const tenant = new auth0.Tenant("tenant", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -266,7 +299,7 @@ const tenant = new auth0.Tenant("tenant", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -644,7 +677,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#changepassword_nodejs" style="color: inherit; text-decoration: inherit;">change<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenantchangepassword">Tenant<wbr>Change<wbr>Password</a></span>
+        <span class="property-type"><a href="#tenantchangepassword">Tenant<wbr>Change<wbr>Password<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for change passsword page. For details, see Change Password Page.
 {{% /md %}}</dd><dt class="property-optional"
@@ -689,7 +722,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#errorpage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Page</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenanterrorpage">Tenant<wbr>Error<wbr>Page</a></span>
+        <span class="property-type"><a href="#tenanterrorpage">Tenant<wbr>Error<wbr>Page<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for error pages. For details, see Error Page.
 {{% /md %}}</dd><dt class="property-optional"
@@ -698,7 +731,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#flags_nodejs" style="color: inherit; text-decoration: inherit;">flags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenantflags">Tenant<wbr>Flags</a></span>
+        <span class="property-type"><a href="#tenantflags">Tenant<wbr>Flags<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for tenant flags. For details, see Flags.
 {{% /md %}}</dd><dt class="property-optional"
@@ -716,7 +749,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#guardianmfapage_nodejs" style="color: inherit; text-decoration: inherit;">guardian<wbr>Mfa<wbr>Page</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenantguardianmfapage">Tenant<wbr>Guardian<wbr>Mfa<wbr>Page</a></span>
+        <span class="property-type"><a href="#tenantguardianmfapage">Tenant<wbr>Guardian<wbr>Mfa<wbr>Page<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for the Guardian MFA page. For details, see Guardian MFA Page.
 {{% /md %}}</dd><dt class="property-optional"
@@ -779,7 +812,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#universallogin_nodejs" style="color: inherit; text-decoration: inherit;">universal<wbr>Login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenantuniversallogin">Tenant<wbr>Universal<wbr>Login</a></span>
+        <span class="property-type"><a href="#tenantuniversallogin">Tenant<wbr>Universal<wbr>Login<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for Universal Login. For details, see Universal Login.
 {{% /md %}}</dd></dl>
@@ -1005,20 +1038,39 @@ Get an existing Tenant resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">TenantState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Tenant</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">TenantState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Tenant</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allowed_logout_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">change_password</span><span class="p">:</span> <span class="nx">Optional[TenantChangePasswordArgs]</span> = None<span class="p">, </span><span class="nx">default_audience</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_directory</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_redirection_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled_locales</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">error_page</span><span class="p">:</span> <span class="nx">Optional[TenantErrorPageArgs]</span> = None<span class="p">, </span><span class="nx">flags</span><span class="p">:</span> <span class="nx">Optional[TenantFlagsArgs]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">guardian_mfa_page</span><span class="p">:</span> <span class="nx">Optional[TenantGuardianMfaPageArgs]</span> = None<span class="p">, </span><span class="nx">idle_session_lifetime</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">picture_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sandbox_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_lifetime</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">support_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">support_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">universal_login</span><span class="p">:</span> <span class="nx">Optional[TenantUniversalLoginArgs]</span> = None<span class="p">) -&gt;</span> Tenant</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">allowed_logout_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">change_password</span><span class="p">:</span> <span class="nx">Optional[TenantChangePasswordArgs]</span> = None<span class="p">,</span>
+        <span class="nx">default_audience</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">default_directory</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">default_redirection_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">enabled_locales</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">error_page</span><span class="p">:</span> <span class="nx">Optional[TenantErrorPageArgs]</span> = None<span class="p">,</span>
+        <span class="nx">flags</span><span class="p">:</span> <span class="nx">Optional[TenantFlagsArgs]</span> = None<span class="p">,</span>
+        <span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">guardian_mfa_page</span><span class="p">:</span> <span class="nx">Optional[TenantGuardianMfaPageArgs]</span> = None<span class="p">,</span>
+        <span class="nx">idle_session_lifetime</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">,</span>
+        <span class="nx">picture_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">sandbox_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">session_lifetime</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">,</span>
+        <span class="nx">support_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">support_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">universal_login</span><span class="p">:</span> <span class="nx">Optional[TenantUniversalLoginArgs]</span> = None<span class="p">) -&gt;</span> Tenant</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTenant<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">TenantState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Tenant</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTenant<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">TenantState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Tenant</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Tenant</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">TenantState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Tenant</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">TenantState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1450,7 +1502,7 @@ The following state arguments are supported:
 <a href="#state_changepassword_nodejs" style="color: inherit; text-decoration: inherit;">change<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenantchangepassword">Tenant<wbr>Change<wbr>Password</a></span>
+        <span class="property-type"><a href="#tenantchangepassword">Tenant<wbr>Change<wbr>Password<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for change passsword page. For details, see Change Password Page.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1495,7 +1547,7 @@ The following state arguments are supported:
 <a href="#state_errorpage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Page</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenanterrorpage">Tenant<wbr>Error<wbr>Page</a></span>
+        <span class="property-type"><a href="#tenanterrorpage">Tenant<wbr>Error<wbr>Page<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for error pages. For details, see Error Page.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1504,7 +1556,7 @@ The following state arguments are supported:
 <a href="#state_flags_nodejs" style="color: inherit; text-decoration: inherit;">flags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenantflags">Tenant<wbr>Flags</a></span>
+        <span class="property-type"><a href="#tenantflags">Tenant<wbr>Flags<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for tenant flags. For details, see Flags.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1522,7 +1574,7 @@ The following state arguments are supported:
 <a href="#state_guardianmfapage_nodejs" style="color: inherit; text-decoration: inherit;">guardian<wbr>Mfa<wbr>Page</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenantguardianmfapage">Tenant<wbr>Guardian<wbr>Mfa<wbr>Page</a></span>
+        <span class="property-type"><a href="#tenantguardianmfapage">Tenant<wbr>Guardian<wbr>Mfa<wbr>Page<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for the Guardian MFA page. For details, see Guardian MFA Page.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1585,7 +1637,7 @@ The following state arguments are supported:
 <a href="#state_universallogin_nodejs" style="color: inherit; text-decoration: inherit;">universal<wbr>Login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenantuniversallogin">Tenant<wbr>Universal<wbr>Login</a></span>
+        <span class="property-type"><a href="#tenantuniversallogin">Tenant<wbr>Universal<wbr>Login<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for Universal Login. For details, see Universal Login.
 {{% /md %}}</dd></dl>
@@ -2508,7 +2560,7 @@ The following state arguments are supported:
 <a href="#colors_nodejs" style="color: inherit; text-decoration: inherit;">colors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenantuniversallogincolors">Tenant<wbr>Universal<wbr>Login<wbr>Colors</a></span>
+        <span class="property-type"><a href="#tenantuniversallogincolors">Tenant<wbr>Universal<wbr>Login<wbr>Colors<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for Universal Login colors. See Universal Login - Colors.
 {{% /md %}}</dd></dl>

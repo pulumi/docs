@@ -68,9 +68,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lb"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lb"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
 )
 
 func main() {
@@ -166,17 +166,20 @@ const selected443 = selected.then(selected => aws.lb.getListener({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getListener<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetListenerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetListenerResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getListener<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetListenerArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetListenerResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_listener(</span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancer_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetListenerResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_listener(</span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">load_balancer_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetListenerResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupListener<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupListenerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupListenerResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupListener<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupListenerArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupListenerResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupListener` in the Go SDK.
 
@@ -185,7 +188,7 @@ const selected443 = selected.then(selected => aws.lb.getListener({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetListener </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetListenerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetListenerArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetListenerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetListenerArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -652,7 +655,7 @@ The following output properties are available:
 <a href="#authenticatecognitos_csharp" style="color: inherit; text-decoration: inherit;">Authenticate<wbr>Cognitos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getlistenerdefaultactionauthenticatecognito">List&lt;Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getlistenerdefaultactionauthenticatecognito">List&lt;Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -660,7 +663,7 @@ The following output properties are available:
 <a href="#authenticateoidcs_csharp" style="color: inherit; text-decoration: inherit;">Authenticate<wbr>Oidcs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getlistenerdefaultactionauthenticateoidc">List&lt;Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getlistenerdefaultactionauthenticateoidc">List&lt;Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -668,7 +671,7 @@ The following output properties are available:
 <a href="#fixedresponses_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Responses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getlistenerdefaultactionfixedresponse">List&lt;Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getlistenerdefaultactionfixedresponse">List&lt;Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -676,7 +679,7 @@ The following output properties are available:
 <a href="#forwards_csharp" style="color: inherit; text-decoration: inherit;">Forwards</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getlistenerdefaultactionforward">List&lt;Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getlistenerdefaultactionforward">List&lt;Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Forward&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -692,7 +695,7 @@ The following output properties are available:
 <a href="#redirects_csharp" style="color: inherit; text-decoration: inherit;">Redirects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getlistenerdefaultactionredirect">List&lt;Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Redirect<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getlistenerdefaultactionredirect">List&lt;Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Redirect&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -856,7 +859,7 @@ The following output properties are available:
 <a href="#authenticate_cognitos_python" style="color: inherit; text-decoration: inherit;">authenticate_<wbr>cognitos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getlistenerdefaultactionauthenticatecognito">Sequence[Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getlistenerdefaultactionauthenticatecognito">Sequence[Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -864,7 +867,7 @@ The following output properties are available:
 <a href="#authenticate_oidcs_python" style="color: inherit; text-decoration: inherit;">authenticate_<wbr>oidcs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getlistenerdefaultactionauthenticateoidc">Sequence[Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getlistenerdefaultactionauthenticateoidc">Sequence[Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -872,7 +875,7 @@ The following output properties are available:
 <a href="#fixed_responses_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>responses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getlistenerdefaultactionfixedresponse">Sequence[Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getlistenerdefaultactionfixedresponse">Sequence[Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -880,7 +883,7 @@ The following output properties are available:
 <a href="#forwards_python" style="color: inherit; text-decoration: inherit;">forwards</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getlistenerdefaultactionforward">Sequence[Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getlistenerdefaultactionforward">Sequence[Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Forward]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -896,7 +899,7 @@ The following output properties are available:
 <a href="#redirects_python" style="color: inherit; text-decoration: inherit;">redirects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getlistenerdefaultactionredirect">Sequence[Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Redirect<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getlistenerdefaultactionredirect">Sequence[Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Redirect]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1692,7 +1695,7 @@ The following output properties are available:
 <a href="#stickinesses_csharp" style="color: inherit; text-decoration: inherit;">Stickinesses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getlistenerdefaultactionforwardstickiness">List&lt;Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Stickiness<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getlistenerdefaultactionforwardstickiness">List&lt;Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Stickiness&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1700,7 +1703,7 @@ The following output properties are available:
 <a href="#targetgroups_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getlistenerdefaultactionforwardtargetgroup">List&lt;Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Target<wbr>Group<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getlistenerdefaultactionforwardtargetgroup">List&lt;Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Target<wbr>Group&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1752,7 +1755,7 @@ The following output properties are available:
 <a href="#stickinesses_python" style="color: inherit; text-decoration: inherit;">stickinesses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getlistenerdefaultactionforwardstickiness">Sequence[Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Stickiness<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getlistenerdefaultactionforwardstickiness">Sequence[Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Stickiness]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1760,7 +1763,7 @@ The following output properties are available:
 <a href="#target_groups_python" style="color: inherit; text-decoration: inherit;">target_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getlistenerdefaultactionforwardtargetgroup">Sequence[Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Target<wbr>Group<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getlistenerdefaultactionforwardtargetgroup">Sequence[Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Target<wbr>Group]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

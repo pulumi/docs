@@ -61,7 +61,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-hcloud/sdk/go/hcloud"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -147,17 +147,20 @@ const lb3 = pulumi.output(hcloud.getLoadBalancer({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getLoadBalancer<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetLoadBalancerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetLoadBalancerResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getLoadBalancer<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetLoadBalancerArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetLoadBalancerResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_load_balancer(</span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">with_selector</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetLoadBalancerResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_load_balancer(</span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                      <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">with_selector</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetLoadBalancerResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupLoadBalancer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupLoadBalancerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupLoadBalancerResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupLoadBalancer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupLoadBalancerArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupLoadBalancerResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupLoadBalancer` in the Go SDK.
 
@@ -166,7 +169,7 @@ const lb3 = pulumi.output(hcloud.getLoadBalancer({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetLoadBalancer </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetLoadBalancerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetLoadBalancerArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetLoadBalancerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetLoadBalancerArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -830,7 +833,7 @@ The following output properties are available:
 <a href="#healthchecks_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Checks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getloadbalancerservicehealthcheck">List&lt;Pulumi.<wbr>HCloud.<wbr>Inputs.<wbr>Get<wbr>Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getloadbalancerservicehealthcheck">List&lt;Pulumi.<wbr>HCloud.<wbr>Inputs.<wbr>Get<wbr>Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check&gt;</a></span>
     </dt>
     <dd>{{% md %}}(list) List of http configurations when `protocol` is `http` or `https`.
 {{% /md %}}</dd><dt class="property-required"
@@ -839,7 +842,7 @@ The following output properties are available:
 <a href="#https_csharp" style="color: inherit; text-decoration: inherit;">Https</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getloadbalancerservicehttp">List&lt;Pulumi.<wbr>HCloud.<wbr>Inputs.<wbr>Get<wbr>Load<wbr>Balancer<wbr>Service<wbr>Http<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getloadbalancerservicehttp">List&lt;Pulumi.<wbr>HCloud.<wbr>Inputs.<wbr>Get<wbr>Load<wbr>Balancer<wbr>Service<wbr>Http&gt;</a></span>
     </dt>
     <dd>{{% md %}}(list) List of http configurations when `protocol` is `http` or `https`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1004,7 +1007,7 @@ The following output properties are available:
 <a href="#health_checks_python" style="color: inherit; text-decoration: inherit;">health_<wbr>checks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getloadbalancerservicehealthcheck">Sequence[Get<wbr>Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getloadbalancerservicehealthcheck">Sequence[Get<wbr>Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check]</a></span>
     </dt>
     <dd>{{% md %}}(list) List of http configurations when `protocol` is `http` or `https`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1013,7 +1016,7 @@ The following output properties are available:
 <a href="#https_python" style="color: inherit; text-decoration: inherit;">https</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getloadbalancerservicehttp">Sequence[Get<wbr>Load<wbr>Balancer<wbr>Service<wbr>Http<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getloadbalancerservicehttp">Sequence[Get<wbr>Load<wbr>Balancer<wbr>Service<wbr>Http]</a></span>
     </dt>
     <dd>{{% md %}}(list) List of http configurations when `protocol` is `http` or `https`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1057,7 +1060,7 @@ The following output properties are available:
 <a href="#https_csharp" style="color: inherit; text-decoration: inherit;">Https</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getloadbalancerservicehealthcheckhttp">List&lt;Pulumi.<wbr>HCloud.<wbr>Inputs.<wbr>Get<wbr>Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check<wbr>Http<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getloadbalancerservicehealthcheckhttp">List&lt;Pulumi.<wbr>HCloud.<wbr>Inputs.<wbr>Get<wbr>Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check<wbr>Http&gt;</a></span>
     </dt>
     <dd>{{% md %}}(list) List of http configurations when `protocol` is `http` or `https`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1231,7 +1234,7 @@ The following output properties are available:
 <a href="#https_python" style="color: inherit; text-decoration: inherit;">https</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getloadbalancerservicehealthcheckhttp">Sequence[Get<wbr>Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check<wbr>Http<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getloadbalancerservicehealthcheckhttp">Sequence[Get<wbr>Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check<wbr>Http]</a></span>
     </dt>
     <dd>{{% md %}}(list) List of http configurations when `protocol` is `http` or `https`.
 {{% /md %}}</dd><dt class="property-required"
