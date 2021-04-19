@@ -3,5 +3,6 @@ node_modules
 /resources
 themes/*/resources
 public
-.idea/
+.idea
+.vscode
 .DS_Store
