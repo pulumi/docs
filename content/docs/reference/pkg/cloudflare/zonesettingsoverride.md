@@ -72,8 +72,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-cloudflare/sdk/v3/go/cloudflare"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -187,27 +187,19 @@ const test = new cloudflare.ZoneSettingsOverride("test", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ZoneSettingsOverride</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ZoneSettingsOverrideArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ZoneSettingsOverride</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ZoneSettingsOverrideArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">ZoneSettingsOverride</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                         <span class="nx">settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ZoneSettingsOverrideSettingsArgs]]</span> = None<span class="p">,</span>
-                         <span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">ZoneSettingsOverride</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ZoneSettingsOverrideArgs</a></span><span class="p">,</span>
-                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ZoneSettingsOverride</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">settings</span><span class="p">:</span> <span class="nx">Optional[ZoneSettingsOverrideSettingsArgs]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewZoneSettingsOverride</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ZoneSettingsOverrideArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ZoneSettingsOverride</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewZoneSettingsOverride</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ZoneSettingsOverrideArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ZoneSettingsOverride</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ZoneSettingsOverride</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ZoneSettingsOverrideArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ZoneSettingsOverride</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ZoneSettingsOverrideArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -242,32 +234,22 @@ const test = new cloudflare.ZoneSettingsOverride("test", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ZoneSettingsOverrideArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -276,7 +258,7 @@ const test = new cloudflare.ZoneSettingsOverride("test", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -300,7 +282,7 @@ const test = new cloudflare.ZoneSettingsOverride("test", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -399,7 +381,7 @@ The ZoneSettingsOverride resource accepts the following [input]({{< relref "/doc
 <a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone ID to which apply settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -408,7 +390,7 @@ The ZoneSettingsOverride resource accepts the following [input]({{< relref "/doc
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesettingsoverridesettings">pulumi<wbr>Input<Zone<wbr>Settings<wbr>Override<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#zonesettingsoverridesettings">Zone<wbr>Settings<wbr>Override<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Settings overrides that will be applied to the zone. If a setting is not specified the existing setting will be used. For a full list of available settings see below.
 {{% /md %}}</dd></dl>
@@ -421,7 +403,7 @@ The ZoneSettingsOverride resource accepts the following [input]({{< relref "/doc
 <a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS zone ID to which apply settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -430,7 +412,7 @@ The ZoneSettingsOverride resource accepts the following [input]({{< relref "/doc
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesettingsoverridesettings">Input[Zone<wbr>Settings<wbr>Override<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#zonesettingsoverridesettings">Zone<wbr>Settings<wbr>Override<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings overrides that will be applied to the zone. If a setting is not specified the existing setting will be used. For a full list of available settings see below.
 {{% /md %}}</dd></dl>
@@ -675,29 +657,20 @@ Get an existing ZoneSettingsOverride resource's state with the given name, ID, a
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ZoneSettingsOverrideState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ZoneSettingsOverride</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ZoneSettingsOverrideState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ZoneSettingsOverride</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">initial_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ZoneSettingsOverrideInitialSettingsArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">initial_settings_read_at</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">readonly_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ZoneSettingsOverrideSettingsArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">zone_status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">zone_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> ZoneSettingsOverride</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">initial_settings</span><span class="p">:</span> <span class="nx">Optional[ZoneSettingsOverrideInitialSettingsArgs]</span> = None<span class="p">, </span><span class="nx">initial_settings_read_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">readonly_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">settings</span><span class="p">:</span> <span class="nx">Optional[ZoneSettingsOverrideSettingsArgs]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ZoneSettingsOverride</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetZoneSettingsOverride<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ZoneSettingsOverrideState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ZoneSettingsOverride</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetZoneSettingsOverride<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ZoneSettingsOverrideState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ZoneSettingsOverride</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ZoneSettingsOverride</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ZoneSettingsOverrideState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ZoneSettingsOverride</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ZoneSettingsOverrideState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -938,7 +911,7 @@ The following state arguments are supported:
 <a href="#state_initialsettings_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesettingsoverrideinitialsettings">pulumi<wbr>Input<Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#zonesettingsoverrideinitialsettings">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Settings present in the zone at the time the resource is created. This will be used to restore the original settings when this resource is destroyed. Shares the same schema as the `settings` attribute (Above).
 {{% /md %}}</dd><dt class="property-optional"
@@ -947,7 +920,7 @@ The following state arguments are supported:
 <a href="#state_initialsettingsreadat_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Settings<wbr>Read<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -955,7 +928,7 @@ The following state arguments are supported:
 <a href="#state_readonlysettings_nodejs" style="color: inherit; text-decoration: inherit;">readonly<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Which of the current `settings` are not able to be set by the user. Which settings these are is determined by plan level and user permissions.
 * `zone_status`. A full zone implies that DNS is hosted with Cloudflare. A partial zone is typically a partner-hosted zone or a CNAME setup.
@@ -966,7 +939,7 @@ The following state arguments are supported:
 <a href="#state_settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesettingsoverridesettings">pulumi<wbr>Input<Zone<wbr>Settings<wbr>Override<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#zonesettingsoverridesettings">Zone<wbr>Settings<wbr>Override<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Settings overrides that will be applied to the zone. If a setting is not specified the existing setting will be used. For a full list of available settings see below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -975,7 +948,7 @@ The following state arguments are supported:
 <a href="#state_zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone ID to which apply settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -984,7 +957,7 @@ The following state arguments are supported:
 <a href="#state_zonestatus_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -992,7 +965,7 @@ The following state arguments are supported:
 <a href="#state_zonetype_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1004,7 +977,7 @@ The following state arguments are supported:
 <a href="#state_initial_settings_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesettingsoverrideinitialsettings">Input[Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#zonesettingsoverrideinitialsettings">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings present in the zone at the time the resource is created. This will be used to restore the original settings when this resource is destroyed. Shares the same schema as the `settings` attribute (Above).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1013,7 +986,7 @@ The following state arguments are supported:
 <a href="#state_initial_settings_read_at_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>settings_<wbr>read_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1021,7 +994,7 @@ The following state arguments are supported:
 <a href="#state_readonly_settings_python" style="color: inherit; text-decoration: inherit;">readonly_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Which of the current `settings` are not able to be set by the user. Which settings these are is determined by plan level and user permissions.
 * `zone_status`. A full zone implies that DNS is hosted with Cloudflare. A partial zone is typically a partner-hosted zone or a CNAME setup.
@@ -1032,7 +1005,7 @@ The following state arguments are supported:
 <a href="#state_settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesettingsoverridesettings">Input[Zone<wbr>Settings<wbr>Override<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#zonesettingsoverridesettings">Zone<wbr>Settings<wbr>Override<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings overrides that will be applied to the zone. If a setting is not specified the existing setting will be used. For a full list of available settings see below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1041,7 +1014,7 @@ The following state arguments are supported:
 <a href="#state_zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS zone ID to which apply settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1050,7 +1023,7 @@ The following state arguments are supported:
 <a href="#state_zone_status_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1058,7 +1031,7 @@ The following state arguments are supported:
 <a href="#state_zone_type_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1827,7 +1800,7 @@ The following state arguments are supported:
 <a href="#alwaysonline_nodejs" style="color: inherit; text-decoration: inherit;">always<wbr>Online</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1835,7 +1808,7 @@ The following state arguments are supported:
 <a href="#alwaysusehttps_nodejs" style="color: inherit; text-decoration: inherit;">always<wbr>Use<wbr>Https</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1843,7 +1816,7 @@ The following state arguments are supported:
 <a href="#automatichttpsrewrites_nodejs" style="color: inherit; text-decoration: inherit;">automatic<wbr>Https<wbr>Rewrites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1851,7 +1824,7 @@ The following state arguments are supported:
 <a href="#brotli_nodejs" style="color: inherit; text-decoration: inherit;">brotli</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1859,7 +1832,7 @@ The following state arguments are supported:
 <a href="#browsercachettl_nodejs" style="color: inherit; text-decoration: inherit;">browser<wbr>Cache<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1867,7 +1840,7 @@ The following state arguments are supported:
 <a href="#browsercheck_nodejs" style="color: inherit; text-decoration: inherit;">browser<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1875,7 +1848,7 @@ The following state arguments are supported:
 <a href="#cachelevel_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1883,7 +1856,7 @@ The following state arguments are supported:
 <a href="#challengettl_nodejs" style="color: inherit; text-decoration: inherit;">challenge<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1891,7 +1864,7 @@ The following state arguments are supported:
 <a href="#cnameflattening_nodejs" style="color: inherit; text-decoration: inherit;">cname<wbr>Flattening</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1899,7 +1872,7 @@ The following state arguments are supported:
 <a href="#developmentmode_nodejs" style="color: inherit; text-decoration: inherit;">development<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1907,7 +1880,7 @@ The following state arguments are supported:
 <a href="#emailobfuscation_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Obfuscation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1915,7 +1888,7 @@ The following state arguments are supported:
 <a href="#h2prioritization_nodejs" style="color: inherit; text-decoration: inherit;">h2Prioritization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1923,7 +1896,7 @@ The following state arguments are supported:
 <a href="#hotlinkprotection_nodejs" style="color: inherit; text-decoration: inherit;">hotlink<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1931,7 +1904,7 @@ The following state arguments are supported:
 <a href="#http2_nodejs" style="color: inherit; text-decoration: inherit;">http2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1939,7 +1912,7 @@ The following state arguments are supported:
 <a href="#http3_nodejs" style="color: inherit; text-decoration: inherit;">http3</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1947,7 +1920,7 @@ The following state arguments are supported:
 <a href="#imageresizing_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Resizing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1955,7 +1928,7 @@ The following state arguments are supported:
 <a href="#ipgeolocation_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Geolocation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1963,7 +1936,7 @@ The following state arguments are supported:
 <a href="#ipv6_nodejs" style="color: inherit; text-decoration: inherit;">ipv6</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1971,7 +1944,7 @@ The following state arguments are supported:
 <a href="#maxupload_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Upload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1979,7 +1952,7 @@ The following state arguments are supported:
 <a href="#mintlsversion_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Tls<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1987,7 +1960,7 @@ The following state arguments are supported:
 <a href="#minify_nodejs" style="color: inherit; text-decoration: inherit;">minify</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesettingsoverrideinitialsettingsminify">pulumi<wbr>Input<Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings<wbr>Minify<wbr>Args></a></span>
+        <span class="property-type"><a href="#zonesettingsoverrideinitialsettingsminify">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings<wbr>Minify</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1995,7 +1968,7 @@ The following state arguments are supported:
 <a href="#mirage_nodejs" style="color: inherit; text-decoration: inherit;">mirage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2003,7 +1976,7 @@ The following state arguments are supported:
 <a href="#mobileredirect_nodejs" style="color: inherit; text-decoration: inherit;">mobile<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesettingsoverrideinitialsettingsmobileredirect">pulumi<wbr>Input<Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings<wbr>Mobile<wbr>Redirect<wbr>Args></a></span>
+        <span class="property-type"><a href="#zonesettingsoverrideinitialsettingsmobileredirect">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings<wbr>Mobile<wbr>Redirect</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2011,7 +1984,7 @@ The following state arguments are supported:
 <a href="#opportunisticencryption_nodejs" style="color: inherit; text-decoration: inherit;">opportunistic<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2019,7 +1992,7 @@ The following state arguments are supported:
 <a href="#opportunisticonion_nodejs" style="color: inherit; text-decoration: inherit;">opportunistic<wbr>Onion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2027,7 +2000,7 @@ The following state arguments are supported:
 <a href="#originerrorpagepassthru_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Error<wbr>Page<wbr>Pass<wbr>Thru</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2035,7 +2008,7 @@ The following state arguments are supported:
 <a href="#polish_nodejs" style="color: inherit; text-decoration: inherit;">polish</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2043,7 +2016,7 @@ The following state arguments are supported:
 <a href="#prefetchpreload_nodejs" style="color: inherit; text-decoration: inherit;">prefetch<wbr>Preload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2051,7 +2024,7 @@ The following state arguments are supported:
 <a href="#privacypass_nodejs" style="color: inherit; text-decoration: inherit;">privacy<wbr>Pass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2059,7 +2032,7 @@ The following state arguments are supported:
 <a href="#pseudoipv4_nodejs" style="color: inherit; text-decoration: inherit;">pseudo<wbr>Ipv4</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2067,7 +2040,7 @@ The following state arguments are supported:
 <a href="#responsebuffering_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Buffering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2075,7 +2048,7 @@ The following state arguments are supported:
 <a href="#rocketloader_nodejs" style="color: inherit; text-decoration: inherit;">rocket<wbr>Loader</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2083,7 +2056,7 @@ The following state arguments are supported:
 <a href="#securityheader_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesettingsoverrideinitialsettingssecurityheader">pulumi<wbr>Input<Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings<wbr>Security<wbr>Header<wbr>Args></a></span>
+        <span class="property-type"><a href="#zonesettingsoverrideinitialsettingssecurityheader">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings<wbr>Security<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2091,7 +2064,7 @@ The following state arguments are supported:
 <a href="#securitylevel_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2099,7 +2072,7 @@ The following state arguments are supported:
 <a href="#serversideexclude_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Side<wbr>Exclude</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2107,7 +2080,7 @@ The following state arguments are supported:
 <a href="#sortquerystringforcache_nodejs" style="color: inherit; text-decoration: inherit;">sort<wbr>Query<wbr>String<wbr>For<wbr>Cache</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2115,7 +2088,7 @@ The following state arguments are supported:
 <a href="#ssl_nodejs" style="color: inherit; text-decoration: inherit;">ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2123,7 +2096,7 @@ The following state arguments are supported:
 <a href="#tls12only_nodejs" style="color: inherit; text-decoration: inherit;">tls12Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}tls_1_2_only has been deprecated in favour of using `min_tls_version = &#34;1.2&#34;` instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -2131,7 +2104,7 @@ The following state arguments are supported:
 <a href="#tls13_nodejs" style="color: inherit; text-decoration: inherit;">tls13</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2139,7 +2112,7 @@ The following state arguments are supported:
 <a href="#tlsclientauth_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Client<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2147,7 +2120,7 @@ The following state arguments are supported:
 <a href="#trueclientipheader_nodejs" style="color: inherit; text-decoration: inherit;">true<wbr>Client<wbr>Ip<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2155,7 +2128,7 @@ The following state arguments are supported:
 <a href="#universalssl_nodejs" style="color: inherit; text-decoration: inherit;">universal<wbr>Ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2163,7 +2136,7 @@ The following state arguments are supported:
 <a href="#waf_nodejs" style="color: inherit; text-decoration: inherit;">waf</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2171,7 +2144,7 @@ The following state arguments are supported:
 <a href="#webp_nodejs" style="color: inherit; text-decoration: inherit;">webp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}. Note that the value specified will be ignored unless `polish` is turned on (i.e. is "lossless" or "lossy")
 {{% /md %}}</dd><dt class="property-optional"
@@ -2180,7 +2153,7 @@ The following state arguments are supported:
 <a href="#websockets_nodejs" style="color: inherit; text-decoration: inherit;">websockets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2188,7 +2161,7 @@ The following state arguments are supported:
 <a href="#zerortt_nodejs" style="color: inherit; text-decoration: inherit;">zero<wbr>Rtt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2200,7 +2173,7 @@ The following state arguments are supported:
 <a href="#always_online_python" style="color: inherit; text-decoration: inherit;">always_<wbr>online</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2208,7 +2181,7 @@ The following state arguments are supported:
 <a href="#always_use_https_python" style="color: inherit; text-decoration: inherit;">always_<wbr>use_<wbr>https</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2216,7 +2189,7 @@ The following state arguments are supported:
 <a href="#automatic_https_rewrites_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>https_<wbr>rewrites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2224,7 +2197,7 @@ The following state arguments are supported:
 <a href="#brotli_python" style="color: inherit; text-decoration: inherit;">brotli</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2232,7 +2205,7 @@ The following state arguments are supported:
 <a href="#browser_cache_ttl_python" style="color: inherit; text-decoration: inherit;">browser_<wbr>cache_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2240,7 +2213,7 @@ The following state arguments are supported:
 <a href="#browser_check_python" style="color: inherit; text-decoration: inherit;">browser_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2248,7 +2221,7 @@ The following state arguments are supported:
 <a href="#cache_level_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2256,7 +2229,7 @@ The following state arguments are supported:
 <a href="#challenge_ttl_python" style="color: inherit; text-decoration: inherit;">challenge_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2264,7 +2237,7 @@ The following state arguments are supported:
 <a href="#cname_flattening_python" style="color: inherit; text-decoration: inherit;">cname_<wbr>flattening</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2272,7 +2245,7 @@ The following state arguments are supported:
 <a href="#development_mode_python" style="color: inherit; text-decoration: inherit;">development_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2280,7 +2253,7 @@ The following state arguments are supported:
 <a href="#email_obfuscation_python" style="color: inherit; text-decoration: inherit;">email_<wbr>obfuscation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2288,7 +2261,7 @@ The following state arguments are supported:
 <a href="#h2_prioritization_python" style="color: inherit; text-decoration: inherit;">h2_<wbr>prioritization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2296,7 +2269,7 @@ The following state arguments are supported:
 <a href="#hotlink_protection_python" style="color: inherit; text-decoration: inherit;">hotlink_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2304,7 +2277,7 @@ The following state arguments are supported:
 <a href="#http2_python" style="color: inherit; text-decoration: inherit;">http2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2312,7 +2285,7 @@ The following state arguments are supported:
 <a href="#http3_python" style="color: inherit; text-decoration: inherit;">http3</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2320,7 +2293,7 @@ The following state arguments are supported:
 <a href="#image_resizing_python" style="color: inherit; text-decoration: inherit;">image_<wbr>resizing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2328,7 +2301,7 @@ The following state arguments are supported:
 <a href="#ip_geolocation_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>geolocation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2336,7 +2309,7 @@ The following state arguments are supported:
 <a href="#ipv6_python" style="color: inherit; text-decoration: inherit;">ipv6</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2344,7 +2317,7 @@ The following state arguments are supported:
 <a href="#max_upload_python" style="color: inherit; text-decoration: inherit;">max_<wbr>upload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2352,7 +2325,7 @@ The following state arguments are supported:
 <a href="#min_tls_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>tls_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2360,7 +2333,7 @@ The following state arguments are supported:
 <a href="#minify_python" style="color: inherit; text-decoration: inherit;">minify</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesettingsoverrideinitialsettingsminify">Input[Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings<wbr>Minify<wbr>Args]</a></span>
+        <span class="property-type"><a href="#zonesettingsoverrideinitialsettingsminify">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings<wbr>Minify<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2368,7 +2341,7 @@ The following state arguments are supported:
 <a href="#mirage_python" style="color: inherit; text-decoration: inherit;">mirage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2376,7 +2349,7 @@ The following state arguments are supported:
 <a href="#mobile_redirect_python" style="color: inherit; text-decoration: inherit;">mobile_<wbr>redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesettingsoverrideinitialsettingsmobileredirect">Input[Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings<wbr>Mobile<wbr>Redirect<wbr>Args]</a></span>
+        <span class="property-type"><a href="#zonesettingsoverrideinitialsettingsmobileredirect">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings<wbr>Mobile<wbr>Redirect<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2384,7 +2357,7 @@ The following state arguments are supported:
 <a href="#opportunistic_encryption_python" style="color: inherit; text-decoration: inherit;">opportunistic_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2392,7 +2365,7 @@ The following state arguments are supported:
 <a href="#opportunistic_onion_python" style="color: inherit; text-decoration: inherit;">opportunistic_<wbr>onion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2400,7 +2373,7 @@ The following state arguments are supported:
 <a href="#origin_error_page_pass_thru_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>error_<wbr>page_<wbr>pass_<wbr>thru</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2408,7 +2381,7 @@ The following state arguments are supported:
 <a href="#polish_python" style="color: inherit; text-decoration: inherit;">polish</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2416,7 +2389,7 @@ The following state arguments are supported:
 <a href="#prefetch_preload_python" style="color: inherit; text-decoration: inherit;">prefetch_<wbr>preload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2424,7 +2397,7 @@ The following state arguments are supported:
 <a href="#privacy_pass_python" style="color: inherit; text-decoration: inherit;">privacy_<wbr>pass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2432,7 +2405,7 @@ The following state arguments are supported:
 <a href="#pseudo_ipv4_python" style="color: inherit; text-decoration: inherit;">pseudo_<wbr>ipv4</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2440,7 +2413,7 @@ The following state arguments are supported:
 <a href="#response_buffering_python" style="color: inherit; text-decoration: inherit;">response_<wbr>buffering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2448,7 +2421,7 @@ The following state arguments are supported:
 <a href="#rocket_loader_python" style="color: inherit; text-decoration: inherit;">rocket_<wbr>loader</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2456,7 +2429,7 @@ The following state arguments are supported:
 <a href="#security_header_python" style="color: inherit; text-decoration: inherit;">security_<wbr>header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesettingsoverrideinitialsettingssecurityheader">Input[Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings<wbr>Security<wbr>Header<wbr>Args]</a></span>
+        <span class="property-type"><a href="#zonesettingsoverrideinitialsettingssecurityheader">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings<wbr>Security<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2464,7 +2437,7 @@ The following state arguments are supported:
 <a href="#security_level_python" style="color: inherit; text-decoration: inherit;">security_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2472,7 +2445,7 @@ The following state arguments are supported:
 <a href="#server_side_exclude_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>exclude</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2480,7 +2453,7 @@ The following state arguments are supported:
 <a href="#sort_query_string_for_cache_python" style="color: inherit; text-decoration: inherit;">sort_<wbr>query_<wbr>string_<wbr>for_<wbr>cache</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2488,7 +2461,7 @@ The following state arguments are supported:
 <a href="#ssl_python" style="color: inherit; text-decoration: inherit;">ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2496,7 +2469,7 @@ The following state arguments are supported:
 <a href="#tls12_only_python" style="color: inherit; text-decoration: inherit;">tls12_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}tls_1_2_only has been deprecated in favour of using `min_tls_version = &#34;1.2&#34;` instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -2504,7 +2477,7 @@ The following state arguments are supported:
 <a href="#tls13_python" style="color: inherit; text-decoration: inherit;">tls13</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2512,7 +2485,7 @@ The following state arguments are supported:
 <a href="#tls_client_auth_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>client_<wbr>auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2520,7 +2493,7 @@ The following state arguments are supported:
 <a href="#true_client_ip_header_python" style="color: inherit; text-decoration: inherit;">true_<wbr>client_<wbr>ip_<wbr>header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2528,7 +2501,7 @@ The following state arguments are supported:
 <a href="#universal_ssl_python" style="color: inherit; text-decoration: inherit;">universal_<wbr>ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2536,7 +2509,7 @@ The following state arguments are supported:
 <a href="#waf_python" style="color: inherit; text-decoration: inherit;">waf</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2544,7 +2517,7 @@ The following state arguments are supported:
 <a href="#webp_python" style="color: inherit; text-decoration: inherit;">webp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}. Note that the value specified will be ignored unless `polish` is turned on (i.e. is "lossless" or "lossy")
 {{% /md %}}</dd><dt class="property-optional"
@@ -2553,7 +2526,7 @@ The following state arguments are supported:
 <a href="#websockets_python" style="color: inherit; text-decoration: inherit;">websockets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2561,7 +2534,7 @@ The following state arguments are supported:
 <a href="#zero_rtt_python" style="color: inherit; text-decoration: inherit;">zero_<wbr>rtt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2637,7 +2610,7 @@ The following state arguments are supported:
 <a href="#css_nodejs" style="color: inherit; text-decoration: inherit;">css</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}"on"/"off"
 {{% /md %}}</dd><dt class="property-required"
@@ -2646,7 +2619,7 @@ The following state arguments are supported:
 <a href="#html_nodejs" style="color: inherit; text-decoration: inherit;">html</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}"on"/"off"
 {{% /md %}}</dd><dt class="property-required"
@@ -2655,7 +2628,7 @@ The following state arguments are supported:
 <a href="#js_nodejs" style="color: inherit; text-decoration: inherit;">js</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}"on"/"off"
 {{% /md %}}</dd></dl>
@@ -2668,7 +2641,7 @@ The following state arguments are supported:
 <a href="#css_python" style="color: inherit; text-decoration: inherit;">css</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}"on"/"off"
 {{% /md %}}</dd><dt class="property-required"
@@ -2677,7 +2650,7 @@ The following state arguments are supported:
 <a href="#html_python" style="color: inherit; text-decoration: inherit;">html</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}"on"/"off"
 {{% /md %}}</dd><dt class="property-required"
@@ -2686,7 +2659,7 @@ The following state arguments are supported:
 <a href="#js_python" style="color: inherit; text-decoration: inherit;">js</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}"on"/"off"
 {{% /md %}}</dd></dl>
@@ -2763,7 +2736,7 @@ The following state arguments are supported:
 <a href="#mobilesubdomain_nodejs" style="color: inherit; text-decoration: inherit;">mobile<wbr>Subdomain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String value
 {{% /md %}}</dd><dt class="property-required"
@@ -2772,7 +2745,7 @@ The following state arguments are supported:
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}"on"/"off"
 {{% /md %}}</dd><dt class="property-required"
@@ -2781,7 +2754,7 @@ The following state arguments are supported:
 <a href="#stripuri_nodejs" style="color: inherit; text-decoration: inherit;">strip<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}true/false
 {{% /md %}}</dd></dl>
@@ -2794,7 +2767,7 @@ The following state arguments are supported:
 <a href="#mobile_subdomain_python" style="color: inherit; text-decoration: inherit;">mobile_<wbr>subdomain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String value
 {{% /md %}}</dd><dt class="property-required"
@@ -2803,7 +2776,7 @@ The following state arguments are supported:
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}"on"/"off"
 {{% /md %}}</dd><dt class="property-required"
@@ -2812,7 +2785,7 @@ The following state arguments are supported:
 <a href="#strip_uri_python" style="color: inherit; text-decoration: inherit;">strip_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}true/false
 {{% /md %}}</dd></dl>
@@ -2925,7 +2898,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}true/false
 {{% /md %}}</dd><dt class="property-optional"
@@ -2934,7 +2907,7 @@ The following state arguments are supported:
 <a href="#includesubdomains_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Subdomains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}true/false
 {{% /md %}}</dd><dt class="property-optional"
@@ -2943,7 +2916,7 @@ The following state arguments are supported:
 <a href="#maxage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Integer
 {{% /md %}}</dd><dt class="property-optional"
@@ -2952,7 +2925,7 @@ The following state arguments are supported:
 <a href="#nosniff_nodejs" style="color: inherit; text-decoration: inherit;">nosniff</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}true/false
 {{% /md %}}</dd><dt class="property-optional"
@@ -2961,7 +2934,7 @@ The following state arguments are supported:
 <a href="#preload_nodejs" style="color: inherit; text-decoration: inherit;">preload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}true/false
 {{% /md %}}</dd></dl>
@@ -2974,7 +2947,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}true/false
 {{% /md %}}</dd><dt class="property-optional"
@@ -2983,7 +2956,7 @@ The following state arguments are supported:
 <a href="#include_subdomains_python" style="color: inherit; text-decoration: inherit;">include_<wbr>subdomains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}true/false
 {{% /md %}}</dd><dt class="property-optional"
@@ -2992,7 +2965,7 @@ The following state arguments are supported:
 <a href="#max_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Integer
 {{% /md %}}</dd><dt class="property-optional"
@@ -3001,7 +2974,7 @@ The following state arguments are supported:
 <a href="#nosniff_python" style="color: inherit; text-decoration: inherit;">nosniff</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}true/false
 {{% /md %}}</dd><dt class="property-optional"
@@ -3010,7 +2983,7 @@ The following state arguments are supported:
 <a href="#preload_python" style="color: inherit; text-decoration: inherit;">preload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}true/false
 {{% /md %}}</dd></dl>
@@ -3771,7 +3744,7 @@ The following state arguments are supported:
 <a href="#alwaysonline_nodejs" style="color: inherit; text-decoration: inherit;">always<wbr>Online</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3779,7 +3752,7 @@ The following state arguments are supported:
 <a href="#alwaysusehttps_nodejs" style="color: inherit; text-decoration: inherit;">always<wbr>Use<wbr>Https</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3787,7 +3760,7 @@ The following state arguments are supported:
 <a href="#automatichttpsrewrites_nodejs" style="color: inherit; text-decoration: inherit;">automatic<wbr>Https<wbr>Rewrites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3795,7 +3768,7 @@ The following state arguments are supported:
 <a href="#brotli_nodejs" style="color: inherit; text-decoration: inherit;">brotli</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3803,7 +3776,7 @@ The following state arguments are supported:
 <a href="#browsercachettl_nodejs" style="color: inherit; text-decoration: inherit;">browser<wbr>Cache<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3811,7 +3784,7 @@ The following state arguments are supported:
 <a href="#browsercheck_nodejs" style="color: inherit; text-decoration: inherit;">browser<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3819,7 +3792,7 @@ The following state arguments are supported:
 <a href="#cachelevel_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3827,7 +3800,7 @@ The following state arguments are supported:
 <a href="#challengettl_nodejs" style="color: inherit; text-decoration: inherit;">challenge<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3835,7 +3808,7 @@ The following state arguments are supported:
 <a href="#cnameflattening_nodejs" style="color: inherit; text-decoration: inherit;">cname<wbr>Flattening</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3843,7 +3816,7 @@ The following state arguments are supported:
 <a href="#developmentmode_nodejs" style="color: inherit; text-decoration: inherit;">development<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3851,7 +3824,7 @@ The following state arguments are supported:
 <a href="#emailobfuscation_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Obfuscation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3859,7 +3832,7 @@ The following state arguments are supported:
 <a href="#h2prioritization_nodejs" style="color: inherit; text-decoration: inherit;">h2Prioritization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3867,7 +3840,7 @@ The following state arguments are supported:
 <a href="#hotlinkprotection_nodejs" style="color: inherit; text-decoration: inherit;">hotlink<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3875,7 +3848,7 @@ The following state arguments are supported:
 <a href="#http2_nodejs" style="color: inherit; text-decoration: inherit;">http2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3883,7 +3856,7 @@ The following state arguments are supported:
 <a href="#http3_nodejs" style="color: inherit; text-decoration: inherit;">http3</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3891,7 +3864,7 @@ The following state arguments are supported:
 <a href="#imageresizing_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Resizing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3899,7 +3872,7 @@ The following state arguments are supported:
 <a href="#ipgeolocation_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Geolocation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3907,7 +3880,7 @@ The following state arguments are supported:
 <a href="#ipv6_nodejs" style="color: inherit; text-decoration: inherit;">ipv6</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3915,7 +3888,7 @@ The following state arguments are supported:
 <a href="#maxupload_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Upload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3923,7 +3896,7 @@ The following state arguments are supported:
 <a href="#mintlsversion_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Tls<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3931,7 +3904,7 @@ The following state arguments are supported:
 <a href="#minify_nodejs" style="color: inherit; text-decoration: inherit;">minify</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesettingsoverridesettingsminify">pulumi<wbr>Input<Zone<wbr>Settings<wbr>Override<wbr>Settings<wbr>Minify<wbr>Args></a></span>
+        <span class="property-type"><a href="#zonesettingsoverridesettingsminify">Zone<wbr>Settings<wbr>Override<wbr>Settings<wbr>Minify</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3939,7 +3912,7 @@ The following state arguments are supported:
 <a href="#mirage_nodejs" style="color: inherit; text-decoration: inherit;">mirage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3947,7 +3920,7 @@ The following state arguments are supported:
 <a href="#mobileredirect_nodejs" style="color: inherit; text-decoration: inherit;">mobile<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesettingsoverridesettingsmobileredirect">pulumi<wbr>Input<Zone<wbr>Settings<wbr>Override<wbr>Settings<wbr>Mobile<wbr>Redirect<wbr>Args></a></span>
+        <span class="property-type"><a href="#zonesettingsoverridesettingsmobileredirect">Zone<wbr>Settings<wbr>Override<wbr>Settings<wbr>Mobile<wbr>Redirect</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3955,7 +3928,7 @@ The following state arguments are supported:
 <a href="#opportunisticencryption_nodejs" style="color: inherit; text-decoration: inherit;">opportunistic<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3963,7 +3936,7 @@ The following state arguments are supported:
 <a href="#opportunisticonion_nodejs" style="color: inherit; text-decoration: inherit;">opportunistic<wbr>Onion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3971,7 +3944,7 @@ The following state arguments are supported:
 <a href="#originerrorpagepassthru_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Error<wbr>Page<wbr>Pass<wbr>Thru</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3979,7 +3952,7 @@ The following state arguments are supported:
 <a href="#polish_nodejs" style="color: inherit; text-decoration: inherit;">polish</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3987,7 +3960,7 @@ The following state arguments are supported:
 <a href="#prefetchpreload_nodejs" style="color: inherit; text-decoration: inherit;">prefetch<wbr>Preload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3995,7 +3968,7 @@ The following state arguments are supported:
 <a href="#privacypass_nodejs" style="color: inherit; text-decoration: inherit;">privacy<wbr>Pass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4003,7 +3976,7 @@ The following state arguments are supported:
 <a href="#pseudoipv4_nodejs" style="color: inherit; text-decoration: inherit;">pseudo<wbr>Ipv4</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4011,7 +3984,7 @@ The following state arguments are supported:
 <a href="#responsebuffering_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Buffering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4019,7 +3992,7 @@ The following state arguments are supported:
 <a href="#rocketloader_nodejs" style="color: inherit; text-decoration: inherit;">rocket<wbr>Loader</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4027,7 +4000,7 @@ The following state arguments are supported:
 <a href="#securityheader_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesettingsoverridesettingssecurityheader">pulumi<wbr>Input<Zone<wbr>Settings<wbr>Override<wbr>Settings<wbr>Security<wbr>Header<wbr>Args></a></span>
+        <span class="property-type"><a href="#zonesettingsoverridesettingssecurityheader">Zone<wbr>Settings<wbr>Override<wbr>Settings<wbr>Security<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4035,7 +4008,7 @@ The following state arguments are supported:
 <a href="#securitylevel_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4043,7 +4016,7 @@ The following state arguments are supported:
 <a href="#serversideexclude_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Side<wbr>Exclude</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4051,7 +4024,7 @@ The following state arguments are supported:
 <a href="#sortquerystringforcache_nodejs" style="color: inherit; text-decoration: inherit;">sort<wbr>Query<wbr>String<wbr>For<wbr>Cache</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4059,7 +4032,7 @@ The following state arguments are supported:
 <a href="#ssl_nodejs" style="color: inherit; text-decoration: inherit;">ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -4067,7 +4040,7 @@ The following state arguments are supported:
 <a href="#tls12only_nodejs" style="color: inherit; text-decoration: inherit;">tls12Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}tls_1_2_only has been deprecated in favour of using `min_tls_version = &#34;1.2&#34;` instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -4075,7 +4048,7 @@ The following state arguments are supported:
 <a href="#tls13_nodejs" style="color: inherit; text-decoration: inherit;">tls13</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4083,7 +4056,7 @@ The following state arguments are supported:
 <a href="#tlsclientauth_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Client<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4091,7 +4064,7 @@ The following state arguments are supported:
 <a href="#trueclientipheader_nodejs" style="color: inherit; text-decoration: inherit;">true<wbr>Client<wbr>Ip<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4099,7 +4072,7 @@ The following state arguments are supported:
 <a href="#universalssl_nodejs" style="color: inherit; text-decoration: inherit;">universal<wbr>Ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4107,7 +4080,7 @@ The following state arguments are supported:
 <a href="#waf_nodejs" style="color: inherit; text-decoration: inherit;">waf</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4115,7 +4088,7 @@ The following state arguments are supported:
 <a href="#webp_nodejs" style="color: inherit; text-decoration: inherit;">webp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}. Note that the value specified will be ignored unless `polish` is turned on (i.e. is "lossless" or "lossy")
 {{% /md %}}</dd><dt class="property-optional"
@@ -4124,7 +4097,7 @@ The following state arguments are supported:
 <a href="#websockets_nodejs" style="color: inherit; text-decoration: inherit;">websockets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4132,7 +4105,7 @@ The following state arguments are supported:
 <a href="#zerortt_nodejs" style="color: inherit; text-decoration: inherit;">zero<wbr>Rtt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4144,7 +4117,7 @@ The following state arguments are supported:
 <a href="#always_online_python" style="color: inherit; text-decoration: inherit;">always_<wbr>online</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4152,7 +4125,7 @@ The following state arguments are supported:
 <a href="#always_use_https_python" style="color: inherit; text-decoration: inherit;">always_<wbr>use_<wbr>https</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4160,7 +4133,7 @@ The following state arguments are supported:
 <a href="#automatic_https_rewrites_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>https_<wbr>rewrites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4168,7 +4141,7 @@ The following state arguments are supported:
 <a href="#brotli_python" style="color: inherit; text-decoration: inherit;">brotli</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4176,7 +4149,7 @@ The following state arguments are supported:
 <a href="#browser_cache_ttl_python" style="color: inherit; text-decoration: inherit;">browser_<wbr>cache_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4184,7 +4157,7 @@ The following state arguments are supported:
 <a href="#browser_check_python" style="color: inherit; text-decoration: inherit;">browser_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4192,7 +4165,7 @@ The following state arguments are supported:
 <a href="#cache_level_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4200,7 +4173,7 @@ The following state arguments are supported:
 <a href="#challenge_ttl_python" style="color: inherit; text-decoration: inherit;">challenge_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4208,7 +4181,7 @@ The following state arguments are supported:
 <a href="#cname_flattening_python" style="color: inherit; text-decoration: inherit;">cname_<wbr>flattening</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4216,7 +4189,7 @@ The following state arguments are supported:
 <a href="#development_mode_python" style="color: inherit; text-decoration: inherit;">development_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4224,7 +4197,7 @@ The following state arguments are supported:
 <a href="#email_obfuscation_python" style="color: inherit; text-decoration: inherit;">email_<wbr>obfuscation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4232,7 +4205,7 @@ The following state arguments are supported:
 <a href="#h2_prioritization_python" style="color: inherit; text-decoration: inherit;">h2_<wbr>prioritization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4240,7 +4213,7 @@ The following state arguments are supported:
 <a href="#hotlink_protection_python" style="color: inherit; text-decoration: inherit;">hotlink_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4248,7 +4221,7 @@ The following state arguments are supported:
 <a href="#http2_python" style="color: inherit; text-decoration: inherit;">http2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4256,7 +4229,7 @@ The following state arguments are supported:
 <a href="#http3_python" style="color: inherit; text-decoration: inherit;">http3</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4264,7 +4237,7 @@ The following state arguments are supported:
 <a href="#image_resizing_python" style="color: inherit; text-decoration: inherit;">image_<wbr>resizing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4272,7 +4245,7 @@ The following state arguments are supported:
 <a href="#ip_geolocation_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>geolocation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4280,7 +4253,7 @@ The following state arguments are supported:
 <a href="#ipv6_python" style="color: inherit; text-decoration: inherit;">ipv6</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4288,7 +4261,7 @@ The following state arguments are supported:
 <a href="#max_upload_python" style="color: inherit; text-decoration: inherit;">max_<wbr>upload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4296,7 +4269,7 @@ The following state arguments are supported:
 <a href="#min_tls_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>tls_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4304,7 +4277,7 @@ The following state arguments are supported:
 <a href="#minify_python" style="color: inherit; text-decoration: inherit;">minify</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesettingsoverridesettingsminify">Input[Zone<wbr>Settings<wbr>Override<wbr>Settings<wbr>Minify<wbr>Args]</a></span>
+        <span class="property-type"><a href="#zonesettingsoverridesettingsminify">Zone<wbr>Settings<wbr>Override<wbr>Settings<wbr>Minify<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4312,7 +4285,7 @@ The following state arguments are supported:
 <a href="#mirage_python" style="color: inherit; text-decoration: inherit;">mirage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4320,7 +4293,7 @@ The following state arguments are supported:
 <a href="#mobile_redirect_python" style="color: inherit; text-decoration: inherit;">mobile_<wbr>redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesettingsoverridesettingsmobileredirect">Input[Zone<wbr>Settings<wbr>Override<wbr>Settings<wbr>Mobile<wbr>Redirect<wbr>Args]</a></span>
+        <span class="property-type"><a href="#zonesettingsoverridesettingsmobileredirect">Zone<wbr>Settings<wbr>Override<wbr>Settings<wbr>Mobile<wbr>Redirect<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4328,7 +4301,7 @@ The following state arguments are supported:
 <a href="#opportunistic_encryption_python" style="color: inherit; text-decoration: inherit;">opportunistic_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4336,7 +4309,7 @@ The following state arguments are supported:
 <a href="#opportunistic_onion_python" style="color: inherit; text-decoration: inherit;">opportunistic_<wbr>onion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4344,7 +4317,7 @@ The following state arguments are supported:
 <a href="#origin_error_page_pass_thru_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>error_<wbr>page_<wbr>pass_<wbr>thru</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4352,7 +4325,7 @@ The following state arguments are supported:
 <a href="#polish_python" style="color: inherit; text-decoration: inherit;">polish</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4360,7 +4333,7 @@ The following state arguments are supported:
 <a href="#prefetch_preload_python" style="color: inherit; text-decoration: inherit;">prefetch_<wbr>preload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4368,7 +4341,7 @@ The following state arguments are supported:
 <a href="#privacy_pass_python" style="color: inherit; text-decoration: inherit;">privacy_<wbr>pass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4376,7 +4349,7 @@ The following state arguments are supported:
 <a href="#pseudo_ipv4_python" style="color: inherit; text-decoration: inherit;">pseudo_<wbr>ipv4</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4384,7 +4357,7 @@ The following state arguments are supported:
 <a href="#response_buffering_python" style="color: inherit; text-decoration: inherit;">response_<wbr>buffering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4392,7 +4365,7 @@ The following state arguments are supported:
 <a href="#rocket_loader_python" style="color: inherit; text-decoration: inherit;">rocket_<wbr>loader</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4400,7 +4373,7 @@ The following state arguments are supported:
 <a href="#security_header_python" style="color: inherit; text-decoration: inherit;">security_<wbr>header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesettingsoverridesettingssecurityheader">Input[Zone<wbr>Settings<wbr>Override<wbr>Settings<wbr>Security<wbr>Header<wbr>Args]</a></span>
+        <span class="property-type"><a href="#zonesettingsoverridesettingssecurityheader">Zone<wbr>Settings<wbr>Override<wbr>Settings<wbr>Security<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4408,7 +4381,7 @@ The following state arguments are supported:
 <a href="#security_level_python" style="color: inherit; text-decoration: inherit;">security_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4416,7 +4389,7 @@ The following state arguments are supported:
 <a href="#server_side_exclude_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>exclude</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4424,7 +4397,7 @@ The following state arguments are supported:
 <a href="#sort_query_string_for_cache_python" style="color: inherit; text-decoration: inherit;">sort_<wbr>query_<wbr>string_<wbr>for_<wbr>cache</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4432,7 +4405,7 @@ The following state arguments are supported:
 <a href="#ssl_python" style="color: inherit; text-decoration: inherit;">ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -4440,7 +4413,7 @@ The following state arguments are supported:
 <a href="#tls12_only_python" style="color: inherit; text-decoration: inherit;">tls12_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}tls_1_2_only has been deprecated in favour of using `min_tls_version = &#34;1.2&#34;` instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -4448,7 +4421,7 @@ The following state arguments are supported:
 <a href="#tls13_python" style="color: inherit; text-decoration: inherit;">tls13</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4456,7 +4429,7 @@ The following state arguments are supported:
 <a href="#tls_client_auth_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>client_<wbr>auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4464,7 +4437,7 @@ The following state arguments are supported:
 <a href="#true_client_ip_header_python" style="color: inherit; text-decoration: inherit;">true_<wbr>client_<wbr>ip_<wbr>header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4472,7 +4445,7 @@ The following state arguments are supported:
 <a href="#universal_ssl_python" style="color: inherit; text-decoration: inherit;">universal_<wbr>ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4480,7 +4453,7 @@ The following state arguments are supported:
 <a href="#waf_python" style="color: inherit; text-decoration: inherit;">waf</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4488,7 +4461,7 @@ The following state arguments are supported:
 <a href="#webp_python" style="color: inherit; text-decoration: inherit;">webp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}. Note that the value specified will be ignored unless `polish` is turned on (i.e. is "lossless" or "lossy")
 {{% /md %}}</dd><dt class="property-optional"
@@ -4497,7 +4470,7 @@ The following state arguments are supported:
 <a href="#websockets_python" style="color: inherit; text-decoration: inherit;">websockets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4505,7 +4478,7 @@ The following state arguments are supported:
 <a href="#zero_rtt_python" style="color: inherit; text-decoration: inherit;">zero_<wbr>rtt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4581,7 +4554,7 @@ The following state arguments are supported:
 <a href="#css_nodejs" style="color: inherit; text-decoration: inherit;">css</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}"on"/"off"
 {{% /md %}}</dd><dt class="property-required"
@@ -4590,7 +4563,7 @@ The following state arguments are supported:
 <a href="#html_nodejs" style="color: inherit; text-decoration: inherit;">html</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}"on"/"off"
 {{% /md %}}</dd><dt class="property-required"
@@ -4599,7 +4572,7 @@ The following state arguments are supported:
 <a href="#js_nodejs" style="color: inherit; text-decoration: inherit;">js</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}"on"/"off"
 {{% /md %}}</dd></dl>
@@ -4612,7 +4585,7 @@ The following state arguments are supported:
 <a href="#css_python" style="color: inherit; text-decoration: inherit;">css</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}"on"/"off"
 {{% /md %}}</dd><dt class="property-required"
@@ -4621,7 +4594,7 @@ The following state arguments are supported:
 <a href="#html_python" style="color: inherit; text-decoration: inherit;">html</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}"on"/"off"
 {{% /md %}}</dd><dt class="property-required"
@@ -4630,7 +4603,7 @@ The following state arguments are supported:
 <a href="#js_python" style="color: inherit; text-decoration: inherit;">js</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}"on"/"off"
 {{% /md %}}</dd></dl>
@@ -4707,7 +4680,7 @@ The following state arguments are supported:
 <a href="#mobilesubdomain_nodejs" style="color: inherit; text-decoration: inherit;">mobile<wbr>Subdomain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String value
 {{% /md %}}</dd><dt class="property-required"
@@ -4716,7 +4689,7 @@ The following state arguments are supported:
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}"on"/"off"
 {{% /md %}}</dd><dt class="property-required"
@@ -4725,7 +4698,7 @@ The following state arguments are supported:
 <a href="#stripuri_nodejs" style="color: inherit; text-decoration: inherit;">strip<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}true/false
 {{% /md %}}</dd></dl>
@@ -4738,7 +4711,7 @@ The following state arguments are supported:
 <a href="#mobile_subdomain_python" style="color: inherit; text-decoration: inherit;">mobile_<wbr>subdomain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String value
 {{% /md %}}</dd><dt class="property-required"
@@ -4747,7 +4720,7 @@ The following state arguments are supported:
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}"on"/"off"
 {{% /md %}}</dd><dt class="property-required"
@@ -4756,7 +4729,7 @@ The following state arguments are supported:
 <a href="#strip_uri_python" style="color: inherit; text-decoration: inherit;">strip_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}true/false
 {{% /md %}}</dd></dl>
@@ -4869,7 +4842,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}true/false
 {{% /md %}}</dd><dt class="property-optional"
@@ -4878,7 +4851,7 @@ The following state arguments are supported:
 <a href="#includesubdomains_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Subdomains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}true/false
 {{% /md %}}</dd><dt class="property-optional"
@@ -4887,7 +4860,7 @@ The following state arguments are supported:
 <a href="#maxage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Integer
 {{% /md %}}</dd><dt class="property-optional"
@@ -4896,7 +4869,7 @@ The following state arguments are supported:
 <a href="#nosniff_nodejs" style="color: inherit; text-decoration: inherit;">nosniff</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}true/false
 {{% /md %}}</dd><dt class="property-optional"
@@ -4905,7 +4878,7 @@ The following state arguments are supported:
 <a href="#preload_nodejs" style="color: inherit; text-decoration: inherit;">preload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}true/false
 {{% /md %}}</dd></dl>
@@ -4918,7 +4891,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}true/false
 {{% /md %}}</dd><dt class="property-optional"
@@ -4927,7 +4900,7 @@ The following state arguments are supported:
 <a href="#include_subdomains_python" style="color: inherit; text-decoration: inherit;">include_<wbr>subdomains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}true/false
 {{% /md %}}</dd><dt class="property-optional"
@@ -4936,7 +4909,7 @@ The following state arguments are supported:
 <a href="#max_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Integer
 {{% /md %}}</dd><dt class="property-optional"
@@ -4945,7 +4918,7 @@ The following state arguments are supported:
 <a href="#nosniff_python" style="color: inherit; text-decoration: inherit;">nosniff</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}true/false
 {{% /md %}}</dd><dt class="property-optional"
@@ -4954,7 +4927,7 @@ The following state arguments are supported:
 <a href="#preload_python" style="color: inherit; text-decoration: inherit;">preload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}true/false
 {{% /md %}}</dd></dl>
